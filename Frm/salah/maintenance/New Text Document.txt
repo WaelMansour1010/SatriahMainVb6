@@ -1,0 +1,40 @@
+If DB_CreateTable("TblCarBillMentains", True, "ID", False) = True Then
+                        DB_CreateField "TblCarBillMentains", "RecordDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+                        DB_CreateField "TblCarBillMentains", "ClientName", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCarBillMentains", "Telephone", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCarBillMentains", "UserID", adInteger, adColNullable, , , ""
+                        DB_CreateField "TblCarBillMentains", "Posted", adInteger, adColNullable, , , ""
+                        DB_CreateField "TblCarBillMentains", "CarTypeID", adInteger, adColNullable, , , ""
+                        DB_CreateField "TblCarBillMentains", "CarModelID", adInteger, adColNullable, , , ""
+                         DB_CreateField "TblCarBillMentains", "PlateNo", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCarBillMentains", "BranchID", adInteger, adColNullable, , , ""
+                        DB_CreateField "TblCarBillMentains", "ColorID", adInteger, adColNullable, , , ""
+                        DB_CreateField "TblCarBillMentains", "YearFact", adInteger, adColNullable, , , ""
+                        
+                        DB_CreateField "TblCarBillMentains", "OrderStatus", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCarBillMentains", "Accept", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                        DB_CreateField "TblCarBillMentains", "EndDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+                        DB_CreateField "TblCarBillMentains", "Month_Day", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                         DB_CreateField "TblCarBillMentains", "Granty", adInteger, adColNullable, , , ""
+                        DB_CreateField "TblCarBillMentains", "DateStartG", adDBTimeStamp, adColNullable, , , "      ", False, True
+                        DB_CreateField "TblCarBillMentains", "DateEndG", adDBTimeStamp, adColNullable, , , "      ", False, True
+                        DB_CreateField "TblCarBillMentains", "CarMeter", adVarWChar, adColNullable, 255, , "C??ICI   ", False, True, , True
+                        DB_CreateField "TblCarBillMentains", "LongGranty", adVarWChar, adColNullable, 255, , "?IE C???C?   ", False, True, , True
+                        DB_CreateField "TblCarBillMentains", "PayFirst", adDouble, adColNullable, , , "    ", False, True
+                        DB_CreateField "TblCarBillMentains", "AmountAccept", adDouble, adColNullable, , , "    ", False, True
+                        DB_CreateField "TblCarBillMentains", "Complaint", adVarWChar, adColNullable, 4000, , "O??? ?? C?????    ", False
+                        DB_CreateField "TblCarBillMentains", "Noteinitial", adVarWChar, adColNullable, 4000, , "??C?UE ?EI??E    ", False
+                        End If
+                        '''''///////////////?I?? E?C??? ?CE??E C??C? C???C?E
+                         If DB_CreateTable("TblCarBillMentainsDetils", True, "ID2", True) = True Then
+                          DB_CreateField "TblCarBillMentainsDetils", "ID", adInteger, adColNullable, , , ""
+                          DB_CreateField "TblCarBillMentainsDetils", "Type", adInteger, adColNullable, , , ""
+                          DB_CreateField "TblCarBillMentainsDetils", "Mainte", adInteger, adColNullable, , , ""
+                          DB_CreateField "TblCarBillMentainsDetils", "Value", adDouble, adColNullable, , , "    ", False, True
+                          DB_CreateField "TblCarBillMentainsDetils", "count", adInteger, adColNullable, , , ""
+                         End If
+                         DB_CreateField "TblCarBillMentainsDetils", "comp", adVarWChar, adColNullable, 255, , "C?? C?EC??     ", False
+                         DB_CreateField "TblCarBillMentainsDetils", "bill", adVarWChar, adColNullable, 255, , "??? C??CE??E      ", False
+                                              
+                    
+                    

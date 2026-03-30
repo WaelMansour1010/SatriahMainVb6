@@ -1,0 +1,2 @@
+DB_CreateField "TblUsers", "StoreID2", adInteger, adColNullable, , , " ???    ", False, True
+DB_CreateField "TblReCostCalc", "EntryCreated", adBoolean, adColNullable, , , "      ", False, True

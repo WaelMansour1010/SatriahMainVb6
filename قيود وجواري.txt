@@ -1,0 +1,27 @@
+SELECT     SUM(DEV_Value1) AS DebitValue, SUM(DEV_Value2) AS CreditValue,recorddate,branch_id
+ 
+FROM         (
+SELECT     branch_id, recorddate, DEV_Value1 = CASE WHEN Credit_Or_Debit = 0 THEN value * 1 ELSE 0 END, DEV_Value2 = CASE WHEN Credit_Or_Debit = 1 THEN value * 1 ELSE 0 END
+FROM         dbo.DOUBLE_ENTREY_VOUCHERS
+
+
+ 
+) XTable
+GROUP BY recorddate,branch_id 
+having    SUM(DEV_Value1)<>  SUM(DEV_Value2)
+order by branch_id,recorddate
+
+
+SELECT     branch_id ,SUM(DEV_Value1) AS DebitValue, SUM(DEV_Value2) AS CreditValue,NoteSerial , SUM(DEV_Value1)-SUM(DEV_Value2) AS vARIANCE
+ 
+FROM         (
+SELECT  branch_id , NoteSerial, recorddate, DEV_Value1 = CASE WHEN Credit_Or_Debit = 0 THEN value * 1 ELSE 0 END, DEV_Value2 = CASE WHEN Credit_Or_Debit = 1 THEN value * 1 ELSE 0 END
+FROM         dbo.DOUBLE_ENTREY_VOUCHERS inner join notes on notes.NoteID=DOUBLE_ENTREY_VOUCHERS.Notes_ID
+
+
+
+
+) XTable
+GROUP BY branch_id ,NoteSerial
+having    SUM(DEV_Value1)<>  SUM(DEV_Value2)
+order by branch_id ,NoteSerial

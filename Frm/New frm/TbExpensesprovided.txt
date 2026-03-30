@@ -1,0 +1,11 @@
+         If DB_CreateTable("TbExpensesprovided", False, "ID", False) = True Then
+              DB_CreateField "TbExpensesprovided", "ID", adInteger, adColNullable, , , " ???    ", False, True
+              DB_CreateField "TbExpensesprovided", "name", adVarWChar, adColNullable, 400, , "C?C??   ", False, True, , True
+              DB_CreateField "TbExpensesprovided", "namee", adVarWChar, adColNullable, 400, , "C?C??   ", False, True, , True
+              DB_CreateField "TbExpensesprovided", "Exprovided", adVarWChar, adColNullable, 400, , "C?C??   ", False, True, , True
+              DB_CreateField "TbExpensesprovided", "Expenses", adVarWChar, adColNullable, 400, , "C?C??   ", False, True, , True
+              DB_CreateField "TbExpensesprovided", "Single", adInteger, adColNullable, , , " ???    ", False, True
+              DB_CreateField "TbExpensesprovided", "Approved", adBoolean, adColNullable, , , "        ", False, True
+              DB_CreateField "TbExpensesprovided", "UserName", adVarWChar, adColNullable, 400, , "C?C??   ", False, True, , True
+              
+         End If

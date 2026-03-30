@@ -1,0 +1,23 @@
+      If DB_CreateTable("TblReceiveTreat", True, "ID", False) = True Then
+                      DB_CreateField "TblReceiveTreat", "RecordDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+                      DB_CreateField "TblReceiveTreat", "EmpID", adInteger, adColNullable, , , ""
+                       DB_CreateField "TblReceiveTreat", "ProjectID", adInteger, adColNullable, , , ""
+                       DB_CreateField "TblReceiveTreat", "BranchID", adInteger, adColNullable, , , ""
+                          DB_CreateField "TblReceiveTreat", "UserID", adInteger, adColNullable, , , ""
+                    DB_CreateField "TblReceiveTreat", "Posted", adInteger, adColNullable, , , ""
+                    DB_CreateField "TblReceiveTreat", "EndDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+                    End If
+                    
+                    If DB_CreateTable("TblReceiveTreatDetails1", True, "ID", True) = True Then
+                       DB_CreateField "TblReceiveTreatDetails1", "TypeTreat", adVarWChar, adColNullable, 4000, , "ECEE    ", False, True, , True
+                        DB_CreateField "TblReceiveTreatDetails1", "Des", adVarWChar, adColNullable, 4000, , "ECEE    ", False, True, , True
+                         DB_CreateField "TblReceiveTreatDetails1", "Attach", adVarWChar, adColNullable, 4000, , "ECEE    ", False, True, , True
+                         End If
+                          DB_CreateField "TblReceiveTreatDetails1", "ReceID", adInteger, adColNullable, , , ""
+                          
+                          
+                          
+                         If DB_CreateTable("TblReceiveTreatDetails2", True, "ID", True) = True Then
+                           DB_CreateField "TblReceiveTreatDetails2", "Steps", adVarWChar, adColNullable, 4000, , "ECEE    ", False, True, , True
+                         End If
+                          DB_CreateField "TblReceiveTreatDetails2", "ReceID", adInteger, adColNullable, , , ""

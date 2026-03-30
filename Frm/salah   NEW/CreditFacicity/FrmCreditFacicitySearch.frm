@@ -1,0 +1,3218 @@
+VERSION 5.00
+Object = "{C115893A-A3BF-43AF-B28D-69DB846077F3}#1.0#0"; "vsflex8u.ocx"
+Object = "{0AFE7BE0-11B7-4A3E-978D-D4501E9A57FE}#1.0#0"; "c1sizer.ocx"
+Object = "{F0D2F211-CCB0-11D0-A316-00AA00688B10}#1.0#0"; "MSDATLST.OCX"
+Object = "{FE5DCFAD-BC1D-11D2-94CF-004005455FAA}#1.4#0"; "ImpulseButton.ocx"
+Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "mscomct2.ocx"
+Object = "{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}#12.0#0"; "SUITEC~1.OCX"
+Begin VB.Form FrmDeductionNote 
+   BackColor       =   &H00E2E9E9&
+   BorderStyle     =   1  'Fixed Single
+   Caption         =   "„–ﬂ—… Œ’„ "
+   ClientHeight    =   5235
+   ClientLeft      =   45
+   ClientTop       =   330
+   ClientWidth     =   13245
+   Icon            =   "FrmCreditFacicitySearch.frx":0000
+   LinkTopic       =   "Form1"
+   MaxButton       =   0   'False
+   MDIChild        =   -1  'True
+   RightToLeft     =   -1  'True
+   ScaleHeight     =   5235
+   ScaleWidth      =   13245
+   Begin VB.TextBox TxtNoteID 
+      Height          =   285
+      Left            =   13920
+      TabIndex        =   35
+      Top             =   1320
+      Visible         =   0   'False
+      Width           =   255
+   End
+   Begin VB.TextBox oldtxtNoteSerial1 
+      Height          =   285
+      Left            =   13440
+      TabIndex        =   34
+      Top             =   2520
+      Visible         =   0   'False
+      Width           =   375
+   End
+   Begin VB.TextBox TxtNoteSerial1 
+      Alignment       =   1  'Right Justify
+      Enabled         =   0   'False
+      Height          =   285
+      Left            =   13920
+      RightToLeft     =   -1  'True
+      TabIndex        =   32
+      Top             =   480
+      Visible         =   0   'False
+      Width           =   1335
+   End
+   Begin VB.TextBox TxtNoteSerial 
+      Alignment       =   1  'Right Justify
+      Enabled         =   0   'False
+      Height          =   345
+      Left            =   14040
+      RightToLeft     =   -1  'True
+      TabIndex        =   27
+      Top             =   1560
+      Width           =   1335
+   End
+   Begin VB.TextBox XPTxtID 
+      Alignment       =   2  'Center
+      Height          =   315
+      Left            =   10080
+      Locked          =   -1  'True
+      TabIndex        =   1
+      TabStop         =   0   'False
+      Top             =   735
+      Width           =   1335
+   End
+   Begin VB.TextBox TxtModFlg 
+      Alignment       =   1  'Right Justify
+      Height          =   345
+      Left            =   13500
+      TabIndex        =   0
+      Top             =   750
+      Visible         =   0   'False
+      Width           =   855
+   End
+   Begin C1SizerLibCtl.C1Elastic EleHeader 
+      Height          =   585
+      Left            =   0
+      TabIndex        =   2
+      TabStop         =   0   'False
+      Top             =   0
+      Width           =   13215
+      _cx             =   23310
+      _cy             =   1032
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Arial (Arabic)"
+         Size            =   24
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Enabled         =   -1  'True
+      Appearance      =   4
+      MousePointer    =   0
+      Version         =   801
+      BackColor       =   16777215
+      ForeColor       =   4210688
+      FloodColor      =   6553600
+      ForeColorDisabled=   -2147483631
+      Caption         =   "„–ﬂ—… Œ’„"
+      Align           =   0
+      AutoSizeChildren=   0
+      BorderWidth     =   0
+      ChildSpacing    =   0
+      Splitter        =   0   'False
+      FloodDirection  =   0
+      FloodPercent    =   0
+      CaptionPos      =   6
+      WordWrap        =   -1  'True
+      MaxChildSize    =   0
+      MinChildSize    =   0
+      TagWidth        =   0
+      TagPosition     =   0
+      Style           =   0
+      TagSplit        =   2
+      PicturePos      =   4
+      CaptionStyle    =   0
+      ResizeFonts     =   0   'False
+      GridRows        =   0
+      GridCols        =   0
+      Frame           =   3
+      FrameStyle      =   0
+      FrameWidth      =   1
+      FrameColor      =   -2147483628
+      FrameShadow     =   -2147483632
+      FloodStyle      =   1
+      _GridInfo       =   ""
+      AccessibleName  =   ""
+      AccessibleDescription=   ""
+      AccessibleValue =   ""
+      AccessibleRole  =   9
+      Begin ImpulseButton.ISButton XPBtnMove 
+         Height          =   375
+         Index           =   0
+         Left            =   1185
+         TabIndex        =   3
+         Top             =   90
+         Width           =   495
+         _ExtentX        =   873
+         _ExtentY        =   661
+         ButtonStyle     =   1
+         ButtonPositionImage=   4
+         Caption         =   ""
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ButtonImage     =   "FrmCreditFacicitySearch.frx":038A
+         ColorHighlight  =   4194304
+         ColorHoverText  =   16777215
+         ColorShadow     =   -2147483631
+         ColorOutline    =   -2147483631
+         DrawFocusRectangle=   0   'False
+         DisabledImageStyle=   1
+         ColorToggledHoverText=   16777215
+         ColorTextShadow =   16777215
+      End
+      Begin ImpulseButton.ISButton XPBtnMove 
+         Height          =   375
+         Index           =   2
+         Left            =   120
+         TabIndex        =   4
+         Top             =   90
+         Width           =   495
+         _ExtentX        =   873
+         _ExtentY        =   661
+         ButtonStyle     =   1
+         ButtonPositionImage=   4
+         Caption         =   ""
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ButtonImage     =   "FrmCreditFacicitySearch.frx":0724
+         ColorHighlight  =   4194304
+         ColorHoverText  =   16777215
+         ColorShadow     =   -2147483631
+         ColorOutline    =   -2147483631
+         DrawFocusRectangle=   0   'False
+         DisabledImageStyle=   1
+         ColorToggledHoverText=   16777215
+         ColorTextShadow =   16777215
+      End
+      Begin ImpulseButton.ISButton XPBtnMove 
+         Height          =   375
+         Index           =   1
+         Left            =   1710
+         TabIndex        =   5
+         Top             =   90
+         Width           =   495
+         _ExtentX        =   873
+         _ExtentY        =   661
+         ButtonStyle     =   1
+         ButtonPositionImage=   4
+         Caption         =   ""
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ButtonImage     =   "FrmCreditFacicitySearch.frx":0ABE
+         ColorHighlight  =   4194304
+         ColorHoverText  =   16777215
+         ColorShadow     =   -2147483631
+         ColorOutline    =   -2147483631
+         DrawFocusRectangle=   0   'False
+         DisabledImageStyle=   1
+         ColorToggledHoverText=   16777215
+         ColorTextShadow =   16777215
+      End
+      Begin ImpulseButton.ISButton XPBtnMove 
+         Height          =   375
+         Index           =   3
+         Left            =   645
+         TabIndex        =   6
+         Top             =   90
+         Width           =   495
+         _ExtentX        =   873
+         _ExtentY        =   661
+         ButtonStyle     =   1
+         ButtonPositionImage=   4
+         Caption         =   ""
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ButtonImage     =   "FrmCreditFacicitySearch.frx":0E58
+         ColorHighlight  =   4194304
+         ColorHoverText  =   16777215
+         ColorShadow     =   -2147483631
+         ColorOutline    =   -2147483631
+         DrawFocusRectangle=   0   'False
+         DisabledImageStyle=   1
+         ColorToggledHoverText=   16777215
+         ColorTextShadow =   16777215
+      End
+      Begin VB.Label lbl 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00E2E9E9&
+         BackStyle       =   0  'Transparent
+         ForeColor       =   &H000000FF&
+         Height          =   555
+         Index           =   27
+         Left            =   2280
+         TabIndex        =   33
+         Top             =   0
+         Width           =   2205
+      End
+   End
+   Begin MSComCtl2.DTPicker XPDtbTrans 
+      Height          =   315
+      Left            =   7740
+      TabIndex        =   7
+      Top             =   720
+      Width           =   1335
+      _ExtentX        =   2355
+      _ExtentY        =   556
+      _Version        =   393216
+      Format          =   87818241
+      CurrentDate     =   38784
+   End
+   Begin C1SizerLibCtl.C1Elastic C1Elastic4 
+      Height          =   540
+      Left            =   2790
+      TabIndex        =   8
+      TabStop         =   0   'False
+      Top             =   4620
+      Width           =   8745
+      _cx             =   15425
+      _cy             =   953
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Enabled         =   -1  'True
+      Appearance      =   0
+      MousePointer    =   0
+      Version         =   801
+      BackColor       =   14871017
+      ForeColor       =   -2147483630
+      FloodColor      =   6553600
+      ForeColorDisabled=   -2147483631
+      Caption         =   ""
+      Align           =   0
+      AutoSizeChildren=   0
+      BorderWidth     =   6
+      ChildSpacing    =   4
+      Splitter        =   0   'False
+      FloodDirection  =   0
+      FloodPercent    =   0
+      CaptionPos      =   1
+      WordWrap        =   -1  'True
+      MaxChildSize    =   0
+      MinChildSize    =   0
+      TagWidth        =   0
+      TagPosition     =   0
+      Style           =   0
+      TagSplit        =   2
+      PicturePos      =   4
+      CaptionStyle    =   0
+      ResizeFonts     =   0   'False
+      GridRows        =   0
+      GridCols        =   0
+      Frame           =   3
+      FrameStyle      =   0
+      FrameWidth      =   1
+      FrameColor      =   -2147483628
+      FrameShadow     =   -2147483632
+      FloodStyle      =   1
+      _GridInfo       =   ""
+      AccessibleName  =   ""
+      AccessibleDescription=   ""
+      AccessibleValue =   ""
+      AccessibleRole  =   9
+      Begin ImpulseButton.ISButton Cmd 
+         Height          =   375
+         Index           =   0
+         Left            =   7230
+         TabIndex        =   9
+         Top             =   75
+         Width           =   765
+         _ExtentX        =   1349
+         _ExtentY        =   661
+         ButtonPositionImage=   1
+         Caption         =   "ÃœÌœ"
+         BackColor       =   14871017
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColorButton     =   14871017
+         ColorHighlight  =   16777215
+         ColorHoverText  =   16711680
+         ColorShadow     =   -2147483637
+         ColorOutline    =   0
+         DrawFocusRectangle=   0   'False
+         DisabledImageExtraction=   0
+         ColorToggledHoverText=   16711680
+         ColorTextShadow =   -2147483637
+      End
+      Begin ImpulseButton.ISButton Cmd 
+         Height          =   375
+         Index           =   1
+         Left            =   6375
+         TabIndex        =   10
+         Top             =   75
+         Width           =   765
+         _ExtentX        =   1349
+         _ExtentY        =   661
+         ButtonPositionImage=   1
+         Caption         =   " ⁄œÌ·"
+         BackColor       =   14871017
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColorButton     =   14871017
+         ColorHighlight  =   16777215
+         ColorHoverText  =   16711680
+         ColorShadow     =   -2147483637
+         ColorOutline    =   0
+         DrawFocusRectangle=   0   'False
+         ColorToggledHoverText=   16711680
+         ColorTextShadow =   -2147483637
+      End
+      Begin ImpulseButton.ISButton Cmd 
+         Height          =   375
+         Index           =   2
+         Left            =   5535
+         TabIndex        =   11
+         Top             =   75
+         Width           =   765
+         _ExtentX        =   1349
+         _ExtentY        =   661
+         ButtonPositionImage=   1
+         Caption         =   "Õ›Ÿ"
+         BackColor       =   14871017
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColorButton     =   14871017
+         ColorHighlight  =   16777215
+         ColorHoverText  =   16711680
+         ColorShadow     =   -2147483637
+         ColorOutline    =   0
+         DrawFocusRectangle=   0   'False
+         ColorToggledHoverText=   16711680
+         ColorTextShadow =   -2147483637
+      End
+      Begin ImpulseButton.ISButton Cmd 
+         Height          =   375
+         Index           =   3
+         Left            =   4680
+         TabIndex        =   12
+         Top             =   75
+         Width           =   765
+         _ExtentX        =   1349
+         _ExtentY        =   661
+         ButtonPositionImage=   1
+         Caption         =   " —«Ã⁄"
+         BackColor       =   14871017
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColorButton     =   14871017
+         ColorHighlight  =   16777215
+         ColorHoverText  =   16711680
+         ColorShadow     =   -2147483637
+         ColorOutline    =   0
+         DrawFocusRectangle=   0   'False
+         ColorToggledHoverText=   16711680
+         ColorTextShadow =   -2147483637
+      End
+      Begin ImpulseButton.ISButton Cmd 
+         Height          =   375
+         Index           =   4
+         Left            =   3825
+         TabIndex        =   13
+         Top             =   75
+         Width           =   765
+         _ExtentX        =   1349
+         _ExtentY        =   661
+         ButtonPositionImage=   1
+         Caption         =   "Õ–›"
+         BackColor       =   14871017
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColorButton     =   14871017
+         ColorHighlight  =   16777215
+         ColorHoverText  =   16711680
+         ColorShadow     =   -2147483637
+         ColorOutline    =   0
+         DrawFocusRectangle=   0   'False
+         ColorToggledHoverText=   16711680
+         ColorTextShadow =   -2147483637
+      End
+      Begin ImpulseButton.ISButton Cmd 
+         Height          =   375
+         Index           =   6
+         Left            =   0
+         TabIndex        =   14
+         Top             =   60
+         Width           =   765
+         _ExtentX        =   1349
+         _ExtentY        =   661
+         ButtonPositionImage=   1
+         Caption         =   "Œ—ÊÃ"
+         BackColor       =   14871017
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColorButton     =   14871017
+         ColorHighlight  =   16777215
+         ColorHoverText  =   16711680
+         ColorShadow     =   -2147483637
+         ColorOutline    =   0
+         DrawFocusRectangle=   0   'False
+         ColorToggledHoverText=   16711680
+         ColorTextShadow =   -2147483637
+      End
+      Begin ImpulseButton.ISButton CmdHelp 
+         Height          =   375
+         Left            =   855
+         TabIndex        =   15
+         Top             =   60
+         Width           =   915
+         _ExtentX        =   1614
+         _ExtentY        =   661
+         ButtonPositionImage=   1
+         Caption         =   "„”«⁄œ…"
+         BackColor       =   14871017
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColorButton     =   14871017
+         ColorHighlight  =   16777215
+         ColorHoverText  =   16711680
+         ColorShadow     =   -2147483637
+         ColorOutline    =   0
+         DrawFocusRectangle=   0   'False
+         ColorToggledHoverText=   16711680
+         ColorTextShadow =   -2147483637
+      End
+      Begin ImpulseButton.ISButton Cmd 
+         Height          =   375
+         Index           =   5
+         Left            =   2760
+         TabIndex        =   26
+         Top             =   60
+         Width           =   765
+         _ExtentX        =   1349
+         _ExtentY        =   661
+         ButtonPositionImage=   1
+         Caption         =   "»ÕÀ"
+         BackColor       =   14871017
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColorButton     =   14871017
+         ColorHighlight  =   16777215
+         ColorHoverText  =   16711680
+         ColorShadow     =   -2147483637
+         ColorOutline    =   0
+         DrawFocusRectangle=   0   'False
+         ColorToggledHoverText=   16711680
+         ColorTextShadow =   -2147483637
+      End
+      Begin ImpulseButton.ISButton Cmd 
+         Height          =   375
+         Index           =   9
+         Left            =   1920
+         TabIndex        =   36
+         Top             =   60
+         Width           =   765
+         _ExtentX        =   1349
+         _ExtentY        =   661
+         ButtonPositionImage=   1
+         Caption         =   "ÿ»«⁄Â"
+         BackColor       =   14871017
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColorButton     =   14871017
+         ColorHighlight  =   16777215
+         ColorHoverText  =   16711680
+         ColorShadow     =   -2147483637
+         ColorOutline    =   0
+         DrawFocusRectangle=   0   'False
+         ColorToggledHoverText=   16711680
+         ColorTextShadow =   -2147483637
+      End
+   End
+   Begin MSDataListLib.DataCombo DCboUserName 
+      Height          =   315
+      Left            =   8580
+      TabIndex        =   16
+      Top             =   4200
+      Width           =   2580
+      _ExtentX        =   4551
+      _ExtentY        =   556
+      _Version        =   393216
+      Enabled         =   0   'False
+      Text            =   ""
+      RightToLeft     =   -1  'True
+   End
+   Begin MSDataListLib.DataCombo DcboBox 
+      Height          =   315
+      Left            =   13200
+      TabIndex        =   17
+      Top             =   3570
+      Width           =   2955
+      _ExtentX        =   5212
+      _ExtentY        =   556
+      _Version        =   393216
+      Text            =   ""
+      RightToLeft     =   -1  'True
+   End
+   Begin ImpulseButton.ISButton Cmd 
+      Height          =   375
+      Index           =   7
+      Left            =   13560
+      TabIndex        =   28
+      Top             =   1920
+      Width           =   1365
+      _ExtentX        =   2408
+      _ExtentY        =   661
+      ButtonPositionImage=   1
+      Caption         =   "ÿ»«⁄Â «·ﬁÌœ"
+      BackColor       =   14871017
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ColorButton     =   14871017
+      ColorHighlight  =   16777215
+      ColorHoverText  =   16711680
+      ColorShadow     =   -2147483637
+      ColorOutline    =   0
+      DrawFocusRectangle=   0   'False
+      ColorToggledHoverText=   16711680
+      ColorTextShadow =   -2147483637
+   End
+   Begin MSDataListLib.DataCombo Dcbranch 
+      Bindings        =   "FrmCreditFacicitySearch.frx":11F2
+      Height          =   315
+      Left            =   2640
+      TabIndex        =   30
+      Top             =   720
+      Width           =   2895
+      _ExtentX        =   5106
+      _ExtentY        =   556
+      _Version        =   393216
+      BackColor       =   16777215
+      ListField       =   "account_name"
+      BoundColumn     =   "code"
+      Text            =   ""
+      RightToLeft     =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+   End
+   Begin C1SizerLibCtl.C1Tab XPTab301 
+      Height          =   2895
+      Left            =   -120
+      TabIndex        =   37
+      Top             =   1200
+      Width           =   13320
+      _cx             =   23495
+      _cy             =   5106
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Enabled         =   -1  'True
+      Appearance      =   2
+      MousePointer    =   0
+      Version         =   801
+      BackColor       =   14871017
+      ForeColor       =   0
+      FrontTabColor   =   14871017
+      BackTabColor    =   12648447
+      TabOutlineColor =   -2147483632
+      FrontTabForeColor=   16711680
+      Caption         =   "»Ì«‰«  „–ﬂ—… Œ’„|Õ«·Â «·«⁄ „«œ"
+      Align           =   0
+      CurrTab         =   0
+      FirstTab        =   0
+      Style           =   3
+      Position        =   1
+      AutoSwitch      =   -1  'True
+      AutoScroll      =   -1  'True
+      TabPreview      =   -1  'True
+      ShowFocusRect   =   -1  'True
+      TabsPerPage     =   0
+      BorderWidth     =   0
+      BoldCurrent     =   0   'False
+      DogEars         =   0   'False
+      MultiRow        =   0   'False
+      MultiRowOffset  =   200
+      CaptionStyle    =   0
+      TabHeight       =   0
+      TabCaptionPos   =   4
+      TabPicturePos   =   1
+      CaptionEmpty    =   ""
+      Separators      =   0   'False
+      AccessibleName  =   ""
+      AccessibleDescription=   ""
+      AccessibleValue =   ""
+      AccessibleRole  =   37
+      Picture(0)      =   "FrmCreditFacicitySearch.frx":1207
+      Flags(1)        =   2
+      Begin C1SizerLibCtl.C1Elastic C1Elastic1 
+         Height          =   2430
+         Left            =   13965
+         TabIndex        =   38
+         TabStop         =   0   'False
+         Top             =   45
+         Width           =   13230
+         _cx             =   23336
+         _cy             =   4286
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Enabled         =   -1  'True
+         Appearance      =   4
+         MousePointer    =   0
+         Version         =   801
+         BackColor       =   -2147483633
+         ForeColor       =   -2147483630
+         FloodColor      =   6553600
+         ForeColorDisabled=   -2147483631
+         Caption         =   ""
+         Align           =   0
+         AutoSizeChildren=   0
+         BorderWidth     =   6
+         ChildSpacing    =   4
+         Splitter        =   0   'False
+         FloodDirection  =   0
+         FloodPercent    =   0
+         CaptionPos      =   1
+         WordWrap        =   -1  'True
+         MaxChildSize    =   0
+         MinChildSize    =   0
+         TagWidth        =   0
+         TagPosition     =   0
+         Style           =   0
+         TagSplit        =   2
+         PicturePos      =   4
+         CaptionStyle    =   0
+         ResizeFonts     =   0   'False
+         GridRows        =   0
+         GridCols        =   0
+         Frame           =   3
+         FrameStyle      =   0
+         FrameWidth      =   1
+         FrameColor      =   -2147483628
+         FrameShadow     =   -2147483632
+         FloodStyle      =   1
+         _GridInfo       =   ""
+         AccessibleName  =   ""
+         AccessibleDescription=   ""
+         AccessibleValue =   ""
+         AccessibleRole  =   9
+         Begin VSFlex8UCtl.VSFlexGrid GRID2 
+            Height          =   3630
+            Left            =   120
+            TabIndex        =   39
+            Tag             =   "1"
+            Top             =   240
+            Width           =   13230
+            _cx             =   23336
+            _cy             =   6403
+            Appearance      =   1
+            BorderStyle     =   1
+            Enabled         =   -1  'True
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   178
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            MousePointer    =   0
+            BackColor       =   -2147483643
+            ForeColor       =   -2147483640
+            BackColorFixed  =   14871017
+            ForeColorFixed  =   -2147483630
+            BackColorSel    =   -2147483635
+            ForeColorSel    =   -2147483634
+            BackColorBkg    =   -2147483636
+            BackColorAlternate=   -2147483643
+            GridColor       =   -2147483633
+            GridColorFixed  =   -2147483632
+            TreeColor       =   -2147483632
+            FloodColor      =   192
+            SheetBorder     =   -2147483642
+            FocusRect       =   1
+            HighLight       =   1
+            AllowSelection  =   -1  'True
+            AllowBigSelection=   -1  'True
+            AllowUserResizing=   0
+            SelectionMode   =   0
+            GridLines       =   1
+            GridLinesFixed  =   2
+            GridLineWidth   =   1
+            Rows            =   3
+            Cols            =   8
+            FixedRows       =   1
+            FixedCols       =   1
+            RowHeightMin    =   300
+            RowHeightMax    =   0
+            ColWidthMin     =   0
+            ColWidthMax     =   0
+            ExtendLastCol   =   -1  'True
+            FormatString    =   $"FrmCreditFacicitySearch.frx":15A1
+            ScrollTrack     =   0   'False
+            ScrollBars      =   3
+            ScrollTips      =   0   'False
+            MergeCells      =   0
+            MergeCompare    =   0
+            AutoResize      =   -1  'True
+            AutoSizeMode    =   0
+            AutoSearch      =   0
+            AutoSearchDelay =   2
+            MultiTotals     =   -1  'True
+            SubtotalPosition=   1
+            OutlineBar      =   0
+            OutlineCol      =   0
+            Ellipsis        =   0
+            ExplorerBar     =   0
+            PicturesOver    =   0   'False
+            FillStyle       =   0
+            RightToLeft     =   -1  'True
+            PictureType     =   0
+            TabBehavior     =   0
+            OwnerDraw       =   0
+            Editable        =   0
+            ShowComboButton =   1
+            WordWrap        =   0   'False
+            TextStyle       =   0
+            TextStyleFixed  =   0
+            OleDragMode     =   0
+            OleDropMode     =   0
+            DataMode        =   0
+            VirtualData     =   -1  'True
+            DataMember      =   ""
+            ComboSearch     =   3
+            AutoSizeMouse   =   -1  'True
+            FrozenRows      =   0
+            FrozenCols      =   0
+            AllowUserFreezing=   0
+            BackColorFrozen =   0
+            ForeColorFrozen =   0
+            WallPaperAlignment=   9
+            AccessibleName  =   ""
+            AccessibleDescription=   ""
+            AccessibleValue =   ""
+            AccessibleRole  =   24
+         End
+         Begin VB.Label Label11 
+            Alignment       =   2  'Center
+            BackColor       =   &H00FFFFC0&
+            Caption         =   "„ÿ·Ê» «⁄ „«œ… Õ«·Ì«"
+            Height          =   255
+            Left            =   9000
+            RightToLeft     =   -1  'True
+            TabIndex        =   53
+            Top             =   4080
+            Width           =   3375
+         End
+         Begin VB.Label Label1100 
+            Alignment       =   2  'Center
+            BackColor       =   &H00FFFFC0&
+            Caption         =   "„ÿ·Ê» «⁄ „«œ… Õ«·Ì«"
+            Height          =   255
+            Left            =   9960
+            RightToLeft     =   -1  'True
+            TabIndex        =   40
+            Top             =   4560
+            Width           =   3375
+         End
+      End
+      Begin C1SizerLibCtl.C1Elastic Ele 
+         Height          =   2430
+         Index           =   15
+         Left            =   45
+         TabIndex        =   41
+         TabStop         =   0   'False
+         Top             =   45
+         Width           =   13230
+         _cx             =   23336
+         _cy             =   4286
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Arial (Arabic)"
+            Size            =   12
+            Charset         =   178
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Enabled         =   -1  'True
+         Appearance      =   4
+         MousePointer    =   0
+         Version         =   801
+         BackColor       =   14871017
+         ForeColor       =   -2147483630
+         FloodColor      =   6553600
+         ForeColorDisabled=   -2147483631
+         Caption         =   ""
+         Align           =   0
+         AutoSizeChildren=   8
+         BorderWidth     =   1
+         ChildSpacing    =   1
+         Splitter        =   0   'False
+         FloodDirection  =   0
+         FloodPercent    =   0
+         CaptionPos      =   6
+         WordWrap        =   -1  'True
+         MaxChildSize    =   0
+         MinChildSize    =   0
+         TagWidth        =   0
+         TagPosition     =   0
+         Style           =   0
+         TagSplit        =   2
+         PicturePos      =   4
+         CaptionStyle    =   0
+         ResizeFonts     =   0   'False
+         GridRows        =   1
+         GridCols        =   1
+         Frame           =   3
+         FrameStyle      =   0
+         FrameWidth      =   1
+         FrameColor      =   -2147483628
+         FrameShadow     =   -2147483632
+         FloodStyle      =   1
+         _GridInfo       =   $"FrmCreditFacicitySearch.frx":16ED
+         AccessibleName  =   ""
+         AccessibleDescription=   ""
+         AccessibleValue =   ""
+         AccessibleRole  =   9
+         Begin C1SizerLibCtl.C1Elastic Ele 
+            Height          =   2400
+            Index           =   16
+            Left            =   15
+            TabIndex        =   42
+            TabStop         =   0   'False
+            Top             =   15
+            Width           =   13200
+            _cx             =   23283
+            _cy             =   4233
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   178
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Enabled         =   -1  'True
+            Appearance      =   5
+            MousePointer    =   0
+            Version         =   801
+            BackColor       =   14871017
+            ForeColor       =   -2147483630
+            FloodColor      =   6553600
+            ForeColorDisabled=   -2147483631
+            Caption         =   ""
+            Align           =   0
+            AutoSizeChildren=   7
+            BorderWidth     =   6
+            ChildSpacing    =   4
+            Splitter        =   0   'False
+            FloodDirection  =   0
+            FloodPercent    =   0
+            CaptionPos      =   1
+            WordWrap        =   -1  'True
+            MaxChildSize    =   0
+            MinChildSize    =   0
+            TagWidth        =   0
+            TagPosition     =   0
+            Style           =   0
+            TagSplit        =   2
+            PicturePos      =   4
+            CaptionStyle    =   0
+            ResizeFonts     =   0   'False
+            GridRows        =   0
+            GridCols        =   0
+            Frame           =   3
+            FrameStyle      =   0
+            FrameWidth      =   1
+            FrameColor      =   -2147483628
+            FrameShadow     =   -2147483632
+            FloodStyle      =   1
+            _GridInfo       =   ""
+            AccessibleName  =   ""
+            AccessibleDescription=   ""
+            AccessibleValue =   ""
+            AccessibleRole  =   9
+            Begin VB.TextBox Remarks 
+               Alignment       =   1  'Right Justify
+               Height          =   1140
+               Left            =   6840
+               MultiLine       =   -1  'True
+               ScrollBars      =   2  'Vertical
+               TabIndex        =   51
+               Top             =   1185
+               Width           =   4785
+            End
+            Begin VB.Frame lbldata 
+               BackColor       =   &H00E2E9E9&
+               Caption         =   "   »Ì«‰«  «·„ÊŸ›"
+               Height          =   2580
+               Left            =   0
+               RightToLeft     =   -1  'True
+               TabIndex        =   50
+               Top             =   0
+               Width           =   13305
+               Begin VB.ComboBox CboYear 
+                  Height          =   315
+                  Left            =   3000
+                  Style           =   2  'Dropdown List
+                  TabIndex        =   73
+                  Top             =   1440
+                  Width           =   1455
+               End
+               Begin VB.ComboBox CmbMonth 
+                  Height          =   315
+                  Left            =   3000
+                  Style           =   2  'Dropdown List
+                  TabIndex        =   72
+                  Top             =   1080
+                  Width           =   1455
+               End
+               Begin XtremeSuiteControls.CheckBox RdAccept 
+                  Height          =   375
+                  Left            =   0
+                  TabIndex        =   71
+                  Top             =   1680
+                  Width           =   1455
+                  _Version        =   786432
+                  _ExtentX        =   2566
+                  _ExtentY        =   661
+                  _StockProps     =   79
+                  Caption         =   "„Ê«›ﬁ… «·„ÊŸ›"
+                  UseVisualStyle  =   -1  'True
+                  TextAlignment   =   1
+                  RightToLeft     =   -1  'True
+               End
+               Begin VB.TextBox TxtFilrNo 
+                  Alignment       =   1  'Right Justify
+                  Height          =   285
+                  Left            =   240
+                  TabIndex        =   63
+                  Top             =   720
+                  Width           =   1425
+               End
+               Begin VB.TextBox TxtWordPrice 
+                  Alignment       =   1  'Right Justify
+                  Height          =   315
+                  Left            =   240
+                  TabIndex        =   59
+                  Top             =   240
+                  Width           =   4935
+               End
+               Begin VB.TextBox TxtPrice 
+                  Alignment       =   1  'Right Justify
+                  Height          =   315
+                  Left            =   6840
+                  TabIndex        =   57
+                  Top             =   240
+                  Width           =   4695
+               End
+               Begin VB.TextBox TxtSearchCode 
+                  Alignment       =   1  'Right Justify
+                  Height          =   285
+                  Left            =   10200
+                  RightToLeft     =   -1  'True
+                  TabIndex        =   54
+                  Top             =   735
+                  Width           =   1335
+               End
+               Begin MSDataListLib.DataCombo DcboEmpName 
+                  Height          =   315
+                  Left            =   6840
+                  TabIndex        =   55
+                  Top             =   720
+                  Width           =   3315
+                  _ExtentX        =   5847
+                  _ExtentY        =   556
+                  _Version        =   393216
+                  Text            =   ""
+                  RightToLeft     =   -1  'True
+               End
+               Begin MSDataListLib.DataCombo DcboEmpDepartments 
+                  Height          =   315
+                  Left            =   3000
+                  TabIndex        =   61
+                  Top             =   720
+                  Width           =   2175
+                  _ExtentX        =   3836
+                  _ExtentY        =   556
+                  _Version        =   393216
+                  Enabled         =   0   'False
+                  Text            =   ""
+                  RightToLeft     =   -1  'True
+               End
+               Begin MSComCtl2.DTPicker DTmaturity 
+                  Height          =   315
+                  Left            =   240
+                  TabIndex        =   67
+                  Top             =   1200
+                  Width           =   1335
+                  _ExtentX        =   2355
+                  _ExtentY        =   556
+                  _Version        =   393216
+                  Format          =   87818241
+                  CurrentDate     =   38784
+               End
+               Begin MSDataListLib.DataCombo DcbUser 
+                  Bindings        =   "FrmCreditFacicitySearch.frx":1721
+                  Height          =   315
+                  Left            =   3000
+                  TabIndex        =   69
+                  Top             =   1800
+                  Width           =   2175
+                  _ExtentX        =   3836
+                  _ExtentY        =   556
+                  _Version        =   393216
+                  BackColor       =   16777215
+                  ListField       =   "account_name"
+                  BoundColumn     =   "code"
+                  Text            =   ""
+                  RightToLeft     =   -1  'True
+                  BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+                     Name            =   "MS Sans Serif"
+                     Size            =   8.25
+                     Charset         =   178
+                     Weight          =   400
+                     Underline       =   0   'False
+                     Italic          =   0   'False
+                     Strikethrough   =   0   'False
+                  EndProperty
+               End
+               Begin VB.Label lbl 
+                  Alignment       =   1  'Right Justify
+                  BackColor       =   &H00E2E9E9&
+                  Caption         =   "”‰…"
+                  Height          =   315
+                  Index           =   15
+                  Left            =   4740
+                  TabIndex        =   75
+                  Top             =   1440
+                  Width           =   405
+               End
+               Begin VB.Label lbl 
+                  Alignment       =   1  'Right Justify
+                  BackColor       =   &H00E2E9E9&
+                  Caption         =   "‘Â—"
+                  Height          =   435
+                  Index           =   13
+                  Left            =   4740
+                  TabIndex        =   74
+                  Top             =   1110
+                  Width           =   405
+               End
+               Begin VB.Label lblent 
+                  Alignment       =   1  'Right Justify
+                  BackStyle       =   0  'Transparent
+                  Caption         =   " „ «œŒ«·Â« „‰ ﬁ»·"
+                  Height          =   255
+                  Left            =   5070
+                  RightToLeft     =   -1  'True
+                  TabIndex        =   70
+                  Top             =   1920
+                  Width           =   1575
+               End
+               Begin VB.Label lbl 
+                  Alignment       =   1  'Right Justify
+                  BackColor       =   &H00E2E9E9&
+                  Caption         =   " √—ÌŒ «·«” Õﬁ«ﬁ"
+                  Height          =   285
+                  Index           =   14
+                  Left            =   1650
+                  TabIndex        =   68
+                  Top             =   1215
+                  Width           =   1245
+               End
+               Begin VB.Label lbl 
+                  Alignment       =   1  'Right Justify
+                  BackColor       =   &H00E2E9E9&
+                  Caption         =   " Œ’„ „‰ —« »"
+                  Height          =   285
+                  Index           =   12
+                  Left            =   5280
+                  TabIndex        =   66
+                  Top             =   1200
+                  Width           =   1365
+               End
+               Begin VB.Label lbl 
+                  Alignment       =   1  'Right Justify
+                  BackColor       =   &H00E2E9E9&
+                  Caption         =   "Ê–«·ﬂ ·ﬁ«¡"
+                  Height          =   285
+                  Index           =   11
+                  Left            =   12000
+                  TabIndex        =   65
+                  Top             =   1440
+                  Width           =   885
+               End
+               Begin VB.Label lbl 
+                  Alignment       =   1  'Right Justify
+                  BackColor       =   &H00E2E9E9&
+                  Caption         =   "—ﬁ„ «·„·›"
+                  Height          =   375
+                  Index           =   10
+                  Left            =   2055
+                  TabIndex        =   64
+                  Top             =   720
+                  Width           =   840
+               End
+               Begin VB.Label lbl 
+                  Alignment       =   1  'Right Justify
+                  BackColor       =   &H00E2E9E9&
+                  Caption         =   "«·ﬁ”„"
+                  Height          =   285
+                  Index           =   9
+                  Left            =   5280
+                  TabIndex        =   62
+                  Top             =   720
+                  Width           =   1365
+               End
+               Begin VB.Label lbl 
+                  Alignment       =   1  'Right Justify
+                  BackColor       =   &H00E2E9E9&
+                  Caption         =   "«·„»·€ »«·Õ—Ê›"
+                  Height          =   285
+                  Index           =   5
+                  Left            =   5160
+                  TabIndex        =   60
+                  Top             =   255
+                  Width           =   1485
+               End
+               Begin VB.Label lbl 
+                  Alignment       =   1  'Right Justify
+                  BackColor       =   &H00E2E9E9&
+                  Caption         =   "«·„»·€"
+                  Height          =   285
+                  Index           =   2
+                  Left            =   11880
+                  TabIndex        =   58
+                  Top             =   255
+                  Width           =   1005
+               End
+               Begin VB.Label lbl 
+                  Alignment       =   1  'Right Justify
+                  BackColor       =   &H00E2E9E9&
+                  Caption         =   "⁄·Ï Õ”«» «·”Ìœ"
+                  Height          =   285
+                  Index           =   3
+                  Left            =   11640
+                  TabIndex        =   56
+                  Top             =   735
+                  Width           =   1245
+               End
+            End
+            Begin ImpulseButton.ISButton Accredit 
+               Height          =   285
+               Left            =   240
+               TabIndex        =   52
+               Top             =   2070
+               Width           =   1950
+               _ExtentX        =   3440
+               _ExtentY        =   503
+               ButtonStyle     =   1
+               ButtonPositionImage=   1
+               Caption         =   "«—”«· ··«⁄ „«œ"
+               BackColor       =   14871017
+               BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+                  Name            =   "MS Sans Serif"
+                  Size            =   8.25
+                  Charset         =   178
+                  Weight          =   400
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ColorButton     =   14871017
+               ColorHighlight  =   16777215
+               ColorHoverText  =   16711680
+               ColorShadow     =   4210752
+               ColorOutline    =   0
+               DrawFocusRectangle=   0   'False
+               ColorToggledHoverText=   16711680
+               ColorTextShadow =   4210752
+            End
+            Begin VB.Label lbl 
+               Alignment       =   1  'Right Justify
+               BackColor       =   &H00E2E9E9&
+               Enabled         =   0   'False
+               Height          =   1395
+               Index           =   62
+               Left            =   2565
+               RightToLeft     =   -1  'True
+               TabIndex        =   43
+               Top             =   645
+               Width           =   555
+            End
+         End
+         Begin C1SizerLibCtl.C1Elastic Ele 
+            Height          =   2400
+            Index           =   9
+            Left            =   15
+            TabIndex        =   44
+            TabStop         =   0   'False
+            Top             =   15
+            Width           =   13200
+            _cx             =   23283
+            _cy             =   4233
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   178
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Enabled         =   -1  'True
+            Appearance      =   5
+            MousePointer    =   0
+            Version         =   801
+            BackColor       =   14871017
+            ForeColor       =   -2147483630
+            FloodColor      =   6553600
+            ForeColorDisabled=   -2147483631
+            Caption         =   ""
+            Align           =   0
+            AutoSizeChildren=   7
+            BorderWidth     =   0
+            ChildSpacing    =   4
+            Splitter        =   0   'False
+            FloodDirection  =   0
+            FloodPercent    =   0
+            CaptionPos      =   1
+            WordWrap        =   -1  'True
+            MaxChildSize    =   0
+            MinChildSize    =   0
+            TagWidth        =   0
+            TagPosition     =   0
+            Style           =   0
+            TagSplit        =   2
+            PicturePos      =   4
+            CaptionStyle    =   0
+            ResizeFonts     =   0   'False
+            GridRows        =   0
+            GridCols        =   0
+            Frame           =   3
+            FrameStyle      =   0
+            FrameWidth      =   1
+            FrameColor      =   -2147483628
+            FrameShadow     =   -2147483632
+            FloodStyle      =   1
+            _GridInfo       =   ""
+            AccessibleName  =   ""
+            AccessibleDescription=   ""
+            AccessibleValue =   ""
+            AccessibleRole  =   9
+            Begin VB.TextBox Text8 
+               Alignment       =   1  'Right Justify
+               Height          =   1800
+               Left            =   3435
+               MaxLength       =   4
+               RightToLeft     =   -1  'True
+               TabIndex        =   46
+               Top             =   510
+               Width           =   750
+            End
+            Begin VB.CheckBox Check1 
+               Alignment       =   1  'Right Justify
+               BackColor       =   &H00E2E9E9&
+               Caption         =   "÷—»Ì»… «·„»Ì⁄« "
+               Height          =   1245
+               Left            =   4365
+               RightToLeft     =   -1  'True
+               TabIndex        =   45
+               Top             =   645
+               Width           =   1080
+            End
+            Begin VB.Label lbl 
+               Alignment       =   1  'Right Justify
+               BackColor       =   &H00E2E9E9&
+               Enabled         =   0   'False
+               Height          =   1245
+               Index           =   67
+               Left            =   2430
+               RightToLeft     =   -1  'True
+               TabIndex        =   49
+               Top             =   645
+               Width           =   690
+            End
+            Begin VB.Label lbl 
+               Alignment       =   1  'Right Justify
+               BackColor       =   &H00E2E9E9&
+               Caption         =   "«·ﬁÌ„…"
+               Enabled         =   0   'False
+               Height          =   1200
+               Index           =   68
+               Left            =   4185
+               RightToLeft     =   -1  'True
+               TabIndex        =   48
+               Top             =   810
+               Width           =   30
+            End
+            Begin VB.Label lbl 
+               Alignment       =   1  'Right Justify
+               BackColor       =   &H00E2E9E9&
+               Caption         =   "%"
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   9.75
+                  Charset         =   178
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               Height          =   1425
+               Index           =   69
+               Left            =   3120
+               RightToLeft     =   -1  'True
+               TabIndex        =   47
+               Top             =   645
+               Width           =   315
+            End
+         End
+      End
+   End
+   Begin VB.Label LblBr 
+      Alignment       =   1  'Right Justify
+      BackStyle       =   0  'Transparent
+      Caption         =   "«·›—⁄"
+      Height          =   255
+      Left            =   5520
+      RightToLeft     =   -1  'True
+      TabIndex        =   31
+      Top             =   780
+      Width           =   855
+   End
+   Begin VB.Label lbl 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00E2E9E9&
+      Caption         =   "—ﬁ„ «·ﬁÌœ:"
+      Height          =   315
+      Index           =   30
+      Left            =   12810
+      RightToLeft     =   -1  'True
+      TabIndex        =   29
+      Top             =   1650
+      Width           =   975
+   End
+   Begin VB.Label lbl 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00E2E9E9&
+      Caption         =   "—ﬁ„ «·ÿ·»"
+      Height          =   285
+      Index           =   4
+      Left            =   11430
+      TabIndex        =   25
+      Top             =   750
+      Width           =   1005
+   End
+   Begin VB.Label lbl 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00E2E9E9&
+      Caption         =   "«· «—ÌŒ"
+      Height          =   285
+      Index           =   1
+      Left            =   8670
+      TabIndex        =   24
+      Top             =   735
+      Width           =   1005
+   End
+   Begin VB.Label lbl 
+      Alignment       =   1  'Right Justify
+      BackStyle       =   0  'Transparent
+      Caption         =   "Õ—— »Ê«”ÿ… : "
+      Height          =   270
+      Index           =   8
+      Left            =   11325
+      TabIndex        =   23
+      Top             =   4275
+      Width           =   900
+   End
+   Begin VB.Label lbl 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00E2E9E9&
+      Caption         =   " «·”Ã· «·Õ«·Ì:"
+      Height          =   315
+      Index           =   7
+      Left            =   2310
+      TabIndex        =   22
+      Top             =   4350
+      Width           =   1065
+   End
+   Begin VB.Label lbl 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00E2E9E9&
+      Caption         =   " ⁄œœ «·”Ã·« :"
+      Height          =   315
+      Index           =   6
+      Left            =   690
+      TabIndex        =   21
+      Top             =   4350
+      Width           =   975
+   End
+   Begin VB.Label XPTxtCount 
+      Alignment       =   1  'Right Justify
+      BackStyle       =   0  'Transparent
+      Height          =   195
+      Left            =   90
+      TabIndex        =   20
+      Top             =   4380
+      Width           =   495
+   End
+   Begin VB.Label XPTxtCurrent 
+      Alignment       =   1  'Right Justify
+      BackStyle       =   0  'Transparent
+      Height          =   195
+      Left            =   1860
+      TabIndex        =   19
+      Top             =   4380
+      Width           =   495
+   End
+   Begin VB.Label lbl 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00E2E9E9&
+      Caption         =   "«”„ «·Œ“‰…"
+      Height          =   285
+      Index           =   0
+      Left            =   13350
+      TabIndex        =   18
+      Top             =   2130
+      Width           =   1005
+   End
+End
+Attribute VB_Name = "FrmDeductionNote"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Explicit
+Dim rs As ADODB.Recordset
+Dim TTP As clstooltip
+Dim cSearchDcbo  As clsDCboSearch
+Dim TTD As clstooltipdemand
+Dim Employee_account As String
+
+Private Sub Accredit_Click()
+    Dim BeginTrans As Boolean
+
+    Cn.BeginTrans
+    BeginTrans = True
+
+    If IsNull(rs("Posted")) Then
+        rs("Posted") = user_id
+        rs("PostedDate") = Time
+    Else
+        rs("Posted") = Null
+       rs("PostedDate") = Time
+    End If
+   
+    rs.update
+ If SystemOptions.UserInterface = ArabicInterface Then
+    Accredit.Caption = " „ «·«—”«· ··«⁄ „«œ"
+Else
+Accredit.Caption = "Sent To approval "
+End If
+
+    Cn.CommitTrans
+    BeginTrans = False
+FillApprovedTable
+    Retrive (val(Me.XPTxtID.text))
+End Sub
+
+
+
+Private Sub CboYear_Click()
+If Me.CboYear.text <> "" Then
+Me.DTmaturity.year = val(Me.CboYear.text)
+End If
+End Sub
+
+Private Sub CmbMonth_Click()
+If Me.CmbMonth.text <> "" Then
+
+Me.DTmaturity.Month = Me.CmbMonth.ListIndex + 1
+End If
+End Sub
+
+Private Sub Cmd_Click(Index As Integer)
+
+    ' On Error GoTo ErrTrap
+    Select Case Index
+
+        Case 0
+
+            If DoPremis(Do_New, Me.name, True) = False Then
+                Exit Sub
+            End If
+
+            TxtModFlg.text = "N"
+            clear_all Me
+            Me.RdAccept.value = False
+          '  lbl(20).Caption = "0"
+           '' lbl(21).Caption = "0"
+           ' lbl(22).Caption = "0"
+            'lbl(23).Caption = "0"
+            
+              GRID2.Clear flexClearScrollable, flexClearEverything
+    GRID2.Rows = 1
+            Me.DCboUserName.BoundText = user_id
+          '  TxtPaymentCounts.text = 1
+Dcbranch.BoundText = Current_branch
+            'XPDtbTrans.SetFocus
+            
+            Accredit.Enabled = True
+                If SystemOptions.UserInterface = ArabicInterface Then
+                                                    Accredit.Caption = "   «·«—”«· ··«⁄ „«œ "
+                                                  Else
+                                                    Accredit.Caption = " send to Approval   "
+                                               End If
+                                               
+        Case 1
+
+            If DoPremis(Do_Edit, Me.name, True) = False Then
+                Exit Sub
+            End If
+
+            TxtModFlg.text = "E"
+            Me.DCboUserName.BoundText = user_id
+
+        Case 2
+    
+            Dim Msg As String
+
+            If Trim(Dcbranch.BoundText) = "" Then
+                If SystemOptions.UserInterface = EnglishInterface Then
+                    Msg = "Specify Branch"
+                Else
+                    Msg = "Õœœ «·›—⁄ "
+                End If
+
+                MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+                Dcbranch.SetFocus
+                SendKeys "{F4}"
+                Screen.MousePointer = vbDefault
+                Exit Sub
+            End If
+
+            my_branch = Me.Dcbranch.BoundText
+
+            SaveData
+
+        Case 3
+            Undo
+
+        Case 4
+
+            If DoPremis(Do_Delete, Me.name, True) = False Then
+                Exit Sub
+            End If
+
+            Del_Trans
+
+        Case 5
+            Load FrmSearchDeductionNoye
+            FrmSearchDeductionNoye.show
+
+        Case 6
+            Unload Me
+
+        Case 7
+            ShowGL_cc Me.TxtNoteSerial.text, , 200
+
+        Case 8
+            CalCulateParts
+            
+            
+                 Case 9
+
+            If DoPremis(Do_Print, Me.name, True) = False Then
+                Exit Sub
+            End If
+
+            If val(Me.XPTxtID.text) <> 0 Then
+                print_report val(Me.XPTxtID.text)
+        
+        
+            End If
+        
+    End Select
+
+    Exit Sub
+ErrTrap:
+End Sub
+Function print_report(Optional NoteSerial As String)
+    
+     
+    Dim MySQL As String
+    Dim RsData As New ADODB.Recordset
+    Dim xApp As New CRAXDRT.Application
+    Dim xReport As CRAXDRT.Report
+    Dim CViewer As ClsReportViewer
+    Dim StrReportTitle As String
+    Dim StrFileName As String
+    Dim Msg As String
+
+
+'    MySQL = "SELECT     dbo.TblEmpAdvanceRequest.Branch_NO, dbo.TblEmpAdvanceRequest.Emp_id, dbo.TblEmpAdvanceRequest.AdvanceValue, dbo.TblEmpAdvanceRequest.FirstDate, "
+'MySQL = MySQL & "  dbo.TblEmpAdvanceRequest.PaymentCounts, dbo.TblEmpAdvanceRequest.UserID, dbo.TblEmpAdvanceRequest.AdvanceDate, dbo.TblBranchesData.branch_name,"
+'MySQL = MySQL & "    dbo.TblBranchesData.branch_namee, dbo.TblEmployee.Emp_Code, dbo.TblEmployee.Emp_Name, dbo.TblEmployee.Emp_Namee, dbo.TblUsers.UserName,"
+'MySQL = MySQL & "      dbo.TblEmpJobsTypes.JobTypeName, dbo.TblEmpJobsTypes.JobTypeNamee, dbo.TblEmpDepartments.DepartmentName,"
+'MySQL = MySQL & "   dbo.TblEmpDepartments.DepartmentNamee, dbo.TblEmpGrades.name AS GRADENAME, dbo.TblEmpGrades.namee AS GRADENAMEE,"
+' MySQL = MySQL & "    dbo.TblEmpDepartments.DeparmentID , dbo.TblEmpJobsTypes.JobTypeID"
+'MySQL = MySQL & "  FROM         dbo.TblEmpAdvanceRequest INNER JOIN"
+'MySQL = MySQL & "   dbo.TblEmployee ON dbo.TblEmpAdvanceRequest.Emp_id = dbo.TblEmployee.Emp_ID INNER JOIN"
+'MySQL = MySQL & "  dbo.TblUsers ON dbo.TblEmpAdvanceRequest.UserID = dbo.TblUsers.UserID INNER JOIN"
+'MySQL = MySQL & "  dbo.TblEmpDepartments ON dbo.TblEmpAdvanceRequest.DeparmentID = dbo.TblEmpDepartments.DeparmentID INNER JOIN"
+'MySQL = MySQL & "  dbo.TblEmpJobsTypes ON dbo.TblEmpAdvanceRequest.JobTypeID = dbo.TblEmpJobsTypes.JobTypeID  LEFT OUTER JOIN"
+'MySQL = MySQL & "  dbo.TblEmpGrades ON dbo.TblEmpAdvanceRequest.gradeID = dbo.TblEmpGrades.gradeid LEFT OUTER JOIN"
+'MySQL = MySQL & "  dbo.TblBranchesData ON dbo.TblEmpAdvanceRequest.Branch_NO = dbo.TblBranchesData.branch_id"
+
+'MySQL = MySQL & "  Where (dbo.TblEmpAdvanceRequest.AdvanceID = " & val(XPTxtID.text) & ")"
+MySQL = " SELECT     dbo.TblDeducationNote.Id, dbo.TblDeducationNote.WorPrice, dbo.TblDeducationNote.Remarks, dbo.TblDeducationNote.FileNo, dbo.TblDeducationNote.EmpID,"
+MySQL = MySQL & "                 dbo.TblEmployee.Emp_Code, dbo.TblEmployee.Emp_Name, dbo.TblEmployee.Emp_Name1, dbo.TblEmployee.Emp_Name2, dbo.TblEmployee.Emp_Name3,"
+MySQL = MySQL & "                       dbo.TblEmployee.Emp_Name4, dbo.TblEmployee.Emp_Namee, dbo.TblEmployee.Emp_Namee1, dbo.TblEmployee.Emp_Namee3, dbo.TblEmployee.Emp_Namee2,"
+MySQL = MySQL & "                       dbo.TblEmployee.Emp_Namee4, dbo.TblDeducationNote.DeptID, dbo.TblEmpDepartments.DepartmentName, dbo.TblEmpDepartments.DepartmentNamee,"
+MySQL = MySQL & "                       dbo.TblDeducationNote.BranchID, dbo.TblBranchesData.branch_name, dbo.TblBranchesData.branch_namee, dbo.TblDeducationNote.RecordDate,"
+MySQL = MySQL & "                       dbo.TblDeducationNote.MaturityDate, dbo.TblDeducationNote.DiscountDate, dbo.TblDeducationNote.Price, dbo.TblDeducationNote.Accept,"
+MySQL = MySQL & "                       dbo.TblDeducationNote.DisYear , dbo.TblDeducationNote.DisMonth, dbo.TblDeducationNote.ManagerID, dbo.TblUsers.UserName"
+MySQL = MySQL & "            FROM         dbo.TblUsers RIGHT OUTER JOIN"
+MySQL = MySQL & "                       dbo.TblDeducationNote ON dbo.TblUsers.UserID = dbo.TblDeducationNote.ManagerID LEFT OUTER JOIN"
+MySQL = MySQL & "                       dbo.TblBranchesData ON dbo.TblDeducationNote.BranchID = dbo.TblBranchesData.branch_id LEFT OUTER JOIN"
+MySQL = MySQL & "                       dbo.TblEmpDepartments ON dbo.TblDeducationNote.DeptID = dbo.TblEmpDepartments.DeparmentID LEFT OUTER JOIN"
+MySQL = MySQL & "                      dbo.TblEmployee ON dbo.TblDeducationNote.EmpID = dbo.TblEmployee.Emp_ID"
+MySQL = MySQL & "  Where (dbo.TblDeducationNote.id = " & val(XPTxtID.text) & ")"
+ 
+        If SystemOptions.UserInterface = ArabicInterface Then
+            StrFileName = App.path & "\REPORTS\REPORTS NEW\" & "RepDeductionNote.rpt"
+        Else
+            StrFileName = App.path & "\REPORTS\REPORTS NEW\" & "RepDeductionNote.rpt"
+        End If
+
+ 
+
+    If Dir(StrFileName) = "" Then
+        'GetMsgs 139, vbExclamation
+        Screen.MousePointer = vbDefault
+        Exit Function
+    End If
+
+    Set RsData = New ADODB.Recordset
+    RsData.Open MySQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
+
+    If RsData.BOF Or RsData.EOF Then
+        'GetMsgs 138, vbExclamation
+        Msg = "·« ÊÃœ »Ì«‰«  ··⁄—÷"
+        MsgBox Msg, vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+        RsData.Close
+        Set RsData = Nothing
+        Screen.MousePointer = vbDefault
+        Exit Function
+    End If
+
+    Screen.MousePointer = vbArrowHourglass
+    Set xReport = xApp.OpenReport(StrFileName)
+    xReport.Database.SetDataSource RsData
+
+    Dim cCompanyInfo As New ClsCompanyInfo
+
+    If SystemOptions.UserInterface = ArabicInterface Then
+        xReport.ParameterFields(1).AddCurrentValue cCompanyInfo.ArabCompanyName 'RPTCompany_Name_Arabic
+        ' xReport.ParameterFields(2).AddCurrentValue RPTComment_Arabic
+        StrReportTitle = "" '& StrAccountName
+        'If Me.DTPickerAccFrom.value <> Empty Or Me.DTPickerAccFrom.value <> Null Then
+        '    StrReportTitle = StrReportTitle + " »œ«Ì… „‰ " & Format(Me.DTPickerAccFrom.value, "yyyy/M/d") & ""
+        'End If
+        'If Me.DTPickerAccTo.value <> Empty Or Me.DTPickerAccTo.value <> Null Then
+        '    StrReportTitle = StrReportTitle + " ≈·Ï " & Format(Me.DTPickerAccTo.value, "yyyy/M/d") & " "
+        'End If
+    Else
+ 
+        xReport.ParameterFields(1).AddCurrentValue cCompanyInfo.ArabCompanyName ' RPTCompany_Name_Eng
+        'xReport.ParameterFields(2).AddCurrentValue RPTComment_Eng
+        xReport.ParameterFields(4).AddCurrentValue get_branch_name(val(my_branch))
+        StrReportTitle = ""
+        'If Me.DTPickerAccFrom.value <> Empty Or Me.DTPickerAccFrom.value <> Null Then
+        '    StrReportTitle = StrReportTitle + " From Date " & (Me.DTPickerAccFrom.value) & ""
+        'End If
+        'If Me.DTPickerAccTo.value <> Empty Or Me.DTPickerAccTo.value <> Null Then
+        '    StrReportTitle = StrReportTitle + " To Date :  " & (Me.DTPickerAccTo.value) & ""
+        'End If
+    End If
+
+    xReport.ParameterFields(3).AddCurrentValue user_name
+       ' xReport.ParameterFields(4).AddCurrentValue WriteNo(Format(val(TxtAdvanceValue.text), "0.00"), 0, True, ".")
+       ' xReport.ParameterFields(6).AddCurrentValue val(lbl(23).Caption)
+         'xReport.ParameterFields(7).AddCurrentValue DBIssueDate.value
+  '  xReport.ParameterFields(8).AddCurrentValue IIf(IsNumeric(Fg.TextMatrix(Me.Fg.FixedRows, Fg.ColIndex("PartValue"))), val(Fg.TextMatrix(Me.Fg.FixedRows, Fg.ColIndex("PartValue"))), 0)
+' xReport.ParameterFields(9).AddCurrentValue val(lbl(22).Caption)
+ ' xReport.ParameterFields(10).AddCurrentValue val(TxtDiscount.text)
+'   xReport.ParameterFields(11).AddCurrentValue txtDiscountDES.text
+   
+'    xReport.ParameterFields(5).AddCurrentValue ToHijriDate(RsData("notedate").value)
+    xReport.reporttitle = StrReportTitle
+    xReport.EnableParameterPrompting = False
+    xReport.ApplicationName = App.Title
+    xReport.ReportAuthor = App.Title
+    Set CViewer = New ClsReportViewer
+    CViewer.FireReport xReport, WindowTarget, "", , , , StrFileName
+
+    RsData.Close
+    Set RsData = Nothing
+    Screen.MousePointer = vbDefault
+
+
+ 
+  
+ 
+End Function
+
+Private Sub CmdHelp_Click()
+    SystemOptions.SysHelp.HHTopicID = Me.HelpContextID
+    SystemOptions.SysHelp.HHDisplayTopicID Me.hWnd
+End Sub
+
+Private Sub DcboEmpName_Change()
+DcboEmpName_Click (0)
+End Sub
+
+
+
+
+Private Sub TxtPrice_Change()
+Me.TxtWordPrice.text = WriteNo(Me.TxtPrice.text, 1)
+End Sub
+
+Private Sub TxtSearchCode_KeyPress(KeyAscii As Integer)
+    Dim EmpID As Integer
+
+    If KeyAscii = vbKeyReturn Then
+        GetEmployeeIDFromCode TxtSearchCode.text, EmpID
+        DcboEmpName.BoundText = EmpID
+    End If
+
+End Sub
+
+ 
+
+Private Sub DcboEmpName_KeyUp(KeyCode As Integer, _
+                             Shift As Integer)
+
+    If KeyCode = vbKeyF3 Then
+        FrmEmployeeSearch.lblType = 3
+        FrmEmployeeSearch.show
+  
+    End If
+
+End Sub
+
+Private Sub DcboEmpName_Click(Area As Integer)
+'    On Error Resume Next
+       If val(DcboEmpName.BoundText) = 0 Then Exit Sub
+
+    Dim EmpCode  As String
+ 
+    GetEmployeeIDFromCode , , DcboEmpName.BoundText, EmpCode
+    TxtSearchCode.text = EmpCode
+    
+   If Me.TxtModFlg = "R" Then Exit Sub
+   
+   
+    Dim StrSQL As String
+
+ 
+        
+        
+        Dim issuedate As Date
+        Dim depid As Double
+        Dim specid As Double
+        Dim JobTypeID As Double
+        Dim gradeID As Double
+        Dim Account_code2 As String
+           Dim Account_Code  As String
+        Dim Balance As String
+        Dim endContractPerMonth As Double
+        get_employee_information val(Me.DcboEmpName.BoundText), issuedate, depid, specid, JobTypeID, gradeID, Account_code2, Account_Code, endContractPerMonth
+        
+ '         WriteCustomerBalPublic Account_code2, Balance
+          
+ ' lbl(22).Caption = val(Balance)
+
+  '        WriteCustomerBalPublic Account_Code, Balance
+          
+  'lbl(21).Caption = val(Balance)
+  'lbl(20).Caption = IIf(endContractPerMonth > 0, endContractPerMonth, 0)
+       ' DBIssueDate.value = issuedate
+        DcboEmpDepartments.BoundText = depid
+       ' DcboSpecifications.BoundText = gradeID
+       ' DcboJobsType.BoundText = JobTypeID
+       ' lbl(23).Caption = GetEmployeeSalaryAccordingToComponent(val(Me.DcboEmpName.BoundText), "")
+        
+    'End If
+
+End Sub
+
+Private Sub XPDtbTrans_Change()
+
+    If Trim(TxtNoteSerial1.text) <> "" Then
+        oldtxtNoteSerial1.text = TxtNoteSerial1.text
+    End If
+
+    TxtNoteSerial.text = ""
+    TxtNoteSerial1.text = ""
+
+End Sub
+
+Private Sub dcBranch_Click(Area As Integer)
+ 
+    TxtNoteSerial.text = ""
+    TxtNoteSerial1.text = ""
+End Sub
+
+Private Sub Form_Load()
+    Dim Dcombos As ClsDataCombos
+    Dim StrSQL As String
+    Dim GrdBack As ClsBackGroundPic
+
+    On Error GoTo ErrTrap
+    Set GrdBack = New ClsBackGroundPic
+
+  '  With Me.fg
+  '      .RowHeightMin = 300
+  '      .WallPaper = GrdBack.Picture
+  '      .AutoSize 0, .Cols - 1, False
+  '  End With
+
+    Set TTD = New clstooltipdemand
+    Set Cmd(0).ButtonImage = mdifrmmain.ImgLstTree.ListImages("New").Picture
+    Set Cmd(1).ButtonImage = mdifrmmain.ImgLstTree.ListImages("Edit").Picture
+    Set Cmd(2).ButtonImage = mdifrmmain.ImgLstTree.ListImages("save").Picture
+    Set Cmd(3).ButtonImage = mdifrmmain.ImgLstTree.ListImages("Undo").Picture
+    Set Cmd(4).ButtonImage = mdifrmmain.ImgLstTree.ListImages("Del").Picture
+    Set Cmd(5).ButtonImage = mdifrmmain.ImgLstTree.ListImages("Search").Picture
+    Set Cmd(6).ButtonImage = mdifrmmain.ImgLstTree.ListImages("Exit").Picture
+    Set CmdHelp.ButtonImage = mdifrmmain.ImgLstTree.ListImages("Help").Picture
+    Resize_Form Me
+    AddTip
+    Set Dcombos = New ClsDataCombos
+   ' Dcombos.GetBoxes Me.DcboBox
+    Dcombos.GetUsers Me.DCboUserName
+    Dcombos.GetUsers Me.DcbUser
+    Dcombos.GetEmployees Me.DcboEmpName
+    Dcombos.GetBranches Me.Dcbranch
+
+    Dcombos.GetEmpDepartments Me.DcboEmpDepartments
+  '  Dcombos.GetEmpJobsTypes Me.DcboJobsType
+'
+'    Dcombos.GetEmpGrades Me.DcboSpecifications
+    
+    If SystemOptions.usertype <> UserAdminAll Then
+        Me.Dcbranch.Enabled = False
+    End If
+
+    SetDtpickerDate Me.XPDtbTrans
+   YearMonth
+    Set rs = New ADODB.Recordset
+    StrSQL = "select * From TblDeducationNote     Order By ID"
+    rs.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
+    XPDtbTrans.value = Date
+        Me.TxtModFlg.text = "R"
+    Retrive
+
+
+    If SystemOptions.UserInterface = EnglishInterface Then
+        SetInterface Me
+        ChangeLang
+    End If
+
+    If OPEN_NEW_SCREEN = True Then
+        Cmd_Click (0)
+    End If
+    
+    Exit Sub
+
+ErrTrap:
+End Sub
+
+Private Sub ChangeLang()
+    Dim XPic As IPictureDisp
+    Set XPic = Me.XPBtnMove(1).ButtonImage
+    Set Me.XPBtnMove(1).ButtonImage = Me.XPBtnMove(2).ButtonImage
+    Set Me.XPBtnMove(2).ButtonImage = XPic
+    Set XPic = Me.XPBtnMove(0).ButtonImage
+    Set Me.XPBtnMove(0).ButtonImage = Me.XPBtnMove(3).ButtonImage
+    Set Me.XPBtnMove(3).ButtonImage = XPic
+ '   Label1.Visible = False
+
+    Cmd(0).Caption = "New"
+    Cmd(1).Caption = "Edit"
+    Cmd(2).Caption = "Save"
+    Cmd(3).Caption = "Undo"
+    Cmd(4).Caption = "Delete"
+    Cmd(5).Caption = "Search"
+ Cmd(9).Caption = "Prient"
+    Cmd(6).Caption = "Exit"
+    CmdHelp.Caption = "Help"
+XPTab301.Caption = "Data of Deduction Note"
+    Me.Caption = " Deduction Note"
+    EleHeader.Caption = Me.Caption
+    lbl(4).Caption = "OPR#"
+    lbl(1).Caption = "Date"
+    LblBr.Caption = "Branch"
+    lbldata.Caption = "  Data of  Employee"
+    lbl(3).Caption = "To account of Mr"
+    lbl(2).Caption = "Amount"
+    lbl(5).Caption = "Amount in words"
+   ' Fra(0).Caption = "payments Method"
+    lbl(9).Caption = "Depart"
+    Me.lblent.Caption = "Entered by"
+    lbl(10).Caption = "File No"
+    lbl(11).Caption = "Against"
+    lbl(12).Caption = "From the"
+    lbl(13).Caption = "Month"
+    lbl(15).Caption = "Year"
+    lbl(14).Caption = "At Entitlement of"
+Me.RdAccept.RightToLeft = False
+Me.RdAccept.Caption = "Aprovl Emp"
+   ' Cmd(8).Caption = "Calc Dates"
+ '   ChkSaleryDis.Caption = "Auto Discount"
+    lbl(8).Caption = "By"
+    lbl(7).Caption = "Curr rec."
+    lbl(6).Caption = "rec. count"
+
+   ' With Me.Fg
+    '    .TextMatrix(0, .ColIndex("PartNO")) = "NO"
+    ''    .TextMatrix(0, .ColIndex("PartValue")) = "Value"
+   '     .TextMatrix(0, .ColIndex("PartDate")) = "Date"
+
+  '  End With
+
+End Sub
+
+'Private Sub YearMonth()
+
+ '   Dim i As Integer
+  '  Dim IntDefIndex As Integer
+
+  '  CmbMonth.Clear
+
+   ' For i = 1 To 12
+'        CmbMonth.AddItem MonthName(i)
+   ' Next
+'
+'    CmbMonth.ListIndex = Month(Date) - 1
+'    CboYear.Clear
+'
+'    For i = 2010 To 2050
+'        CboYear.AddItem i
+''
+'        If i = year(Date) Then
+'            IntDefIndex = CboYear.NewIndex
+'        End If
+'
+'    Next
+
+'    CboYear.ListIndex = IntDefIndex
+'End Sub
+
+Private Sub Form_Paint()
+    TTD.Destroy
+End Sub
+
+Private Sub Form_Resize()
+    TTD.Destroy
+End Sub
+
+Private Sub Form_Unload(Cancel As Integer)
+    On Error GoTo ErrTrap
+
+    If rs.State = adStateOpen Then
+        If Not (rs.EOF Or rs.BOF) Then
+            If rs.EditMode <> adEditNone Then
+                rs.CancelUpdate
+            End If
+        End If
+
+        rs.Close
+        Set rs = Nothing
+    End If
+
+    Set TTP = Nothing
+    'Set EmpReport = Nothing
+    TTD.Destroy
+    Exit Sub
+ErrTrap:
+End Sub
+
+Private Sub TxtAdvanceValue_LostFocus()
+    Dim StrSQL As String
+    Dim Mytot As String
+    Dim MySal As String
+    Exit Sub
+    Dim Myrs As New ADODB.Recordset
+    'StrSQL =
+    Myrs.Open "SELECT * From TblEmployee  where Emp_ID=" & val(DcboEmpName.BoundText), Cn, adOpenStatic, adLockReadOnly
+
+    If Not Myrs.EOF And Not IsNull(Myrs!Emp_Salary) Then
+        MySal = Myrs!Emp_Salary
+        Mytot = val(MySal) * 5
+
+        If val(TxtAdvanceValue.text) >= Mytot Then
+            MsgBox "⁄›Ê« «·”·›…  ⁄œ  «·Õœ  «·„”„ÊÕ »Â ÊÂÊ 5 «÷⁄«› ﬁÌ„Â «·—« »  " & Chr(13) & "   —« » «·„ÊŸ›    " & MySal, vbOKOnly, App.Title
+            Exit Sub
+   
+        End If
+  
+    End If
+   
+End Sub
+
+Private Sub TxtModFlg_Change()
+    On Error GoTo ErrTrap
+
+    Select Case Me.TxtModFlg.text
+
+        Case "R"
+            '        Me.Caption = "”·› «·„ÊŸ›Ì‰"
+            Me.Cmd(2).Enabled = False
+            Me.Cmd(3).Enabled = False
+            Me.Cmd(0).Enabled = True
+            Me.Cmd(1).Enabled = True
+            Me.Cmd(4).Enabled = True
+            Me.Cmd(5).Enabled = True
+            Me.XPBtnMove(0).Enabled = True
+            Me.XPBtnMove(1).Enabled = True
+            Me.XPBtnMove(2).Enabled = True
+            Me.XPBtnMove(3).Enabled = True
+            'TxtAdvanceValue.Locked = True
+            Me.DcboBox.Locked = True
+            XPDtbTrans.Enabled = False
+
+            If rs.RecordCount < 1 Then
+                Me.XPBtnMove(0).Enabled = False
+                Me.XPBtnMove(1).Enabled = False
+                Me.XPBtnMove(2).Enabled = False
+                Me.XPBtnMove(3).Enabled = False
+                Me.Cmd(1).Enabled = False
+                Me.Cmd(4).Enabled = False
+            End If
+
+        Case "N"
+            '        Me.Caption = "”·› «·„ÊŸ›Ì‰( ÃœÌœ )"
+            Me.Cmd(2).Enabled = True
+            Me.Cmd(3).Enabled = True
+            Me.Cmd(0).Enabled = False
+            Me.Cmd(1).Enabled = False
+            Me.Cmd(4).Enabled = False
+            Me.Cmd(5).Enabled = False
+            '      Me.XPBtnMove(0).Enabled = False
+            '      Me.XPBtnMove(1).Enabled = False
+            '      Me.XPBtnMove(2).Enabled = False
+            '      Me.XPBtnMove(3).Enabled = False
+         '   TxtAdvanceValue.Locked = False
+            Me.DcboBox.Locked = False
+            XPDtbTrans.Enabled = True
+            XPDtbTrans.value = Date
+
+        Case "E"
+            '        Me.Caption = "”·› «·„ÊŸ›Ì‰(  ⁄œÌ· )"
+            Me.Cmd(2).Enabled = True
+            Me.Cmd(3).Enabled = True
+            Me.Cmd(0).Enabled = False
+            Me.Cmd(1).Enabled = False
+            Me.Cmd(4).Enabled = False
+            Me.Cmd(5).Enabled = False
+            Me.XPBtnMove(0).Enabled = False
+            Me.XPBtnMove(1).Enabled = False
+            Me.XPBtnMove(2).Enabled = False
+            Me.XPBtnMove(3).Enabled = False
+          '  TxtAdvanceValue.Locked = False
+            Me.DcboBox.Locked = False
+            XPDtbTrans.Enabled = True
+    End Select
+
+    Exit Sub
+ErrTrap:
+End Sub
+
+Private Sub TxtPaymentCounts_KeyPress(KeyAscii As Integer)
+    KeyAscii = KeyAscii_Num(KeyAscii, TxtPaymentCounts.text, 1)
+End Sub
+
+Private Sub TxtPaymentCounts_LostFocus()
+
+    If val(TxtPaymentCounts.text) > 84 Then
+        MsgBox "«·œ›«⁄  «ﬂ»— „‰ «·Õœ ", vbOKOnly, App.Title
+        Exit Sub
+    End If
+ 
+End Sub
+
+Private Sub XPBtnMove_Click(Index As Integer)
+    On Error GoTo ErrTrap
+
+    If Me.TxtModFlg.text = "N" Then
+        clear_all Me
+        Me.TxtModFlg.text = "R"
+        XPBtnMove_Click (1)
+    End If
+
+    Select Case Index
+
+        Case 0
+
+            If Not (rs.EOF Or rs.BOF) Then
+                rs.MovePrevious
+
+                If rs.BOF Then rs.MoveFirst
+            End If
+
+        Case 1
+
+            If Not (rs.EOF Or rs.BOF) Then
+                rs.MoveFirst
+            End If
+
+        Case 2
+
+            If Not (rs.EOF Or rs.BOF) Then
+                rs.MoveLast
+            End If
+
+        Case 3
+
+            If Not (rs.EOF Or rs.BOF) Then
+                rs.MoveNext
+
+                If rs.EOF Then rs.MoveLast
+            End If
+
+    End Select
+
+    Retrive
+    Exit Sub
+ErrTrap:
+End Sub
+Private Function CheckPartCal() As Boolean
+    Dim Msg As String
+
+    CheckPartCal = False
+
+    If val(TxtAdvanceValue.text) = 0 Then
+        Msg = "ÌÃ» «œŒ«· ﬁÌ„… «·”·›…...!!! "
+        MsgBox Msg, vbOKOnly + vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+        TxtAdvanceValue.SetFocus
+        Exit Function
+    End If
+
+    If val(TxtPaymentCounts.text) = 0 Then
+        Msg = "ÌÃ» «œŒ«· ⁄œœ „—«   ”œÌœ «·œ›⁄…...!!! "
+        MsgBox Msg, vbOKOnly + vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+        TxtAdvanceValue.SetFocus
+        Exit Function
+    End If
+
+    If CmbMonth.ListIndex = -1 Then
+        Msg = "ÌÃ»  ÕœÌœ «Ê· ‘Â— · ”œÌœ «·œ›⁄…..!! "
+        MsgBox Msg, vbOKOnly + vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+        CmbMonth.SetFocus
+        SendKeys "{F4}"
+        Exit Function
+    End If
+
+    If CboYear.ListIndex = -1 Then
+        Msg = "ÌÃ»  ÕœÌœ «Ê· ”‰… · ”œÌœ «·œ›⁄… ..!! "
+        MsgBox Msg, vbOKOnly + vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+        CboYear.SetFocus
+        SendKeys "{F4}"
+        Exit Function
+    End If
+
+    CheckPartCal = True
+End Function
+Public Sub Retrive(Optional Lngid As Long = 0)
+    Dim RsDetails As ADODB.Recordset
+    Dim i As Integer
+    Dim StrSQL As String
+
+    'On Error GoTo ErrTrap
+    If rs.RecordCount < 1 Then
+        XPTxtCurrent.Caption = 0
+        XPTxtCount.Caption = 0
+        Exit Sub
+    End If
+
+    If rs.EOF Or rs.BOF Then
+        Exit Sub
+    Else
+
+        If Lngid <> 0 Then
+            rs.Find "ID=" & Lngid, , adSearchForward, adBookmarkFirst
+
+            If rs.EOF Or rs.BOF Then
+                Exit Sub
+            End If
+        End If
+    End If
+
+    XPTxtID.text = IIf(IsNull(rs("ID").value), "", val(rs("ID").value))
+    XPDtbTrans.value = IIf(IsNull(rs("RecordDate").value), Date, rs("RecordDate").value)
+    Dcbranch.BoundText = IIf(IsNull(rs("BranchID").value), "", rs("BranchID").value)
+    DcboEmpDepartments.BoundText = IIf(IsNull(rs("DeptID").value), "", rs("DeptID").value)
+    DcboEmpName.BoundText = IIf(IsNull(rs("EmpID").value), "", rs("EmpID").value)
+   ' DcboSpecifications.BoundText = IIf(IsNull(rs("gradeID").value), "", rs("gradeID").value)
+    DcbUser.BoundText = IIf(IsNull(rs("ManagerID").value), "", rs("ManagerID").value)
+    Remarks.text = IIf(IsNull(rs("Remarks").value), "", rs("Remarks").value)
+    TxtWordPrice.text = IIf(IsNull(rs("WorPrice").value), "", rs("WorPrice").value)
+    TxtFilrNo.text = IIf(IsNull(rs("FileNo").value), "", rs("FileNo").value)
+    DTmaturity.value = IIf(IsNull(rs("MaturityDate").value), Date, rs("MaturityDate").value)
+ ' DTDis.value = IIf(IsNull(rs("DiscountDate").value), Date, rs("DiscountDate").value)
+ CmbMonth.text = IIf(IsNull(rs("DisMonth").value), Null, rs("DisMonth").value)
+ CboYear.text = IIf(IsNull(rs("DisYear").value), Null, rs("DisYear").value)
+    TxtPrice = IIf(IsNull(rs("Price").value), 0, rs("Price").value)
+    If rs("Accept").value = True Then
+    RdAccept.value = vbChecked
+    Else
+    RdAccept.value = vbUnchecked
+    End If
+  ' lbl(23).Caption = IIf(IsNull(rs("basicSalary").value), "", rs("basicSalary").value)
+ '
+ '   lbl(22).Caption = IIf(IsNull(rs("EmpDue").value), "", rs("EmpDue").value)
+ '  lbl(20).Caption = IIf(IsNull(rs("Contractvalid").value), "", rs("Contractvalid").value)
+ '  lbl(21).Caption = IIf(IsNull(rs("oldAdvance").value), "", rs("oldAdvance").value)
+ 
+'TxtDiscount.text = IIf(IsNull(rs("Discount").value), "", rs("Discount").value)
+'txtDiscountDES.text = IIf(IsNull(rs("DiscountDES").value), "", rs("DiscountDES").value)
+
+ 
+
+    
+'    TxtAdvanceValue.text = IIf(IsNull(rs("AdvanceValue").value), "", rs("AdvanceValue").value)
+  '  Me.DcboBox.BoundText = IIf(IsNull(rs("BoxID").value), "", rs("BoxID").value)
+'    Me.TxtPaymentCounts.text = IIf(IsNull(rs("PaymentCounts").value), "", rs("PaymentCounts").value)
+ 
+    Me.DCboUserName.BoundText = IIf(IsNull(rs("UserID").value), "", rs("UserID").value)
+       If IsNull(rs("posted").value) Then
+                                                   If SystemOptions.UserInterface = ArabicInterface Then
+                                                    Accredit.Caption = "   «·«—”«· ··«⁄ „«œ "
+                                                  Else
+                                                    Accredit.Caption = " send to Approval   "
+                                               End If
+                                               Accredit.Enabled = True
+  Else
+                                                   If SystemOptions.UserInterface = ArabicInterface Then
+                                                    Accredit.Caption = "  „ «·«—”«· ··«⁄ „«œ "
+                                                  Else
+                                                    Accredit.Caption = " sent to Approval   "
+                                               End If
+                                               Accredit.Enabled = False
+   End If
+   
+   
+'    Set RsDetails = New ADODB.Recordset
+'    StrSQL = "Select * From  TblEmpAdvanceRequestDetails Where AdvanceID=" & val(XPTxtID.text)
+'    RsDetails.Open StrSQL, Cn, adOpenKeyset, adLockOptimistic, adCmdText
+'    Fg.Clear flexClearScrollable, flexClearEverything
+'    Fg.Rows = Fg.FixedRows
+'
+'    If Not (RsDetails.BOF Or RsDetails.EOF) Then
+'        RsDetails.MoveFirst
+'        Fg.Rows = Fg.FixedRows + RsDetails.RecordCount
+
+'        For i = Me.Fg.FixedRows To Fg.Rows - 1
+'            Fg.TextMatrix(i, Fg.ColIndex("PartNO")) = RsDetails("PartNO").value
+'            Fg.TextMatrix(i, Fg.ColIndex("PartValue")) = RsDetails("PartValue").value
+'            Fg.TextMatrix(i, Fg.ColIndex("PartDate")) = DisplayDate(CDate(RsDetails("PartDate").value))
+'            RsDetails.MoveNext
+'        Next i
+'
+'    End If
+
+'    RsDetails.Close
+'    Set RsDetails = Nothing
+    
+    fillapprovData
+    
+    XPTxtCurrent.Caption = rs.AbsolutePosition
+    XPTxtCount.Caption = rs.RecordCount
+    Exit Sub
+ErrTrap:
+End Sub
+
+Private Sub SaveData()
+    Dim Msg As String
+    Dim RsTemp As New ADODB.Recordset
+    Dim StrSQL As String
+    Dim BeginTrans As Boolean
+    Dim RsDetails As ADODB.Recordset
+    Dim i As Integer
+    Dim LngDevID As Long
+    Dim LngDevLineNo As Long
+    Dim StrAccountCode As String
+
+    'On Error GoTo ErrTrap
+
+    If Me.TxtModFlg.text <> "R" Then
+        If Me.DcboEmpName.BoundText = "" Then
+            Msg = "ÌÃ»  ÕœÌœ «”„ «·„ÊŸ›..!! "
+            MsgBox Msg, vbOKOnly + vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+            DcboEmpName.SetFocus
+            SendKeys "{F4}"
+           Exit Sub
+       End If
+
+   
+
+      '  If CheckPartCal = False Then
+      '      Exit Sub
+      '  End If
+
+      '  If CheckDate = False Then
+         '   Exit Sub
+       ' End If
+
+        '”·› ”«»ﬁ…
+      '  Dim RsTest As New ADODB.Recordset
+        'Set RsTest = New ADODB.Recordset
+      '  StrSQL = "SELECT dbo.TblEmpAdvanceRequest.AdvanceID, dbo.TblEmpAdvanceRequest.Emp_ID, dbo.TblEmpAdvanceRequestDetails.Payed, dbo.TblEmpAdvanceRequestDetails.PartValue FROM dbo.TblEmpAdvanceRequest INNER JOIN dbo.TblEmpAdvanceRequestDetails ON dbo.TblEmpAdvanceRequest.AdvanceID = dbo.TblEmpAdvanceRequestDetails.AdvanceID WHERE (dbo.TblEmpAdvanceRequestDetails.Payed IS NULL) AND (dbo.TblEmpAdvanceRequest.Emp_ID =" & Me.DcboEmpName.BoundText & ")"
+        'RsTest.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
+        'If RsTest.RecordCount > 0 Then
+        'MsgBox "«·„ÊŸ› " & DcboEmpName.text & "  ⁄·ÌÂ ”·› ”«»ﬁ… ·„  ”œœ »⁄œ"
+        'RsTest.Close
+        ' Exit Sub
+        'End If
+
+   '     If CheckBoxAccount(Me.DcboBox.BoundText, val(Me.TxtAdvanceValue.text), Me.XPDtbTrans.value) = False Then
+   '         Exit Sub
+   '     End If
+
+        'CalCulateParts
+    
+ 
+        
+ '       If TxtNoteSerial1.text = "" Then
+ '           If Voucher_coding(val(my_branch), XPDtbTrans.value, 32, 8032) = "error" Then
+ '               MsgBox " ·« Ì„ﬂ‰ «÷«›… ”‰œ  ”ÃÌ· ”·›  ÃœÌœ ·«‰ﬂ  ⁄œÌ  «·Õœ «·–Ì ﬁ„  » ÕœÌœ… „‰ «·”‰œ«   ": Exit Sub
+ '           Else
+ '
+ '               If Voucher_coding(val(my_branch), XPDtbTrans.value, 32, 8032) = "" Then
+ '                   MsgBox " ·«»œ „‰ ﬂ «»… —ﬁ„ ”‰œ  ”ÃÌ· ”·›   ÌœÊÌ« ﬂ„« Õœœ   ": Exit Sub
+ '               Else
+ '                   TxtNoteSerial1.text = Voucher_coding(val(my_branch), XPDtbTrans.value, 32, 8032)
+ '               End If
+ '           End If
+'        End If
+'
+        Cn.BeginTrans
+        BeginTrans = True
+
+        If TxtModFlg.text = "N" Then
+
+            XPTxtID.text = CStr(new_id("TblDeducationNote", "ID", "", True))
+       '     TxtNoteID.text = CStr(new_id("Notes", "NoteID", "", True))
+       '     Me.oldtxtNoteSerial1.text = Trim$(Me.TxtNoteSerial1.text)
+        
+            rs.AddNew
+        ElseIf Me.TxtModFlg.text = "E" Then
+            'StrSQL = "Delete From TblEmpAdvanceRequestDetails Where AdvanceID=" & val(Me.XPTxtID.text)
+           ' Cn.Execute StrSQL, , adExecuteNoRecords
+
+        End If
+        rs("ID").value = val(XPTxtID.text)
+        rs("RecordDate").value = XPDtbTrans.value
+        rs("BranchID").value = IIf(Me.Dcbranch.BoundText = "", Null, Me.Dcbranch.BoundText)
+       rs("Remarks").value = Me.Remarks.text
+       rs("WorPrice").value = Me.TxtWordPrice.text
+       rs("FileNo").value = Me.TxtFilrNo.text
+       rs("EmpID").value = Me.DcboEmpName.BoundText
+        rs("ManagerID").value = val(Me.DcbUser.BoundText)
+         rs("DeptID").value = IIf(Me.DcboEmpDepartments.BoundText = "", Null, Me.DcboEmpDepartments.BoundText)
+         rs("MaturityDate").value = DTmaturity.value
+       '  rs("DiscountDate").value = DTDis.value
+       rs("DisYear").value = Me.CboYear.text
+       rs("DisMonth").value = Me.CmbMonth.text
+           rs("Price").value = IIf(Me.TxtPrice.text = "", Null, Me.TxtPrice.text)
+           If Me.RdAccept.value = vbChecked Then
+            rs("Accept").value = 1
+            Else
+            rs("Accept").value = 0
+            End If
+            
+           
+     '   rs("JobID").value = val(Me.DcboJobsType.BoundText)
+      '  rs("FirstDate").value = IIf(IsDate(Fg.TextMatrix(Me.Fg.FixedRows, Fg.ColIndex("PartDate"))), Fg.TextMatrix(Me.Fg.FixedRows, Fg.ColIndex("PartDate")), Null)
+      '  rs("PaymentCounts").value = val(Me.TxtPaymentCounts.text)
+        rs("UserID").value = Me.DCboUserName.BoundText
+
+        rs.update
+      '  Set RsDetails = New ADODB.Recordset
+      '  RsDetails.Open "TblEmp", Cn, adOpenKeyset, adLockOptimistic, adCmdTable
+
+      '  For i = Me.Fg.FixedRows To Fg.Rows - 1
+      '      RsDetails.AddNew
+      '      RsDetails("AdvanceID").value = val(XPTxtID.text)
+      '      RsDetails("PartNO").value = Fg.TextMatrix(i, Fg.ColIndex("PartNO"))
+      '      RsDetails("PartValue").value = Fg.TextMatrix(i, Fg.ColIndex("PartValue"))
+      '      RsDetails("PartDate").value = Fg.TextMatrix(i, Fg.ColIndex("PartDate"))
+      '      RsDetails.update
+      '  Next i
+    
+'        Dim NoteID As Long
+'        Dim line_no As Integer
+'        Dim RsNotes As New ADODB.Recordset
+'        RsNotes.Open "Notes", Cn, adOpenStatic, adLockOptimistic, adCmdTable
+    
+'        If detect_employee_work_type = 1 Then
+        
+'            If Me.TxtModFlg.text = "E" Then
+ 
+'                StrSQL = "Delete notes where NoteID=" & val(Me.TxtNoteID.text)
+'                Cn.Execute StrSQL, , adExecuteNoRecords
+
+'            End If
+
+'            RsNotes.AddNew
+'            NoteID = CStr(TxtNoteID.text)
+'            RsNotes("NoteID").value = CStr(TxtNoteID.text)
+'            RsNotes("NoteType").value = 8032
+'            RsNotes("NoteDate").value = XPDtbTrans.value
+'            RsNotes("UserID").value = user_id
+'            RsNotes("NoteSerial").value = Trim$(Me.TxtNoteSerial.text) '„”·”· «·ﬁÌœ
+'            RsNotes("NoteSerial1").value = Trim$(Me.TxtNoteSerial1.text) '„”·”· «–‰ «·’—›
+'            RsNotes("numbering_type").value = sand_numbering_type(0) '‰Ê⁄  —ﬁÌ„ ”‰œ «·ﬁÌœ
+'            RsNotes("numbering_type1").value = sand_numbering_type(32) ' ”ÃÌ· «·”·›'‰Ê⁄  —ﬁÌ„    
+'            RsNotes("sanad_year").value = year(XPDtbTrans.value)
+'            RsNotes("sanad_month").value = Month(XPDtbTrans.value)
+'            RsNotes("note_value_by_characters").value = WriteNo(Format(val(TxtAdvanceValue.text), "0.00"), 0, True, ".")
+            '     RsNotes("remark").value = txtRemarks.text & bankDes
+'            RsNotes("Branch_no").value = val(Me.Dcbranch.BoundText)
+                
+'            RsNotes.update
+                
+'            line_no = 1
+        
+'            Msg = "”·› „ÊŸ›Ì‰ —ﬁ„ " & val(Me.XPTxtID.text)
+'            LngDevID = new_id("DOUBLE_ENTREY_VOUCHERS", "Double_Entry_Vouchers_ID", "")
+'
+'            Employee_account = get_EMPLOYEE_Account(val(Me.DcboEmpName.BoundText), "Account_Code")
+'            StrAccountCode = Employee_account
+'
+            '        StrAccountCode = "a1a3a4" 'Õ”«» “„„ «·„ÊŸ›Ì‰
+'            If ModAccounts.AddNewDev(LngDevID, 1, StrAccountCode, val(Me.TxtAdvanceValue.text), 0, Msg, NoteID, , , , Me.XPDtbTrans.value, Me.DCboUserName.BoundText, , , val(Me.XPTxtID.text), , , , , , , , , , , , , , , val(Me.Dcbranch.BoundText)) = False Then
+'                GoTo ErrTrap
+'            End If
+
+'            StrAccountCode = GetMyAccountCode("TblBoxesData", "BoxID", val(Me.DcboBox.BoundText))
+
+'            If ModAccounts.AddNewDev(LngDevID, 2, StrAccountCode, val(Me.TxtAdvanceValue.text), 1, Msg, NoteID, , , , Me.XPDtbTrans.value, Me.DCboUserName.BoundText, , , val(Me.XPTxtID.text), , , , , , , , , , , , , , , val(Me.Dcbranch.BoundText)) = False Then
+'                GoTo ErrTrap
+'            End If
+        
+'        End If
+    
+        Cn.CommitTrans
+        BeginTrans = False
+'        RsDetails.Close
+        Set RsDetails = Nothing
+        XPTxtCurrent.Caption = rs.AbsolutePosition
+        XPTxtCount.Caption = rs.RecordCount
+    
+        Select Case Me.TxtModFlg.text
+
+            Case "N"
+                Msg = "  „ Õ›Ÿ »Ì«‰«  Â–Â «·⁄„·Ì… " & Chr(13)
+                Msg = Msg + "Â·  —€» ›Ì ≈÷«›… »Ì«‰«  √Œ—Ì"
+
+                If MsgBox(Msg, vbYesNo + vbQuestion + vbMsgBoxRight + vbMsgBoxRtlReading + vbDefaultButton2, App.Title) = vbYes Then
+                    Cmd_Click (0)
+                    Exit Sub
+                End If
+
+            Case "E"
+                MsgBox " „ Õ›Ÿ Â–Â «· ⁄œÌ·« ", vbInformation + vbOKOnly + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+        End Select
+
+        TxtModFlg.text = "R"
+    End If
+
+    Exit Sub
+ErrTrap:
+
+    If BeginTrans = True Then
+        BeginTrans = False
+        Cn.RollbackTrans
+    End If
+
+    If Err.Number = -2147217900 Then
+        Msg = "·« Ì„ﬂ‰ Õ›Ÿ Â–Â «·»Ì«‰«  " & Chr(13)
+        Msg = Msg + "·ﬁœ  „ «œŒ«· ﬁÌ„ €Ì— ’«·Õ… " & Chr(13)
+        Msg = Msg + " √ﬂœ „‰ œﬁ… «·»Ì«‰«  Ê√⁄œ «·„Õ«Ê·…"
+        MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+        Exit Sub
+    End If
+
+    Msg = "⁄›Ê«...ÕœÀ Œÿ√ „« √À‰«¡ Õ›Ÿ Â–Â «·»Ì«‰«  " & Chr(13)
+    MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+End Sub
+Private Sub YearMonth()
+
+    Dim i As Integer
+    Dim IntDefIndex As Integer
+
+    CmbMonth.Clear
+
+    For i = 1 To 12
+        CmbMonth.AddItem MonthName(i)
+    Next
+
+    CmbMonth.ListIndex = Month(Date) - 1
+    CboYear.Clear
+
+    For i = 2010 To 2050
+        CboYear.AddItem i
+
+        If i = year(Date) Then
+            IntDefIndex = CboYear.NewIndex
+        End If
+
+    Next
+
+    CboYear.ListIndex = IntDefIndex
+End Sub
+Private Sub Undo()
+    On Error GoTo ErrTrap
+
+    Select Case TxtModFlg.text
+
+        Case "N"
+            clear_all Me
+            Me.TxtModFlg.text = "R"
+            XPBtnMove_Click (1)
+
+        Case "E"
+            rs.Find "ID='" & val(XPTxtID.text) & "'", , adSearchForward, adBookmarkFirst
+
+            If rs.EOF Or rs.BOF Then
+                Me.TxtModFlg.text = "R"
+                Exit Sub
+            End If
+
+            Retrive
+            Me.TxtModFlg.text = "R"
+    End Select
+
+    Exit Sub
+ErrTrap:
+End Sub
+
+Private Sub Del_Trans()
+    Dim Msg As String
+    Dim StrSQL As String
+
+    On Error GoTo ErrTrap
+
+    If XPTxtID.text <> "" Then
+        Msg = "”Ì „ Õ–› »Ì«‰«  «·⁄„·Ì… —ﬁ„ " & Chr(13)
+        Msg = Msg + " Â·  —€» ›Ì Õ–› Â–Â «·»Ì«‰« ø"
+
+        If MsgBox(Msg, vbYesNo + vbQuestion + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title) = vbYes Then
+            If Not rs.RecordCount < 1 Then
+                rs.Delete
+                StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where AdvanceID=" & val(Me.XPTxtID.text)
+                Cn.Execute StrSQL, , adExecuteNoRecords
+                rs.MoveFirst
+
+                If rs.RecordCount < 1 Then
+                    clear_all Me
+                    TxtModFlg_Change
+                    XPTxtCurrent.Caption = 0
+                    XPTxtCount.Caption = 0
+                Else
+                    Retrive
+                End If
+            End If
+        End If
+
+    Else
+        clear_all Me
+        Msg = "Â–Â «·⁄„·Ì… €Ì— „ «Õ… ÕÌÀ √‰Â ·«ÌÊÃœ √Ì ”Ã·« "
+        MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+        TxtModFlg_Change
+        Exit Sub
+    End If
+
+    TxtModFlg_Change
+    Exit Sub
+ErrTrap:
+    Msg = "⁄›Ê«...ÕœÀ Œÿ√ „« √À‰«¡ Õ–› Â–Â «·»Ì«‰«  " & Chr(13)
+    MsgBox Msg, vbMsgBoxRight + vbMsgBoxRtlReading + vbExclamation, App.Title
+    rs.CancelUpdate
+End Sub
+
+
+
+Function FillApprovedTable()
+ Dim RSApproval  As New ADODB.Recordset
+   Set RSApproval = New ADODB.Recordset
+   Dim currentdate As Date
+   RSApproval.Open "[ApprovalData]", Cn, adOpenStatic, adLockOptimistic, adCmdTable
+
+
+ Dim sql As String
+  Dim Rs1 As New ADODB.Recordset
+ Dim i As Integer
+    sql = "SELECT     TOP 100 PERCENT dbo.TblApprovalDef.ScreenName, dbo.TblApprovalDefDetails.PlainMessageID AS levelo, dbo.TbllevelWorker.EmpID, "
+  sql = sql & " dbo.TblApprovalDefDetails.id AS levelorder, dbo.TbllevelWorker.id AS currorder"
+  sql = sql & " FROM         dbo.TblApprovalDef INNER JOIN"
+  sql = sql & " dbo.TblApprovalDefDetails ON dbo.TblApprovalDef.id = dbo.TblApprovalDefDetails.lMessageDefID INNER JOIN"
+  sql = sql & "  dbo.TbllevelWorker ON dbo.TblApprovalDefDetails.PlainMessageID = dbo.TbllevelWorker.LevelID"
+sql = sql & " WHERE     (dbo.TblApprovalDef.ScreenName = N'" & Me.name & "')"
+sql = sql & " ORDER BY dbo.TblApprovalDefDetails.id, dbo.TbllevelWorker.id  "
+
+    Rs1.Open sql, Cn, adOpenStatic, adLockReadOnly, adCmdText
+
+    If Rs1.RecordCount > 0 Then
+            currentdate = Now
+            For i = 1 To Rs1.RecordCount
+              RSApproval.AddNew
+                RSApproval("ScreenName").value = Me.name
+                RSApproval("levelo").value = IIf(IsNull(Rs1("levelo").value), Null, Rs1("levelo").value)
+               RSApproval("EmpID").value = IIf(IsNull(Rs1("EmpID").value), Null, Rs1("EmpID").value)
+                RSApproval("levelorder").value = IIf(IsNull(Rs1("levelorder").value), Null, Rs1("levelorder").value)
+                 RSApproval("currorder").value = IIf(IsNull(Rs1("currorder").value), Null, Rs1("currorder").value)
+                  RSApproval("Transaction_ID").value = val(Me.XPTxtID.text)
+                   RSApproval("NoteSerial").value = val(Me.XPTxtID.text)
+                RSApproval("Transaction_Date").value = Date
+                
+                  RSApproval("ExpectedtimeTime").value = DateAdd("N", GetTimeforTransaction(Me.name), currentdate)
+               RSApproval("SendTime").value = currentdate
+
+                 If i = 1 Then
+                        RSApproval("Currcursor").value = 1
+                         RSApproval("FromUser").value = user_name
+                End If
+                
+                RSApproval.update
+                Rs1.MoveNext
+            Next i
+
+    End If
+    
+    
+
+End Function
+
+
+
+Function fillapprovData()
+Dim Num As Integer
+ Dim RsDetails As New ADODB.Recordset
+ Dim StrSQL As String
+ 
+ 
+ StrSQL = "SELECT     TOP 100 PERCENT dbo.ApprovalData.Currcursor, dbo.ApprovalData.ScreenName, dbo.ApprovalData.levelo, dbo.ApprovalData.EmpID, dbo.ApprovalData.levelorder, "
+StrSQL = StrSQL + " dbo.ApprovalData.currorder, dbo.ApprovalData.Transaction_ID, dbo.ApprovalData.NoteID, dbo.ApprovalData.ApprovDate, dbo.ApprovalData.Remarks,"
+StrSQL = StrSQL + " dbo.TbLLevels.name , dbo.TbLLevels.namee, dbo.TblUsers.UserID, dbo.TblUsers.UserName"
+StrSQL = StrSQL + " FROM         dbo.ApprovalData INNER JOIN"
+StrSQL = StrSQL + " dbo.TbLLevels ON dbo.ApprovalData.levelo = dbo.TbLLevels.LevelID INNER JOIN"
+StrSQL = StrSQL + " dbo.TblUsers ON dbo.ApprovalData.EmpID = dbo.TblUsers.UserID"
+StrSQL = StrSQL + " WHERE     (dbo.ApprovalData.Transaction_ID = " & val(Me.XPTxtID.text) & ") AND (dbo.ApprovalData.ScreenName = N'" & Me.name & "')"
+StrSQL = StrSQL + " ORDER BY dbo.ApprovalData.levelorder"
+
+    RsDetails.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
+
+ If Not (RsDetails.EOF Or RsDetails.BOF) Then
+        GRID2.Rows = RsDetails.RecordCount + 1
+ 
+
+        For Num = 1 To RsDetails.RecordCount
+        
+       GRID2.TextMatrix(Num, GRID2.ColIndex("Currcursor")) = IIf(IsNull(RsDetails("Currcursor")), "", RsDetails("Currcursor"))
+    If GRID2.TextMatrix(Num, GRID2.ColIndex("Currcursor")) = "1" Then
+   GRID2.Cell(flexcpBackColor, Num, 1, Num, 7) = &HFFFFC0
+   Else
+    GRID2.Cell(flexcpBackColor, Num, 1, Num, 7) = vbWhite
+    End If
+    
+        GRID2.TextMatrix(Num, GRID2.ColIndex("Approved")) = IIf(IsNull(RsDetails("ApprovDate")), "", flexChecked)
+           If SystemOptions.UserInterface = ArabicInterface Then
+            GRID2.TextMatrix(Num, GRID2.ColIndex("levelName")) = IIf(IsNull(RsDetails("Name")), "", Trim(RsDetails("Name").value))
+          Else
+             GRID2.TextMatrix(Num, GRID2.ColIndex("levelName")) = IIf(IsNull(RsDetails("Namee")), "", Trim(RsDetails("Namee").value))
+          End If
+            If SystemOptions.UserInterface = ArabicInterface Then
+            GRID2.TextMatrix(Num, GRID2.ColIndex("EmpName")) = IIf(IsNull(RsDetails("UserName")), "", (RsDetails("UserName").value))
+            Else
+            GRID2.TextMatrix(Num, GRID2.ColIndex("EmpName")) = IIf(IsNull(RsDetails("UserName")), "", (RsDetails("UserName").value))
+            End If
+            GRID2.TextMatrix(Num, GRID2.ColIndex("ApprovDate")) = IIf(IsNull(RsDetails("ApprovDate")), "", (RsDetails("ApprovDate").value))
+          GRID2.TextMatrix(Num, GRID2.ColIndex("REMARKS")) = IIf(IsNull(RsDetails("REMARKS")), "", (RsDetails("REMARKS").value))
+ 
+ 
+RsDetails.MoveNext
+If Num = RsDetails.RecordCount Then
+
+        If GRID2.TextMatrix(Num, GRID2.ColIndex("Approved")) <> "" Then
+                                If SystemOptions.UserInterface = ArabicInterface Then
+                                      Label11.Caption = " „ «·«⁄ „«œ ··„” ‰œ »«·ﬂ«„·"
+                                 Else
+                                       Label11.Caption = "Approved"
+                                 End If
+                            Label11.backcolor = &H80FF80
+        Else
+                             If SystemOptions.UserInterface = ArabicInterface Then
+                                     Label11.Caption = "„ÿ·Ê» «⁄ „«œ… Õ«·Ì«"
+                            Else
+                                     Label11.Caption = "Currently required Approve"
+                            End If
+                 Label11.backcolor = &HFFFFC0
+        End If
+
+End If
+
+        Next Num
+Else
+ GRID2.Rows = 1
+    End If
+RsDetails.Close
+
+End Function
+
+
+Private Sub Form_KeyDown(KeyCode As Integer, _
+                         Shift As Integer)
+    On Error GoTo ErrTrap
+
+    If KeyCode = vbKeyReturn Then
+        If Me.TxtModFlg.text = "R" Then
+            Cmd_Click (0)
+        Else
+            SendKeys "{TAB}"
+        End If
+    End If
+
+    If Me.TxtModFlg.text = "R" Then
+        If KeyCode = vbKeyDown Or KeyCode = vbKeyEnd Then
+            XPBtnMove_Click (2)
+        ElseIf KeyCode = vbKeyUp Or KeyCode = vbKeyHome Then
+            XPBtnMove_Click (1)
+        ElseIf KeyCode = vbKeyRight Or KeyCode = vbKeyPageDown Then
+            XPBtnMove_Click (3)
+        ElseIf KeyCode = vbKeyLeft Or KeyCode = vbKeyPageUp Then
+            XPBtnMove_Click (0)
+        End If
+    End If
+
+    If KeyCode = vbKeyF12 Then
+        If Cmd(0).Enabled = False Then Exit Sub
+        Cmd_Click (0)
+    End If
+
+    If KeyCode = vbKeyF11 Then
+        If Cmd(1).Enabled = False Then Exit Sub
+        Cmd_Click (1)
+    End If
+
+    If KeyCode = vbKeyF10 Then
+        If Cmd(2).Enabled = False Then Exit Sub
+        Cmd_Click (2)
+    End If
+
+    If KeyCode = vbKeyF9 Then
+        If Cmd(3).Enabled = False Then Exit Sub
+        Cmd_Click (3)
+    End If
+
+    If KeyCode = vbKeyF8 Then
+        If Cmd(4).Enabled = False Then Exit Sub
+        Cmd_Click (4)
+    End If
+
+    If Shift = 2 Then
+        If KeyCode = vbKeyX Then
+            If Cmd(6).Enabled = False Then Exit Sub
+            Cmd_Click (6)
+        End If
+    End If
+
+    Exit Sub
+ErrTrap:
+End Sub
+
+Private Sub AddTip()
+    Dim Wrap As String
+    On Error GoTo ErrTrap
+    Wrap = Chr(13) + Chr(10)
+    Set TTP = New clstooltip
+
+    With TTP
+        .Create Me.hWnd, "”·› «·„ÊŸ›Ì‰", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl Cmd(0), "ÃœÌœ ..." & Wrap & "·«÷«›… »Ì«‰«  ⁄„·Ì… ÃœÌœ…" & Wrap & " ›ﬁÿ ≈÷€ÿ Â‰«", True
+    End With
+
+    With TTP
+        .Create Me.hWnd, "”·› «·„ÊŸ›Ì‰", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl Cmd(1), " ⁄œÌ· ..." & Wrap & "· ⁄œÌ· »Ì«‰«  Â–Â «·⁄„·Ì…" & Wrap & " ›ﬁÿ ≈÷€ÿ Â‰«", True
+    End With
+
+    With TTP
+        .Create Me.hWnd, "”·› «·„ÊŸ›Ì‰", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl Cmd(2), "Õ›Ÿ ..." & Wrap & "·Õ›Ÿ »Ì«‰«  «·⁄„·Ì… «·ÃœÌœ…" & Wrap & "·Õ›Ÿ «· ⁄œÌ·« " & Wrap & " ›ﬁÿ ≈÷€ÿ Â‰«", True
+    End With
+
+    With TTP
+        .Create Me.hWnd, "”·› «·„ÊŸ›Ì‰", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl Cmd(3), " —«Ã⁄ ..." & Wrap & "·· —«Ã⁄ ⁄‰ ⁄„·Ì… «·«÷«›…" & Wrap & "··· —«Ã⁄ ⁄‰ ⁄„·Ì… «· ⁄œÌ·" & Wrap & " ›ﬁÿ ≈÷€ÿ Â‰«", True
+    End With
+
+    With TTP
+        .Create Me.hWnd, "”·› «·„ÊŸ›Ì‰", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl Cmd(4), "Õ–› ..." & Wrap & "·Õ–› »Ì«‰«  «·⁄„·Ì… «·Õ«·Ì…" & Wrap & " ›ﬁÿ ≈÷€ÿ Â‰«", True
+    End With
+
+    With TTP
+        .Create Me.hWnd, "”·› «·„ÊŸ›Ì‰", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl Cmd(6), "Œ—ÊÃ ..." & Wrap & "·«€·«ﬁ Â–Â «·‰«›–…" & Wrap, True
+    End With
+
+    With TTP
+        .Create Me.hWnd, "”·› «·„ÊŸ›Ì‰", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl XPBtnMove(1), "«·√Ê· ..." & Wrap & "··«‰ ﬁ«· «·Ï √Ê· ”Ã·" & Wrap & " ›ﬁÿ ≈÷€ÿ Â‰«", True
+    End With
+
+    With TTP
+        .Create Me.hWnd, "”·› «·„ÊŸ›Ì‰", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl XPBtnMove(0), "«·”«»ﬁ ..." & Wrap & "··«‰ ﬁ«· «·Ï «·”Ã· «·”«»ﬁ" & Wrap & " ›ﬁÿ ≈÷€ÿ Â‰«", True
+    End With
+
+    With TTP
+        .Create Me.hWnd, "”·› «·„ÊŸ›Ì‰", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl XPBtnMove(3), "«· «·Ì ..." & Wrap & "··«‰ ﬁ«· «·Ï «·”Ã· «· «·Ì" & Wrap & " ›ﬁÿ ≈÷€ÿ Â‰«", True
+    End With
+
+    With TTP
+        .Create Me.hWnd, "”·› «·„ÊŸ›Ì‰", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl XPBtnMove(2), "«·√ŒÌ— ..." & Wrap & "··«‰ ﬁ«· «·Ï ¬Œ— ”Ã·" & Wrap & " ›ﬁÿ ≈÷€ÿ Â‰«", True
+    End With
+
+    With TTP
+        .Create Me.hWnd, "”·› «·„ÊŸ›Ì‰", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl CmdHelp, "„”«⁄œ… ..." & Wrap & "·· ⁄—› ⁄·Ï ÊŸÌ›… Â–Â «·‰«›–…" & Wrap & "ÊﬂÌ›Ì… «· ⁄«„· „⁄Â«" & Wrap & "≈÷€ÿ Â‰«" & Wrap, True
+    End With
+
+    Exit Sub
+ErrTrap:
+End Sub
+
+Private Sub Form_QueryUnload(Cancel As Integer, _
+                             UnloadMode As Integer)
+    Dim IntResult As String
+    Dim StrMSG As String
+    On Error GoTo ErrTrap
+
+    If Me.TxtModFlg.text <> "R" Then
+
+        Select Case Me.TxtModFlg.text
+
+            Case "N"
+    
+                If SystemOptions.UserInterface = EnglishInterface Then
+                    StrMSG = "You will close this screen before save " & Chr(13)
+                    StrMSG = StrMSG & " the new data  " & Chr(13)
+                    StrMSG = StrMSG & " do you want save before exit" & Chr(13)
+                    StrMSG = StrMSG & "yes" & "-" & "save the new data" & Chr(13)
+                    StrMSG = StrMSG & "no" & "-" & "Don't save" & Chr(13)
+                    StrMSG = StrMSG & "cancel" & "-" & "Cancel Exit" & Chr(13)
+    
+                Else
+                    StrMSG = "”Ê› Ì „ €·ﬁ «·‘«‘… Ê·„  ‰ Â „‰  ”ÃÌ·" & Chr(13)
+                    StrMSG = StrMSG & " «·»Ì«‰«  «·ÃœÌœ… «·Õ«·Ì… " & Chr(13)
+                    StrMSG = StrMSG & " Â·  —Ìœ «·Õ›Ÿ ﬁ»· «·Œ—ÊÃ" & Chr(13)
+                    StrMSG = StrMSG & "‰⁄„" & "-" & "Ì „ Õ›Ÿ «·»Ì«‰«  «·ÃœÌœ…" & Chr(13)
+                    StrMSG = StrMSG & "·«" & "-" & "·‰ Ì „ «·Õ›Ÿ" & Chr(13)
+                    StrMSG = StrMSG & "≈·€«¡ «·√„—" & "-" & "≈·€«¡ ⁄„·Ì… «·Œ—ÊÃ" & Chr(13)
+        
+                End If
+        
+            Case "E"
+
+                If SystemOptions.UserInterface = EnglishInterface Then
+                    StrMSG = "You will close this screen before save  " & Chr(13)
+                    StrMSG = StrMSG & " the Modifications  " & Chr(13)
+                    StrMSG = StrMSG & " do you want save before exit" & Chr(13)
+                    StrMSG = StrMSG & "yes" & "-" & "save the new data" & Chr(13)
+                    StrMSG = StrMSG & "no" & "-" & "Don't save" & Chr(13)
+                    StrMSG = StrMSG & "cancel" & "-" & "Cancel Exit" & Chr(13)
+    
+                Else
+                    StrMSG = "”Ê› Ì „ €·ﬁ «·‘«‘… Ê·„  ‰ Â „‰  ”ÃÌ·" & Chr(13)
+                    StrMSG = StrMSG & " «· ⁄œÌ·«  «·ÃœÌœ… ⁄·Ï «·”Ã· «·Õ«·Ï " & Chr(13)
+                    StrMSG = StrMSG & " Â·  —Ìœ «·Õ›Ÿ ﬁ»· «·Œ—ÊÃ" & Chr(13)
+                    StrMSG = StrMSG & "‰⁄„" & "-" & "Ì „ Õ›Ÿ «· ⁄œÌ·«   «·ÃœÌœ…" & Chr(13)
+                    StrMSG = StrMSG & "·«" & "-" & "·‰ Ì „ «·Õ›Ÿ" & Chr(13)
+                    StrMSG = StrMSG & "≈·€«¡ «·√„—" & "-" & "≈·€«¡ ⁄„·Ì… «·Œ—ÊÃ" & Chr(13)
+                
+                End If
+
+        End Select
+
+        IntResult = MsgBox(StrMSG, vbMsgBoxRight + vbYesNoCancel + vbMsgBoxRtlReading + vbQuestion, App.Title)
+
+        Select Case IntResult
+
+            Case vbYes
+                Cancel = True
+       
+                SaveData
+
+                ' btnSave
+            Case vbCancel
+                Cancel = True
+        End Select
+
+    End If
+
+    Exit Sub
+ErrTrap:
+End Sub
+
+Private Sub TxtAdvanceValue_KeyPress(KeyAscii As Integer)
+    KeyAscii = KeyAscii_Num(KeyAscii, TxtAdvanceValue.text, 0)
+End Sub
+
+Private Function CheckDate() As Boolean
+    Dim StrTemp As String
+    Dim Msg  As String
+
+    If year(Date) > val(Me.CboYear.text) Then ' ⁄«„ „÷Ï
+        Msg = "«· «—ÌŒ «·„Õœœ €Ì— ’ÕÌÕ ÕÌÀ «‰Â ﬁ»·  «—ÌŒ «·ÌÊ„ ÊÂ–« ·« ÌÃÊ“...!!!"
+        MsgBox Msg, vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+        CheckDate = False
+        Exit Function
+    ElseIf year(Date) = val(Me.CboYear.text) Then '‰›” «·⁄«„
+
+        If Month(Date) > val(Me.CmbMonth.ListIndex + 1) Then
+            'Msg = "«· «—ÌŒ «·„Õœœ €Ì— ’ÕÌÕ...!!!"
+            'MsgBox Msg, vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+            'CheckDate = False
+            'Exit Function
+        End If
+    End If
+
+    CheckDate = True
+End Function
+
+Private Function CheckPartCavl() As Boolean
+    Dim Msg As String
+
+    CheckPartCal = False
+
+    If val(TxtAdvanceValue.text) = 0 Then
+        Msg = "ÌÃ» «œŒ«· ﬁÌ„… «·”·›…...!!! "
+        MsgBox Msg, vbOKOnly + vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+        TxtAdvanceValue.SetFocus
+        Exit Function
+    End If
+
+    If val(TxtPaymentCounts.text) = 0 Then
+        Msg = "ÌÃ» «œŒ«· ⁄œœ „—«   ”œÌœ «·œ›⁄…...!!! "
+        MsgBox Msg, vbOKOnly + vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+        TxtAdvanceValue.SetFocus
+        Exit Function
+    End If
+
+    If CmbMonth.ListIndex = -1 Then
+        Msg = "ÌÃ»  ÕœÌœ «Ê· ‘Â— · ”œÌœ «·œ›⁄…..!! "
+        MsgBox Msg, vbOKOnly + vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+        CmbMonth.SetFocus
+        SendKeys "{F4}"
+        Exit Function
+    End If
+
+    If CboYear.ListIndex = -1 Then
+        Msg = "ÌÃ»  ÕœÌœ «Ê· ”‰… · ”œÌœ «·œ›⁄… ..!! "
+        MsgBox Msg, vbOKOnly + vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+        CboYear.SetFocus
+        SendKeys "{F4}"
+        Exit Function
+    End If
+
+    CheckPartCal = True
+End Function
+
+Private Sub CalCulateParts()
+    Dim i As Integer
+    Dim IntPartCounts As Integer
+    Dim SngPartValue As Single
+    Dim m_FirstDate As Date
+
+    If CheckPartCal = False Then
+        Exit Sub
+    End If
+
+    If CheckDate = False Then
+        Exit Sub
+    End If
+
+    SngPartValue = val(Me.TxtAdvanceValue.text) / val(Me.TxtPaymentCounts.text)
+    IntPartCounts = val(Me.TxtPaymentCounts.text)
+    m_FirstDate = CDate("1-" & Me.CmbMonth.ListIndex + 1 & "-" & val(Me.CboYear.text))
+
+    With Me.Fg
+        .Clear flexClearScrollable, flexClearEverything
+        .Rows = .FixedRows + IntPartCounts
+        .RowHeightMin = 300
+
+        For i = 1 To IntPartCounts
+            .TextMatrix(i, .ColIndex("PartNO")) = i
+            .TextMatrix(i, .ColIndex("PartValue")) = SngPartValue
+            .TextMatrix(i, .ColIndex("PartDate")) = DisplayDate(DateAdd("m", i - 1, m_FirstDate))
+        Next i
+    
+    End With
+
+End Sub
+

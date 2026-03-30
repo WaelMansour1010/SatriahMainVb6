@@ -1,0 +1,9 @@
+SELECT     TOP 100 PERCENT dbo.Transactions.Transaction_ID, dbo.Transactions.NoteSerial1, dbo.Transactions.Trans_Discount, dbo.Transactions.Trans_DiscountType, dbo.Transactions.Transaction_Type, 
+                      dbo.Transaction_Details.discountvalue, dbo.Transaction_Details.TotalDiscountPerLine, dbo.Transaction_Details.ShowQty, dbo.Transaction_Details.showPrice, 
+                      dbo.Transaction_Details.ItemDiscountType, dbo.Transaction_Details.ItemDiscount
+FROM         dbo.Transactions INNER JOIN
+                      dbo.Transaction_Details ON dbo.Transactions.Transaction_ID = dbo.Transaction_Details.Transaction_ID
+WHERE     (dbo.Transactions.Transaction_Type = 21 OR
+                      dbo.Transactions.Transaction_Type = 9) AND (dbo.Transactions.Trans_Discount > 0) AND (NOT (dbo.Transactions.Trans_Discount IS NULL)) AND (dbo.Transaction_Details.ItemDiscount > 0) AND 
+                      (dbo.Transactions.Trans_DiscountType <> 1)
+ORDER BY dbo.Transactions.Trans_DiscountType

@@ -1,0 +1,9 @@
+LblTitle* ÍÇáÇÊ ÇáãÔÇÑíÚ * Project current * 
+lblNameE* ÇÓã ÇáÍÇáÉ ÇäÌáíÒí* Eng. Name* 
+lblColor* Çááæä* Color * 
+lblNameA* ÇÓã ÇáÍÇáÉ ÚÑÈí* Ar. Name* 
+lblCode* ßæÏ  *id* 
+lblCurrent* ÇáÓÌá ÇáÍÇáí:* Curr. Rec.* 
+lblCounter* ÚÏÏ ÇáÓÌáÇÊ:*Rec. Count.* 
+
+

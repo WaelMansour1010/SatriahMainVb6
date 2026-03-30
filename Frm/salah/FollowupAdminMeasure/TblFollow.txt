@@ -1,0 +1,16 @@
+ If DB_CreateTable("TblFollowUpAdminMeasure", True, "ID", False) = True Then
+                      DB_CreateField "TblFollowUpAdminMeasure", "RecordDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+                    DB_CreateField "TblFollowUpAdminMeasure", "BranchID", adInteger, adColNullable, , , ""
+                       DB_CreateField "TblFollowUpAdminMeasure", "FromName", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblFollowUpAdminMeasure", "UserID", adInteger, adColNullable, , , ""
+                        DB_CreateField "TblFollowUpAdminMeasure", "Posted", adInteger, adColNullable, , , ""
+                         DB_CreateField "TblFollowUpAdminMeasure", "PersonalDept", adVarWChar, adColNullable, 4000, , "C?C??   ", False, True, , True
+                        End If
+                        ''''''///////////////// E?C??? ?I?? C?E???E EO??
+                         If DB_CreateTable("TblFollowUpAdminMeasureDetails", True, "ID2", True) = True Then
+                         DB_CreateField "TblFollowUpAdminMeasureDetails", "EmpName", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                          DB_CreateField "TblFollowUpAdminMeasureDetails", "JobName", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                          DB_CreateField "TblFollowUpAdminMeasureDetails", "ProjectName", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                            DB_CreateField "TblFollowUpAdminMeasureDetails", "Code", adInteger, adColNullable, , , ""
+                                End If
+                             DB_CreateField "TblFollowUpAdminMeasureDetails", "Procedures", adVarWChar, adColNullable, 4000, , "C?C??   ", False, True, , True

@@ -1,0 +1,49 @@
+ If DB_CreateTable("TblCreditFacicity", True, "ID", False) = True Then
+                         DB_CreateField "TblCreditFacicity", "RecordDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+                          DB_CreateField "TblCreditFacicity", "ID", adInteger, adColNullable, , , ""
+                           DB_CreateField "TblCreditFacicity", "Posted", adInteger, adColNullable, , , ""
+                             DB_CreateField "TblCreditFacicity", "UserID", adInteger, adColNullable, , , ""
+                          DB_CreateField "TblCreditFacicity", "BranchID", adInteger, adColNullable, , , ""
+                        DB_CreateField "TblCreditFacicity", "NameApplicant", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "NameOwner", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "Street", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "City", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "Email", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "Fax", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "Phone", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "CRNo", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "CRSource", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "POBox", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "ZipCode", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "Address", adVarWChar, adColNullable, 4000, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "TypeBusines", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "longT", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "Acredit", adDouble, adColNullable, , , "    ", False, True
+                        End If
+                        DB_CreateField "TblCreditFacicity", "DMY", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "CCNO", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "Amount", adDouble, adColNullable, , , "    ", False, True
+                         DB_CreateField "TblCreditFacicity", "ShowAmount", adDouble, adColNullable, , , "    ", False, True
+                         DB_CreateField "TblCreditFacicity", "WordAmount", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "ShowNo", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "Showtype1", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "Showtype2", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "Showtype3", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "Showtype4", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "StopAccount", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "StopDMY", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                         DB_CreateField "TblCreditFacicity", "BanckName", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "BanckBranch", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "AccNo", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicity", "AccOficer", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        ''''''///////////////?I?? E?C??? ??E E????CE
+                        If DB_CreateTable("TblCreditFacicityDetails1", True, "ID2", True) = True Then
+                          DB_CreateField "TblCreditFacicityDetails1", "ID", adInteger, adColNullable, , , ""
+                           
+                          DB_CreateField "TblCreditFacicityDetails1", "Code", adInteger, adColNullable, , , ""
+                        DB_CreateField "TblCreditFacicityDetails1", "name", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicityDetails1", "job", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                            DB_CreateField "TblCreditFacicityDetails1", "iqamano", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCreditFacicityDetails1", "nationality", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        End If
+                   DB_CreateField "TblCreditFacicityDetails1", "Type", adInteger, adColNullable, , , ""

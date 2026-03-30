@@ -1,0 +1,1729 @@
+VERSION 5.00
+Object = "{C115893A-A3BF-43AF-B28D-69DB846077F3}#1.0#0"; "vsflex8u.ocx"
+Object = "{396F7AC0-A0DD-11D3-93EC-00C0DFE7442A}#1.0#0"; "vbalIml6.ocx"
+Object = "{6B7E6392-850A-101B-AFC0-4210102A8DA7}#1.3#0"; "COMCTL32.OCX"
+Object = "{E910F8E1-8996-4EE9-90F1-3E7C64FA9829}#1.1#0"; "vbaListView6.ocx"
+Begin VB.Form frmTestListView 
+   ClientHeight    =   8760
+   ClientLeft      =   4110
+   ClientTop       =   3120
+   ClientWidth     =   12150
+   Icon            =   "frmTestListView.frx":0000
+   LinkTopic       =   "Form1"
+   MDIChild        =   -1  'True
+   RightToLeft     =   -1  'True
+   ScaleHeight     =   8760
+   ScaleWidth      =   12150
+   WindowState     =   2  'Maximized
+   Begin VB.Frame Frame4 
+      Caption         =   "Frame4"
+      Height          =   2655
+      Left            =   5160
+      RightToLeft     =   -1  'True
+      TabIndex        =   33
+      Top             =   5640
+      Visible         =   0   'False
+      Width           =   1695
+      Begin VB.PictureBox picTest 
+         BorderStyle     =   0  'None
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   8445
+         Left            =   0
+         ScaleHeight     =   8445
+         ScaleWidth      =   3255
+         TabIndex        =   34
+         Top             =   0
+         Width           =   3255
+         Begin VB.CommandButton cmdWorkAreas 
+            Caption         =   "&Work Areas.."
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Left            =   0
+            TabIndex        =   41
+            Top             =   1680
+            Width           =   1155
+         End
+         Begin VB.CommandButton cmdAdd 
+            Caption         =   "&Add..."
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Left            =   0
+            TabIndex        =   40
+            Top             =   0
+            Width           =   1155
+         End
+         Begin VB.CommandButton cmdRemove 
+            Caption         =   "&Remove..."
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Left            =   0
+            TabIndex        =   39
+            Top             =   360
+            Width           =   1155
+         End
+         Begin VB.CommandButton cmdInfo 
+            Caption         =   "&Info..."
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Left            =   -720
+            TabIndex        =   38
+            Top             =   3720
+            Width           =   1155
+         End
+         Begin VB.CommandButton cmdNew 
+            Caption         =   "&New..."
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Left            =   0
+            TabIndex        =   37
+            Top             =   1260
+            Width           =   1155
+         End
+         Begin VB.PictureBox picStatus 
+            BorderStyle     =   0  'None
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   315
+            Left            =   0
+            ScaleHeight     =   315
+            ScaleWidth      =   12150
+            TabIndex        =   35
+            Top             =   0
+            Width           =   12150
+            Begin VB.Label lblStatus 
+               Caption         =   "vbAccelerator ListView"
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   8.25
+                  Charset         =   0
+                  Weight          =   400
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               Height          =   255
+               Left            =   60
+               TabIndex        =   36
+               Top             =   0
+               Width           =   3195
+            End
+         End
+         Begin vbalIml6.vbalImageList ilsIcons32 
+            Left            =   300
+            Top             =   2640
+            _ExtentX        =   953
+            _ExtentY        =   953
+            IconSizeX       =   32
+            IconSizeY       =   32
+            ColourDepth     =   24
+            Size            =   158832
+            Images          =   "frmTestListView.frx":1272
+            Version         =   131072
+            KeyCount        =   36
+            Keys            =   "ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ"
+         End
+         Begin vbalIml6.vbalImageList ilsIcons16 
+            Left            =   300
+            Top             =   2040
+            _ExtentX        =   953
+            _ExtentY        =   953
+            ColourDepth     =   24
+            Size            =   43624
+            Images          =   "frmTestListView.frx":27F02
+            Version         =   131072
+            KeyCount        =   38
+            Keys            =   "ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ"
+         End
+         Begin vbalIml6.vbalImageList ilsIcons48 
+            Left            =   300
+            Top             =   3240
+            _ExtentX        =   953
+            _ExtentY        =   953
+            IconSizeX       =   48
+            IconSizeY       =   48
+            ColourDepth     =   24
+            Size            =   502320
+            Images          =   "frmTestListView.frx":3298A
+            Version         =   131072
+            KeyCount        =   52
+            Keys            =   "ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ"
+         End
+     
+      End
+   End
+   Begin VB.Frame Frame1 
+      Height          =   4935
+      Left            =   3120
+      RightToLeft     =   -1  'True
+      TabIndex        =   30
+      Top             =   -120
+      Width           =   4815
+      Begin VB.Label Label9 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00E2E9E9&
+         BackStyle       =   0  'Transparent
+         Caption         =   "œ›⁄ «·›« Ê—…"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   13.5
+            Charset         =   178
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00FFFFFF&
+         Height          =   435
+         Left            =   1080
+         RightToLeft     =   -1  'True
+         TabIndex        =   47
+         Top             =   1080
+         Width           =   1965
+      End
+      Begin VB.Label Label8 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00E2E9E9&
+         BackStyle       =   0  'Transparent
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   13.5
+            Charset         =   178
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00FFFFFF&
+         Height          =   435
+         Left            =   1080
+         RightToLeft     =   -1  'True
+         TabIndex        =   46
+         Top             =   360
+         Width           =   1965
+      End
+      Begin VB.Image Image1 
+         Height          =   4725
+         Left            =   0
+         Picture         =   "frmTestListView.frx":AD3DA
+         Top             =   120
+         Width           =   4860
+      End
+   End
+   Begin VB.Frame Frame3 
+      Caption         =   "Frame3"
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   3135
+      Left            =   1200
+      TabIndex        =   3
+      Top             =   -4800
+      Visible         =   0   'False
+      Width           =   6495
+      Begin VB.PictureBox picOptions 
+         BorderStyle     =   0  'None
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   2790
+         Left            =   0
+         ScaleHeight     =   2790
+         ScaleWidth      =   12150
+         TabIndex        =   4
+         Top             =   0
+         Width           =   12150
+         Begin VB.CheckBox chkFullRowSelect 
+            Caption         =   "F&ull Row Select (Report or Tile)"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   195
+            Left            =   2460
+            TabIndex        =   22
+            Top             =   2280
+            Width           =   2775
+         End
+         Begin VB.CheckBox chkFlatScrollBars 
+            Caption         =   "&Flat Scroll Bars"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   195
+            Left            =   2460
+            TabIndex        =   21
+            Top             =   2040
+            Width           =   2235
+         End
+         Begin VB.CheckBox chkCheckBoxes 
+            Caption         =   "&Check Boxes"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   195
+            Left            =   2460
+            TabIndex        =   20
+            Top             =   1800
+            Width           =   2235
+         End
+         Begin VB.CheckBox chkSubItemImages 
+            Caption         =   "&Sub-Item Images (Report)"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   195
+            Left            =   2460
+            TabIndex        =   19
+            Top             =   1560
+            Width           =   2235
+         End
+         Begin VB.CheckBox chkHeaderButtons 
+            Caption         =   "&Header Buttons (Report)"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   255
+            Left            =   60
+            TabIndex        =   18
+            Top             =   1560
+            Value           =   1  'Checked
+            Width           =   2295
+         End
+         Begin VB.CheckBox chkGridLines 
+            Caption         =   "&Gridlines (Report)"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   195
+            Left            =   2460
+            TabIndex        =   17
+            Top             =   1320
+            Width           =   2235
+         End
+         Begin VB.CheckBox chkLabelEdit 
+            Caption         =   "Label Edi&t"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   255
+            Left            =   60
+            TabIndex        =   16
+            Top             =   1320
+            Width           =   2295
+         End
+         Begin VB.CheckBox chkInfoTips 
+            Caption         =   "&Info Tips"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   195
+            Left            =   2460
+            TabIndex        =   15
+            Top             =   1080
+            Value           =   1  'Checked
+            Width           =   2235
+         End
+         Begin VB.CheckBox chkBackground 
+            Caption         =   "&Background Picture"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   195
+            Left            =   2460
+            TabIndex        =   14
+            Top             =   840
+            Width           =   2235
+         End
+         Begin VB.CheckBox chkMultiSelect 
+            Caption         =   "&Multi-Select"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   255
+            Left            =   60
+            TabIndex        =   13
+            Top             =   1080
+            Value           =   1  'Checked
+            Width           =   2295
+         End
+         Begin VB.CheckBox chkHideSelection 
+            Caption         =   "&Hide Selection"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   255
+            Left            =   60
+            TabIndex        =   12
+            Top             =   840
+            Width           =   2295
+         End
+         Begin VB.ComboBox cboAppearance 
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   315
+            Left            =   3360
+            Style           =   2  'Dropdown List
+            TabIndex        =   11
+            Top             =   420
+            Width           =   2235
+         End
+         Begin VB.ComboBox cboBorder 
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   315
+            Left            =   3360
+            Style           =   2  'Dropdown List
+            TabIndex        =   10
+            Top             =   60
+            Width           =   2235
+         End
+         Begin VB.CheckBox chkEnabled 
+            Caption         =   "&Enabled"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   255
+            Left            =   60
+            TabIndex        =   9
+            Top             =   60
+            Value           =   1  'Checked
+            Width           =   2295
+         End
+         Begin VB.CheckBox chkHeaderDragDrop 
+            Caption         =   "&Header Drag-Drop (Report)"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   255
+            Left            =   60
+            TabIndex        =   8
+            Top             =   1800
+            UseMaskColor    =   -1  'True
+            Width           =   2295
+         End
+         Begin VB.CheckBox chkAutoArrange 
+            Caption         =   "Auto-Arran&ge"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   255
+            Left            =   60
+            TabIndex        =   7
+            Top             =   300
+            Value           =   1  'Checked
+            Width           =   2295
+         End
+         Begin VB.CheckBox chkBorderSelect 
+            Caption         =   "&Border Select (Large Icons)"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   255
+            Left            =   60
+            TabIndex        =   6
+            Top             =   2040
+            Width           =   2295
+         End
+         Begin VB.CheckBox chkCustomDraw 
+            Caption         =   "Custom Draw"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   195
+            Left            =   2460
+            TabIndex        =   5
+            Top             =   2520
+            Value           =   1  'Checked
+            Width           =   2775
+         End
+         Begin VB.Label lblInfo 
+            Caption         =   "Appearance:"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   315
+            Index           =   2
+            Left            =   2400
+            TabIndex        =   24
+            Top             =   480
+            Width           =   915
+         End
+         Begin VB.Label lblInfo 
+            Caption         =   "BorderStyle:"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   315
+            Index           =   0
+            Left            =   2400
+            TabIndex        =   23
+            Top             =   120
+            Width           =   915
+         End
+      End
+   End
+   Begin VB.CheckBox chkGroupView 
+      Caption         =   "&Grouped View"
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   195
+      Left            =   2640
+      TabIndex        =   2
+      Top             =   360
+      UseMaskColor    =   -1  'True
+      Visible         =   0   'False
+      Width           =   2295
+   End
+   Begin VB.ComboBox cboView 
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   315
+      ItemData        =   "frmTestListView.frx":B56EB
+      Left            =   7560
+      List            =   "frmTestListView.frx":B56ED
+      Style           =   2  'Dropdown List
+      TabIndex        =   1
+      Top             =   720
+      Visible         =   0   'False
+      Width           =   2235
+   End
+   Begin vbalListViewLib6.vbalListViewCtl lvwTables 
+      Height          =   7845
+      Left            =   0
+      TabIndex        =   28
+      Top             =   1920
+      Width           =   3135
+      _ExtentX        =   5530
+      _ExtentY        =   13838
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      MultiSelect     =   -1  'True
+      LabelEdit       =   0   'False
+      AutoArrange     =   0   'False
+      HeaderButtons   =   0   'False
+      HeaderTrackSelect=   0   'False
+      HideSelection   =   0   'False
+      InfoTips        =   0   'False
+   End
+   Begin VSFlex8UCtl.VSFlexGrid FG 
+      Height          =   4230
+      Left            =   3120
+      TabIndex        =   42
+      Top             =   4920
+      Width           =   4845
+      _cx             =   8546
+      _cy             =   7461
+      Appearance      =   2
+      BorderStyle     =   1
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      MousePointer    =   0
+      BackColor       =   -2147483643
+      ForeColor       =   -2147483640
+      BackColorFixed  =   14871017
+      ForeColorFixed  =   -2147483630
+      BackColorSel    =   -2147483635
+      ForeColorSel    =   -2147483634
+      BackColorBkg    =   -2147483636
+      BackColorAlternate=   -2147483643
+      GridColor       =   -2147483633
+      GridColorFixed  =   -2147483632
+      TreeColor       =   -2147483632
+      FloodColor      =   192
+      SheetBorder     =   -2147483642
+      FocusRect       =   1
+      HighLight       =   1
+      AllowSelection  =   -1  'True
+      AllowBigSelection=   -1  'True
+      AllowUserResizing=   1
+      SelectionMode   =   0
+      GridLines       =   1
+      GridLinesFixed  =   2
+      GridLineWidth   =   1
+      Rows            =   2
+      Cols            =   20
+      FixedRows       =   1
+      FixedCols       =   1
+      RowHeightMin    =   300
+      RowHeightMax    =   0
+      ColWidthMin     =   0
+      ColWidthMax     =   0
+      ExtendLastCol   =   0   'False
+      FormatString    =   $"frmTestListView.frx":B56EF
+      ScrollTrack     =   0   'False
+      ScrollBars      =   3
+      ScrollTips      =   0   'False
+      MergeCells      =   0
+      MergeCompare    =   0
+      AutoResize      =   -1  'True
+      AutoSizeMode    =   0
+      AutoSearch      =   0
+      AutoSearchDelay =   2
+      MultiTotals     =   -1  'True
+      SubtotalPosition=   1
+      OutlineBar      =   0
+      OutlineCol      =   0
+      Ellipsis        =   0
+      ExplorerBar     =   7
+      PicturesOver    =   0   'False
+      FillStyle       =   0
+      RightToLeft     =   -1  'True
+      PictureType     =   0
+      TabBehavior     =   0
+      OwnerDraw       =   0
+      Editable        =   2
+      ShowComboButton =   1
+      WordWrap        =   0   'False
+      TextStyle       =   0
+      TextStyleFixed  =   0
+      OleDragMode     =   0
+      OleDropMode     =   0
+      DataMode        =   0
+      VirtualData     =   -1  'True
+      DataMember      =   ""
+      ComboSearch     =   3
+      AutoSizeMouse   =   -1  'True
+      FrozenRows      =   0
+      FrozenCols      =   0
+      AllowUserFreezing=   0
+      BackColorFrozen =   0
+      ForeColorFrozen =   0
+      WallPaperAlignment=   0
+      AccessibleName  =   ""
+      AccessibleDescription=   ""
+      AccessibleValue =   ""
+      AccessibleRole  =   24
+   End
+   Begin vbalListViewLib6.vbalListViewCtl lvwItems 
+      Height          =   9405
+      Left            =   8040
+      TabIndex        =   26
+      Top             =   360
+      Width           =   9855
+      _ExtentX        =   17383
+      _ExtentY        =   16589
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      MultiSelect     =   -1  'True
+      LabelEdit       =   0   'False
+      AutoArrange     =   0   'False
+      HeaderButtons   =   0   'False
+      HeaderTrackSelect=   0   'False
+      HideSelection   =   0   'False
+      InfoTips        =   0   'False
+   End
+   Begin vbalListViewLib6.vbalListViewCtl lvwMain 
+      Height          =   9405
+      Left            =   17880
+      TabIndex        =   0
+      Top             =   360
+      Width           =   2415
+      _ExtentX        =   4260
+      _ExtentY        =   16589
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      MultiSelect     =   -1  'True
+      LabelEdit       =   0   'False
+      AutoArrange     =   0   'False
+      HeaderButtons   =   0   'False
+      HeaderTrackSelect=   0   'False
+      HideSelection   =   0   'False
+      InfoTips        =   0   'False
+   End
+   Begin VB.Label Label7 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00E2E9E9&
+      BackStyle       =   0  'Transparent
+      Caption         =   "Œœ„… «· Ê’Ì·"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   13.5
+         Charset         =   178
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00000000&
+      Height          =   435
+      Left            =   720
+      RightToLeft     =   -1  'True
+      TabIndex        =   45
+      Top             =   960
+      Width           =   1965
+   End
+   Begin VB.Label Label6 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00E2E9E9&
+      BackStyle       =   0  'Transparent
+      Caption         =   "«·ÿ·»«  «·Œ«—ÃÌ…"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   13.5
+         Charset         =   178
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00000000&
+      Height          =   435
+      Left            =   720
+      RightToLeft     =   -1  'True
+      TabIndex        =   44
+      Top             =   240
+      Width           =   1965
+   End
+   Begin ComctlLib.ImageList imgLarge 
+      Left            =   4320
+      Top             =   0
+      _ExtentX        =   1005
+      _ExtentY        =   1005
+      BackColor       =   -2147483643
+      ImageWidth      =   32
+      ImageHeight     =   32
+      MaskColor       =   12632256
+      _Version        =   327682
+      BeginProperty Images {0713E8C2-850A-101B-AFC0-4210102A8DA7} 
+         NumListImages   =   1
+         BeginProperty ListImage1 {0713E8C3-850A-101B-AFC0-4210102A8DA7} 
+            Picture         =   "frmTestListView.frx":B5A2D
+            Key             =   ""
+         EndProperty
+      EndProperty
+   End
+   Begin VB.Label Label5 
+      Alignment       =   2  'Center
+      BackStyle       =   0  'Transparent
+      Caption         =   "0.00"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   24
+         Charset         =   178
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00FFFFFF&
+      Height          =   615
+      Left            =   3840
+      RightToLeft     =   -1  'True
+      TabIndex        =   43
+      Top             =   9240
+      Width           =   3615
+   End
+   Begin VB.Image Image6 
+      Height          =   795
+      Left            =   0
+      Picture         =   "frmTestListView.frx":B754B
+      Stretch         =   -1  'True
+      Top             =   9720
+      Width           =   20235
+   End
+   Begin VB.Image Image5 
+      Height          =   915
+      Left            =   3120
+      Picture         =   "frmTestListView.frx":B7B1F
+      Stretch         =   -1  'True
+      Top             =   9240
+      Width           =   4755
+   End
+   Begin VB.Label Label4 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00E2E9E9&
+      BackStyle       =   0  'Transparent
+      Caption         =   "«·«’‰«›"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   13.5
+         Charset         =   178
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00FFFFFF&
+      Height          =   435
+      Left            =   15720
+      RightToLeft     =   -1  'True
+      TabIndex        =   32
+      Top             =   0
+      Width           =   1965
+   End
+   Begin VB.Label Label3 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00E2E9E9&
+      BackStyle       =   0  'Transparent
+      Caption         =   "«·„Ã„Ê⁄« "
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   13.5
+         Charset         =   178
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   435
+      Left            =   3480
+      RightToLeft     =   -1  'True
+      TabIndex        =   31
+      Top             =   0
+      Width           =   1965
+   End
+   Begin VB.Label Label2 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00E2E9E9&
+      BackStyle       =   0  'Transparent
+      Caption         =   "«·ÿ«Ê·« "
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   13.5
+         Charset         =   178
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00FFFFFF&
+      Height          =   435
+      Left            =   0
+      RightToLeft     =   -1  'True
+      TabIndex        =   29
+      Top             =   1560
+      Width           =   1965
+   End
+   Begin VB.Label Label1 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00E2E9E9&
+      BackStyle       =   0  'Transparent
+      Caption         =   "«·«’‰«›"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   13.5
+         Charset         =   178
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00FFFFFF&
+      Height          =   435
+      Left            =   21120
+      RightToLeft     =   -1  'True
+      TabIndex        =   27
+      Top             =   0
+      Width           =   1245
+   End
+   Begin VB.Label lbl 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00E2E9E9&
+      BackStyle       =   0  'Transparent
+      Caption         =   "«·„Ã„Ê⁄« "
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   13.5
+         Charset         =   178
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00FFFFFF&
+      Height          =   435
+      Left            =   18120
+      RightToLeft     =   -1  'True
+      TabIndex        =   25
+      Top             =   0
+      Width           =   1965
+   End
+   Begin VB.Image Image2 
+      Height          =   435
+      Left            =   8040
+      Picture         =   "frmTestListView.frx":B7E92
+      Stretch         =   -1  'True
+      Top             =   0
+      Width           =   9795
+   End
+   Begin VB.Image Image3 
+      Height          =   435
+      Left            =   17880
+      Picture         =   "frmTestListView.frx":B8466
+      Stretch         =   -1  'True
+      Top             =   0
+      Width           =   2355
+   End
+   Begin VB.Image Image4 
+      Height          =   1515
+      Left            =   0
+      Picture         =   "frmTestListView.frx":B8A3A
+      Stretch         =   -1  'True
+      Top             =   0
+      Width           =   3195
+   End
+   Begin VB.Image Image7 
+      Height          =   435
+      Left            =   0
+      Picture         =   "frmTestListView.frx":B9ACC
+      Stretch         =   -1  'True
+      Top             =   1560
+      Width           =   3075
+   End
+End
+Attribute VB_Name = "frmTestListView"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Explicit
+
+Private Sub cboAppearance_Click()
+   lvwMain.Appearance = cboAppearance.ItemData(cboAppearance.ListIndex)
+End Sub
+
+Private Sub cboBorder_Click()
+   lvwMain.BorderStyle = cboBorder.ItemData(cboBorder.ListIndex)
+End Sub
+
+Private Sub cboView_Click()
+   If cboView.ListIndex > -1 Then
+      lvwMain.View = cboView.ItemData(cboView.ListIndex)
+   End If
+End Sub
+
+Private Sub chkAutoArrange_Click()
+   lvwMain.AutoArrange = (chkAutoArrange.value = vbChecked)
+End Sub
+
+Private Sub chkBackground_Click()
+   If chkBackground.value = Checked Then
+      lvwMain.BackColor = -1
+      lvwMain.BackgroundPicture = App.path & "\back.jpg"
+   Else
+      lvwMain.BackColor = vbWindowBackground
+      lvwMain.BackgroundPicture = ""
+   End If
+End Sub
+
+Private Sub chkBorderSelect_Click()
+   lvwMain.ItemBorderSelect = (chkBorderSelect.value = Checked)
+End Sub
+
+Private Sub chkCheckBoxes_Click()
+   lvwMain.Checkboxes = (chkCheckBoxes.value = Checked)
+End Sub
+
+Private Sub chkCustomDraw_Click()
+   lvwMain.CustomDraw = (chkCustomDraw.value = Checked)
+End Sub
+
+Private Sub chkEnabled_Click()
+   lvwMain.Enabled = (chkEnabled.value = Checked)
+End Sub
+
+Private Sub chkFlatScrollBars_Click()
+   lvwMain.FlatScrollBar = (chkFlatScrollBars.value = Checked)
+End Sub
+
+Private Sub chkFullRowSelect_Click()
+   lvwMain.FullRowSelect = (chkFullRowSelect.value = Checked)
+End Sub
+
+Private Sub chkGridLines_Click()
+   lvwMain.GridLines = (chkGridLines.value = Checked)
+End Sub
+
+Private Sub chkGroupView_Click()
+   
+   ' very slow unless we do this
+   lvwMain.Visible = False
+   If (chkGroupView.value = vbChecked) Then
+      Dim i As Long
+      
+      ' Create three groups and display them on screen:
+      lvwMain.ItemGroups.Enabled = True
+      
+      If (lvwMain.ItemGroups.count = 0) Then
+         ' Create a group and add the first five items to it:
+         Dim cG As cItemGroup
+         Set cG = lvwMain.ItemGroups.Add(1, "GROUP1", "First Five Items")
+         Debug.Print cG.Header
+         For i = 1 To 5
+            lvwMain.Listitems(i).Group = cG
+         Next i
+         
+         ' Create a group and add the next ten items:
+         Set cG = lvwMain.ItemGroups.Add(5, "GROUP2", "Next Ten Items")
+         For i = 6 To 15
+            lvwMain.Listitems(i).Group = cG
+         Next i
+         
+         ' And the rest:
+         Set cG = lvwMain.ItemGroups.Add(15, "GROUP3", "The Remainder")
+         For i = 16 To lvwMain.Listitems.count
+            lvwMain.Listitems(i).Group = cG
+         Next i
+      End If
+      
+   Else
+      ' Hide all the groups:
+      lvwMain.ItemGroups.Enabled = False
+      
+   End If
+   lvwMain.Visible = True
+   
+End Sub
+
+Private Sub chkHeaderButtons_Click()
+   lvwMain.HeaderButtons = (chkHeaderButtons.value = Checked)
+End Sub
+
+Private Sub chkHeaderDragDrop_Click()
+   lvwMain.HeaderDragDrop = (chkHeaderDragDrop.value = Checked)
+End Sub
+
+Private Sub chkHideSelection_Click()
+   lvwMain.HideSelection = (chkHideSelection.value = Checked)
+End Sub
+
+Private Sub chkInfoTips_Click()
+   lvwMain.InfoTips = (chkInfoTips.value = Checked)
+End Sub
+
+Private Sub chkLabelEdit_Click()
+   lvwMain.LabelEdit = (chkLabelEdit.value = Checked)
+End Sub
+
+Private Sub chkMultiSelect_Click()
+   lvwMain.MultiSelect = (chkMultiSelect.value = Checked)
+End Sub
+
+Private Sub chkSubItemImages_Click()
+Dim i As Long
+   lvwMain.SubItemImages = (chkSubItemImages.value = Checked)
+   If chkSubItemImages.value = Checked Then
+      With lvwMain.Listitems
+         For i = 1 To .count
+            With .Item(i).SubItems(1)
+               .IconIndex = Rnd * ilsIcons16.ImageCount
+               Debug.Print .IconIndex
+            End With
+         Next i
+      End With
+   End If
+End Sub
+
+Private Sub CmdAdd_Click()
+Dim sText As String
+Dim sKey As String
+On Error GoTo ErrorHandler
+   sText = InputBox$("Please enter the caption of the item to add", , "Test Item " & lvwMain.Listitems.count + 1)
+   If sText <> "" Then
+      sKey = InputBox$("Please enter the key for the item:", , "C" & lvwMain.Listitems.count + 1)
+      If sKey <> "" Then
+         lvwMain.Listitems.Add , sKey, sText
+      End If
+   End If
+   Exit Sub
+ErrorHandler:
+   MsgBox "Error: " & Err.description & " [" & Err.Number & "]", vbInformation
+   Exit Sub
+End Sub
+
+Private Sub CmdInfo_Click()
+On Error GoTo ErrorHandler
+Dim sInfo As String
+   If Not lvwMain.SelectedItem Is Nothing Then
+      With lvwMain.SelectedItem
+         sInfo = "Text = " & .text & vbCrLf
+         sInfo = sInfo & "BackColor = " & .BackColor & vbCrLf
+         sInfo = sInfo & "ForeColor = " & .ForeColor & vbCrLf
+         sInfo = sInfo & "Tag = " & .Tag & vbCrLf
+         sInfo = sInfo & "ToolTipText = " & .ToolTipText & vbCrLf
+         sInfo = sInfo & "Checked = " & .Checked & vbCrLf
+         sInfo = sInfo & "Cut = " & .Cut & vbCrLf
+         sInfo = sInfo & "Selected = " & .Selected & vbCrLf
+         sInfo = sInfo & "Hot = " & .Hot & vbCrLf
+         sInfo = sInfo & "Indent = " & .indent & vbCrLf
+         sInfo = sInfo & "ItemData = " & .ItemData & vbCrLf
+         sInfo = sInfo & "Key = " & .key & vbCrLf
+         sInfo = sInfo & "Left =" & .left & vbCrLf
+         sInfo = sInfo & "Top = " & .top & vbCrLf
+         
+         MsgBox sInfo, vbInformation
+      End With
+   Else
+      MsgBox "No item is selected.", vbInformation
+   End If
+   Exit Sub
+ErrorHandler:
+   MsgBox "Error: " & Err.description & " [" & Err.Number & "]", vbInformation
+   Exit Sub
+End Sub
+
+Private Sub cmdNew_Click()
+   Dim f As New frmTestListView
+   f.Show
+   f.Move Me.left + 32 * Screen.TwipsPerPixelX, Me.top + 32 * Screen.TwipsPerPixelY
+End Sub
+
+Private Sub CmdRemove_Click()
+On Error GoTo ErrorHandler
+   If Not lvwMain.SelectedItem Is Nothing Then
+      lvwMain.Listitems.Remove lvwMain.SelectedItem.key
+   Else
+      MsgBox "No item is selected.", vbInformation
+   End If
+   Exit Sub
+ErrorHandler:
+   MsgBox "Error: " & Err.description & " [" & Err.Number & "]", vbInformation
+   Exit Sub
+End Sub
+
+
+Private Sub cmdWorkAreas_Click()
+'   Dim fW As New frmTestWorkAreas
+'   fW.Show
+End Sub
+
+Private Sub Form_Resize()
+   On Error Resume Next
+ '  lvwMain.Move _
+ '     lvwMain.Left, _
+ '     lvwMain.Top, _
+ '     Me.ScaleWidth - picTest.Width - Me.ScaleX(4, vbPixels, Me.ScaleMode), _
+ '     Me.ScaleHeight - lvwMain.Top - picOptions.Height - picStatus.Height - Me.ScaleY(4, vbPixels, Me.ScaleMode)
+End Sub
+
+Private Sub ISButtonLW1_Click()
+
+End Sub
+
+Private Sub lvwMain_AfterLabelEdit(Cancel As Boolean, NewString As String, Item As cListItem)
+   Debug.Print "After Label Edit: ", NewString, Item.text
+End Sub
+
+Private Sub lvwMain_BeforeLabelEdit(Cancel As Boolean, Item As cListItem)
+   Debug.Print "Before Label Edit: ", Item.text
+End Sub
+
+Private Sub lvwMain_Click()
+   lblStatus.Caption = "Click"
+End Sub
+
+Private Sub lvwMain_ColumnClick(Column As cColumn)
+   ' Sort according to the column type:
+   Select Case Column.key
+   Case "NAME"
+      Column.SortType = eLVSortString
+      Column.SortOrder = NewSortOrder(Column.SortOrder)
+   Case "DATE"
+      Column.SortType = eLVSortDate
+      Column.SortOrder = NewSortOrder(Column.SortOrder)
+   Case "SIZE"
+      Column.SortType = eLVSortNumeric
+      Column.SortOrder = NewSortOrder(Column.SortOrder)
+   End Select
+   lvwMain.Listitems.SortItems
+End Sub
+
+Private Function NewSortOrder(ByVal SortOrder As ESortOrderConstants) As ESortTypeConstants
+   Select Case SortOrder
+   Case eSortOrderNone, eSortOrderDescending
+      NewSortOrder = eSortOrderAscending
+   Case eSortOrderAscending
+      NewSortOrder = eSortOrderDescending
+   End Select
+End Function
+
+Private Sub lvwMain_DblClick()
+   lblStatus.Caption = "Double Click"
+End Sub
+
+Private Sub lvwMain_ItemClick(Item As cListItem)
+   lblStatus.Caption = "Clicked Item " & Item.text
+End Sub
+
+Private Sub lvwMain_ItemDblClick(Item As cListItem)
+   lblStatus.Caption = "Double-Clicked Item " & Item.text
+End Sub
+
+Private Sub lvwMain_KeyDown(KeyCode As Integer, Shift As Integer)
+   lblStatus.Caption = "KeyDown " & KeyCode & ",Shift"
+End Sub
+
+Private Sub lvwMain_KeyPress(KeyAscii As Integer)
+   lblStatus.Caption = "KeyPress " & KeyAscii
+End Sub
+
+Private Sub lvwMain_KeyUp(KeyCode As Integer, Shift As Integer)
+   lblStatus.Caption = "KeyUp " & KeyCode & ",Shift"
+End Sub
+
+Private Sub lvwMain_MouseDown(Button As Integer, Shift As Integer, x As Single, Y As Single)
+   lblStatus.Caption = "MouseDown " & x & "," & Y
+End Sub
+
+Private Sub lvwMain_MouseMove(Button As Integer, Shift As Integer, x As Single, Y As Single)
+   lblStatus.Caption = "MouseMove " & x & "," & Y
+End Sub
+
+Private Sub lvwMain_MouseUp(Button As Integer, Shift As Integer, x As Single, Y As Single)
+   lblStatus.Caption = "MouseUp " & x & "," & Y
+End Sub
+
+Private Sub Form_Load()
+Dim i As Long
+Dim J As Long
+   
+   Me.Show
+   Me.Refresh
+   
+   
+   
+
+
+   With cboView
+      .AddItem "Tiles"
+      .ItemData(.NewIndex) = 4
+      .AddItem "Large Icons"
+      .ItemData(.NewIndex) = 0
+      .AddItem "Small Icons"
+      .ItemData(.NewIndex) = 2
+      .AddItem "List"
+      .ItemData(.NewIndex) = 3
+      .AddItem "Details"
+      .ItemData(.NewIndex) = 1
+      
+      .ListIndex = 0
+   End With
+   
+   With cboBorder
+      .AddItem "None"
+      .ItemData(.NewIndex) = 0
+      .AddItem "Fixed Single"
+      .ItemData(.NewIndex) = 1
+      .AddItem "Thin"
+      .ItemData(.NewIndex) = 2
+      .ListIndex = 1
+   End With
+
+   With cboAppearance
+      .AddItem "Flat"
+      .ItemData(.NewIndex) = 0
+      .AddItem "3D"
+      .ItemData(.NewIndex) = 1
+      .ListIndex = 1
+   End With
+         For i = 0 To 1
+   Me.Dlist.AddFromFile App.path & "\images\" & i & ".jpg", IMAGE_ICON, i
+   Next i
+
+
+Dim colX As cColumn
+Dim itmX As cListItem
+         
+   With lvwMain
+      .Visible = False
+      .CustomDraw = True
+            
+      .AutoArrange = True
+      
+      ' Set up image lists:
+      .ImageList(eLVLargeIcon) = Dlist  ' ilsIcons32
+      .ImageList(eLVSmallIcon) = Dlist '  ilsIcons16
+      .ImageList(eLVTileImages) = Dlist ' ilsIcons48
+      .ImageList(eLVHeaderImages) = Dlist '  ilsIcons16
+      
+      ' Add column headers
+      Set colX = .Columns.Add(, "NAME", "Name")
+      colX.Tag = "Stores the name of the item"
+      colX.IconIndex = 0
+      Set colX = .Columns.Add(, "DATE", "Date")
+      colX.Tag = "Stores the date of the item"
+      colX.IconIndex = 1
+      Set colX = .Columns.Add(, "SIZE", "Size")
+      colX.Tag = "Stores the size of the item"
+      colX.Alignment = eLVColumnAlignRight
+            
+      For i = 1 To 3
+         .Columns(i).ItemData = i * 100
+      Next i
+      
+      With .Listitems
+         For i = 1 To 5
+            'Set itmX = .Add(, "I" & i, "Test Item " & i, Rnd * ilsIcons32.ImageCount, Rnd * ilsIcons16.ImageCount)
+            Set itmX = .Add(, "I" & i, "Test Item " & i, 0, 1)
+            If (i Mod 2) = 0 Then
+               itmX.ToolTipText = "This is a test tool tip for item " & i
+            End If
+            With itmX.SubItems(1)
+               .Caption = DateSerial(year(Now), Rnd * Month(Now) + 1, Rnd * Day(Now) + 1)
+               .ShowInTile = ((i Mod 2) = 0)
+               '.IconIndex = itmX.IconIndex
+            End With
+            With itmX.SubItems(2)
+               .Caption = CLng(Rnd * 1024 * 1024)
+               .ShowInTile = True
+            End With
+            If (i = 1) Then
+               ' test font/colours:
+               itmX.BackColor = RGB(98, 176, 255)
+               itmX.ForeColor = RGB(240, 248, 255)
+               Dim sFnt As New StdFont
+               sFnt.name = "Tahoma"
+               sFnt.Size = 10
+               sFnt.Bold = True
+               itmX.Font = sFnt
+            End If
+         Next i
+      End With
+      
+      .TileViewItemLines = 3
+               
+      .Visible = True
+   End With
+   
+   
+   
+   
+FillTables
+End Sub
+Function FillItems()
+Dim i As Long
+Dim J As Long
+   
+ 
+Dim colX As cColumn
+Dim itmX As cListItem
+    Dim sql As String
+Dim rs As New ADODB.Recordset
+Dim Balance As Double
+ 
+ 
+sql = " SELECT * from  tblitems "
+ 
+rs.Open sql, Cn, adOpenStatic, adLockReadOnly, adCmdText
+
+If rs.RecordCount = 0 Then
+ GoTo XTable
+ End If
+ 
+   With lvwItems
+      .Visible = False
+      .CustomDraw = True
+            
+      .AutoArrange = True
+      
+      ' Set up image lists:
+      .ImageList(eLVLargeIcon) = ilsIcons32
+      .ImageList(eLVSmallIcon) = ilsIcons16
+      .ImageList(eLVTileImages) = ilsIcons48
+      .ImageList(eLVHeaderImages) = ilsIcons16
+      
+      ' Add column headers
+      Set colX = .Columns.Add(, "NAME", "Name")
+      colX.Tag = "Stores the name of the item"
+      colX.IconIndex = 0
+      Set colX = .Columns.Add(, "DATE", "Date")
+      colX.Tag = "Stores the date of the item"
+      colX.IconIndex = 1
+      Set colX = .Columns.Add(, "SIZE", "Size")
+      colX.Tag = "Stores the size of the item"
+      colX.Alignment = eLVColumnAlignRight
+            
+      For i = 1 To 3
+         .Columns(i).ItemData = i * 100
+      Next i
+      
+      With .Listitems
+         For i = 1 To 5
+     '       Set itmX = .Add(, "I" & i, "Test Item " & i,  Rnd * ilsIcons32.ImageCount, Rnd * ilsIcons16.ImageCount)
+            Set itmX = .Add(, "I" & i, "Test Item " & i, Rnd * ilsIcons32.ImageCount, Rnd * ilsIcons16.ImageCount)
+            
+            If (i Mod 2) = 0 Then
+               itmX.ToolTipText = "This is a test tool tip for item " & i
+            End If
+            With itmX.SubItems(1)
+               .Caption = DateSerial(year(Now), Rnd * Month(Now) + 1, Rnd * Day(Now) + 1)
+               .ShowInTile = ((i Mod 2) = 0)
+               '.IconIndex = itmX.IconIndex
+            End With
+            With itmX.SubItems(2)
+               .Caption = CLng(Rnd * 1024 * 1024)
+               .ShowInTile = True
+            End With
+            If (i = 1) Then
+               ' test font/colours:
+               itmX.BackColor = RGB(98, 176, 255)
+               itmX.ForeColor = RGB(240, 248, 255)
+               Dim sFnt As New StdFont
+               sFnt.name = "Tahoma"
+               sFnt.Size = 10
+               sFnt.Bold = True
+               itmX.Font = sFnt
+            End If
+         Next i
+      End With
+      
+      .TileViewItemLines = 3
+               
+      .Visible = True
+   End With
+   
+   
+   
+   
+  End Function
+
+
+Function FillTables()
+ 'fill tables
+ Dim colX As cColumn
+Dim itmX As cListItem
+Dim i As Long
+Dim J As Long
+
+ Dim sql As String
+Dim rs As New ADODB.Recordset
+Dim Balance As Double
+ 
+ 
+sql = " SELECT * from  Stables "
+ 
+rs.Open sql, Cn, adOpenStatic, adLockReadOnly, adCmdText
+
+If rs.RecordCount = 0 Then
+ GoTo XTable
+ End If
+   
+
+
+
+  With lvwTables
+      .Visible = False
+      .CustomDraw = True
+            
+      .AutoArrange = True
+      
+      ' Set up image lists:
+      .ImageList(eLVLargeIcon) = imgLarge
+      .ImageList(eLVSmallIcon) = imgLarge
+      .ImageList(eLVTileImages) = imgLarge
+      .ImageList(eLVHeaderImages) = imgLarge
+      
+      ' Add column headers
+      Set colX = .Columns.Add(, "NAME", "Name")
+      colX.Tag = "Stores the name of the item"
+      colX.IconIndex = 0
+      Set colX = .Columns.Add(, "DATE", "Date")
+      colX.Tag = "Stores the date of the item"
+      colX.IconIndex = 1
+      Set colX = .Columns.Add(, "SIZE", "Size")
+      colX.Tag = "Stores the size of the item"
+      colX.Alignment = eLVColumnAlignRight
+            
+     'For i = 1 To 3
+     '    .Columns(i).ItemData = i * 100
+     ' Next i
+  
+      With .Listitems
+         For i = 1 To rs.RecordCount
+            Set itmX = .Add(, rs("id").value, "ÿ«Ê·… —ﬁ„ " & rs("name").value, 0, 0)
+            If (i Mod 2) = 0 Then
+               itmX.ToolTipText = "This is a test tool tip for item " & i
+            End If
+            With itmX.SubItems(1)
+               .Caption = DateSerial(year(Now), Rnd * Month(Now) + 1, Rnd * Day(Now) + 1)
+               .ShowInTile = ((i Mod 2) = 0)
+               '.IconIndex = itmX.IconIndex
+            End With
+            With itmX.SubItems(2)
+               .Caption = CLng(Rnd * 1024 * 1024)
+               .ShowInTile = True
+            End With
+            If (Not IsNull(rs("Status").value)) Then
+               ' test font/colours:
+               itmX.BackColor = vbRed 'RGB(98, 176, 255)
+               itmX.ForeColor = RGB(240, 248, 255)
+            '   Dim sFnt As New StdFont
+         '      sFnt.name = "Tahoma"
+         '      sFnt.Size = 20
+         '      sFnt.Bold = True
+        
+         '      itmX.Font = sFnt
+         Else
+           itmX.BackColor = vbGreen
+            End If
+            rs.MoveNext
+         Next i
+      End With
+      
+      .TileViewItemLines = 3
+               
+      .Visible = True
+   End With
+   rs.Close
+XTable:
+End Function
+Private Sub lvwMain_OLEStartDrag(Data As DataObject, AllowedEffects As Long)
+   AllowedEffects = vbDropEffectMove
+End Sub
+
+Private Sub lvwMain_Resize()
+   '
+   'lvwMain.Arrange eLVAlignLeft
+   '
+End Sub
+
+Private Sub lvwTables_ItemClick(Item As vbalListViewLib6.cListItem)
+On Error GoTo ErrorHandler
+Dim sInfo As String
+   If Not lvwTables.SelectedItem Is Nothing Then
+      With lvwTables.SelectedItem
+       
+     '    sInfo = "Key = " & Item.key & Item.text
+Label8.Caption = Item.text
+
+      End With
+ 
+   End If
+   Exit Sub
+ErrorHandler:
+   MsgBox "Error: " & Err.description & " [" & Err.Number & "]", vbInformation
+   Exit Sub
+
+
+End Sub

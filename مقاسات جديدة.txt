@@ -1,0 +1,11 @@
+SELECT     dbo.TblItemsDetails11.BarCode, dbo.TblItemsDetails11.CodeAnalys, dbo.TblItemsColors.ColorName, dbo.TblItemsSizes.SizeName, 
+                      dbo.TblItemsclasses.SizeName AS ClassName, dbo.TblItemsclasses.SizeNameE AS ClassNameE, dbo.TblItems.ItemCode, dbo.TblItems.ItemName, 
+                      dbo.TblItems.ItemNamee, dbo.Groups.GroupName, dbo.TblItemsUnits.UnitSalesPrice, Groups_1.GroupName AS [Parent Group]
+FROM         dbo.TblItemsDetails11 INNER JOIN
+                      dbo.TblItems ON dbo.TblItemsDetails11.ItemID = dbo.TblItems.ItemID INNER JOIN
+                      dbo.Groups ON dbo.TblItems.GroupID = dbo.Groups.GroupID INNER JOIN
+                      dbo.TblItemsUnits ON dbo.TblItems.ItemID = dbo.TblItemsUnits.ItemID LEFT OUTER JOIN
+                      dbo.Groups Groups_1 ON dbo.Groups.ParentID = Groups_1.GroupID LEFT OUTER JOIN
+                      dbo.TblItemsclasses ON dbo.TblItemsDetails11.ClassID = dbo.TblItemsclasses.SizeId LEFT OUTER JOIN
+                      dbo.TblItemsSizes ON dbo.TblItemsDetails11.SizeID = dbo.TblItemsSizes.SizeId LEFT OUTER JOIN
+                      dbo.TblItemsColors ON dbo.TblItemsDetails11.ColorID = dbo.TblItemsColors.ColorID

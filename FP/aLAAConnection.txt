@@ -1,0 +1,5 @@
+allajazera.gotdns.com\mssqlserver,1433
+Byte
+Admin@123
+sa
+ 

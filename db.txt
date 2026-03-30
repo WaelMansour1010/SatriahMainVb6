@@ -1,0 +1,301 @@
+﻿byte*bb*18.210.170.36\SQLExpress*
+[2000]*2000*.*
+Byte2023*Byte2023*.*
+Byte2024*Byte2024*.*
+Fish*Fish*.*
+Theqa*Theqa*.*
+Pos*Pos*.*
+InvoiceCustomer*InvoiceCustomer*.*
+RSMDB*RSMDB*.*
+Mo*Mo*.*
+Egg*Egg*.*
+
+Baltan*Baltan*.*
+Magal*Magal*.*
+Raka*Raka*.*
+Dahyan2*Dahyan2*.*
+Borket*Borket*.*
+Hany*Hany*.*
+Danya*Danya*.*
+Amana*Amana*.*
+byte2020Excel*byte2020Excel*.*
+Hananky*Hananky*.*
+WindowsDB*WindowsDB*.*
+Estedama*Estedama*.*
+Smart*Smart*.*
+Kasem*Kasem*.*
+Nagahat*Nagahat.*
+Mazaya2*Mazaya2.*
+Soud*Soud.*
+Adnan2018*Adnan2018*.*
+Mas*Mas*.*
+CNE*CNE*.*
+Company*CompanyPC2*.*
+ENG*ENGPC2*PC2\SQL2019*
+Estedama*Estedama*PC2*
+Coffee*Coffee*Wael*
+Mane*Mane*Wael*
+hegazy*hegazy*Wael*
+Ebtehag*Ebtehag*Wael*
+Mataem*Mataem*Wael*
+RSMDB*RSMDB*Wael*
+ENG*ENG*WAEL\SQL2019*
+Habas*Habas*WAEL\SQL2019*
+Mo*Mo*PC2*
+Cofee*Cofee*PC2*
+Eng*Eng*PC2*
+Mazen*Mazen*PC2*
+Matt*Matt*PC2*
+Hegazy*Hegazy*PC2*
+Rakaa2*Rakaa2*PC2*
+Yaserkom*Yaserkom*PC2*
+Mo*Mo*PC2*
+Smart*Smart*PC2*
+2127L0185
+2024023080
+Mataem*Mataem*PC2*
+Soud*Soud*PC2*
+Asser*Asser*PC2*
+Melhem2022*Melhem2022*PC2*
+Mane*Mane*PC2*
+AAA*AAA*PC2*
+YaserKom*YaserKom*PC2*
+Estedama*Estedama*PC2*
+Rayat*Rayat*PC2*
+Smart*Smart*PC2*
+othman*othman*PC2*
+Renad*Renad*PC2*
+Estedama*Estedama*PC2*
+New*New*PC2*
+Estedama*Estedama*PC2*
+Hany*Hany*PC2*
+Hananky*Hananky*PC2*
+RSMDB*RSMDB*PC2*
+Soud*Soud*PC2*
+Hany*Hany*PC2*
+abakeer*abakeer*
+Khalab*Khalab*
+Tamam*Tamam*PC2*
+Estedama*Estedama*
+mo*mo*PC2*
+Ebtehag*Ebtehag*PC2*
+BanyOmar*BanyOmar*
+
+Mazaya*Mazaya*PC2*
+mane*mane*PC2*
+Smart*Smart*PC2*
+Kasem*Kasem*pc2*
+MELHEM*MELHEM*PC2*
+Company*Company*pc2*
+Estedama*Estedama*PC2*
+
+
+Mazaya3*Mazaya3*PC2*
+Saber*Saber*PC2*
+MIS-MS0032*
+Khader*Khader*.*
+Company*Company*.*
+Samama*Samama*.*
+mas2*mas2*.*
+I*I*PC2*
+Eye*Eye*WaelPC*
+Mazzaya*Mazzaya*PC2*
+Rayat2*Rayat2*PC2*
+ByteExcel*ByteExcel*PC2*
+Estesmar*Estesmar*PC2*
+Sattar*Sattar*PC2*
+Byteb*Byteb*PC2*
+Byte2020*Byte2020*PC2*
+Saber*Saber*PC2*
+CNE*CNE*PC2*
+Sama*Amry*PC2*
+Amry*Amry*PC2*
+Byte2*Byte2*PC2*
+Mazen*Mazen*PC2*
+Sakr*Sakr*PC2*
+Khale*Khale*.*
+Dana*Dana*.*
+Mas*Mas*.*
+Prestige2*Prestige2*PC2*
+Byte*Byte*PC2*
+
+ByteMas*ByteMas*PC2*
+NewCus*NewCus*PC2*
+Mashghal*Mashghal*PC2*
+Prestige*Prestige*PC*
+CNE*CNE*.*
+Kasem*Kasem*SALIM\Sql2014*
+CNE*CNE*SALIM*
+Byte3*Prestige03012022*SALIM\Sql2014*
+Mosahamt*Mosahamt*SALIM\Sql2014*
+Othman*Othman*SALIM\Sql2014*
+Khader*Khader*.*
+Byte2018*Byte2018*SALIM\Sql2014*
+Khallab*Khallab*SALIM\Sql2014*
+Saber*Saber*SALIM\Sql2014*
+futuresteps*futuresteps*SALIM\Sql2014*
+futuresteps*futuresteps*SALIM\Sql2014*
+Mazaya*Mazaya*SALIM\Sql2014*
+Dahyan*Dahyan*SALIM\Sql2014*
+Hegazy*Hegazy*SALIM\Sql2014*
+Amry*Amry*SALIM\Sql2014*
+Ebtehag*Ebtehag*SALIM\Sql2014*
+Randa*Randa*SALIM\Sql2014*
+Aseer*Aseer*SALIM\Sql2014*
+Smart*Smart*SALIM\Sql2014*
+I*I*SALIM\Sql2014*
+Nesma*Nesma*SALIM\Sql2014*
+Mashghal*Mashghal*SALIM\Sql2014*
+Kasem*Kasem*SALIM\Sql2014*
+Sabt*Sabt*WAELPC\SQLEXPRESS*
+Rowad*Rowad*SALIM\Sql2014*
+Crystal*Crystal*SALIM\Sql2014*
+ByteAcc*ByteAcc*SALIM\Sql2014*
+MashghalNew*MashghalNew*SALIM\Sql2014*
+Kasem*Kasem*SALIM\Sql2014*
+Byte2020*Byte2020*SALIM\Sql2014*
+Khallab*Khallab*SALIM\Sql2014*
+Stayer*Stayer*SALIM\Sql2014*
+CNE*CNE*SALIM\Sql2014*
+Amry*Amry*SALIM\Sql2014*
+SAKhR*SAKhR*SALIM\Sql2014*
+Zina*Zina*SALIM\Sql2014*
+Crystal*Crystal*SALIM\Sql2014*
+Stayer*Stayer*SALIM\Sql2014*
+Marvista*Marvista*SALIM\Sql2014*
+PosMVNakhilDam*PosMVNakhilDam*SALIM\Sql2014*
+Byte*25.18.65.239*ByteServerMaf*
+
+byteNetwork*byteNetwork*SALIM\Sql2014*
+Byte2020*Byte2020*SALIM\Sql2014*
+TomTom*TomTom*SALIM\Sql2014*
+Organic*Organic*SALIM\Sql2014*
+Ebtehag*Ebtehag*SALIM\Sql2014*
+Rowad*Rowad*SALIM\WAELPC2012*
+
+TblEmpAdvanceRequestDetails
+
+
+SELECT  ItemID, ItemCode, ItemName, Total, TotalQty,  CONVERT(money, Total / TotalQty, 3) AS AvCost  FROM dbo.QryItemsTransactionsTotals(28, 3,20, '12/30/1899', '12/31/2021',319,0)QryItemsTransactionsTotals  Where ItemID=319 AND  TotalQty <>0
+
+
+
+update TblUsers set FixedCustomer = 0
+
+DECLARE @TransType AS INT
+SET @TransType = 85
+DECLARE @TransType2 AS INT
+SET @TransType2 = 8063
+DECLARE @Year AS INT
+DECLARE @Month AS INT
+DECLARE @BranchID AS INT
+
+
+DECLARE @OldBranch AS INT 
+DECLARE @vNewBranch VARCHAR(2)
+
+DECLARE @Serial VARCHAR(50)
+DECLARE @vOldBranch INT
+DECLARE @vCurrentBranch INT
+DECLARE @vPrevBranch INT
+DECLARE @Transaction_ID INT
+DECLARE @NewValueUpdate AS VARCHAR(50)  
+DECLARE @Ser AS INT 
+DECLARE @OldSer AS INT 
+DECLARE @IntSerial AS DECIMAL
+DECLARE @OldSerial AS VARCHAR(50)
+ 
+--BEGIN TRAN
+
+SET @Ser = 0
+SET @OldSer = 0
+set @Month = 12
+SET @BranchID = 1
+SET @Year = 2021
+DECLARE @mLastSerial AS INT
+
+DECLARE @mLastSerialString AS VARCHAR(50)
+SET @mLastSerial = (
+        SELECT MAX(NoteSerial)
+        FROM   Notes
+        WHERE  YEAR(Notes.NoteDate) = @Year
+               AND Branch_NO = @BranchID
+			   AND MONTH(Notes.NoteDate) = @Month
+			   and NoteType <> @TransType
+                   -- AND SUBSTRING(CAST(NoteSerial1 AS VARCHAR(50)), 1, 1) = @BranchID
+    ) + 1
+
+--SET @mLastSerialString = CAST((@mLastSerial) AS VARCHAR(50)) 
+
+
+--SELECT @mLastSerialString,
+--       @mLastSerial
+	
+
+
+
+--12112988
+SET @mLastSerialString =  @mLastSerial +1
+set @mLastSerial =@mLastSerialString 
+DECLARE ActivityTypesCurChildCur CURSOR 
+FOR
+    --warsha
+    
+    
+    SELECT Notes.NoteID
+    FROM   Notes
+    WHERE  YEAR(Notes.NoteDate) = @Year
+           AND MONTH(Notes.NoteDate) = @Month
+           --AND Notes.Branch_NO = @BranchID
+			AND Notes.NoteType = @TransType
+    
+       
+       OPEN ActivityTypesCurChildCur
+FETCH NEXT FROM ActivityTypesCurChildCur
+INTO   @Transaction_ID--, @vNewBranch,@Serial,@vOldBranch
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+    SET @mLastSerialString = CAST((@mLastSerial) AS VARCHAR(50)) 
+    
+    --SELECT * FROM TblContract
+    PRINT @mLastSerialString
+    UPDATE Notes
+    SET    OldNoteSerial1 = NoteSerial1,
+           NoteSerial1 = @mLastSerialString
+           
+           --Transactions.Head_Details = 852123,
+           --BranchId = @vNewBranch
+    WHERE  NoteID = @Transaction_ID
+    -- AND ISNULL(warsha, '') <> ''
+    
+    SET @mLastSerial = @mLastSerial + 1
+    Print     @mLastSerialString
+    
+    FETCH NEXT FROM ActivityTypesCurChildCur
+    INTO @Transaction_ID--,@vNewBranch,@Serial,@vOldBranch
+END
+CLOSE ActivityTypesCurChildCur
+DEALLOCATE ActivityTypesCurChildCur    	
+
+
+
+   
+ SELECT     DISTINCT dbo.Transactions.Transaction_Date,Transactions.FixesAssetsID,Transactions.Emp_ID,Transactions.DepartementID, dbo.Transactions.CusID ,dbo.Transactions.Doctype, dbo.Transactions.Transaction_ID,Transactions.NoteID, Transactions.NoteSerial,Transactions.BranchId,  dbo.Transactions.NoteSerial1, dbo.Transactions.StoreID,                       dbo.TblStore.StoreName, dbo.TblStore.StoreNamee, dbo.Transactions.Transaction_Type           ,tc.CusName,tc.CusNamee ,Note_Value = (Select Sum(IsNull(ShowQty,0) *  IsNull(showPrice,0)-(  CASE  IsNull(ItemDiscountType,0) WHEN 3 THEN showPrice * isnull(ItemDiscount,0) /100 ELSE isnull(ItemDiscount,0) END)  ) From Transaction_Details DD Where DD.Transaction_ID = dbo.Transactions.Transaction_ID ) ,T2.StoreID StoreID2,ts.StoreName StoreName2   FROM            Transactions LEFT OUTER JOIN                           TblStore ON Transactions.StoreID = TblStore.StoreID LEFT OUTER JOIN                           Notes ON Notes.NoteID = Transactions.NoteId LEFT OUTER J
+OIN                           TblCustemers AS tc ON Transactions.CusID = tc.CusID LEFT OUTER JOIN                           Transactions AS T2 ON Transactions.Transaction_ID = T2.ReturnID LEFT OUTER JOIN                          TblStore AS ts ON ts.StoreID = T2.StoreID               Left Outer join            Transaction_Details  ON Transactions.Transaction_ID = Transaction_Details.Transaction_ID     WHERE                      Transactions.POSBillType = 1   AND  (Transactions.Transaction_Date >='01-Sep-2021'   AND   Transactions.Transaction_Date <='01-Dec-2021')   AND (Transactions.Emp_ID = 4)    AND  (Transactions.Transaction_Type = 21 )   Order By transactions.Transaction_Date,transactions.Transaction_ID,transactions.NoteSerial1
+
+
+
+SELECT
+	ISNULL(tpt.PaymentName,'نقدي'),ttp.PaymentID
+   ,Transactions.Transaction_ID
+   ,Transactions.Transaction_Date
+   ,Transactions.Transaction_Type   
+   ,Transactions.NoteSerial1
+   
+FROM TblTransactionPayments AS ttp
+LEFT OUTER JOIN TblPaymentType AS tpt
+	ON tpt.PaymentID = ttp.PaymentID
+LEFT OUTER JOIN Transactions
+	ON Transactions.Transaction_ID = ttp.Transaction_ID
+WHERE (Transactions.POSBillType = 1)

@@ -1,0 +1,31 @@
+ If DB_CreateTable("TblQuesEmp", True, "ID", False) = True Then
+                      DB_CreateField "TblQuesEmp", "RecordDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+                      DB_CreateField "TblQuesEmp", "EmpID", adInteger, adColNullable, , , ""
+                       DB_CreateField "TblQuesEmp", "JobID", adInteger, adColNullable, , , ""
+                       DB_CreateField "TblQuesEmp", "BranchID", adInteger, adColNullable, , , ""
+                       DB_CreateField "TblQuesEmp", "UserID", adInteger, adColNullable, , , ""
+                    DB_CreateField "TblQuesEmp", "Posted", adInteger, adColNullable, , , ""
+                      DB_CreateField "TblQuesEmp", "NationalID", adInteger, adColNullable, , , ""
+                       DB_CreateField "TblQuesEmp", "FileNo", adInteger, adColNullable, , , ""
+                       DB_CreateField "TblQuesEmp", "CurrSalary", adDouble, adColNullable, , , "    ", False, True
+                         DB_CreateField "TblQuesEmp", "SalaryAppoint", adDouble, adColNullable, , , "    ", False, True
+                           
+                                        DB_CreateField "TblQuesEmp", "ProjectID", adInteger, adColNullable, , , ""
+                                       DB_CreateField "TblQuesEmp", "NutWork", adVarWChar, adColNullable, 14, , "ECEE    ", False, True, , True
+                                         DB_CreateField "TblQuesEmp", "EndIqama", adDBTimeStamp, adColNullable, , , "      ", False, True
+                                           DB_CreateField "TblQuesEmp", "StartWork", adDBTimeStamp, adColNullable, , , "      ", False, True
+                                          
+                                             DB_CreateField "TblQuesEmp", "LastTreatment", adDBTimeStamp, adColNullable, , , "      ", False, True
+                                               DB_CreateField "TblQuesEmp", "WorkFrom", adDBTimeStamp, adColNullable, , , "      ", False, True
+                                                 DB_CreateField "TblQuesEmp", "WorkTo", adDBTimeStamp, adColNullable, , , "      ", False, True
+                                                   DB_CreateField "TblQuesEmp", "Day", adVarWChar, adColNullable, 14, , "ECEE    ", False, True, , True
+                                                     DB_CreateField "TblQuesEmp", "Month", adVarWChar, adColNullable, 14, , "ECEE    ", False, True, , True
+                                                       DB_CreateField "TblQuesEmp", "Year", adVarWChar, adColNullable, 14, , "ECEE    ", False, True, , True
+                                                 
+                                       
+                               
+                   End If
+                   DB_CreateField "TblQuesEmp", "Increase", adVarWChar, adColNullable, 14, , "ECEE    ", False, True, , True
+                  DB_CreateField "TblQuesEmp", "Additional", adVarWChar, adColNullable, 14, , "ECEE    ", False, True, , True
+                   DB_CreateField "TblQuesEmp", "Absent", adVarWChar, adColNullable, 14, , "ECEE    ", False, True, , True
+                    DB_CreateField "TblQuesEmp", "other", adVarWChar, adColNullable, 14, , "ECEE    ", False, True, , True

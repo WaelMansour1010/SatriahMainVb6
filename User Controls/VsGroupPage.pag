@@ -1,0 +1,115 @@
+VERSION 5.00
+Begin VB.PropertyPage VsGroupPage 
+   Caption         =   "VsGroupPage"
+   ClientHeight    =   3495
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   5925
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   3495
+   ScaleWidth      =   5925
+   Begin VB.TextBox txtSeparatorColor 
+      Height          =   330
+      Left            =   90
+      TabIndex        =   7
+      Top             =   2970
+      Width           =   2700
+   End
+   Begin VB.CheckBox chkShowTreeGroups 
+      Caption         =   "ShowTreeGroups"
+      Height          =   285
+      Left            =   90
+      TabIndex        =   5
+      Top             =   2070
+      Width           =   2700
+   End
+   Begin VB.TextBox txtSQL 
+      Height          =   330
+      Left            =   90
+      TabIndex        =   4
+      Top             =   1670
+      Width           =   2700
+   End
+   Begin VB.TextBox txtTotalOnColKey 
+      Height          =   330
+      Left            =   90
+      TabIndex        =   2
+      Top             =   1020
+      Width           =   2700
+   End
+   Begin VB.CheckBox chkSetRTL 
+      Caption         =   "SetRTL"
+      Height          =   285
+      Left            =   90
+      TabIndex        =   0
+      Top             =   120
+      Width           =   2700
+   End
+   Begin VB.Label lblSeparatorColor 
+      Caption         =   "SeparatorColor:"
+      Height          =   240
+      Left            =   90
+      TabIndex        =   6
+      Top             =   2720
+      Width           =   2700
+   End
+   Begin VB.Label lblSQL 
+      Caption         =   "SQL:"
+      Height          =   240
+      Left            =   90
+      TabIndex        =   3
+      Top             =   1420
+      Width           =   2700
+   End
+   Begin VB.Label lblTotalOnColKey 
+      Caption         =   "TotalOnColKey:"
+      Height          =   240
+      Left            =   90
+      TabIndex        =   1
+      Top             =   770
+      Width           =   2700
+   End
+End
+Attribute VB_Name = "VsGroupPage"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Option Explicit
+
+Private Sub txtSeparatorColor_Change()
+    Changed = True
+End Sub
+
+Private Sub chkShowTreeGroups_Click()
+    Changed = True
+End Sub
+
+Private Sub txtSQL_Change()
+    Changed = True
+End Sub
+
+Private Sub txtTotalOnColKey_Change()
+    Changed = True
+End Sub
+
+Private Sub chkSetRTL_Click()
+    Changed = True
+End Sub
+
+Private Sub PropertyPage_ApplyChanges()
+    SelectedControls(0).SeparatorColor = txtSeparatorColor.text
+    SelectedControls(0).ShowTreeGroups = (chkShowTreeGroups.value = vbChecked)
+    SelectedControls(0).sql = txtSQL.text
+    SelectedControls(0).TotalOnColKey = txtTotalOnColKey.text
+    SelectedControls(0).SetRTL = (chkSetRTL.value = vbChecked)
+End Sub
+
+Private Sub PropertyPage_SelectionChanged()
+    txtSeparatorColor.text = SelectedControls(0).SeparatorColor
+    chkShowTreeGroups.value = (SelectedControls(0).ShowTreeGroups And vbChecked)
+    txtSQL.text = SelectedControls(0).sql
+    txtTotalOnColKey.text = SelectedControls(0).TotalOnColKey
+    chkSetRTL.value = (SelectedControls(0).SetRTL And vbChecked)
+End Sub
+

@@ -1,0 +1,26 @@
+Updated Function
+Module Name  SalimNew
+
+
+Public Sub Get_TradingContractinfo(Optional ByRef TradingContractID As Double, Optional ByRef TContractCustID As Double, Optional Typed As Integer = 0)
+Dim Rs2 As ADODB.Recordset
+Set Rs2 = New ADODB.Recordset
+Dim sql As String
+sql = "select ID,TContract_CustID  from Tbl_TradingContract"
+
+sql = sql & " "
+If Typed = 0 Then
+sql = sql & " where id=" & TradingContractID & ""
+Else
+sql = sql & " where TContract_CustID='" & TContractCustID & "'"
+End If
+sql = sql & " And IsNull(IsCanceld,0) <> 1"
+Rs2.Open sql, Cn, adOpenStatic, adLockOptimistic, adCmdText
+If Rs2.RecordCount > 0 Then
+    TradingContractID = IIf(IsNull(Rs2("id").value), 0, Rs2("id").value)
+    TContractCustID = IIf(IsNull(Rs2("TContract_CustID").value), "", Rs2("TContract_CustID").value)
+Else
+    TContractCustID = 0
+    TradingContractID = 0
+End If
+End Sub

@@ -1,0 +1,20 @@
+
+             DB_CreateField "TblVocation", "RecordDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+             DB_CreateField "TblVocation", "BranchID", adInteger, adColNullable, , , "    ", False, True
+             DB_CreateField "TblVocation", "EmpID", adInteger, adColNullable, , , "    ", False, True
+             DB_CreateField "TblVocation", "ManagerID", adInteger, adColNullable, , , "    ", False, True
+             DB_CreateField "TblVocation", "ProjectID", adInteger, adColNullable, , , "    ", False, True
+             DB_CreateField "TblVocation", "FromDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+             DB_CreateField "TblVocation", "ToDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+             DB_CreateField "TblVocation", "JobID", adInteger, adColNullable, , , "    ", False, True
+                   
+            End If
+            DB_CreateField "TblVocation", "Reson", adVarWChar, adColNullable, 4000, , "?EE C?C?C?E   ", False, True, , True
+            DB_CreateField "TblVocation", "Phone", adVarWChar, adColNullable, 14, , "??C?    ", False, True, , True
+            DB_CreateField "TblVocation", "Telephone", adVarWChar, adColNullable, 14, , "ECEE    ", False, True, , True
+            DB_CreateField "TblVocation", "OtherAdress", adVarWChar, adColNullable, 100, , "CI??   ", False, True, , True
+             DB_CreateField "TblVocation", "UserID", adInteger, adColNullable, , , ""
+             DB_CreateField "Tblvocation", "posted", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+           DB_CreateField "TblVocation", "TypeVocation", adInteger, adColNullable, , , ""
+           DB_CreateField "TblVocation", "VocationType", adVarWChar, adColNullable, 100, , "??? C?C?C?E   ", False, True, , True
+            DB_CreateField "TblVocation", "Adress", adVarWChar, adColNullable, 100, , "??? C?C?C?E   ", False, True, , True

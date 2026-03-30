@@ -1,0 +1,36 @@
+VERSION 5.00
+Begin VB.Form FrmFarmer8 
+   BorderStyle     =   3  'Fixed Dialog
+   Caption         =   "›Ê« Ì— «·„»Ì⁄« "
+   ClientHeight    =   7950
+   ClientLeft      =   45
+   ClientTop       =   375
+   ClientWidth     =   9780
+   Icon            =   "FrmFarmer8.frx":0000
+   LinkTopic       =   "Form2"
+   MaxButton       =   0   'False
+   MDIChild        =   -1  'True
+   MinButton       =   0   'False
+   RightToLeft     =   -1  'True
+   ScaleHeight     =   7950
+   ScaleWidth      =   9780
+   ShowInTaskbar   =   0   'False
+   Begin VB.Image Image1 
+      Height          =   7995
+      Left            =   -120
+      Picture         =   "FrmFarmer8.frx":000C
+      Stretch         =   -1  'True
+      Top             =   0
+      Width           =   9915
+   End
+End
+Attribute VB_Name = "FrmFarmer8"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Private Sub Form_Load()
+    Me.left = (mdifrmmain.Width - Me.Width) / 2
+    Me.top = (mdifrmmain.Height - Me.Height) / 2 - 500
+
+End Sub

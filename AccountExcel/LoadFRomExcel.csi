@@ -1,0 +1,6 @@
+[History]
+1=#P0#=mb	#P1#=Command1_Click	#P2#=Project1/frmLoadExcel/Command1_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20230107235738	#P7#=0	#P8#=54	.
+2=#P0#=mb	#P1#=btnTest_Click	#P2#=Project1/frmLoadExcel/btnTest_Click	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20230107235501	#P7#=0	#P8#=11	.
+3=#P0#=mb	#P1#=PopulateRS	#P2#=Project1/frmLoadExcel/PopulateRS	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20230107235037	#P7#=0	#P8#=61	.
+4=#P0#=mb	#P1#=btnLoadFile_Click	#P2#=Project1/frmLoadExcel/btnLoadFile_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20230107235055	#P7#=0	#P8#=11	.
+5=#P0#=mb	#P1#=OpenExcelRS	#P2#=Project1/frmLoadExcel/OpenExcelRS	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20230107234629	#P7#=0	#P8#=8	.

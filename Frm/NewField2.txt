@@ -1,0 +1,3 @@
+ DB_CreateField "Notes", "OfficeValueNet", adDouble, adColNullable, , , "  ", False, True
+ DB_CreateField "Notes", "OfficeValueDiscAdd", adDouble, adColNullable, , , "  ", False, True
+ DB_CreateField "Notes", "AddValue", adInteger, adColNullable, , , "  ", False, True

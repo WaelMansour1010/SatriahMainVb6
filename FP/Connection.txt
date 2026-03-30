@@ -1,0 +1,4 @@
+1000qassem.gotdns.com\MSSQLSERVER12,1433
+byte
+Admin@123
+sa

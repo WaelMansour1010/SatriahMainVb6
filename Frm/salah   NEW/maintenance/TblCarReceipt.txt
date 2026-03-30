@@ -1,0 +1,42 @@
+       If DB_CreateTable("TblCarReceipt", True, "ID", False) = True Then
+                      DB_CreateField "TblCarReceipt", "RecordDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+                    DB_CreateField "TblCarReceipt", "BranchID", adInteger, adColNullable, , , ""
+                     DB_CreateField "TblCarReceipt", "EmpID", adInteger, adColNullable, , , ""
+                      DB_CreateField "TblCarReceipt", "ProjectID", adInteger, adColNullable, , , ""
+                       DB_CreateField "TblCarReceipt", "Type", adInteger, adColNullable, , , ""
+                        DB_CreateField "TblCarReceipt", "Mod", adInteger, adColNullable, , , ""
+                         DB_CreateField "TblCarReceipt", "Colour", adInteger, adColNullable, , , ""
+                          DB_CreateField "TblCarReceipt", "PlateNo", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                          DB_CreateField "TblCarReceipt", "ChassisNo", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCarReceipt", "UserID", adInteger, adColNullable, , , ""
+                        DB_CreateField "TblCarReceipt", "Posted", adInteger, adColNullable, , , ""
+                        DB_CreateField "TblCarReceipt", "GeneralShape", adVarWChar, adColNullable, 4000, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCarReceipt", "TachometerReading", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCarReceipt", "HeadL", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                        DB_CreateField "TblCarReceipt", "TailL", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                        DB_CreateField "TblCarReceipt", "BackUpL", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                        DB_CreateField "TblCarReceipt", "BrakeL", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                        DB_CreateField "TblCarReceipt", "Flasher", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                        DB_CreateField "TblCarReceipt", "Front", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                        DB_CreateField "TblCarReceipt", "Back", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                        DB_CreateField "TblCarReceipt", "WindScreen", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                        DB_CreateField "TblCarReceipt", "BackVew", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                         DB_CreateField "TblCarReceipt", "RearViewMirror", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                          DB_CreateField "TblCarReceipt", "FrontSeat", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                           DB_CreateField "TblCarReceipt", "BackSeat", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                            DB_CreateField "TblCarReceipt", "RegRad", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                             DB_CreateField "TblCarReceipt", "Wipers", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                              DB_CreateField "TblCarReceipt", "Tyres", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                               DB_CreateField "TblCarReceipt", "ParkingB", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                                DB_CreateField "TblCarReceipt", "Bumper", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                                 DB_CreateField "TblCarReceipt", "FireExt", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                                  DB_CreateField "TblCarReceipt", "SeatB", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                                     DB_CreateField "TblCarReceipt", "ReserveT", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                                        DB_CreateField "TblCarReceipt", "LicensePl", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                                           DB_CreateField "TblCarReceipt", "Reflecto", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                                              DB_CreateField "TblCarReceipt", "Washers", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                                            DB_CreateField "TblCarReceipt", "MechanicalFaults", adVarWChar, adColNullable, 4000, , "C?C??   ", False, True, , True
+                                            
+                        End If
+                        DB_CreateField "TblCarReceipt", "Remote", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                        DB_CreateField "TblCarReceipt", "DateExp", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True

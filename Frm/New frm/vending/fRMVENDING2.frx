@@ -1,0 +1,36 @@
+ÿ§{
+    "code": 200,
+    "result": [
+        {
+            "transaction_id": 119282722,
+            "machine_id": 192305,
+            "datetime": 1476349373,
+            "transaction_dt": 1476349373,
+            "registered_dt": 1476349375,
+            "quantity": 1,
+            "price": 2,
+            "vat": 0,
+            "stock_id": 58543,
+            "selection": 12,
+            "payment_method": "CASH"
+        },
+        {
+            "transaction_id": 119282801,
+            "machine_id": 192305,
+            "datetime": 1476349381,
+            "transaction_dt": 1476349381,
+            "registered_dt": 1476349383,
+            "quantity": 1,
+            "price": 1,
+            "vat": 0,
+            "stock_id": 58545,
+            "selection": 42,
+            "payment_method": "CASH"
+        }
+    ],
+    "paging": {
+        "total": 2,
+        "limit": 10000,
+        "offset": 0
+    }
+}

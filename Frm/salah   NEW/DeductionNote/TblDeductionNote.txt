@@ -1,0 +1,19 @@
+ If DB_CreateTable("TblDeducationNote", True, "Id", False) = True Then
+                    
+                       DB_CreateField "TblDeducationNote", "Remarks", adVarWChar, adColNullable, 4000, , "C?C??   ", False, True, , True
+                       DB_CreateField "TblDeducationNote", "WorPrice", adVarWChar, adColNullable, 500, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblDeducationNote", "UserID", adInteger, adColNullable, , , ""
+                         DB_CreateField "TblDeducationNote", "Posted", adInteger, adColNullable, , , ""
+                           DB_CreateField "TblDeducationNote", "FileNo", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                           DB_CreateField "TblDeducationNote", "EmpID", adInteger, adColNullable, , , ""
+                            DB_CreateField "TblDeducationNote", "DeptID", adInteger, adColNullable, , , ""
+                             DB_CreateField "TblDeducationNote", "BranchID", adInteger, adColNullable, , , ""
+                              DB_CreateField "TblDeducationNote", "ManagerID", adInteger, adColNullable, , , ""
+                               DB_CreateField "TblDeducationNote", "RecordDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+                                DB_CreateField "TblDeducationNote", "MaturityDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+                                 DB_CreateField "TblDeducationNote", "DiscountDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+                                 DB_CreateField "TblDeducationNote", "Price", adDouble, adColNullable, , , "    ", False, True
+                     End If
+                     DB_CreateField "TblDeducationNote", "Accept", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                     DB_CreateField "TblDeducationNote", "DisYear", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                       DB_CreateField "TblDeducationNote", "DisMonth", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True

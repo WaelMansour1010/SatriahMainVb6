@@ -1,0 +1,16 @@
+    Dim XPic As IPictureDisp
+    Set XPic = Me.XPBtnMove(1).ButtonImage
+    Set Me.XPBtnMove(1).ButtonImage = Me.XPBtnMove(2).ButtonImage
+    Set Me.XPBtnMove(2).ButtonImage = XPic
+    Set XPic = Me.XPBtnMove(0).ButtonImage
+    Set Me.XPBtnMove(0).ButtonImage = Me.XPBtnMove(3).ButtonImage
+    Set Me.XPBtnMove(3).ButtonImage = XPic
+
+
+    Dim XPic As IPictureDisp
+    Set XPic = Me.btnFirst.ButtonImage
+    Set Me.btnFirst.ButtonImage = Me.btnLast.ButtonImage
+    Set Me.btnLast.ButtonImage = XPic
+    Set XPic = Me.btnPrevious.ButtonImage
+    Set Me.btnPrevious.ButtonImage = Me.btnNext.ButtonImage
+    Set Me.btnNext.ButtonImage = XPic

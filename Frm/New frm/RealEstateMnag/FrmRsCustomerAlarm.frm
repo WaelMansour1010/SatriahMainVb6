@@ -1,0 +1,3188 @@
+VERSION 5.00
+Object = "{C115893A-A3BF-43AF-B28D-69DB846077F3}#1.0#0"; "vsflex8u.ocx"
+Object = "{0AFE7BE0-11B7-4A3E-978D-D4501E9A57FE}#1.0#0"; "c1sizer.ocx"
+Object = "{F0D2F211-CCB0-11D0-A316-00AA00688B10}#1.0#0"; "MSDATLST.OCX"
+Object = "{FE5DCFAD-BC1D-11D2-94CF-004005455FAA}#1.4#0"; "ImpulseButton.ocx"
+Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
+Begin VB.Form FrmRsCustomerAlarm 
+   BackColor       =   &H00E2E9E9&
+   BorderStyle     =   1  'Fixed Single
+   Caption         =   "««‘⁄«—  ”œÌœ / «‰–«—"
+   ClientHeight    =   5085
+   ClientLeft      =   45
+   ClientTop       =   330
+   ClientWidth     =   11775
+   FillColor       =   &H00C0E0FF&
+   Icon            =   "FrmRsCustomerAlarm.frx":0000
+   LinkTopic       =   "Form1"
+   MaxButton       =   0   'False
+   MDIChild        =   -1  'True
+   RightToLeft     =   -1  'True
+   ScaleHeight     =   5085
+   ScaleWidth      =   11775
+   Begin VB.TextBox TxtOrderNo 
+      Alignment       =   1  'Right Justify
+      Height          =   285
+      Left            =   2880
+      RightToLeft     =   -1  'True
+      TabIndex        =   61
+      Top             =   720
+      Width           =   1455
+   End
+   Begin VB.TextBox Text15 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00FFFFFF&
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   315
+      Index           =   0
+      Left            =   12840
+      MaxLength       =   50
+      RightToLeft     =   -1  'True
+      TabIndex        =   60
+      Top             =   3600
+      Width           =   825
+   End
+   Begin VB.TextBox TxtDayPrice 
+      Alignment       =   1  'Right Justify
+      Height          =   330
+      Left            =   12120
+      RightToLeft     =   -1  'True
+      TabIndex        =   58
+      Top             =   1560
+      Width           =   2535
+   End
+   Begin VB.TextBox XPTxtID 
+      Alignment       =   1  'Right Justify
+      Height          =   285
+      Left            =   9480
+      RightToLeft     =   -1  'True
+      TabIndex        =   51
+      Top             =   720
+      Width           =   1335
+   End
+   Begin VB.TextBox TxtNoteID 
+      Height          =   285
+      Left            =   21600
+      TabIndex        =   34
+      Top             =   1440
+      Visible         =   0   'False
+      Width           =   255
+   End
+   Begin VB.TextBox oldtxtNoteSerial1 
+      Height          =   285
+      Left            =   21480
+      TabIndex        =   33
+      Top             =   2760
+      Visible         =   0   'False
+      Width           =   375
+   End
+   Begin VB.TextBox TxtNoteSerial1 
+      Alignment       =   1  'Right Justify
+      Enabled         =   0   'False
+      Height          =   285
+      Left            =   21480
+      RightToLeft     =   -1  'True
+      TabIndex        =   31
+      Top             =   720
+      Visible         =   0   'False
+      Width           =   1335
+   End
+   Begin VB.TextBox TxtNoteSerial 
+      Alignment       =   1  'Right Justify
+      Enabled         =   0   'False
+      Height          =   345
+      Left            =   21480
+      RightToLeft     =   -1  'True
+      TabIndex        =   26
+      Top             =   1200
+      Width           =   1335
+   End
+   Begin VB.TextBox TxtModFlg 
+      Alignment       =   1  'Right Justify
+      Height          =   345
+      Left            =   21480
+      TabIndex        =   0
+      Top             =   1800
+      Visible         =   0   'False
+      Width           =   855
+   End
+   Begin C1SizerLibCtl.C1Elastic EleHeader 
+      Height          =   585
+      Left            =   0
+      TabIndex        =   1
+      TabStop         =   0   'False
+      Top             =   0
+      Width           =   11805
+      _cx             =   20823
+      _cy             =   1032
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Arial (Arabic)"
+         Size            =   24
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Enabled         =   -1  'True
+      Appearance      =   4
+      MousePointer    =   0
+      Version         =   801
+      BackColor       =   16777215
+      ForeColor       =   4210688
+      FloodColor      =   6553600
+      ForeColorDisabled=   -2147483631
+      Caption         =   " «‘⁄«—  ”œÌœ / «‰–«— "
+      Align           =   0
+      AutoSizeChildren=   0
+      BorderWidth     =   0
+      ChildSpacing    =   0
+      Splitter        =   0   'False
+      FloodDirection  =   0
+      FloodPercent    =   0
+      CaptionPos      =   6
+      WordWrap        =   -1  'True
+      MaxChildSize    =   0
+      MinChildSize    =   0
+      TagWidth        =   0
+      TagPosition     =   0
+      Style           =   0
+      TagSplit        =   2
+      PicturePos      =   4
+      CaptionStyle    =   0
+      ResizeFonts     =   0   'False
+      GridRows        =   0
+      GridCols        =   0
+      Frame           =   3
+      FrameStyle      =   0
+      FrameWidth      =   1
+      FrameColor      =   -2147483628
+      FrameShadow     =   -2147483632
+      FloodStyle      =   1
+      _GridInfo       =   ""
+      AccessibleName  =   ""
+      AccessibleDescription=   ""
+      AccessibleValue =   ""
+      AccessibleRole  =   9
+      Begin ImpulseButton.ISButton XPBtnMove 
+         Height          =   375
+         Index           =   0
+         Left            =   1185
+         TabIndex        =   2
+         Top             =   90
+         Width           =   495
+         _ExtentX        =   873
+         _ExtentY        =   661
+         ButtonStyle     =   1
+         ButtonPositionImage=   4
+         Caption         =   ""
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ButtonImage     =   "FrmRsCustomerAlarm.frx":038A
+         ColorHighlight  =   4194304
+         ColorHoverText  =   16777215
+         ColorShadow     =   -2147483631
+         ColorOutline    =   -2147483631
+         DrawFocusRectangle=   0   'False
+         DisabledImageStyle=   1
+         ColorToggledHoverText=   16777215
+         ColorTextShadow =   16777215
+      End
+      Begin ImpulseButton.ISButton XPBtnMove 
+         Height          =   375
+         Index           =   2
+         Left            =   120
+         TabIndex        =   3
+         Top             =   90
+         Width           =   495
+         _ExtentX        =   873
+         _ExtentY        =   661
+         ButtonStyle     =   1
+         ButtonPositionImage=   4
+         Caption         =   ""
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ButtonImage     =   "FrmRsCustomerAlarm.frx":0724
+         ColorHighlight  =   4194304
+         ColorHoverText  =   16777215
+         ColorShadow     =   -2147483631
+         ColorOutline    =   -2147483631
+         DrawFocusRectangle=   0   'False
+         DisabledImageStyle=   1
+         ColorToggledHoverText=   16777215
+         ColorTextShadow =   16777215
+      End
+      Begin ImpulseButton.ISButton XPBtnMove 
+         Height          =   375
+         Index           =   1
+         Left            =   1710
+         TabIndex        =   4
+         Top             =   90
+         Width           =   495
+         _ExtentX        =   873
+         _ExtentY        =   661
+         ButtonStyle     =   1
+         ButtonPositionImage=   4
+         Caption         =   ""
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ButtonImage     =   "FrmRsCustomerAlarm.frx":0ABE
+         ColorHighlight  =   4194304
+         ColorHoverText  =   16777215
+         ColorShadow     =   -2147483631
+         ColorOutline    =   -2147483631
+         DrawFocusRectangle=   0   'False
+         DisabledImageStyle=   1
+         ColorToggledHoverText=   16777215
+         ColorTextShadow =   16777215
+      End
+      Begin ImpulseButton.ISButton XPBtnMove 
+         Height          =   375
+         Index           =   3
+         Left            =   645
+         TabIndex        =   5
+         Top             =   90
+         Width           =   495
+         _ExtentX        =   873
+         _ExtentY        =   661
+         ButtonStyle     =   1
+         ButtonPositionImage=   4
+         Caption         =   ""
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ButtonImage     =   "FrmRsCustomerAlarm.frx":0E58
+         ColorHighlight  =   4194304
+         ColorHoverText  =   16777215
+         ColorShadow     =   -2147483631
+         ColorOutline    =   -2147483631
+         DrawFocusRectangle=   0   'False
+         DisabledImageStyle=   1
+         ColorToggledHoverText=   16777215
+         ColorTextShadow =   16777215
+      End
+      Begin VB.Image ImgFavorites 
+         Height          =   390
+         Left            =   3600
+         Picture         =   "FrmRsCustomerAlarm.frx":11F2
+         Stretch         =   -1  'True
+         Top             =   0
+         Width           =   525
+      End
+      Begin VB.Label lbl 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00E2E9E9&
+         BackStyle       =   0  'Transparent
+         ForeColor       =   &H000000FF&
+         Height          =   555
+         Index           =   27
+         Left            =   2160
+         TabIndex        =   32
+         Top             =   0
+         Width           =   2205
+      End
+   End
+   Begin MSComCtl2.DTPicker XPDtbTrans 
+      Height          =   315
+      Left            =   7380
+      TabIndex        =   6
+      Top             =   720
+      Width           =   1335
+      _ExtentX        =   2355
+      _ExtentY        =   556
+      _Version        =   393216
+      Format          =   94830593
+      CurrentDate     =   38784
+   End
+   Begin C1SizerLibCtl.C1Elastic C1Elastic4 
+      Height          =   540
+      Left            =   270
+      TabIndex        =   7
+      TabStop         =   0   'False
+      Top             =   4620
+      Width           =   8745
+      _cx             =   15425
+      _cy             =   953
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Enabled         =   -1  'True
+      Appearance      =   0
+      MousePointer    =   0
+      Version         =   801
+      BackColor       =   14871017
+      ForeColor       =   -2147483630
+      FloodColor      =   6553600
+      ForeColorDisabled=   -2147483631
+      Caption         =   ""
+      Align           =   0
+      AutoSizeChildren=   0
+      BorderWidth     =   6
+      ChildSpacing    =   4
+      Splitter        =   0   'False
+      FloodDirection  =   0
+      FloodPercent    =   0
+      CaptionPos      =   1
+      WordWrap        =   -1  'True
+      MaxChildSize    =   0
+      MinChildSize    =   0
+      TagWidth        =   0
+      TagPosition     =   0
+      Style           =   0
+      TagSplit        =   2
+      PicturePos      =   4
+      CaptionStyle    =   0
+      ResizeFonts     =   0   'False
+      GridRows        =   0
+      GridCols        =   0
+      Frame           =   3
+      FrameStyle      =   0
+      FrameWidth      =   1
+      FrameColor      =   -2147483628
+      FrameShadow     =   -2147483632
+      FloodStyle      =   1
+      _GridInfo       =   ""
+      AccessibleName  =   ""
+      AccessibleDescription=   ""
+      AccessibleValue =   ""
+      AccessibleRole  =   9
+      Begin ImpulseButton.ISButton Cmd 
+         Height          =   375
+         Index           =   0
+         Left            =   7200
+         TabIndex        =   8
+         Top             =   60
+         Width           =   855
+         _ExtentX        =   1508
+         _ExtentY        =   661
+         ButtonPositionImage=   1
+         Caption         =   "ÃœÌœ"
+         BackColor       =   14871017
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColorButton     =   14871017
+         ColorHighlight  =   16777215
+         ColorHoverText  =   16711680
+         ColorShadow     =   -2147483637
+         ColorOutline    =   0
+         DrawFocusRectangle=   0   'False
+         DisabledImageExtraction=   0
+         ColorToggledHoverText=   16711680
+         ColorTextShadow =   -2147483637
+      End
+      Begin ImpulseButton.ISButton Cmd 
+         Height          =   375
+         Index           =   1
+         Left            =   6375
+         TabIndex        =   9
+         Top             =   60
+         Width           =   765
+         _ExtentX        =   1349
+         _ExtentY        =   661
+         ButtonPositionImage=   1
+         Caption         =   " ⁄œÌ·"
+         BackColor       =   14871017
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColorButton     =   14871017
+         ColorHighlight  =   16777215
+         ColorHoverText  =   16711680
+         ColorShadow     =   -2147483637
+         ColorOutline    =   0
+         DrawFocusRectangle=   0   'False
+         ColorToggledHoverText=   16711680
+         ColorTextShadow =   -2147483637
+      End
+      Begin ImpulseButton.ISButton Cmd 
+         Height          =   375
+         Index           =   2
+         Left            =   5535
+         TabIndex        =   10
+         Top             =   60
+         Width           =   765
+         _ExtentX        =   1349
+         _ExtentY        =   661
+         ButtonPositionImage=   1
+         Caption         =   "Õ›Ÿ"
+         BackColor       =   14871017
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColorButton     =   14871017
+         ColorHighlight  =   16777215
+         ColorHoverText  =   16711680
+         ColorShadow     =   -2147483637
+         ColorOutline    =   0
+         DrawFocusRectangle=   0   'False
+         ColorToggledHoverText=   16711680
+         ColorTextShadow =   -2147483637
+      End
+      Begin ImpulseButton.ISButton Cmd 
+         Height          =   375
+         Index           =   3
+         Left            =   4680
+         TabIndex        =   11
+         Top             =   60
+         Width           =   765
+         _ExtentX        =   1349
+         _ExtentY        =   661
+         ButtonPositionImage=   1
+         Caption         =   " —«Ã⁄"
+         BackColor       =   14871017
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColorButton     =   14871017
+         ColorHighlight  =   16777215
+         ColorHoverText  =   16711680
+         ColorShadow     =   -2147483637
+         ColorOutline    =   0
+         DrawFocusRectangle=   0   'False
+         ColorToggledHoverText=   16711680
+         ColorTextShadow =   -2147483637
+      End
+      Begin ImpulseButton.ISButton Cmd 
+         Height          =   375
+         Index           =   4
+         Left            =   3825
+         TabIndex        =   12
+         Top             =   60
+         Width           =   765
+         _ExtentX        =   1349
+         _ExtentY        =   661
+         ButtonPositionImage=   1
+         Caption         =   "Õ–›"
+         BackColor       =   14871017
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColorButton     =   14871017
+         ColorHighlight  =   16777215
+         ColorHoverText  =   16711680
+         ColorShadow     =   -2147483637
+         ColorOutline    =   0
+         DrawFocusRectangle=   0   'False
+         ColorToggledHoverText=   16711680
+         ColorTextShadow =   -2147483637
+      End
+      Begin ImpulseButton.ISButton Cmd 
+         Height          =   375
+         Index           =   6
+         Left            =   0
+         TabIndex        =   13
+         Top             =   60
+         Width           =   765
+         _ExtentX        =   1349
+         _ExtentY        =   661
+         ButtonPositionImage=   1
+         Caption         =   "Œ—ÊÃ"
+         BackColor       =   14871017
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColorButton     =   14871017
+         ColorHighlight  =   16777215
+         ColorHoverText  =   16711680
+         ColorShadow     =   -2147483637
+         ColorOutline    =   0
+         DrawFocusRectangle=   0   'False
+         ColorToggledHoverText=   16711680
+         ColorTextShadow =   -2147483637
+      End
+      Begin ImpulseButton.ISButton CmdHelp 
+         Height          =   375
+         Left            =   855
+         TabIndex        =   14
+         Top             =   60
+         Width           =   915
+         _ExtentX        =   1614
+         _ExtentY        =   661
+         ButtonPositionImage=   1
+         Caption         =   "„”«⁄œ…"
+         BackColor       =   14871017
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColorButton     =   14871017
+         ColorHighlight  =   16777215
+         ColorHoverText  =   16711680
+         ColorShadow     =   -2147483637
+         ColorOutline    =   0
+         DrawFocusRectangle=   0   'False
+         ColorToggledHoverText=   16711680
+         ColorTextShadow =   -2147483637
+      End
+      Begin ImpulseButton.ISButton Cmd 
+         Height          =   375
+         Index           =   5
+         Left            =   2760
+         TabIndex        =   25
+         Top             =   60
+         Width           =   765
+         _ExtentX        =   1349
+         _ExtentY        =   661
+         ButtonPositionImage=   1
+         Caption         =   "»ÕÀ"
+         BackColor       =   14871017
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColorButton     =   14871017
+         ColorHighlight  =   16777215
+         ColorHoverText  =   16711680
+         ColorShadow     =   -2147483637
+         ColorOutline    =   0
+         DrawFocusRectangle=   0   'False
+         ColorToggledHoverText=   16711680
+         ColorTextShadow =   -2147483637
+      End
+      Begin ImpulseButton.ISButton Cmd 
+         Height          =   375
+         Index           =   9
+         Left            =   1920
+         TabIndex        =   35
+         Top             =   60
+         Width           =   765
+         _ExtentX        =   1349
+         _ExtentY        =   661
+         ButtonPositionImage=   1
+         Caption         =   "ÿ»«⁄Â"
+         BackColor       =   14871017
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColorButton     =   14871017
+         ColorHighlight  =   16777215
+         ColorHoverText  =   16711680
+         ColorShadow     =   -2147483637
+         ColorOutline    =   0
+         DrawFocusRectangle=   0   'False
+         ColorToggledHoverText=   16711680
+         ColorTextShadow =   -2147483637
+      End
+   End
+   Begin MSDataListLib.DataCombo DCboUserName 
+      Height          =   315
+      Left            =   8340
+      TabIndex        =   15
+      Top             =   4080
+      Width           =   2580
+      _ExtentX        =   4551
+      _ExtentY        =   556
+      _Version        =   393216
+      Enabled         =   0   'False
+      Text            =   ""
+      RightToLeft     =   -1  'True
+   End
+   Begin MSDataListLib.DataCombo DcboBox 
+      Height          =   315
+      Left            =   21360
+      TabIndex        =   16
+      Top             =   4080
+      Width           =   2955
+      _ExtentX        =   5212
+      _ExtentY        =   556
+      _Version        =   393216
+      Text            =   ""
+      RightToLeft     =   -1  'True
+   End
+   Begin ImpulseButton.ISButton Cmd 
+      Height          =   375
+      Index           =   7
+      Left            =   21360
+      TabIndex        =   27
+      Top             =   3120
+      Width           =   1365
+      _ExtentX        =   2408
+      _ExtentY        =   661
+      ButtonPositionImage=   1
+      Caption         =   "ÿ»«⁄Â «·ﬁÌœ"
+      BackColor       =   14871017
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ColorButton     =   14871017
+      ColorHighlight  =   16777215
+      ColorHoverText  =   16711680
+      ColorShadow     =   -2147483637
+      ColorOutline    =   0
+      DrawFocusRectangle=   0   'False
+      ColorToggledHoverText=   16711680
+      ColorTextShadow =   -2147483637
+   End
+   Begin MSDataListLib.DataCombo Dcbranch 
+      Bindings        =   "FrmRsCustomerAlarm.frx":4E5A
+      Height          =   315
+      Left            =   120
+      TabIndex        =   29
+      Top             =   720
+      Width           =   2175
+      _ExtentX        =   3836
+      _ExtentY        =   556
+      _Version        =   393216
+      BackColor       =   16777215
+      ListField       =   "account_name"
+      BoundColumn     =   "code"
+      Text            =   ""
+      RightToLeft     =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+   End
+   Begin C1SizerLibCtl.C1Tab XPTab301 
+      Height          =   3015
+      Left            =   0
+      TabIndex        =   36
+      Top             =   1200
+      Width           =   11760
+      _cx             =   20743
+      _cy             =   5318
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Enabled         =   -1  'True
+      Appearance      =   2
+      MousePointer    =   0
+      Version         =   801
+      BackColor       =   14871017
+      ForeColor       =   0
+      FrontTabColor   =   14871017
+      BackTabColor    =   12648447
+      TabOutlineColor =   -2147483632
+      FrontTabForeColor=   16711680
+      Caption         =   "»Ì«‰« |Õ«·Â «·«⁄ „«œ"
+      Align           =   0
+      CurrTab         =   0
+      FirstTab        =   0
+      Style           =   3
+      Position        =   1
+      AutoSwitch      =   -1  'True
+      AutoScroll      =   -1  'True
+      TabPreview      =   -1  'True
+      ShowFocusRect   =   -1  'True
+      TabsPerPage     =   0
+      BorderWidth     =   0
+      BoldCurrent     =   0   'False
+      DogEars         =   0   'False
+      MultiRow        =   0   'False
+      MultiRowOffset  =   200
+      CaptionStyle    =   0
+      TabHeight       =   0
+      TabCaptionPos   =   4
+      TabPicturePos   =   1
+      CaptionEmpty    =   ""
+      Separators      =   0   'False
+      AccessibleName  =   ""
+      AccessibleDescription=   ""
+      AccessibleValue =   ""
+      AccessibleRole  =   37
+      Picture(0)      =   "FrmRsCustomerAlarm.frx":4E6F
+      Flags(1)        =   2
+      Begin C1SizerLibCtl.C1Elastic C1Elastic1 
+         Height          =   2550
+         Left            =   12405
+         TabIndex        =   37
+         TabStop         =   0   'False
+         Top             =   45
+         Width           =   11670
+         _cx             =   20585
+         _cy             =   4498
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Enabled         =   -1  'True
+         Appearance      =   4
+         MousePointer    =   0
+         Version         =   801
+         BackColor       =   -2147483633
+         ForeColor       =   -2147483630
+         FloodColor      =   6553600
+         ForeColorDisabled=   -2147483631
+         Caption         =   ""
+         Align           =   0
+         AutoSizeChildren=   0
+         BorderWidth     =   6
+         ChildSpacing    =   4
+         Splitter        =   0   'False
+         FloodDirection  =   0
+         FloodPercent    =   0
+         CaptionPos      =   1
+         WordWrap        =   -1  'True
+         MaxChildSize    =   0
+         MinChildSize    =   0
+         TagWidth        =   0
+         TagPosition     =   0
+         Style           =   0
+         TagSplit        =   2
+         PicturePos      =   4
+         CaptionStyle    =   0
+         ResizeFonts     =   0   'False
+         GridRows        =   0
+         GridCols        =   0
+         Frame           =   3
+         FrameStyle      =   0
+         FrameWidth      =   1
+         FrameColor      =   -2147483628
+         FrameShadow     =   -2147483632
+         FloodStyle      =   1
+         _GridInfo       =   ""
+         AccessibleName  =   ""
+         AccessibleDescription=   ""
+         AccessibleValue =   ""
+         AccessibleRole  =   9
+         Begin VSFlex8UCtl.VSFlexGrid GRID2 
+            Height          =   3630
+            Left            =   120
+            TabIndex        =   38
+            Tag             =   "1"
+            Top             =   240
+            Width           =   13230
+            _cx             =   23336
+            _cy             =   6403
+            Appearance      =   1
+            BorderStyle     =   1
+            Enabled         =   -1  'True
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   178
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            MousePointer    =   0
+            BackColor       =   -2147483643
+            ForeColor       =   -2147483640
+            BackColorFixed  =   14871017
+            ForeColorFixed  =   -2147483630
+            BackColorSel    =   -2147483635
+            ForeColorSel    =   -2147483634
+            BackColorBkg    =   -2147483636
+            BackColorAlternate=   -2147483643
+            GridColor       =   -2147483633
+            GridColorFixed  =   -2147483632
+            TreeColor       =   -2147483632
+            FloodColor      =   192
+            SheetBorder     =   -2147483642
+            FocusRect       =   1
+            HighLight       =   1
+            AllowSelection  =   -1  'True
+            AllowBigSelection=   -1  'True
+            AllowUserResizing=   0
+            SelectionMode   =   0
+            GridLines       =   1
+            GridLinesFixed  =   2
+            GridLineWidth   =   1
+            Rows            =   3
+            Cols            =   8
+            FixedRows       =   1
+            FixedCols       =   1
+            RowHeightMin    =   300
+            RowHeightMax    =   0
+            ColWidthMin     =   0
+            ColWidthMax     =   0
+            ExtendLastCol   =   -1  'True
+            FormatString    =   $"FrmRsCustomerAlarm.frx":5209
+            ScrollTrack     =   0   'False
+            ScrollBars      =   3
+            ScrollTips      =   0   'False
+            MergeCells      =   0
+            MergeCompare    =   0
+            AutoResize      =   -1  'True
+            AutoSizeMode    =   0
+            AutoSearch      =   0
+            AutoSearchDelay =   2
+            MultiTotals     =   -1  'True
+            SubtotalPosition=   1
+            OutlineBar      =   0
+            OutlineCol      =   0
+            Ellipsis        =   0
+            ExplorerBar     =   0
+            PicturesOver    =   0   'False
+            FillStyle       =   0
+            RightToLeft     =   -1  'True
+            PictureType     =   0
+            TabBehavior     =   0
+            OwnerDraw       =   0
+            Editable        =   0
+            ShowComboButton =   1
+            WordWrap        =   0   'False
+            TextStyle       =   0
+            TextStyleFixed  =   0
+            OleDragMode     =   0
+            OleDropMode     =   0
+            DataMode        =   0
+            VirtualData     =   -1  'True
+            DataMember      =   ""
+            ComboSearch     =   3
+            AutoSizeMouse   =   -1  'True
+            FrozenRows      =   0
+            FrozenCols      =   0
+            AllowUserFreezing=   0
+            BackColorFrozen =   0
+            ForeColorFrozen =   0
+            WallPaperAlignment=   9
+            AccessibleName  =   ""
+            AccessibleDescription=   ""
+            AccessibleValue =   ""
+            AccessibleRole  =   24
+         End
+         Begin VB.Label Label11 
+            Alignment       =   2  'Center
+            BackColor       =   &H00FFFFC0&
+            Caption         =   "„ÿ·Ê» «⁄ „«œ… Õ«·Ì«"
+            Height          =   255
+            Left            =   9000
+            RightToLeft     =   -1  'True
+            TabIndex        =   50
+            Top             =   4080
+            Width           =   3375
+         End
+         Begin VB.Label Label1100 
+            Alignment       =   2  'Center
+            BackColor       =   &H00FFFFC0&
+            Caption         =   "„ÿ·Ê» «⁄ „«œ… Õ«·Ì«"
+            Height          =   255
+            Left            =   9960
+            RightToLeft     =   -1  'True
+            TabIndex        =   39
+            Top             =   4560
+            Width           =   3375
+         End
+      End
+      Begin C1SizerLibCtl.C1Elastic Ele 
+         Height          =   2550
+         Index           =   15
+         Left            =   45
+         TabIndex        =   40
+         TabStop         =   0   'False
+         Top             =   45
+         Width           =   11670
+         _cx             =   20585
+         _cy             =   4498
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Arial (Arabic)"
+            Size            =   12
+            Charset         =   178
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Enabled         =   -1  'True
+         Appearance      =   4
+         MousePointer    =   0
+         Version         =   801
+         BackColor       =   14871017
+         ForeColor       =   -2147483630
+         FloodColor      =   6553600
+         ForeColorDisabled=   -2147483631
+         Caption         =   ""
+         Align           =   0
+         AutoSizeChildren=   8
+         BorderWidth     =   1
+         ChildSpacing    =   1
+         Splitter        =   0   'False
+         FloodDirection  =   0
+         FloodPercent    =   0
+         CaptionPos      =   6
+         WordWrap        =   -1  'True
+         MaxChildSize    =   0
+         MinChildSize    =   0
+         TagWidth        =   0
+         TagPosition     =   0
+         Style           =   0
+         TagSplit        =   2
+         PicturePos      =   4
+         CaptionStyle    =   0
+         ResizeFonts     =   0   'False
+         GridRows        =   1
+         GridCols        =   1
+         Frame           =   3
+         FrameStyle      =   0
+         FrameWidth      =   1
+         FrameColor      =   -2147483628
+         FrameShadow     =   -2147483632
+         FloodStyle      =   1
+         _GridInfo       =   $"FrmRsCustomerAlarm.frx":5355
+         AccessibleName  =   ""
+         AccessibleDescription=   ""
+         AccessibleValue =   ""
+         AccessibleRole  =   9
+         Begin C1SizerLibCtl.C1Elastic Ele 
+            Height          =   2520
+            Index           =   16
+            Left            =   15
+            TabIndex        =   41
+            TabStop         =   0   'False
+            Top             =   15
+            Width           =   11640
+            _cx             =   20532
+            _cy             =   4445
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   178
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Enabled         =   -1  'True
+            Appearance      =   5
+            MousePointer    =   0
+            Version         =   801
+            BackColor       =   14871017
+            ForeColor       =   -2147483630
+            FloodColor      =   6553600
+            ForeColorDisabled=   -2147483631
+            Caption         =   ""
+            Align           =   0
+            AutoSizeChildren=   7
+            BorderWidth     =   6
+            ChildSpacing    =   4
+            Splitter        =   0   'False
+            FloodDirection  =   0
+            FloodPercent    =   0
+            CaptionPos      =   1
+            WordWrap        =   -1  'True
+            MaxChildSize    =   0
+            MinChildSize    =   0
+            TagWidth        =   0
+            TagPosition     =   0
+            Style           =   0
+            TagSplit        =   2
+            PicturePos      =   4
+            CaptionStyle    =   0
+            ResizeFonts     =   0   'False
+            GridRows        =   0
+            GridCols        =   0
+            Frame           =   0
+            FrameStyle      =   3
+            FrameWidth      =   1
+            FrameColor      =   -2147483628
+            FrameShadow     =   -2147483632
+            FloodStyle      =   1
+            _GridInfo       =   ""
+            AccessibleName  =   ""
+            AccessibleDescription=   ""
+            AccessibleValue =   ""
+            AccessibleRole  =   9
+            Begin VB.Frame lblDataCli 
+               BackColor       =   &H00E2E9E9&
+               Caption         =   "»Ì«‰«  "
+               Height          =   2535
+               Left            =   0
+               RightToLeft     =   -1  'True
+               TabIndex        =   49
+               Top             =   0
+               Width           =   11580
+               Begin VB.TextBox Text1 
+                  Alignment       =   1  'Right Justify
+                  BackColor       =   &H00FFFFFF&
+                  BeginProperty Font 
+                     Name            =   "MS Sans Serif"
+                     Size            =   8.25
+                     Charset         =   178
+                     Weight          =   700
+                     Underline       =   0   'False
+                     Italic          =   0   'False
+                     Strikethrough   =   0   'False
+                  EndProperty
+                  Height          =   315
+                  Left            =   9480
+                  MaxLength       =   50
+                  RightToLeft     =   -1  'True
+                  TabIndex        =   78
+                  Top             =   960
+                  Width           =   1065
+               End
+               Begin VB.TextBox TxtMobile 
+                  Alignment       =   1  'Right Justify
+                  BackColor       =   &H00FFFFFF&
+                  BeginProperty Font 
+                     Name            =   "MS Sans Serif"
+                     Size            =   8.25
+                     Charset         =   178
+                     Weight          =   700
+                     Underline       =   0   'False
+                     Italic          =   0   'False
+                     Strikethrough   =   0   'False
+                  EndProperty
+                  Height          =   315
+                  Left            =   120
+                  MaxLength       =   50
+                  RightToLeft     =   -1  'True
+                  TabIndex        =   75
+                  Top             =   600
+                  Width           =   3465
+               End
+               Begin VB.TextBox TxtCus 
+                  Alignment       =   1  'Right Justify
+                  BackColor       =   &H00FFFFFF&
+                  BeginProperty Font 
+                     Name            =   "MS Sans Serif"
+                     Size            =   8.25
+                     Charset         =   178
+                     Weight          =   700
+                     Underline       =   0   'False
+                     Italic          =   0   'False
+                     Strikethrough   =   0   'False
+                  EndProperty
+                  Height          =   315
+                  Left            =   9480
+                  MaxLength       =   50
+                  RightToLeft     =   -1  'True
+                  TabIndex        =   72
+                  Top             =   600
+                  Width           =   1065
+               End
+               Begin VB.TextBox TxtSearch 
+                  Alignment       =   1  'Right Justify
+                  BackColor       =   &H00FFFFFF&
+                  BeginProperty Font 
+                     Name            =   "MS Sans Serif"
+                     Size            =   8.25
+                     Charset         =   178
+                     Weight          =   700
+                     Underline       =   0   'False
+                     Italic          =   0   'False
+                     Strikethrough   =   0   'False
+                  EndProperty
+                  Height          =   315
+                  Left            =   9480
+                  MaxLength       =   50
+                  RightToLeft     =   -1  'True
+                  TabIndex        =   65
+                  Top             =   240
+                  Width           =   1065
+               End
+               Begin VB.TextBox TxtDes 
+                  Alignment       =   1  'Right Justify
+                  Height          =   1095
+                  Left            =   2610
+                  MultiLine       =   -1  'True
+                  RightToLeft     =   -1  'True
+                  ScrollBars      =   2  'Vertical
+                  TabIndex        =   63
+                  Top             =   1320
+                  Width           =   7935
+               End
+               Begin MSComCtl2.DTPicker EndDate 
+                  Height          =   315
+                  Left            =   1920
+                  TabIndex        =   54
+                  Top             =   960
+                  Width           =   1695
+                  _ExtentX        =   2990
+                  _ExtentY        =   556
+                  _Version        =   393216
+                  Format          =   94830593
+                  CurrentDate     =   38784
+               End
+               Begin Dynamic_Byte.NourHijriCal EndDateH 
+                  Height          =   315
+                  Left            =   120
+                  TabIndex        =   55
+                  Top             =   960
+                  Width           =   1635
+                  _ExtentX        =   2884
+                  _ExtentY        =   556
+               End
+               Begin MSDataListLib.DataCombo DcbIqara 
+                  Height          =   315
+                  Left            =   4920
+                  TabIndex        =   66
+                  Tag             =   "⁄›Ê« Ì—ÃÏ «Œ Ì«—√”„ «·⁄ﬁ«—"
+                  Top             =   240
+                  Width           =   4515
+                  _ExtentX        =   7964
+                  _ExtentY        =   556
+                  _Version        =   393216
+                  Text            =   ""
+                  RightToLeft     =   -1  'True
+               End
+               Begin MSDataListLib.DataCombo DcbUnitNo 
+                  Height          =   315
+                  Left            =   120
+                  TabIndex        =   68
+                  Tag             =   "⁄›Ê« Ì—ÃÏ «œŒ«· √”„ «·ÕÌ"
+                  Top             =   240
+                  Width           =   1215
+                  _ExtentX        =   2143
+                  _ExtentY        =   556
+                  _Version        =   393216
+                  Text            =   ""
+                  RightToLeft     =   -1  'True
+               End
+               Begin MSDataListLib.DataCombo DcbUnitType 
+                  Height          =   315
+                  Left            =   2370
+                  TabIndex        =   69
+                  Tag             =   "⁄›Ê« Ì—ÃÏ «œŒ«· √”„ «·ÕÌ"
+                  Top             =   240
+                  Width           =   1215
+                  _ExtentX        =   2143
+                  _ExtentY        =   556
+                  _Version        =   393216
+                  Text            =   ""
+                  RightToLeft     =   -1  'True
+               End
+               Begin MSDataListLib.DataCombo dcCustomer 
+                  Height          =   315
+                  Left            =   4920
+                  TabIndex        =   73
+                  Tag             =   "⁄›Ê« Ì—ÃÏ «Œ Ì«— √”„ «·„” «Ã—"
+                  Top             =   600
+                  Width           =   4515
+                  _ExtentX        =   7964
+                  _ExtentY        =   556
+                  _Version        =   393216
+                  Text            =   ""
+                  RightToLeft     =   -1  'True
+               End
+               Begin MSDataListLib.DataCombo dcsupplier 
+                  Height          =   315
+                  Left            =   4920
+                  TabIndex        =   79
+                  Tag             =   "⁄›Ê« Ì—ÃÏ «Œ Ì«—√”„ «·„«·ﬂ"
+                  Top             =   960
+                  Width           =   4515
+                  _ExtentX        =   7964
+                  _ExtentY        =   556
+                  _Version        =   393216
+                  Text            =   ""
+                  RightToLeft     =   -1  'True
+               End
+               Begin ImpulseButton.ISButton Cmd 
+                  Height          =   375
+                  Index           =   8
+                  Left            =   120
+                  TabIndex        =   81
+                  Top             =   1800
+                  Width           =   2445
+                  _ExtentX        =   4313
+                  _ExtentY        =   661
+                  ButtonPositionImage=   1
+                  Caption         =   "«—”«· —”«·Â"
+                  BackColor       =   16761024
+                  BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+                     Name            =   "MS Sans Serif"
+                     Size            =   8.25
+                     Charset         =   178
+                     Weight          =   400
+                     Underline       =   0   'False
+                     Italic          =   0   'False
+                     Strikethrough   =   0   'False
+                  EndProperty
+                  ColorButton     =   16761024
+                  ColorHighlight  =   16777215
+                  ColorHoverText  =   16711680
+                  ColorShadow     =   -2147483637
+                  ColorOutline    =   0
+                  DrawFocusRectangle=   0   'False
+                  ColorToggledHoverText=   16711680
+                  ColorTextShadow =   -2147483637
+               End
+               Begin MSDataListLib.DataCombo DcbAlarm 
+                  Height          =   315
+                  Left            =   120
+                  TabIndex        =   82
+                  Tag             =   "⁄›Ê« Ì—ÃÏ «œŒ«· √”„ «·ÕÌ"
+                  Top             =   1320
+                  Width           =   1575
+                  _ExtentX        =   2778
+                  _ExtentY        =   556
+                  _Version        =   393216
+                  Text            =   ""
+                  RightToLeft     =   -1  'True
+               End
+               Begin VB.Label Label1 
+                  Alignment       =   1  'Right Justify
+                  BackColor       =   &H00E2E9E9&
+                  BackStyle       =   0  'Transparent
+                  Caption         =   " «·„«·ﬂ"
+                  Height          =   285
+                  Index           =   1
+                  Left            =   10800
+                  RightToLeft     =   -1  'True
+                  TabIndex        =   80
+                  Top             =   960
+                  Width           =   810
+               End
+               Begin VB.Label Label1 
+                  Alignment       =   1  'Right Justify
+                  BackColor       =   &H00E2E9E9&
+                  Caption         =   "‰Ê⁄ «·«‘⁄«—"
+                  ForeColor       =   &H8000000D&
+                  Height          =   195
+                  Index           =   4
+                  Left            =   1560
+                  RightToLeft     =   -1  'True
+                  TabIndex        =   77
+                  Top             =   1320
+                  Width           =   990
+               End
+               Begin VB.Label Label1 
+                  Alignment       =   1  'Right Justify
+                  BackColor       =   &H00E2E9E9&
+                  BackStyle       =   0  'Transparent
+                  Caption         =   "ÃÊ«· «·„” «Ã—"
+                  Height          =   195
+                  Index           =   0
+                  Left            =   3825
+                  RightToLeft     =   -1  'True
+                  TabIndex        =   76
+                  Top             =   600
+                  Width           =   990
+               End
+               Begin VB.Label Label1 
+                  Alignment       =   1  'Right Justify
+                  BackColor       =   &H00E2E9E9&
+                  BackStyle       =   0  'Transparent
+                  Caption         =   " «·„” √Ã—"
+                  Height          =   285
+                  Index           =   5
+                  Left            =   10800
+                  RightToLeft     =   -1  'True
+                  TabIndex        =   74
+                  Top             =   600
+                  Width           =   810
+               End
+               Begin VB.Label Label1 
+                  Alignment       =   1  'Right Justify
+                  BackColor       =   &H00E2E9E9&
+                  BackStyle       =   0  'Transparent
+                  Caption         =   "‰Ê⁄ «·ÊÕœ…"
+                  Height          =   195
+                  Index           =   15
+                  Left            =   3825
+                  RightToLeft     =   -1  'True
+                  TabIndex        =   71
+                  Top             =   240
+                  Width           =   990
+               End
+               Begin VB.Label Label1 
+                  Alignment       =   1  'Right Justify
+                  BackColor       =   &H00E2E9E9&
+                  BackStyle       =   0  'Transparent
+                  Caption         =   "—ﬁ„ «·ÊÕœ…"
+                  ForeColor       =   &H00000000&
+                  Height          =   195
+                  Index           =   14
+                  Left            =   1440
+                  RightToLeft     =   -1  'True
+                  TabIndex        =   70
+                  Top             =   240
+                  Width           =   870
+               End
+               Begin VB.Label lbl 
+                  Alignment       =   1  'Right Justify
+                  BackStyle       =   0  'Transparent
+                  Caption         =   "«·⁄ﬁ«—"
+                  Height          =   255
+                  Index           =   13
+                  Left            =   10680
+                  RightToLeft     =   -1  'True
+                  TabIndex        =   67
+                  Top             =   240
+                  Width           =   855
+               End
+               Begin VB.Label lbl 
+                  Alignment       =   1  'Right Justify
+                  BackStyle       =   0  'Transparent
+                  Caption         =   "«·„Ê÷Ê⁄"
+                  Height          =   255
+                  Index           =   10
+                  Left            =   10920
+                  RightToLeft     =   -1  'True
+                  TabIndex        =   64
+                  Top             =   1560
+                  Width           =   615
+               End
+               Begin VB.Label lbl 
+                  Alignment       =   1  'Right Justify
+                  BackStyle       =   0  'Transparent
+                  Caption         =   " «—ÌŒ «‰ Â«¡ «·⁄ﬁœ"
+                  Height          =   375
+                  Index           =   20
+                  Left            =   3600
+                  RightToLeft     =   -1  'True
+                  TabIndex        =   56
+                  Top             =   960
+                  Width           =   1215
+               End
+            End
+            Begin VB.Label lbl 
+               Alignment       =   1  'Right Justify
+               BackColor       =   &H00E2E9E9&
+               Enabled         =   0   'False
+               Height          =   1485
+               Index           =   62
+               Left            =   2220
+               RightToLeft     =   -1  'True
+               TabIndex        =   42
+               Top             =   675
+               Width           =   540
+            End
+         End
+         Begin C1SizerLibCtl.C1Elastic Ele 
+            Height          =   2520
+            Index           =   9
+            Left            =   15
+            TabIndex        =   43
+            TabStop         =   0   'False
+            Top             =   15
+            Width           =   11640
+            _cx             =   20532
+            _cy             =   4445
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   178
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Enabled         =   -1  'True
+            Appearance      =   5
+            MousePointer    =   0
+            Version         =   801
+            BackColor       =   14871017
+            ForeColor       =   -2147483630
+            FloodColor      =   6553600
+            ForeColorDisabled=   -2147483631
+            Caption         =   ""
+            Align           =   0
+            AutoSizeChildren=   7
+            BorderWidth     =   0
+            ChildSpacing    =   4
+            Splitter        =   0   'False
+            FloodDirection  =   0
+            FloodPercent    =   0
+            CaptionPos      =   1
+            WordWrap        =   -1  'True
+            MaxChildSize    =   0
+            MinChildSize    =   0
+            TagWidth        =   0
+            TagPosition     =   0
+            Style           =   0
+            TagSplit        =   2
+            PicturePos      =   4
+            CaptionStyle    =   0
+            ResizeFonts     =   0   'False
+            GridRows        =   0
+            GridCols        =   0
+            Frame           =   3
+            FrameStyle      =   0
+            FrameWidth      =   1
+            FrameColor      =   -2147483628
+            FrameShadow     =   -2147483632
+            FloodStyle      =   1
+            _GridInfo       =   ""
+            AccessibleName  =   ""
+            AccessibleDescription=   ""
+            AccessibleValue =   ""
+            AccessibleRole  =   9
+            Begin VB.TextBox Text8 
+               Alignment       =   1  'Right Justify
+               Height          =   1890
+               Left            =   3045
+               MaxLength       =   4
+               RightToLeft     =   -1  'True
+               TabIndex        =   45
+               Top             =   585
+               Width           =   630
+            End
+            Begin VB.CheckBox Check1 
+               Alignment       =   1  'Right Justify
+               BackColor       =   &H00E2E9E9&
+               Caption         =   "÷—»Ì»… «·„»Ì⁄« "
+               Height          =   1320
+               Left            =   3855
+               RightToLeft     =   -1  'True
+               TabIndex        =   44
+               Top             =   675
+               Width           =   960
+            End
+            Begin VB.Label lbl 
+               Alignment       =   1  'Right Justify
+               BackColor       =   &H00E2E9E9&
+               Enabled         =   0   'False
+               Height          =   1320
+               Index           =   67
+               Left            =   2160
+               RightToLeft     =   -1  'True
+               TabIndex        =   48
+               Top             =   675
+               Width           =   600
+            End
+            Begin VB.Label lbl 
+               Alignment       =   1  'Right Justify
+               BackColor       =   &H00E2E9E9&
+               Caption         =   "«·ﬁÌ„…"
+               Enabled         =   0   'False
+               Height          =   1260
+               Index           =   68
+               Left            =   3675
+               RightToLeft     =   -1  'True
+               TabIndex        =   47
+               Top             =   900
+               Width           =   30
+            End
+            Begin VB.Label lbl 
+               Alignment       =   1  'Right Justify
+               BackColor       =   &H00E2E9E9&
+               Caption         =   "%"
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   9.75
+                  Charset         =   178
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               Height          =   1515
+               Index           =   69
+               Left            =   2760
+               RightToLeft     =   -1  'True
+               TabIndex        =   46
+               Top             =   675
+               Width           =   285
+            End
+         End
+      End
+   End
+   Begin MSDataListLib.DataCombo DataCombo2 
+      Height          =   315
+      Left            =   0
+      TabIndex        =   53
+      Top             =   0
+      Width           =   3315
+      _ExtentX        =   5847
+      _ExtentY        =   556
+      _Version        =   393216
+      Text            =   ""
+      RightToLeft     =   -1  'True
+   End
+   Begin Dynamic_Byte.NourHijriCal NourHijriCal1 
+      Height          =   315
+      Left            =   5760
+      TabIndex        =   57
+      Top             =   720
+      Width           =   1575
+      _ExtentX        =   2778
+      _ExtentY        =   556
+   End
+   Begin MSComCtl2.DTPicker From 
+      Height          =   315
+      Left            =   12360
+      TabIndex        =   59
+      Top             =   2280
+      Width           =   1335
+      _ExtentX        =   2355
+      _ExtentY        =   556
+      _Version        =   393216
+      Format          =   94830593
+      CurrentDate     =   38784
+   End
+   Begin VB.Label lbl 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00E2E9E9&
+      Caption         =   "»‰«¡ ⁄·Ï ⁄ﬁœ —ﬁ„"
+      Height          =   285
+      Index           =   9
+      Left            =   4320
+      TabIndex        =   62
+      Top             =   720
+      Width           =   1245
+   End
+   Begin VB.Label Label2 
+      Alignment       =   1  'Right Justify
+      BackStyle       =   0  'Transparent
+      Caption         =   "«·⁄„«—Â"
+      Height          =   255
+      Left            =   3660
+      RightToLeft     =   -1  'True
+      TabIndex        =   52
+      Top             =   0
+      Width           =   855
+   End
+   Begin VB.Image img 
+      Height          =   855
+      Left            =   22680
+      Picture         =   "FrmRsCustomerAlarm.frx":5389
+      Stretch         =   -1  'True
+      Top             =   6000
+      Width           =   720
+   End
+   Begin VB.Image imgnul 
+      Height          =   1095
+      Left            =   22680
+      Top             =   4800
+      Width           =   735
+   End
+   Begin VB.Image Image3 
+      Height          =   975
+      Left            =   15240
+      Picture         =   "FrmRsCustomerAlarm.frx":63AD
+      Stretch         =   -1  'True
+      Top             =   10200
+      Width           =   720
+   End
+   Begin VB.Label lblBr 
+      Alignment       =   1  'Right Justify
+      BackStyle       =   0  'Transparent
+      Caption         =   "«·›—⁄"
+      Height          =   255
+      Left            =   1920
+      RightToLeft     =   -1  'True
+      TabIndex        =   30
+      Top             =   780
+      Width           =   855
+   End
+   Begin VB.Label lbl 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00E2E9E9&
+      Caption         =   "—ﬁ„ «·ﬁÌœ:"
+      Height          =   315
+      Index           =   30
+      Left            =   20760
+      RightToLeft     =   -1  'True
+      TabIndex        =   28
+      Top             =   2160
+      Width           =   975
+   End
+   Begin VB.Label lbl 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00E2E9E9&
+      Caption         =   "—ﬁ„ «·«‘⁄«—"
+      Height          =   285
+      Index           =   4
+      Left            =   10680
+      TabIndex        =   24
+      Top             =   720
+      Width           =   1005
+   End
+   Begin VB.Label lbl 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00E2E9E9&
+      Caption         =   "«· «—ÌŒ"
+      Height          =   285
+      Index           =   1
+      Left            =   8400
+      TabIndex        =   23
+      Top             =   720
+      Width           =   1005
+   End
+   Begin VB.Label lbl 
+      Alignment       =   1  'Right Justify
+      BackStyle       =   0  'Transparent
+      Caption         =   "«·„” Œœ„"
+      Height          =   270
+      Index           =   8
+      Left            =   10845
+      TabIndex        =   22
+      Top             =   4155
+      Width           =   900
+   End
+   Begin VB.Label lbl 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00E2E9E9&
+      Caption         =   " «·”Ã· «·Õ«·Ì:"
+      Height          =   315
+      Index           =   7
+      Left            =   2430
+      TabIndex        =   21
+      Top             =   4260
+      Width           =   1065
+   End
+   Begin VB.Label lbl 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00E2E9E9&
+      Caption         =   " ⁄œœ «·”Ã·« :"
+      Height          =   315
+      Index           =   6
+      Left            =   690
+      TabIndex        =   20
+      Top             =   4260
+      Width           =   975
+   End
+   Begin VB.Label XPTxtCount 
+      Alignment       =   1  'Right Justify
+      BackStyle       =   0  'Transparent
+      Height          =   315
+      Left            =   90
+      TabIndex        =   19
+      Top             =   4260
+      Width           =   495
+   End
+   Begin VB.Label XPTxtCurrent 
+      Alignment       =   1  'Right Justify
+      BackStyle       =   0  'Transparent
+      Height          =   315
+      Left            =   1740
+      TabIndex        =   18
+      Top             =   4260
+      Width           =   615
+   End
+   Begin VB.Label lbl 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H00E2E9E9&
+      Caption         =   "«”„ «·Œ“‰…"
+      Height          =   285
+      Index           =   0
+      Left            =   21240
+      TabIndex        =   17
+      Top             =   2640
+      Width           =   1005
+   End
+End
+Attribute VB_Name = "FrmRsCustomerAlarm"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Explicit
+Dim rs As ADODB.Recordset
+Dim TTP As clstooltip
+Dim cSearchDcbo  As clsDCboSearch
+Dim TTD As clstooltipdemand
+Dim Employee_account As String
+
+
+
+
+Private Sub Cmd_Click(Index As Integer)
+
+    ' On Error GoTo ErrTrap
+    Select Case Index
+
+        Case 0
+
+            If DoPremis(Do_New, Me.Name, True) = False Then
+                Exit Sub
+            End If
+
+            TxtModFlg.Text = "N"
+            clear_all Me
+    
+Dcbranch.BoundText = Current_branch
+  Me.DCboUserName.BoundText = user_id
+  Dim Dcombos As ClsDataCombos
+    Set Dcombos = New ClsDataCombos
+  Dcombos.GetIqarUnit -2, 2, Me.DcbUnitNo
+ 
+        Case 1
+
+            If DoPremis(Do_Edit, Me.Name, True) = False Then
+                Exit Sub
+            End If
+ 'UnitsGrid.Rows = UnitsGrid.Rows + 1
+ '           UnitsGrid.Enabled = True
+            '
+            TxtModFlg.Text = "E"
+            Me.DCboUserName.BoundText = user_id
+
+        Case 2
+    
+            Dim Msg As String
+
+            If Trim(Dcbranch.BoundText) = "" Then
+                If SystemOptions.UserInterface = EnglishInterface Then
+                    Msg = "Specify Branch"
+                Else
+                    Msg = "Õœœ «·›—⁄ "
+                End If
+
+                MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.title
+                Dcbranch.SetFocus
+                SendKeys "{F4}"
+                Screen.MousePointer = vbDefault
+                Exit Sub
+            End If
+
+            my_branch = Me.Dcbranch.BoundText
+
+            SaveData
+
+        Case 3
+            Undo
+
+        Case 4
+
+            If DoPremis(Do_Delete, Me.Name, True) = False Then
+                Exit Sub
+            End If
+
+            Del_Trans
+
+        Case 5
+            'Load FrmCustomerAlarmSearch
+            FrmCustomerAlarmSearch.show vbModal
+
+        Case 6
+            Unload Me
+
+        Case 7
+   
+
+        Case 8
+  
+            
+            
+                 Case 9
+
+            If DoPremis(Do_Print, Me.Name, True) = False Then
+                Exit Sub
+            End If
+
+            If val(Me.XPTxtID.Text) <> 0 Then
+                print_report val(Me.XPTxtID.Text)
+        
+        
+            End If
+        
+    End Select
+
+    Exit Sub
+ErrTrap:
+End Sub
+Function print_report(Optional NoteSerial As String)
+    
+     
+    Dim MySQL As String
+    Dim RsData As New ADODB.Recordset
+    Dim xApp As New CRAXDRT.Application
+    Dim xReport As CRAXDRT.Report
+    Dim CViewer As ClsReportViewer
+    Dim StrReportTitle As String
+    Dim StrFileName As String
+    Dim Msg As String
+
+
+    MySQL = " SELECT   dbo.TblCustomerAlarm.RecDateH, dbo.TblCustomerAlarm.RecDate, dbo.TblCustomerAlarm.ContNo, dbo.TblCustomerAlarm.UserID, "
+MySQL = MySQL & "                      dbo.TblCustomerAlarm.Cus_Mobile AS MCus_Mobile, dbo.TblCustomerAlarm.Des, dbo.TblCustomerAlarm.EndDateH, dbo.TblCustomerAlarm.EndDate,"
+MySQL = MySQL & "                      dbo.TblCustomerAlarm.AqrID, dbo.TblAqar.aqarNo, dbo.TblAqar.aqarname, dbo.TblCustomerAlarm.UnitNo, dbo.TblAqarDetai.unitno AS Nameunitno,"
+MySQL = MySQL & "                      dbo.TblCustomerAlarm.ID, dbo.TblCustomerAlarm.UnitType, dbo.TblAkarUnit.name, dbo.TblAkarUnit.namee, dbo.TblCustomerAlarm.Alarm,"
+MySQL = MySQL & "                      dbo.TblAlarmType.name AS nameAlarm, dbo.TblAlarmType.namee AS nameAlarmE, dbo.TblCustomerAlarm.CusID, dbo.TblCustemers.CusName,"
+MySQL = MySQL & "                      dbo.TblCustemers.CusNamee, dbo.TblCustomerAlarm.ownerid, TblCustemers_1.CusName AS OwnerName, TblCustemers_1.CusNamee AS OwnerNameE,"
+MySQL = MySQL & "                      dbo.TblCustemers.Cus_mobile , TblCustemers_1.remark"
+MySQL = MySQL & " FROM         dbo.TblCustomerAlarm LEFT OUTER JOIN"
+MySQL = MySQL & "                      dbo.TblCustemers TblCustemers_1 ON dbo.TblCustomerAlarm.ownerid = TblCustemers_1.CusID LEFT OUTER JOIN"
+MySQL = MySQL & "                      dbo.TblCustemers ON dbo.TblCustomerAlarm.CusID = dbo.TblCustemers.CusID LEFT OUTER JOIN"
+MySQL = MySQL & "                      dbo.TblAlarmType ON dbo.TblCustomerAlarm.Alarm = dbo.TblAlarmType.Id LEFT OUTER JOIN"
+MySQL = MySQL & "                      dbo.TblAkarUnit ON dbo.TblCustomerAlarm.UnitType = dbo.TblAkarUnit.id LEFT OUTER JOIN"
+MySQL = MySQL & "                      dbo.TblAqarDetai ON dbo.TblCustomerAlarm.UnitNo = dbo.TblAqarDetai.Id LEFT OUTER JOIN"
+MySQL = MySQL & "                      dbo.TblAqar ON dbo.TblCustomerAlarm.AqrID = dbo.TblAqar.Aqarid"
+
+MySQL = MySQL & " Where (dbo.TblCustomerAlarm.id = " & val(XPTxtID.Text) & ")"
+
+
+
+        If SystemOptions.UserInterface = ArabicInterface Then
+            StrFileName = App.path & "\REPORTS\REPORTS NEW\" & "RepCustomerAlarm.rpt"
+        Else
+            StrFileName = App.path & "\REPORTS\REPORTS NEW\" & "RepCustomerAlarm.rpt"
+        End If
+
+
+    If Dir(StrFileName) = "" Then
+        'GetMsgs 139, vbExclamation
+        Screen.MousePointer = vbDefault
+        Exit Function
+    End If
+
+    Set RsData = New ADODB.Recordset
+    RsData.Open MySQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
+
+    If RsData.BOF Or RsData.EOF Then
+        'GetMsgs 138, vbExclamation
+        Msg = "·« ÊÃœ »Ì«‰«  ··⁄—÷"
+        MsgBox Msg, vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.title
+        RsData.Close
+        Set RsData = Nothing
+        Screen.MousePointer = vbDefault
+        Exit Function
+    End If
+
+    Screen.MousePointer = vbArrowHourglass
+    Set xReport = xApp.OpenReport(StrFileName)
+    xReport.Database.SetDataSource RsData
+
+    Dim cCompanyInfo As New ClsCompanyInfo
+
+    If SystemOptions.UserInterface = ArabicInterface Then
+        xReport.ParameterFields(1).AddCurrentValue cCompanyInfo.ArabCompanyName 'RPTCompany_Name_Arabic
+
+
+        ' xReport.ParameterFields(2).AddCurrentValue RPTComment_Arabic
+        StrReportTitle = "" '& StrAccountName
+        'If Me.DTPickerAccFrom.value <> Empty Or Me.DTPickerAccFrom.value <> Null Then
+        '    StrReportTitle = StrReportTitle + " »œ«Ì… „‰ " & Format(Me.DTPickerAccFrom.value, "yyyy/M/d") & ""
+        'End If
+        'If Me.DTPickerAccTo.value <> Empty Or Me.DTPickerAccTo.value <> Null Then
+        '    StrReportTitle = StrReportTitle + " ≈·Ï " & Format(Me.DTPickerAccTo.value, "yyyy/M/d") & " "
+        'End If
+    Else
+ 
+        xReport.ParameterFields(1).AddCurrentValue cCompanyInfo.ArabCompanyName ' RPTCompany_Name_Eng
+
+        'xReport.ParameterFields(2).AddCurrentValue RPTComment_Eng
+       ' xReport.ParameterFields(4).AddCurrentValue get_branch_name(val(my_branch))
+        StrReportTitle = ""
+        'If Me.DTPickerAccFrom.value <> Empty Or Me.DTPickerAccFrom.value <> Null Then
+        '    StrReportTitle = StrReportTitle + " From Date " & (Me.DTPickerAccFrom.value) & ""
+        'End If
+        'If Me.DTPickerAccTo.value <> Empty Or Me.DTPickerAccTo.value <> Null Then
+        '    StrReportTitle = StrReportTitle + " To Date :  " & (Me.DTPickerAccTo.value) & ""
+        'End If
+    End If
+
+    'xReport.ParameterFields(3).AddCurrentValue user_name
+     '  xReport.ParameterFields(4).AddCurrentValue WriteNo(Format(val(TxtForRenter.text), "0.00"), 0, True, ".")
+     '     xReport.ParameterFields(5).AddCurrentValue WriteNo(Format(val(TxtOFRenter.text), "0.00"), 0, True, ".")
+       ' xReport.ParameterFields(56).AddCurrentValue val(lbl(23).Caption)
+       '  xReport.ParameterFields(7).AddCurrentValue DBIssueDate.value
+'    xReport.ParameterFields(8).AddCurrentValue IIf(IsNumeric(fg.TextMatrix(Me.fg.FixedRows, fg.ColIndex("PartValue"))), val(fg.TextMatrix(Me.fg.FixedRows, fg.ColIndex("PartValue"))), 0)
+' xReport.ParameterFields(9).AddCurrentValue val(lbl(22).Caption)
+ ' xReport.ParameterFields(10).AddCurrentValue val(TxtDiscount.text)
+  ' xReport.ParameterFields(11).AddCurrentValue txtDiscountDES.text
+   
+'    xReport.ParameterFields(5).AddCurrentValue ToHijriDate(RsData("notedate").value)
+    xReport.reporttitle = StrReportTitle
+    xReport.EnableParameterPrompting = False
+    xReport.ApplicationName = App.title
+    xReport.ReportAuthor = App.title
+    Set CViewer = New ClsReportViewer
+    CViewer.FireReport xReport, WindowTarget, "", , , , StrFileName
+
+    RsData.Close
+    Set RsData = Nothing
+    Screen.MousePointer = vbDefault
+
+
+ 
+  
+ 
+End Function
+
+
+
+Private Sub CmdHelp_Click()
+    SystemOptions.SysHelp.HHTopicID = Me.HelpContextID
+    SystemOptions.SysHelp.HHDisplayTopicID Me.hWnd
+End Sub
+
+
+
+
+
+Private Sub DcbIqara_Change()
+DcbIqara_Click (0)
+End Sub
+
+Private Sub DcbUnitType_Change()
+'Dim Dcombos As ClsDataCombos
+'Dim idd As Long
+'   Set Dcombos = New ClsDataCombos
+'
+'If val(DcbUnitType.BoundText) > 0 Then
+'idd = val(DcbUnitType.BoundText)
+'Dcombos.GetIqarUnit idd, Me.DcbUnitNo
+'End If
+Dim Dcombos As ClsDataCombos
+Dim idd As Long
+Dim idd1 As Long
+   Set Dcombos = New ClsDataCombos
+
+If val(DcbIqara.BoundText) > 0 Then
+idd = val(DcbIqara.BoundText)
+
+idd1 = val(DcbUnitType.BoundText)
+'If Me.TxtModFlg = "R" Then
+Dcombos.GetIqarUnit idd, idd1, Me.DcbUnitNo, "R"
+'Else
+'Dcombos.GetIqarUnit idd, idd1, Me.DcbUnitNo
+'End If
+End If
+End Sub
+
+Private Sub dcsupplier_Change()
+dcsupplier_Click (0)
+End Sub
+
+Private Sub ENDDATE_Change()
+If Me.TxtModFlg.Text <> "R" Then
+         EndDateH.value = ToHijriDate(EndDate.value)
+        
+End If
+End Sub
+
+Private Sub ENDDATEH_LostFocus()
+
+       If Me.TxtModFlg.Text <> "R" Then
+              VBA.Calendar = vbCalGreg
+            EndDate.value = ToGregorianDate(EndDateH.value)
+            End If
+End Sub
+
+
+
+   
+
+
+
+
+Private Sub Form_Load()
+ Dim Dcombos As ClsDataCombos
+    
+    Dim My_SQL As String
+    Dim StrSQL As String
+    Dim GrdBack As ClsBackGroundPic
+
+    On Error GoTo ErrTrap
+    Set GrdBack = New ClsBackGroundPic
+
+
+    Set Cmd(0).ButtonImage = mdifrmmain.ImgLstTree.ListImages("New").Picture
+    Set Cmd(1).ButtonImage = mdifrmmain.ImgLstTree.ListImages("Edit").Picture
+    Set Cmd(2).ButtonImage = mdifrmmain.ImgLstTree.ListImages("save").Picture
+    Set Cmd(3).ButtonImage = mdifrmmain.ImgLstTree.ListImages("Undo").Picture
+    Set Cmd(4).ButtonImage = mdifrmmain.ImgLstTree.ListImages("Del").Picture
+    Set Cmd(5).ButtonImage = mdifrmmain.ImgLstTree.ListImages("Search").Picture
+    Set Cmd(6).ButtonImage = mdifrmmain.ImgLstTree.ListImages("Exit").Picture
+    Set CmdHelp.ButtonImage = mdifrmmain.ImgLstTree.ListImages("Help").Picture
+    Resize_Form Me
+    AddTip
+    Set Dcombos = New ClsDataCombos
+
+   
+   Dcombos.GetAlarm Me.DcbAlarm
+   Dcombos.GetBranches Me.Dcbranch
+    Dcombos.getAkarUnit Me.DcbUnitType
+    Dcombos.GetIqarUnit -2, 1, DcbUnitNo
+    Dcombos.GetCustomersSuppliers 56, Me.dcCustomer
+     Dcombos.GetIqar DcbIqara
+     Dcombos.GetCustomersSuppliers 57, Me.dcsupplier
+     My_SQL = "select UserID,UserName From tblUsers "
+  
+    If SystemOptions.usertype <> UserAdminAll Then
+        Me.Dcbranch.Enabled = True
+    End If
+
+    SetDtpickerDate Me.XPDtbTrans
+   fill_combo DCboUserName, My_SQL
+    Dcombos.GetIqar DcbIqara
+    Set rs = New ADODB.Recordset
+    StrSQL = "select * From TblCustomerAlarm     Order By ID"
+    rs.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
+    XPDtbTrans.value = Date
+        Me.TxtModFlg.Text = "R"
+            
+    Retrive
+
+
+    If SystemOptions.UserInterface = EnglishInterface Then
+        SetInterface Me
+        ChangeLang
+    End If
+
+    If OPEN_NEW_SCREEN = True Then
+        Cmd_Click (0)
+    End If
+    
+    Exit Sub
+
+ErrTrap:
+End Sub
+
+Private Sub ChangeLang()
+ 
+
+End Sub
+Private Sub Form_Paint()
+   ' TTD.Destroy
+End Sub
+
+Private Sub Form_Resize()
+'    TTD.Destroy
+End Sub
+
+Private Sub Form_Unload(Cancel As Integer)
+    On Error GoTo ErrTrap
+
+    If rs.State = adStateOpen Then
+        If Not (rs.EOF Or rs.BOF) Then
+            If rs.EditMode <> adEditNone Then
+                rs.CancelUpdate
+            End If
+        End If
+
+        rs.Close
+        Set rs = Nothing
+    End If
+
+    Set TTP = Nothing
+    'Set EmpReport = Nothing
+    TTD.Destroy
+    Exit Sub
+ErrTrap:
+End Sub
+
+
+
+
+
+
+
+
+Private Sub ImgFavorites_Click()
+AddTofaforites Me.Name, Me.Caption, Me.Caption
+End Sub
+
+Private Sub NourHijriCal1_LostFocus()
+  If Me.TxtModFlg.Text <> "R" Then
+              VBA.Calendar = vbCalGreg
+            XPDtbTrans.value = ToGregorianDate(NourHijriCal1.value)
+            End If
+End Sub
+
+Private Sub Text1_KeyPress(KeyAscii As Integer)
+ Dim EmpID As Integer
+  If KeyAscii = vbKeyReturn Then
+        GetTblCustemersCode Text1.Text, EmpID, , , 57
+        dcsupplier.BoundText = EmpID
+   End If
+End Sub
+
+
+
+Private Sub dcsupplier_Click(Area As Integer)
+   If val(dcsupplier.BoundText) = 0 Then Exit Sub
+
+    Dim EmpCode  As String
+ 
+    GetTblCustemersCode , , dcsupplier.BoundText, EmpCode
+    Me.Text1.Text = EmpCode
+End Sub
+Private Sub dcCustomer_Change()
+  If val(dcCustomer.BoundText) = 0 Then Exit Sub
+Dim Mobile As String
+    Dim EmpCode  As String
+ 
+    GetTblCustemersCode , , dcCustomer.BoundText, EmpCode
+    Me.TxtCus.Text = EmpCode
+    get_Customer_information dcCustomer.BoundText, Mobile
+    TxtMobile.Text = Mobile
+End Sub
+
+Private Sub dcCustomer_Click(Area As Integer)
+ dcCustomer_Change
+End Sub
+
+
+
+Private Sub TxtCus_KeyPress(KeyAscii As Integer)
+ Dim EmpID As Integer
+
+    If KeyAscii = vbKeyReturn Then
+        GetTblCustemersCode TxtCus.Text, EmpID, , , 56
+        dcCustomer.BoundText = EmpID
+    End If
+End Sub
+
+Private Sub TxtModFlg_Change()
+    On Error GoTo ErrTrap
+
+    Select Case Me.TxtModFlg.Text
+
+        Case "R"
+                  
+ 
+            Me.Cmd(2).Enabled = False
+            Me.Cmd(3).Enabled = False
+            Me.Cmd(0).Enabled = True
+            Me.Cmd(1).Enabled = True
+            Me.Cmd(4).Enabled = True
+            Me.Cmd(5).Enabled = True
+            Me.XPBtnMove(0).Enabled = True
+            Me.XPBtnMove(1).Enabled = True
+            Me.XPBtnMove(2).Enabled = True
+            Me.XPBtnMove(3).Enabled = True
+         '   TxtAdvanceValue.Locked = True
+            Me.DcboBox.locked = True
+            XPDtbTrans.Enabled = False
+
+            If rs.RecordCount < 1 Then
+                Me.XPBtnMove(0).Enabled = False
+                Me.XPBtnMove(1).Enabled = False
+                Me.XPBtnMove(2).Enabled = False
+                Me.XPBtnMove(3).Enabled = False
+                Me.Cmd(1).Enabled = False
+                Me.Cmd(4).Enabled = False
+            End If
+
+        Case "N"
+         
+            Me.Cmd(2).Enabled = True
+            Me.Cmd(3).Enabled = True
+            Me.Cmd(0).Enabled = False
+            Me.Cmd(1).Enabled = False
+            Me.Cmd(4).Enabled = False
+            Me.Cmd(5).Enabled = False
+               
+          '  UnitsGrid.Clear flexClearScrollable, flexClearEverything
+          '  UnitsGrid.Rows = 2
+          '  UnitsGrid.Enabled = True
+         
+    
+            Me.DCboUserName.BoundText = user_id
+        
+            XPDtbTrans.Enabled = True
+            XPDtbTrans.value = Date
+
+        Case "E"
+          
+            Me.Cmd(2).Enabled = True
+            Me.Cmd(3).Enabled = True
+            Me.Cmd(0).Enabled = False
+            Me.Cmd(1).Enabled = False
+            Me.Cmd(4).Enabled = False
+            Me.Cmd(5).Enabled = False
+            Me.XPBtnMove(0).Enabled = False
+            Me.XPBtnMove(1).Enabled = False
+            Me.XPBtnMove(2).Enabled = False
+            Me.XPBtnMove(3).Enabled = False
+          
+           
+            XPDtbTrans.Enabled = True
+          
+
+    End Select
+
+    Exit Sub
+ErrTrap:
+End Sub
+
+
+
+Private Sub TxtOrderNo_Change()
+If Me.TxtModFlg <> "R" Then
+If Me.TxtOrderNo.Text <> "" Then
+RetriveOrder TxtOrderNo.Text, 0
+End If
+End If
+End Sub
+
+Public Sub RetriveOrder(Optional order_no As String = "", Optional serial As Integer)
+   
+    Dim StrSQL As String
+    Dim RsNotes As New ADODB.Recordset
+    Dim RsTemp As ADODB.Recordset
+    Dim rs As ADODB.Recordset
+    Dim Num As Long
+    
+    On Error GoTo ErrTrap
+    If serial = 1 Then
+    StrSQL = " SELECT     dbo.TblContract.*,  dbo.TblCustemers.Cus_Phone, dbo.TblCustemers.Cus_mobile"
+StrSQL = StrSQL & " FROM         dbo.TblContract LEFT OUTER JOIN"
+ StrSQL = StrSQL & "                     dbo.TblCustemers ON dbo.TblContract.CusID = dbo.TblCustemers.CusID  where dbo.TblContract.ContNo   ='" & val(order_no) & "'"
+    Else
+        StrSQL = " SELECT     dbo.TblContract.*, dbo.TblCustemers.Cus_Phone, dbo.TblCustemers.Cus_mobile"
+StrSQL = StrSQL & " FROM         dbo.TblContract LEFT OUTER JOIN"
+ StrSQL = StrSQL & "                     dbo.TblCustemers ON dbo.TblContract.CusID = dbo.TblCustemers.CusID  where  dbo.TblContract.NoteSerial1 ='" & order_no & "'"
+ 
+    
+    End If
+    Set rs = New ADODB.Recordset
+    rs.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
+
+    If rs.RecordCount > 0 Then
+     DcbIqara.BoundText = IIf(IsNull(rs("Iqar").value), "", rs("Iqar").value)
+     DcbUnitType.BoundText = IIf(IsNull(rs("unittype").value), "", rs("unittype").value)
+     DcbUnitNo.BoundText = val(IIf(IsNull(rs("UnitNo").value), "", rs("UnitNo").value))
+     dcCustomer.BoundText = IIf(IsNull(rs("CusID").value), "", rs("CusID").value)
+     dcsupplier.BoundText = IIf(IsNull(rs("ownerid").value), "", rs("ownerid").value)
+     
+     Me.TxtMobile.Text = IIf(IsNull(rs("Cus_mobile").value), "", rs("Cus_mobile").value)
+   ' TxtInsurance.text = IIf(IsNull(rs("InsuranceValue").value), "", rs("InsuranceValue").value)
+   '  TxtBillPrice.text = IIf(IsNull(rs("Electricity").value), "", rs("Electricity").value)
+       TxtOrderNo.Text = IIf(IsNull(rs("NoteSerial1").value), "", rs("NoteSerial1").value)
+     
+       EndDate.value = IIf(IsNull(rs("EndDate").value), Date, rs("EndDate").value)
+          EndDateH.value = IIf(IsNull(rs("TodateH").value), Date, rs("TodateH").value)
+    End If
+
+    If rs.EOF Or rs.BOF Then
+        Exit Sub
+    End If
+
+    
+   
+    Exit Sub
+ErrTrap:
+
+End Sub
+
+Private Sub TxtOrderNo_KeyUp(KeyCode As Integer, Shift As Integer)
+If Me.TxtModFlg <> "R" Then
+If KeyCode = vbKeyF3 Then
+
+Load FrmIqarContractSearch
+'FrmIqarContractSearch.fg.TextMatrix(fg.Row, fg.ColIndex("NoteSerial"))=me.Text15
+FrmIqarContractSearch.m_RetrunType = 3
+FrmIqarContractSearch.show
+
+
+End If
+
+End If
+End Sub
+
+
+
+
+
+Private Sub XPBtnMove_Click(Index As Integer)
+    On Error GoTo ErrTrap
+
+    If Me.TxtModFlg.Text = "N" Then
+        clear_all Me
+        Me.TxtModFlg.Text = "R"
+        XPBtnMove_Click (1)
+    End If
+
+    Select Case Index
+
+        Case 0
+
+            If Not (rs.EOF Or rs.BOF) Then
+                rs.MovePrevious
+
+                If rs.BOF Then rs.MoveFirst
+            End If
+
+        Case 1
+
+            If Not (rs.EOF Or rs.BOF) Then
+                rs.MoveFirst
+            End If
+
+        Case 2
+
+            If Not (rs.EOF Or rs.BOF) Then
+                rs.MoveLast
+            End If
+
+        Case 3
+
+            If Not (rs.EOF Or rs.BOF) Then
+                rs.MoveNext
+
+                If rs.EOF Then rs.MoveLast
+            End If
+
+    End Select
+
+    Retrive
+    Exit Sub
+ErrTrap:
+End Sub
+
+
+Public Sub Retrive(Optional Lngid As Long = 0)
+    Dim RsDetails As ADODB.Recordset
+    Dim RsDetails1 As ADODB.Recordset
+    Dim i As Integer
+    Dim StrSQL As String
+  Dim ContactTime As Date
+'UnitsGrid.Clear flexClearScrollable, flexClearEverything
+    '        UnitsGrid.Rows = 2
+    '        UnitsGrid.Enabled = True
+         
+    'On Error GoTo ErrTrap
+     
+     
+    If rs.RecordCount < 1 Then
+        XPTxtCurrent.Caption = 0
+        XPTxtCount.Caption = 0
+        Exit Sub
+    End If
+
+    If rs.EOF Or rs.BOF Then
+        Exit Sub
+    Else
+
+        If Lngid <> 0 Then
+            rs.find "ID=" & Lngid, , adSearchForward, adBookmarkFirst
+
+            If rs.EOF Or rs.BOF Then
+                Exit Sub
+            End If
+        End If
+    End If
+
+    XPTxtID.Text = IIf(IsNull(rs("ID").value), "", val(rs("ID").value))
+    XPDtbTrans.value = IIf(IsNull(rs("RecDate").value), Date, rs("RecDate").value)
+    NourHijriCal1.value = IIf(IsNull(rs("RecDateH").value), "", rs("RecDateH").value)
+    
+   Me.TxtOrderNo.Text = IIf(IsNull(rs("ContNo").value), "", rs("ContNo").value)
+     Dcbranch.BoundText = val(IIf(IsNull(rs("BranchID").value), "", rs("BranchID").value))
+  Me.dcsupplier.BoundText = val(IIf(IsNull(rs("ownerid").value), "", rs("ownerid").value))
+     DcbIqara.BoundText = val(IIf(IsNull(rs("AqrID").value), "", rs("AqrID").value))
+     Me.dcCustomer.BoundText = val(IIf(IsNull(rs("CusID").value), "", rs("CusID").value))
+     
+    DcbUnitType.BoundText = val(IIf(IsNull(rs("UnitType").value), "", rs("UnitType").value))
+    Me.DcbUnitNo.BoundText = val(IIf(IsNull(rs("UnitNo").value), "", rs("UnitNo").value))
+ Me.TxtMobile.Text = IIf(IsNull(rs("Cus_Mobile").value), "", rs("Cus_Mobile").value)
+ 
+ Me.TxtDes.Text = IIf(IsNull(rs("Des").value), "", rs("Des").value)
+  
+   Me.DcbAlarm.BoundText = val(IIf(IsNull(rs("Alarm").value), "", rs("Alarm").value))
+
+     EndDate.value = IIf(IsNull(rs("EndDate").value), Date, rs("EndDate").value)
+    EndDateH.value = IIf(IsNull(rs("EndDateH").value), "", rs("EndDateH").value)
+
+   
+    Me.DCboUserName.BoundText = IIf(IsNull(rs("UserID").value), "", rs("UserID").value)
+     ' If IsNull(rs("posted").value) Then
+       '                                            If SystemOptions.UserInterface = ArabicInterface Then
+        '                                            Accredit.Caption = "   «·«—”«· ··«⁄ „«œ "
+          '                                        Else
+                                                 '   Accredit.Caption = " send to Approval   "
+               ''                                End If
+                                     '          Accredit.Enabled = True
+'  Else
+                                      '             If SystemOptions.UserInterface = ArabicInterface Then
+                                        '            Accredit.Caption = "  „ «·«—”«· ··«⁄ „«œ "
+                                        '          Else
+                                                  '  Accredit.Caption = " sent to Approval   "
+                                             '  End If
+                                             '  Accredit.Enabled = False
+  ' End If
+   
+   
+'    Set RsDetails = New ADODB.Recordset
+'StrSQL = "SELECT     dbo.TblOrderMaintenanceDet.ORderID, dbo.TblOrderMaintenanceDet.TypeUnit, dbo.TblAkarUnit.name, dbo.TblAkarUnit.namee, dbo.TblOrderMaintenanceDet.UnitNo, "
+' StrSQL = StrSQL & "                     dbo.TblAqarDetai.unitno AS UnitNoName, dbo.TblOrderMaintenanceDet.UnitStatus, dbo.TblRentStatus.name AS NameStatus,"
+'StrSQL = StrSQL & "                      dbo.TblRentStatus.namee AS NameStatusE, dbo.TblOrderMaintenanceDet.RenterID, dbo.TblCustemers.CusName, dbo.TblCustemers.CusNamee,"
+'StrSQL = StrSQL & "                      dbo.TblOrderMaintenanceDet.mobile , dbo.TblOrderMaintenanceDet.Ms"
+'StrSQL = StrSQL & " FROM         dbo.TblOrderMaintenanceDet LEFT OUTER JOIN"
+'StrSQL = StrSQL & "                      dbo.TblCustemers ON dbo.TblOrderMaintenanceDet.RenterID = dbo.TblCustemers.CusID LEFT OUTER JOIN"
+'StrSQL = StrSQL & "                      dbo.TblRentStatus ON dbo.TblOrderMaintenanceDet.UnitStatus = dbo.TblRentStatus.id LEFT OUTER JOIN"
+'StrSQL = StrSQL & "                      dbo.TblAqarDetai ON dbo.TblOrderMaintenanceDet.UnitNo = dbo.TblAqarDetai.Id LEFT OUTER JOIN"
+'StrSQL = StrSQL & "                      dbo.TblAkarUnit ON dbo.TblOrderMaintenanceDet.TypeUnit = dbo.TblAkarUnit.id"
+'StrSQL = StrSQL & " Where (dbo.TblOrderMaintenanceDet.ORderID = " & val(XPTxtID.text) & ")"
+'
+'    RsDetails.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
+'
+'
+'    If Not (RsDetails.BOF Or RsDetails.EOF) Then
+'       With Me.UnitsGrid
+'      '  RsDetails.MoveFirst
+'        .Rows = .FixedRows + RsDetails.RecordCount
+'
+'        For i = .FixedRows To .Rows - 1
+'
+'            .TextMatrix(i, .ColIndex("Ser")) = i
+'            .TextMatrix(i, .ColIndex("id")) = val(RsDetails("UnitNo").value)
+'            .TextMatrix(i, .ColIndex("unittype")) = RsDetails("TypeUnit").value
+'              .TextMatrix(i, .ColIndex("mobile")) = RsDetails("Mobile").value
+'              If RsDetails("Ms").value = True Then
+'               .TextMatrix(i, .ColIndex("Ms")) = -1
+'              Else
+'              .TextMatrix(i, .ColIndex("Ms")) = 0
+'              End If
+'               .TextMatrix(i, .ColIndex("StatusId")) = val(RsDetails("UnitStatus").value)
+'               .TextMatrix(i, .ColIndex("customerid")) = val(RsDetails("RenterID").value)
+'                .TextMatrix(i, .ColIndex("unitno")) = RsDetails("UnitNoName").value
+'                If SystemOptions.UserInterface = EnglishInterface Then
+'
+'                .TextMatrix(i, .ColIndex("nameunittype")) = RsDetails("namee").value
+'                .TextMatrix(i, .ColIndex("customeridname")) = RsDetails("CusNamee").value
+'               .TextMatrix(i, .ColIndex("Status")) = RsDetails("NameStatusE").value
+'               Else
+'
+'                .TextMatrix(i, .ColIndex("nameunittype")) = RsDetails("name").value
+'                .TextMatrix(i, .ColIndex("customeridname")) = RsDetails("CusName").value
+'               .TextMatrix(i, .ColIndex("Status")) = RsDetails("NameStatus").value
+'               End If
+'            RsDetails.MoveNext
+'
+'        Next i
+    'ReLineGridCount
+'    ReLineGrid
+    
+'End With
+
+'    End If
+
+'    RsDetails.Close
+'    Set RsDetails = Nothing
+    '//////////////////////////////////////////
+  '  Set RsDetails1 = New ADODB.Recordset
+
+
+
+  '  RsDetails1.Close
+  '  Set RsDetails1 = Nothing
+    
+  '  fillapprovData
+    'ReLineGrid
+    XPTxtCurrent.Caption = rs.AbsolutePosition
+    XPTxtCount.Caption = rs.RecordCount
+    Exit Sub
+ErrTrap:
+End Sub
+
+Private Sub SaveData()
+    Dim Msg As String
+    Dim RsTemp As New ADODB.Recordset
+    Dim StrSQL As String
+    Dim sql As String
+    Dim BeginTrans As Boolean
+    Dim RsDetails As ADODB.Recordset
+    Dim RsDetails1 As ADODB.Recordset
+    Dim i As Integer
+    Dim LngDevID As Long
+    Dim LngDevLineNo As Long
+    Dim StrAccountCode As String
+
+    'On Error GoTo ErrTrap
+
+    If Me.TxtModFlg.Text <> "R" Then
+ 
+   If Me.DcbIqara.BoundText = "" Then
+            Msg = "ÌÃ»  ÕœÌœ   «”„ «·⁄ﬁ«—!! "
+            MsgBox Msg, vbOKOnly + vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.title
+            Me.DcbIqara.SetFocus
+           ' SendKeys "{F4}"
+            Exit Sub
+        End If
+   
+
+  
+
+  
+    
+ 
+        
+
+        Cn.BeginTrans
+        BeginTrans = True
+
+        If TxtModFlg.Text = "N" Then
+
+            XPTxtID.Text = CStr(new_id("TblCustomerAlarm", "ID", "", True))
+       '     TxtNoteID.text = CStr(new_id("Notes", "NoteID", "", True))
+       '     Me.oldtxtNoteSerial1.text = Trim$(Me.TxtNoteSerial1.text)
+        
+            rs.AddNew
+        ElseIf Me.TxtModFlg.Text = "E" Then
+           ' StrSQL = "Delete From TblOrderMaintenanceDet Where ORderID=" & val(Me.XPTxtID.text)
+           ' Cn.Execute StrSQL, , adExecuteNoRecords
+
+        End If
+     
+   
+
+   
+       rs("ID").value = val(XPTxtID.Text)
+        rs("RecDate").value = XPDtbTrans.value
+       rs("RecDateH").value = Me.NourHijriCal1.value
+    
+       rs("ContNo").value = Me.TxtOrderNo.Text
+       rs("BranchID").value = IIf(Me.Dcbranch.BoundText = "", Null, Me.Dcbranch.BoundText)
+       rs("UserID").value = IIf(Me.DCboUserName.BoundText = "", Null, Me.DCboUserName.BoundText)
+       rs("ownerid").value = IIf(Me.dcsupplier.BoundText = "", Null, Me.dcsupplier.BoundText)
+       rs("AqrID").value = IIf(Me.DcbIqara.BoundText = "", Null, Me.DcbIqara.BoundText)
+          rs("CusID").value = IIf(Me.dcCustomer.BoundText = "", Null, Me.dcCustomer.BoundText)
+          
+          rs("UnitType").value = IIf(Me.DcbUnitType.BoundText = "", Null, Me.DcbUnitType.BoundText)
+          rs("UnitNo").value = IIf(Me.DcbUnitNo.BoundText = "", Null, Me.DcbUnitNo.BoundText)
+          
+         rs("Cus_Mobile").value = Me.TxtMobile.Text
+       
+         rs("Des").value = Me.TxtDes.Text
+          rs("Alarm").value = IIf(Me.DcbAlarm.BoundText = "", Null, Me.DcbAlarm.BoundText)
+
+      rs("EndDate").value = EndDate.value
+       rs("EndDateH").value = Me.EndDateH.value
+  rs.update
+ 
+        '''''''''/////////////////////////////////
+  
+    '  Set RsDetails = New ADODB.Recordset
+    '   StrSQL = "SELECT     *  from dbo.TblOrderMaintenanceDet Where (1 = -1)"
+  ' RsDetails.Open StrSQL, Cn, adOpenKeyset, adLockOptimistic, adCmdText
+
+          
+  '     For i = Me.UnitsGrid.FixedRows To UnitsGrid.Rows - 1
+  ' If (UnitsGrid.TextMatrix(i, UnitsGrid.ColIndex("unitno"))) <> "" Then
+  '  RsDetails.AddNew
+  '                RsDetails("ORderID").value = val(XPTxtID.text)
+  '               RsDetails("TypeUnit").value = val(UnitsGrid.TextMatrix(i, UnitsGrid.ColIndex("unittype")))
+  '              RsDetails("UnitNo").value = val(UnitsGrid.TextMatrix(i, UnitsGrid.ColIndex("id")))
+  '              RsDetails("RenterID").value = val(UnitsGrid.TextMatrix(i, UnitsGrid.ColIndex("customerid")))
+  '              RsDetails("UnitStatus").value = val(UnitsGrid.TextMatrix(i, UnitsGrid.ColIndex("StatusId")))
+  '              RsDetails("Mobile").value = UnitsGrid.TextMatrix(i, UnitsGrid.ColIndex("mobile"))
+  '              If UnitsGrid.Cell(flexcpChecked, i, Me.UnitsGrid.ColIndex("Ms")) = flexChecked Then
+  '      RsDetails("Ms").value = -1
+  '      Else
+  '      RsDetails("Ms").value = 0
+  '         End If
+  '
+  '
+  '       RsDetails.update
+  '
+  '    '   End If
+  '    End If
+  '      Next i
+  '
+  '      '''''''''''''''//////////////////////////
+        
+ 
+      
+
+    
+        Cn.CommitTrans
+        BeginTrans = False
+    '    RsDetails.Close
+        Set RsDetails = Nothing
+        Set RsDetails1 = Nothing
+        XPTxtCurrent.Caption = rs.AbsolutePosition
+        XPTxtCount.Caption = rs.RecordCount
+    
+        Select Case Me.TxtModFlg.Text
+
+            Case "N"
+                Msg = "  „ Õ›Ÿ »Ì«‰«  Â–Â «·⁄„·Ì… " & CHR(13)
+                Msg = Msg + "Â·  —€» ›Ì ≈÷«›… »Ì«‰«  √Œ—Ì"
+
+                If MsgBox(Msg, vbYesNo + vbQuestion + vbMsgBoxRight + vbMsgBoxRtlReading + vbDefaultButton2, App.title) = vbYes Then
+                    Cmd_Click (0)
+                    Exit Sub
+                End If
+
+            Case "E"
+                MsgBox " „ Õ›Ÿ Â–Â «· ⁄œÌ·« ", vbInformation + vbOKOnly + vbMsgBoxRight + vbMsgBoxRtlReading, App.title
+        End Select
+
+        TxtModFlg.Text = "R"
+    End If
+
+    Exit Sub
+ErrTrap:
+
+    If BeginTrans = True Then
+        BeginTrans = False
+        Cn.RollbackTrans
+    End If
+
+    If Err.Number = -2147217900 Then
+        Msg = "·« Ì„ﬂ‰ Õ›Ÿ Â–Â «·»Ì«‰«  " & CHR(13)
+        Msg = Msg + "·ﬁœ  „ «œŒ«· ﬁÌ„ €Ì— ’«·Õ… " & CHR(13)
+        Msg = Msg + " √ﬂœ „‰ œﬁ… «·»Ì«‰«  Ê√⁄œ «·„Õ«Ê·…"
+        MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.title
+        Exit Sub
+    End If
+
+    Msg = "⁄›Ê«...ÕœÀ Œÿ√ „« √À‰«¡ Õ›Ÿ Â–Â «·»Ì«‰«  " & CHR(13)
+    MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.title
+End Sub
+
+Private Sub DcbIqara_Click(Area As Integer)
+      If val(DcbIqara.BoundText) = 0 Then: Exit Sub
+Dim str As String
+    Dim EmpCode  As String
+ Dim ownerid As Double
+    GetIqarCode , , DcbIqara.BoundText, EmpCode, ownerid
+    
+    Me.TxtSearch.Text = EmpCode
+
+   ' dcsupplier.BoundText = ownerid
+    'DcbUnitType_Change
+End Sub
+
+Private Sub TxtSearch_KeyPress(KeyAscii As Integer)
+  Dim EmpID As Double
+'GetTblCustemersCode
+    If KeyAscii = vbKeyReturn Then
+        GetIqarCode TxtSearch.Text, EmpID
+        DcbIqara.BoundText = EmpID
+        DcbIqara_Click (0)
+    End If
+End Sub
+
+'
+Private Sub Undo()
+    On Error GoTo ErrTrap
+
+    Select Case TxtModFlg.Text
+
+        Case "N"
+            clear_all Me
+            Me.TxtModFlg.Text = "R"
+            XPBtnMove_Click (1)
+
+        Case "E"
+            rs.find "ID='" & val(XPTxtID.Text) & "'", , adSearchForward, adBookmarkFirst
+
+            If rs.EOF Or rs.BOF Then
+                Me.TxtModFlg.Text = "R"
+                Exit Sub
+            End If
+
+            Retrive
+            Me.TxtModFlg.Text = "R"
+    End Select
+
+    Exit Sub
+ErrTrap:
+End Sub
+
+Private Sub Del_Trans()
+    Dim Msg As String
+    Dim StrSQL As String
+  Dim StrSQL1 As String
+    On Error GoTo ErrTrap
+
+    If XPTxtID.Text <> "" Then
+        Msg = "”Ì „ Õ–› »Ì«‰«  «·⁄„·Ì… —ﬁ„ " & CHR(13)
+        Msg = Msg + " Â·  —€» ›Ì Õ–› Â–Â «·»Ì«‰« ø"
+
+        If MsgBox(Msg, vbYesNo + vbQuestion + vbMsgBoxRight + vbMsgBoxRtlReading, App.title) = vbYes Then
+            If Not rs.RecordCount < 1 Then
+                rs.delete
+                StrSQL = "Delete From TblCustomerAlarm Where ID=" & val(Me.XPTxtID.Text)
+                Cn.Execute StrSQL, , adExecuteNoRecords
+                rs.MoveFirst
+' StrSQL1 = "Delete From TblOrderMaintenanceDet Where ORderID=" & val(Me.XPTxtID.text)
+'            Cn.Execute StrSQL1, , adExecuteNoRecords
+            '    If rs.RecordCount < 1 Then
+             
+           ' UnitsGrid.Clear flexClearScrollable, flexClearEverything
+           ' UnitsGrid.Rows = 2
+           ' UnitsGrid.Enabled = True
+            
+                    clear_all Me
+                    TxtModFlg_Change
+                    XPTxtCurrent.Caption = 0
+                    XPTxtCount.Caption = 0
+                Else
+                    Retrive
+                End If
+           ' End If
+        End If
+
+    Else
+        clear_all Me
+        Msg = "Â–Â «·⁄„·Ì… €Ì— „ «Õ… ÕÌÀ √‰Â ·«ÌÊÃœ √Ì ”Ã·« "
+        MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.title
+        TxtModFlg_Change
+        Exit Sub
+    End If
+
+    TxtModFlg_Change
+    Exit Sub
+ErrTrap:
+    Msg = "⁄›Ê«...ÕœÀ Œÿ√ „« √À‰«¡ Õ–› Â–Â «·»Ì«‰«  " & CHR(13)
+    MsgBox Msg, vbMsgBoxRight + vbMsgBoxRtlReading + vbExclamation, App.title
+    rs.CancelUpdate
+End Sub
+
+
+
+'Function FillApprovedTable()
+' Dim RSApproval  As New ADODB.Recordset
+'   Set RSApproval = New ADODB.Recordset
+'   Dim currentdate As Date
+'   RSApproval.Open "[ApprovalData]", Cn, adOpenStatic, adLockOptimistic, adCmdTable
+'
+'
+' Dim sql As String
+'  Dim rs1 As New ADODB.Recordset
+' Dim i As Integer
+'    sql = "SELECT     TOP 100 PERCENT dbo.TblApprovalDef.ScreenName, dbo.TblApprovalDefDetails.PlainMessageID AS levelo, dbo.TbllevelWorker.EmpID, "
+'  sql = sql & " dbo.TblApprovalDefDetails.id AS levelorder, dbo.TbllevelWorker.id AS currorder"
+'  sql = sql & " FROM         dbo.TblApprovalDef INNER JOIN"
+'  sql = sql & " dbo.TblApprovalDefDetails ON dbo.TblApprovalDef.id = dbo.TblApprovalDefDetails.lMessageDefID INNER JOIN"
+'  sql = sql & "  dbo.TbllevelWorker ON dbo.TblApprovalDefDetails.PlainMessageID = dbo.TbllevelWorker.LevelID"
+'sql = sql & " WHERE     (dbo.TblApprovalDef.ScreenName = N'" & Me.name & "')"
+'sql = sql & " ORDER BY dbo.TblApprovalDefDetails.id, dbo.TbllevelWorker.id  "
+'
+'    rs1.Open sql, Cn, adOpenStatic, adLockReadOnly, adCmdText
+'
+'    If rs1.RecordCount > 0 Then
+'            currentdate = Now
+'            For i = 1 To rs1.RecordCount
+'              RSApproval.AddNew
+'                RSApproval("ScreenName").value = Me.name
+'                RSApproval("levelo").value = IIf(IsNull(rs1("levelo").value), Null, rs1("levelo").value)
+'               RSApproval("EmpID").value = IIf(IsNull(rs1("EmpID").value), Null, rs1("EmpID").value)
+'                RSApproval("levelorder").value = IIf(IsNull(rs1("levelorder").value), Null, rs1("levelorder").value)
+'                 RSApproval("currorder").value = IIf(IsNull(rs1("currorder").value), Null, rs1("currorder").value)
+'                  RSApproval("Transaction_ID").value = val(Me.XPTxtID.text)
+'                   RSApproval("NoteSerial").value = val(Me.XPTxtID.text)
+'                RSApproval("Transaction_Date").value = Date
+'
+'                  RSApproval("ExpectedtimeTime").value = DateAdd("N", GetTimeforTransaction(Me.name), currentdate)
+'               RSApproval("SendTime").value = currentdate
+'
+'                 If i = 1 Then
+'                        RSApproval("Currcursor").value = 1
+'                         RSApproval("FromUser").value = user_name
+'                End If
+'
+'                RSApproval.update
+'                rs1.MoveNext
+'            Next i
+'
+'    End If
+    
+    
+
+'End Function
+
+
+
+'Function fillapprovData()
+'Dim Num As Integer
+' Dim RsDetails As New ADODB.Recordset
+' Dim StrSQL As String
+'
+'
+' StrSQL = "SELECT     TOP 100 PERCENT dbo.ApprovalData.Currcursor, dbo.ApprovalData.ScreenName, dbo.ApprovalData.levelo, dbo.ApprovalData.EmpID, dbo.ApprovalData.levelorder, "
+'StrSQL = StrSQL + " dbo.ApprovalData.currorder, dbo.ApprovalData.Transaction_ID, dbo.ApprovalData.NoteID, dbo.ApprovalData.ApprovDate, dbo.ApprovalData.Remarks,"
+'StrSQL = StrSQL + " dbo.TbLLevels.name , dbo.TbLLevels.namee, dbo.TblUsers.UserID, dbo.TblUsers.UserName"
+'StrSQL = StrSQL + " FROM         dbo.ApprovalData INNER JOIN"
+'StrSQL = StrSQL + " dbo.TbLLevels ON dbo.ApprovalData.levelo = dbo.TbLLevels.LevelID INNER JOIN"
+'StrSQL = StrSQL + " dbo.TblUsers ON dbo.ApprovalData.EmpID = dbo.TblUsers.UserID"
+'StrSQL = StrSQL + " WHERE     (dbo.ApprovalData.Transaction_ID = " & val(Me.XPTxtID.text) & ") AND (dbo.ApprovalData.ScreenName = N'" & Me.name & "')"
+'StrSQL = StrSQL + " ORDER BY dbo.ApprovalData.levelorder"
+'
+'    RsDetails.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
+'
+' If Not (RsDetails.EOF Or RsDetails.BOF) Then
+'        GRID2.Rows = RsDetails.RecordCount + 1
+'
+'
+'        For Num = 1 To RsDetails.RecordCount
+'
+'       GRID2.TextMatrix(Num, GRID2.ColIndex("Currcursor")) = IIf(IsNull(RsDetails("Currcursor")), "", RsDetails("Currcursor"))
+'    If GRID2.TextMatrix(Num, GRID2.ColIndex("Currcursor")) = "1" Then
+'   GRID2.Cell(flexcpBackColor, Num, 1, Num, 7) = &HFFFFC0
+'   Else
+'    GRID2.Cell(flexcpBackColor, Num, 1, Num, 7) = vbWhite
+'    End If
+'
+''        GRID2.TextMatrix(Num, GRID2.ColIndex("Approved")) = IIf(IsNull(RsDetails("ApprovDate")), "", flexChecked)
+ '          If SystemOptions.UserInterface = ArabicInterface Then
+ '           GRID2.TextMatrix(Num, GRID2.ColIndex("levelName")) = IIf(IsNull(RsDetails("Name")), "", Trim(RsDetails("Name").value))
+ '         Else
+ '            GRID2.TextMatrix(Num, GRID2.ColIndex("levelName")) = IIf(IsNull(RsDetails("Namee")), "", Trim(RsDetails("Namee").value))
+ '         End If
+ '           If SystemOptions.UserInterface = ArabicInterface Then
+ '           GRID2.TextMatrix(Num, GRID2.ColIndex("EmpName")) = IIf(IsNull(RsDetails("UserName")), "", (RsDetails("UserName").value))
+ '           Else
+ '           GRID2.TextMatrix(Num, GRID2.ColIndex("EmpName")) = IIf(IsNull(RsDetails("UserName")), "", (RsDetails("UserName").value))
+ '           End If
+ '           GRID2.TextMatrix(Num, GRID2.ColIndex("ApprovDate")) = IIf(IsNull(RsDetails("ApprovDate")), "", (RsDetails("ApprovDate").value))
+ '         GRID2.TextMatrix(Num, GRID2.ColIndex("REMARKS")) = IIf(IsNull(RsDetails("REMARKS")), "", (RsDetails("REMARKS").value))
+ '
+ '
+'RsDetails.MoveNext
+'If Num = RsDetails.RecordCount Then
+'
+'        If GRID2.TextMatrix(Num, GRID2.ColIndex("Approved")) <> "" Then
+'                                If SystemOptions.UserInterface = ArabicInterface Then
+'                                      Label11.Caption = " „ «·«⁄ „«œ ··„” ‰œ »«·ﬂ«„·"
+'                                 Else
+'                                       Label11.Caption = "Approved"
+'                                 End If
+'                            Label11.backcolor = &H80FF80
+'        Else
+'                             If SystemOptions.UserInterface = ArabicInterface Then
+'                                     Label11.Caption = "„ÿ·Ê» «⁄ „«œ… Õ«·Ì«"
+'                            Else
+'                                     Label11.Caption = "Currently required Approve"
+'                            End If
+'                 Label11.backcolor = &HFFFFC0
+'        End If
+'
+'End If
+'
+'        Next Num
+'Else
+' GRID2.Rows = 1
+'    End If
+'RsDetails.Close
+'
+'End Function
+
+
+
+
+
+Private Sub Form_KeyDown(KeyCode As Integer, _
+                         Shift As Integer)
+    On Error GoTo ErrTrap
+
+    If KeyCode = vbKeyReturn Then
+        If Me.TxtModFlg.Text = "R" Then
+            Cmd_Click (0)
+        Else
+            SendKeys "{TAB}"
+        End If
+    End If
+
+    If Me.TxtModFlg.Text = "R" Then
+        If KeyCode = vbKeyDown Or KeyCode = vbKeyEnd Then
+            XPBtnMove_Click (2)
+        ElseIf KeyCode = vbKeyUp Or KeyCode = vbKeyHome Then
+            XPBtnMove_Click (1)
+        ElseIf KeyCode = vbKeyRight Or KeyCode = vbKeyPageDown Then
+            XPBtnMove_Click (3)
+        ElseIf KeyCode = vbKeyLeft Or KeyCode = vbKeyPageUp Then
+            XPBtnMove_Click (0)
+        End If
+    End If
+
+    If KeyCode = vbKeyF12 Then
+        If Cmd(0).Enabled = False Then Exit Sub
+        Cmd_Click (0)
+    End If
+
+    If KeyCode = vbKeyF11 Then
+        If Cmd(1).Enabled = False Then Exit Sub
+        Cmd_Click (1)
+    End If
+
+    If KeyCode = vbKeyF10 Then
+        If Cmd(2).Enabled = False Then Exit Sub
+        Cmd_Click (2)
+    End If
+
+    If KeyCode = vbKeyF9 Then
+        If Cmd(3).Enabled = False Then Exit Sub
+        Cmd_Click (3)
+    End If
+
+    If KeyCode = vbKeyF8 Then
+        If Cmd(4).Enabled = False Then Exit Sub
+        Cmd_Click (4)
+    End If
+
+    If Shift = 2 Then
+        If KeyCode = vbKeyX Then
+            If Cmd(6).Enabled = False Then Exit Sub
+            Cmd_Click (6)
+        End If
+    End If
+
+    Exit Sub
+ErrTrap:
+End Sub
+
+Private Sub AddTip()
+    Dim Wrap As String
+    On Error GoTo ErrTrap
+    Wrap = CHR(13) + CHR(10)
+    Set TTP = New clstooltip
+
+    With TTP
+        .Create Me.hWnd, "«‘⁄«—  ”œÌœ / «‰–«—    ", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl Cmd(0), "ÃœÌœ ..." & Wrap & "·«÷«›… »Ì«‰«  ⁄„·Ì… ÃœÌœ…" & Wrap & " ›ﬁÿ ≈÷€ÿ Â‰«", True
+    End With
+
+    With TTP
+        .Create Me.hWnd, "«‘⁄«—  ”œÌœ / «‰–«—", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl Cmd(1), " ⁄œÌ· ..." & Wrap & "· ⁄œÌ· »Ì«‰«  Â–Â «·⁄„·Ì…" & Wrap & " ›ﬁÿ ≈÷€ÿ Â‰«", True
+    End With
+
+    With TTP
+        .Create Me.hWnd, "«‘⁄«—  ”œÌœ / «‰–«—", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl Cmd(2), "Õ›Ÿ ..." & Wrap & "·Õ›Ÿ »Ì«‰«  «·⁄„·Ì… «·ÃœÌœ…" & Wrap & "·Õ›Ÿ «· ⁄œÌ·« " & Wrap & " ›ﬁÿ ≈÷€ÿ Â‰«", True
+    End With
+
+    With TTP
+        .Create Me.hWnd, "«‘⁄«—  ”œÌœ / «‰–«—", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl Cmd(3), " —«Ã⁄ ..." & Wrap & "·· —«Ã⁄ ⁄‰ ⁄„·Ì… «·«÷«›…" & Wrap & "··· —«Ã⁄ ⁄‰ ⁄„·Ì… «· ⁄œÌ·" & Wrap & " ›ﬁÿ ≈÷€ÿ Â‰«", True
+    End With
+
+    With TTP
+        .Create Me.hWnd, "«‘⁄«—  ”œÌœ / «‰–«—", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl Cmd(4), "Õ–› ..." & Wrap & "·Õ–› »Ì«‰«  «·⁄„·Ì… «·Õ«·Ì…" & Wrap & " ›ﬁÿ ≈÷€ÿ Â‰«", True
+    End With
+
+    With TTP
+        .Create Me.hWnd, "«‘⁄«—  ”œÌœ / «‰–«—", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl Cmd(6), "Œ—ÊÃ ..." & Wrap & "·«€·«ﬁ Â–Â «·‰«›–…" & Wrap, True
+    End With
+
+    With TTP
+        .Create Me.hWnd, "«‘⁄«—  ”œÌœ / «‰–«—", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl XPBtnMove(1), "«·√Ê· ..." & Wrap & "··«‰ ﬁ«· «·Ï √Ê· ”Ã·" & Wrap & " ›ﬁÿ ≈÷€ÿ Â‰«", True
+    End With
+
+    With TTP
+        .Create Me.hWnd, "«‘⁄«—  ”œÌœ / «‰–«—", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl XPBtnMove(0), "«·”«»ﬁ ..." & Wrap & "··«‰ ﬁ«· «·Ï «·”Ã· «·”«»ﬁ" & Wrap & " ›ﬁÿ ≈÷€ÿ Â‰«", True
+    End With
+
+    With TTP
+        .Create Me.hWnd, "«‘⁄«—  ”œÌœ / «‰–«—", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl XPBtnMove(3), "«· «·Ì ..." & Wrap & "··«‰ ﬁ«· «·Ï «·”Ã· «· «·Ì" & Wrap & " ›ﬁÿ ≈÷€ÿ Â‰«", True
+    End With
+
+    With TTP
+        .Create Me.hWnd, "«‘⁄«—  ”œÌœ / «‰–«—", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl XPBtnMove(2), "«·√ŒÌ— ..." & Wrap & "··«‰ ﬁ«· «·Ï ¬Œ— ”Ã·" & Wrap & " ›ﬁÿ ≈÷€ÿ Â‰«", True
+    End With
+
+    With TTP
+        .Create Me.hWnd, "«‘⁄«—  ”œÌœ / «‰–«—", 1, 15204351, -2147483630
+        .MaxWidth = 4000
+        .VisibleTime = 9000
+        .DelayTime = 600
+        .AddControl CmdHelp, "„”«⁄œ… ..." & Wrap & "·· ⁄—› ⁄·Ï ÊŸÌ›… Â–Â «·‰«›–…" & Wrap & "ÊﬂÌ›Ì… «· ⁄«„· „⁄Â«" & Wrap & "≈÷€ÿ Â‰«" & Wrap, True
+    End With
+
+    Exit Sub
+ErrTrap:
+End Sub
+
+Private Sub Form_QueryUnload(Cancel As Integer, _
+                             UnloadMode As Integer)
+    Dim IntResult As String
+    Dim StrMSG As String
+    On Error GoTo ErrTrap
+
+    If Me.TxtModFlg.Text <> "R" Then
+
+        Select Case Me.TxtModFlg.Text
+
+            Case "N"
+    
+                If SystemOptions.UserInterface = EnglishInterface Then
+                    StrMSG = "You will close this screen before save " & CHR(13)
+                    StrMSG = StrMSG & " the new data  " & CHR(13)
+                    StrMSG = StrMSG & " do you want save before exit" & CHR(13)
+                    StrMSG = StrMSG & "yes" & "-" & "save the new data" & CHR(13)
+                    StrMSG = StrMSG & "no" & "-" & "Don't save" & CHR(13)
+                    StrMSG = StrMSG & "cancel" & "-" & "Cancel Exit" & CHR(13)
+    
+                Else
+                    StrMSG = "”Ê› Ì „ €·ﬁ «·‘«‘… Ê·„  ‰ Â „‰  ”ÃÌ·" & CHR(13)
+                    StrMSG = StrMSG & " «·»Ì«‰«  «·ÃœÌœ… «·Õ«·Ì… " & CHR(13)
+                    StrMSG = StrMSG & " Â·  —Ìœ «·Õ›Ÿ ﬁ»· «·Œ—ÊÃ" & CHR(13)
+                    StrMSG = StrMSG & "‰⁄„" & "-" & "Ì „ Õ›Ÿ «·»Ì«‰«  «·ÃœÌœ…" & CHR(13)
+                    StrMSG = StrMSG & "·«" & "-" & "·‰ Ì „ «·Õ›Ÿ" & CHR(13)
+                    StrMSG = StrMSG & "≈·€«¡ «·√„—" & "-" & "≈·€«¡ ⁄„·Ì… «·Œ—ÊÃ" & CHR(13)
+        
+                End If
+        
+            Case "E"
+
+                If SystemOptions.UserInterface = EnglishInterface Then
+                    StrMSG = "You will close this screen before save  " & CHR(13)
+                    StrMSG = StrMSG & " the Modifications  " & CHR(13)
+                    StrMSG = StrMSG & " do you want save before exit" & CHR(13)
+                    StrMSG = StrMSG & "yes" & "-" & "save the new data" & CHR(13)
+                    StrMSG = StrMSG & "no" & "-" & "Don't save" & CHR(13)
+                    StrMSG = StrMSG & "cancel" & "-" & "Cancel Exit" & CHR(13)
+    
+                Else
+                    StrMSG = "”Ê› Ì „ €·ﬁ «·‘«‘… Ê·„  ‰ Â „‰  ”ÃÌ·" & CHR(13)
+                    StrMSG = StrMSG & " «· ⁄œÌ·«  «·ÃœÌœ… ⁄·Ï «·”Ã· «·Õ«·Ï " & CHR(13)
+                    StrMSG = StrMSG & " Â·  —Ìœ «·Õ›Ÿ ﬁ»· «·Œ—ÊÃ" & CHR(13)
+                    StrMSG = StrMSG & "‰⁄„" & "-" & "Ì „ Õ›Ÿ «· ⁄œÌ·«   «·ÃœÌœ…" & CHR(13)
+                    StrMSG = StrMSG & "·«" & "-" & "·‰ Ì „ «·Õ›Ÿ" & CHR(13)
+                    StrMSG = StrMSG & "≈·€«¡ «·√„—" & "-" & "≈·€«¡ ⁄„·Ì… «·Œ—ÊÃ" & CHR(13)
+                
+                End If
+
+        End Select
+
+        IntResult = MsgBox(StrMSG, vbMsgBoxRight + vbYesNoCancel + vbMsgBoxRtlReading + vbQuestion, App.title)
+
+        Select Case IntResult
+
+            Case vbYes
+                Cancel = True
+       
+                SaveData
+
+                ' btnSave
+            Case vbCancel
+                Cancel = True
+        End Select
+
+    End If
+
+    Exit Sub
+ErrTrap:
+End Sub
+
+
+Private Sub XPDtbTrans_Change()
+If Me.TxtModFlg.Text <> "R" Then
+         NourHijriCal1.value = ToHijriDate(XPDtbTrans.value)
+End If
+End Sub
+

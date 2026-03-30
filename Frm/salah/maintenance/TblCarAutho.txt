@@ -1,0 +1,49 @@
+ If DB_CreateTable("TblCardAuthorizationReform", True, "ID", False) = True Then
+                        DB_CreateField "TblCardAuthorizationReform", "RecordDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+                        DB_CreateField "TblCardAuthorizationReform", "ClientName", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCardAuthorizationReform", "Telephone", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCardAuthorizationReform", "UserID", adInteger, adColNullable, , , ""
+                        DB_CreateField "TblCardAuthorizationReform", "Posted", adInteger, adColNullable, , , ""
+                        DB_CreateField "TblCardAuthorizationReform", "CarTypeID", adInteger, adColNullable, , , ""
+                        DB_CreateField "TblCardAuthorizationReform", "CarModelID", adInteger, adColNullable, , , ""
+                         DB_CreateField "TblCardAuthorizationReform", "PlateNo", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCardAuthorizationReform", "BranchID", adInteger, adColNullable, , , ""
+                        DB_CreateField "TblCardAuthorizationReform", "ColorID", adInteger, adColNullable, , , ""
+                        DB_CreateField "TblCardAuthorizationReform", "YearFact", adInteger, adColNullable, , , ""
+                        
+                        DB_CreateField "TblCardAuthorizationReform", "OrderStatus", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                        DB_CreateField "TblCardAuthorizationReform", "Accept", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                        DB_CreateField "TblCardAuthorizationReform", "EndDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+                        End If
+                        
+                         DB_CreateField "TblCardAuthorizationReform", "subcar1", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                          DB_CreateField "TblCardAuthorizationReform", "subcar2", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                            DB_CreateField "TblCardAuthorizationReform", "subcar3", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                             
+                          DB_CreateField "TblCardAuthorizationReform", "subcar4", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                            DB_CreateField "TblCardAuthorizationReform", "subcar5", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                              DB_CreateField "TblCardAuthorizationReform", "subcar6", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                                DB_CreateField "TblCardAuthorizationReform", "subcar7", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                                  DB_CreateField "TblCardAuthorizationReform", "subcar8", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                                    DB_CreateField "TblCardAuthorizationReform", "subcar9", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                                     DB_CreateField "TblCardAuthorizationReform", "subcar10", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                         DB_CreateField "TblCardAuthorizationReform", "Month_Day", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                                       DB_CreateField "TblCardAuthorizationReform", "Granty", adInteger, adColNullable, , , ""
+                                     DB_CreateField "TblCardAuthorizationReform", "DateStartG", adDBTimeStamp, adColNullable, , , "      ", False, True
+                                     DB_CreateField "TblCardAuthorizationReform", "DateEndG", adDBTimeStamp, adColNullable, , , "      ", False, True
+                                     DB_CreateField "TblCardAuthorizationReform", "CarMeter", adVarWChar, adColNullable, 255, , "C??ICI   ", False, True, , True
+                                     DB_CreateField "TblCardAuthorizationReform", "LongGranty", adVarWChar, adColNullable, 255, , "?IE C???C?   ", False, True, , True
+                                       DB_CreateField "TblCardAuthorizationReform", "PayFirst", adDouble, adColNullable, , , "    ", False, True
+                                         DB_CreateField "TblCardAuthorizationReform", "AmountAccept", adDouble, adColNullable, , , "    ", False, True
+                                          DB_CreateField "TblCardAuthorizationReform", "Complaint", adVarWChar, adColNullable, 4000, , "O??? ?? C?????    ", False
+                                           DB_CreateField "TblCardAuthorizationReform", "Noteinitial", adVarWChar, adColNullable, 4000, , "??C?UE ?EI??E    ", False
+                      ''''''''''''''///////////////////?I?? E?C??? E?C?E ??? ????
+                      If DB_CreateTable("TblCardAuthorizationReformDetails", True, "ID2", True) = True Then
+                          DB_CreateField "TblCardAuthorizationReformDetails", "ID", adInteger, adColNullable, , , ""
+                          DB_CreateField "TblCardAuthorizationReformDetails", "Type", adInteger, adColNullable, , , ""
+                          DB_CreateField "TblCardAuthorizationReformDetails", "Mainte", adInteger, adColNullable, , , ""
+                          DB_CreateField "TblCardAuthorizationReformDetails", "Value", adDouble, adColNullable, , , "    ", False, True
+                         End If
+                         DB_CreateField "TblCardAuthorizationReformDetails", "count", adInteger, adColNullable, , , ""
+                           DB_CreateField "TblCardAuthorizationReformDetails", "comp", adVarWChar, adColNullable, 255, , "C?? C?EC??     ", False
+                         DB_CreateField "TblCardAuthorizationReformDetails", "bill", adVarWChar, adColNullable, 255, , "??? C??CE??E      ", False

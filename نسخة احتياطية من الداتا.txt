@@ -1,0 +1,16 @@
+DECLARE @name VARCHAR(50) 
+DECLARE @path VARCHAR(256)
+DECLARE @fileName VARCHAR(256) 
+DECLARE @fileDate VARCHAR(20) 
+ Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=byte;Data Source=server;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=SERVER;Use Encryption for Data=False;Tag with column collation when possible=False;
+
+SET @path = 'D:\Byte\Dynamic Byte\Backup'  
+
+ 
+ 
+SELECT @fileDate = replace(convert(varchar, getdate(),101),'/','') + replace(convert(varchar, getdate(),108),':','')
+ 
+ SET @name = 'Byte'
+
+   SET @fileName = @path + @name + '_' + @fileDate + '.BAK'  
+   BACKUP DATABASE @name TO DISK = @fileName

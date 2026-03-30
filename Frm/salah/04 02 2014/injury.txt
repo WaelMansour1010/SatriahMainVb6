@@ -1,0 +1,20 @@
+ If DB_CreateTable("TblInjury", True, "ID", False) = True Then
+                      DB_CreateField "TblInjury", "RecordDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+                      DB_CreateField "TblInjury", "EmpID", adInteger, adColNullable, , , ""
+                       DB_CreateField "TblInjury", "JobID", adInteger, adColNullable, , , ""
+                       DB_CreateField "TblInjury", "BranchID", adInteger, adColNullable, , , ""
+                       DB_CreateField "TblInjury", "UserID", adInteger, adColNullable, , , ""
+                    DB_CreateField "TblInjury", "Posted", adInteger, adColNullable, , , ""
+                     DB_CreateField "TblInjury", "ProjectID", adInteger, adColNullable, , , ""
+                    DB_CreateField "TblInjury", "DeptID", adInteger, adColNullable, , , ""
+                     DB_CreateField "TblInjury", "DateInj", adDBTimeStamp, adColNullable, , , "      ", False, True
+                       DB_CreateField "TblInjury", "TimeInj", adDBTimeStamp, adColNullable, , , "      ", False, True
+                       DB_CreateField "TblInjury", "Location", adVarWChar, adColNullable, 400, , "ECEE    ", False, True, , True
+                         DB_CreateField "TblInjury", "Typenj", adBoolean, adColNullable, , , "??? C? ?C ", False, True
+                        DB_CreateField "TblInjury", "Des", adVarWChar, adColNullable, 400, , "ECEE    ", False, True, , True
+                         DB_CreateField "TblInjury", "Reason", adVarWChar, adColNullable, 400, , "ECEE    ", False, True, , True
+                          DB_CreateField "TblInjury", "HosName", adVarWChar, adColNullable, 100, , "ECEE    ", False, True, , True
+                          DB_CreateField "TblInjury", "RefHos", adBoolean, adColNullable, , , "??? C? ?C ", False, True
+                           DB_CreateField "TblInjury", "Remark", adVarWChar, adColNullable, 400, , "ECEE    ", False, True, , True
+                            DB_CreateField "TblInjury", "Witnesses", adVarWChar, adColNullable, 400, , "ECEE    ", False, True, , True
+                    End If

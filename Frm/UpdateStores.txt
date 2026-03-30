@@ -1,0 +1,20 @@
+UPDATE DOUBLE_ENTREY_VOUCHERS
+ SET    Account_Code     = 'a1a2a3a1a6a1'
+ WHERE  Account_Code     = 'a1a2a3a1a3a1'
+AND Credit_Or_Debit = 1
+        AND Notes_ID IN (SELECT NoteID
+                         FROM   Notes
+                         WHERE  NoteID IN (SELECT NoteId
+                                           FROM   Transactions AS t
+                                           WHERE  t.Transaction_Type = 19)
+                                AND (NoteType = 170 OR NoteType = 180))
+ 
+ 
+ 
+        
+        UPDATE Notes SET NoteType = 180 
+        WHERE  NoteID IN (SELECT NoteId
+                   FROM   Transactions AS t
+                   WHERE  t.Transaction_Type = 19)
+        AND NoteType = 170
+        

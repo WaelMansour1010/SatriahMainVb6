@@ -1,0 +1,10 @@
+       If DB_CreateTable("TblFinalSettl", True, "ID", False) = True Then
+                      DB_CreateField "TblFinalSettl", "RecordDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+                      DB_CreateField "TblFinalSettl", "EmpID", adInteger, adColNullable, , , ""
+                       DB_CreateField "TblFinalSettl", "NationalID", adInteger, adColNullable, , , ""
+                       DB_CreateField "TblFinalSettl", "BranchID", adInteger, adColNullable, , , ""
+                       DB_CreateField "TblFinalSettl", "FileNo", adVarWChar, adColNullable, 4000, , "ECEE    ", False, True, , True
+                          DB_CreateField "TblFinalSettl", "UserID", adInteger, adColNullable, , , ""
+                    DB_CreateField "TblFinalSettl", "Posted", adInteger, adColNullable, , , ""
+                    DB_CreateField "TblFinalSettl", "EndDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+                    End If

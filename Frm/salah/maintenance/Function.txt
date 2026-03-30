@@ -1,0 +1,35 @@
+Public Function GetClientName(MyCombo As DataCombo, _
+                             Optional WorkState As Boolean = False, _
+                             Optional DriverOnly As Boolean = False)
+    Dim StrSQL As String
+
+    If SystemOptions.UserInterface = ArabicInterface Then
+        StrSQL = "SELECT ID,ClientName From TblCardAuthorizationReform Where 1=1  "
+    Else
+        StrSQL = "SELECT ID,ClientName From TblCardAuthorizationReform Where 1=1  "
+    End If
+
+    If WorkState = True Then
+        StrSQL = StrSQL + " and  workstate=1"
+    End If
+
+    If DriverOnly = True Then
+        StrSQL = StrSQL + " and  not(driverid is null)"
+    End If
+
+    StrSQL = StrSQL + " Order By ClientName ASC"
+    GetComboData MyCombo, StrSQL
+End Function
+'''''''///////////////////
+Public Function GetTblMaintenanceWork(MyCombo As DataCombo, _
+                                    Optional BolLoadAdmins As Boolean = True)
+    Dim StrSQL As String
+
+    If SystemOptions.UserInterface = ArabicInterface Then
+        StrSQL = "SELECT id,name From TblMaintenanceWork ORDER BY ID "
+    Else
+        StrSQL = "SELECT id,namee From TblMaintenanceWork ORDER BY ID"
+    End If
+ 
+    GetComboData MyCombo, StrSQL
+End Function

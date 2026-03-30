@@ -1,0 +1,13 @@
+Provider=SQLOLEDB.1;Password=Admin@123;Persist Security Info=True;User ID=sa;Initial Catalog=othman2;Data Source=salim\sql
+
+1000qassem.gotdns.com\MSSQLSERVER12,1433
+Provider=SQLOLEDB.1;Password=Admin@123;Persist Security Info=True;User ID=sa;Initial Catalog=Byte;Data Source=allajazera.gotdns.com\mssqlserver,1433
+
+Provider=SQLOLEDB.1;Password=Admin@123;Persist Security Info=True;User ID=sa;Initial Catalog=byte;Data Source=allajazera.gotdns.com\mssqlserver,1433
+
+1000qassem.gotdns.com\SERVER\MSSQLSERVER12,14..
+
+allajazera.gotdns.com\mssqlserver,1433
+
+1000qassem.gotdns.com\MSSQLSERVER12,1433
+

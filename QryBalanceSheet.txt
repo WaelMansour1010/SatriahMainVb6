@@ -1,0 +1,55 @@
+CREATE FUNCTION [dbo].[QryBalanceSheet] (@fromdate datetime,@todate datetime)  
+RETURNS @XTable Table 
+(
+	DebitValue Decimal (18,2),
+	CreditValue Decimal (18,2),
+	Account_Code nvarchar(255),
+	Account_Name nvarchar(255),
+	Account_Serial nvarchar(255),
+	Account_NameEng nvarchar(255),
+	last_Account int,
+	Parent_Account_Code nvarchar(255)
+              
+)
+AS  
+
+BEGIN 
+	INSERT  @XTable
+        	Select Sum(DEV_Value1) as DebitValue,Sum(DEV_Value2) as CreditValue,Account_Code,
+	Account_Name,Account_Serial, Account_NameEng,last_Account,Parent_Account_Code
+	From
+	(
+	SELECT  
+	DEV_Value1=Case
+	When Credit_Or_Debit=0   Then DEV_Value * 1
+	Else 0 
+	END,
+	DEV_Value2=Case
+	When Credit_Or_Debit=1  Then DEV_Value * 1 	
+	Else 0 
+	END
+	
+	, dbo.Accounts.Account_Code, dbo.Accounts.Account_Name, dbo.Accounts.Account_Serial,
+	 dbo.Accounts.Account_NameEng,dbo.Accounts.Parent_Account_Code,dbo.Accounts.last_Account,AccountTypes
+	FROM         dbo.RptLedger_Sub Right Join dbo.Accounts on 
+	dbo.RptLedger_Sub.Account_Code=dbo.Accounts.Account_Code
+	        	 where (dbo.RptLedger_Sub.RecordDate >=@fromdate and  dbo.RptLedger_Sub.RecordDate <= @todate)  or (   dbo.RptLedger_Sub.RecordDate is null)
+	)XTable
+              Where (AccountTypes=1 )
+ 
+	Group by Account_Code, Account_Name, Account_Serial, Account_NameEng,last_Account,Parent_Account_Code
+	Order by Account_Code ASC
+
+        RETURN
+END
+
+
+
+
+
+
+
+
+
+
+

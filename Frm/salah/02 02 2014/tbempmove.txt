@@ -1,0 +1,20 @@
+  If DB_CreateTable("TblMoveEmp1", True, "ID", False) = True Then
+                    DB_CreateField "TblMoveEmp1", "BranchID", adInteger, adColNullable, , , "    ", False, True
+                    DB_CreateField "TblMoveEmp1", "RecordDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+                    DB_CreateField "TblMoveEmp1", "EmpID", adInteger, adColNullable, , , "    ", False, True
+                    DB_CreateField "TblMoveEmp1", "FromDepart", adInteger, adColNullable, , , "    ", False, True
+                    DB_CreateField "TblMoveEmp1", "ToDepart", adInteger, adColNullable, , , "    ", False, True
+                    DB_CreateField "TblMoveEmp1", "JobID", adInteger, adColNullable, , , "    ", False, True
+                    DB_CreateField "TblMoveEmp1", "ManagerID", adInteger, adColNullable, , , "    ", False, True
+                    DB_CreateField "TblMoveEmp1", "moveDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+    
+                    
+                 
+            End If
+                  DB_CreateField "TblMoveEmp1", "UserID", adInteger, adColNullable, , , "    ", False, True
+                            DB_CreateField "TblMoveEmp1", "JobTo", adInteger, adColNullable, , , "    ", False, True
+                    DB_CreateField "TblMoveEmp1", "ProjectFrom", adInteger, adColNullable, , , "    ", False, True
+                    DB_CreateField "TblMoveEmp1", "ProjectTo", adInteger, adColNullable, , , "    ", False, True
+                    DB_CreateField "TblMoveEmp1", "basicSalary", adDouble, adColNullable, , , "    ", False, True
+                  DB_CreateField "TblMoveEmp1", "Reson", adVarWChar, adColNullable, 4000, , "?EE ??E C????   ", False, True, , True
+                  DB_CreateField "TblMoveEmp1", "posted", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True

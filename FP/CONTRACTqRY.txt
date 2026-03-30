@@ -1,0 +1,29 @@
+SELECT        dbo.TblContract.Contract_period, dbo.TblContract.Contract_period_no, dbo.TblContract.StrMerg, dbo.TblAqar.Aqarid, dbo.TblAqar.aqarNo, dbo.TblAqar.aqartypeid, dbo.TblAqar.CountryID, dbo.TblCountriesData.CountryName, 
+                         dbo.TblAqar.cityid, dbo.TblCountriesGovernments.GovernmentName, dbo.TblAqar.heyid, dbo.TblCountriesGovernmentsCities.CityName, dbo.TblAqar.streetname, dbo.TblAqar.schemeid, dbo.tblSchemes.name AS SchemeName, 
+                         dbo.tblSchemes.namee AS SchemeNameE, dbo.TblAqar.StatusId, dbo.TblAqar.floorcount, dbo.TblAqar.Location, dbo.TblAqar.aqarname, dbo.TblContract.ContNo, dbo.TblContract.ContType, dbo.TblContract.ContDate, 
+                         dbo.TblContract.Iqar, dbo.TblContract.UnitType, dbo.TblAkarUnit.namee, dbo.TblContract.UnitNo, dbo.TblAqarDetai.unitno AS unitnoName, dbo.TblContract.RentType, dbo.TblContract.StrDate, dbo.TblContract.EndDate, 
+                         dbo.TblContract.MeterValue, dbo.TblContract.MeterCount, dbo.TblContract.TotalContract, dbo.TblContract.PayAmini, dbo.TblContract.CommiValue, dbo.TblContract.InsuranceValue, dbo.TblContract.Water, 
+                         dbo.TblContract.Electricity, dbo.TblContract.Phone, dbo.TblContract.Enternet, dbo.TblContract.IncresYearValue, dbo.TblContract.IncresYearRate, dbo.TblContract.PaymentCount, dbo.TblContract.FristPaymentDate, 
+                         dbo.TblContract.PeriodsID, dbo.TblContract.Periods, dbo.TblContract.CusID, dbo.TblCustemers.CusName, dbo.TblCustemers.CusNamee, dbo.TblCustemers.Fullcode, dbo.TblCustemers.ResponsibleContact, 
+                         dbo.TblCustemers.Cus_Phone, dbo.TblCustemers.Cus_mobile, dbo.TblCustemers.CountryID2, dbo.Nationality.name AS Natinname, dbo.Nationality.namee AS NatinnameE, dbo.TblContract.Furnishing, dbo.TblContract.Remarks, 
+                         dbo.TblContract.RecorddateH, dbo.TblContract.FromdateH, dbo.TblContract.TodateH, dbo.TblContract.FirstInstallDateH, dbo.TblContract.Branch_NO, dbo.TblBranchesData.branch_name, dbo.TblBranchesData.branch_namee, 
+                         dbo.TblContract.NoteSerial, dbo.TblContract.NoteSerial1, dbo.TblContract.NewOrOpeneing, dbo.TblContract.OthersRules, dbo.TblCustemers.CustGID, dbo.TblCustemers.ExpireDateH, dbo.TblCustemers.E_mail, 
+                         dbo.TblCustemers.JobAddress, dbo.TblCustemers.Address, dbo.TblAqarDetai.roomscount, dbo.TblAqarDetai.meterPrice, dbo.TblAqarDetai.WCcount, dbo.TblAqarDetai.kithchencount, dbo.TblAqarDetai.length, 
+                         dbo.TblAqarDetai.haveFurniture, dbo.TblAqarDetai.namerentType, dbo.TblAqarDetai.Floor, dbo.TblAqarDetai.LoungeCount, dbo.TblAqarDetai.ACCount, dbo.TblAqarDetai.Water AS WaterDet, dbo.TblAqarDetai.electric, 
+                         dbo.TblAqarDetai.ACCountspleat, dbo.TblAqarDetai.UnitElectric, dbo.TblCustemers.CustGIDPlace, dbo.TblAkarUnit.name, dbo.tblAkarType.name AS AqrType, dbo.tblAkarType.namee AS AqrTypeE, dbo.TblCustemers.BrithDateH, 
+                         dbo.TblCustemers.BrithDate, dbo.TblCustemers.RecordNo, dbo.tblCustomerFingers.ItemPhoto, dbo.tblCustomerFingers.ItemPhoto1, dbo.tblCustomerFingers.ItemPhoto3
+FROM            dbo.TblAkarUnit RIGHT OUTER JOIN
+                         dbo.tblCustomerFingers INNER JOIN
+                         dbo.TblContract ON dbo.tblCustomerFingers.FCusID = dbo.TblContract.CusID LEFT OUTER JOIN
+                         dbo.TblBranchesData ON dbo.TblContract.Branch_NO = dbo.TblBranchesData.branch_id LEFT OUTER JOIN
+                         dbo.TblCustemers LEFT OUTER JOIN
+                         dbo.Nationality ON dbo.TblCustemers.CountryID2 = dbo.Nationality.id ON dbo.TblContract.CusID = dbo.TblCustemers.CusID LEFT OUTER JOIN
+                         dbo.TblAqarDetai ON dbo.TblContract.UnitNo = dbo.TblAqarDetai.Id ON dbo.TblAkarUnit.id = dbo.TblContract.UnitType LEFT OUTER JOIN
+                         dbo.tblAkarType RIGHT OUTER JOIN
+                         dbo.TblAqar ON dbo.tblAkarType.id = dbo.TblAqar.aqartypeid ON dbo.TblContract.Iqar = dbo.TblAqar.Aqarid LEFT OUTER JOIN
+                         dbo.tblSchemes ON dbo.TblAqar.schemeid = dbo.tblSchemes.id LEFT OUTER JOIN
+                         dbo.TblCountriesGovernments INNER JOIN
+                         dbo.TblCountriesGovernmentsCities ON dbo.TblCountriesGovernments.GovernmentID = dbo.TblCountriesGovernmentsCities.GovernmentID INNER JOIN
+                         dbo.TblCountriesData ON dbo.TblCountriesGovernments.CountryID = dbo.TblCountriesData.CountryID ON dbo.TblAqar.heyid = dbo.TblCountriesGovernmentsCities.CityID AND 
+                         dbo.TblAqar.cityid = dbo.TblCountriesGovernments.GovernmentID AND dbo.TblAqar.CountryID = dbo.TblCountriesData.CountryID
+WHERE        (dbo.TblContract.ContNo = 488)

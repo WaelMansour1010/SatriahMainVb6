@@ -1,0 +1,994 @@
+[Root]
+Most Recent Package=Standard Setup Package 3
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\my works\accountant\accountant\SourceCode\SourceCode\Package
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+Flash10c.ocx=D:\programming sw\ocx\Flash10c.ocx
+u2dapp.dll=D:\ ﬁ«—Ì— «·»—„Ã…\PACKAGE DLL\u2dapp.dll
+sscrc.dll=D:\ ﬁ«—Ì— «·»—„Ã…\PACKAGE DLL\sscrc.dll
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+D:\programming sw\ocx\Flash10c.ocx=
+C:\Program Files\Microsoft SQL Server\80\Tools\Binn\stardds.dll=
+C:\Windows\System32\SmartMenuXP.ocx=
+C:\Windows\System32\SuperLablel.ocx=
+C:\Windows\System32\ciaXPLabel30.ocx=
+C:\Windows\System32\ALLBUTTONS.ocx=
+C:\Program Files\DBPix 2.0 Control\DBPix20.ocx=
+C:\Windows\System32\ReportControl.ocx=
+C:\Windows\System32\Calendar.ocx=
+C:\Windows\System32\SuiteCtrls.ocx=
+C:\Windows\System32\DockingPane.ocx=
+C:\Windows\System32\CommandBars.ocx=
+C:\Windows\System32\TaskPanel.ocx=
+C:\Windows\System32\AniGIF.ocx=
+C:\Windows\System32\vbalIml6.ocx=
+C:\Windows\System32\cPopMenu6.ocx=
+C:\Program Files\dLSoft\Axbarcode\axbarcode.ocx=
+C:\Windows\System32\ciaXPPopUp30.ocx=
+C:\Windows\System32\ciaXPIML30.ocx=
+C:\Windows\System32\vsvport8.ocx=
+C:\Windows\System32\vsrpt8.ocx=
+C:\Windows\System32\vsdraw8.ocx=
+C:\Windows\System32\vsprint8.ocx=
+C:\Windows\System32\vspdf8.ocx=
+C:\Windows\System32\vsflex8l.ocx=
+C:\Windows\System32\VDSCombo.DLL=
+C:\Program Files\Common Files\System\ado\msado28.tlb=
+C:\Windows\System32\wbem\wbemdisp.tlb=
+C:\Windows\System32\vsflex8.ocx=
+C:\Program Files\Developer Express Inc\XpressSideBar\dXSBar.dll=
+C:\Program Files\Common Files\System\ado\msjro.dll=
+C:\Program Files\Common Files\System\ado\msadox28.tlb=
+C:\Windows\System32\c1sizer.ocx=
+C:\Windows\System32\vsflex8u.ocx=
+C:\Windows\System32\ISWin32.tlb=
+C:\Windows\System32\SHELLLNK.TLB=
+C:\Windows\System32\ImpulseASM.dll=
+C:\Windows\System32\wininet.dll=
+C:\Windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7600.16400_none_ebf9dccf6c73e561\comctl32.dll=
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+C:\Program Files\Microsoft Office\OFFICE11\MSCAL.OCX=
+C:\Windows\System32\MSADODC.OCX=
+C:\Windows\System32\ImpulseWizard.ocx=
+C:\Windows\System32\MSCOMCT2.OCX=
+C:\Windows\System32\Mscomctl.ocx=
+C:\Windows\System32\ImpulseButton.ocx=
+C:\Windows\System32\MSDATLST.OCX=
+C:\Windows\System32\comdlg32.ocx=
+C:\Windows\System32\ImpulseAniLabel.ocx=
+C:\Windows\System32\Msstdfmt.dll=
+C:\Windows\System32\MSDBRPTR.DLL=
+C:\Windows\System32\scrrun.dll=
+C:\Windows\System32\ImpulseGlobals.dll=
+
+[Package|Standard Setup Package 1|Files Added]
+
+[Package|Standard Setup Package 1|Files Removed]
+
+[Package|Standard Setup Package 1|Files In Project]
+D:\my works\accountant\accountant\SourceCode\SourceCode\Account_02 02 2011x3.exe=Yes
+C:\Windows\System32\msvbvm60.dll=Yes
+C:\Windows\System32\oleaut32.dll=Yes
+C:\Windows\System32\olepro32.dll=Yes
+C:\Windows\System32\asycfilt.dll=Yes
+C:\Windows\System32\stdole2.tlb=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7600.16400_none_ebf9dccf6c73e561\comctl32.dll=Yes
+C:\Windows\System32\hhctrl.ocx=Yes
+C:\Windows\System32\itss.dll=Yes
+C:\Windows\System32\itircl.dll=Yes
+C:\Windows\hh.exe=Yes
+C:\Windows\System32\wininet.dll=Yes
+C:\Windows\System32\ImpulseGlobals.dll=Yes
+C:\Windows\System32\ImpulseASM.dll=Yes
+C:\Windows\System32\scrrun.dll=Yes
+C:\Windows\System32\msvcrt.dll=Yes
+C:\Windows\System32\SHELLLNK.TLB=Yes
+C:\Windows\System32\ISWin32.tlb=Yes
+C:\Windows\System32\vsflex8u.ocx=Yes
+C:\Windows\System32\c1sizer.ocx=Yes
+C:\Windows\System32\MSDBRPTR.DLL=Yes
+C:\Windows\System32\Msstdfmt.dll=Yes
+C:\Program Files\Common Files\System\ado\msadox28.tlb=Yes
+C:\Program Files\Common Files\System\ado\msjro.dll=Yes
+C:\Program Files\Developer Express Inc\XpressSideBar\dXSBar.dll=Yes
+C:\Windows\System32\vsflex8.ocx=Yes
+C:\Windows\System32\wbem\wbemdisp.tlb=Yes
+C:\Program Files\Common Files\System\ado\msado28.tlb=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\crystalreportviewers10\ActiveXControls\crviewer.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\craxdrt.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\craxddrt.dll=Yes
+D:\ ﬁ«—Ì— «·»—„Ã…\PACKAGE DLL\unicows.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crtowords_en.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\ufmanager.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2l2000.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2lcom.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2ldts.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2lexch.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2lfinra.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u252000.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u25dts.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u25samp1.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\Implode.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crqe.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crdb_ado.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crdb_dao.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crdb_odbc.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\querybuilder.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\exlate32.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\sscsdk80.dll=Yes
+D:\ ﬁ«—Ì— «·»—„Ã…\PACKAGE DLL\sscrc.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\sscdlg.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\CRAnalyzer.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\p2ixbse.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crdb_dictionary.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\filedialog.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\sacommoncontrols.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crxf_pdf.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\ExportModeller.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crtslv.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crxf_rtf.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crxf_wordw.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crxf_xls.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2fcr.dll=Yes
+D:\ ﬁ«—Ì— «·»—„Ã…\PACKAGE DLL\u2fsepv.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2ftext.dll=Yes
+D:\ ﬁ«—Ì— «·»—„Ã…\PACKAGE DLL\u2fxml.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2ddisk.dll=Yes
+D:\ ﬁ«—Ì— «·»—„Ã…\PACKAGE DLL\u2dpost.dll=Yes
+D:\ ﬁ«—Ì— «·»—„Ã…\PACKAGE DLL\u2dapp.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\keycode.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crdeploy.reg=Yes
+C:\Windows\System32\VDSCombo.DLL=Yes
+C:\Windows\System32\vsflex8l.ocx=Yes
+C:\Windows\System32\vspdf8.ocx=Yes
+C:\Windows\System32\vsprint8.ocx=Yes
+C:\Windows\System32\vsdraw8.ocx=Yes
+C:\Windows\System32\vsrpt8.ocx=Yes
+C:\Windows\System32\vsvport8.ocx=Yes
+C:\Windows\System32\ciaXPIML30.ocx=Yes
+C:\Windows\System32\ciaXPPopUp30.ocx=Yes
+C:\Windows\System32\ImpulseAniLabel.ocx=Yes
+C:\Windows\System32\comdlg32.ocx=Yes
+C:\Windows\System32\MSSTKPRP.DLL=Yes
+C:\Windows\System32\MSDATLST.OCX=Yes
+C:\Program Files\dLSoft\Axbarcode\axbarcode.ocx=Yes
+C:\Windows\System32\ImpulseButton.ocx=Yes
+C:\Windows\System32\MBClrPkr.ocx=Yes
+C:\Windows\System32\Mscomctl.ocx=Yes
+C:\Windows\System32\MSCOMCT2.OCX=Yes
+C:\Windows\System32\cPopMenu6.ocx=Yes
+C:\Windows\System32\vbalIml6.ocx=Yes
+C:\Windows\System32\ImpulseWizard.ocx=Yes
+C:\Windows\System32\AniGIF.ocx=Yes
+C:\Windows\System32\TaskPanel.ocx=Yes
+C:\Windows\System32\CommandBars.ocx=Yes
+C:\Windows\System32\DockingPane.ocx=Yes
+C:\Windows\System32\SuiteCtrls.ocx=Yes
+C:\Windows\System32\Calendar.ocx=Yes
+C:\Windows\System32\ReportControl.ocx=Yes
+C:\Windows\System32\MSADODC.OCX=Yes
+C:\Program Files\DBPix 2.0 Control\DBPix20.ocx=Yes
+C:\Windows\System32\ALLBUTTONS.ocx=Yes
+C:\Windows\System32\MSBIND.DLL=Yes
+C:\Windows\System32\ciaXPLabel30.ocx=Yes
+C:\Windows\System32\SuperLablel.ocx=Yes
+C:\Windows\System32\MSDATGRD.OCX=Yes
+C:\Windows\System32\SmartMenuXP.ocx=Yes
+C:\Program Files\Microsoft Office\OFFICE11\MSCAL.OCX=Yes
+C:\Program Files\Microsoft SQL Server\80\Tools\Binn\stardds.dll=Yes
+D:\programming sw\ocx\Flash10c.ocx=Yes
+C:\Windows\System32\TABCTL32.OCX=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Windows\System32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crdeploy.reg=Register
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+D:\my works\accountant\accountant\SourceCode\SourceCode\Account_02 02 2011x3.exe=$(AppPath)
+C:\Windows\System32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Windows\System32\oleaut32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\olepro32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\asycfilt.dll=$(WinSysPathSysFile)
+C:\Windows\System32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7600.16400_none_ebf9dccf6c73e561\comctl32.dll=$(WinSysPath)
+C:\Windows\System32\hhctrl.ocx=$(WinSysPath)
+C:\Windows\System32\itss.dll=$(WinSysPath)
+C:\Windows\System32\itircl.dll=$(WinSysPath)
+C:\Windows\hh.exe=$(WinSysPath)
+C:\Windows\System32\wininet.dll=$(WinSysPath)
+C:\Windows\System32\ImpulseGlobals.dll=$(WinSysPath)
+C:\Windows\System32\ImpulseASM.dll=$(WinSysPath)
+C:\Windows\System32\scrrun.dll=$(WinSysPath)
+C:\Windows\System32\msvcrt.dll=$(WinSysPathSysFile)
+C:\Windows\System32\SHELLLNK.TLB=$(WinSysPath)
+C:\Windows\System32\ISWin32.tlb=$(WinSysPath)
+C:\Windows\System32\vsflex8u.ocx=$(WinSysPath)
+C:\Windows\System32\c1sizer.ocx=$(WinSysPath)
+C:\Windows\System32\MSDBRPTR.DLL=$(WinSysPath)
+C:\Windows\System32\Msstdfmt.dll=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msadox28.tlb=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msjro.dll=$(WinSysPath)
+C:\Program Files\Developer Express Inc\XpressSideBar\dXSBar.dll=$(WinSysPath)
+C:\Windows\System32\vsflex8.ocx=$(WinSysPath)
+C:\Windows\System32\wbem\wbemdisp.tlb=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msado28.tlb=$(WinSysPath)
+C:\Program Files\Common Files\Crystal Decisions\2.5\crystalreportviewers10\ActiveXControls\crviewer.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\craxdrt.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\craxddrt.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+D:\ ﬁ«—Ì— «·»—„Ã…\PACKAGE DLL\unicows.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crtowords_en.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\ufmanager.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2l2000.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2lcom.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2ldts.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2lexch.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2lfinra.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u252000.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u25dts.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u25samp1.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\Implode.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crqe.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crdb_ado.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crdb_dao.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crdb_odbc.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\querybuilder.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\exlate32.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\sscsdk80.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+D:\ ﬁ«—Ì— «·»—„Ã…\PACKAGE DLL\sscrc.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\sscdlg.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\CRAnalyzer.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\p2ixbse.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crdb_dictionary.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\filedialog.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\sacommoncontrols.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crxf_pdf.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\ExportModeller.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crtslv.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crxf_rtf.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crxf_wordw.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crxf_xls.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2fcr.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+D:\ ﬁ«—Ì— «·»—„Ã…\PACKAGE DLL\u2fsepv.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2ftext.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+D:\ ﬁ«—Ì— «·»—„Ã…\PACKAGE DLL\u2fxml.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2ddisk.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+D:\ ﬁ«—Ì— «·»—„Ã…\PACKAGE DLL\u2dpost.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+D:\ ﬁ«—Ì— «·»—„Ã…\PACKAGE DLL\u2dapp.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\keycode.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Windows\System32\VDSCombo.DLL=$(WinSysPath)
+C:\Windows\System32\vsflex8l.ocx=$(WinSysPath)
+C:\Windows\System32\vspdf8.ocx=$(WinSysPath)
+C:\Windows\System32\vsprint8.ocx=$(WinSysPath)
+C:\Windows\System32\vsdraw8.ocx=$(WinSysPath)
+C:\Windows\System32\vsrpt8.ocx=$(WinSysPath)
+C:\Windows\System32\vsvport8.ocx=$(WinSysPath)
+C:\Windows\System32\ciaXPIML30.ocx=$(WinSysPath)
+C:\Windows\System32\ciaXPPopUp30.ocx=$(WinSysPath)
+C:\Windows\System32\ImpulseAniLabel.ocx=$(WinSysPath)
+C:\Windows\System32\comdlg32.ocx=$(WinSysPath)
+C:\Windows\System32\MSSTKPRP.DLL=$(WinSysPath)
+C:\Windows\System32\MSDATLST.OCX=$(WinSysPath)
+C:\Program Files\dLSoft\Axbarcode\axbarcode.ocx=$(WinSysPath)
+C:\Windows\System32\ImpulseButton.ocx=$(WinSysPath)
+C:\Windows\System32\MBClrPkr.ocx=$(WinSysPath)
+C:\Windows\System32\Mscomctl.ocx=$(WinSysPath)
+C:\Windows\System32\MSCOMCT2.OCX=$(WinSysPath)
+C:\Windows\System32\cPopMenu6.ocx=$(WinSysPath)
+C:\Windows\System32\vbalIml6.ocx=$(WinSysPath)
+C:\Windows\System32\ImpulseWizard.ocx=$(WinSysPath)
+C:\Windows\System32\AniGIF.ocx=$(WinSysPath)
+C:\Windows\System32\TaskPanel.ocx=$(WinSysPath)
+C:\Windows\System32\CommandBars.ocx=$(WinSysPath)
+C:\Windows\System32\DockingPane.ocx=$(WinSysPath)
+C:\Windows\System32\SuiteCtrls.ocx=$(WinSysPath)
+C:\Windows\System32\Calendar.ocx=$(WinSysPath)
+C:\Windows\System32\ReportControl.ocx=$(WinSysPath)
+C:\Windows\System32\MSADODC.OCX=$(WinSysPath)
+C:\Program Files\DBPix 2.0 Control\DBPix20.ocx=$(WinSysPath)
+C:\Windows\System32\ALLBUTTONS.ocx=$(WinSysPath)
+C:\Windows\System32\MSBIND.DLL=$(WinSysPath)
+C:\Windows\System32\ciaXPLabel30.ocx=$(WinSysPath)
+C:\Windows\System32\SuperLablel.ocx=$(WinSysPath)
+C:\Windows\System32\MSDATGRD.OCX=$(WinSysPath)
+C:\Windows\System32\SmartMenuXP.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Office\OFFICE11\MSCAL.OCX=$(WinSysPath)
+C:\Program Files\Microsoft SQL Server\80\Tools\Binn\stardds.dll=$(AppPath)
+D:\programming sw\ocx\Flash10c.ocx=$(WinSysPath)
+C:\Windows\System32\TABCTL32.OCX=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\Windows\System32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+D:\my works\accountant\accountant\SourceCode\SourceCode\Account_02 02 2011x3.exe=No
+C:\Program Files\Microsoft SQL Server\80\Tools\Binn\stardds.dll=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=»—‰«„Ã «·„Õ«”» «·⁄—»Ï «·„ ﬂ«„·
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=»—‰«„Ã «·„Õ«”» «·⁄—»Ï «·„ ﬂ«„·
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|»—‰«„Ã «·„Õ«”» «·⁄—»Ï «·„ ﬂ«„·]
+Icon1="Account_02 02 2011x3.exe"
+Title1=»—‰«„Ã «·„Õ«”» «·⁄—»Ï «·„ ﬂ«„·
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=D:\my works\accountant\accountant\SourceCode\SourceCode\Package
+ProjectFolder=D:\my works\accountant\accountant\SourceCode\SourceCode
+ServerSideCab=
+File1=D:\my works\accountant\accountant\SourceCode\SourceCode\Package\setup.exe
+File2=D:\my works\accountant\accountant\SourceCode\SourceCode\Package\Setup.Lst
+File3=D:\my works\accountant\accountant\SourceCode\SourceCode\Package\Account_02 02 2011x3.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Standard Setup Package 2|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\my works\accountant\accountant\SourceCode\SourceCode\Package
+
+[Package|Standard Setup Package 2|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 2|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 2|Files Found]
+Flash10c.ocx=D:\programming sw\ocx\Flash10c.ocx
+sscrc.dll=D:\programming sw\ocx\PACKAGE DLL\sscrc.dll
+
+[Package|Standard Setup Package 2|Files Released]
+
+[Package|Standard Setup Package 2|Missing Dependency Information]
+D:\programming sw\ocx\Flash10c.ocx=
+C:\Windows\System32\Codejock.SkinFramework.v12.1.1.ocx=
+C:\Program Files\Common Files\Software FX Shared\ChartFX.ClientServer.Core.dll=
+C:\Program Files\Microsoft SQL Server\80\Tools\Binn\stardds.dll=
+C:\Windows\System32\SmartMenuXP.ocx=
+C:\Windows\System32\SuperLablel.ocx=
+C:\Windows\System32\ciaXPLabel30.ocx=
+C:\Windows\System32\ALLBUTTONS.ocx=
+C:\Program Files\DBPix 2.0 Control\DBPix20.ocx=
+C:\Windows\System32\ReportControl.ocx=
+C:\Windows\System32\Calendar.ocx=
+C:\Windows\System32\SuiteCtrls.ocx=
+C:\Windows\System32\DockingPane.ocx=
+C:\Windows\System32\CommandBars.ocx=
+C:\Windows\System32\TaskPanel.ocx=
+C:\Windows\System32\AniGIF.ocx=
+C:\Windows\System32\vbalIml6.ocx=
+C:\Windows\System32\cPopMenu6.ocx=
+C:\Program Files\dLSoft\Axbarcode\axbarcode.ocx=
+C:\Windows\System32\ciaXPPopUp30.ocx=
+C:\Windows\System32\ciaXPIML30.ocx=
+C:\Windows\System32\vsvport8.ocx=
+C:\Windows\System32\vsrpt8.ocx=
+C:\Windows\System32\vsdraw8.ocx=
+C:\Windows\System32\vsprint8.ocx=
+C:\Windows\System32\vspdf8.ocx=
+C:\Windows\System32\vsflex8l.ocx=
+C:\Windows\System32\VDSCombo.DLL=
+C:\Program Files\Common Files\System\ado\msado28.tlb=
+C:\Windows\System32\wbem\wbemdisp.tlb=
+C:\Windows\System32\vsflex8.ocx=
+C:\Program Files\Developer Express Inc\XpressSideBar\dXSBar.dll=
+C:\Program Files\Common Files\System\ado\msjro.dll=
+C:\Program Files\Common Files\System\ado\msadox28.tlb=
+C:\Windows\System32\c1sizer.ocx=
+C:\Windows\System32\vsflex8u.ocx=
+C:\Windows\System32\ISWin32.tlb=
+C:\Windows\System32\SHELLLNK.TLB=
+C:\Windows\System32\ImpulseASM.dll=
+C:\Windows\System32\wininet.dll=
+C:\Windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7600.16400_none_ebf9dccf6c73e561\comctl32.dll=
+
+[Package|Standard Setup Package 2|Out-of-Date Dependency Information]
+C:\Program Files\Microsoft Office\OFFICE11\MSCAL.OCX=
+C:\Windows\System32\MSADODC.OCX=
+C:\Windows\System32\ImpulseWizard.ocx=
+C:\Windows\System32\MSCOMCT2.OCX=
+C:\Windows\System32\Mscomctl.ocx=
+C:\Windows\System32\ImpulseButton.ocx=
+C:\Windows\System32\MSDATLST.OCX=
+C:\Windows\System32\comdlg32.ocx=
+C:\Windows\System32\ImpulseAniLabel.ocx=
+C:\Windows\System32\Msstdfmt.dll=
+C:\Windows\System32\MSDBRPTR.DLL=
+C:\Windows\System32\scrrun.dll=
+C:\Windows\System32\ImpulseGlobals.dll=
+
+[Package|Standard Setup Package 2|Files Added]
+
+[Package|Standard Setup Package 2|Files Removed]
+
+[Package|Standard Setup Package 2|Files In Project]
+D:\my works\accountant\accountant\SourceCode\SourceCode\Account_07 02 2011 with OVERS.exe=Yes
+C:\Windows\System32\msvbvm60.dll=Yes
+C:\Windows\System32\oleaut32.dll=Yes
+C:\Windows\System32\olepro32.dll=Yes
+C:\Windows\System32\asycfilt.dll=Yes
+C:\Windows\System32\stdole2.tlb=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7600.16400_none_ebf9dccf6c73e561\comctl32.dll=Yes
+C:\Windows\System32\hhctrl.ocx=Yes
+C:\Windows\System32\itss.dll=Yes
+C:\Windows\System32\itircl.dll=Yes
+C:\Windows\hh.exe=Yes
+C:\Windows\System32\wininet.dll=Yes
+C:\Windows\System32\ImpulseGlobals.dll=Yes
+C:\Windows\System32\ImpulseASM.dll=Yes
+C:\Windows\System32\scrrun.dll=Yes
+C:\Windows\System32\msvcrt.dll=Yes
+C:\Windows\System32\SHELLLNK.TLB=Yes
+C:\Windows\System32\ISWin32.tlb=Yes
+C:\Windows\System32\vsflex8u.ocx=Yes
+C:\Windows\System32\c1sizer.ocx=Yes
+C:\Windows\System32\MSDBRPTR.DLL=Yes
+C:\Windows\System32\Msstdfmt.dll=Yes
+C:\Program Files\Common Files\System\ado\msadox28.tlb=Yes
+C:\Program Files\Common Files\System\ado\msjro.dll=Yes
+C:\Program Files\Developer Express Inc\XpressSideBar\dXSBar.dll=Yes
+C:\Windows\System32\vsflex8.ocx=Yes
+C:\Windows\System32\wbem\wbemdisp.tlb=Yes
+C:\Program Files\Common Files\System\ado\msado28.tlb=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\crystalreportviewers10\ActiveXControls\crviewer.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\craxdrt.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\craxddrt.dll=Yes
+D:\programming sw\ocx\PACKAGE DLL\unicows.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crtowords_en.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\ufmanager.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2l2000.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2lcom.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2ldts.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2lexch.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2lfinra.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u252000.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u25dts.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u25samp1.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\Implode.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crqe.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crdb_ado.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crdb_dao.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crdb_odbc.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\querybuilder.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\exlate32.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\sscsdk80.dll=Yes
+D:\programming sw\ocx\PACKAGE DLL\sscrc.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\sscdlg.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\CRAnalyzer.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\p2ixbse.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crdb_dictionary.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\filedialog.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\sacommoncontrols.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crxf_pdf.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\ExportModeller.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crtslv.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crxf_rtf.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crxf_wordw.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crxf_xls.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2fcr.dll=Yes
+D:\programming sw\ocx\PACKAGE DLL\u2fsepv.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2ftext.dll=Yes
+D:\programming sw\ocx\PACKAGE DLL\u2fxml.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2ddisk.dll=Yes
+D:\programming sw\ocx\PACKAGE DLL\u2dpost.dll=Yes
+D:\programming sw\ocx\PACKAGE DLL\u2dapp.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\keycode.dll=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crdeploy.reg=Yes
+C:\Windows\System32\VDSCombo.DLL=Yes
+C:\Windows\System32\vsflex8l.ocx=Yes
+C:\Windows\System32\vspdf8.ocx=Yes
+C:\Windows\System32\vsprint8.ocx=Yes
+C:\Windows\System32\vsdraw8.ocx=Yes
+C:\Windows\System32\vsrpt8.ocx=Yes
+C:\Windows\System32\vsvport8.ocx=Yes
+C:\Windows\System32\ciaXPIML30.ocx=Yes
+C:\Windows\System32\ciaXPPopUp30.ocx=Yes
+C:\Windows\System32\ImpulseAniLabel.ocx=Yes
+C:\Windows\System32\comdlg32.ocx=Yes
+C:\Windows\System32\MSSTKPRP.DLL=Yes
+C:\Windows\System32\MSDATLST.OCX=Yes
+C:\Program Files\dLSoft\Axbarcode\axbarcode.ocx=Yes
+C:\Windows\System32\ImpulseButton.ocx=Yes
+C:\Windows\System32\MBClrPkr.ocx=Yes
+C:\Windows\System32\Mscomctl.ocx=Yes
+C:\Windows\System32\MSCOMCT2.OCX=Yes
+C:\Windows\System32\cPopMenu6.ocx=Yes
+C:\Windows\System32\vbalIml6.ocx=Yes
+C:\Windows\System32\ImpulseWizard.ocx=Yes
+C:\Windows\System32\AniGIF.ocx=Yes
+C:\Windows\System32\TaskPanel.ocx=Yes
+C:\Windows\System32\CommandBars.ocx=Yes
+C:\Windows\System32\DockingPane.ocx=Yes
+C:\Windows\System32\SuiteCtrls.ocx=Yes
+C:\Windows\System32\Calendar.ocx=Yes
+C:\Windows\System32\ReportControl.ocx=Yes
+C:\Windows\System32\MSADODC.OCX=Yes
+C:\Program Files\DBPix 2.0 Control\DBPix20.ocx=Yes
+C:\Windows\System32\ALLBUTTONS.ocx=Yes
+C:\Windows\System32\MSBIND.DLL=Yes
+C:\Windows\System32\ciaXPLabel30.ocx=Yes
+C:\Windows\System32\SuperLablel.ocx=Yes
+C:\Windows\System32\MSDATGRD.OCX=Yes
+C:\Windows\System32\SmartMenuXP.ocx=Yes
+C:\Program Files\Microsoft Office\OFFICE11\MSCAL.OCX=Yes
+C:\Program Files\Microsoft SQL Server\80\Tools\Binn\stardds.dll=Yes
+D:\programming sw\ocx\Flash10c.ocx=Yes
+C:\Windows\System32\TABCTL32.OCX=Yes
+C:\Program Files\Common Files\Software FX Shared\ChartFX.ClientServer.Core.dll=Yes
+C:\Windows\System32\Codejock.SkinFramework.v12.1.1.ocx=Yes
+C:\Windows\System32\MSCHRT20.OCX=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Windows\System32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Standard Setup Package 2|Configure Registry Files]
+Applicable=Yes
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crdeploy.reg=Register
+
+[Package|Standard Setup Package 2|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 2|Install Locations]
+D:\my works\accountant\accountant\SourceCode\SourceCode\Account_07 02 2011 with OVERS.exe=$(AppPath)
+C:\Windows\System32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Windows\System32\oleaut32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\olepro32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\asycfilt.dll=$(WinSysPathSysFile)
+C:\Windows\System32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7600.16400_none_ebf9dccf6c73e561\comctl32.dll=$(WinSysPath)
+C:\Windows\System32\hhctrl.ocx=$(WinSysPath)
+C:\Windows\System32\itss.dll=$(WinSysPath)
+C:\Windows\System32\itircl.dll=$(WinSysPath)
+C:\Windows\hh.exe=$(WinSysPath)
+C:\Windows\System32\wininet.dll=$(WinSysPath)
+C:\Windows\System32\ImpulseGlobals.dll=$(WinSysPath)
+C:\Windows\System32\ImpulseASM.dll=$(WinSysPath)
+C:\Windows\System32\scrrun.dll=$(WinSysPath)
+C:\Windows\System32\msvcrt.dll=$(WinSysPathSysFile)
+C:\Windows\System32\SHELLLNK.TLB=$(WinSysPath)
+C:\Windows\System32\ISWin32.tlb=$(WinSysPath)
+C:\Windows\System32\vsflex8u.ocx=$(WinSysPath)
+C:\Windows\System32\c1sizer.ocx=$(WinSysPath)
+C:\Windows\System32\MSDBRPTR.DLL=$(WinSysPath)
+C:\Windows\System32\Msstdfmt.dll=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msadox28.tlb=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msjro.dll=$(WinSysPath)
+C:\Program Files\Developer Express Inc\XpressSideBar\dXSBar.dll=$(WinSysPath)
+C:\Windows\System32\vsflex8.ocx=$(WinSysPath)
+C:\Windows\System32\wbem\wbemdisp.tlb=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msado28.tlb=$(WinSysPath)
+C:\Program Files\Common Files\Crystal Decisions\2.5\crystalreportviewers10\ActiveXControls\crviewer.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\craxdrt.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\craxddrt.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+D:\programming sw\ocx\PACKAGE DLL\unicows.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crtowords_en.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\ufmanager.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2l2000.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2lcom.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2ldts.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2lexch.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2lfinra.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u252000.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u25dts.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u25samp1.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\Implode.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crqe.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crdb_ado.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crdb_dao.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crdb_odbc.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\querybuilder.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\exlate32.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\sscsdk80.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+D:\programming sw\ocx\PACKAGE DLL\sscrc.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\sscdlg.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\CRAnalyzer.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\p2ixbse.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crdb_dictionary.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\filedialog.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\sacommoncontrols.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crxf_pdf.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\ExportModeller.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crtslv.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crxf_rtf.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crxf_wordw.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\crxf_xls.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2fcr.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+D:\programming sw\ocx\PACKAGE DLL\u2fsepv.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2ftext.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+D:\programming sw\ocx\PACKAGE DLL\u2fxml.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\u2ddisk.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+D:\programming sw\ocx\PACKAGE DLL\u2dpost.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+D:\programming sw\ocx\PACKAGE DLL\u2dapp.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Program Files\Common Files\Crystal Decisions\2.5\bin\keycode.dll=$(CommonFiles)\Crystal Decisions\2.5\bin
+C:\Windows\System32\VDSCombo.DLL=$(WinSysPath)
+C:\Windows\System32\vsflex8l.ocx=$(WinSysPath)
+C:\Windows\System32\vspdf8.ocx=$(WinSysPath)
+C:\Windows\System32\vsprint8.ocx=$(WinSysPath)
+C:\Windows\System32\vsdraw8.ocx=$(WinSysPath)
+C:\Windows\System32\vsrpt8.ocx=$(WinSysPath)
+C:\Windows\System32\vsvport8.ocx=$(WinSysPath)
+C:\Windows\System32\ciaXPIML30.ocx=$(WinSysPath)
+C:\Windows\System32\ciaXPPopUp30.ocx=$(WinSysPath)
+C:\Windows\System32\ImpulseAniLabel.ocx=$(WinSysPath)
+C:\Windows\System32\comdlg32.ocx=$(WinSysPath)
+C:\Windows\System32\MSSTKPRP.DLL=$(WinSysPath)
+C:\Windows\System32\MSDATLST.OCX=$(WinSysPath)
+C:\Program Files\dLSoft\Axbarcode\axbarcode.ocx=$(WinSysPath)
+C:\Windows\System32\ImpulseButton.ocx=$(WinSysPath)
+C:\Windows\System32\MBClrPkr.ocx=$(WinSysPath)
+C:\Windows\System32\Mscomctl.ocx=$(WinSysPath)
+C:\Windows\System32\MSCOMCT2.OCX=$(WinSysPath)
+C:\Windows\System32\cPopMenu6.ocx=$(WinSysPath)
+C:\Windows\System32\vbalIml6.ocx=$(WinSysPath)
+C:\Windows\System32\ImpulseWizard.ocx=$(WinSysPath)
+C:\Windows\System32\AniGIF.ocx=$(WinSysPath)
+C:\Windows\System32\TaskPanel.ocx=$(WinSysPath)
+C:\Windows\System32\CommandBars.ocx=$(WinSysPath)
+C:\Windows\System32\DockingPane.ocx=$(WinSysPath)
+C:\Windows\System32\SuiteCtrls.ocx=$(WinSysPath)
+C:\Windows\System32\Calendar.ocx=$(WinSysPath)
+C:\Windows\System32\ReportControl.ocx=$(WinSysPath)
+C:\Windows\System32\MSADODC.OCX=$(WinSysPath)
+C:\Program Files\DBPix 2.0 Control\DBPix20.ocx=$(WinSysPath)
+C:\Windows\System32\ALLBUTTONS.ocx=$(WinSysPath)
+C:\Windows\System32\MSBIND.DLL=$(WinSysPath)
+C:\Windows\System32\ciaXPLabel30.ocx=$(WinSysPath)
+C:\Windows\System32\SuperLablel.ocx=$(WinSysPath)
+C:\Windows\System32\MSDATGRD.OCX=$(WinSysPath)
+C:\Windows\System32\SmartMenuXP.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Office\OFFICE11\MSCAL.OCX=$(WinSysPath)
+C:\Program Files\Microsoft SQL Server\80\Tools\Binn\stardds.dll=$(AppPath)
+D:\programming sw\ocx\Flash10c.ocx=$(WinSysPath)
+C:\Windows\System32\TABCTL32.OCX=$(WinSysPath)
+C:\Program Files\Common Files\Software FX Shared\ChartFX.ClientServer.Core.dll=$(WinSysPath)
+C:\Windows\System32\Codejock.SkinFramework.v12.1.1.ocx=$(WinSysPath)
+C:\Windows\System32\MSCHRT20.OCX=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\Windows\System32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Standard Setup Package 2|Configure Shared Files]
+Applicable=Yes
+D:\my works\accountant\accountant\SourceCode\SourceCode\Account_07 02 2011 with OVERS.exe=No
+C:\Program Files\Microsoft SQL Server\80\Tools\Binn\stardds.dll=No
+
+[Package|Standard Setup Package 2|Distribution]
+Type=single
+Size=
+Title=
+
+[Package|Standard Setup Package 2|IconGroups]
+Group0=
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 2|]
+Icon1="Account_07 02 2011 with OVERS.exe"
+Title1=
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 2|Package]
+PackageFolder=D:\my works\accountant\accountant\SourceCode\SourceCode\Package
+ProjectFolder=D:\my works\accountant\accountant\SourceCode\SourceCode
+ServerSideCab=
+File1=D:\my works\accountant\accountant\SourceCode\SourceCode\Package\setup.exe
+File2=D:\my works\accountant\accountant\SourceCode\SourceCode\Package\Setup.Lst
+File3=D:\my works\accountant\accountant\SourceCode\SourceCode\Package\Account_07 02 2011 with OVERS.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Standard Setup Package 3|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\my works\Accountant\Accountant\SourceCode\SourceCode\Package
+
+[Package|Standard Setup Package 3|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 3|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 3|Files Found]
+
+[Package|Standard Setup Package 3|Files Released]
+Flash11c.ocx=
+
+[Package|Standard Setup Package 3|Missing Dependency Information]
+C:\Windows\System32\ieframe.dll=
+C:\Windows\System32\JanChart.ocx=
+C:\Windows\System32\ChartFX.ClientServer.Core.dll=
+C:\Windows\System32\SmartMenuXP.ocx=
+C:\Windows\System32\SuperLablel.ocx=
+C:\Windows\System32\ciaXPLabel30.ocx=
+C:\Windows\System32\ALLBUTTONS.ocx=
+C:\Windows\System32\DBPix20.ocx=
+C:\Windows\System32\ReportControl.ocx=
+C:\Windows\System32\Calendar.ocx=
+C:\Windows\System32\SuiteCtrls.ocx=
+C:\Windows\System32\DockingPane.ocx=
+C:\Windows\System32\CommandBars.ocx=
+C:\Windows\System32\TaskPanel.ocx=
+C:\Windows\System32\AniGIF.ocx=
+C:\Windows\System32\vbalIml6.ocx=
+C:\Windows\System32\cPopMenu6.ocx=
+C:\Program Files\dLSoft\Axbarcode\axbarcode.ocx=
+C:\Windows\System32\ciaXPPopUp30.ocx=
+C:\Windows\System32\ciaXPIML30.ocx=
+C:\Windows\System32\vsvport8.ocx=
+C:\Windows\System32\vsrpt8.ocx=
+C:\Windows\System32\vsdraw8.ocx=
+C:\Windows\System32\vsprint8.ocx=
+C:\Windows\System32\vspdf8.ocx=
+C:\Windows\System32\vsflex8l.ocx=
+C:\Windows\System32\VDSCombo.DLL=
+C:\Windows\System32\craxdrt.dll=
+C:\Windows\System32\craxddrt.dll=
+C:\Windows\System32\crviewer.dll=
+C:\Program Files\Common Files\System\ado\msado28.tlb=
+C:\Windows\System32\wbem\wbemdisp.tlb=
+C:\Windows\System32\vsflex8.ocx=
+C:\Windows\System32\dXSBar.dll=
+C:\Program Files\Common Files\System\ado\msjro.dll=
+C:\Program Files\Common Files\System\ado\msadox28.tlb=
+C:\Windows\System32\c1sizer.ocx=
+C:\Windows\System32\vsflex8u.ocx=
+C:\Windows\System32\ISWin32.tlb=
+C:\Windows\System32\Shelllnk.tlb=
+C:\Windows\System32\ImpulseASM.dll=
+C:\Windows\System32\wininet.dll=
+C:\Windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7600.16400_none_ebf9dccf6c73e561\comctl32.dll=
+
+[Package|Standard Setup Package 3|Out-of-Date Dependency Information]
+C:\Windows\System32\MSADODC.OCX=
+C:\Windows\System32\ImpulseWizard.ocx=
+C:\Windows\System32\MSCOMCT2.OCX=
+C:\Windows\System32\mscomctl.ocx=
+C:\Windows\System32\ImpulseButton.ocx=
+C:\Windows\System32\MSDATLST.OCX=
+C:\Windows\System32\comdlg32.ocx=
+C:\Windows\System32\ImpulseAniLabel.ocx=
+C:\Windows\System32\MSSTDFMT.DLL=
+C:\Windows\System32\MSDBRPTR.DLL=
+C:\Windows\System32\scrrun.dll=
+C:\Windows\System32\ImpulseGlobals.dll=
+
+[Package|Standard Setup Package 3|Files Added]
+
+[Package|Standard Setup Package 3|Files Removed]
+
+[Package|Standard Setup Package 3|Files In Project]
+D:\my works\Accountant\Accountant\SourceCode\SourceCode\24012012.exe=Yes
+C:\Windows\System32\msvbvm60.dll=Yes
+C:\Windows\System32\oleaut32.dll=Yes
+C:\Windows\System32\olepro32.dll=Yes
+C:\Windows\System32\asycfilt.dll=Yes
+C:\Windows\System32\stdole2.tlb=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7600.16400_none_ebf9dccf6c73e561\comctl32.dll=Yes
+C:\Windows\System32\hhctrl.ocx=Yes
+C:\Windows\System32\itss.dll=Yes
+C:\Windows\System32\itircl.dll=Yes
+C:\Windows\System32\hh.exe=Yes
+C:\Windows\System32\wininet.dll=Yes
+C:\Windows\System32\ImpulseGlobals.dll=Yes
+C:\Windows\System32\ImpulseASM.dll=Yes
+C:\Windows\System32\scrrun.dll=Yes
+C:\Windows\System32\msvcrt.dll=Yes
+C:\Windows\System32\Shelllnk.tlb=Yes
+C:\Windows\System32\ISWin32.tlb=Yes
+C:\Windows\System32\vsflex8u.ocx=Yes
+C:\Windows\System32\c1sizer.ocx=Yes
+C:\Windows\System32\MSDBRPTR.DLL=Yes
+C:\Windows\System32\MSSTDFMT.DLL=Yes
+C:\Program Files\Common Files\System\ado\msadox28.tlb=Yes
+C:\Program Files\Common Files\System\ado\msjro.dll=Yes
+C:\Windows\System32\dXSBar.dll=Yes
+C:\Windows\System32\vsflex8.ocx=Yes
+C:\Windows\System32\wbem\wbemdisp.tlb=Yes
+C:\Program Files\Common Files\System\ado\msado28.tlb=Yes
+C:\Windows\System32\crviewer.dll=Yes
+C:\Windows\System32\craxddrt.dll=Yes
+C:\Windows\System32\craxdrt.dll=Yes
+C:\Windows\System32\VDSCombo.DLL=Yes
+C:\Windows\System32\vsflex8l.ocx=Yes
+C:\Windows\System32\vspdf8.ocx=Yes
+C:\Windows\System32\vsprint8.ocx=Yes
+C:\Windows\System32\vsdraw8.ocx=Yes
+C:\Windows\System32\vsrpt8.ocx=Yes
+C:\Windows\System32\vsvport8.ocx=Yes
+C:\Windows\System32\ciaXPIML30.ocx=Yes
+C:\Windows\System32\ciaXPPopUp30.ocx=Yes
+C:\Windows\System32\ImpulseAniLabel.ocx=Yes
+C:\Windows\System32\comdlg32.ocx=Yes
+C:\Windows\System32\MSSTKPRP.DLL=Yes
+C:\Windows\System32\MSDATLST.OCX=Yes
+C:\Program Files\dLSoft\Axbarcode\axbarcode.ocx=Yes
+C:\Windows\System32\ImpulseButton.ocx=Yes
+C:\Windows\System32\MBClrPkr.ocx=Yes
+C:\Windows\System32\mscomctl.ocx=Yes
+C:\Windows\System32\MSCOMCT2.OCX=Yes
+C:\Windows\System32\cPopMenu6.ocx=Yes
+C:\Windows\System32\vbalIml6.ocx=Yes
+C:\Windows\System32\ImpulseWizard.ocx=Yes
+C:\Windows\System32\AniGIF.ocx=Yes
+C:\Windows\System32\TaskPanel.ocx=Yes
+C:\Windows\System32\CommandBars.ocx=Yes
+C:\Windows\System32\DockingPane.ocx=Yes
+C:\Windows\System32\SuiteCtrls.ocx=Yes
+C:\Windows\System32\Calendar.ocx=Yes
+C:\Windows\System32\ReportControl.ocx=Yes
+C:\Windows\System32\MSADODC.OCX=Yes
+C:\Windows\System32\DBPix20.ocx=Yes
+C:\Windows\System32\ALLBUTTONS.ocx=Yes
+C:\Windows\System32\MSBIND.DLL=Yes
+C:\Windows\System32\ciaXPLabel30.ocx=Yes
+C:\Windows\System32\SuperLablel.ocx=Yes
+C:\Windows\System32\MSDATGRD.OCX=Yes
+C:\Windows\System32\SmartMenuXP.ocx=Yes
+C:\Program Files\Microsoft Office\Office12\MSCAL.OCX=Yes
+C:\Windows\System32\TABCTL32.OCX=Yes
+C:\Windows\System32\ChartFX.ClientServer.Core.dll=Yes
+C:\Windows\System32\MSCHRT20.OCX=Yes
+C:\Windows\System32\JanChart.ocx=Yes
+C:\Windows\System32\ieframe.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Windows\System32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Standard Setup Package 3|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 3|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 3|Install Locations]
+D:\my works\Accountant\Accountant\SourceCode\SourceCode\24012012.exe=$(AppPath)
+C:\Windows\System32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Windows\System32\oleaut32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\olepro32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\asycfilt.dll=$(WinSysPathSysFile)
+C:\Windows\System32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7600.16400_none_ebf9dccf6c73e561\comctl32.dll=$(WinSysPath)
+C:\Windows\System32\hhctrl.ocx=$(WinSysPath)
+C:\Windows\System32\itss.dll=$(WinSysPath)
+C:\Windows\System32\itircl.dll=$(WinSysPath)
+C:\Windows\System32\hh.exe=$(WinSysPath)
+C:\Windows\System32\wininet.dll=$(WinSysPath)
+C:\Windows\System32\ImpulseGlobals.dll=$(WinSysPath)
+C:\Windows\System32\ImpulseASM.dll=$(WinSysPath)
+C:\Windows\System32\scrrun.dll=$(WinSysPath)
+C:\Windows\System32\msvcrt.dll=$(WinSysPathSysFile)
+C:\Windows\System32\Shelllnk.tlb=$(WinSysPath)
+C:\Windows\System32\ISWin32.tlb=$(WinSysPath)
+C:\Windows\System32\vsflex8u.ocx=$(WinSysPath)
+C:\Windows\System32\c1sizer.ocx=$(WinSysPath)
+C:\Windows\System32\MSDBRPTR.DLL=$(WinSysPath)
+C:\Windows\System32\MSSTDFMT.DLL=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msadox28.tlb=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msjro.dll=$(WinSysPath)
+C:\Windows\System32\dXSBar.dll=$(WinSysPath)
+C:\Windows\System32\vsflex8.ocx=$(WinSysPath)
+C:\Windows\System32\wbem\wbemdisp.tlb=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msado28.tlb=$(WinSysPath)
+C:\Windows\System32\crviewer.dll=$(WinSysPath)
+C:\Windows\System32\craxddrt.dll=$(WinSysPath)
+C:\Windows\System32\craxdrt.dll=$(WinSysPath)
+C:\Windows\System32\VDSCombo.DLL=$(WinSysPath)
+C:\Windows\System32\vsflex8l.ocx=$(WinSysPath)
+C:\Windows\System32\vspdf8.ocx=$(WinSysPath)
+C:\Windows\System32\vsprint8.ocx=$(WinSysPath)
+C:\Windows\System32\vsdraw8.ocx=$(WinSysPath)
+C:\Windows\System32\vsrpt8.ocx=$(WinSysPath)
+C:\Windows\System32\vsvport8.ocx=$(WinSysPath)
+C:\Windows\System32\ciaXPIML30.ocx=$(WinSysPath)
+C:\Windows\System32\ciaXPPopUp30.ocx=$(WinSysPath)
+C:\Windows\System32\ImpulseAniLabel.ocx=$(WinSysPath)
+C:\Windows\System32\comdlg32.ocx=$(WinSysPath)
+C:\Windows\System32\MSSTKPRP.DLL=$(WinSysPath)
+C:\Windows\System32\MSDATLST.OCX=$(WinSysPath)
+C:\Program Files\dLSoft\Axbarcode\axbarcode.ocx=$(WinSysPath)
+C:\Windows\System32\ImpulseButton.ocx=$(WinSysPath)
+C:\Windows\System32\MBClrPkr.ocx=$(WinSysPath)
+C:\Windows\System32\mscomctl.ocx=$(WinSysPath)
+C:\Windows\System32\MSCOMCT2.OCX=$(WinSysPath)
+C:\Windows\System32\cPopMenu6.ocx=$(WinSysPath)
+C:\Windows\System32\vbalIml6.ocx=$(WinSysPath)
+C:\Windows\System32\ImpulseWizard.ocx=$(WinSysPath)
+C:\Windows\System32\AniGIF.ocx=$(WinSysPath)
+C:\Windows\System32\TaskPanel.ocx=$(WinSysPath)
+C:\Windows\System32\CommandBars.ocx=$(WinSysPath)
+C:\Windows\System32\DockingPane.ocx=$(WinSysPath)
+C:\Windows\System32\SuiteCtrls.ocx=$(WinSysPath)
+C:\Windows\System32\Calendar.ocx=$(WinSysPath)
+C:\Windows\System32\ReportControl.ocx=$(WinSysPath)
+C:\Windows\System32\MSADODC.OCX=$(WinSysPath)
+C:\Windows\System32\DBPix20.ocx=$(WinSysPath)
+C:\Windows\System32\ALLBUTTONS.ocx=$(WinSysPath)
+C:\Windows\System32\MSBIND.DLL=$(WinSysPath)
+C:\Windows\System32\ciaXPLabel30.ocx=$(WinSysPath)
+C:\Windows\System32\SuperLablel.ocx=$(WinSysPath)
+C:\Windows\System32\MSDATGRD.OCX=$(WinSysPath)
+C:\Windows\System32\SmartMenuXP.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Office\Office12\MSCAL.OCX=$(AppPath)
+C:\Windows\System32\TABCTL32.OCX=$(WinSysPath)
+C:\Windows\System32\ChartFX.ClientServer.Core.dll=$(WinSysPath)
+C:\Windows\System32\MSCHRT20.OCX=$(WinSysPath)
+C:\Windows\System32\JanChart.ocx=$(WinSysPath)
+C:\Windows\System32\ieframe.dll=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\Windows\System32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Standard Setup Package 3|Configure Shared Files]
+Applicable=Yes
+D:\my works\Accountant\Accountant\SourceCode\SourceCode\24012012.exe=No
+C:\Program Files\Microsoft Office\Office12\MSCAL.OCX=No
+
+[Package|Standard Setup Package 3|Distribution]
+Type=single
+Size=
+Title=Byte System For Server
+
+[Package|Standard Setup Package 3|IconGroups]
+Group0=Byte System
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 3|Byte System]
+Icon1=24012012.exe
+Title1=Byte System
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 3|Package]
+PackageFolder=D:\my works\Accountant\Accountant\SourceCode\SourceCode\Package
+ProjectFolder=D:\my works\Accountant\Accountant\SourceCode\SourceCode
+ServerSideCab=
+File1=D:\my works\Accountant\Accountant\SourceCode\SourceCode\Package\setup.exe
+File2=D:\my works\Accountant\Accountant\SourceCode\SourceCode\Package\Setup.Lst
+File3=D:\my works\Accountant\Accountant\SourceCode\SourceCode\Package\24012012.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

@@ -1,0 +1,1 @@
+DB_CreateField "Tbl_TradingContract", "IsSupply", adBoolean, adColNullable, , , "", False, True

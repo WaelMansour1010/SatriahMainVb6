@@ -1,0 +1,8 @@
+Label3* ÇÓã ãÑßÒ ÇáÊßáİå* C.C.* 
+LblAccType* ØÈíÚå ÇáÍÓÇÈ* Type* 
+LblAccTab* ÊÈæíÈ ÇáÍÓÇÈ* Class * 
+lblCurrency* ÚãáÉ* Curr.* 
+LblNameE* ÇÓã ÇáÍÓÇÈ ÇäÌáíÒí* English Name* 
+lblParentAcc* ÇáÍÓÇÈ ÇáÑÆíÓí* Parent Account* 
+LblNameA* ÇÓã ÇáÍÓÇÈ ÚÑÈí* Arabic Name* 
+LblCode* ßæÏ ÇáÍÓÇÈ* Acc. Code* 

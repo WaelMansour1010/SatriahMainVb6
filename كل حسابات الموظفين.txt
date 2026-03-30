@@ -1,0 +1,12 @@
+SELECT     dbo.TblEmployee.Fullcode, dbo.TblEmployee.Emp_Name, dbo.ACCOUNTS.Account_Serial AS [Õ”«» «·–„…], dbo.ACCOUNTS.Account_Name AS [Õ”«» «·–„…], 
+                      ACCOUNTS_1.Account_Serial AS [«ÃÊ— „” Õﬁ…], ACCOUNTS_1.Account_Name AS [«ÃÊ— „” Õﬁ…], ACCOUNTS_2.Account_Serial AS [„Œ’’ «Ã«“…], 
+                      ACCOUNTS_2.Account_Name AS [„Œ’’ «Ã«“…], ACCOUNTS_3.Account_Name AS [„œ›Ê⁄«  „ﬁœ„…], ACCOUNTS_3.Account_Serial AS [„œ›Ê⁄«  „ﬁœ„…], 
+                      ACCOUNTS_4.Account_Name AS [„Œ’’ ‰Â«Ì… Œœ„…], ACCOUNTS_4.Account_Serial AS [„Œ’’ ‰Â«Ì… Œœ„…], ACCOUNTS_5.Account_Name AS [„Œ’’  –«ﬂ—], 
+                      ACCOUNTS_5.Account_Serial AS [„Œ’’  –«ﬂ—]
+FROM         dbo.ACCOUNTS INNER JOIN
+                      dbo.TblEmployee ON dbo.ACCOUNTS.Account_Code = dbo.TblEmployee.Account_code INNER JOIN
+                      dbo.ACCOUNTS ACCOUNTS_1 ON dbo.TblEmployee.Account_code1 = ACCOUNTS_1.Account_Code INNER JOIN
+                      dbo.ACCOUNTS ACCOUNTS_2 ON dbo.TblEmployee.Account_Code2 = ACCOUNTS_2.Account_Code INNER JOIN
+                      dbo.ACCOUNTS ACCOUNTS_3 ON dbo.TblEmployee.Account_Code3 = ACCOUNTS_3.Account_Code INNER JOIN
+                      dbo.ACCOUNTS ACCOUNTS_4 ON dbo.TblEmployee.Account_Code4 = ACCOUNTS_4.Account_Code INNER JOIN
+                      dbo.ACCOUNTS ACCOUNTS_5 ON dbo.TblEmployee.Account_Code5 = ACCOUNTS_5.Account_Code

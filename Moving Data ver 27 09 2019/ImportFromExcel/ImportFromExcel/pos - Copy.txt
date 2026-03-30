@@ -1,0 +1,2 @@
+POS1*allajazera.gotdns.com\mssqlserver,1433*byte*
+POS2*salim\sql*byte*

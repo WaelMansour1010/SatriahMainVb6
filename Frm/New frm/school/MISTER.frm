@@ -1,0 +1,976 @@
+VERSION 5.00
+Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "msadodc.ocx"
+Object = "{49003D3A-66CD-11D7-A449-E937BE2D9041}#1.0#0"; "ALLBUTTONS.ocx"
+Object = "{784C0C13-85E7-4E11-A8FB-F0243A135D03}#2.0#0"; "SuperLablel.ocx"
+Begin VB.Form MISTER 
+   BorderStyle     =   1  'Fixed Single
+   Caption         =   "»Ì«‰«  «·„œ—”Ì‰"
+   ClientHeight    =   4530
+   ClientLeft      =   45
+   ClientTop       =   375
+   ClientWidth     =   9405
+   LinkTopic       =   "Form1"
+   LockControls    =   -1  'True
+   MaxButton       =   0   'False
+   MDIChild        =   -1  'True
+   RightToLeft     =   -1  'True
+   ScaleHeight     =   4530
+   ScaleWidth      =   9405
+   Begin VB.CommandButton Command50 
+      Height          =   492
+      Index           =   3
+      Left            =   120
+      Picture         =   "MISTER.frx":0000
+      Style           =   1  'Graphical
+      TabIndex        =   40
+      Top             =   2520
+      Width           =   492
+   End
+   Begin VB.ComboBox Combo4 
+      BackColor       =   &H8000000A&
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   13.5
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   480
+      ItemData        =   "MISTER.frx":0862
+      Left            =   240
+      List            =   "MISTER.frx":086F
+      TabIndex        =   39
+      Top             =   1320
+      Width           =   2775
+   End
+   Begin VB.TextBox Text3 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H8000000A&
+      DataField       =   "city_name"
+      DataSource      =   "Adodc1"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   13.5
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   495
+      Left            =   720
+      TabIndex        =   38
+      Top             =   2520
+      Width           =   2295
+   End
+   Begin VB.Frame InfoE 
+      Height          =   735
+      Left            =   120
+      TabIndex        =   30
+      Top             =   8160
+      Visible         =   0   'False
+      Width           =   5295
+      Begin VB.Label zz 
+         Caption         =   "Departemnt"
+         ForeColor       =   &H000000FF&
+         Height          =   375
+         Left            =   2640
+         TabIndex        =   34
+         Top             =   240
+         Width           =   855
+      End
+      Begin VB.Label emp_name_lbl 
+         Caption         =   "Label7"
+         ForeColor       =   &H00FF0000&
+         Height          =   375
+         Left            =   1440
+         TabIndex        =   33
+         Top             =   240
+         Width           =   975
+      End
+      Begin VB.Label dept_lbl 
+         Caption         =   "Departement"
+         ForeColor       =   &H00FF0000&
+         Height          =   375
+         Left            =   3960
+         TabIndex        =   32
+         Top             =   240
+         Width           =   1215
+      End
+      Begin VB.Label vv 
+         Caption         =   "Employee name"
+         ForeColor       =   &H000000FF&
+         Height          =   375
+         Left            =   120
+         TabIndex        =   31
+         Top             =   240
+         Width           =   1215
+      End
+   End
+   Begin VB.Frame Frame3 
+      BorderStyle     =   0  'None
+      Caption         =   "Frame2"
+      Height          =   1935
+      Left            =   0
+      TabIndex        =   27
+      Top             =   6480
+      Visible         =   0   'False
+      Width           =   1455
+      Begin VB.Label Label7 
+         Caption         =   "City Name"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   13.5
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00FF0000&
+         Height          =   495
+         Left            =   120
+         TabIndex        =   29
+         Top             =   720
+         Width           =   1335
+      End
+      Begin VB.Label Label6 
+         Caption         =   "ID"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   13.5
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00FF0000&
+         Height          =   495
+         Left            =   120
+         TabIndex        =   28
+         Top             =   120
+         Width           =   1335
+      End
+   End
+   Begin VB.Frame Frame1 
+      Caption         =   "priviligies"
+      Height          =   1215
+      Left            =   1800
+      TabIndex        =   24
+      Top             =   7920
+      Width           =   7095
+      Begin MSAdodcLib.Adodc user_priviliges_adodc 
+         Height          =   495
+         Left            =   120
+         Top             =   240
+         Width           =   1815
+         _ExtentX        =   3201
+         _ExtentY        =   873
+         ConnectMode     =   0
+         CursorLocation  =   3
+         IsolationLevel  =   -1
+         ConnectionTimeout=   15
+         CommandTimeout  =   30
+         CursorType      =   3
+         LockType        =   3
+         CommandType     =   8
+         CursorOptions   =   0
+         CacheSize       =   50
+         MaxRecords      =   0
+         BOFAction       =   0
+         EOFAction       =   0
+         ConnectStringType=   1
+         Appearance      =   1
+         BackColor       =   -2147483643
+         ForeColor       =   -2147483640
+         Orientation     =   0
+         Enabled         =   -1
+         Connect         =   ""
+         OLEDBString     =   ""
+         OLEDBFile       =   ""
+         DataSourceName  =   ""
+         OtherAttributes =   ""
+         UserName        =   ""
+         Password        =   ""
+         RecordSource    =   ""
+         Caption         =   " "
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         _Version        =   393216
+      End
+      Begin VB.Label screen_name 
+         Alignment       =   1  'Right Justify
+         Caption         =   "M30"
+         Height          =   255
+         Left            =   3360
+         TabIndex        =   26
+         Top             =   240
+         Width           =   1455
+      End
+      Begin VB.Label adodc4error 
+         Alignment       =   1  'Right Justify
+         Caption         =   "Label4"
+         DataField       =   "employee_id"
+         DataSource      =   "user_priviliges_adodc"
+         Height          =   495
+         Left            =   2160
+         TabIndex        =   25
+         Top             =   120
+         Width           =   495
+      End
+   End
+   Begin VB.TextBox Text2 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H8000000A&
+      DataField       =   "city_name"
+      DataSource      =   "Adodc1"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   13.5
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   495
+      Left            =   5040
+      TabIndex        =   23
+      Top             =   1320
+      Width           =   2775
+   End
+   Begin VB.TextBox Text1 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H8000000A&
+      DataField       =   "id"
+      DataSource      =   "Adodc1"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   13.5
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   495
+      Left            =   5040
+      TabIndex        =   22
+      Top             =   840
+      Width           =   2775
+   End
+   Begin VB.Frame Frame2 
+      BorderStyle     =   0  'None
+      Caption         =   "Frame2"
+      Height          =   2415
+      Index           =   0
+      Left            =   7800
+      TabIndex        =   16
+      Top             =   720
+      Width           =   1575
+      Begin VB.Label Label1 
+         Caption         =   "ﬂÊœ «·„œ—”"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   13.5
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00FF0000&
+         Height          =   495
+         Left            =   240
+         TabIndex        =   21
+         Top             =   120
+         Width           =   1335
+      End
+      Begin VB.Label Label2 
+         Caption         =   " ·Ì›Ê‰"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   13.5
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00FF0000&
+         Height          =   495
+         Left            =   240
+         TabIndex        =   20
+         Top             =   720
+         Width           =   1215
+      End
+      Begin VB.Label Label3 
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   13.5
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00FF0000&
+         Height          =   495
+         Left            =   240
+         TabIndex        =   19
+         Top             =   3120
+         Width           =   1215
+      End
+      Begin VB.Label Label4 
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   13.5
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00FF0000&
+         Height          =   2055
+         Left            =   240
+         TabIndex        =   18
+         Top             =   3240
+         Width           =   1215
+      End
+      Begin VB.Label Label13 
+         Caption         =   "«·⁄‰Ê«‰ "
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   13.5
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00FF0000&
+         Height          =   375
+         Left            =   240
+         TabIndex        =   17
+         Top             =   1560
+         Width           =   1575
+      End
+   End
+   Begin VB.TextBox Text7 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H8000000A&
+      DataField       =   "id"
+      DataSource      =   "Adodc1"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   13.5
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   495
+      Left            =   240
+      TabIndex        =   15
+      Top             =   840
+      Width           =   2775
+   End
+   Begin VB.TextBox Text8 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H8000000A&
+      DataField       =   "city_name"
+      DataSource      =   "Adodc1"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   13.5
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   495
+      Left            =   240
+      TabIndex        =   14
+      Top             =   1920
+      Width           =   2775
+   End
+   Begin VB.TextBox Text9 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H8000000A&
+      DataField       =   "city_name"
+      DataSource      =   "Adodc1"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   13.5
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   1335
+      Left            =   5040
+      MultiLine       =   -1  'True
+      ScrollBars      =   2  'Vertical
+      TabIndex        =   13
+      Top             =   1920
+      Width           =   2775
+   End
+   Begin VB.Frame Frame2 
+      BorderStyle     =   0  'None
+      Caption         =   "Frame2"
+      Height          =   2655
+      Index           =   1
+      Left            =   3240
+      TabIndex        =   8
+      Top             =   840
+      Width           =   1575
+      Begin VB.Label Label5 
+         Caption         =   " «—ÌŒ «· ⁄ÌÌ‰"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   13.5
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00FF0000&
+         Height          =   375
+         Left            =   0
+         TabIndex        =   37
+         Top             =   1800
+         Width           =   1575
+      End
+      Begin VB.Label Label16 
+         Caption         =   "«”„ «·„œ—”"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   13.5
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00FF0000&
+         Height          =   375
+         Left            =   240
+         TabIndex        =   12
+         Top             =   0
+         Width           =   1215
+      End
+      Begin VB.Label Label15 
+         Caption         =   "«· Œ’’"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   13.5
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00FF0000&
+         Height          =   495
+         Left            =   240
+         TabIndex        =   11
+         Top             =   480
+         Width           =   1215
+      End
+      Begin VB.Label Label14 
+         Caption         =   "«·»—Ìœ «·«·ﬂ —Ê‰Ì"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   13.5
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00FF0000&
+         Height          =   375
+         Left            =   0
+         TabIndex        =   10
+         Top             =   1080
+         Width           =   1575
+      End
+      Begin VB.Label Label10 
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   13.5
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00FF0000&
+         Height          =   495
+         Left            =   240
+         TabIndex        =   9
+         Top             =   1320
+         Width           =   1215
+      End
+   End
+   Begin VB.Frame Frame4 
+      Height          =   855
+      Left            =   1800
+      TabIndex        =   1
+      Top             =   3600
+      Width           =   5535
+      Begin ALLButtonS.ALLButton Command1 
+         Height          =   255
+         Index           =   0
+         Left            =   4320
+         TabIndex        =   2
+         Top             =   240
+         Width           =   1095
+         _ExtentX        =   1931
+         _ExtentY        =   450
+         BTYPE           =   3
+         TX              =   "ÃœÌœ"
+         ENAB            =   -1  'True
+         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         COLTYPE         =   2
+         FOCUSR          =   -1  'True
+         BCOL            =   16711680
+         BCOLO           =   12582912
+         FCOL            =   16777215
+         FCOLO           =   0
+         MCOL            =   192
+         MPTR            =   1
+         MICON           =   "MISTER.frx":0886
+         UMCOL           =   -1  'True
+         SOFT            =   0   'False
+         PICPOS          =   0
+         NGREY           =   0   'False
+         FX              =   0
+         HAND            =   0   'False
+         CHECK           =   0   'False
+         VALUE           =   0   'False
+      End
+      Begin ALLButtonS.ALLButton Command1 
+         Height          =   255
+         Index           =   1
+         Left            =   3240
+         TabIndex        =   3
+         Top             =   240
+         Width           =   1095
+         _ExtentX        =   1931
+         _ExtentY        =   450
+         BTYPE           =   3
+         TX              =   "Õ›Ÿ"
+         ENAB            =   -1  'True
+         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         COLTYPE         =   2
+         FOCUSR          =   -1  'True
+         BCOL            =   16711680
+         BCOLO           =   16711680
+         FCOL            =   16777215
+         FCOLO           =   0
+         MCOL            =   192
+         MPTR            =   1
+         MICON           =   "MISTER.frx":08A2
+         UMCOL           =   -1  'True
+         SOFT            =   0   'False
+         PICPOS          =   0
+         NGREY           =   0   'False
+         FX              =   0
+         HAND            =   0   'False
+         CHECK           =   0   'False
+         VALUE           =   0   'False
+      End
+      Begin ALLButtonS.ALLButton Command1 
+         Height          =   255
+         Index           =   2
+         Left            =   0
+         TabIndex        =   4
+         Top             =   240
+         Width           =   1095
+         _ExtentX        =   1931
+         _ExtentY        =   450
+         BTYPE           =   3
+         TX              =   "Õ–›"
+         ENAB            =   -1  'True
+         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         COLTYPE         =   2
+         FOCUSR          =   -1  'True
+         BCOL            =   255
+         BCOLO           =   255
+         FCOL            =   16777215
+         FCOLO           =   0
+         MCOL            =   192
+         MPTR            =   1
+         MICON           =   "MISTER.frx":08BE
+         UMCOL           =   -1  'True
+         SOFT            =   0   'False
+         PICPOS          =   0
+         NGREY           =   0   'False
+         FX              =   0
+         HAND            =   0   'False
+         CHECK           =   0   'False
+         VALUE           =   0   'False
+      End
+      Begin MSAdodcLib.Adodc Adodc1 
+         Height          =   330
+         Left            =   1560
+         Top             =   480
+         Width           =   1815
+         _ExtentX        =   3201
+         _ExtentY        =   582
+         ConnectMode     =   0
+         CursorLocation  =   3
+         IsolationLevel  =   -1
+         ConnectionTimeout=   15
+         CommandTimeout  =   30
+         CursorType      =   3
+         LockType        =   3
+         CommandType     =   8
+         CursorOptions   =   0
+         CacheSize       =   50
+         MaxRecords      =   0
+         BOFAction       =   0
+         EOFAction       =   0
+         ConnectStringType=   1
+         Appearance      =   1
+         BackColor       =   -2147483643
+         ForeColor       =   -2147483640
+         Orientation     =   0
+         Enabled         =   -1
+         Connect         =   ""
+         OLEDBString     =   ""
+         OLEDBFile       =   ""
+         DataSourceName  =   ""
+         OtherAttributes =   ""
+         UserName        =   ""
+         Password        =   ""
+         RecordSource    =   ""
+         Caption         =   " Õ—Ìﬂ"
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         _Version        =   393216
+      End
+      Begin ALLButtonS.ALLButton Command1 
+         Height          =   255
+         Index           =   3
+         Left            =   2160
+         TabIndex        =   5
+         Top             =   240
+         Width           =   1095
+         _ExtentX        =   1931
+         _ExtentY        =   450
+         BTYPE           =   3
+         TX              =   "ÿ»«⁄…"
+         ENAB            =   -1  'True
+         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         COLTYPE         =   2
+         FOCUSR          =   -1  'True
+         BCOL            =   16711680
+         BCOLO           =   12582912
+         FCOL            =   16777215
+         FCOLO           =   0
+         MCOL            =   192
+         MPTR            =   1
+         MICON           =   "MISTER.frx":08DA
+         UMCOL           =   -1  'True
+         SOFT            =   0   'False
+         PICPOS          =   0
+         NGREY           =   0   'False
+         FX              =   0
+         HAND            =   0   'False
+         CHECK           =   0   'False
+         VALUE           =   0   'False
+      End
+      Begin ALLButtonS.ALLButton Command1 
+         Height          =   255
+         Index           =   4
+         Left            =   1080
+         TabIndex        =   6
+         Top             =   240
+         Width           =   1095
+         _ExtentX        =   1931
+         _ExtentY        =   450
+         BTYPE           =   3
+         TX              =   "„—›ﬁ« "
+         ENAB            =   -1  'True
+         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         COLTYPE         =   2
+         FOCUSR          =   -1  'True
+         BCOL            =   16711680
+         BCOLO           =   12582912
+         FCOL            =   16777215
+         FCOLO           =   0
+         MCOL            =   192
+         MPTR            =   1
+         MICON           =   "MISTER.frx":08F6
+         UMCOL           =   -1  'True
+         SOFT            =   0   'False
+         PICPOS          =   0
+         NGREY           =   0   'False
+         FX              =   0
+         HAND            =   0   'False
+         CHECK           =   0   'False
+         VALUE           =   0   'False
+      End
+      Begin VB.Label Label11 
+         Caption         =   "Label2"
+         Height          =   15
+         Left            =   -120
+         TabIndex        =   7
+         Top             =   1440
+         Width           =   855
+      End
+   End
+   Begin VB.CommandButton Command13 
+      Height          =   735
+      Left            =   8400
+      Picture         =   "MISTER.frx":0912
+      Style           =   1  'Graphical
+      TabIndex        =   0
+      ToolTipText     =   "    »ÕÀ ⁄‰ ﬁ”„F3"
+      Top             =   0
+      Width           =   855
+   End
+   Begin ALLButtonS.ALLButton CMD_language 
+      Height          =   495
+      Left            =   0
+      TabIndex        =   35
+      ToolTipText     =   " «··€…"
+      Top             =   120
+      Width           =   495
+      _ExtentX        =   873
+      _ExtentY        =   873
+      BTYPE           =   3
+      TX              =   "EN"
+      ENAB            =   -1  'True
+      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      COLTYPE         =   2
+      FOCUSR          =   -1  'True
+      BCOL            =   4210752
+      BCOLO           =   4210752
+      FCOL            =   16777215
+      FCOLO           =   16777215
+      MCOL            =   12632256
+      MPTR            =   1
+      MICON           =   "MISTER.frx":22A4
+      UMCOL           =   -1  'True
+      SOFT            =   0   'False
+      PICPOS          =   0
+      NGREY           =   0   'False
+      FX              =   0
+      HAND            =   0   'False
+      CHECK           =   0   'False
+      VALUE           =   0   'False
+   End
+   Begin MSAdodcLib.Adodc Adodc5 
+      Height          =   375
+      Left            =   5640
+      Top             =   2040
+      Visible         =   0   'False
+      Width           =   1200
+      _ExtentX        =   2117
+      _ExtentY        =   661
+      ConnectMode     =   0
+      CursorLocation  =   3
+      IsolationLevel  =   -1
+      ConnectionTimeout=   15
+      CommandTimeout  =   30
+      CursorType      =   3
+      LockType        =   3
+      CommandType     =   2
+      CursorOptions   =   0
+      CacheSize       =   50
+      MaxRecords      =   0
+      BOFAction       =   0
+      EOFAction       =   0
+      ConnectStringType=   1
+      Appearance      =   1
+      BackColor       =   -2147483643
+      ForeColor       =   -2147483640
+      Orientation     =   0
+      Enabled         =   -1
+      Connect         =   "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Transporter"
+      OLEDBString     =   "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Transporter"
+      OLEDBFile       =   ""
+      DataSourceName  =   ""
+      OtherAttributes =   ""
+      UserName        =   ""
+      Password        =   ""
+      RecordSource    =   "employees"
+      Caption         =   " "
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      _Version        =   393216
+   End
+   Begin SuperLablel.SuperLabel SuperLabel1 
+      Height          =   615
+      Left            =   2760
+      TabIndex        =   36
+      Top             =   120
+      Width           =   2895
+      _ExtentX        =   5106
+      _ExtentY        =   1085
+      Text            =   "»Ì«‰«  «·„œ—”Ì‰"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   13.5
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   13.5
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+   End
+   Begin MSAdodcLib.Adodc Adodc10 
+      Height          =   330
+      Left            =   6120
+      Top             =   2760
+      Visible         =   0   'False
+      Width           =   2040
+      _ExtentX        =   3598
+      _ExtentY        =   582
+      ConnectMode     =   0
+      CursorLocation  =   3
+      IsolationLevel  =   -1
+      ConnectionTimeout=   15
+      CommandTimeout  =   30
+      CursorType      =   3
+      LockType        =   3
+      CommandType     =   8
+      CursorOptions   =   0
+      CacheSize       =   50
+      MaxRecords      =   0
+      BOFAction       =   0
+      EOFAction       =   0
+      ConnectStringType=   1
+      Appearance      =   1
+      BackColor       =   -2147483643
+      ForeColor       =   -2147483640
+      Orientation     =   0
+      Enabled         =   -1
+      Connect         =   ""
+      OLEDBString     =   ""
+      OLEDBFile       =   ""
+      DataSourceName  =   ""
+      OtherAttributes =   ""
+      UserName        =   ""
+      Password        =   ""
+      RecordSource    =   ""
+      Caption         =   "  Õ—Ìﬂ"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      _Version        =   393216
+   End
+End
+Attribute VB_Name = "MISTER"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+
+Private Sub Form_Load()
+    'system_path
+    Me.left = (mdifrmmain.Width - Me.Width) / 2
+    Me.top = (mdifrmmain.Height - Me.Height) / 2 - 500
+
+    connection_string = Cn.ConnectionString
+    'Adodc1.ConnectionString = connection_string
+    'Adodc1.CommandType = adCmdText
+    'Adodc1.RecordSource = "select * from  "
+    'Adodc1.Refresh
+
+End Sub

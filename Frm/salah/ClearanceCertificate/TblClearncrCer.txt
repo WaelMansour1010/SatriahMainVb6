@@ -1,0 +1,15 @@
+   If DB_CreateTable("TblClearanceCertificate", True, "ID", False) = True Then
+                         DB_CreateField "TblClearanceCertificate", "RecordDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+                          DB_CreateField "TblClearanceCertificate", "LeavingDate", adDBTimeStamp, adColNullable, , , "      ", False, True
+                          DB_CreateField "TblClearanceCertificate", "EmpID", adInteger, adColNullable, , , ""
+                           DB_CreateField "TblClearanceCertificate", "Posted", adInteger, adColNullable, , , ""
+                             DB_CreateField "TblClearanceCertificate", "UserID", adInteger, adColNullable, , , ""
+                          DB_CreateField "TblClearanceCertificate", "BranchID", adInteger, adColNullable, , , ""
+                           DB_CreateField "TblClearanceCertificate", "GradID", adInteger, adColNullable, , , ""
+                            DB_CreateField "TblClearanceCertificate", "JobID", adInteger, adColNullable, , , ""
+                             DB_CreateField "TblClearanceCertificate", "DeptID", adInteger, adColNullable, , , ""
+                             DB_CreateField "TblClearanceCertificate", "nationality", adVarWChar, adColNullable, 255, , "C?C??   ", False, True, , True
+                             DB_CreateField "TblClearanceCertificate", "vacation", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                             DB_CreateField "TblClearanceCertificate", "Transfer", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                             DB_CreateField "TblClearanceCertificate", "FinalExit", adBoolean, adColNullable, , , "?CEE C? ???E ECEEE", False, True
+                             End If

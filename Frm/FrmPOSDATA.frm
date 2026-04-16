@@ -20,6 +20,15 @@ Begin VB.Form FrmPOSDATA
    ScaleHeight     =   5148
    ScaleWidth      =   5712
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Fra 
       BackColor       =   &H00E2E9E9&
       Caption         =   "Õ«·… «·—’Ìœ «·√›  «ÕÏ"

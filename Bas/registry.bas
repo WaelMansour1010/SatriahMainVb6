@@ -2805,6 +2805,92 @@ End Function
 '
 '
 
+Private Function GetSalesCounterStartValue(ByVal start_at As Double) As Long
+    If start_at <= 0 Then
+        GetSalesCounterStartValue = 0
+    Else
+        GetSalesCounterStartValue = CLng(start_at) - 1
+    End If
+End Function
+
+Private Function GetNextSalesCounterValue(ByVal Transaction_Type As Integer, _
+                                          ByVal BranchID As Integer, _
+                                          ByVal start_at As Double, _
+                                          ByRef NextCounterValue As Long) As Boolean
+    Dim CnCounter  As ADODB.Connection
+    Dim RsCounter  As ADODB.Recordset
+    Dim sqlCounter As String
+    Dim seedValue  As Long
+
+    On Error GoTo ErrHandler
+
+    seedValue = GetSalesCounterStartValue(start_at)
+
+    Set CnCounter = New ADODB.Connection
+    CnCounter.ConnectionString = Cn.ConnectionString
+    CnCounter.Open
+    CnCounter.BeginTrans
+
+    sqlCounter = "SELECT CounterValue "
+    sqlCounter = sqlCounter & "FROM SerialCounters WITH (UPDLOCK, HOLDLOCK) "
+    sqlCounter = sqlCounter & "WHERE TransactionType = " & Transaction_Type
+    sqlCounter = sqlCounter & " AND BranchID = " & BranchID
+
+    Set RsCounter = New ADODB.Recordset
+    RsCounter.Open sqlCounter, CnCounter, adOpenKeyset, adLockOptimistic
+
+    If RsCounter.EOF Then
+        RsCounter.Close
+        sqlCounter = "INSERT INTO SerialCounters (TransactionType, BranchID, CounterValue, LastUpdated) "
+        sqlCounter = sqlCounter & "VALUES (" & Transaction_Type & ", " & BranchID & ", " & seedValue & ", GETDATE())"
+        CnCounter.Execute sqlCounter
+    Else
+        RsCounter.Close
+    End If
+
+    sqlCounter = "UPDATE SerialCounters "
+    sqlCounter = sqlCounter & "SET CounterValue = CounterValue + 1, LastUpdated = GETDATE() "
+    sqlCounter = sqlCounter & "WHERE TransactionType = " & Transaction_Type
+    sqlCounter = sqlCounter & " AND BranchID = " & BranchID
+    CnCounter.Execute sqlCounter
+
+    sqlCounter = "SELECT CounterValue "
+    sqlCounter = sqlCounter & "FROM SerialCounters WITH (HOLDLOCK) "
+    sqlCounter = sqlCounter & "WHERE TransactionType = " & Transaction_Type
+    sqlCounter = sqlCounter & " AND BranchID = " & BranchID
+
+    Set RsCounter = New ADODB.Recordset
+    RsCounter.Open sqlCounter, CnCounter, adOpenForwardOnly, adLockReadOnly
+
+    If RsCounter.EOF Then GoTo ErrHandler
+
+    NextCounterValue = CLng(RsCounter!CounterValue)
+    RsCounter.Close
+    CnCounter.CommitTrans
+
+    GetNextSalesCounterValue = True
+
+ExitHandler:
+    On Error Resume Next
+    If Not RsCounter Is Nothing Then
+        If RsCounter.State = adStateOpen Then RsCounter.Close
+    End If
+    If Not CnCounter Is Nothing Then
+        If CnCounter.State = adStateOpen Then CnCounter.Close
+    End If
+    Set RsCounter = Nothing
+    Set CnCounter = Nothing
+    Exit Function
+
+ErrHandler:
+    GetNextSalesCounterValue = False
+    On Error Resume Next
+    If Not CnCounter Is Nothing Then
+        If CnCounter.State = adStateOpen Then CnCounter.RollbackTrans
+    End If
+    Resume ExitHandler
+End Function
+
 Public Function Voucher_coding(my_branch As Integer, _
                                date1 As Date, _
                                Sanad_No As Integer, _
@@ -2862,6 +2948,8 @@ Public Function Voucher_coding(my_branch As Integer, _
     Dim sql       As String
     Dim i         As Integer
     Dim storecode As String
+    Dim Askcount          As Double
+    Dim mSalesCounterValue As Long
 
     first_serial = False
     ' sql = "select * from sanad_numbering where branch_no=" & my_branch & " and  sanad_no=" & Sanad_No
@@ -2941,6 +3029,40 @@ Public Function Voucher_coding(my_branch As Integer, _
     End If
 
     ' mWhere3 = " 1 = 1 "
+    If Transaction_Type = 21 And numbering_type <> 0 Then
+        Askcount = noOfDigit
+        If Askcount = 0 Then Askcount = 3
+
+        If GetNextSalesCounterValue(Transaction_Type, my_branch, start_at, mSalesCounterValue) = False Then
+            Voucher_coding = "error"
+            Exit Function
+        End If
+
+        mSerInv = mSalesCounterValue
+
+        If end_at <> 0 And mSalesCounterValue > end_at Then
+            Voucher_coding = "error"
+            Exit Function
+        End If
+
+        If numbering_type = 1 Then
+            auto_sanad_no = CStr(mSalesCounterValue)
+        ElseIf numbering_type = 2 Then
+            If YearDigit = 2 Then
+                auto_sanad_no = mId(Format$(date1, "dd/mm/yyyy"), 9, 2) & mId(Format$(date1, "dd/mm/yyyy"), 4, 2) & Format(mSalesCounterValue, String(Askcount, "0"))
+            Else
+                auto_sanad_no = mId(Format$(date1, "dd/mm/yyyy"), 7, 4) & mId(Format$(date1, "dd/mm/yyyy"), 4, 2) & Format(mSalesCounterValue, String(Askcount, "0"))
+            End If
+        ElseIf numbering_type = 3 Then
+            If YearDigit = 2 Then
+                auto_sanad_no = mId(Format$(date1, "dd/mm/yyyy"), 9, 2) & Format(mSalesCounterValue, String(Askcount, "0"))
+            Else
+                auto_sanad_no = mId(Format$(date1, "dd/mm/yyyy"), 7, 4) & Format(mSalesCounterValue, String(Askcount, "0"))
+            End If
+        End If
+
+        GoTo BuildSalesVoucherCode
+    End If
     If numbering_type = 1 Then ' «·Ì
         If Transaction_Type = 0 Then
             sql = "select max(NoteSerial1) as last_sand_no from  Notes    where  branch_no= " & my_branch & "  and   NoteType=" & NoteType ' & " and   numbering_type1=" & numbering_type
@@ -3578,7 +3700,6 @@ Case 57
  
     End If
 
-    Dim Askcount As Double
     'Askcount = 3
     Askcount = noOfDigit
 
@@ -3676,7 +3797,10 @@ Case 57
 
     End If
 
-    Rs3.Close
+BuildSalesVoucherCode:
+    If Not Rs3 Is Nothing Then
+        If Rs3.State = adStateOpen Then Rs3.Close
+    End If
     'Dim storeADDZero As String
     'storeADDZero = IIf(StoreID < 10, "0", "")
     
@@ -3789,6 +3913,8 @@ Public Function Voucher_codingByUser(my_branch As Integer, _
     Dim sql       As String
     Dim i         As Integer
     Dim storecode As String
+    Dim Askcount          As Double
+    Dim mSalesCounterValue As Long
 
     first_serial = False
    sql = "SELECT ISNULL(numbering_id, 0) numbering_id, "
@@ -3854,6 +3980,38 @@ sql = sql & "       ISNULL(Breaks, 0) Breaks "
         mWhere3 = " SUBSTRING(CAST(cast(NoteSerial1 AS BIGINT) AS VARCHAR(50)), " & SystemOptions.NoOFDigitUserTrans + 2 & ", 1) = " & my_branch
     End If
     ' mWhere3 = " 1 = 1 "
+    If Transaction_Type = 21 And numbering_type <> 0 Then
+        Askcount = noOfDigit
+        If Askcount = 0 Then Askcount = 3
+
+        If GetNextSalesCounterValue(Transaction_Type, my_branch, start_at, mSalesCounterValue) = False Then
+            Voucher_codingByUser = "error"
+            Exit Function
+        End If
+
+        If end_at <> 0 And mSalesCounterValue > end_at Then
+            Voucher_codingByUser = "error"
+            Exit Function
+        End If
+
+        If numbering_type = 1 Then
+            auto_sanad_no = CStr(mSalesCounterValue)
+        ElseIf numbering_type = 2 Then
+            If YearDigit = 2 Then
+                auto_sanad_no = mId(Format$(date1, "dd/mm/yyyy"), 9, 2) & mId(Format$(date1, "dd/mm/yyyy"), 4, 2) & Format(mSalesCounterValue, String(Askcount, "0"))
+            Else
+                auto_sanad_no = mId(Format$(date1, "dd/mm/yyyy"), 7, 4) & mId(Format$(date1, "dd/mm/yyyy"), 4, 2) & Format(mSalesCounterValue, String(Askcount, "0"))
+            End If
+        ElseIf numbering_type = 3 Then
+            If YearDigit = 2 Then
+                auto_sanad_no = mId(Format$(date1, "dd/mm/yyyy"), 9, 2) & Format(mSalesCounterValue, String(Askcount, "0"))
+            Else
+                auto_sanad_no = mId(Format$(date1, "dd/mm/yyyy"), 7, 4) & Format(mSalesCounterValue, String(Askcount, "0"))
+            End If
+        End If
+
+        GoTo BuildSalesVoucherCodeByUser
+    End If
     If numbering_type = 1 Then ' «·Ì
         sql = "select max(NoteSerial1) as last_sand_no from  Notes    where  branch_no= " & my_branch & "  and   NoteType=" & NoteType ' & " and   numbering_type1=" & numbering_type
         sql = sql & mWhereUser
@@ -4647,7 +4805,6 @@ sql = sql & "       ISNULL(Breaks, 0) Breaks "
  
     End If
 
-    Dim Askcount As Double
     'Askcount = 3
     Askcount = noOfDigit
 
@@ -4745,7 +4902,10 @@ sql = sql & "       ISNULL(Breaks, 0) Breaks "
 
     End If
 
-    Rs3.Close
+BuildSalesVoucherCodeByUser:
+    If Not Rs3 Is Nothing Then
+        If Rs3.State = adStateOpen Then Rs3.Close
+    End If
     'Dim storeADDZero As String
     'storeADDZero = IIf(StoreID < 10, "0", "")
     Dim brancHcode As String

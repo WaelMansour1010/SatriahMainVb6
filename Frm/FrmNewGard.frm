@@ -22,6 +22,15 @@ Begin VB.Form FrmNewGard
    ScaleHeight     =   7845
    ScaleWidth      =   13395
    WindowState     =   2  'Maximized
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic C1ElasticMain 
       Height          =   7845
       Left            =   0

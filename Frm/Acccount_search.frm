@@ -15,6 +15,15 @@ Begin VB.Form Account_search
    RightToLeft     =   -1  'True
    ScaleHeight     =   5685
    ScaleWidth      =   14070
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CheckBox chkenter 
       Alignment       =   1  'Right Justify
       Caption         =   "«·»ÕÀ »œÊ‰ «‰ —"

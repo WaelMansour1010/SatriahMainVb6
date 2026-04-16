@@ -22,6 +22,15 @@ Begin VB.Form FrmComparePrices1
    ScaleHeight     =   9480
    ScaleWidth      =   15630
    Visible         =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic EleMain 
       Height          =   8865
       Left            =   0

@@ -16,6 +16,15 @@ Begin VB.Form marakes_taklefa_tawze3
    RightToLeft     =   -1  'True
    ScaleHeight     =   6390
    ScaleWidth      =   12090
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.OptionButton Option4 
       Alignment       =   1  'Right Justify
       Caption         =   "«Ì—«œ« "

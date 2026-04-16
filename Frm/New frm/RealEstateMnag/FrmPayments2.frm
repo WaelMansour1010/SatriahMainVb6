@@ -27,6 +27,15 @@ Begin VB.Form FrmPayments2
    ScaleHeight     =   10095
    ScaleWidth      =   14325
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.OptionButton ComResid 
       Alignment       =   1  'Right Justify
       Caption         =   " Ã«—Ì"

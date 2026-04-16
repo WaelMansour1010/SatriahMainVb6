@@ -22,6 +22,15 @@ Begin VB.Form FrmCars
    ScaleHeight     =   9945
    ScaleWidth      =   11640
    WindowState     =   2  'Maximized
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic frm_Main 
       Height          =   9945
       Left            =   0

@@ -10,6 +10,15 @@ Begin VB.Form Form0
    ScaleHeight     =   3090
    ScaleWidth      =   4680
    StartUpPosition =   2  'CenterScreen
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
 End
 Attribute VB_Name = "Form0"
 Attribute VB_GlobalNameSpace = False

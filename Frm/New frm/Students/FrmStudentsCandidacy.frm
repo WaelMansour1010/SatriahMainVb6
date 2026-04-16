@@ -19,6 +19,15 @@ Begin VB.Form FrmStudentsCandidacy
    ScaleTop        =   60
    ScaleWidth      =   21450.84
    WindowState     =   2  'Maximized
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic frm_Main 
       Height          =   8025
       Left            =   0

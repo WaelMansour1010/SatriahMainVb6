@@ -170,7 +170,7 @@ End Function
 ' - Cn: « ’«· ﬁ«⁄œ… «·»Ì«‰«  (·Ê Mode=DB)
 ' - dictParents: «·ﬁ«„Ê” (·Ê Mode=CACHE)
 Public Function CountAs2(ByVal Account_code As String, _
-                        Optional ByVal Account_Serial As Variant, _
+                        Optional ByVal account_serial As Variant, _
                         Optional ByVal Mode As AccountLevelMode = COUNTAS_DEFAULT_MODE, _
                         Optional ByVal Cn As ADODB.Connection, _
                         Optional ByVal dictParents As Object) As Integer
@@ -479,7 +479,7 @@ End Function
 
 'Wael Return
 
-Public Function get_account_max(Account_Serial As String, _
+Public Function get_account_max(account_serial As String, _
                                 Optional StrParentAccCode As String) As Double
     Dim Rs3 As ADODB.Recordset
     Set Rs3 = New ADODB.Recordset
@@ -501,17 +501,17 @@ Public Function get_account_max(Account_Serial As String, _
   
     'max_no_lenght = IIf(IsNull(Rs3("max_no").value) = False, Len(Rs3("max_no").value), 0)
   
-    account_root_lenght = Len(Account_Serial)
+    account_root_lenght = Len(account_serial)
  
     'Sql = "Select max(cast(right(Account_Serial , " & max_no_lenght - account_root_lenght & ") as float ))  as max_no from ACCOUNTS where Account_Serial like'" & account_serial & "%'" & "AND LEN(REPLACE(ACCOUNT_CODE, 'a', ''))=" & 1 'ACCOUNT_CODE_AS
     If SystemOptions.SuppCreat4Acc = True Then
         sql = "Select max(account_serial  )  as max_no , max(account_serial   )  as max_no1  from ACCOUNTS where "
         'sql = sql & " account_serial NOT LIKE '%[a-zA-Z]%'"
         'sql = sql & " AND account_serial NOT LIKE '%[^0-9]%' and"
-        sql = sql & " Account_Serial like'" & Account_Serial & "%' AND LEN(account_code) -LEN(REPLACE(ACCOUNT_CODE, 'a', ''))=" & ACCOUNT_CODE_AS
+        sql = sql & " Account_Serial like'" & account_serial & "%' AND LEN(account_code) -LEN(REPLACE(ACCOUNT_CODE, 'a', ''))=" & ACCOUNT_CODE_AS
     Else
     
-        sql = "Select max(cast(account_serial as float) )  as max_no , max(account_serial   )  as max_no1  from ACCOUNTS where Account_Serial like'" & Account_Serial & "%' AND LEN(account_code) -LEN(REPLACE(ACCOUNT_CODE, 'a', ''))=" & ACCOUNT_CODE_AS
+        sql = "Select max(cast(account_serial as float) )  as max_no , max(account_serial   )  as max_no1  from ACCOUNTS where Account_Serial like'" & account_serial & "%' AND LEN(account_code) -LEN(REPLACE(ACCOUNT_CODE, 'a', ''))=" & ACCOUNT_CODE_AS
     End If
     Rs4.Open sql, Cn, adOpenStatic, adLockOptimistic, adCmdText
  
@@ -560,7 +560,7 @@ ll:
 End Function
 
 
-Public Function get_account_maxChar(Account_Serial As String, _
+Public Function get_account_maxChar(account_serial As String, _
                                 Optional StrParentAccCode As String) As String
     Dim Rs3 As ADODB.Recordset
     Set Rs3 = New ADODB.Recordset
@@ -582,17 +582,17 @@ Public Function get_account_maxChar(Account_Serial As String, _
   
     'max_no_lenght = IIf(IsNull(Rs3("max_no").value) = False, Len(Rs3("max_no").value), 0)
   
-    account_root_lenght = Len(Account_Serial)
+    account_root_lenght = Len(account_serial)
  
     'Sql = "Select max(cast(right(Account_Serial , " & max_no_lenght - account_root_lenght & ") as float ))  as max_no from ACCOUNTS where Account_Serial like'" & account_serial & "%'" & "AND LEN(REPLACE(ACCOUNT_CODE, 'a', ''))=" & 1 'ACCOUNT_CODE_AS
     If SystemOptions.SuppCreat4Acc = True Then
         sql = "Select max(account_serial  )  as max_no , max(account_serial   )  as max_no1  from ACCOUNTS where "
         'sql = sql & " account_serial NOT LIKE '%[a-zA-Z]%'"
         'sql = sql & " AND account_serial NOT LIKE '%[^0-9]%' and"
-        sql = sql & " Account_Serial like'" & Account_Serial & "%' AND LEN(account_code) -LEN(REPLACE(ACCOUNT_CODE, 'a', ''))=" & ACCOUNT_CODE_AS
+        sql = sql & " Account_Serial like'" & account_serial & "%' AND LEN(account_code) -LEN(REPLACE(ACCOUNT_CODE, 'a', ''))=" & ACCOUNT_CODE_AS
     Else
     
-        sql = "Select max(cast(account_serial as float) )  as max_no , max(account_serial   )  as max_no1  from ACCOUNTS where Account_Serial like'" & Account_Serial & "%' AND LEN(account_code) -LEN(REPLACE(ACCOUNT_CODE, 'a', ''))=" & ACCOUNT_CODE_AS
+        sql = "Select max(cast(account_serial as float) )  as max_no , max(account_serial   )  as max_no1  from ACCOUNTS where Account_Serial like'" & account_serial & "%' AND LEN(account_code) -LEN(REPLACE(ACCOUNT_CODE, 'a', ''))=" & ACCOUNT_CODE_AS
     End If
     Rs4.Open sql, Cn, adOpenStatic, adLockOptimistic, adCmdText
  
@@ -1581,6 +1581,12 @@ d:
         RsDev("Salaries1").value = Salaries1
         RsDev("Salaries2").value = Salaries2
         RsDev("opening_balance_voucher_id").value = opening_balance_voucher_id
+        
+        
+
+        RsDev("mType").value = unittype
+        RsDev("iqarid").value = Aqarid
+         RsDev("uintid").value = unitno
     End If
     
     If hideline = 0 Then
@@ -1705,12 +1711,13 @@ RsDev("project_bill_no").value = project_bill_no
         RsDev("CarId").value = CarID
       
         RsDev("Billno").value = BillNo
-        RsDev("Aqarid").value = Aqarid
+             RsDev("Aqarid").value = Aqarid
         RsDev("unittype").value = unittype
         RsDev("unitno").value = unitno
         RsDev("uintid").value = unitno
- 
+
     End If
+
 
     If LngNoteID = 1 And opening_balance = True Then
         updateAutoOpeningBalanceVoucherValuebyCharacttex

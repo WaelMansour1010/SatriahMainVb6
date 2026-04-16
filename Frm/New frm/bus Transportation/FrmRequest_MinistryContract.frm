@@ -20,6 +20,15 @@ Begin VB.Form FrmRequest_MinistryContract
    ScaleHeight     =   10380
    ScaleWidth      =   15780
    WindowState     =   2  'Maximized
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic Main_CLE 
       Height          =   10380
       Left            =   0

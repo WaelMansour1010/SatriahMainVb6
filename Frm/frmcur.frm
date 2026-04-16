@@ -11,6 +11,15 @@ Begin VB.Form frmcur
    ScaleHeight     =   3630
    ScaleWidth      =   6165
    StartUpPosition =   3  'Windows Default
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox txtConv 
       Alignment       =   1  'Right Justify
       Height          =   315

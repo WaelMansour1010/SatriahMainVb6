@@ -11,6 +11,15 @@ Begin VB.Form bus
    MDIChild        =   -1  'True
    ScaleHeight     =   9360
    ScaleWidth      =   11460
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CommandButton Command5 
       BackColor       =   &H000080FF&
       Caption         =   "«·„—›ﬁ« "

@@ -16,6 +16,15 @@ Begin VB.Form FrmItemsDetails
    RightToLeft     =   -1  'True
    ScaleHeight     =   8430
    ScaleWidth      =   13395
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CheckBox Check1 
       Alignment       =   1  'Right Justify
       Caption         =   "«÷«›…  ·ﬁ«∆Ì"

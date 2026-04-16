@@ -2,7 +2,7 @@ VERSION 5.00
 Object = "{C115893A-A3BF-43AF-B28D-69DB846077F3}#1.0#0"; "vsflex8u.ocx"
 Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
-Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "Comdlg32.ocx"
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Object = "{F0D2F211-CCB0-11D0-A316-00AA00688B10}#1.0#0"; "MSDATLST.OCX"
 Begin VB.Form FRMTRansferData3 
    BackColor       =   &H00C0C0C0&
@@ -12,6 +12,15 @@ Begin VB.Form FRMTRansferData3
    ClientLeft      =   45
    ClientTop       =   375
    ClientWidth     =   13590
+   BeginProperty Font 
+      Name            =   "Arial"
+      Size            =   8.25
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Icon            =   "FRMTRansferData3.frx":0000
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
@@ -282,7 +291,7 @@ Begin VB.Form FRMTRansferData3
          Top             =   330
          Width           =   2040
          _ExtentX        =   3598
-         _ExtentY        =   556
+         _ExtentY        =   582
          _Version        =   393216
          Text            =   ""
          RightToLeft     =   -1  'True
@@ -526,7 +535,7 @@ Begin VB.Form FRMTRansferData3
    Begin VB.ComboBox DbName 
       BackColor       =   &H00FFFFFF&
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   9.75
          Charset         =   178
          Weight          =   400
@@ -545,7 +554,7 @@ Begin VB.Form FRMTRansferData3
    Begin VB.ComboBox ServersName 
       BackColor       =   &H00FFFFFF&
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   9.75
          Charset         =   178
          Weight          =   400
@@ -620,7 +629,7 @@ Begin VB.Form FRMTRansferData3
       Begin VB.ComboBox POSname 
          BackColor       =   &H00FFFFFF&
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   9.75
             Charset         =   178
             Weight          =   400
@@ -764,7 +773,7 @@ Begin VB.Form FRMTRansferData3
          _ExtentY        =   582
          _Version        =   393216
          CheckBox        =   -1  'True
-         Format          =   111017986
+         Format          =   189136898
          CurrentDate     =   38784
       End
       Begin VB.Label LblInfo 
@@ -779,7 +788,7 @@ Begin VB.Form FRMTRansferData3
       Begin VB.Label Label5 
          Caption         =   "Update Time"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   700
@@ -797,7 +806,7 @@ Begin VB.Form FRMTRansferData3
       Begin VB.Label Label4 
          Caption         =   "Date/Time Field"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   700
@@ -815,7 +824,7 @@ Begin VB.Form FRMTRansferData3
       Begin VB.Label Label3 
          Caption         =   "Machhine Code"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   9.75
             Charset         =   178
             Weight          =   700
@@ -833,7 +842,7 @@ Begin VB.Form FRMTRansferData3
       Begin VB.Label Label2 
          Caption         =   "Table Name"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   9.75
             Charset         =   178
             Weight          =   700
@@ -851,7 +860,7 @@ Begin VB.Form FRMTRansferData3
       Begin VB.Label Label1 
          Caption         =   "DB Path"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   9.75
             Charset         =   178
             Weight          =   700
@@ -916,7 +925,7 @@ Begin VB.Form FRMTRansferData3
       RecordSource    =   ""
       Caption         =   "Adodc1"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -936,7 +945,7 @@ Begin VB.Form FRMTRansferData3
       _ExtentX        =   2566
       _ExtentY        =   503
       _Version        =   393216
-      Format          =   111017985
+      Format          =   189136897
       CurrentDate     =   41640
    End
    Begin VSFlex8UCtl.VSFlexGrid grd 
@@ -951,7 +960,7 @@ Begin VB.Form FRMTRansferData3
       BorderStyle     =   1
       Enabled         =   -1  'True
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -1046,7 +1055,7 @@ Begin VB.Form FRMTRansferData3
       _ExtentX        =   2566
       _ExtentY        =   503
       _Version        =   393216
-      Format          =   111017985
+      Format          =   189136897
       CurrentDate     =   41640
    End
    Begin MSComCtl2.DTPicker txtFromDate 
@@ -1059,7 +1068,7 @@ Begin VB.Form FRMTRansferData3
       _ExtentX        =   2566
       _ExtentY        =   503
       _Version        =   393216
-      Format          =   111017985
+      Format          =   189136897
       CurrentDate     =   41640
    End
    Begin VSFlex8UCtl.VSFlexGrid grdInfo 
@@ -1074,7 +1083,7 @@ Begin VB.Form FRMTRansferData3
       BorderStyle     =   1
       Enabled         =   -1  'True
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -1163,7 +1172,7 @@ Begin VB.Form FRMTRansferData3
       BackStyle       =   0  'Transparent
       Caption         =   "1"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   13.5
          Charset         =   178
          Weight          =   400
@@ -1195,7 +1204,7 @@ Begin VB.Form FRMTRansferData3
       BackStyle       =   0  'Transparent
       Caption         =   "√Ì«„ ·„ Ì „ ‰ﬁ·Â«"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   13.5
          Charset         =   178
          Weight          =   700
@@ -1216,7 +1225,7 @@ Begin VB.Form FRMTRansferData3
       BackStyle       =   0  'Transparent
       Caption         =   "Ì—ÃÏ «·«‰ Ÿ«— Ã«—Ì ‰ﬁ· «·»Ì«‰« "
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   13.5
          Charset         =   178
          Weight          =   400
@@ -1452,7 +1461,7 @@ Text2.Text = sql
          ItemDiscount = IIf(IsNull(rsDouble_Entry("ItemDiscount").Value), 0, rsDouble_Entry("ItemDiscount").Value)
          ShowQty = IIf(IsNull(rsDouble_Entry("ShowQty").Value), 0, rsDouble_Entry("ShowQty").Value)
          showPrice = IIf(IsNull(rsDouble_Entry("showPrice").Value), 0, rsDouble_Entry("showPrice").Value)
-         UnitID = IIf(IsNull(rsDouble_Entry("UnitId").Value), 0, rsDouble_Entry("UnitId").Value)
+         UnitId = IIf(IsNull(rsDouble_Entry("UnitId").Value), 0, rsDouble_Entry("UnitId").Value)
          ColorID = IIf(IsNull(rsDouble_Entry("ColorID").Value), 0, rsDouble_Entry("ColorID").Value)
          ItemSize = IIf(IsNull(rsDouble_Entry("ItemSize").Value), 0, rsDouble_Entry("ItemSize").Value)
          ClassId = IIf(IsNull(rsDouble_Entry("ClassId").Value), 0, rsDouble_Entry("ClassId").Value)
@@ -1462,7 +1471,7 @@ Text2.Text = sql
     sql = " INSERT INTO  [" & ServerDb & "].[dbo].[Transaction_Details]  (    "
 sql = sql & "  Transaction_ID,  Item_ID, ItemCase, Quantity, Price, ItemDiscountType, ItemDiscount, ShowQty, showPrice,UnitId , ColorID, ItemSize, ClassId,SessionCode)"
  sql = sql & "   values (" & Transaction_ID & "," & Item_ID & ", " & ItemCase & "," & Quantity & "," & Price & "," & ItemDiscountType & "," & ItemDiscount & "," & ShowQty & "," & showPrice
- sql = sql & "," & UnitID & "," & ColorID & "," & ItemSize & "," & ClassId & "" & ",'" & SessionCode & "')"
+ sql = sql & "," & UnitId & "," & ColorID & "," & ItemSize & "," & ClassId & "" & ",'" & SessionCode & "')"
  
  
   mLastStep = "Insert missing items into remote server"
@@ -1573,9 +1582,9 @@ End Function
 'MsgBox ServerDb
 '     Set Cn = New ADODB.Connection
 '    With Cn
-'        .CommandTimeout = 5000
+'        .CommandTimeout = 180
 '        .CursorLocation = adUseServer
-'        .ConnectionTimeout = 5000
+'        .ConnectionTimeout = 30
 '       If SysSQLServerType = 1 Then
 ''        .ConnectionString = "Provider=SQLOLEDB.1;Integrated Security=SSPI; " & _
 ''        "Persist Security Info=False;Initial Catalog=" & ServerDb & _
@@ -1616,9 +1625,9 @@ End Function
 '
 '     Set POSConnection = New ADODB.Connection
 '    With POSConnection
-'        .CommandTimeout = 5000
+'        .CommandTimeout = 180
 '        .CursorLocation = adUseClient
-'        .ConnectionTimeout = 5000
+'        .ConnectionTimeout = 30
 '       If SysSQLServerType = 1 Then
 ''        .ConnectionString = "Provider=SQLOLEDB.1;Integrated Security=SSPI; " & _
 ''        "Persist Security Info=False;Initial Catalog=" & POSDb & _
@@ -1850,9 +1859,9 @@ End Function
 '
 'Set Cn = New ADODB.Connection
 'With Cn
-'    .CommandTimeout = 5000
+'    .CommandTimeout = 180
 '    .CursorLocation = adUseServer
-'    .ConnectionTimeout = 5000
+'    .ConnectionTimeout = 30
 'DestinationServer = SysSQLServerName
 '    If SysSQLServerType = 1 Then
 '        .ConnectionString = "Provider=SQLOLEDB.1;Password=" & SysSQLServerUserpassword & _
@@ -1895,9 +1904,9 @@ End Function
 '
 'Set POSConnection = New ADODB.Connection
 'With POSConnection
-'    .CommandTimeout = 5000
+'    .CommandTimeout = 180
 '    .CursorLocation = adUseClient
-'    .ConnectionTimeout = 5000
+'    .ConnectionTimeout = 30
 '
 '    If SysSQLServerType = 1 Then
 '        .ConnectionString = "Provider=SQLOLEDB.1;Password=" & SysSQLServerUserpassword & _
@@ -2546,9 +2555,9 @@ End Function
 '
 'Set Cn = New ADODB.Connection
 'With Cn
-'    .CommandTimeout = 5000
+'    .CommandTimeout = 180
 '    .CursorLocation = adUseServer
-'    .ConnectionTimeout = 5000
+'    .ConnectionTimeout = 30
 '
 '    If SysSQLServerType = 1 Then
 '        .ConnectionString = "Provider=SQLOLEDB.1;Password=" & SysSQLServerUserpassword & _
@@ -2583,9 +2592,9 @@ End Function
 '
 'Set POSConnection = New ADODB.Connection
 'With POSConnection
-'    .CommandTimeout = 5000
+'    .CommandTimeout = 180
 '    .CursorLocation = adUseClient
-'    .ConnectionTimeout = 5000
+'    .ConnectionTimeout = 30
 '
 '    If SysSQLServerType = 1 Then
 '        .ConnectionString = "Provider=SQLOLEDB.1;Password=" & SysSQLServerUserpassword & _
@@ -2759,7 +2768,7 @@ End Function
 '    Text1 = IIf(Cn Is Nothing, "", Cn.ConnectionString)
 '    Text2 = IIf(POSConnection Is Nothing, "", POSConnection.ConnectionString)
 '
-'    frmPopup.ShowMessage "ÕœÀ Œÿ√ ›Ì «·« ’«·"
+'    frmPopup.ShowMessage "Connection error"
 '    ConnectionFirst = False
 'End Function '
 
@@ -2780,9 +2789,9 @@ End Function
 '
 'Set Cn = New ADODB.Connection
 'With Cn
-'    .CommandTimeout = 5000
+'    .CommandTimeout = 180
 '    .CursorLocation = adUseServer
-'    .ConnectionTimeout = 5000
+'    .ConnectionTimeout = 30
 '
 '    If SysSQLServerType = 1 Then
 '        .ConnectionString = "Provider=SQLOLEDB.1;Password=" & SysSQLServerUserpassword & _
@@ -2818,9 +2827,9 @@ End Function
 '
 'Set POSConnection = New ADODB.Connection
 'With POSConnection
-'    .CommandTimeout = 5000
+'    .CommandTimeout = 180
 '    .CursorLocation = adUseClient
-'    .ConnectionTimeout = 5000
+'    .ConnectionTimeout = 30
 '
 '    If SysSQLServerType = 1 Then
 '        .ConnectionString = "Provider=SQLOLEDB.1;Password=" & SysSQLServerUserpassword & _
@@ -2910,7 +2919,7 @@ End Function
 '    Text1 = IIf(Cn Is Nothing, "", Cn.ConnectionString)
 '    Text2 = IIf(POSConnection Is Nothing, "", POSConnection.ConnectionString)
 '
-'    frmPopup.ShowMessage "ÕœÀ Œÿ√ ›Ì «·« ’«·"
+'    frmPopup.ShowMessage "Connection error"
 '    ConnectionFirst = False
 'End Function
 Function ConnectionFirst(Optional ByVal IsLoad As Boolean = False) As Boolean
@@ -2932,11 +2941,11 @@ Function ConnectionFirst(Optional ByVal IsLoad As Boolean = False) As Boolean
     DestinationServer = Trim$(SysSQLServerName)
 
     If Len(ServerDb) = 0 Then
-        Err.Raise vbObjectError + 7001, , "«”„ ﬁ«⁄œ… »Ì«‰«  «·”Ì—›— «·„—ﬂ“Ì €Ì— „Õœœ"
+        Err.Raise vbObjectError + 7001, , "Central server database name is not specified"
     End If
 
     If Len(DestinationServer) = 0 Then
-        Err.Raise vbObjectError + 7002, , "«”„ √Ê ⁄‰Ê«‰ «·”Ì—›— «·„—ﬂ“Ì €Ì— „Õœœ"
+        Err.Raise vbObjectError + 7002, , "Central server name or address is not specified"
     End If
 
     '========================
@@ -2955,9 +2964,9 @@ Function ConnectionFirst(Optional ByVal IsLoad As Boolean = False) As Boolean
     Set Cn = New ADODB.Connection
 
     With Cn
-        .CommandTimeout = 5000
+        .CommandTimeout = 180
         .CursorLocation = adUseServer
-        .ConnectionTimeout = 5000
+        .ConnectionTimeout = 30
 
         If SysSQLServerType = 1 Then
 
@@ -2986,7 +2995,7 @@ Function ConnectionFirst(Optional ByVal IsLoad As Boolean = False) As Boolean
             End If
 
         Else
-            Err.Raise vbObjectError + 7003, , "ﬁÌ„… SysSQLServerType €Ì— „⁄—Ê›…"
+            Err.Raise vbObjectError + 7003, , "Unknown SysSQLServerType value"
         End If
 
         .Errors.Clear
@@ -3005,11 +3014,11 @@ Function ConnectionFirst(Optional ByVal IsLoad As Boolean = False) As Boolean
     POSServer = Trim$(POSlServer.Text)
 
     If Len(POSDb) = 0 Then
-        Err.Raise vbObjectError + 7004, , "«”„ ﬁ«⁄œ… »Ì«‰«  «·‰ﬁÿ… €Ì— „Õœœ"
+        Err.Raise vbObjectError + 7004, , "Branch database name is not specified"
     End If
 
     If Len(POSServer) = 0 Then
-        Err.Raise vbObjectError + 7005, , "«”„ ”Ì—›— «·‰ﬁÿ… €Ì— „Õœœ"
+        Err.Raise vbObjectError + 7005, , "Branch server name is not specified"
     End If
 
     '========================
@@ -3025,9 +3034,9 @@ Function ConnectionFirst(Optional ByVal IsLoad As Boolean = False) As Boolean
     Set POSConnection = New ADODB.Connection
 
     With POSConnection
-        .CommandTimeout = 5000
+        .CommandTimeout = 180
         .CursorLocation = adUseClient
-        .ConnectionTimeout = 5000
+        .ConnectionTimeout = 30
 
         If SysSQLServerType = 1 Then
 
@@ -3056,7 +3065,7 @@ Function ConnectionFirst(Optional ByVal IsLoad As Boolean = False) As Boolean
             End If
 
         Else
-            Err.Raise vbObjectError + 7006, , "ﬁÌ„… SysSQLServerType €Ì— „⁄—Ê›… √À‰«¡ › Õ « ’«· «·‰ﬁÿ…"
+            Err.Raise vbObjectError + 7006, , "Unknown SysSQLServerType value while opening branch connection"
         End If
 
         .Errors.Clear
@@ -3139,7 +3148,7 @@ ErrTrap:
         Set rsDummy = Nothing
     End If
 
-    frmPopup.ShowMessage "ÕœÀ Œÿ√ ›Ì «·« ’«·"
+    frmPopup.ShowMessage "Connection error"
     ConnectionFirst = False
 
 End Function
@@ -3167,7 +3176,7 @@ Private Sub cmdTransferMove2_Click()
 
     ' «· √ﬂœ „‰ ÊÃÊœ ‰ﬁÿ… „ ’·…
     If POSlServer.Text = "" Then
-        frmPopup.ShowMessage "«Œ — «·‰ﬁÿ… «·„ ’·… √Ê·«"
+        frmPopup.ShowMessage "Select the connected branch first"
         Exit Sub
     End If
     If ConnectionFirst = False Then Exit Sub
@@ -3256,7 +3265,7 @@ Dim CarOilChangeDate As Date, RecTime As Date, mTimeIn As String
          Dim CarTypeID As Long, OilsTypesID As Long, YearFact As Long, FixesAssetsID As Long, ColorID2 As Long
          Dim KM As Double, PPointID As Long, SupplerID As Long, Ser As Long, CarCurrentValue As Double, CarPrevValue As Double
          Dim CarEnginoil As Double, CarGearOil As Double, InvoiceTypeCodeID As Long
-         Dim storeID As Variant, userID As Variant, Emp_ID As Variant
+         Dim StoreId As Variant, userID As Variant, Emp_ID As Variant
          Dim NoteSerial As String, NoteSerial1 As String, TransactionComment As String
          Dim CashCustomerName As String, CashCustomerPhone As String
          Dim PlateNo As String, Shaseh As String, CarMeter As String
@@ -3268,7 +3277,7 @@ Dim CarOilChangeDate As Date, RecTime As Date, mTimeIn As String
          PayMentType = Val(rsTrans("PaymentType").Value & "")
           FromTransaction_Type = Val(rsTrans("Transaction_Type").Value & "")
          cusID = Val(rsTrans("CusID").Value & "")
-         storeID = Val(rsTrans("StoreID").Value & "")
+         StoreId = Val(rsTrans("StoreID").Value & "")
          userID = Val(rsTrans("UserID").Value & "")
          Emp_ID = Val(rsTrans("Emp_ID").Value & "")
          BranchID = Val(rsTrans("BranchID").Value & "")
@@ -3276,7 +3285,7 @@ Dim CarOilChangeDate As Date, RecTime As Date, mTimeIn As String
          BillBasedOn = Val(rsTrans("BillBasedOn").Value & "")
           PayMentType = Val(rsTrans("PaymentType").Value & "")
          cusID = Val(rsTrans("CusID").Value & "")
-         storeID = Val(rsTrans("StoreID").Value & "")
+         StoreId = Val(rsTrans("StoreID").Value & "")
          userID = Val(rsTrans("UserID").Value & "")
          Emp_ID = Val(rsTrans("Emp_ID").Value & "")
          BranchID = Val(rsTrans("BranchID").Value & "")
@@ -3424,7 +3433,7 @@ End If
         Set rsSer = POSConnection.Execute("EXEC dbo.ReserveTransactionId")
         
         If Not (rsSer.EOF) Then
-            currentDestTransactionID = CStr(rsSer.Fields("NewId").Value)
+            currentDestTransactionID = CStr(rsSer.fields("NewId").Value)
         Else
             Err.Raise vbObjectError + 500, , "·„ Ì „ ≈—Ã«⁄ Transaction_ID ÃœÌœ „‰ «·”Ì—›—"
         End If
@@ -3446,7 +3455,7 @@ transSQL = "INSERT INTO " & POSConnection & "Transactions (" & _
 
 transSQL = transSQL & currentDestTransactionID & "," & SQLDate(FromTransaction_Date, True) & ",'" & Trim(mTimeIn) & "'," & _
 Val(rsTrans("TypeInvoice") & "") & ",'" & Replace(rsTrans("Transaction_Serial") & "", "'", "''") & "'," & _
-FromTransaction_Type & "," & PayMentType & "," & cusID & "," & storeID & "," & userID & "," & _
+FromTransaction_Type & "," & PayMentType & "," & cusID & "," & StoreId & "," & userID & "," & _
 Emp_ID & "," & BranchID & "," & BoxID & "," & BillBasedOn & "," & VAT & "," & VATYou & ",'" & _
 NoteSerial & "','" & NoteSerial1 & "'," & NoteId & ",1,'" & Replace(TransactionComment, "'", "''") & "','" & _
 SessionCode & "'," & IIf(Val(rsTrans("POSBillType") & "") = 0, 1, Val(rsTrans("POSBillType") & "")) & ",'" & rsTrans("Noteserial1") & "" & "','" & Trim(rsTrans("Noteserial") & "") & "'," & _
@@ -4113,9 +4122,9 @@ Dim mTimeStart As String
 
     Set POSConnection = New ADODB.Connection
     With POSConnection
-        .CommandTimeout = 5000
+        .CommandTimeout = 180
         .CursorLocation = adUseClient
-        .ConnectionTimeout = 5000
+        .ConnectionTimeout = 30
         If SysSQLServerType = 1 Then
 '            .ConnectionString = "Provider=SQLOLEDB.1;Integrated Security=SSPI; " & _
 '            "Persist Security Info=False;Initial Catalog=" & POSDb & _
@@ -4588,7 +4597,7 @@ mLastSQL = sql
                         ItemDiscount = IIf(IsNull(rsDouble_Entry("ItemDiscount").Value), 0, rsDouble_Entry("ItemDiscount").Value)
                         ShowQty = IIf(IsNull(rsDouble_Entry("ShowQty").Value), 0, rsDouble_Entry("ShowQty").Value)
                         showPrice = IIf(IsNull(rsDouble_Entry("showPrice").Value), 0, rsDouble_Entry("showPrice").Value)
-                        UnitID = IIf(IsNull(rsDouble_Entry("UnitId").Value), 0, rsDouble_Entry("UnitId").Value)
+                        UnitId = IIf(IsNull(rsDouble_Entry("UnitId").Value), 0, rsDouble_Entry("UnitId").Value)
                         ColorID = IIf(IsNull(rsDouble_Entry("ColorID").Value), 0, rsDouble_Entry("ColorID").Value)
                         ItemSize = IIf(IsNull(rsDouble_Entry("ItemSize").Value), 0, rsDouble_Entry("ItemSize").Value)
                         ClassId = IIf(IsNull(rsDouble_Entry("ClassId").Value), 0, rsDouble_Entry("ClassId").Value)
@@ -4627,7 +4636,7 @@ mLastSQL = sql
                         
                         sql = sql & "  )"
                         sql = sql & "   values (" & Transaction_ID & "," & Item_ID & ", " & ItemCase & "," & Quantity & "," & Price & "," & ItemDiscountType & "," & ItemDiscount & "," & ShowQty & "," & showPrice
-                        sql = sql & "," & UnitID & "," & ColorID & "," & ItemSize & "," & ClassId & "" & ",'" & SessionCode & "'," & mmVatyo & ","
+                        sql = sql & "," & UnitId & "," & ColorID & "," & ItemSize & "," & ClassId & "" & ",'" & SessionCode & "'," & mmVatyo & ","
                         
                         sql = sql & PumpId & ","
                         sql = sql & PrevQty & ","
@@ -5007,9 +5016,9 @@ On Error Resume Next
 lblWait.Caption = "Ì „ «·«‰ ‰ﬁ· ”‰œ«  «· ÕÊÌ·«  «·„Œ“‰Ì…"
   Set POSConnection = New ADODB.Connection
     With POSConnection
-        .CommandTimeout = 5000
+        .CommandTimeout = 180
         .CursorLocation = adUseClient
-        .ConnectionTimeout = 5000
+        .ConnectionTimeout = 30
         If SysSQLServerType = 1 Then
 '            .ConnectionString = "Provider=SQLOLEDB.1;Integrated Security=SSPI; " & _
 '            "Persist Security Info=False;Initial Catalog=" & POSDb & _
@@ -5325,7 +5334,7 @@ End Function
 '        lblWait.Visible = True
 '    '  Õﬁﬁ „‰ ÊÃÊœ « ’«· »«·”Ì—›—
 '    If POSlServer.Text = "" Then
-'        frmPopup.ShowMessage "«Œ — «·‰ﬁÿ… «·„ ’·… √Ê·«"
+'        frmPopup.ShowMessage "Select the connected branch first"
 '        Exit Sub
 '    End If
 '
@@ -5438,7 +5447,7 @@ End Function
 '
 '    '  Õﬁﬁ „‰ ÊÃÊœ « ’«· »«·”Ì—›—
 '    If POSlServer.Text = "" Then
-'        frmPopup.ShowMessage "«Œ — «·‰ﬁÿ… «·„ ’·… √Ê·«"
+'        frmPopup.ShowMessage "Select the connected branch first"
 '        lblWait.Visible = False
 '        Exit Sub
 '    End If
@@ -5515,30 +5524,255 @@ End Function
 '
 'End Sub
 
+'
+'Private Sub Command11_Click()
+'
+'    On Error GoTo ErrorHandler
+'
+'    Dim s As String
+'    Dim rsSrc As ADODB.Recordset
+'    Dim rsChk As ADODB.Recordset
+'
+'    Dim ItemID As Variant
+'    Dim UnitID As Variant
+'
+'    Set rsSrc = New ADODB.Recordset
+'    Set rsChk = New ADODB.Recordset
+'
+'    mLastProc = "Command11_Click"
+'    mLastSQL = ""
+'
+'    lblWait.Visible = True
+'    lblWait.Caption = "Transferring items..."
+'    DoEvents
+'
+'    If Trim$(POSlServer.Text) = "" Then
+'        frmPopup.ShowMessage "Select the connected branch first"
+'        lblWait.Visible = False
+'        Exit Sub
+'    End If
+'
+'    If ConnectionFirst = False Then
+'        lblWait.Visible = False
+'        Exit Sub
+'    End If
+'
+'    If Trim$(POSDb & "") = "" Then
+'        MsgBox "Branch database name is not specified", vbCritical, "Œÿ√"
+'        lblWait.Visible = False
+'        Exit Sub
+'    End If
+'
+'    If Trim$(ServerDb & "") = "" Then
+'        MsgBox "«”„ ﬁ«⁄œ… »Ì«‰«  «·”Ì—›— €Ì— „Õœœ", vbCritical, "Œÿ√"
+'        lblWait.Visible = False
+'        Exit Sub
+'    End If
+'
+'    '========================
+'    ' 1) ‰ﬁ· «·√’‰«› «·‰«ﬁ’… „‰ «·”Ì—›— ≈·Ï «·‰ﬁÿ…
+'    ' ﬁ—«¡… „‰ Cn - ﬂ «»… ⁄·Ï POSConnection
+'    '========================
+'    lblWait.Caption = "Ã«—Ì ‰ﬁ· «·√’‰«› „‰ «·”Ì—›— ≈·Ï «·‰ﬁÿ…"
+'    DoEvents
+'
+'    s = ""
+'    s = s & "SELECT "
+'    s = s & "ItemID, ItemCode, ItemName, DefaultSupplier, GroupID, HaveSerial, LastUpdate, "
+'    s = s & "PurchasePrice, SallingPrice, RequestLimit, CustomerPrice, HaveGuarantee, "
+'    s = s & "GuaranteeValue, GuaranteeType, IsArchive, ItemType, AssbliedItem, RelatedItem, "
+'    s = s & "ItemComment, ItemCase, ItemMaking, ItemMakingNew, code, Branch_NO, Fullcode, "
+'    s = s & "prifix, PartNo, CostPrice, ItemNamee, itemSerials, barCodeNO, SizeID11 "
+'    s = s & "FROM TblItems "
+'    s = s & "ORDER BY ItemID"
+'
+'    mLastSQL = s
+'    rsSrc.Open s, Cn, adOpenForwardOnly, adLockReadOnly, adCmdText
+'
+'    Do While Not rsSrc.EOF
+'
+'        ItemID = rsSrc("ItemID").Value
+'
+'        SafeCloseRS rsChk
+'        s = "SELECT ItemID FROM TblItems WHERE ItemID = " & Val(ItemID & "")
+'        mLastSQL = s
+'        Set rsChk = New ADODB.Recordset
+'
+'        rsChk.Open s, POSConnection, adOpenForwardOnly, adLockReadOnly, adCmdText
+'
+'        If rsChk.EOF Then
+'            SafeCloseRS rsChk
+'
+'            s = ""
+'            s = s & "INSERT INTO TblItems ("
+'            s = s & "ItemID, ItemCode, ItemName, DefaultSupplier, GroupID, HaveSerial, LastUpdate, "
+'            s = s & "PurchasePrice, SallingPrice, RequestLimit, CustomerPrice, HaveGuarantee, "
+'            s = s & "GuaranteeValue, GuaranteeType, IsArchive, ItemType, AssbliedItem, RelatedItem, "
+'            s = s & "ItemComment, ItemCase, ItemMaking, ItemMakingNew, code, Branch_NO, Fullcode, "
+'            s = s & "prifix, PartNo, CostPrice, ItemNamee, itemSerials, barCodeNO, SizeID11"
+'            s = s & ") VALUES ("
+'            s = s & SqlNum(rsSrc("ItemID").Value) & ","
+'            s = s & SqlStr(rsSrc("ItemCode").Value) & ","
+'            s = s & SqlStr(rsSrc("ItemName").Value) & ","
+'            s = s & SqlNum(rsSrc("DefaultSupplier").Value) & ","
+'            s = s & SqlNum(rsSrc("GroupID").Value) & ","
+'            s = s & SqlNum(rsSrc("HaveSerial").Value) & ","
+'            s = s & SqlDateTime(rsSrc("LastUpdate").Value) & ","
+'            s = s & SqlNum(rsSrc("PurchasePrice").Value) & ","
+'            s = s & SqlNum(rsSrc("SallingPrice").Value) & ","
+'            s = s & SqlNum(rsSrc("RequestLimit").Value) & ","
+'            s = s & SqlNum(rsSrc("CustomerPrice").Value) & ","
+'            s = s & SqlNum(rsSrc("HaveGuarantee").Value) & ","
+'            s = s & SqlNum(rsSrc("GuaranteeValue").Value) & ","
+'            s = s & SqlNum(rsSrc("GuaranteeType").Value) & ","
+'            s = s & SqlNum(rsSrc("IsArchive").Value) & ","
+'            s = s & SqlNum(rsSrc("ItemType").Value) & ","
+'            s = s & SqlNum(rsSrc("AssbliedItem").Value) & ","
+'            s = s & SqlNum(rsSrc("RelatedItem").Value) & ","
+'            s = s & SqlStr(rsSrc("ItemComment").Value) & ","
+'            s = s & SqlNum(rsSrc("ItemCase").Value) & ","
+'            s = s & SqlNum(rsSrc("ItemMaking").Value) & ","
+'            s = s & SqlNum(rsSrc("ItemMakingNew").Value) & ","
+'            s = s & SqlStr(rsSrc("code").Value) & ","
+'            s = s & SqlNum(rsSrc("Branch_NO").Value) & ","
+'            s = s & SqlStr(rsSrc("Fullcode").Value) & ","
+'            s = s & SqlStr(rsSrc("prifix").Value) & ","
+'            s = s & SqlStr(rsSrc("PartNo").Value) & ","
+'            s = s & SqlNum(rsSrc("CostPrice").Value) & ","
+'            s = s & SqlStr(rsSrc("ItemNamee").Value) & ","
+'            s = s & SqlNum(rsSrc("itemSerials").Value) & ","
+'            s = s & SqlStr(rsSrc("barCodeNO").Value) & ","
+'            s = s & SqlNum(rsSrc("SizeID11").Value)
+'            s = s & ")"
+'
+'            If ExecSQL(POSConnection, s, "Command11_Click", "Insert TblItems To POS") = False Then
+'                Err.Raise vbObjectError + 1001, , BuildErrMsg(POSConnection, "Command11_Click", s, "›‘· √À‰«¡ ‰ﬁ· TblItems ≈·Ï «·‰ﬁÿ…")
+'            End If
+'        Else
+'            SafeCloseRS rsChk
+'        End If
+'
+'        rsSrc.MoveNext
+'    Loop
+'    SafeCloseRS rsSrc
+'
+'    '========================
+'    ' 2) ‰ﬁ· ÊÕœ«  «·√’‰«› «·‰«ﬁ’… „‰ «·”Ì—›— ≈·Ï «·‰ﬁÿ…
+'    '========================
+'    lblWait.Caption = "Ã«—Ì ‰ﬁ· ÊÕœ«  «·√’‰«› „‰ «·”Ì—›— ≈·Ï «·‰ﬁÿ…"
+'    DoEvents
+'
+'    s = ""
+'    s = s & "SELECT "
+'    s = s & "ItemID, UnitID, UnitFactor, SecOrder, DefaultUnit, UnitSalesPrice, UnitPurPrice, "
+'    s = s & "FactorByDefaultUnit, MinSelingPrice, ForUnit, MethodCalc, SessionCode, barCodeNo2 "
+'    s = s & "FROM TblItemsUnits "
+'    s = s & "ORDER BY ItemID, UnitID"
+'
+'    mLastSQL = s
+'    Set rsSrc = New ADODB.Recordset
+'    rsSrc.Open s, Cn, adOpenForwardOnly, adLockReadOnly, adCmdText
+'
+'    Do While Not rsSrc.EOF
+'
+'        ItemID = rsSrc("ItemID").Value
+'        UnitID = rsSrc("UnitID").Value
+'
+'        SafeCloseRS rsChk
+'        s = "SELECT ItemID, UnitID FROM TblItemsUnits WHERE ItemID = " & Val(ItemID & "") & " AND UnitID = " & Val(UnitID & "")
+'        mLastSQL = s
+'            Set rsChk = New ADODB.Recordset
+'        rsChk.Open s, POSConnection, adOpenForwardOnly, adLockReadOnly, adCmdText
+'
+'        If rsChk.EOF Then
+'            SafeCloseRS rsChk
+'
+'            s = ""
+'            s = s & "INSERT INTO TblItemsUnits ("
+'            s = s & "ItemID, UnitID, UnitFactor, SecOrder, DefaultUnit, UnitSalesPrice, UnitPurPrice, "
+'            s = s & "FactorByDefaultUnit, MinSelingPrice, ForUnit, MethodCalc, SessionCode, barCodeNo2"
+'            s = s & ") VALUES ("
+'            s = s & SqlNum(rsSrc("ItemID").Value) & ","
+'            s = s & SqlNum(rsSrc("UnitID").Value) & ","
+'            s = s & SqlNum(rsSrc("UnitFactor").Value) & ","
+'            s = s & SqlNum(rsSrc("SecOrder").Value) & ","
+'            s = s & SqlNum(rsSrc("DefaultUnit").Value) & ","
+'            s = s & SqlNum(rsSrc("UnitSalesPrice").Value) & ","
+'            s = s & SqlNum(rsSrc("UnitPurPrice").Value) & ","
+'            s = s & SqlNum(rsSrc("FactorByDefaultUnit").Value) & ","
+'            s = s & SqlNum(rsSrc("MinSelingPrice").Value) & ","
+'            s = s & SqlNum(rsSrc("ForUnit").Value) & ","
+'            s = s & SqlNum(rsSrc("MethodCalc").Value) & ","
+'            s = s & SqlStr(rsSrc("SessionCode").Value) & ","
+'            s = s & SqlStr(rsSrc("barCodeNo2").Value)
+'            s = s & ")"
+'
+'            If ExecSQL(POSConnection, s, "Command11_Click", "Insert TblItemsUnits To POS") = False Then
+'                Err.Raise vbObjectError + 1002, , BuildErrMsg(POSConnection, "Command11_Click", s, "›‘· √À‰«¡ ‰ﬁ· TblItemsUnits ≈·Ï «·‰ﬁÿ…")
+'            End If
+'        Else
+'            SafeCloseRS rsChk
+'        End If
+'
+'        rsSrc.MoveNext
+'    Loop
+'    SafeCloseRS rsSrc
+'
+'    '========================
+'    ' 3)  ÕœÌÀ »«”Ê—œ«  TblOptions ⁄·Ï «·‰ﬁÿ… „‰ «·”Ì—›—
+'    '========================
+'    lblWait.Caption = "Ã«—Ì  ÕœÌÀ ≈⁄œ«œ«  «·‰ﬁÿ…"
+'    DoEvents
+'
+'    s = "SELECT TOP 1 BigUserPw, BigUserPw2 FROM TblOptions"
+'    mLastSQL = s
+'     Set rsSrc = New ADODB.Recordset
+'
+'    rsSrc.Open s, Cn, adOpenForwardOnly, adLockReadOnly, adCmdText
+'
+'    If Not rsSrc.EOF Then
+'        s = ""
+'        s = s & "UPDATE TblOptions "
+'        s = s & "SET BigUserPw = " & SqlStr(rsSrc("BigUserPw").Value) & ", "
+'        s = s & "    BigUserPw2 = " & SqlStr(rsSrc("BigUserPw2").Value)
+'
+'        If ExecSQL(POSConnection, s, "Command11_Click", "Update TblOptions Passwords On POS") = False Then
+'            Err.Raise vbObjectError + 1003, , BuildErrMsg(POSConnection, "Command11_Click", s, "›‘· √À‰«¡  ÕœÌÀ TblOptions ⁄·Ï «·‰ﬁÿ…")
+'        End If
+'    End If
+'    SafeCloseRS rsSrc
+'
+'    lblWait.Caption = "Items transferred successfully"
+'    lblWait.Visible = True
+'    DoEvents
+'
+'    SafeCloseRS rsChk
+'    SafeCloseRS rsSrc
+'    Exit Sub
+'
+'ErrorHandler:
+'    LogAdoErrors POSConnection, "Command11_Click", s, "Œÿ√ ⁄«„ ›Ì Command11_Click"
+'    MsgBox BuildErrMsg(POSConnection, "Command11_Click", s, "ÕœÀ Œÿ√ √À‰«¡ ⁄„·Ì… «·‰ﬁ·"), vbCritical, "Œÿ√"
+'
+'    lblWait.Visible = False
+'    SafeCloseRS rsChk
+'    SafeCloseRS rsSrc
+'    Err.Clear
+'
+'End Sub
 
 Private Sub Command11_Click()
+    Dim Msg As String
+    Dim TraceText As String
 
-    On Error GoTo ErrorHandler
-
-    Dim s As String
-    Dim rsSrc As ADODB.Recordset
-    Dim rsChk As ADODB.Recordset
-
-    Dim ItemID As Variant
-    Dim UnitID As Variant
-
-    Set rsSrc = New ADODB.Recordset
-    Set rsChk = New ADODB.Recordset
-
-    mLastProc = "Command11_Click"
-    mLastSQL = ""
+    On Error GoTo EH
 
     lblWait.Visible = True
-    lblWait.Caption = "Ã«—Ì ‰ﬁ· «·√’‰«›"
+    lblWait.Caption = "Transferring items..."
     DoEvents
 
     If Trim$(POSlServer.Text) = "" Then
-        frmPopup.ShowMessage "«Œ — «·‰ﬁÿ… «·„ ’·… √Ê·«"
+        frmPopup.ShowMessage "Select the connected branch first"
         lblWait.Visible = False
         Exit Sub
     End If
@@ -5548,208 +5782,20 @@ Private Sub Command11_Click()
         Exit Sub
     End If
 
-    If Trim$(POSDb & "") = "" Then
-        MsgBox "«”„ ﬁ«⁄œ… »Ì«‰«  «·‰ﬁÿ… €Ì— „Õœœ", vbCritical, "Œÿ√"
+    If TransferItemsFromServerToBranch(Msg, TraceText) Then
+        lblWait.Caption = "Items transferred successfully"
+        MsgBox Msg, vbInformation, "Item transfer"
+    Else
         lblWait.Visible = False
+        MsgBox Msg, vbCritical, "Item transfer"
         Exit Sub
     End If
 
-    If Trim$(ServerDb & "") = "" Then
-        MsgBox "«”„ ﬁ«⁄œ… »Ì«‰«  «·”Ì—›— €Ì— „Õœœ", vbCritical, "Œÿ√"
-        lblWait.Visible = False
-        Exit Sub
-    End If
-
-    '========================
-    ' 1) ‰ﬁ· «·√’‰«› «·‰«ﬁ’… „‰ «·”Ì—›— ≈·Ï «·‰ﬁÿ…
-    ' ﬁ—«¡… „‰ Cn - ﬂ «»… ⁄·Ï POSConnection
-    '========================
-    lblWait.Caption = "Ã«—Ì ‰ﬁ· «·√’‰«› „‰ «·”Ì—›— ≈·Ï «·‰ﬁÿ…"
-    DoEvents
-
-    s = ""
-    s = s & "SELECT "
-    s = s & "ItemID, ItemCode, ItemName, DefaultSupplier, GroupID, HaveSerial, LastUpdate, "
-    s = s & "PurchasePrice, SallingPrice, RequestLimit, CustomerPrice, HaveGuarantee, "
-    s = s & "GuaranteeValue, GuaranteeType, IsArchive, ItemType, AssbliedItem, RelatedItem, "
-    s = s & "ItemComment, ItemCase, ItemMaking, ItemMakingNew, code, Branch_NO, Fullcode, "
-    s = s & "prifix, PartNo, CostPrice, ItemNamee, itemSerials, barCodeNO, SizeID11 "
-    s = s & "FROM TblItems "
-    s = s & "ORDER BY ItemID"
-
-    mLastSQL = s
-    rsSrc.Open s, Cn, adOpenForwardOnly, adLockReadOnly, adCmdText
-
-    Do While Not rsSrc.EOF
-
-        ItemID = rsSrc("ItemID").Value
-
-        SafeCloseRS rsChk
-        s = "SELECT ItemID FROM TblItems WHERE ItemID = " & Val(ItemID & "")
-        mLastSQL = s
-        Set rsChk = New ADODB.Recordset
-
-        rsChk.Open s, POSConnection, adOpenForwardOnly, adLockReadOnly, adCmdText
-
-        If rsChk.EOF Then
-            SafeCloseRS rsChk
-
-            s = ""
-            s = s & "INSERT INTO TblItems ("
-            s = s & "ItemID, ItemCode, ItemName, DefaultSupplier, GroupID, HaveSerial, LastUpdate, "
-            s = s & "PurchasePrice, SallingPrice, RequestLimit, CustomerPrice, HaveGuarantee, "
-            s = s & "GuaranteeValue, GuaranteeType, IsArchive, ItemType, AssbliedItem, RelatedItem, "
-            s = s & "ItemComment, ItemCase, ItemMaking, ItemMakingNew, code, Branch_NO, Fullcode, "
-            s = s & "prifix, PartNo, CostPrice, ItemNamee, itemSerials, barCodeNO, SizeID11"
-            s = s & ") VALUES ("
-            s = s & SqlNum(rsSrc("ItemID").Value) & ","
-            s = s & SqlStr(rsSrc("ItemCode").Value) & ","
-            s = s & SqlStr(rsSrc("ItemName").Value) & ","
-            s = s & SqlNum(rsSrc("DefaultSupplier").Value) & ","
-            s = s & SqlNum(rsSrc("GroupID").Value) & ","
-            s = s & SqlNum(rsSrc("HaveSerial").Value) & ","
-            s = s & SqlDateTime(rsSrc("LastUpdate").Value) & ","
-            s = s & SqlNum(rsSrc("PurchasePrice").Value) & ","
-            s = s & SqlNum(rsSrc("SallingPrice").Value) & ","
-            s = s & SqlNum(rsSrc("RequestLimit").Value) & ","
-            s = s & SqlNum(rsSrc("CustomerPrice").Value) & ","
-            s = s & SqlNum(rsSrc("HaveGuarantee").Value) & ","
-            s = s & SqlNum(rsSrc("GuaranteeValue").Value) & ","
-            s = s & SqlNum(rsSrc("GuaranteeType").Value) & ","
-            s = s & SqlNum(rsSrc("IsArchive").Value) & ","
-            s = s & SqlNum(rsSrc("ItemType").Value) & ","
-            s = s & SqlNum(rsSrc("AssbliedItem").Value) & ","
-            s = s & SqlNum(rsSrc("RelatedItem").Value) & ","
-            s = s & SqlStr(rsSrc("ItemComment").Value) & ","
-            s = s & SqlNum(rsSrc("ItemCase").Value) & ","
-            s = s & SqlNum(rsSrc("ItemMaking").Value) & ","
-            s = s & SqlNum(rsSrc("ItemMakingNew").Value) & ","
-            s = s & SqlStr(rsSrc("code").Value) & ","
-            s = s & SqlNum(rsSrc("Branch_NO").Value) & ","
-            s = s & SqlStr(rsSrc("Fullcode").Value) & ","
-            s = s & SqlStr(rsSrc("prifix").Value) & ","
-            s = s & SqlStr(rsSrc("PartNo").Value) & ","
-            s = s & SqlNum(rsSrc("CostPrice").Value) & ","
-            s = s & SqlStr(rsSrc("ItemNamee").Value) & ","
-            s = s & SqlNum(rsSrc("itemSerials").Value) & ","
-            s = s & SqlStr(rsSrc("barCodeNO").Value) & ","
-            s = s & SqlNum(rsSrc("SizeID11").Value)
-            s = s & ")"
-
-            If ExecSQL(POSConnection, s, "Command11_Click", "Insert TblItems To POS") = False Then
-                Err.Raise vbObjectError + 1001, , BuildErrMsg(POSConnection, "Command11_Click", s, "›‘· √À‰«¡ ‰ﬁ· TblItems ≈·Ï «·‰ﬁÿ…")
-            End If
-        Else
-            SafeCloseRS rsChk
-        End If
-
-        rsSrc.MoveNext
-    Loop
-    SafeCloseRS rsSrc
-
-    '========================
-    ' 2) ‰ﬁ· ÊÕœ«  «·√’‰«› «·‰«ﬁ’… „‰ «·”Ì—›— ≈·Ï «·‰ﬁÿ…
-    '========================
-    lblWait.Caption = "Ã«—Ì ‰ﬁ· ÊÕœ«  «·√’‰«› „‰ «·”Ì—›— ≈·Ï «·‰ﬁÿ…"
-    DoEvents
-
-    s = ""
-    s = s & "SELECT "
-    s = s & "ItemID, UnitID, UnitFactor, SecOrder, DefaultUnit, UnitSalesPrice, UnitPurPrice, "
-    s = s & "FactorByDefaultUnit, MinSelingPrice, ForUnit, MethodCalc, SessionCode, barCodeNo2 "
-    s = s & "FROM TblItemsUnits "
-    s = s & "ORDER BY ItemID, UnitID"
-
-    mLastSQL = s
-    Set rsSrc = New ADODB.Recordset
-    rsSrc.Open s, Cn, adOpenForwardOnly, adLockReadOnly, adCmdText
-
-    Do While Not rsSrc.EOF
-
-        ItemID = rsSrc("ItemID").Value
-        UnitID = rsSrc("UnitID").Value
-
-        SafeCloseRS rsChk
-        s = "SELECT ItemID, UnitID FROM TblItemsUnits WHERE ItemID = " & Val(ItemID & "") & " AND UnitID = " & Val(UnitID & "")
-        mLastSQL = s
-            Set rsChk = New ADODB.Recordset
-        rsChk.Open s, POSConnection, adOpenForwardOnly, adLockReadOnly, adCmdText
-
-        If rsChk.EOF Then
-            SafeCloseRS rsChk
-
-            s = ""
-            s = s & "INSERT INTO TblItemsUnits ("
-            s = s & "ItemID, UnitID, UnitFactor, SecOrder, DefaultUnit, UnitSalesPrice, UnitPurPrice, "
-            s = s & "FactorByDefaultUnit, MinSelingPrice, ForUnit, MethodCalc, SessionCode, barCodeNo2"
-            s = s & ") VALUES ("
-            s = s & SqlNum(rsSrc("ItemID").Value) & ","
-            s = s & SqlNum(rsSrc("UnitID").Value) & ","
-            s = s & SqlNum(rsSrc("UnitFactor").Value) & ","
-            s = s & SqlNum(rsSrc("SecOrder").Value) & ","
-            s = s & SqlNum(rsSrc("DefaultUnit").Value) & ","
-            s = s & SqlNum(rsSrc("UnitSalesPrice").Value) & ","
-            s = s & SqlNum(rsSrc("UnitPurPrice").Value) & ","
-            s = s & SqlNum(rsSrc("FactorByDefaultUnit").Value) & ","
-            s = s & SqlNum(rsSrc("MinSelingPrice").Value) & ","
-            s = s & SqlNum(rsSrc("ForUnit").Value) & ","
-            s = s & SqlNum(rsSrc("MethodCalc").Value) & ","
-            s = s & SqlStr(rsSrc("SessionCode").Value) & ","
-            s = s & SqlStr(rsSrc("barCodeNo2").Value)
-            s = s & ")"
-
-            If ExecSQL(POSConnection, s, "Command11_Click", "Insert TblItemsUnits To POS") = False Then
-                Err.Raise vbObjectError + 1002, , BuildErrMsg(POSConnection, "Command11_Click", s, "›‘· √À‰«¡ ‰ﬁ· TblItemsUnits ≈·Ï «·‰ﬁÿ…")
-            End If
-        Else
-            SafeCloseRS rsChk
-        End If
-
-        rsSrc.MoveNext
-    Loop
-    SafeCloseRS rsSrc
-
-    '========================
-    ' 3)  ÕœÌÀ »«”Ê—œ«  TblOptions ⁄·Ï «·‰ﬁÿ… „‰ «·”Ì—›—
-    '========================
-    lblWait.Caption = "Ã«—Ì  ÕœÌÀ ≈⁄œ«œ«  «·‰ﬁÿ…"
-    DoEvents
-
-    s = "SELECT TOP 1 BigUserPw, BigUserPw2 FROM TblOptions"
-    mLastSQL = s
-     Set rsSrc = New ADODB.Recordset
-
-    rsSrc.Open s, Cn, adOpenForwardOnly, adLockReadOnly, adCmdText
-
-    If Not rsSrc.EOF Then
-        s = ""
-        s = s & "UPDATE TblOptions "
-        s = s & "SET BigUserPw = " & SqlStr(rsSrc("BigUserPw").Value) & ", "
-        s = s & "    BigUserPw2 = " & SqlStr(rsSrc("BigUserPw2").Value)
-
-        If ExecSQL(POSConnection, s, "Command11_Click", "Update TblOptions Passwords On POS") = False Then
-            Err.Raise vbObjectError + 1003, , BuildErrMsg(POSConnection, "Command11_Click", s, "›‘· √À‰«¡  ÕœÌÀ TblOptions ⁄·Ï «·‰ﬁÿ…")
-        End If
-    End If
-    SafeCloseRS rsSrc
-
-    lblWait.Caption = " „ ‰ﬁ· «·√’‰«› »‰Ã«Õ"
-    lblWait.Visible = True
-    DoEvents
-
-    SafeCloseRS rsChk
-    SafeCloseRS rsSrc
     Exit Sub
 
-ErrorHandler:
-    LogAdoErrors POSConnection, "Command11_Click", s, "Œÿ√ ⁄«„ ›Ì Command11_Click"
-    MsgBox BuildErrMsg(POSConnection, "Command11_Click", s, "ÕœÀ Œÿ√ √À‰«¡ ⁄„·Ì… «·‰ﬁ·"), vbCritical, "Œÿ√"
-
+EH:
     lblWait.Visible = False
-    SafeCloseRS rsChk
-    SafeCloseRS rsSrc
-    Err.Clear
-
+    MsgBox "Unexpected error in Command11_Click: " & Err.Description, vbCritical, "Error"
 End Sub
 
 Private Sub Command16_Click()
@@ -5910,7 +5956,7 @@ Private Sub Command14_Debug_Click()
     Dim CarTypeID As Long, OilsTypesID As Long, YearFact As Long, FixesAssetsID As Long, ColorID2 As Long
     Dim KM As Double, PPointID As Long, SupplerID As Long, Ser As Long, CarCurrentValue As Double, CarPrevValue As Double
     Dim CarEnginoil As Double, CarGearOil As Double, InvoiceTypeCodeID As Long
-    Dim storeID As Variant, userID As Variant, Emp_ID As Variant
+    Dim StoreId As Variant, userID As Variant, Emp_ID As Variant
     Dim NoteSerial As String, NoteSerial1 As String, TransactionComment As String
     Dim CashCustomerName As String, CashCustomerPhone As String
     Dim cleanCashCustomerName As String
@@ -6015,8 +6061,8 @@ Private Sub Command14_Debug_Click()
     '========================
     Set POSCn = New ADODB.Connection
     POSCn.CursorLocation = adUseServer
-    POSCn.ConnectionTimeout = 5000
-    POSCn.CommandTimeout = 5000
+    POSCn.ConnectionTimeout = 30
+    POSCn.CommandTimeout = 180
     POSCn.ConnectionString = "Provider=SQLOLEDB.1;Password=" & SysSQLServerUserpassword & _
                              ";Persist Security Info=True;User ID=" & SysSQLServerUserId & _
                              ";Initial Catalog=Test;Data Source=" & POSlServer.Text
@@ -6053,7 +6099,7 @@ Private Sub Command14_Debug_Click()
     DebugWriteSQL DebugLogFile, "Count tagged transactions", LastSQL
 
     Set rsCnt = POSCn.Execute(LastSQL)
-    TotalInvoices = CLng(rsCnt!Cnt)
+    TotalInvoices = CLng(rsCnt!cnt)
     rsCnt.Close
     Set rsCnt = Nothing
 
@@ -6113,7 +6159,7 @@ Private Sub Command14_Debug_Click()
         PayMentType = Val(rsTrans("PaymentType").Value & "")
         FromTransaction_Type = Val(rsTrans("Transaction_Type").Value & "")
         cusID = Val(rsTrans("CusID").Value & "")
-        storeID = Val(rsTrans("StoreID").Value & "")
+        StoreId = Val(rsTrans("StoreID").Value & "")
         userID = Val(rsTrans("UserID").Value & "")
         Emp_ID = Val(rsTrans("Emp_ID").Value & "")
         BranchID = Val(rsTrans("BranchID").Value & "")
@@ -6206,22 +6252,18 @@ Private Sub Command14_Debug_Click()
         TransactionComment = " ›« Ê—… „‰ﬁÊ·… „‰ " & POSname.Text & "   " & _
                              "   —ﬁ„ «·›« Ê—… " & NoteSerial1
 
-        '========================
-        ' Reserve destination Transaction_ID
-        '========================
         LastSQL = "EXEC dbo.ReserveTransactionId"
-        DebugWriteSQL DebugLogFile, "ReserveTransactionId", LastSQL
-
         Set rsSer = Cn.Execute(LastSQL)
         If Not rsSer.EOF Then
-            currentDestTransactionID = CStr(rsSer.Fields("NewId").Value)
+            currentDestTransactionID = CStr(rsSer.fields("NewId").Value)
         Else
-            Err.Raise vbObjectError + 500, , "·„ Ì „ ≈—Ã«⁄ Transaction_ID ÃœÌœ „‰ «·”Ì—›—"
+            Err.Raise vbObjectError + 500, , "?? ??? ????? Transaction_ID ???? ?? ???????"
         End If
         rsSer.Close
         Set rsSer = Nothing
 
         DebugWriteLine DebugLogFile, "Reserved DestTransactionID=" & currentDestTransactionID & " for SrcTransactionID=" & CStr(FromTransaction_ID)
+
 
         '========================
         ' Build Transactions INSERT
@@ -6239,7 +6281,7 @@ Private Sub Command14_Debug_Click()
 
         transSQL = transSQL & currentDestTransactionID & "," & SQLDate(FromTransaction_Date, True) & ",'" & Trim$(mTimeIn) & "'," & _
         Val(rsTrans("TypeInvoice").Value & "") & ",'" & Replace(rsTrans("Transaction_Serial").Value & "", "'", "''") & "'," & _
-        FromTransaction_Type & "," & PayMentType & "," & cusID & "," & storeID & "," & userID & "," & _
+        FromTransaction_Type & "," & PayMentType & "," & cusID & "," & StoreId & "," & userID & "," & _
         Emp_ID & "," & BranchID & "," & BoxID & "," & BillBasedOn & "," & VAT & "," & VATYou & ",'" & _
         Replace(NoteSerial, "'", "''") & "','" & Replace(NoteSerial1, "'", "''") & "'," & NoteId & ",1,'" & Replace(TransactionComment, "'", "''") & "','" & _
         SessionCode & "'," & IIf(Val(rsTrans("POSBillType").Value & "") = 0, 1, Val(rsTrans("POSBillType").Value & "")) & ",'" & Replace(rsTrans("NoteSerial1").Value & "", "'", "''") & "','" & Replace(Trim$(rsTrans("NoteSerial").Value & ""), "'", "''") & "'," & _
@@ -6468,19 +6510,19 @@ Private Sub Command14_Debug_Click()
     DebugWriteLine DebugLogFile, "Start reconcile/checksum"
 
     Set rsCnt = POSCn.Execute("SELECT COUNT(*) Cnt FROM Transactions WHERE IsNull(Copied,0)=0 AND SessionCode='" & SessionCode & "'")
-    SrcHeads = CLng(rsCnt!Cnt): rsCnt.Close
+    SrcHeads = CLng(rsCnt!cnt): rsCnt.Close
 
     Set rsCnt = POSCn.Execute("SELECT COUNT(*) Cnt FROM Transaction_Details d WHERE d.Transaction_ID IN (SELECT Transaction_ID FROM Transactions WHERE IsNull(Copied,0)=0 AND SessionCode='" & SessionCode & "')")
-    SrcDet = CLng(rsCnt!Cnt): rsCnt.Close
+    SrcDet = CLng(rsCnt!cnt): rsCnt.Close
 
     Set rsCnt = POSCn.Execute("SELECT COUNT(*) Cnt FROM TransactionValueAdded v WHERE v.Transaction_ID IN (SELECT Transaction_ID FROM Transactions WHERE IsNull(Copied,0)=0 AND SessionCode='" & SessionCode & "')")
-    SrcVAT = CLng(rsCnt!Cnt): rsCnt.Close
+    SrcVAT = CLng(rsCnt!cnt): rsCnt.Close
 
     Set rsCnt = POSCn.Execute("SELECT COUNT(*) Cnt FROM TblTransactionPayments p WHERE p.Transaction_ID IN (SELECT Transaction_ID FROM Transactions WHERE IsNull(Copied,0)=0 AND SessionCode='" & SessionCode & "')")
-    SrcPay = CLng(rsCnt!Cnt): rsCnt.Close
+    SrcPay = CLng(rsCnt!cnt): rsCnt.Close
 
     Set rsCnt = POSCn.Execute("SELECT COUNT(*) Cnt FROM TblSalesPayment s WHERE s.TransID IN (SELECT Transaction_ID FROM Transactions WHERE IsNull(Copied,0)=0 AND SessionCode='" & SessionCode & "')")
-    SrcPay2 = CLng(rsCnt!Cnt): rsCnt.Close
+    SrcPay2 = CLng(rsCnt!cnt): rsCnt.Close
     Set rsCnt = Nothing
 
     Set rsCnt = POSCn.Execute("SELECT SUM(CAST(d.Quantity AS float)) AS SumQty, SUM(CAST(d.Quantity * d.Price AS decimal(18,4))) AS SumAmount FROM Transaction_Details d WHERE d.Transaction_ID IN (SELECT Transaction_ID FROM Transactions WHERE IsNull(Copied,0)=0 AND SessionCode='" & SessionCode & "')")
@@ -6510,19 +6552,19 @@ Private Sub Command14_Debug_Click()
     Set rsCnt = Nothing
 
     Set rsCnt = Cn.Execute("SELECT COUNT(*) Cnt FROM dbo.Transactions WHERE SessionCode='" & SessionCode & "'")
-    DstHeads = CLng(rsCnt!Cnt): rsCnt.Close
+    DstHeads = CLng(rsCnt!cnt): rsCnt.Close
 
     Set rsCnt = Cn.Execute("SELECT COUNT(*) Cnt FROM dbo.Transaction_Details d JOIN dbo.Transactions t ON t.Transaction_ID=d.Transaction_ID WHERE t.SessionCode='" & SessionCode & "'")
-    DstDet = CLng(rsCnt!Cnt): rsCnt.Close
+    DstDet = CLng(rsCnt!cnt): rsCnt.Close
 
     Set rsCnt = Cn.Execute("SELECT COUNT(*) Cnt FROM dbo.TransactionValueAdded v JOIN dbo.Transactions t ON t.Transaction_ID=v.Transaction_ID WHERE t.SessionCode='" & SessionCode & "'")
-    DstVAT = CLng(rsCnt!Cnt): rsCnt.Close
+    DstVAT = CLng(rsCnt!cnt): rsCnt.Close
 
     Set rsCnt = Cn.Execute("SELECT COUNT(*) Cnt FROM dbo.TblTransactionPayments p JOIN dbo.Transactions t ON t.Transaction_ID=p.Transaction_ID WHERE t.SessionCode='" & SessionCode & "'")
-    DstPay = CLng(rsCnt!Cnt): rsCnt.Close
+    DstPay = CLng(rsCnt!cnt): rsCnt.Close
 
     Set rsCnt = Cn.Execute("SELECT COUNT(*) Cnt FROM dbo.TblSalesPayment s JOIN dbo.Transactions t ON t.Transaction_ID=s.TransID WHERE t.SessionCode='" & SessionCode & "'")
-    DstPay2 = CLng(rsCnt!Cnt): rsCnt.Close
+    DstPay2 = CLng(rsCnt!cnt): rsCnt.Close
 
     Set rsCnt = Cn.Execute("SELECT SUM(CAST(d.Quantity AS float)) AS SumQty, SUM(CAST(d.Quantity * d.Price AS decimal(18,4))) AS SumAmount FROM dbo.Transaction_Details d JOIN dbo.Transactions t ON t.Transaction_ID = d.Transaction_ID WHERE t.SessionCode='" & SessionCode & "'")
     If Not rsCnt.EOF Then
@@ -6575,12 +6617,12 @@ Private Sub Command14_Debug_Click()
     End If
 
     Set rsCnt = POSCn.Execute("SELECT COUNT(*) AS Cnt FROM Transactions WHERE IsNull(Copied,0)=0 AND SessionCode='" & SessionCode & "'")
-    srcCount = CLng(rsCnt.Fields("Cnt").Value)
+    srcCount = CLng(rsCnt.fields("Cnt").Value)
     rsCnt.Close
     Set rsCnt = Nothing
 
     Set rsCnt = Cn.Execute("SELECT COUNT(*) AS Cnt FROM dbo.Transactions WHERE SessionCode='" & SessionCode & "'")
-    dstCount = CLng(rsCnt.Fields("Cnt").Value)
+    dstCount = CLng(rsCnt.fields("Cnt").Value)
     rsCnt.Close
     Set rsCnt = Nothing
 
@@ -6730,193 +6772,226 @@ errHandler:
     MsgBox "Update Error: " & Err.Number & vbCrLf & Err.Description & vbCrLf & vbCrLf & s, vbCritical
 
 End Sub
+'Private Sub Command2_Click()
+'
+'    On Error GoTo ErrorHandler
+'
+'    Dim sql As String
+'    Dim s As String
+'
+'    Dim NoOFItem_POS As Double
+'    Dim NoOFItem_Server As Double
+'    Dim MaxItem_POS As Double
+'    Dim MaxItem_Server As Double
+'
+'    Dim NoOfGroups_pos As Double
+'    Dim NoOfGroups_server As Double
+'    Dim MaxGroupid_pos As Double
+'    Dim MaxGroupidserver As Double
+'
+'    Dim Rs3 As ADODB.Recordset
+'    Dim BatchSQL As String
+'    Dim BatchCount As Long
+'
+'    mLastProc = "Command2_Click"
+'    mLastSQL = ""
+'
+'    If Trim$(POSlServer.Text) = "" Then
+'        MsgBox "«Œ — «·‰ﬁÿ… «·„‰ﬁÊ· ≈·ÌÂ« √Ê·«", vbCritical, "OFFLINE"
+'        Exit Sub
+'    End If
+'
+'    If ConnectionFirst = False Then Exit Sub
+'
+'    Set Rs3 = New ADODB.Recordset
+'
+'    lblWait.Visible = True
+'
+'    '========================================
+'    ' Counts ··„—«Ã⁄… ›ﬁÿ
+'    '========================================
+'    sql = "select count(ItemID) As NoOfitems, max(ItemID) as MaxItemid from TblItems"
+'    Rs3.Open sql, POSConnection, adOpenStatic, adLockReadOnly, adCmdText
+'    If Rs3.RecordCount > 0 Then
+'        NoOFItem_POS = IIf(IsNull(Rs3("NoOfitems").Value), 0, Rs3("NoOfitems").Value)
+'        MaxItem_POS = IIf(IsNull(Rs3("MaxItemid").Value), 0, Rs3("MaxItemid").Value)
+'    End If
+'    Rs3.Close
+'
+'    Rs3.Open sql, Cn, adOpenStatic, adLockReadOnly, adCmdText
+'    If Rs3.RecordCount > 0 Then
+'        NoOFItem_Server = IIf(IsNull(Rs3("NoOfitems").Value), 0, Rs3("NoOfitems").Value)
+'        MaxItem_Server = IIf(IsNull(Rs3("MaxItemid").Value), 0, Rs3("MaxItemid").Value)
+'    End If
+'    Rs3.Close
+'
+'    lblWait.Caption = "Ì „ «·¬‰  ÕœÌÀ «·√”⁄«— Ê«·„·›«  «·√”«”Ì…"
+'    DoEvents
+'
+'    sql = "select count(GroupID) As NoOfGroups, max(GroupID) as MaxGroupid from Groups"
+'    Rs3.Open sql, POSConnection, adOpenStatic, adLockReadOnly, adCmdText
+'    If Rs3.RecordCount > 0 Then
+'        NoOfGroups_pos = IIf(IsNull(Rs3("NoOfGroups").Value), 0, Rs3("NoOfGroups").Value)
+'        MaxGroupid_pos = IIf(IsNull(Rs3("MaxGroupid").Value), 0, Rs3("MaxGroupid").Value)
+'    End If
+'    Rs3.Close
+'
+'    Rs3.Open sql, Cn, adOpenStatic, adLockReadOnly, adCmdText
+'    If Rs3.RecordCount > 0 Then
+'        NoOfGroups_server = IIf(IsNull(Rs3("NoOfGroups").Value), 0, Rs3("NoOfGroups").Value)
+'        MaxGroupidserver = IIf(IsNull(Rs3("MaxGroupid").Value), 0, Rs3("MaxGroupid").Value)
+'    End If
+'    Rs3.Close
+'
+'    BolFrmLoaded = True
+'
+'    '========================================
+'    ' 1) Groups
+'    '========================================
+'    lblWait.Caption = " ÕœÌÀ «·„Ã„Ê⁄« "
+'    DoEvents
+'    Call SyncGroups_ServerToPOS(BatchSQL, BatchCount)
+'
+'    '========================================
+'    ' 2) TblUnites
+'    '========================================
+'    lblWait.Caption = " ÕœÌÀ «·ÊÕœ« "
+'    DoEvents
+'    Call SyncTblUnites_ServerToPOS(BatchSQL, BatchCount)
+'
+'    '========================================
+'    ' 3) TblItems
+'    '========================================
+'    lblWait.Caption = " ÕœÌÀ «·√’‰«›"
+'    DoEvents
+'    Call SyncTblItems_ServerToPOS(BatchSQL, BatchCount)
+'
+'    '========================================
+'    ' 4) TblPaymentType
+'    '========================================
+'    lblWait.Caption = " ÕœÌÀ √‰Ê«⁄ «·œ›⁄"
+'    DoEvents
+'    Call SyncTblPaymentType_ServerToPOS(BatchSQL, BatchCount)
+'
+'    '========================================
+'    ' 5) TblPaymentUser
+'    '========================================
+'    lblWait.Caption = " ÕœÌÀ ’·«ÕÌ«  Ê”«∆· «·œ›⁄"
+'    DoEvents
+'    Call SyncTblPaymentUser_ServerToPOS(BatchSQL, BatchCount)
+'
+'    '========================================
+'    ' 6) BanksData
+'    '========================================
+'    lblWait.Caption = " ÕœÌÀ „·› «·»‰Êﬂ"
+'    DoEvents
+'    Call SyncBanksData_ServerToPOS(BatchSQL, BatchCount)
+'
+'    '========================================
+'    ' 7) TblUsers
+'    '========================================
+'    lblWait.Caption = " ÕœÌÀ «·„” Œœ„Ì‰"
+'    DoEvents
+'    Call SyncTblUsers_ServerToPOS(BatchSQL, BatchCount)
+'
+'    '========================================
+'    ' 8) TblEmpJobsTypes
+'    '========================================
+'    lblWait.Caption = " ÕœÌÀ √‰Ê«⁄ «·ÊŸ«∆›"
+'    DoEvents
+'    Call SyncTblEmpJobsTypes_ServerToPOS(BatchSQL, BatchCount)
+'
+'    '========================================
+'    ' 9) TblEmployee
+'    '========================================
+'    lblWait.Caption = " ÕœÌÀ «·„ÊŸ›Ì‰"
+'    DoEvents
+'    Call SyncTblEmployee_ServerToPOS(BatchSQL, BatchCount)
+'
+'    '========================================
+'    ' 10) TblCustemers
+'    '========================================
+'    lblWait.Caption = " ÕœÌÀ «·⁄„·«¡"
+'    DoEvents
+'    Call SyncTblCustemers_ServerToPOS(BatchSQL, BatchCount)
+'
+'    '========================================
+'    ' 11) TblStore
+'    '========================================
+'    lblWait.Caption = " ÕœÌÀ «·„Œ«“‰"
+'    DoEvents
+'    Call SyncTblStore_ServerToPOS(BatchSQL, BatchCount)
+'
+'    '========================================
+'    ' 12) TblItemsUnits
+'    '========================================
+'    lblWait.Caption = " ÕœÌÀ ÊÕœ«  «·√’‰«›"
+'    DoEvents
+'    Call SyncTblItemsUnits_ServerToPOS(BatchSQL, BatchCount)
+'
+'    '========================================
+'    ' 13) Update TblItemsUnits prices
+'    '========================================
+'    lblWait.Caption = " ÕœÌÀ √”⁄«— «·ÊÕœ« "
+'    DoEvents
+'    Call UpdateTblItemsUnits_ServerToPOS(BatchSQL, BatchCount)
+'
+'    '========================================
+'    ' 14) Update TblItems
+'    '========================================
+'    lblWait.Caption = " ÕœÌÀ »Ì«‰«  «·√’‰«›"
+'    DoEvents
+'    Call UpdateTblItems_ServerToPOS(BatchSQL, BatchCount)
+'
+'    lblWait.Visible = True
+'    lblWait.Caption = "Prices and master data updated successfully"
+'    DoEvents
+'
+'CleanExit:
+'    SafeCloseRS Rs3
+'    Exit Sub
+'
+'ErrorHandler:
+'    LogAdoErrors POSConnection, "Command2_Click", mLastSQL, "Œÿ√ ⁄«„ ›Ì Command2_Click"
+'    MsgBox BuildErrMsg(POSConnection, "Command2_Click", mLastSQL, "ÕœÀ Œÿ√ √À‰«¡  ÕœÌÀ «·„·›«  «·√”«”Ì…"), vbCritical, "Œÿ√"
+'    lblWait.Visible = False
+'    SafeCloseRS Rs3
+'    Err.Clear
+'
+'End Sub
 Private Sub Command2_Click()
+    Dim Msg As String
+    Dim TraceText As String
 
-    On Error GoTo ErrorHandler
-
-    Dim sql As String
-    Dim s As String
-
-    Dim NoOFItem_POS As Double
-    Dim NoOFItem_Server As Double
-    Dim MaxItem_POS As Double
-    Dim MaxItem_Server As Double
-
-    Dim NoOfGroups_pos As Double
-    Dim NoOfGroups_server As Double
-    Dim MaxGroupid_pos As Double
-    Dim MaxGroupidserver As Double
-
-    Dim Rs3 As ADODB.Recordset
-    Dim BatchSQL As String
-    Dim BatchCount As Long
-
-    mLastProc = "Command2_Click"
-    mLastSQL = ""
+    On Error GoTo EH
 
     If Trim$(POSlServer.Text) = "" Then
-        MsgBox "«Œ — «·‰ﬁÿ… «·„‰ﬁÊ· ≈·ÌÂ« √Ê·«", vbCritical, "OFFLINE"
+        MsgBox "Select the connected branch first", vbCritical, "OFFLINE"
         Exit Sub
     End If
 
     If ConnectionFirst = False Then Exit Sub
 
-    Set Rs3 = New ADODB.Recordset
-
     lblWait.Visible = True
+    lblWait.Caption = "Updating prices and master data..."
+    DoEvents
 
-    '========================================
-    ' Counts ··„—«Ã⁄… ›ﬁÿ
-    '========================================
-    sql = "select count(ItemID) As NoOfitems, max(ItemID) as MaxItemid from TblItems"
-    Rs3.Open sql, POSConnection, adOpenStatic, adLockReadOnly, adCmdText
-    If Rs3.RecordCount > 0 Then
-        NoOFItem_POS = IIf(IsNull(Rs3("NoOfitems").Value), 0, Rs3("NoOfitems").Value)
-        MaxItem_POS = IIf(IsNull(Rs3("MaxItemid").Value), 0, Rs3("MaxItemid").Value)
+    If UpdatePricesFromServerToBranch(Msg, TraceText) Then
+        lblWait.Caption = "Prices and master data updated successfully"
+        MsgBox Msg, vbInformation, "Price update"
+    Else
+        lblWait.Visible = False
+        MsgBox Msg, vbCritical, "Price update"
+        Exit Sub
     End If
-    Rs3.Close
 
-    Rs3.Open sql, Cn, adOpenStatic, adLockReadOnly, adCmdText
-    If Rs3.RecordCount > 0 Then
-        NoOFItem_Server = IIf(IsNull(Rs3("NoOfitems").Value), 0, Rs3("NoOfitems").Value)
-        MaxItem_Server = IIf(IsNull(Rs3("MaxItemid").Value), 0, Rs3("MaxItemid").Value)
-    End If
-    Rs3.Close
-
-    lblWait.Caption = "Ì „ «·¬‰  ÕœÌÀ «·√”⁄«— Ê«·„·›«  «·√”«”Ì…"
-    DoEvents
-
-    sql = "select count(GroupID) As NoOfGroups, max(GroupID) as MaxGroupid from Groups"
-    Rs3.Open sql, POSConnection, adOpenStatic, adLockReadOnly, adCmdText
-    If Rs3.RecordCount > 0 Then
-        NoOfGroups_pos = IIf(IsNull(Rs3("NoOfGroups").Value), 0, Rs3("NoOfGroups").Value)
-        MaxGroupid_pos = IIf(IsNull(Rs3("MaxGroupid").Value), 0, Rs3("MaxGroupid").Value)
-    End If
-    Rs3.Close
-
-    Rs3.Open sql, Cn, adOpenStatic, adLockReadOnly, adCmdText
-    If Rs3.RecordCount > 0 Then
-        NoOfGroups_server = IIf(IsNull(Rs3("NoOfGroups").Value), 0, Rs3("NoOfGroups").Value)
-        MaxGroupidserver = IIf(IsNull(Rs3("MaxGroupid").Value), 0, Rs3("MaxGroupid").Value)
-    End If
-    Rs3.Close
-
-    BolFrmLoaded = True
-
-    '========================================
-    ' 1) Groups
-    '========================================
-    lblWait.Caption = " ÕœÌÀ «·„Ã„Ê⁄« "
-    DoEvents
-    Call SyncGroups_ServerToPOS(BatchSQL, BatchCount)
-
-    '========================================
-    ' 2) TblUnites
-    '========================================
-    lblWait.Caption = " ÕœÌÀ «·ÊÕœ« "
-    DoEvents
-    Call SyncTblUnites_ServerToPOS(BatchSQL, BatchCount)
-
-    '========================================
-    ' 3) TblItems
-    '========================================
-    lblWait.Caption = " ÕœÌÀ «·√’‰«›"
-    DoEvents
-    Call SyncTblItems_ServerToPOS(BatchSQL, BatchCount)
-
-    '========================================
-    ' 4) TblPaymentType
-    '========================================
-    lblWait.Caption = " ÕœÌÀ √‰Ê«⁄ «·œ›⁄"
-    DoEvents
-    Call SyncTblPaymentType_ServerToPOS(BatchSQL, BatchCount)
-
-    '========================================
-    ' 5) TblPaymentUser
-    '========================================
-    lblWait.Caption = " ÕœÌÀ ’·«ÕÌ«  Ê”«∆· «·œ›⁄"
-    DoEvents
-    Call SyncTblPaymentUser_ServerToPOS(BatchSQL, BatchCount)
-
-    '========================================
-    ' 6) BanksData
-    '========================================
-    lblWait.Caption = " ÕœÌÀ „·› «·»‰Êﬂ"
-    DoEvents
-    Call SyncBanksData_ServerToPOS(BatchSQL, BatchCount)
-
-    '========================================
-    ' 7) TblUsers
-    '========================================
-    lblWait.Caption = " ÕœÌÀ «·„” Œœ„Ì‰"
-    DoEvents
-    Call SyncTblUsers_ServerToPOS(BatchSQL, BatchCount)
-
-    '========================================
-    ' 8) TblEmpJobsTypes
-    '========================================
-    lblWait.Caption = " ÕœÌÀ √‰Ê«⁄ «·ÊŸ«∆›"
-    DoEvents
-    Call SyncTblEmpJobsTypes_ServerToPOS(BatchSQL, BatchCount)
-
-    '========================================
-    ' 9) TblEmployee
-    '========================================
-    lblWait.Caption = " ÕœÌÀ «·„ÊŸ›Ì‰"
-    DoEvents
-    Call SyncTblEmployee_ServerToPOS(BatchSQL, BatchCount)
-
-    '========================================
-    ' 10) TblCustemers
-    '========================================
-    lblWait.Caption = " ÕœÌÀ «·⁄„·«¡"
-    DoEvents
-    Call SyncTblCustemers_ServerToPOS(BatchSQL, BatchCount)
-
-    '========================================
-    ' 11) TblStore
-    '========================================
-    lblWait.Caption = " ÕœÌÀ «·„Œ«“‰"
-    DoEvents
-    Call SyncTblStore_ServerToPOS(BatchSQL, BatchCount)
-
-    '========================================
-    ' 12) TblItemsUnits
-    '========================================
-    lblWait.Caption = " ÕœÌÀ ÊÕœ«  «·√’‰«›"
-    DoEvents
-    Call SyncTblItemsUnits_ServerToPOS(BatchSQL, BatchCount)
-
-    '========================================
-    ' 13) Update TblItemsUnits prices
-    '========================================
-    lblWait.Caption = " ÕœÌÀ √”⁄«— «·ÊÕœ« "
-    DoEvents
-    Call UpdateTblItemsUnits_ServerToPOS(BatchSQL, BatchCount)
-
-    '========================================
-    ' 14) Update TblItems
-    '========================================
-    lblWait.Caption = " ÕœÌÀ »Ì«‰«  «·√’‰«›"
-    DoEvents
-    Call UpdateTblItems_ServerToPOS(BatchSQL, BatchCount)
-
-    lblWait.Visible = True
-    lblWait.Caption = " „  ÕœÌÀ «·√”⁄«— Ê«·„·›«  «·√”«”Ì… »‰Ã«Õ"
-    DoEvents
-
-CleanExit:
-    SafeCloseRS Rs3
     Exit Sub
 
-ErrorHandler:
-    LogAdoErrors POSConnection, "Command2_Click", mLastSQL, "Œÿ√ ⁄«„ ›Ì Command2_Click"
-    MsgBox BuildErrMsg(POSConnection, "Command2_Click", mLastSQL, "ÕœÀ Œÿ√ √À‰«¡  ÕœÌÀ «·„·›«  «·√”«”Ì…"), vbCritical, "Œÿ√"
+EH:
     lblWait.Visible = False
-    SafeCloseRS Rs3
-    Err.Clear
-
+    MsgBox "Unexpected error in Command2_Click: " & Err.Description, vbCritical, "Error"
 End Sub
+
 Private Sub Command12_Click()
 
 
@@ -6942,9 +7017,9 @@ On Error GoTo ErrTrap
     ' ≈⁄œ«œ « ’«· «·‰ﬁÿ… (POSConnection)
     Set POSConnection = New ADODB.Connection
     With POSConnection
-        .CommandTimeout = 5000
+        .CommandTimeout = 180
         .CursorLocation = adUseClient
-        .ConnectionTimeout = 5000
+        .ConnectionTimeout = 30
         If SysSQLServerType = 1 Then
             .ConnectionString = "Provider=SQLOLEDB.1;Password=" & SysSQLServerUserpassword & ";Persist Security Info=True;User ID=" & SysSQLServerUserId & _
                                 ";Initial Catalog=" & POSDb & ";Data Source=" & POSServer
@@ -7009,7 +7084,7 @@ On Error GoTo ErrTrap
          Dim CarTypeID As Long, OilsTypesID As Long, YearFact As Long, FixesAssetsID As Long, ColorID2 As Long
          Dim KM As Double, PPointID As Long, SupplerID As Long, Ser As Long, CarCurrentValue As Double, CarPrevValue As Double
          Dim CarEnginoil As Double, CarGearOil As Double, InvoiceTypeCodeID As Long
-         Dim storeID As Variant, userID As Variant, Emp_ID As Variant
+         Dim StoreId As Variant, userID As Variant, Emp_ID As Variant
          Dim NoteSerial As String, NoteSerial1 As String, TransactionComment As String
          Dim CashCustomerName As String, CashCustomerPhone As String
          Dim PlateNo As String, Shaseh As String, CarMeter As String
@@ -7022,7 +7097,7 @@ On Error GoTo ErrTrap
 Dim CarOilChangeDate As Date
          PayMentType = Val(rsTrans("PaymentType").Value & "")
          cusID = Val(rsTrans("CusID").Value & "")
-         storeID = rsTrans("StoreID").Value
+         StoreId = rsTrans("StoreID").Value
          userID = rsTrans("UserID").Value
          Emp_ID = rsTrans("Emp_ID").Value
          BranchID = Val(rsTrans("BranchID").Value & "")
@@ -7113,7 +7188,7 @@ Dim CarOilChangeDate As Date
                     "InvoiceTypeCodeID, InvoiceTypeCodename, DocumentCurrencyCode, TaxCurrencyCode, paymentnote, PaymentMeansCode) VALUES ("
          transSQL = transSQL & currentDestTransactionID & "," & SQLDate(FromTransaction_Date, True) & "," & _
                     Val(rsTrans("TypeInvoice").Value & "") & ",'" & rsTrans("Transaction_Serial").Value & "'," & _
-                    FromTransaction_Type & "," & PayMentType & "," & Val(cusID) & "," & storeID & "," & userID & "," & _
+                    FromTransaction_Type & "," & PayMentType & "," & Val(cusID) & "," & StoreId & "," & userID & "," & _
                     Emp_ID & "," & BranchID & "," & BoxID & "," & BillBasedOn & "," & VAT & "," & VATYou & "," & _
                     "'" & NoteSerial & "'," & _
                     "'" & NoteSerial1 & "',0,1," & _
@@ -8445,8 +8520,8 @@ End Sub
 '    '========================
 '    Set POSCn = New ADODB.Connection
 '    POSCn.CursorLocation = adUseServer
-'    POSCn.ConnectionTimeout = 5000
-'    POSCn.CommandTimeout = 5000
+'    POSCn.ConnectionTimeout = 30
+'    POSCn.CommandTimeout = 180
 '    POSCn.ConnectionString = "Provider=SQLOLEDB.1;Password=" & SysSQLServerUserpassword & _
 '                             ";Persist Security Info=True;User ID=" & SysSQLServerUserId & _
 '                             ";Initial Catalog=" & POSDb & ";Data Source=" & POSlServer.Text
@@ -9340,10 +9415,10 @@ Private Function ExecuteScalarLng(ByVal CnX As ADODB.Connection, ByVal SQLText A
 
     If rs.EOF Then
         ExecuteScalarLng = 0
-    ElseIf IsNull(rs.Fields(0).Value) Then
+    ElseIf IsNull(rs.fields(0).Value) Then
         ExecuteScalarLng = 0
     Else
-        ExecuteScalarLng = CLng(rs.Fields(0).Value)
+        ExecuteScalarLng = CLng(rs.fields(0).Value)
     End If
 
     rs.Close
@@ -9394,7 +9469,9 @@ Private Sub Command14_Click()
     Dim CurrentSrcTransactionID As Double
     Dim currentDestTransactionID As String
     Dim ReconcileMsg As String
-
+    Dim DestIdBySource As Collection
+    Dim SrcIdByDest As Collection
+    Dim LastReservedDestId As Double
     Dim mTimeStart As Date
     Dim direction As String
     Dim kind As String
@@ -9440,7 +9517,7 @@ Private Sub Command14_Click()
     Dim CarEnginoil As Double
     Dim CarGearOil As Double
     Dim InvoiceTypeCodeID As Long
-    Dim storeID As Variant
+    Dim StoreId As Variant
     Dim userID As Variant
     Dim Emp_ID As Variant
     Dim NoteSerial As String
@@ -9472,6 +9549,14 @@ Private Sub Command14_Click()
     Dim DstVAT As Long
     Dim DstPay As Long
     Dim DstPay2 As Long
+    Dim DstHeadsBySession As Long
+    Dim DstDetBySession As Long
+    Dim DstVATBySession As Long
+    Dim DstPayBySession As Long
+    Dim DstPay2BySession As Long
+    Dim DstDuplicateHeaders As Long
+    Dim WrongBranchHeaders As Long
+    Dim SourceIdListCsv As String
     Dim srcCount As Long
     Dim dstCount As Long
 
@@ -9518,6 +9603,10 @@ Private Sub Command14_Click()
     Dim inTx As Boolean
     Dim Recorddate As Date
     Dim POSBillTypeVal As Long
+    Dim ExistingDestCount As Long
+    Dim ExistingDestId As String
+    Dim SkipCurrentInvoice As Boolean
+    Dim ReuseExistingDestForInsert As Boolean
     Dim MsgErr As String
 
     '========================
@@ -9535,10 +9624,14 @@ Private Sub Command14_Click()
     mServerD = "dbo."
     inTx = False
     ReconcileMsg = ""
+    Set DestIdBySource = New Collection
+    Set SrcIdByDest = New Collection
+    LastReservedDestId = 0
     CurrentStage = "Init"
     CurrentInvoiceNo = ""
     CurrentSrcTransactionID = 0
     currentDestTransactionID = ""
+    SourceIdListCsv = ""
 
     mTimeStart = Now
     txtStartTime = mTimeStart
@@ -9577,8 +9670,8 @@ Private Sub Command14_Click()
 
     Set POSCn = New ADODB.Connection
     POSCn.CursorLocation = adUseServer
-    POSCn.ConnectionTimeout = 5000
-    POSCn.CommandTimeout = 5000
+    POSCn.ConnectionTimeout = 30
+    POSCn.CommandTimeout = 180
     POSCn.ConnectionString = "Provider=SQLOLEDB.1;Password=" & SysSQLServerUserpassword & _
                              ";Persist Security Info=True;User ID=" & SysSQLServerUserId & _
                              ";Initial Catalog=" & POSDb & ";Data Source=" & POSlServer.Text
@@ -9607,7 +9700,7 @@ Private Sub Command14_Click()
     LastSQL = "SELECT COUNT(*) AS Cnt FROM Transactions WHERE IsNull(Copied,0)=0 AND SessionCode='" & SessionCode & "' AND " & GetQuery
 
     Set rsCnt = POSCn.Execute(LastSQL)
-    TotalInvoices = CLng(Val(rsCnt!Cnt & ""))
+    TotalInvoices = CLng(Val(rsCnt!cnt & ""))
     rsCnt.Close
     Set rsCnt = Nothing
 
@@ -9650,6 +9743,10 @@ Private Sub Command14_Click()
 
         CurrentSrcTransactionID = Val(rsTrans("Transaction_ID").Value & "")
         currentDestTransactionID = ""
+        ExistingDestCount = 0
+        ExistingDestId = ""
+        SkipCurrentInvoice = False
+        ReuseExistingDestForInsert = False
 
         If Trim$(rsTrans("NoteSerial1").Value & "") <> "" Then
             CurrentInvoiceNo = Trim$(rsTrans("NoteSerial1").Value & "")
@@ -9669,7 +9766,7 @@ Private Sub Command14_Click()
         PayMentType = Val(rsTrans("PaymentType").Value & "")
         FromTransaction_Type = Val(rsTrans("Transaction_Type").Value & "")
         cusID = Val(rsTrans("CusID").Value & "")
-        storeID = Val(rsTrans("StoreID").Value & "")
+        StoreId = Val(rsTrans("StoreID").Value & "")
         userID = Val(rsTrans("UserID").Value & "")
         Emp_ID = Val(rsTrans("Emp_ID").Value & "")
         BranchID = Val(rsTrans("BranchID").Value & "")
@@ -9779,43 +9876,100 @@ Private Sub Command14_Click()
                  " | SrcQty=" & CStr(OneSrcQty) & _
                  " | SrcAmount=" & CStr(OneSrcAmount)
 
+        If OneSrcDetCnt = 0 Or OneSrcAmount = 0 Or (OneSrcPayCnt = 0 And OneSrcPay2Cnt = 0) Then
+            WriteLog "Invoice content note", _
+                     "SrcID=" & CurrentSrcTransactionID & _
+                     " | InvoiceNo=" & CurrentInvoiceNo & _
+                     " | SrcDet=" & OneSrcDetCnt & _
+                     " | SrcAmount=" & CStr(OneSrcAmount) & _
+                     " | SrcTPay=" & OneSrcPayCnt & _
+                     " | SrcSPay=" & OneSrcPay2Cnt
+        End If
+
         If (FromTransaction_Type <> 21 And FromTransaction_Type <> 9) And (OneSrcPayCnt > 0 Or OneSrcPay2Cnt > 0) Then
             WriteLog "WARNING", "Source invoice has payments but type is not 21/9. SrcID=" & CurrentSrcTransactionID & " | Type=" & FromTransaction_Type
         End If
 
         '========================
-        ' Reserve destination Transaction_ID
+        ' Check existing destination header by OldTransaction_ID
         '========================
-        CurrentStage = "Reserve destination Transaction_ID"
-        LastSQL = "EXEC dbo.ReserveTransactionId"
+        CurrentStage = "Check existing destination header"
+        ExistingDestCount = GetExistingDestinationHeaderCount(Cn, CurrentSrcTransactionID, BranchID, ExistingDestId)
 
-'        Set rsSer = Cn.Execute(LastSQL)
-        
-        Dim cmdSer As ADODB.Command
-Set cmdSer = New ADODB.Command
+        If ExistingDestCount > 1 Then
+            WriteLog "Duplicate destination header detected", _
+                     "SessionCode=" & SessionCode & _
+                     " | SrcID=" & CurrentSrcTransactionID & _
+                     " | InvoiceNo=" & CurrentInvoiceNo & _
+                     " | ExistingCount=" & ExistingDestCount & _
+                     " | SampleDestID=" & ExistingDestId
+            Err.Raise vbObjectError + 3016, "Command14_Click", "Duplicate destination header detected for OldTransaction_ID=" & CStr(CLng(CurrentSrcTransactionID)) & " and BranchId=" & CStr(BranchID)
+        ElseIf ExistingDestCount = 1 Then
+            currentDestTransactionID = ExistingDestId
+            RememberCommand14DestMapping DestIdBySource, SrcIdByDest, SessionCode, CurrentSrcTransactionID, CurrentInvoiceNo, currentDestTransactionID
+            WriteLog "Existing destination header found", _
+                     "SessionCode=" & SessionCode & _
+                     " | SrcID=" & CurrentSrcTransactionID & _
+                     " | InvoiceNo=" & CurrentInvoiceNo & _
+                     " | DestID=" & currentDestTransactionID
 
-Set cmdSer.ActiveConnection = Cn
-cmdSer.CommandType = adCmdText
-cmdSer.CommandText = "EXEC dbo.ReserveTransactionId"
+            GetOneInvoiceSummary Cn, CDbl(currentDestTransactionID), True, _
+                                 OneDstDetCnt, OneDstVATCnt, OneDstPayCnt, OneDstPay2Cnt, _
+                                 OneDstQty, OneDstAmount, OneDstVAT, OneDstPay, OneDstPay2
 
-Set rsSer = cmdSer.Execute
-
-        If rsSer.EOF Then
-            Err.Raise vbObjectError + 500, , "·„ Ì „ ≈—Ã«⁄ Transaction_ID ÃœÌœ „‰ «·”Ì—›—"
+            If InvoiceSummaryMatches(OneSrcDetCnt, OneSrcVATCnt, OneSrcPayCnt, OneSrcPay2Cnt, OneSrcQty, OneSrcAmount, OneSrcVAT, OneSrcPay, OneSrcPay2, _
+                                     OneDstDetCnt, OneDstVATCnt, OneDstPayCnt, OneDstPay2Cnt, OneDstQty, OneDstAmount, OneDstVAT, OneDstPay, OneDstPay2) Then
+                WriteLog "Skipping already transferred invoice", _
+                         "SessionCode=" & SessionCode & _
+                         " | SrcID=" & CurrentSrcTransactionID & _
+                         " | InvoiceNo=" & CurrentInvoiceNo & _
+                         " | DestID=" & currentDestTransactionID & _
+                         " | Action=SkipExistingHeader"
+                WriteLog "Reusing existing destination header", _
+                         "SessionCode=" & SessionCode & _
+                         " | SrcID=" & CurrentSrcTransactionID & _
+                         " | InvoiceNo=" & CurrentInvoiceNo & _
+                         " | DestID=" & currentDestTransactionID & _
+                         " | Action=ReuseExistingHeader"
+                AppendNumericIdList SourceIdListCsv, CurrentSrcTransactionID
+                SkipCurrentInvoice = True
+            Else
+                WriteLog "Existing destination header mismatch", _
+                         "SessionCode=" & SessionCode & _
+                         " | SrcID=" & CurrentSrcTransactionID & _
+                         " | InvoiceNo=" & CurrentInvoiceNo & _
+                         " | DestID=" & currentDestTransactionID & _
+                         " | SrcDet=" & OneSrcDetCnt & _
+                         " | DstDet=" & OneDstDetCnt & _
+                         " | SrcQty=" & CStr(OneSrcQty) & _
+                         " | DstQty=" & CStr(OneDstQty) & _
+                         " | SrcAmount=" & CStr(OneSrcAmount) & _
+                         " | DstAmount=" & CStr(OneDstAmount) & _
+                         " | Action=RebuildExistingHeader"
+                CurrentStage = "Delete stale destination invoice"
+                DeleteDestinationInvoiceByDestID Cn, currentDestTransactionID, CurrentSrcTransactionID, BranchID
+                ReuseExistingDestForInsert = True
+            End If
         End If
 
-        currentDestTransactionID = rsSer.Fields("NewId").Value & ""
-
-        rsSer.Close
-        Set rsSer = Nothing
-
-        WriteLog "Reserved destination ID", "SrcID=" & CurrentSrcTransactionID & " | DestID=" & currentDestTransactionID
-
-        '========================
-        ' Insert Transactions Header
-        '========================
-        CurrentStage = "Insert Transactions Header"
-
+        If Not SkipCurrentInvoice Then
+            If ReuseExistingDestForInsert Then
+                CurrentStage = "Reuse existing destination Transaction_ID"
+                If CDbl(currentDestTransactionID) > LastReservedDestId Then LastReservedDestId = CDbl(currentDestTransactionID)
+                WriteLog "Destination ID resolved", _
+                         "SessionCode=" & SessionCode & _
+                         " | SrcID=" & CStr(CLng(CurrentSrcTransactionID)) & _
+                         " | InvoiceNo=" & CurrentInvoiceNo & _
+                         " | DestID=" & currentDestTransactionID & _
+                         " | Action=ReuseExistingDestIDForInsert"
+            Else
+                '========================
+                ' Reserve destination Transaction_ID
+                '========================
+                CurrentStage = "Reserve destination Transaction_ID"
+                currentDestTransactionID = AcquireCommand14DestTransactionID(Cn, SessionCode, CurrentSrcTransactionID, CurrentInvoiceNo, DestIdBySource, SrcIdByDest, LastReservedDestId)
+            End If
+            LastSQL = "Reserved DestID=" & currentDestTransactionID
         transSQL = "INSERT INTO " & mServerD & "Transactions (" & _
                    "Transaction_ID, Transaction_Date, TimeIn, TypeInvoice, Transaction_Serial, Transaction_Type, PaymentType, " & _
                    "CusID, StoreID, UserID, Emp_ID, BranchId, BoxID, BillBasedOn, VAT, VATYou, NoteSerial, NoteSerial1, " & _
@@ -9830,7 +9984,7 @@ Set rsSer = cmdSer.Execute
         transSQL = transSQL & currentDestTransactionID & "," & _
                    SQLDate(FromTransaction_Date, True) & ",'" & Replace(Trim$(mTimeIn), "'", "''") & "'," & _
                    Val(rsTrans("TypeInvoice").Value & "") & ",'" & Replace(rsTrans("Transaction_Serial").Value & "", "'", "''") & "'," & _
-                   FromTransaction_Type & "," & PayMentType & "," & cusID & "," & storeID & "," & userID & "," & _
+                   FromTransaction_Type & "," & PayMentType & "," & cusID & "," & StoreId & "," & userID & "," & _
                    Emp_ID & "," & BranchID & "," & BoxID & "," & BillBasedOn & "," & VAT & "," & VATYou & ",'" & _
                    Replace(NoteSerial, "'", "''") & "','" & Replace(NoteSerial1, "'", "''") & "'," & NoteId & ",1,'" & _
                    Replace(TransactionComment, "'", "''") & "','" & SessionCode & "'," & _
@@ -9853,6 +10007,8 @@ Set rsSer = cmdSer.Execute
 
         LastSQL = transSQL
         Cn.Execute transSQL
+        ValidateCommand14HeaderInsert Cn, currentDestTransactionID, SessionCode, CurrentSrcTransactionID, BranchID, CurrentInvoiceNo
+        AppendNumericIdList SourceIdListCsv, CurrentSrcTransactionID
 
         GetOneInvoiceSummary Cn, CDbl(currentDestTransactionID), True, _
                              OneDstDetCnt, OneDstVATCnt, OneDstPayCnt, OneDstPay2Cnt, _
@@ -10031,7 +10187,7 @@ Set rsSer = cmdSer.Execute
                  " | DstSPayCnt=" & OneDstPay2Cnt & _
                  " | DstTPay=" & CStr(OneDstPay) & _
                  " | DstSPay=" & CStr(OneDstPay2)
-
+        End If
         If recCounter Mod BatchSize = 0 Then
             BatchNo = BatchNo + 1
             UpdateTransferCaption " „  —ÕÌ· «·œ›⁄… —ﬁ„ " & BatchNo & " ≈·Ï «·”Ì—›—", recCounter, TotalInvoices, SessionCode, mTimeStart
@@ -10092,54 +10248,99 @@ Set rsSer = cmdSer.Execute
         "WHERE s.TransID IN (SELECT Transaction_ID FROM Transactions WHERE IsNull(Copied,0)=0 AND SessionCode='" & SessionCode & "' AND Transaction_Type IN (21,9))")
 
     ' Destination counters
-    DstHeads = ExecuteScalarLng(Cn, _
+    If Trim$(SourceIdListCsv) = "" Then
+        Err.Raise vbObjectError + 3015, "Command14_Click", "Source invoice list is empty before reconcile"
+    End If
+
+    DstHeadsBySession = ExecuteScalarLng(Cn, _
         "SELECT COUNT(*) FROM " & mServerD & "Transactions WHERE SessionCode='" & SessionCode & "'")
 
-    DstDet = ExecuteScalarLng(Cn, _
+    DstDetBySession = ExecuteScalarLng(Cn, _
         "SELECT COUNT(*) FROM " & mServerD & "Transaction_Details d " & _
         "JOIN " & mServerD & "Transactions t ON t.Transaction_ID=d.Transaction_ID " & _
         "WHERE t.SessionCode='" & SessionCode & "'")
 
-    DstVAT = ExecuteScalarLng(Cn, _
+    DstVATBySession = ExecuteScalarLng(Cn, _
         "SELECT COUNT(*) FROM " & mServerD & "TransactionValueAdded v " & _
         "JOIN " & mServerD & "Transactions t ON t.Transaction_ID=v.Transaction_ID " & _
         "WHERE t.SessionCode='" & SessionCode & "'")
 
-    DstPay = ExecuteScalarLng(Cn, _
+    DstPayBySession = ExecuteScalarLng(Cn, _
         "SELECT COUNT(*) FROM " & mServerD & "TblTransactionPayments p " & _
         "JOIN " & mServerD & "Transactions t ON t.Transaction_ID=p.Transaction_ID " & _
         "WHERE t.SessionCode='" & SessionCode & "' AND t.Transaction_Type IN (21,9)")
 
-    DstPay2 = ExecuteScalarLng(Cn, _
+    DstPay2BySession = ExecuteScalarLng(Cn, _
         "SELECT COUNT(*) FROM " & mServerD & "TblSalesPayment s " & _
         "JOIN " & mServerD & "Transactions t ON t.Transaction_ID=s.TransID " & _
         "WHERE t.SessionCode='" & SessionCode & "' AND t.Transaction_Type IN (21,9)")
+
+    DstHeads = ExecuteScalarLng(Cn, _
+        "SELECT COUNT(*) FROM " & mServerD & "Transactions WHERE BranchId = " & CStr(BranchID) & " AND OldTransaction_ID IN (" & SourceIdListCsv & ")")
+
+    DstDet = ExecuteScalarLng(Cn, _
+        "SELECT COUNT(*) FROM " & mServerD & "Transaction_Details d " & _
+        "JOIN " & mServerD & "Transactions t ON t.Transaction_ID=d.Transaction_ID " & _
+        "WHERE t.BranchId = " & CStr(BranchID) & " AND t.OldTransaction_ID IN (" & SourceIdListCsv & ")")
+
+    DstVAT = ExecuteScalarLng(Cn, _
+        "SELECT COUNT(*) FROM " & mServerD & "TransactionValueAdded v " & _
+        "JOIN " & mServerD & "Transactions t ON t.Transaction_ID=v.Transaction_ID " & _
+        "WHERE t.BranchId = " & CStr(BranchID) & " AND t.OldTransaction_ID IN (" & SourceIdListCsv & ")")
+
+    DstPay = ExecuteScalarLng(Cn, _
+        "SELECT COUNT(*) FROM " & mServerD & "TblTransactionPayments p " & _
+        "JOIN " & mServerD & "Transactions t ON t.Transaction_ID=p.Transaction_ID " & _
+        "WHERE t.BranchId = " & CStr(BranchID) & " AND t.OldTransaction_ID IN (" & SourceIdListCsv & ") AND t.Transaction_Type IN (21,9)")
+
+    DstPay2 = ExecuteScalarLng(Cn, _
+        "SELECT COUNT(*) FROM " & mServerD & "TblSalesPayment s " & _
+        "JOIN " & mServerD & "Transactions t ON t.Transaction_ID=s.TransID " & _
+        "WHERE t.BranchId = " & CStr(BranchID) & " AND t.OldTransaction_ID IN (" & SourceIdListCsv & ") AND t.Transaction_Type IN (21,9)")
 
     ' Destination sums
     dstQty = ExecuteScalarDbl(Cn, _
         "SELECT ISNULL(SUM(CAST(d.Quantity AS float)),0) FROM " & mServerD & "Transaction_Details d " & _
         "JOIN " & mServerD & "Transactions t ON t.Transaction_ID = d.Transaction_ID " & _
-        "WHERE t.SessionCode='" & SessionCode & "'")
+        "WHERE t.BranchId = " & CStr(BranchID) & " AND t.OldTransaction_ID IN (" & SourceIdListCsv & ")")
 
     DstAmount = ExecuteScalarCur(Cn, _
         "SELECT ISNULL(SUM(CAST(d.Quantity * d.Price AS decimal(18,4))),0) FROM " & mServerD & "Transaction_Details d " & _
         "JOIN " & mServerD & "Transactions t ON t.Transaction_ID = d.Transaction_ID " & _
-        "WHERE t.SessionCode='" & SessionCode & "'")
+        "WHERE t.BranchId = " & CStr(BranchID) & " AND t.OldTransaction_ID IN (" & SourceIdListCsv & ")")
 
     DstVATSum = ExecuteScalarCur(Cn, _
         "SELECT ISNULL(SUM(CAST(v.Valu AS decimal(18,4))),0) FROM " & mServerD & "TransactionValueAdded v " & _
         "JOIN " & mServerD & "Transactions t ON t.Transaction_ID = v.Transaction_ID " & _
-        "WHERE t.SessionCode='" & SessionCode & "'")
+        "WHERE t.BranchId = " & CStr(BranchID) & " AND t.OldTransaction_ID IN (" & SourceIdListCsv & ")")
 
     DstTPay = ExecuteScalarCur(Cn, _
         "SELECT ISNULL(SUM(CAST(p.Value AS decimal(18,4))),0) FROM " & mServerD & "TblTransactionPayments p " & _
         "JOIN " & mServerD & "Transactions t ON t.Transaction_ID = p.Transaction_ID " & _
-        "WHERE t.SessionCode='" & SessionCode & "' AND t.Transaction_Type IN (21,9)")
+        "WHERE t.BranchId = " & CStr(BranchID) & " AND t.OldTransaction_ID IN (" & SourceIdListCsv & ") AND t.Transaction_Type IN (21,9)")
 
     DstSPay = ExecuteScalarCur(Cn, _
         "SELECT ISNULL(SUM(CAST(s.Value AS decimal(18,4))),0) FROM " & mServerD & "TblSalesPayment s " & _
         "JOIN " & mServerD & "Transactions t ON t.Transaction_ID = s.TransID " & _
-        "WHERE t.SessionCode='" & SessionCode & "' AND t.Transaction_Type IN (21,9)")
+        "WHERE t.BranchId = " & CStr(BranchID) & " AND t.OldTransaction_ID IN (" & SourceIdListCsv & ") AND t.Transaction_Type IN (21,9)")
+
+    DstDuplicateHeaders = ExecuteScalarLng(Cn, _
+        "SELECT COUNT(*) FROM (SELECT BranchId, OldTransaction_ID FROM " & mServerD & "Transactions WHERE BranchId = " & CStr(BranchID) & " AND OldTransaction_ID IN (" & SourceIdListCsv & ") GROUP BY BranchId, OldTransaction_ID HAVING COUNT(*) > 1) x")
+
+    If DstDuplicateHeaders > 0 Then
+        ReconcileMsg = "Duplicate destination headers detected for one or more BranchId + OldTransaction_ID values"
+        WriteLog "Duplicate destination headers", ReconcileMsg
+        Err.Raise vbObjectError + 3017, "Command14_Click", ReconcileMsg
+    End If
+
+    WritePhaseLog "RECON FILTER DIAG", _
+        "DstHeadsBySession=" & DstHeadsBySession & _
+        " | DstDetBySession=" & DstDetBySession & _
+        " | DstVATBySession=" & DstVATBySession & _
+        " | DstPayBySession=" & DstPayBySession & _
+        " | DstPay2BySession=" & DstPay2BySession & _
+        " | SourceIdCount=" & CStr(DestIdBySource.Count) & _
+        " | DuplicateBranchOldTransactionIds=" & DstDuplicateHeaders
 
     WritePhaseLog "RECON COUNTS", _
         "SrcHeads=" & SrcHeads & _
@@ -10207,12 +10408,13 @@ Set rsSer = cmdSer.Execute
         "SELECT COUNT(*) FROM Transactions WHERE IsNull(Copied,0)=0 AND SessionCode='" & SessionCode & "'")
 
     dstCount = ExecuteScalarLng(Cn, _
-        "SELECT COUNT(*) FROM " & mServerD & "Transactions WHERE SessionCode='" & SessionCode & "'")
+        "SELECT COUNT(*) FROM " & mServerD & "Transactions WHERE BranchId = " & CStr(BranchID) & " AND OldTransaction_ID IN (" & SourceIdListCsv & ")")
 
     If dstCount <> srcCount Then
         ReconcileMsg = "Session count mismatch before marking Copied" & vbCrLf & _
                        "Source=" & srcCount & vbCrLf & _
-                       "Destination=" & dstCount
+                       "Destination=" & dstCount & vbCrLf & _
+                       "Filter=BranchId+OldTransaction_ID"
         WriteLog "Session mismatch", ReconcileMsg
         Err.Raise vbObjectError + 777, "Command14_Click", ReconcileMsg
     End If
@@ -10569,40 +10771,40 @@ Private Sub GetOneInvoiceSummary(ByVal Conn As ADODB.Connection, _
                                  ByRef PaySum As Currency, _
                                  ByRef Pay2Sum As Currency)
 
-    Dim prefix As String
+    Dim Prefix As String
 
     If IsDestination Then
-        prefix = "dbo."
+        Prefix = "dbo."
     Else
-        prefix = ""
+        Prefix = ""
     End If
 
     DetCnt = ExecuteScalarLng(Conn, _
-        "SELECT COUNT(*) FROM " & prefix & "Transaction_Details WHERE Transaction_ID=" & TransactionID)
+        "SELECT COUNT(*) FROM " & Prefix & "Transaction_Details WHERE Transaction_ID=" & TransactionID)
 
     VATCnt = ExecuteScalarLng(Conn, _
-        "SELECT COUNT(*) FROM " & prefix & "TransactionValueAdded WHERE Transaction_ID=" & TransactionID)
+        "SELECT COUNT(*) FROM " & Prefix & "TransactionValueAdded WHERE Transaction_ID=" & TransactionID)
 
     PayCnt = ExecuteScalarLng(Conn, _
-        "SELECT COUNT(*) FROM " & prefix & "TblTransactionPayments WHERE Transaction_ID=" & TransactionID)
+        "SELECT COUNT(*) FROM " & Prefix & "TblTransactionPayments WHERE Transaction_ID=" & TransactionID)
 
     Pay2Cnt = ExecuteScalarLng(Conn, _
-        "SELECT COUNT(*) FROM " & prefix & "TblSalesPayment WHERE TransID=" & TransactionID)
+        "SELECT COUNT(*) FROM " & Prefix & "TblSalesPayment WHERE TransID=" & TransactionID)
 
     QtySum = ExecuteScalarDbl(Conn, _
-        "SELECT ISNULL(SUM(CAST(Quantity AS float)),0) FROM " & prefix & "Transaction_Details WHERE Transaction_ID=" & TransactionID)
+        "SELECT ISNULL(SUM(CAST(Quantity AS float)),0) FROM " & Prefix & "Transaction_Details WHERE Transaction_ID=" & TransactionID)
 
     AmountSum = ExecuteScalarCur(Conn, _
-        "SELECT ISNULL(SUM(CAST(Quantity * Price AS decimal(18,4))),0) FROM " & prefix & "Transaction_Details WHERE Transaction_ID=" & TransactionID)
+        "SELECT ISNULL(SUM(CAST(Quantity * Price AS decimal(18,4))),0) FROM " & Prefix & "Transaction_Details WHERE Transaction_ID=" & TransactionID)
 
     VATSum = ExecuteScalarCur(Conn, _
-        "SELECT ISNULL(SUM(CAST(Valu AS decimal(18,4))),0) FROM " & prefix & "TransactionValueAdded WHERE Transaction_ID=" & TransactionID)
+        "SELECT ISNULL(SUM(CAST(Valu AS decimal(18,4))),0) FROM " & Prefix & "TransactionValueAdded WHERE Transaction_ID=" & TransactionID)
 
     PaySum = ExecuteScalarCur(Conn, _
-        "SELECT ISNULL(SUM(CAST(Value AS decimal(18,4))),0) FROM " & prefix & "TblTransactionPayments WHERE Transaction_ID=" & TransactionID)
+        "SELECT ISNULL(SUM(CAST(Value AS decimal(18,4))),0) FROM " & Prefix & "TblTransactionPayments WHERE Transaction_ID=" & TransactionID)
 
     Pay2Sum = ExecuteScalarCur(Conn, _
-        "SELECT ISNULL(SUM(CAST(Value AS decimal(18,4))),0) FROM " & prefix & "TblSalesPayment WHERE TransID=" & TransactionID)
+        "SELECT ISNULL(SUM(CAST(Value AS decimal(18,4))),0) FROM " & Prefix & "TblSalesPayment WHERE TransID=" & TransactionID)
 
 End Sub
 
@@ -10616,10 +10818,10 @@ Private Function ExecuteScalarDbl(ByVal Conn As ADODB.Connection, ByVal SQLText 
 
     If rs.EOF Then
         ExecuteScalarDbl = 0#
-    ElseIf IsNull(rs.Fields(0).Value) Then
+    ElseIf IsNull(rs.fields(0).Value) Then
         ExecuteScalarDbl = 0#
     Else
-        ExecuteScalarDbl = CDbl(rs.Fields(0).Value)
+        ExecuteScalarDbl = CDbl(rs.fields(0).Value)
     End If
 
     rs.Close
@@ -10644,10 +10846,10 @@ Private Function ExecuteScalarCur(ByVal Conn As ADODB.Connection, ByVal SQLText 
 
     If rs.EOF Then
         ExecuteScalarCur = CCur(0)
-    ElseIf IsNull(rs.Fields(0).Value) Then
+    ElseIf IsNull(rs.fields(0).Value) Then
         ExecuteScalarCur = CCur(0)
     Else
-        ExecuteScalarCur = CCur(rs.Fields(0).Value)
+        ExecuteScalarCur = CCur(rs.fields(0).Value)
     End If
 
     rs.Close
@@ -10758,9 +10960,9 @@ Private Sub CommandTest_Click()
     ' ≈⁄œ«œ « ’«· «·‰ﬁÿ… (POSConnection)
     Set POSConnection = New ADODB.Connection
     With POSConnection
-        .CommandTimeout = 5000
+        .CommandTimeout = 180
         .CursorLocation = adUseClient
-        .ConnectionTimeout = 5000
+        .ConnectionTimeout = 30
         If POSServer = "" Then POSServer = POSlServer
         If SysSQLServerType = 1 Then
             .ConnectionString = "Provider=SQLOLEDB.1;Password=" & SysSQLServerUserpassword & ";Persist Security Info=True;User ID=" & SysSQLServerUserId & _
@@ -10893,9 +11095,9 @@ DoEvents
     ' ≈⁄œ«œ « ’«· «·‰ﬁÿ… (POSConnection)
     Set POSConnection = New ADODB.Connection
     With POSConnection
-        .CommandTimeout = 5000
+        .CommandTimeout = 180
         .CursorLocation = adUseClient
-        .ConnectionTimeout = 5000
+        .ConnectionTimeout = 30
         If POSServer = "" Then POSServer = POSlServer
         If SysSQLServerType = 1 Then
             .ConnectionString = "Provider=SQLOLEDB.1;Password=" & SysSQLServerUserpassword & ";Persist Security Info=True;User ID=" & SysSQLServerUserId & _
@@ -10965,7 +11167,7 @@ success = False
          Dim CarTypeID As Long, OilsTypesID As Long, YearFact As Long, FixesAssetsID As Long, ColorID2 As Long
          Dim KM As Double, PPointID As Long, SupplerID As Long, Ser As Long, CarCurrentValue As Double, CarPrevValue As Double
          Dim CarEnginoil As Double, CarGearOil As Double, InvoiceTypeCodeID As Long
-         Dim storeID As Variant, userID As Variant, Emp_ID As Variant
+         Dim StoreId As Variant, userID As Variant, Emp_ID As Variant
          Dim NoteSerial As String, NoteSerial1 As String, TransactionComment As String
          Dim CashCustomerName As String, CashCustomerPhone As String
          Dim PlateNo As String, Shaseh As String, CarMeter As String
@@ -10977,7 +11179,7 @@ success = False
          PayMentType = Val(rsTrans("PaymentType").Value & "")
           FromTransaction_Type = Val(rsTrans("Transaction_Type").Value & "")
          cusID = Val(rsTrans("CusID").Value & "")
-         storeID = Val(rsTrans("StoreID").Value & "")
+         StoreId = Val(rsTrans("StoreID").Value & "")
          userID = Val(rsTrans("UserID").Value & "")
          Emp_ID = Val(rsTrans("Emp_ID").Value & "")
          BranchID = Val(rsTrans("BranchID").Value & "")
@@ -10985,7 +11187,7 @@ success = False
          BillBasedOn = Val(rsTrans("BillBasedOn").Value & "")
           PayMentType = Val(rsTrans("PaymentType").Value & "")
          cusID = Val(rsTrans("CusID").Value & "")
-         storeID = Val(rsTrans("StoreID").Value & "")
+         StoreId = Val(rsTrans("StoreID").Value & "")
          userID = Val(rsTrans("UserID").Value & "")
          Emp_ID = Val(rsTrans("Emp_ID").Value & "")
          BranchID = Val(rsTrans("BranchID").Value & "")
@@ -11134,7 +11336,7 @@ End If
                     "InvoiceTypeCodeID, InvoiceTypeCodename, DocumentCurrencyCode, TaxCurrencyCode, paymentnote, PaymentMeansCode) VALUES ("
          transSQL = transSQL & currentDestTransactionID & "," & SQLDate(FromTransaction_Date, True) & "," & _
                     Val(rsTrans("TypeInvoice").Value & "") & ",'" & rsTrans("Transaction_Serial").Value & "'," & _
-                    FromTransaction_Type & "," & PayMentType & "," & Val(cusID) & "," & storeID & "," & userID & "," & _
+                    FromTransaction_Type & "," & PayMentType & "," & Val(cusID) & "," & StoreId & "," & userID & "," & _
                     Emp_ID & "," & BranchID & "," & BoxID & "," & BillBasedOn & "," & VAT & "," & VATYou & "," & _
                     "'" & NoteSerial & "'," & _
                     "'" & NoteSerial1 & "',0,1," & _
@@ -12342,9 +12544,9 @@ Dim mTimeStart As String
 
     Set POSConnection = New ADODB.Connection
     With POSConnection
-        .CommandTimeout = 5000
+        .CommandTimeout = 180
         .CursorLocation = adUseClient
-        .ConnectionTimeout = 5000
+        .ConnectionTimeout = 30
         If SysSQLServerType = 1 Then
 '            .ConnectionString = "Provider=SQLOLEDB.1;Integrated Security=SSPI; " & _
 '            "Persist Security Info=False;Initial Catalog=" & POSDb & _
@@ -12773,7 +12975,7 @@ Dim PumpId As Long, PrevQty As Double, PrintName As String, Cash As Double, Mada
                         ItemDiscount = IIf(IsNull(rsDouble_Entry("ItemDiscount").Value), 0, rsDouble_Entry("ItemDiscount").Value)
                         ShowQty = IIf(IsNull(rsDouble_Entry("ShowQty").Value), 0, rsDouble_Entry("ShowQty").Value)
                         showPrice = IIf(IsNull(rsDouble_Entry("showPrice").Value), 0, rsDouble_Entry("showPrice").Value)
-                        UnitID = IIf(IsNull(rsDouble_Entry("UnitId").Value), 0, rsDouble_Entry("UnitId").Value)
+                        UnitId = IIf(IsNull(rsDouble_Entry("UnitId").Value), 0, rsDouble_Entry("UnitId").Value)
                         ColorID = IIf(IsNull(rsDouble_Entry("ColorID").Value), 0, rsDouble_Entry("ColorID").Value)
                         ItemSize = IIf(IsNull(rsDouble_Entry("ItemSize").Value), 0, rsDouble_Entry("ItemSize").Value)
                         ClassId = IIf(IsNull(rsDouble_Entry("ClassId").Value), 0, rsDouble_Entry("ClassId").Value)
@@ -12812,7 +13014,7 @@ Dim PumpId As Long, PrevQty As Double, PrintName As String, Cash As Double, Mada
                         
                         sql = sql & "  )"
                         sql = sql & "   values (" & Transaction_ID & "," & Item_ID & ", " & ItemCase & "," & Quantity & "," & Price & "," & ItemDiscountType & "," & ItemDiscount & "," & ShowQty & "," & showPrice
-                        sql = sql & "," & UnitID & "," & ColorID & "," & ItemSize & "," & ClassId & "" & ",'" & SessionCode & "'," & mmVatyo & ","
+                        sql = sql & "," & UnitId & "," & ColorID & "," & ItemSize & "," & ClassId & "" & ",'" & SessionCode & "'," & mmVatyo & ","
                         
                         sql = sql & PumpId & ","
                         sql = sql & PrevQty & ","
@@ -13405,7 +13607,7 @@ Private Sub Form_Load()
     ' - TxtServerDataBaseName = ﬁ«⁄œ… «·”Ì—›— «·„—ﬂ“Ì „‰ pos.txt
     '========================
     POSname_Change
-cmdTransfer_Click
+'cmdTransfer_Click
     Exit Sub
 
 errHandler:
@@ -13596,7 +13798,7 @@ Private Sub POSname_Change()
     End If
 
     If Trim$(SysSQLServerName) = "" Then
-        MsgBox "«”„ √Ê ⁄‰Ê«‰ «·”Ì—›— «·„—ﬂ“Ì €Ì— „Õœœ", vbCritical, "OFFLINE"
+        MsgBox "Central server name or address is not specified", vbCritical, "OFFLINE"
         Exit Sub
     End If
 
@@ -13852,7 +14054,7 @@ Private Function ReserveDestId(ByVal CnX As ADODB.Connection) As String
         Err.Raise vbObjectError + 3001, , "Stored procedure dbo.ReserveTransactionId ·„  ı—Ã⁄ √Ì ﬁÌ„…"
     End If
     
-    ReserveDestId = Trim$(rs.Fields(0).Value & "")
+    ReserveDestId = Trim$(rs.fields(0).Value & "")
     
     SafeCloseRS rs
     Exit Function
@@ -13871,6 +14073,274 @@ End Function
 
 
 
+Private Function ExecuteReserveTransactionIdRaw(ByVal CnX As ADODB.Connection) As String
+    On Error GoTo EH
+
+    Dim rs As ADODB.Recordset
+    Dim cmd As ADODB.Command
+
+    Set cmd = New ADODB.Command
+    Set cmd.ActiveConnection = CnX
+    cmd.CommandType = adCmdText
+    cmd.CommandText = "EXEC dbo.ReserveTransactionId"
+
+    Set rs = cmd.Execute
+
+    If rs.EOF Then
+        Err.Raise vbObjectError + 3010, , "Stored procedure dbo.ReserveTransactionId returned no rows"
+    End If
+
+    ExecuteReserveTransactionIdRaw = Trim$(rs.fields("NewId").Value & "")
+    If ExecuteReserveTransactionIdRaw = "" Then
+        Err.Raise vbObjectError + 3011, , "Stored procedure dbo.ReserveTransactionId returned an empty ID"
+    End If
+
+CleanExit:
+    SafeCloseRS rs
+    Set cmd = Nothing
+    Exit Function
+
+EH:
+    SafeCloseRS rs
+    Set cmd = Nothing
+    Err.Raise Err.Number, IIf(Len(Err.Source) = 0, "ExecuteReserveTransactionIdRaw", Err.Source), Err.Description
+End Function
+
+Private Function GetCollectionText(ByRef Items As Collection, ByVal ItemKey As String) As String
+    On Error GoTo EH
+    GetCollectionText = CStr(Items.Item(ItemKey))
+    Exit Function
+EH:
+    GetCollectionText = ""
+End Function
+
+Private Sub AddCollectionText(ByRef Items As Collection, ByVal ItemKey As String, ByVal ItemValue As String)
+    If GetCollectionText(Items, ItemKey) = "" Then
+        Items.Add ItemValue, ItemKey
+    End If
+End Sub
+
+Private Function GetNextAvailableDestTransactionID(ByVal CnX As ADODB.Connection, ByVal LastReservedDestId As Double) As String
+    Dim nextId As Long
+
+    nextId = ExecuteScalarLng(CnX, "SELECT ISNULL(MAX(Transaction_ID),0) + 1 FROM dbo.Transactions")
+    If nextId <= CLng(LastReservedDestId) Then
+        nextId = CLng(LastReservedDestId) + 1
+    End If
+
+    Do While ExecuteScalarLng(CnX, "SELECT COUNT(*) FROM dbo.Transactions WHERE Transaction_ID = " & CStr(nextId)) > 0
+        nextId = nextId + 1
+    Loop
+
+    GetNextAvailableDestTransactionID = CStr(nextId)
+End Function
+
+Private Sub RememberCommand14DestMapping(ByRef DestIdBySource As Collection, ByRef SrcIdByDest As Collection, ByVal SessionCode As String, ByVal SrcTransactionID As Double, ByVal InvoiceNo As String, ByVal DestTransactionID As String)
+    Dim srcKey As String
+    Dim destKey As String
+    Dim existingDest As String
+    Dim existingSrc As String
+
+    srcKey = CStr(CLng(SrcTransactionID))
+    destKey = Trim$(DestTransactionID)
+
+    existingDest = GetCollectionText(DestIdBySource, srcKey)
+    If existingDest <> "" And existingDest <> destKey Then
+        Err.Raise vbObjectError + 3012, "Command14_Click", "The same source invoice was assigned to more than one destination ID"
+    End If
+
+    existingSrc = GetCollectionText(SrcIdByDest, destKey)
+    If existingSrc <> "" And existingSrc <> srcKey Then
+        WriteLog "Duplicate destination ID detected", _
+                 "SessionCode=" & SessionCode & _
+                 " | SrcID=" & srcKey & _
+                 " | InvoiceNo=" & InvoiceNo & _
+                 " | DestID=" & destKey & _
+                 " | PreviousSrcID=" & existingSrc
+        Err.Raise vbObjectError + 3013, "Command14_Click", "Duplicate destination Transaction_ID detected within the same transfer session"
+    End If
+
+    AddCollectionText DestIdBySource, srcKey, destKey
+    AddCollectionText SrcIdByDest, destKey, srcKey
+End Sub
+
+Private Function AcquireCommand14DestTransactionID(ByVal CnX As ADODB.Connection, ByVal SessionCode As String, ByVal SrcTransactionID As Double, ByVal InvoiceNo As String, ByRef DestIdBySource As Collection, ByRef SrcIdByDest As Collection, ByRef LastReservedDestId As Double) As String
+    On Error GoTo EH
+
+    Dim srcKey As String
+    Dim procDestId As String
+    Dim chosenDestId As String
+
+    srcKey = CStr(CLng(SrcTransactionID))
+    chosenDestId = GetCollectionText(DestIdBySource, srcKey)
+    If chosenDestId <> "" Then
+        WriteLog "Destination ID resolved", _
+                 "SessionCode=" & SessionCode & _
+                 " | SrcID=" & srcKey & _
+                 " | InvoiceNo=" & InvoiceNo & _
+                 " | DestID=" & chosenDestId & _
+                 " | Action=ReuseExistingMapping"
+        AcquireCommand14DestTransactionID = chosenDestId
+        Exit Function
+    End If
+
+    procDestId = ExecuteReserveTransactionIdRaw(CnX)
+    WriteLog "ReserveTransactionId returned", _
+             "SessionCode=" & SessionCode & _
+             " | SrcID=" & srcKey & _
+             " | InvoiceNo=" & InvoiceNo & _
+             " | ProcDestID=" & procDestId
+
+    chosenDestId = Trim$(procDestId)
+
+    If (Not IsNumeric(chosenDestId)) Or CDbl(chosenDestId) <= 0 Then
+        chosenDestId = GetNextAvailableDestTransactionID(CnX, LastReservedDestId)
+        WriteLog "Destination ID fallback", _
+                 "SessionCode=" & SessionCode & _
+                 " | SrcID=" & srcKey & _
+                 " | InvoiceNo=" & InvoiceNo & _
+                 " | ProcDestID=" & procDestId & _
+                 " | ChosenDestID=" & chosenDestId & _
+                 " | Reason=Invalid reserve result"
+    ElseIf CDbl(chosenDestId) <= LastReservedDestId Then
+        chosenDestId = GetNextAvailableDestTransactionID(CnX, LastReservedDestId)
+        WriteLog "Destination ID fallback", _
+                 "SessionCode=" & SessionCode & _
+                 " | SrcID=" & srcKey & _
+                 " | InvoiceNo=" & InvoiceNo & _
+                 " | ProcDestID=" & procDestId & _
+                 " | ChosenDestID=" & chosenDestId & _
+                 " | Reason=Non-increasing reserve result"
+    ElseIf GetCollectionText(SrcIdByDest, chosenDestId) <> "" Then
+        chosenDestId = GetNextAvailableDestTransactionID(CnX, LastReservedDestId)
+        WriteLog "Destination ID fallback", _
+                 "SessionCode=" & SessionCode & _
+                 " | SrcID=" & srcKey & _
+                 " | InvoiceNo=" & InvoiceNo & _
+                 " | ProcDestID=" & procDestId & _
+                 " | ChosenDestID=" & chosenDestId & _
+                 " | Reason=Proc returned a DestID already used in this session"
+    ElseIf ExecuteScalarLng(CnX, "SELECT COUNT(*) FROM dbo.Transactions WHERE Transaction_ID = " & chosenDestId) > 0 Then
+        chosenDestId = GetNextAvailableDestTransactionID(CnX, LastReservedDestId)
+        WriteLog "Destination ID fallback", _
+                 "SessionCode=" & SessionCode & _
+                 " | SrcID=" & srcKey & _
+                 " | InvoiceNo=" & InvoiceNo & _
+                 " | ProcDestID=" & procDestId & _
+                 " | ChosenDestID=" & chosenDestId & _
+                 " | Reason=Proc returned an existing server Transaction_ID"
+    End If
+
+    RememberCommand14DestMapping DestIdBySource, SrcIdByDest, SessionCode, SrcTransactionID, InvoiceNo, chosenDestId
+    LastReservedDestId = CDbl(chosenDestId)
+
+    WriteLog "Destination ID resolved", _
+             "SessionCode=" & SessionCode & _
+             " | SrcID=" & srcKey & _
+             " | InvoiceNo=" & InvoiceNo & _
+             " | DestID=" & chosenDestId & _
+             " | Action=InsertNewHeader"
+
+    AcquireCommand14DestTransactionID = chosenDestId
+    Exit Function
+
+EH:
+    Err.Raise Err.Number, IIf(Len(Err.Source) = 0, "AcquireCommand14DestTransactionID", Err.Source), Err.Description
+End Function
+
+Private Sub ValidateCommand14HeaderInsert(ByVal CnX As ADODB.Connection, ByVal DestTransactionID As String, ByVal SessionCode As String, ByVal SrcTransactionID As Double, ByVal BranchID As Integer, ByVal InvoiceNo As String)
+    Dim headerCount As Long
+    Dim sessionCount As Long
+    Dim oldTransCount As Long
+    Dim safeSessionCode As String
+
+    safeSessionCode = Replace(SessionCode, "'", "''")
+    headerCount = ExecuteScalarLng(CnX, "SELECT COUNT(*) FROM dbo.Transactions WHERE Transaction_ID = " & Trim$(DestTransactionID))
+    sessionCount = ExecuteScalarLng(CnX, "SELECT COUNT(*) FROM dbo.Transactions WHERE Transaction_ID = " & Trim$(DestTransactionID) & " AND SessionCode='" & safeSessionCode & "'")
+    oldTransCount = ExecuteScalarLng(CnX, "SELECT COUNT(*) FROM dbo.Transactions WHERE Transaction_ID = " & Trim$(DestTransactionID) & " AND BranchId = " & CStr(BranchID) & " AND OldTransaction_ID = " & CStr(CLng(SrcTransactionID)))
+
+    WriteLog "Header validation", _
+             "SessionCode=" & SessionCode & _
+             " | SrcID=" & CStr(CLng(SrcTransactionID)) & _
+             " | InvoiceNo=" & InvoiceNo & _
+             " | DestID=" & DestTransactionID & _
+             " | HeaderCount=" & headerCount & _
+             " | SessionCount=" & sessionCount & _
+             " | BranchID=" & BranchID & _
+             " | OldTransCount=" & oldTransCount
+
+    If headerCount <> 1 Or sessionCount <> 1 Or oldTransCount <> 1 Then
+        Err.Raise vbObjectError + 3014, "Command14_Click", "Destination header validation failed after insert"
+    End If
+End Sub
+
+Private Function GetExistingDestinationHeaderCount(ByVal CnX As ADODB.Connection, ByVal SrcTransactionID As Double, ByVal BranchID As Integer, ByRef ExistingDestId As String) As Long
+    Dim rs As ADODB.Recordset
+    Dim sql As String
+
+    On Error GoTo EH
+
+    ExistingDestId = ""
+    sql = "SELECT COUNT(*) AS Cnt, MIN(Transaction_ID) AS MinDestID FROM dbo.Transactions WHERE BranchId = " & CStr(BranchID) & " AND OldTransaction_ID = " & CStr(CLng(SrcTransactionID))
+
+    Set rs = New ADODB.Recordset
+    rs.Open sql, CnX, adOpenForwardOnly, adLockReadOnly, adCmdText
+
+    If Not rs.EOF Then
+        GetExistingDestinationHeaderCount = CLng(Val(rs.Fields("Cnt").Value & ""))
+        ExistingDestId = Trim$(rs.Fields("MinDestID").Value & "")
+    End If
+
+CleanExit:
+    SafeCloseRS rs
+    Exit Function
+
+EH:
+    SafeCloseRS rs
+    Err.Raise Err.Number, IIf(Len(Err.Source) = 0, "GetExistingDestinationHeaderCount", Err.Source), Err.Description
+End Function
+
+Private Function InvoiceSummaryMatches(ByVal SrcDetCnt As Long, ByVal SrcVATCnt As Long, ByVal SrcPayCnt As Long, ByVal SrcPay2Cnt As Long, ByVal SrcQty As Double, ByVal SrcAmount As Currency, ByVal SrcVAT As Currency, ByVal SrcPay As Currency, ByVal SrcPay2 As Currency, _
+                                       ByVal DstDetCnt As Long, ByVal DstVATCnt As Long, ByVal DstPayCnt As Long, ByVal DstPay2Cnt As Long, ByVal DstQty As Double, ByVal DstAmount As Currency, ByVal DstVAT As Currency, ByVal DstPay As Currency, ByVal DstPay2 As Currency) As Boolean
+    InvoiceSummaryMatches = (SrcDetCnt = DstDetCnt) _
+                         And (SrcVATCnt = DstVATCnt) _
+                         And (SrcPayCnt = DstPayCnt) _
+                         And (SrcPay2Cnt = DstPay2Cnt) _
+                         And (Abs(SrcQty - DstQty) <= 0.0001) _
+                         And (Abs(SrcAmount - DstAmount) <= 0.01) _
+                         And (Abs(SrcVAT - DstVAT) <= 0.01) _
+                         And (Abs(SrcPay - DstPay) <= 0.01) _
+                         And (Abs(SrcPay2 - DstPay2) <= 0.01)
+End Function
+
+Private Sub DeleteDestinationInvoiceByDestID(ByVal CnX As ADODB.Connection, ByVal DestTransactionID As String, ByVal SrcTransactionID As Double, ByVal BranchID As Integer)
+    Dim safeDestId As String
+
+    On Error GoTo EH
+
+    safeDestId = Trim$(DestTransactionID)
+    CnX.Execute "DELETE FROM dbo.TblSalesPayment WHERE TransID = " & safeDestId
+    CnX.Execute "DELETE FROM dbo.TblTransactionPayments WHERE Transaction_ID = " & safeDestId
+    CnX.Execute "DELETE FROM dbo.TransactionValueAdded WHERE Transaction_ID = " & safeDestId
+    CnX.Execute "DELETE FROM dbo.Transaction_Details WHERE Transaction_ID = " & safeDestId
+    CnX.Execute "DELETE FROM dbo.Transactions WHERE Transaction_ID = " & safeDestId & " AND BranchId = " & CStr(BranchID) & " AND OldTransaction_ID = " & CStr(CLng(SrcTransactionID))
+
+    If ExecuteScalarLng(CnX, "SELECT COUNT(*) FROM dbo.Transactions WHERE Transaction_ID = " & safeDestId) <> 0 Then
+        Err.Raise vbObjectError + 3018, "DeleteDestinationInvoiceByDestID", "Failed to delete stale destination invoice before rebuild"
+    End If
+    Exit Sub
+
+EH:
+    Err.Raise Err.Number, IIf(Len(Err.Source) = 0, "DeleteDestinationInvoiceByDestID", Err.Source), Err.Description
+End Sub
+
+Private Sub AppendNumericIdList(ByRef CsvText As String, ByVal IdValue As Double)
+    If CsvText = "" Then
+        CsvText = CStr(CLng(IdValue))
+    Else
+        CsvText = CsvText & "," & CStr(CLng(IdValue))
+    End If
+End Sub
 Private Sub cmdTransferMove_Click()
 
     On Error GoTo ErrorHandler
@@ -14177,6 +14647,7 @@ ErrorHandler:
     Err.Clear
 
 End Sub
+
 
 
 
@@ -15003,12 +15474,24 @@ Private Sub AppendBatchUpdate(ByRef BatchSQL As String, ByRef BatchCount As Long
 End Sub
 
 Private Sub FlushBatchInsert(ByVal Cnn As ADODB.Connection, ByRef BatchSQL As String)
+    On Error GoTo EH
+
+    Dim affected As Long
 
     If Trim$(BatchSQL) <> "" Then
         mLastSQL = BatchSQL
-        Cnn.Execute BatchSQL, , adExecuteNoRecords
+        Cnn.Errors.Clear
+        Cnn.Execute BatchSQL, affected, adCmdText
+        WriteTextLog "FlushBatchInsert success, affected=" & CStr(affected) & " | SQL: " & Left$(BatchSQL, 500)
         BatchSQL = ""
     End If
+
+    Exit Sub
+
+EH:
+    WriteTextLog "FlushBatchInsert failed: " & Err.Description & " | SQL: " & Left$(BatchSQL, 500)
+    LogAdoErrors Cnn, "FlushBatchInsert", BatchSQL, "FlushBatchInsert failed"
+    Err.Raise Err.Number, Err.Source, Err.Description
 End Sub
 Private Sub SyncTblItems_ServerToPOS(ByRef BatchSQL As String, ByRef BatchCount As Long)
 

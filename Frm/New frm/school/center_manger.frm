@@ -13,6 +13,15 @@ Begin VB.Form center_manger
    RightToLeft     =   -1  'True
    ScaleHeight     =   1425
    ScaleWidth      =   3585
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox Text1 
       Alignment       =   2  'Center
       DataField       =   "CENTER_MANAGER"

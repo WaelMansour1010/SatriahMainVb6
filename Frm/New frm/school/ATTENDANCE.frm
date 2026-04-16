@@ -14,6 +14,15 @@ Begin VB.Form ATTENDANCE
    MDIChild        =   -1  'True
    ScaleHeight     =   6840
    ScaleWidth      =   13020
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin MSACAL.Calendar Calendar1 
       Height          =   2775
       Left            =   7920

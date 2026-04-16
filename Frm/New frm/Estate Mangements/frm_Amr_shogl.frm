@@ -17,6 +17,15 @@ Begin VB.Form frm_Amr_shogl
    MinButton       =   0   'False
    ScaleHeight     =   5295
    ScaleWidth      =   12360
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame16 
       BorderStyle     =   0  'None
       Height          =   375

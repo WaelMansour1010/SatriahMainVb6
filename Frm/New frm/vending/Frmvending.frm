@@ -13,6 +13,15 @@ Begin VB.Form Frmvending
    ScaleHeight     =   9060
    ScaleWidth      =   15390
    WindowState     =   2  'Maximized
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CommandButton Command3 
       Caption         =   "Command3"
       Height          =   615

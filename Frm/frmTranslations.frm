@@ -11,6 +11,15 @@ Begin VB.Form frmTranslations
    ScaleHeight     =   9165
    ScaleWidth      =   10305
    StartUpPosition =   3  'Windows Default
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin XtremeSuiteControls.TabControl TabControl1 
       Height          =   9135
       Left            =   120

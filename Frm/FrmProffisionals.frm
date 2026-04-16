@@ -24,6 +24,15 @@ Begin VB.Form FrmEmployee
    MDIChild        =   -1  'True
    ScaleHeight     =   9525
    ScaleWidth      =   13815
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame9 
       Caption         =   "Frame9"
       Height          =   975

@@ -17,6 +17,15 @@ Begin VB.Form FrmCashing1
    ClientLeft      =   45
    ClientTop       =   375
    ClientWidth     =   18780
+   BeginProperty Font 
+      Name            =   "Arial"
+      Size            =   8.25
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Icon            =   "FrmCashing1.frx":0000
    LinkTopic       =   "Form2"
    MaxButton       =   0   'False
@@ -36,7 +45,7 @@ Begin VB.Form FrmCashing1
       Alignment       =   1  'Right Justify
       Enabled         =   0   'False
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   9.75
          Charset         =   178
          Weight          =   700
@@ -158,8 +167,9 @@ Begin VB.Form FrmCashing1
          ButtonStyle     =   1
          ButtonPositionImage=   4
          Caption         =   ""
+         FontName        =   "Arial"
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -189,8 +199,9 @@ Begin VB.Form FrmCashing1
          ButtonStyle     =   1
          ButtonPositionImage=   4
          Caption         =   ""
+         FontName        =   "Arial"
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -220,8 +231,9 @@ Begin VB.Form FrmCashing1
          ButtonStyle     =   1
          ButtonPositionImage=   4
          Caption         =   ""
+         FontName        =   "Arial"
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -251,8 +263,9 @@ Begin VB.Form FrmCashing1
          ButtonStyle     =   1
          ButtonPositionImage=   4
          Caption         =   ""
+         FontName        =   "Arial"
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -284,8 +297,9 @@ Begin VB.Form FrmCashing1
          ButtonPositionImage=   1
          Caption         =   "«·⁄—÷ «·ÃœÊ·Ï"
          BackColor       =   14871017
+         FontName        =   "Arial"
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -340,7 +354,7 @@ Begin VB.Form FrmCashing1
          RecordSource    =   ""
          Caption         =   " Õ—Ìﬂ"
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -387,7 +401,7 @@ Begin VB.Form FrmCashing1
          RecordSource    =   ""
          Caption         =   " Õ—Ìﬂ"
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -439,7 +453,7 @@ Begin VB.Form FrmCashing1
       _cx             =   33179
       _cy             =   13309
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -496,7 +510,7 @@ Begin VB.Form FrmCashing1
          _cx             =   33020
          _cy             =   12488
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -679,7 +693,7 @@ Begin VB.Form FrmCashing1
                BackStyle       =   0  'Transparent
                Caption         =   "X"
                BeginProperty Font 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   700
@@ -791,10 +805,10 @@ Begin VB.Form FrmCashing1
          Begin VB.Frame Frame11 
             Caption         =   "»Ì«‰«  «· ’›Ì«  Ê›Ê« Ì— «·ﬂÂ—»«¡"
             Height          =   4815
-            Left            =   4680
+            Left            =   2910
             RightToLeft     =   -1  'True
             TabIndex        =   257
-            Top             =   1110
+            Top             =   1770
             Visible         =   0   'False
             Width           =   9255
             Begin VB.TextBox TxtRemPaints 
@@ -1851,7 +1865,7 @@ Begin VB.Form FrmCashing1
                BackStyle       =   0  'Transparent
                Caption         =   "X"
                BeginProperty Font 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   700
@@ -1999,7 +2013,7 @@ Begin VB.Form FrmCashing1
                _ExtentX        =   2725
                _ExtentY        =   556
                _Version        =   393216
-               Format          =   249430017
+               Format          =   163708929
                CurrentDate     =   41640
             End
             Begin Dynamic_Byte.NourHijriCal ToPriodDateH 
@@ -2020,7 +2034,7 @@ Begin VB.Form FrmCashing1
                _ExtentX        =   2725
                _ExtentY        =   556
                _Version        =   393216
-               Format          =   249430017
+               Format          =   163708929
                CurrentDate     =   41640
             End
             Begin VB.Label lbl 
@@ -2078,7 +2092,7 @@ Begin VB.Form FrmCashing1
                BorderStyle     =   1
                Enabled         =   -1  'True
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -2175,8 +2189,9 @@ Begin VB.Form FrmCashing1
                ButtonStyle     =   1
                ButtonPositionImage=   1
                Caption         =   "Õ–›"
+               FontName        =   "Arial"
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -2207,7 +2222,7 @@ Begin VB.Form FrmCashing1
                BorderStyle     =   1
                Enabled         =   -1  'True
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -2304,8 +2319,9 @@ Begin VB.Form FrmCashing1
                ButtonStyle     =   1
                ButtonPositionImage=   1
                Caption         =   "Õ–›"
+               FontName        =   "Arial"
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -2331,8 +2347,9 @@ Begin VB.Form FrmCashing1
             ButtonPositionImage=   4
             Caption         =   ""
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2370,15 +2387,15 @@ Begin VB.Form FrmCashing1
          End
          Begin C1SizerLibCtl.C1Elastic C1Elastic1 
             Height          =   4455
-            Left            =   12120
+            Left            =   12180
             TabIndex        =   171
             TabStop         =   0   'False
-            Top             =   2550
+            Top             =   2430
             Width           =   6495
             _cx             =   11456
             _cy             =   7858
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2430,7 +2447,7 @@ Begin VB.Form FrmCashing1
                Alignment       =   1  'Right Justify
                BackColor       =   &H00FFFFFF&
                BeginProperty Font 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   700
@@ -2474,7 +2491,7 @@ Begin VB.Form FrmCashing1
                Alignment       =   1  'Right Justify
                BackColor       =   &H00FFFFFF&
                BeginProperty Font 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   700
@@ -2509,7 +2526,7 @@ Begin VB.Form FrmCashing1
                   Alignment       =   1  'Right Justify
                   BackColor       =   &H00FFFFFF&
                   BeginProperty Font 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   700
@@ -2553,7 +2570,7 @@ Begin VB.Form FrmCashing1
                Alignment       =   1  'Right Justify
                BackColor       =   &H00FFFFFF&
                BeginProperty Font 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   700
@@ -2573,7 +2590,7 @@ Begin VB.Form FrmCashing1
                Alignment       =   1  'Right Justify
                BackColor       =   &H00FFFFFF&
                BeginProperty Font 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   700
@@ -2666,7 +2683,7 @@ Begin VB.Form FrmCashing1
                Alignment       =   1  'Right Justify
                BackColor       =   &H00FFFFFF&
                BeginProperty Font 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   700
@@ -2686,7 +2703,7 @@ Begin VB.Form FrmCashing1
                Alignment       =   1  'Right Justify
                BackColor       =   &H00FFFFFF&
                BeginProperty Font 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   700
@@ -2706,7 +2723,7 @@ Begin VB.Form FrmCashing1
                Alignment       =   1  'Right Justify
                BackColor       =   &H00FFFFFF&
                BeginProperty Font 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   700
@@ -2726,7 +2743,7 @@ Begin VB.Form FrmCashing1
                Alignment       =   1  'Right Justify
                BackColor       =   &H00FFFFFF&
                BeginProperty Font 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   700
@@ -2746,7 +2763,7 @@ Begin VB.Form FrmCashing1
                Alignment       =   1  'Right Justify
                BackColor       =   &H00FFFFFF&
                BeginProperty Font 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   700
@@ -2792,7 +2809,7 @@ Begin VB.Form FrmCashing1
                Alignment       =   1  'Right Justify
                BackColor       =   &H00FFFFFF&
                BeginProperty Font 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   700
@@ -2816,7 +2833,7 @@ Begin VB.Form FrmCashing1
                Top             =   360
                Width           =   3915
                _ExtentX        =   6906
-               _ExtentY        =   556
+               _ExtentY        =   582
                _Version        =   393216
                Text            =   ""
                RightToLeft     =   -1  'True
@@ -2829,7 +2846,7 @@ Begin VB.Form FrmCashing1
                Top             =   720
                Width           =   975
                _ExtentX        =   1720
-               _ExtentY        =   556
+               _ExtentY        =   582
                _Version        =   393216
                Text            =   ""
                RightToLeft     =   -1  'True
@@ -2842,7 +2859,7 @@ Begin VB.Form FrmCashing1
                Top             =   720
                Width           =   1065
                _ExtentX        =   1879
-               _ExtentY        =   556
+               _ExtentY        =   582
                _Version        =   393216
                Text            =   ""
                RightToLeft     =   -1  'True
@@ -2859,8 +2876,9 @@ Begin VB.Form FrmCashing1
                ButtonStyle     =   1
                ButtonPositionImage=   1
                Caption         =   "«€·«ﬁ"
+               FontName        =   "Arial"
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -3068,7 +3086,7 @@ Begin VB.Form FrmCashing1
                   Alignment       =   1  'Right Justify
                   BackColor       =   &H00FFFFFF&
                   BeginProperty Font 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   700
@@ -3088,7 +3106,7 @@ Begin VB.Form FrmCashing1
                   Alignment       =   1  'Right Justify
                   BackColor       =   &H00FFFFFF&
                   BeginProperty Font 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   700
@@ -3108,7 +3126,7 @@ Begin VB.Form FrmCashing1
                   Alignment       =   1  'Right Justify
                   BackColor       =   &H00FFFFFF&
                   BeginProperty Font 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   700
@@ -3128,7 +3146,7 @@ Begin VB.Form FrmCashing1
                   Alignment       =   1  'Right Justify
                   BackColor       =   &H00FFFFFF&
                   BeginProperty Font 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   700
@@ -3237,16 +3255,16 @@ Begin VB.Form FrmCashing1
                   ActiveUnderline =   -1  'True
                   BackStyle       =   1
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
-                     Charset         =   178
+                     Charset         =   0
                      Weight          =   700
                      Underline       =   0   'False
                      Italic          =   0   'False
                      Strikethrough   =   0   'False
                   EndProperty
                   FontBold        =   -1  'True
-                  FontName        =   "MS Sans Serif"
+                  FontName        =   "Arial"
                   FontSize        =   8.25
                   ForeColor       =   4210688
                   MousePointer    =   99
@@ -3271,16 +3289,16 @@ Begin VB.Form FrmCashing1
                   ActiveUnderline =   -1  'True
                   BackStyle       =   1
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
-                     Charset         =   178
+                     Charset         =   0
                      Weight          =   700
                      Underline       =   0   'False
                      Italic          =   0   'False
                      Strikethrough   =   0   'False
                   EndProperty
                   FontBold        =   -1  'True
-                  FontName        =   "MS Sans Serif"
+                  FontName        =   "Arial"
                   FontSize        =   8.25
                   ForeColor       =   4210688
                   MousePointer    =   99
@@ -3304,16 +3322,16 @@ Begin VB.Form FrmCashing1
                   ActiveUnderline =   -1  'True
                   BackStyle       =   1
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
-                     Charset         =   178
+                     Charset         =   0
                      Weight          =   700
                      Underline       =   0   'False
                      Italic          =   0   'False
                      Strikethrough   =   0   'False
                   EndProperty
                   FontBold        =   -1  'True
-                  FontName        =   "MS Sans Serif"
+                  FontName        =   "Arial"
                   FontSize        =   8.25
                   ForeColor       =   4210688
                   MousePointer    =   99
@@ -3338,16 +3356,16 @@ Begin VB.Form FrmCashing1
                   ActiveUnderline =   -1  'True
                   BackStyle       =   1
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
-                     Charset         =   178
+                     Charset         =   0
                      Weight          =   700
                      Underline       =   0   'False
                      Italic          =   0   'False
                      Strikethrough   =   0   'False
                   EndProperty
                   FontBold        =   -1  'True
-                  FontName        =   "MS Sans Serif"
+                  FontName        =   "Arial"
                   FontSize        =   8.25
                   ForeColor       =   4210688
                   MousePointer    =   99
@@ -3371,16 +3389,16 @@ Begin VB.Form FrmCashing1
                   ActiveUnderline =   -1  'True
                   BackStyle       =   1
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
-                     Charset         =   178
+                     Charset         =   0
                      Weight          =   700
                      Underline       =   0   'False
                      Italic          =   0   'False
                      Strikethrough   =   0   'False
                   EndProperty
                   FontBold        =   -1  'True
-                  FontName        =   "MS Sans Serif"
+                  FontName        =   "Arial"
                   FontSize        =   8.25
                   ForeColor       =   4210688
                   MousePointer    =   99
@@ -3405,16 +3423,16 @@ Begin VB.Form FrmCashing1
                   ActiveUnderline =   -1  'True
                   BackStyle       =   1
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
-                     Charset         =   178
+                     Charset         =   0
                      Weight          =   700
                      Underline       =   0   'False
                      Italic          =   0   'False
                      Strikethrough   =   0   'False
                   EndProperty
                   FontBold        =   -1  'True
-                  FontName        =   "MS Sans Serif"
+                  FontName        =   "Arial"
                   FontSize        =   8.25
                   ForeColor       =   4210688
                   MousePointer    =   99
@@ -3438,16 +3456,16 @@ Begin VB.Form FrmCashing1
                   ActiveUnderline =   -1  'True
                   BackStyle       =   1
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
-                     Charset         =   178
+                     Charset         =   0
                      Weight          =   700
                      Underline       =   0   'False
                      Italic          =   0   'False
                      Strikethrough   =   0   'False
                   EndProperty
                   FontBold        =   -1  'True
-                  FontName        =   "MS Sans Serif"
+                  FontName        =   "Arial"
                   FontSize        =   8.25
                   ForeColor       =   4210688
                   MousePointer    =   99
@@ -3471,16 +3489,16 @@ Begin VB.Form FrmCashing1
                   ActiveUnderline =   -1  'True
                   BackStyle       =   1
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
-                     Charset         =   178
+                     Charset         =   0
                      Weight          =   700
                      Underline       =   0   'False
                      Italic          =   0   'False
                      Strikethrough   =   0   'False
                   EndProperty
                   FontBold        =   -1  'True
-                  FontName        =   "MS Sans Serif"
+                  FontName        =   "Arial"
                   FontSize        =   8.25
                   ForeColor       =   4210688
                   MousePointer    =   99
@@ -3504,16 +3522,16 @@ Begin VB.Form FrmCashing1
                   ActiveUnderline =   -1  'True
                   BackStyle       =   1
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
-                     Charset         =   178
+                     Charset         =   0
                      Weight          =   700
                      Underline       =   0   'False
                      Italic          =   0   'False
                      Strikethrough   =   0   'False
                   EndProperty
                   FontBold        =   -1  'True
-                  FontName        =   "MS Sans Serif"
+                  FontName        =   "Arial"
                   FontSize        =   8.25
                   ForeColor       =   4210688
                   MousePointer    =   99
@@ -3790,7 +3808,7 @@ Begin VB.Form FrmCashing1
             _ExtentX        =   2725
             _ExtentY        =   556
             _Version        =   393216
-            Format          =   249495553
+            Format          =   166461441
             CurrentDate     =   41640
          End
          Begin VB.Frame Frame3 
@@ -3822,7 +3840,7 @@ Begin VB.Form FrmCashing1
                _ExtentX        =   4524
                _ExtentY        =   556
                _Version        =   393216
-               Format          =   249495553
+               Format          =   166461441
                CurrentDate     =   39614
             End
             Begin VB.Label lbl 
@@ -3917,8 +3935,9 @@ Begin VB.Form FrmCashing1
                _ExtentY        =   609
                ButtonPositionImage=   1
                Caption         =   "..."
+               FontName        =   "Arial"
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -3939,8 +3958,9 @@ Begin VB.Form FrmCashing1
                _ExtentY        =   609
                ButtonPositionImage=   1
                Caption         =   "..."
+               FontName        =   "Arial"
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -4062,7 +4082,7 @@ Begin VB.Form FrmCashing1
                Left            =   30
                RightToLeft     =   -1  'True
                TabIndex        =   11
-               Top             =   810
+               Top             =   840
                Width           =   2685
             End
             Begin MSComCtl2.DTPicker DtpChequeDueDate 
@@ -4074,7 +4094,7 @@ Begin VB.Form FrmCashing1
                _ExtentX        =   4736
                _ExtentY        =   556
                _Version        =   393216
-               Format          =   249495553
+               Format          =   166461441
                CurrentDate     =   39614
             End
             Begin MSDataListLib.DataCombo DcboBankName 
@@ -4084,7 +4104,7 @@ Begin VB.Form FrmCashing1
                Top             =   480
                Width           =   2685
                _ExtentX        =   4736
-               _ExtentY        =   556
+               _ExtentY        =   582
                _Version        =   393216
                Text            =   ""
                RightToLeft     =   -1  'True
@@ -4096,7 +4116,7 @@ Begin VB.Form FrmCashing1
                Top             =   150
                Width           =   2685
                _ExtentX        =   4736
-               _ExtentY        =   556
+               _ExtentY        =   582
                _Version        =   393216
                Text            =   ""
                RightToLeft     =   -1  'True
@@ -4108,7 +4128,7 @@ Begin VB.Form FrmCashing1
                Top             =   1560
                Width           =   2685
                _ExtentX        =   4736
-               _ExtentY        =   556
+               _ExtentY        =   582
                _Version        =   393216
                Text            =   ""
                RightToLeft     =   -1  'True
@@ -4210,7 +4230,7 @@ Begin VB.Form FrmCashing1
                Top             =   180
                Width           =   3975
                _ExtentX        =   7011
-               _ExtentY        =   556
+               _ExtentY        =   582
                _Version        =   393216
                Enabled         =   0   'False
                Text            =   ""
@@ -4223,7 +4243,7 @@ Begin VB.Form FrmCashing1
                Top             =   510
                Width           =   3975
                _ExtentX        =   7011
-               _ExtentY        =   556
+               _ExtentY        =   582
                _Version        =   393216
                Enabled         =   0   'False
                Text            =   ""
@@ -4313,7 +4333,7 @@ Begin VB.Form FrmCashing1
             BackColor       =   &H00C0FFFF&
             Caption         =   "ŒÌ«—« "
             BeginProperty Font 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   700
@@ -4332,7 +4352,7 @@ Begin VB.Form FrmCashing1
                BackColor       =   &H00C0FFFF&
                Caption         =   "„‘«—Ì⁄ ”«»ﬁ…"
                BeginProperty Font 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   700
@@ -4352,7 +4372,7 @@ Begin VB.Form FrmCashing1
                BackColor       =   &H00C0FFFF&
                Caption         =   "œ›⁄Â „ﬁœ„Â"
                BeginProperty Font 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   700
@@ -4372,7 +4392,7 @@ Begin VB.Form FrmCashing1
                BackColor       =   &H00C0FFFF&
                Caption         =   "FIFO"
                BeginProperty Font 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   700
@@ -4392,7 +4412,7 @@ Begin VB.Form FrmCashing1
                BackColor       =   &H00C0FFFF&
                Caption         =   " ÕœÌœ ›Ê« Ì—"
                BeginProperty Font 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   700
@@ -4412,7 +4432,7 @@ Begin VB.Form FrmCashing1
                BackColor       =   &H00FFFFFF&
                Caption         =   " ÕœÌœ „” Œ·’« "
                BeginProperty Font 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   700
@@ -4440,7 +4460,7 @@ Begin VB.Form FrmCashing1
                TX              =   " ÕœÌœ"
                ENAB            =   0   'False
                BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -4478,7 +4498,7 @@ Begin VB.Form FrmCashing1
                TX              =   " ÕœÌœ"
                ENAB            =   0   'False
                BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -4509,7 +4529,7 @@ Begin VB.Form FrmCashing1
             Alignment       =   1  'Right Justify
             Enabled         =   0   'False
             BeginProperty Font 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   9.75
                Charset         =   178
                Weight          =   700
@@ -4610,7 +4630,7 @@ Begin VB.Form FrmCashing1
             TX              =   "«ŸÂ«— «·«ﬁ”«ÿ"
             ENAB            =   -1  'True
             BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -4643,7 +4663,7 @@ Begin VB.Form FrmCashing1
             Top             =   1320
             Width           =   3645
             _ExtentX        =   6429
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             Text            =   ""
             RightToLeft     =   -1  'True
@@ -4659,7 +4679,7 @@ Begin VB.Form FrmCashing1
             _cx             =   14102
             _cy             =   953
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -4719,16 +4739,16 @@ Begin VB.Form FrmCashing1
             ActiveUnderline =   -1  'True
             BackStyle       =   1
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
-               Charset         =   178
+               Charset         =   0
                Weight          =   700
                Underline       =   0   'False
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
             FontBold        =   -1  'True
-            FontName        =   "MS Sans Serif"
+            FontName        =   "Arial"
             FontSize        =   8.25
             ForeColor       =   4210688
             MousePointer    =   99
@@ -4753,7 +4773,7 @@ Begin VB.Form FrmCashing1
             TX              =   "«ŸÂ«— ”‰œ «·„œÌÊ‰Ì…"
             ENAB            =   -1  'True
             BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -4787,7 +4807,7 @@ Begin VB.Form FrmCashing1
             Visible         =   0   'False
             Width           =   2655
             _ExtentX        =   4683
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             Text            =   ""
             RightToLeft     =   -1  'True
@@ -4800,7 +4820,7 @@ Begin VB.Form FrmCashing1
             Top             =   600
             Width           =   6015
             _ExtentX        =   10610
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             BackColor       =   16777215
             ListField       =   "account_name"
@@ -4808,7 +4828,7 @@ Begin VB.Form FrmCashing1
             Text            =   ""
             RightToLeft     =   -1  'True
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -4825,7 +4845,7 @@ Begin VB.Form FrmCashing1
             Visible         =   0   'False
             Width           =   3645
             _ExtentX        =   6429
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             Text            =   ""
             RightToLeft     =   -1  'True
@@ -4838,7 +4858,7 @@ Begin VB.Form FrmCashing1
             Visible         =   0   'False
             Width           =   3645
             _ExtentX        =   6429
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             Text            =   ""
             RightToLeft     =   -1  'True
@@ -4851,7 +4871,7 @@ Begin VB.Form FrmCashing1
             Top             =   2400
             Width           =   2595
             _ExtentX        =   4577
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             BackColor       =   16777215
             ListField       =   "account_name"
@@ -4859,7 +4879,7 @@ Begin VB.Form FrmCashing1
             Text            =   ""
             RightToLeft     =   -1  'True
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -4875,7 +4895,7 @@ Begin VB.Form FrmCashing1
             Top             =   2760
             Width           =   2595
             _ExtentX        =   4577
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             Text            =   ""
             RightToLeft     =   -1  'True
@@ -4887,7 +4907,7 @@ Begin VB.Form FrmCashing1
             Top             =   3120
             Width           =   2595
             _ExtentX        =   4577
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             Text            =   ""
             RightToLeft     =   -1  'True
@@ -4906,8 +4926,9 @@ Begin VB.Form FrmCashing1
             ButtonPositionImage=   4
             Caption         =   ""
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -4937,8 +4958,9 @@ Begin VB.Form FrmCashing1
             ButtonPositionImage=   4
             Caption         =   ""
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -4964,7 +4986,7 @@ Begin VB.Form FrmCashing1
             _ExtentX        =   2725
             _ExtentY        =   556
             _Version        =   393216
-            Format          =   249561089
+            Format          =   163643393
             CurrentDate     =   41640
          End
          Begin MSDataListLib.DataCombo DcCostCenter 
@@ -4975,7 +4997,7 @@ Begin VB.Form FrmCashing1
             Top             =   2850
             Width           =   2655
             _ExtentX        =   4683
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             BackColor       =   16777215
             ListField       =   "account_name"
@@ -4983,7 +5005,7 @@ Begin VB.Form FrmCashing1
             Text            =   ""
             RightToLeft     =   -1  'True
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -4999,7 +5021,7 @@ Begin VB.Form FrmCashing1
             Top             =   5160
             Width           =   5055
             _ExtentX        =   8916
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             Text            =   ""
             RightToLeft     =   -1  'True
@@ -5008,7 +5030,7 @@ Begin VB.Form FrmCashing1
             Alignment       =   1  'Right Justify
             Enabled         =   0   'False
             BeginProperty Font 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   9.75
                Charset         =   178
                Weight          =   700
@@ -5031,7 +5053,7 @@ Begin VB.Form FrmCashing1
             Top             =   1320
             Width           =   3645
             _ExtentX        =   6429
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             Text            =   ""
             RightToLeft     =   -1  'True
@@ -5053,7 +5075,7 @@ Begin VB.Form FrmCashing1
             BackColor       =   &H00E2E9E9&
             Caption         =   "ﬁÌ„… „÷«›…"
             BeginProperty Font 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   700
@@ -5403,7 +5425,7 @@ Begin VB.Form FrmCashing1
             BackColor       =   &H00E2E9E9&
             Caption         =   "œ›⁄Â „ﬁœ„Â"
             BeginProperty Font 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   700
@@ -5456,7 +5478,7 @@ Begin VB.Form FrmCashing1
          _cx             =   33020
          _cy             =   12488
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -5516,7 +5538,7 @@ Begin VB.Form FrmCashing1
             BorderStyle     =   1
             Enabled         =   -1  'True
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -5614,7 +5636,7 @@ Begin VB.Form FrmCashing1
             TX              =   "Õ–› „” Œ·’"
             ENAB            =   -1  'True
             BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -5652,7 +5674,7 @@ Begin VB.Form FrmCashing1
             BorderStyle     =   1
             Enabled         =   -1  'True
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -5860,7 +5882,7 @@ Begin VB.Form FrmCashing1
          _cx             =   33020
          _cy             =   12488
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -5921,7 +5943,7 @@ Begin VB.Form FrmCashing1
             TX              =   "Õ–› „” Œ·’"
             ENAB            =   -1  'True
             BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -5959,7 +5981,7 @@ Begin VB.Form FrmCashing1
             BorderStyle     =   1
             Enabled         =   -1  'True
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6056,7 +6078,7 @@ Begin VB.Form FrmCashing1
             BorderStyle     =   1
             Enabled         =   -1  'True
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6153,7 +6175,7 @@ Begin VB.Form FrmCashing1
             BorderStyle     =   1
             Enabled         =   -1  'True
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6241,7 +6263,7 @@ Begin VB.Form FrmCashing1
                Alignment       =   1  'Right Justify
                BackColor       =   &H00FFFFFF&
                BeginProperty Font 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   700
@@ -6510,8 +6532,9 @@ Begin VB.Form FrmCashing1
       ButtonPositionImage=   1
       Caption         =   "ÃœÌœ"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -6541,8 +6564,9 @@ Begin VB.Form FrmCashing1
       ButtonPositionImage=   1
       Caption         =   " ⁄œÌ·"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -6571,8 +6595,9 @@ Begin VB.Form FrmCashing1
       ButtonPositionImage=   1
       Caption         =   "Õ›Ÿ"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -6601,8 +6626,9 @@ Begin VB.Form FrmCashing1
       ButtonPositionImage=   1
       Caption         =   " —«Ã⁄"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -6631,8 +6657,9 @@ Begin VB.Form FrmCashing1
       ButtonPositionImage=   1
       Caption         =   "Õ–›"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -6661,8 +6688,9 @@ Begin VB.Form FrmCashing1
       ButtonPositionImage=   1
       Caption         =   "Œ—ÊÃ"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -6690,8 +6718,9 @@ Begin VB.Form FrmCashing1
       ButtonPositionImage=   1
       Caption         =   "„”«⁄œ…"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -6720,8 +6749,9 @@ Begin VB.Form FrmCashing1
       ButtonPositionImage=   1
       Caption         =   "»ÕÀ"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -6750,8 +6780,9 @@ Begin VB.Form FrmCashing1
       ButtonPositionImage=   1
       Caption         =   "ÿ»«⁄…"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -6780,8 +6811,9 @@ Begin VB.Form FrmCashing1
       ButtonPositionImage=   1
       Caption         =   "ÿ»«⁄… «·ﬁÌœ"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -6805,7 +6837,7 @@ Begin VB.Form FrmCashing1
       Top             =   8160
       Width           =   2340
       _ExtentX        =   4128
-      _ExtentY        =   556
+      _ExtentY        =   582
       _Version        =   393216
       Enabled         =   0   'False
       Text            =   ""
@@ -6822,8 +6854,9 @@ Begin VB.Form FrmCashing1
       ButtonPositionImage=   1
       Caption         =   "«·„—›ﬁ« "
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -6854,8 +6887,9 @@ Begin VB.Form FrmCashing1
       ButtonPositionImage=   4
       Caption         =   ""
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -7020,7 +7054,7 @@ Msg = ""
  Case 8
       If SystemOptions.UserInterface = EnglishInterface Then
       Msg = Msg & "Work was guaranteed catch Contract No."
-             Msg = Msg & CHR(13) & txtContractNo.text
+             Msg = Msg & CHR(13) & txtContractNo.Text
              Msg = Msg & CHR(13)
              Msg = Msg & "  catch Contract Date "
              Msg = Msg & CHR(13) & XPDtbTrans.value
@@ -7029,10 +7063,10 @@ Msg = ""
              Msg = Msg & CHR(13) & Txt_DateHigri.value
               Msg = Msg & CHR(13)
              Msg = Msg & " Value "
-             Msg = Msg & CHR(13) & XPTxtVal.text
+             Msg = Msg & CHR(13) & XPTxtVal.Text
       Else
       Msg = Msg & " „ ⁄„· ”‰œﬁ»÷ ·⁄ﬁœ —ﬁ„ "
-             Msg = Msg & CHR(13) & txtContractNo.text
+             Msg = Msg & CHR(13) & txtContractNo.Text
              Msg = Msg & CHR(13)
              Msg = Msg & "   «—ÌŒ «·”‰œ „Ì·«œÌ "
              Msg = Msg & CHR(13) & XPDtbTrans.value
@@ -7041,7 +7075,7 @@ Msg = ""
              Msg = Msg & CHR(13) & Txt_DateHigri.value
               Msg = Msg & CHR(13)
              Msg = Msg & "    ﬁÌ„… «·„ﬁ»Ê÷«  "
-             Msg = Msg & CHR(13) & XPTxtVal.text
+             Msg = Msg & CHR(13) & XPTxtVal.Text
     End If
  Case 9
        If SystemOptions.UserInterface = EnglishInterface Then
@@ -7057,34 +7091,34 @@ Msg = ""
              Msg = Msg & CHR(13) & Txt_DateHigri.value
              Msg = Msg & CHR(13)
              Msg = Msg & "    ﬁÌ„… «·⁄—»Ê‰ "
-             Msg = Msg & XPTxtVal.text
+             Msg = Msg & XPTxtVal.Text
              Msg = Msg & CHR(13)
              Msg = Msg & "   «”„ «·„” «Ã— "
-             Msg = Msg & CHR(13) & txtrenterName.text
+             Msg = Msg & CHR(13) & txtrenterName.Text
              Msg = Msg & CHR(13)
              Msg = Msg & "    «·«ÌÃ«— "
-             Msg = Msg & TxtRent.text
+             Msg = Msg & TxtRent.Text
            '  Msg = Msg &
              Msg = Msg & "    «·”⁄Ì "
-             Msg = Msg & Txtcommission.text
+             Msg = Msg & Txtcommission.Text
              Msg = Msg & CHR(13)
              Msg = Msg & "    ”⁄Ì „ﬂ » "
-             Msg = Msg & TxtCommissionOut.text
+             Msg = Msg & TxtCommissionOut.Text
              Msg = Msg & CHR(13)
              Msg = Msg & "      «„Ì‰ "
-             Msg = Msg & TxtCommissionOut.text
+             Msg = Msg & TxtCommissionOut.Text
              Msg = Msg & CHR(13)
              Msg = Msg & "     „Ì«Â "
-             Msg = Msg & TxtWater.text
+             Msg = Msg & TxtWater.Text
     End If
  
  Case 10
     If SystemOptions.UserInterface = EnglishInterface Then
       Msg = Msg & "Work was guaranteed catch filtering No."
-             Msg = Msg & CHR(13) & TxtFilterNo.text
+             Msg = Msg & CHR(13) & TxtFilterNo.Text
       Else
       Msg = Msg & " „ ⁄„· ”‰œ ﬁ»÷ · ’›ÌÂ —ﬁ„ "
-             Msg = Msg & CHR(13) & TxtFilterNo.text
+             Msg = Msg & CHR(13) & TxtFilterNo.Text
               Msg = Msg & CHR(13)
              Msg = Msg & "   «—ÌŒ «·”‰œ „Ì·«œÌ "
              Msg = Msg & CHR(13) & XPDtbTrans.value
@@ -7093,7 +7127,7 @@ Msg = ""
              Msg = Msg & CHR(13) & Txt_DateHigri.value
               Msg = Msg & CHR(13)
              Msg = Msg & "    ﬁÌ„… «·„ﬁ»Ê÷«  "
-             Msg = Msg & CHR(13) & XPTxtVal.text
+             Msg = Msg & CHR(13) & XPTxtVal.Text
              
     End If
 
@@ -7107,13 +7141,13 @@ Msg = ""
    RsDetails1.Open StrSQL, Cn, adOpenKeyset, adLockOptimistic, adCmdText
       RsDetails1.AddNew
       RsDetails1("CusID").value = val(DcbUnitNo.BoundText)
-      RsDetails1("BranchID").value = val(dcBranch.BoundText)
+      RsDetails1("BranchID").value = val(Dcbranch.BoundText)
            RsDetails1("UnitNo").value = val(DcbUnitNo.BoundText)
            RsDetails1("UnitStatus").value = UonitStatus
            RsDetails1("Des").value = Msg
            RsDetails1("RecDate").value = XPDtbTrans.value
            RsDetails1("RecDateH").value = Txt_DateHigri.value
-           RsDetails1("NoteID").value = val(XPTxtID.text)
+           RsDetails1("NoteID").value = val(XPTxtID.Text)
            RsDetails1("ContNo").value = Null
            RsDetails1("FilterNo").value = Null
            RsDetails1("OrderMaint").value = Null
@@ -7269,10 +7303,10 @@ Case 8
 
                                 RsDetails1.AddNew
                                 RsDetails1("PymentNo").value = val(Grid3.TextMatrix(kRow, Grid3.ColIndex("InstallNo")))
-                                RsDetails1("ContNo").value = val(TxtContNo.text)
+                                RsDetails1("ContNo").value = val(TxtContNo.Text)
                                 RsDetails1("IqarID").value = val(Me.DcbUnitNo.BoundText)
                                 RsDetails1("FilterNo").value = Null
-                                RsDetails1("NoteID").value = val(XPTxtID.text)
+                                RsDetails1("NoteID").value = val(XPTxtID.Text)
                                 RsDetails1("TypeOper").value = 8
                                 RsDetails1("TypeAmount").value = 1
                                 RsDetails1("EmpID").value = val(.TextMatrix(i, .ColIndex("id")))
@@ -7344,9 +7378,9 @@ Case 8
 
                                 RsDetails1.AddNew
                                 RsDetails1("PymentNo").value = val(Grid3.TextMatrix(kRow2, Grid3.ColIndex("InstallNo")))
-                                RsDetails1("ContNo").value = val(TxtContNo.text)
+                                RsDetails1("ContNo").value = val(TxtContNo.Text)
                                 RsDetails1("FilterNo").value = Null
-                                RsDetails1("NoteID").value = val(XPTxtID.text)
+                                RsDetails1("NoteID").value = val(XPTxtID.Text)
                                 RsDetails1("IqarID").value = val(Me.DcbUnitNo.BoundText)
                                 RsDetails1("TypeOper").value = 8
                                 RsDetails1("TypeAmount").value = 2
@@ -7397,19 +7431,19 @@ If CheckStatusEarnest(1).value = vbUnchecked Then
      
        If VSFlexGrid1.rows > 1 Then
 With VSFlexGrid1
-If val(txtComisin.text) <> 0 Then
+If val(txtComisin.Text) <> 0 Then
 For i = .FixedRows To .rows - 1
      If val(.TextMatrix(i, .ColIndex("id"))) <> 0 Then
            RsDetails1.AddNew
            RsDetails1("PymentNo").value = Null
            RsDetails1("ContNo").value = Null
            RsDetails1("FilterNo").value = Null
-           RsDetails1("NoteID").value = val(XPTxtID.text)
+           RsDetails1("NoteID").value = val(XPTxtID.Text)
            RsDetails1("IqarID").value = val(Me.DcbUnitNo.BoundText)
            RsDetails1("TypeOper").value = 9
            RsDetails1("TypeAmount").value = 1
            RsDetails1("EmpID").value = val(.TextMatrix(i, .ColIndex("id")))
-           RsDetails1("Amount").value = (val(.TextMatrix(i, .ColIndex("rate"))) / 100) * val(txtComisin.text) * GetComm(val(.TextMatrix(i, .ColIndex("groupid"))), 0) / 100
+           RsDetails1("Amount").value = (val(.TextMatrix(i, .ColIndex("rate"))) / 100) * val(txtComisin.Text) * GetComm(val(.TextMatrix(i, .ColIndex("groupid"))), 0) / 100
         If CheckStatusEarnest(0).value = vbChecked Then
            RsDetails1("Canceel").value = 1
         End If
@@ -7425,19 +7459,19 @@ For i = .FixedRows To .rows - 1
            End If
        
          '''\\\\\
-        If val(txtinstranc.text) <> 0 Then
+        If val(txtinstranc.Text) <> 0 Then
          For i = .FixedRows To .rows - 1
      If val(.TextMatrix(i, .ColIndex("id"))) <> 0 Then
            RsDetails1.AddNew
            RsDetails1("PymentNo").value = Null
            RsDetails1("ContNo").value = Null
            RsDetails1("FilterNo").value = Null
-           RsDetails1("NoteID").value = val(XPTxtID.text)
+           RsDetails1("NoteID").value = val(XPTxtID.Text)
            RsDetails1("IqarID").value = val(Me.DcbUnitNo.BoundText)
            RsDetails1("TypeOper").value = 9
            RsDetails1("TypeAmount").value = 2
            RsDetails1("EmpID").value = val(.TextMatrix(i, .ColIndex("id")))
-           RsDetails1("Amount").value = (val(.TextMatrix(i, .ColIndex("rate"))) / 100) * val(txtinstranc.text) * GetComm(val(.TextMatrix(i, .ColIndex("groupid"))), 0) / 100
+           RsDetails1("Amount").value = (val(.TextMatrix(i, .ColIndex("rate"))) / 100) * val(txtinstranc.Text) * GetComm(val(.TextMatrix(i, .ColIndex("groupid"))), 0) / 100
             If CheckStatusEarnest(0).value = vbChecked Then
             RsDetails1("Canceel").value = 1
             End If
@@ -7464,11 +7498,11 @@ For i = .FixedRows To .rows - 1
            RsDetails1("PymentNo").value = Null
            RsDetails1("ContNo").value = Null
            RsDetails1("FilterNo").value = Null
-           RsDetails1("NoteID").value = val(XPTxtID.text)
+           RsDetails1("NoteID").value = val(XPTxtID.Text)
            RsDetails1("TypeOper").value = 12
            RsDetails1("TypeAmount").value = 3
            RsDetails1("EmpID").value = val(.TextMatrix(i, .ColIndex("id")))
-           RsDetails1("Amount").value = (val(.TextMatrix(i, .ColIndex("rate"))) / 100) * val(Me.XPTxtVal.text) * GetComm(val(.TextMatrix(i, .ColIndex("groupid"))), 0) / 100
+           RsDetails1("Amount").value = (val(.TextMatrix(i, .ColIndex("rate"))) / 100) * val(Me.XPTxtVal.Text) * GetComm(val(.TextMatrix(i, .ColIndex("groupid"))), 0) / 100
      
            RsDetails1.update
          End If
@@ -7492,18 +7526,18 @@ For i = .FixedRows To .rows - 1
            RsDetails1("PymentNo").value = Null
            RsDetails1("ContNo").value = Null
            RsDetails1("FilterNo").value = Null
-           RsDetails1("NoteID").value = val(XPTxtID.text)
+           RsDetails1("NoteID").value = val(XPTxtID.Text)
            RsDetails1("TypeOper").value = Index
            RsDetails1("IqarID").value = val(Me.DcbUnitNo.BoundText)
           If Index = 10 Then
            
-           RsDetails1("FilterNo").value = val(Me.TxtFilterNo.text)
+           RsDetails1("FilterNo").value = val(Me.TxtFilterNo.Text)
            RsDetails1("TypeAmount").value = 5
            Else
            RsDetails1("TypeAmount").value = 6
            End If
            RsDetails1("EmpID").value = val(.TextMatrix(i, .ColIndex("id")))
-           RsDetails1("Amount").value = (val(.TextMatrix(i, .ColIndex("rate"))) / 100) * val(Me.XPTxtVal.text) * GetComm(val(.TextMatrix(i, .ColIndex("groupid"))), 0) / 100
+           RsDetails1("Amount").value = (val(.TextMatrix(i, .ColIndex("rate"))) / 100) * val(Me.XPTxtVal.Text) * GetComm(val(.TextMatrix(i, .ColIndex("groupid"))), 0) / 100
            If Index = 10 Then
                 dif = DateDiff("d", XPDtbTrans, Dtaefilter)
                 dif = Abs(dif)
@@ -7538,17 +7572,17 @@ Private Sub ALLButton3_Click()
     lblsqlstring.Caption = ""
     FrmPaymentTime1.show
     FrmPaymentTime1.lblcusid = val(DBCboClientName.BoundText)
-    FrmPaymentTime1.LblValue = val(XPTxtVal.text)
+    FrmPaymentTime1.LblValue = val(XPTxtVal.Text)
 End Sub
 Sub GetInstalDate(Optional InstalNo As Double = 0)
-If Me.TxtModFlg.text <> "R" Then
+If Me.TxtModFlg.Text <> "R" Then
 Dim Rs8 As ADODB.Recordset
 Dim sql As String
 If InstalNo <> 0 Then
 Set Rs8 = New ADODB.Recordset
 sql = " SELECT     ContNo, InstallNo, Installdate, InstalldateH"
 sql = sql & " From dbo.TblContractInstallments"
-sql = sql & " Where (ContNo = " & val(TxtContNo.text) & ") And (InstallNo = " & InstalNo & ")"
+sql = sql & " Where (ContNo = " & val(TxtContNo.Text) & ") And (InstallNo = " & InstalNo & ")"
 Rs8.Open sql, Cn, adOpenStatic, adLockOptimistic, adCmdText
 If Rs8.RecordCount > 0 Then
 ToPriodDate.value = IIf(IsNull(Rs8("Installdate").value), Date, Rs8("Installdate").value)
@@ -7559,14 +7593,14 @@ End If
 End If
 End Sub
 Function CheckmaxInstal(Optional InstalNo As Double = 0) As Boolean
-If Me.TxtModFlg.text <> "R" Then
+If Me.TxtModFlg.Text <> "R" Then
 Dim Rs8 As ADODB.Recordset
 Dim sql As String
 If InstalNo <> 0 Then
 Set Rs8 = New ADODB.Recordset
 sql = "SELECT     ContNo, MAX(InstallNo) AS MaxInstallNo"
 sql = sql & " From dbo.TblContractInstallments"
-sql = sql & " Where (ContNo = " & val(TxtContNo.text) & ")"
+sql = sql & " Where (ContNo = " & val(TxtContNo.Text) & ")"
 sql = sql & " GROUP BY ContNo"
 sql = sql & " Having (Max(InstallNo) = " & InstalNo & ")"
 Rs8.Open sql, Cn, adOpenStatic, adLockOptimistic, adCmdText
@@ -7581,14 +7615,14 @@ End Function
 
 
 Sub GetInstalMaxDate(Optional InstalNo As Double = 0, Optional PeriodsID As Integer, Optional Periods As Integer)
-If Me.TxtModFlg.text <> "R" Then
+If Me.TxtModFlg.Text <> "R" Then
 Dim Rs8 As ADODB.Recordset
 Dim sql As String
 If InstalNo <> 0 Then
 Set Rs8 = New ADODB.Recordset
 sql = " SELECT     ContNo, InstallNo, Installdate, InstalldateH"
 sql = sql & " From dbo.TblContractInstallments"
-sql = sql & " Where (ContNo = " & val(TxtContNo.text) & ") And (InstallNo = " & InstalNo & ")"
+sql = sql & " Where (ContNo = " & val(TxtContNo.Text) & ") And (InstallNo = " & InstalNo & ")"
 Rs8.Open sql, Cn, adOpenStatic, adLockOptimistic, adCmdText
 If Rs8.RecordCount > 0 Then
 ToPriodDate.value = IIf(IsNull(Rs8("Installdate").value), Date, Rs8("Installdate").value)
@@ -7606,14 +7640,14 @@ End If
 End If
 End Sub
 Sub GetInstalPeriod(Optional ByRef PeriodsID As Integer, Optional ByRef Periods As Integer)
-If Me.TxtModFlg.text <> "R" Then
+If Me.TxtModFlg.Text <> "R" Then
 Dim Rs8 As ADODB.Recordset
 Dim sql As String
 
 Set Rs8 = New ADODB.Recordset
 sql = " SELECT     PeriodsID, Periods, ContNo"
 sql = sql & " FROM         dbo.TblContract"
-sql = sql & " Where (ContNo  = " & val(TxtContNo.text) & ") "
+sql = sql & " Where (ContNo  = " & val(TxtContNo.Text) & ") "
 Rs8.Open sql, Cn, adOpenStatic, adLockOptimistic, adCmdText
 If Rs8.RecordCount > 0 Then
 PeriodsID = IIf(IsNull(Rs8("PeriodsID").value), -1, Rs8("PeriodsID").value)
@@ -7622,14 +7656,14 @@ End If
 End If
 End Sub
 Sub GetBeforInstalDate(Optional InstalNo As Double = 0)
-If Me.TxtModFlg.text <> "R" Then
+If Me.TxtModFlg.Text <> "R" Then
 Dim Rs8 As ADODB.Recordset
 Dim sql As String
 If InstalNo <> 0 Then
 Set Rs8 = New ADODB.Recordset
 sql = " SELECT     ContNo, InstallNo, Installdate, InstalldateH"
 sql = sql & " From dbo.TblContractInstallments"
-sql = sql & " Where (ContNo = " & val(TxtContNo.text) & ") And (InstallNo = " & InstalNo & ")"
+sql = sql & " Where (ContNo = " & val(TxtContNo.Text) & ") And (InstallNo = " & InstalNo & ")"
 Rs8.Open sql, Cn, adOpenStatic, adLockOptimistic, adCmdText
 If Rs8.RecordCount > 0 Then
 FrmPriodDate.value = IIf(IsNull(Rs8("Installdate").value), Date, Rs8("Installdate").value)
@@ -7668,8 +7702,8 @@ Public Sub FillGridWithDataContract(NoteSerial1 As String, Optional NoteID As Do
 
     If DCboCashType.ListIndex <> 8 Then Exit Sub
  
-    lbl(38).Caption = DBCboClientName.text
-    lbl(41).Caption = DBCboClientName.text
+    lbl(38).Caption = DBCboClientName.Text
+    lbl(41).Caption = DBCboClientName.Text
     '
  
 sql = " SELECT     dbo.TblContract.ComResid,  dbo.TblContractInstallments.des, dbo.TblContractInstallments.OldValueDate, dbo.TblContractInstallments.OldValueDateH, dbo.TblContractInstallments.OldValue, "
@@ -7698,7 +7732,7 @@ sql = sql & "                         dbo.TblAkarUnit ON dbo.TblAqarDetai.unitty
 sql = sql & "                         dbo.TblContractInstallments RIGHT OUTER JOIN"
 sql = sql & "                         dbo.TblCustemers RIGHT OUTER JOIN"
 sql = sql & "                         dbo.TblContract ON dbo.TblCustemers.CusID = dbo.TblContract.ownerid ON dbo.TblContractInstallments.ContNo = dbo.TblContract.ContNo ON dbo.TblAqarDetai.Id = dbo.TblContract.UnitNo"
-sql = sql & "   WHERE     ( (dbo.TblContractInstallments.Status is null  or dbo.TblContractInstallments.Status=0)  and  dbo.TblContract.ContNo =" & val(TxtContNo.text) & ")"
+sql = sql & "   WHERE     ( (dbo.TblContractInstallments.Status is null  or dbo.TblContractInstallments.Status=0)  and  dbo.TblContract.ContNo =" & val(TxtContNo.Text) & ")"
 sql = sql & " order by dbo.TblContractInstallments.InstallNo"
     Set rs2 = New ADODB.Recordset
     rs2.Open sql, Cn, adOpenStatic, adLockReadOnly, adCmdText
@@ -7732,7 +7766,7 @@ Me.DcbUnitNo.BoundText = IIf(IsNull(rs2.Fields("UnitNoiD").value), "", rs2.Field
         End If
         
          For X = 1 To rs2.RecordCount
-          If Me.TxtModFlg.text <> "E" Then
+          If Me.TxtModFlg.Text <> "E" Then
             ActualTotal = getinsttPayedTocontract(val(rs2.Fields("id").value), ActRent, ActComm, ActInsu, ActWater, ActElec, ActService, ActOldValue, , , ActVAT)
           Else
           ActualTotal = getinsttPayedTocontract(val(rs2.Fields("id").value), ActRent, ActComm, ActInsu, ActWater, ActElec, ActService, ActOldValue, NoteID, 1, ActVAT)
@@ -7840,7 +7874,7 @@ Me.DcbUnitNo.BoundText = IIf(IsNull(rs2.Fields("UnitNoiD").value), "", rs2.Field
    .TextMatrix(i, .ColIndex("ElectricPayed")) = 0
    .TextMatrix(i, .ColIndex("TelandNetPayed")) = 0
    
-   If NoteID <> 0 And Me.TxtModFlg.text = "E" Then
+   If NoteID <> 0 And Me.TxtModFlg.Text = "E" Then
    getinsttPayedToContNote NoteID, ActRent, ActComm, ActInsu, ActWater, ActElec, ActService, ActOldValue, rs2.Fields("ID").value, ActVAT
    .TextMatrix(i, .ColIndex("RentValuePayed")) = ActRent
    .TextMatrix(i, .ColIndex("CommissionsPayed")) = ActComm
@@ -7877,7 +7911,7 @@ l:            End If
         Exit Sub
     End If
 '  rs2("NoteID").value = val(XPTxtID.text)
-    sql = "SELECT  * FROM     ContracttBillInstallmentsDone     where NoteID =" & val(XPTxtID.text)
+    sql = "SELECT  * FROM     ContracttBillInstallmentsDone     where NoteID =" & val(XPTxtID.Text)
  
    ' rs2.Open sql, Cn, adOpenStatic, adLockReadOnly, adCmdText
 
@@ -7890,7 +7924,7 @@ l:            End If
       'rs2.Open sql, Cn, adOpenStatic, adLockReadOnly, adCmdText
 
 
-  sql = "SELECT  * FROM     ContracttBillInstallmentsDone     where NoteID =" & val(XPTxtID.text)
+  sql = "SELECT  * FROM     ContracttBillInstallmentsDone     where NoteID =" & val(XPTxtID.Text)
  rs2.Open sql, Cn, adOpenStatic, adLockReadOnly, adCmdText
     If rs2.RecordCount = 0 Then
  
@@ -7973,7 +8007,7 @@ My_SQL = My_SQL & "                      dbo.TBLSalesRepGroups.NameE"
 My_SQL = My_SQL & " FROM         dbo.TblCOntractSales LEFT OUTER JOIN"
 My_SQL = My_SQL & "                      dbo.TBLSalesRepGroups ON dbo.TblCOntractSales.GroupID = dbo.TBLSalesRepGroups.id LEFT OUTER JOIN"
 My_SQL = My_SQL & "                      dbo.TblEmployee ON dbo.TblCOntractSales.EmpID = dbo.TblEmployee.Emp_ID"
-My_SQL = My_SQL & " Where (dbo.TblCOntractSales.ContNo =" & val(TxtContNo.text) & ")"
+My_SQL = My_SQL & " Where (dbo.TblCOntractSales.ContNo =" & val(TxtContNo.Text) & ")"
 
     rs2.Open My_SQL, Cn, adOpenKeyset, adLockReadOnly, adCmdText
 '    rs1.Open My_SQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
@@ -8035,8 +8069,8 @@ Public Sub FillGridWithData(project_no As Long, _
 
     If DCboCashType.ListIndex <> 5 Then Exit Sub
  
-    lbl(38).Caption = DBCboClientName.text
-    lbl(41).Caption = DBCboClientName.text
+    lbl(38).Caption = DBCboClientName.Text
+    lbl(41).Caption = DBCboClientName.Text
     sql = "SELECT  * FROM     project_billl     where project_no = " & project_no
     Set rs2 = New ADODB.Recordset
     rs2.Open sql, Cn, adOpenStatic, adLockReadOnly, adCmdText
@@ -8179,7 +8213,7 @@ Private Sub ALLButton4_Click()
 
     End If
  
-    FillGridWithData val(Me.DBCboClientName.BoundText), TxtNoteSerial.text
+    FillGridWithData val(Me.DBCboClientName.BoundText), TxtNoteSerial.Text
 
 End Sub
 
@@ -8199,12 +8233,12 @@ DcbAccount_Change
         Me.DtpChequeDueDate.Enabled = False
         TxtAccount.Enabled = False
         DcbAccount.Enabled = False
-    If Me.TxtModFlg.text = "E" Then
-        DcboBankName.text = ""
-        TxtChequeNumber.text = ""
-        Me.DcboBox.text = ""
-        DCChequeBox.text = ""
-        TXTBankName.text = ""
+    If Me.TxtModFlg.Text = "E" Then
+        DcboBankName.Text = ""
+        TxtChequeNumber.Text = ""
+        Me.DcboBox.Text = ""
+        DCChequeBox.Text = ""
+        TXTBankName.Text = ""
     End If
 
     DCChequeBox.Enabled = False
@@ -8218,7 +8252,7 @@ DcbAccount_Change
         lbl(17).Caption = "Due Date"
     End If
     
-    If Me.CboPayMentType.ListIndex = 0 Then
+    If Me.CboPaymentType.ListIndex = 0 Then
        DcbAccount.BoundText = ""
        DcbAccount_Change
         Me.lbl(9).Enabled = True
@@ -8230,7 +8264,7 @@ DcbAccount_Change
         Me.TxtChequeNumber.Enabled = False
         Me.DtpChequeDueDate.Enabled = False
         Frame3.Enabled = False
-    ElseIf Me.CboPayMentType.ListIndex = 1 Then
+    ElseIf Me.CboPaymentType.ListIndex = 1 Then
 
         If SystemOptions.ChequeBox = True Then
             TXTBankName.Visible = True
@@ -8249,7 +8283,7 @@ DcbAccount_Change
         Me.TxtChequeNumber.Enabled = True
         Me.DtpChequeDueDate.Enabled = True
         Frame3.Enabled = False
-    ElseIf Me.CboPayMentType.ListIndex = 2 Then
+    ElseIf Me.CboPaymentType.ListIndex = 2 Then
  
         TXTBankName.Visible = False
  
@@ -8274,7 +8308,7 @@ DcbAccount_Change
             lbl(17).Caption = "Date"
         End If
  
-    ElseIf Me.CboPayMentType.ListIndex = 3 Then
+    ElseIf Me.CboPaymentType.ListIndex = 3 Then
        DcbAccount.BoundText = ""
        DcbAccount_Change
         TXTBankName.Visible = False
@@ -8298,7 +8332,7 @@ DcbAccount_Change
             lbl(16).Caption = "Chequ No"
             lbl(17).Caption = "Date"
         End If
- ElseIf Me.CboPayMentType.ListIndex = 4 Then
+ ElseIf Me.CboPaymentType.ListIndex = 4 Then
          Me.lbl(9).Enabled = False
         Me.DcboBox.Enabled = False
         Me.lbl(15).Enabled = False
@@ -8561,7 +8595,7 @@ Dim i As Integer
 
     If SystemOptions.usertype <> UserAdminAll Then
  
-        Me.dcBranch.Enabled = True
+        Me.Dcbranch.Enabled = True
         ' XPDtbBill.Enabled = False
     End If
 
@@ -8609,14 +8643,14 @@ Case 10
             Grid4.Clear flexClearScrollable, flexClearEverything
             Grid4.rows = 1
             
-            TxtModFlg.text = "N"
+            TxtModFlg.Text = "N"
             '       XPTxtID.text = CStr(new_id("Notes", "NoteID", "", True))
             ' Me.TxtNoteSerial.text = CStr(new_id("Notes", "NoteSerial", "", True, "NoteType=4"))
             Me.DCboUserName.BoundText = user_id
             
-            Text1.text = setfoxy
+            Text1.Text = setfoxy
             Option1.value = True
-            Me.dcBranch.BoundText = Current_branch
+            Me.Dcbranch.BoundText = Current_branch
             Txt_DateHigri.value = ToHijriDate(Date)
 CboPayMentType_Change
 XPTab301.CurrTab = 0
@@ -8656,7 +8690,7 @@ SetDefaults
                     Exit Sub
                 End If
                 
-            If SystemOptions.ChequeBox = True And CboPayMentType.ListIndex = 1 Then
+            If SystemOptions.ChequeBox = True And CboPaymentType.ListIndex = 1 Then
          
                 If ChequeBoxOperations(val(Me.XPTxtID)) = False Then
                     Msg = "·‰ Ì„ﬂ‰ «·”„«Õ » ⁄œÌ· Â–« «·⁄„·Ì…..!!!"
@@ -8667,13 +8701,13 @@ SetDefaults
     
             End If
     
-            TxtModFlg.text = "E"
+            TxtModFlg.Text = "E"
        '     Me.DCboUserName.BoundText = user_id
             CuurentLogdata
    VSFlexGrid1.rows = VSFlexGrid1.rows + 1
     VSFlexGrid2.rows = VSFlexGrid2.rows + 1
-    If Me.DCboCashType.ListIndex = 8 And (Me.TxtModFlg.text = "E") Then
-      FillGridWithDataContract txtContractNo, val(XPTxtID.text)
+    If Me.DCboCashType.ListIndex = 8 And (Me.TxtModFlg.Text = "E") Then
+      FillGridWithDataContract txtContractNo, val(XPTxtID.Text)
     End If
         Case 2
         
@@ -8687,7 +8721,7 @@ SetDefaults
               End If
               
 XPTab301.CurrTab = 0
-            If Trim(dcBranch.BoundText) = "" Then
+            If Trim(Dcbranch.BoundText) = "" Then
                 If SystemOptions.UserInterface = EnglishInterface Then
                     Msg = "Specify Branch"
                 Else
@@ -8695,14 +8729,14 @@ XPTab301.CurrTab = 0
                 End If
 
                 MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
-                dcBranch.SetFocus
+                Dcbranch.SetFocus
                 Sendkeys "{F4}"
                 Screen.MousePointer = vbDefault
                 Exit Sub
             End If
-   my_branch = val(dcBranch.BoundText)
-            my_branch = Me.dcBranch.BoundText
- If val(XPTxtVal.text) <= 0 Then
+   my_branch = val(Dcbranch.BoundText)
+            my_branch = Me.Dcbranch.BoundText
+ If val(XPTxtVal.Text) <= 0 Then
  If SystemOptions.UserInterface = ArabicInterface Then
  MsgBox "·«Ì„ﬂ‰ «·Õ›Ÿ Ì—ÃÏ «œŒ«· ﬁÌ„… «·„ﬁ»Ê÷«  «·’ÕÌÕ…"
  Else
@@ -8833,7 +8867,7 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("RentValuePayed")))
  End With
 
  If ComVal > 0 Then
-             Account_Code_dynamic = get_account_code_branch(86, val(dcBranch.BoundText))
+             Account_Code_dynamic = get_account_code_branch(86, val(Dcbranch.BoundText))
         If Account_Code_dynamic = "NO branch" Then
           MsgBox "·„ Ì „ «‰‘«¡ «·›—⁄", vbCritical
             GoTo ErrTrap
@@ -8857,7 +8891,7 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("WaterPayed")))
  End With
 
  If ComVal > 0 Then
-             Account_Code_dynamic = get_account_code_branch(83, val(dcBranch.BoundText))
+             Account_Code_dynamic = get_account_code_branch(83, val(Dcbranch.BoundText))
         If Account_Code_dynamic = "NO branch" Then
           MsgBox "·„ Ì „ «‰‘«¡ «·›—⁄", vbCritical
             GoTo ErrTrap
@@ -8882,7 +8916,7 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("ElectricPayed")))
 
  If ComVal > 0 Then
  
-            Account_Code_dynamic = get_account_code_branch(84, val(dcBranch.BoundText))
+            Account_Code_dynamic = get_account_code_branch(84, val(Dcbranch.BoundText))
         If Account_Code_dynamic = "NO branch" Then
           MsgBox "·„ Ì „ «‰‘«¡ «·›—⁄", vbCritical
             GoTo ErrTrap
@@ -8907,7 +8941,7 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("TelandNetPayed")))
  End With
 
  If ComVal > 0 Then
-           Account_Code_dynamic = get_account_code_branch(85, val(dcBranch.BoundText))
+           Account_Code_dynamic = get_account_code_branch(85, val(Dcbranch.BoundText))
         If Account_Code_dynamic = "NO branch" Then
           MsgBox "·„ Ì „ «‰‘«¡ «·›—⁄", vbCritical
             GoTo ErrTrap
@@ -8932,7 +8966,7 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("CommissionsPayed")))
 
  If ComVal > 0 Then
  
-           Account_Code_dynamic = get_account_code_branch(81, val(dcBranch.BoundText))
+           Account_Code_dynamic = get_account_code_branch(81, val(Dcbranch.BoundText))
         If Account_Code_dynamic = "NO branch" Then
           MsgBox "·„ Ì „ «‰‘«¡ «·›—⁄", vbCritical
             GoTo ErrTrap
@@ -8949,7 +8983,7 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("CommissionsPayed")))
  End If
  'End If
  If val(DCboCashType.ListIndex) = 8 Then
-    ComVal = val(TxtVATValue.text)
+    ComVal = val(TxtVATValue.Text)
 
  If ComVal > 0 Then
  
@@ -9022,7 +9056,7 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("CommissionsPayed")))
                 Exit Sub
             End If
 
-            If SystemOptions.ChequeBox = True And CboPayMentType.ListIndex = 1 Then
+            If SystemOptions.ChequeBox = True And CboPaymentType.ListIndex = 1 Then
          
                 If ChequeBoxOperations(val(Me.XPTxtID)) = False Then
                     Msg = "·‰ Ì„ﬂ‰ «·”„«Õ »Õ–› Â–« «·⁄„·Ì…..!!!"
@@ -9074,7 +9108,7 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("CommissionsPayed")))
             End If
 
          '   ShowGL_cc Me.TxtNoteSerial.Text, , 200
-            ShowGL_cc TxtNoteSerial.text, , , XPTxtID.text
+            ShowGL_cc TxtNoteSerial.Text, , , XPTxtID.Text
             
             Case 13
             RemoveGridRow
@@ -9252,7 +9286,7 @@ If DCboCashType.ListIndex = 7 Then
     MySQL = MySQL & "    LEFT OUTER JOIN ACCOUNTS  ON notes.AccountsCode = ACCOUNTS.Account_Code"
 End If
 'Where (dbo.Notes.NoteID = 4441)
-MySQL = MySQL & " Where (dbo.Notes.NoteID =" & val(XPTxtID.text) & ")"
+MySQL = MySQL & " Where (dbo.Notes.NoteID =" & val(XPTxtID.Text) & ")"
 
  If SystemOptions.UserInterface = ArabicInterface Then
           StrFileName = App.path & "\REPORTS\REPORTS NEW\" & "Expenses_order10.rpt"
@@ -9309,12 +9343,12 @@ MySQL = MySQL & " Where (dbo.Notes.NoteID =" & val(XPTxtID.text) & ")"
     End If
 
     xReport.ParameterFields(3).AddCurrentValue user_name
-        xReport.ParameterFields(4).AddCurrentValue WriteNo(Format(val(XPTxtVal.text) + val(TxtVATValue.text), "0.00"), 0, True, ".")
+        xReport.ParameterFields(4).AddCurrentValue WriteNo(Format(val(XPTxtVal.Text) + val(TxtVATValue.Text), "0.00"), 0, True, ".")
      xReport.ParameterFields(5).AddCurrentValue val(lblremain.Caption)
      
     ' xReport.ParameterFields(6).AddCurrentValue CStr(val(XPTxtVal.Text) + val(TxtVATValue.Text))
     
-    xReport.ParameterFields(6).AddCurrentValue "”‰œ " & CboPayMentType.text
+    xReport.ParameterFields(6).AddCurrentValue "”‰œ " & CboPaymentType.Text
     
      
       '   xReport.ParameterFields(7).AddCurrentValue DBIssueDate.value
@@ -9468,7 +9502,7 @@ Private Sub CmdRemove_Click()
     End If
 
     If DCboCashType.ListIndex = 5 Then
-        FillGridWithData val(Me.DBCboClientName.BoundText), TxtNoteSerial.text
+        FillGridWithData val(Me.DBCboClientName.BoundText), TxtNoteSerial.Text
     End If
   
 End Sub
@@ -9489,8 +9523,8 @@ Private Sub CmdSearchTrans_Click()
         Load FrmBuySearch
         FrmBuySearch.DealingForm = InvoiceTransaction
         Set FrmBuySearch.ExtraRetrunObject = Me.TxtTransID
-        FrmBuySearch.CboPayMentType.ListIndex = 1
-        FrmBuySearch.CboPayMentType.Enabled = False
+        FrmBuySearch.CboPaymentType.ListIndex = 1
+        FrmBuySearch.CboPaymentType.Enabled = False
         FrmBuySearch.Caption = "«·»ÕÀ ⁄‰ ⁄„·Ì… »Ì⁄"
         FrmBuySearch.DCboClientsName.BoundText = Me.DBCboClientName.BoundText
         FrmBuySearch.show
@@ -9499,8 +9533,8 @@ Private Sub CmdSearchTrans_Click()
         Load FrmBuySearch
         FrmBuySearch.DealingForm = Returntransaction
         Set FrmBuySearch.ExtraRetrunObject = Me.TxtTransID
-        FrmBuySearch.CboPayMentType.ListIndex = 1
-        FrmBuySearch.CboPayMentType.Enabled = False
+        FrmBuySearch.CboPaymentType.ListIndex = 1
+        FrmBuySearch.CboPaymentType.Enabled = False
         FrmBuySearch.Caption = "«·»ÕÀ ⁄‰ „— Ã⁄ «·„‘ —Ì« "
         FrmBuySearch.DCboClientsName.BoundText = Me.DBCboClientName.BoundText
         FrmBuySearch.show vbModal
@@ -9508,9 +9542,9 @@ Private Sub CmdSearchTrans_Click()
         '›« Ê—… ’Ì«‰…
         Load FrmMaintanenceSearch
         Set FrmMaintanenceSearch.ExtraRetrunObject = Me.TxtTransID
-        FrmMaintanenceSearch.CboPayMentType.ListIndex = 1
+        FrmMaintanenceSearch.CboPaymentType.ListIndex = 1
         FrmMaintanenceSearch.SearchType = 4
-        FrmMaintanenceSearch.CboPayMentType.Enabled = False
+        FrmMaintanenceSearch.CboPaymentType.Enabled = False
         FrmMaintanenceSearch.show vbModal
     End If
 
@@ -9537,19 +9571,19 @@ Function SendMessage(currentOpt As Integer)
            Dim cOptions As ClsCompanyInfo
            Set cOptions = New ClsCompanyInfo
            Dim companyphone As String
-           Dim opt As Integer
+           Dim Opt As Integer
             Dim CurrentMessage As String
             Dim t As String
-    CurrentMessage = ComposMessage(Me.Name, 0, "", "", opt)
-  If opt = currentOpt Then
+    CurrentMessage = ComposMessage(Me.Name, 0, "", "", Opt)
+  If Opt = currentOpt Then
   
        
- Msg = "  „ ”œ«œ „»·€  " & XPTxtVal & " ”‰œ ﬁ»÷" & TxtNoteSerial1 & " ··ÊÕœ… " & DcbUnitNo.text & "  ··⁄ﬁ«—   " & DcbIqara.text
+ Msg = "  „ ”œ«œ „»·€  " & XPTxtVal & " ”‰œ ﬁ»÷" & TxtNoteSerial1 & " ··ÊÕœ… " & DcbUnitNo.Text & "  ··⁄ﬁ«—   " & DcbIqara.Text
 t = sendMessageM("user", "password", Msg, "", GetCustomerNumber(val(DBCboClientName.BoundText)))
 DoEvents
 
 
- Msg = "  „ ”œ«œ „»·€  " & XPTxtVal & " ”‰œ ﬁ»÷" & TxtNoteSerial1 & " ··ÊÃœ… " & DcbUnitNo.text & "  ··⁄ﬁ«—   " & DcbIqara.text
+ Msg = "  „ ”œ«œ „»·€  " & XPTxtVal & " ”‰œ ﬁ»÷" & TxtNoteSerial1 & " ··ÊÃœ… " & DcbUnitNo.Text & "  ··⁄ﬁ«—   " & DcbIqara.Text
 t = sendMessageM("user", "password", Msg, "", GetCustomerNumber(Txtownerid))
 DoEvents
 
@@ -9568,10 +9602,10 @@ Sub ClculteVAT()
 Dim commisiontype As Integer
 commisiontype = AqarCommisionType(val(DcbIqara.BoundText))
 If ComResid(1).value = True And val(DCboCashType.ListIndex) = 9 And commisiontype = 1 = 0 Then
-TxtVATValue.text = 0 ' val(XPTxtVal.Text) * 5 / 100
+TxtVATValue.Text = 0 ' val(XPTxtVal.Text) * 5 / 100
 
 ElseIf val(DCboCashType.ListIndex) <> 8 Then
-TxtVATValue.text = 0
+TxtVATValue.Text = 0
 End If
 'salimhere
 ' TxtVATValue = netVatPayed
@@ -9579,10 +9613,10 @@ End If
 End Sub
  Private Sub DBCboClientName_Change()
     Dim pstate As Integer
-    TxtCustCode.text = ""
+    TxtCustCode.Text = ""
 
-    If Me.DCboCashType.ListIndex = 5 And Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
-        FillGridWithData (val(Me.DBCboClientName.BoundText)), TxtNoteSerial.text
+    If Me.DCboCashType.ListIndex = 5 And Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
+        FillGridWithData (val(Me.DBCboClientName.BoundText)), TxtNoteSerial.Text
        ' Option4.value = True
        
        
@@ -9609,21 +9643,21 @@ End Sub
       If Me.DCboCashType.ListIndex = 0 Or DCboCashType.ListIndex = 10 Or Me.DCboCashType.ListIndex = 11 Or DCboCashType.ListIndex = 12 Then
       
         GetCustomersDetail val(DBCboClientName.BoundText), DefaultSalesPersonId, fullcode
-        TxtCustCode.text = fullcode
+        TxtCustCode.Text = fullcode
 
         DcEmp.BoundText = DefaultSalesPersonId
         ElseIf Me.DCboCashType.ListIndex = 5 Then
         
        
         GetProjectsDetail val(DBCboClientName.BoundText), DefaultSalesPersonId, fullcode
-       TxtCustCode.text = fullcode
+       TxtCustCode.Text = fullcode
 
         
         
         
         End If
         
-            If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+            If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
             
             DcEmp.BoundText = DefaultSalesPersonId
             End If
@@ -9648,14 +9682,14 @@ End Sub
       
                          '  Me.DcboCreditSide.BoundText = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Txtownerid), "Account_code")
                    
-                            ElseIf CboPayMentType.ListIndex = 0 Then '‰ﬁœÌ
+                            ElseIf CboPaymentType.ListIndex = 0 Then '‰ﬁœÌ
                                                If Option3.value = True Then 'œ›⁄«  „ﬁœ„…
                                                         Me.DcboCreditSide.BoundText = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Me.DBCboClientName.BoundText), "Account_code2")
                                              Else
                                                                  Me.DcboCreditSide.BoundText = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Me.DBCboClientName.BoundText))
                                              End If
                                
-                            ElseIf CboPayMentType.ListIndex = 1 Then '‘Ìﬂ
+                            ElseIf CboPaymentType.ListIndex = 1 Then '‘Ìﬂ
                             
                                                 If Option3.value = True Then 'œ›⁄«  „ﬁœ„…
                                                     Me.DcboCreditSide.BoundText = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Me.DBCboClientName.BoundText), "Account_code2")
@@ -9663,19 +9697,19 @@ End Sub
                                                                  Me.DcboCreditSide.BoundText = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Me.DBCboClientName.BoundText), "Account_code1")
                                              End If
                                      
-                             ElseIf CboPayMentType.ListIndex = 2 Then 'ÕÊ«·… '
+                             ElseIf CboPaymentType.ListIndex = 2 Then 'ÕÊ«·… '
                                                 If Option3.value = True Then 'œ›⁄«  „ﬁœ„…
                                                         Me.DcboCreditSide.BoundText = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Me.DBCboClientName.BoundText), "Account_code2")
                                              Else
                                                                  Me.DcboCreditSide.BoundText = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Me.DBCboClientName.BoundText))
                                              End If
-                              ElseIf CboPayMentType.ListIndex = 3 Then '‘Ìﬂ „”œœ '
+                              ElseIf CboPaymentType.ListIndex = 3 Then '‘Ìﬂ „”œœ '
                                                                     If Option3.value = True Then 'œ›⁄«  „ﬁœ„…
                                                         Me.DcboCreditSide.BoundText = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Me.DBCboClientName.BoundText), "Account_code2")
                                              Else
                                                                  Me.DcboCreditSide.BoundText = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Me.DBCboClientName.BoundText))
                                              End If
-                                 ElseIf CboPayMentType.ListIndex = 4 Then
+                                 ElseIf CboPaymentType.ListIndex = 4 Then
                                            If Option3.value = True Then 'œ›⁄«  „ﬁœ„…
                                                         Me.DcboCreditSide.BoundText = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Me.DBCboClientName.BoundText), "Account_code2")
                                              Else
@@ -9710,14 +9744,14 @@ End Sub
                                         
         If SystemOptions.CustomerhavethreeAccounts = True Then ' «·⁄„·«¡ ·Â« À·«À Õ”«»« 
         
-                            If CboPayMentType.ListIndex = 0 Then '‰ﬁœÌ
+                            If CboPaymentType.ListIndex = 0 Then '‰ﬁœÌ
                                                                     If Option3.value = True Then 'œ›⁄Â „ﬁœ„…
                                                                            Me.DcboCreditSide.BoundText = get_project_customer_account(val(DBCboClientName.BoundText), "Account_Code2") 'œ›⁄«  „ﬁœ„…
                                                                       Else
                                                                            Me.DcboCreditSide.BoundText = get_project_customer_account(val(DBCboClientName.BoundText), "Account_Code") ' Ã«—Ì
                                                                       End If
                                
-                            ElseIf CboPayMentType.ListIndex = 1 Then '‘Ìﬂ
+                            ElseIf CboPaymentType.ListIndex = 1 Then '‘Ìﬂ
                             
                                                                 If Option3.value = True Then 'œ›⁄Â „ﬁœ„…
                                                                     Me.DcboCreditSide.BoundText = get_project_customer_account(val(DBCboClientName.BoundText), "Account_Code2") 'œ›⁄«  „ﬁœ„…
@@ -9725,13 +9759,13 @@ End Sub
                                                                           Me.DcboCreditSide.BoundText = get_project_customer_account(val(DBCboClientName.BoundText), "Account_Code1") '  Õ  «· Õ’Ì·
                                                                       End If
                                      
-                             ElseIf CboPayMentType.ListIndex = 2 Then 'ÕÊ«·… '
+                             ElseIf CboPaymentType.ListIndex = 2 Then 'ÕÊ«·… '
                                                If Option3.value = True Then 'œ›⁄Â „ﬁœ„…
                                                                     Me.DcboCreditSide.BoundText = get_project_customer_account(val(DBCboClientName.BoundText), "Account_Code2") 'œ›⁄«  „ﬁœ„…
                                                                       Else
                                                                           Me.DcboCreditSide.BoundText = get_project_customer_account(val(DBCboClientName.BoundText), "Account_Code") ' Ã«—Ì
                                                                       End If
-                              ElseIf CboPayMentType.ListIndex = 3 Then '‘Ìﬂ „”œœ '
+                              ElseIf CboPaymentType.ListIndex = 3 Then '‘Ìﬂ „”œœ '
                                                       If Option3.value = True Then 'œ›⁄Â „ﬁœ„…
                                                   Me.DcboCreditSide.BoundText = get_project_customer_account(val(DBCboClientName.BoundText), "Account_Code2") 'œ›⁄«  „ﬁœ„…
                                                                       Else
@@ -9751,14 +9785,14 @@ End Sub
           
                   If SystemOptions.CustomerhavethreeAccounts = True Then ' «·⁄„·«¡ ·Â« À·«À Õ”«»« 
         
-                            If CboPayMentType.ListIndex = 0 Then '‰ﬁœÌ
+                            If CboPaymentType.ListIndex = 0 Then '‰ﬁœÌ
                                                 If Option3.value = True Then 'œ›⁄Â „ﬁœ„…
                                                                     Me.DcboCreditSide.BoundText = get_project_customer_account(val(DBCboClientName.BoundText), "Account_Code2", 1) 'œ›⁄«  „ﬁœ„…
                                                                       Else
                                                                           Me.DcboCreditSide.BoundText = get_project_customer_account(val(DBCboClientName.BoundText), "Account_Code", 1) ' Ã«—Ì
                                                                       End If
                                
-                            ElseIf CboPayMentType.ListIndex = 1 Then '‘Ìﬂ
+                            ElseIf CboPaymentType.ListIndex = 1 Then '‘Ìﬂ
                             
                                                                 If Option3.value = True Then 'œ›⁄Â „ﬁœ„…
                                                                     Me.DcboCreditSide.BoundText = get_project_customer_account(val(DBCboClientName.BoundText), "Account_Code2", 1) 'œ›⁄«  „ﬁœ„…
@@ -9766,13 +9800,13 @@ End Sub
                                                                           Me.DcboCreditSide.BoundText = get_project_customer_account(val(DBCboClientName.BoundText), "Account_Code1", 1) '  Õ  «· Õ’Ì·
                                                                       End If
                                      
-                             ElseIf CboPayMentType.ListIndex = 2 Then 'ÕÊ«·… '
+                             ElseIf CboPaymentType.ListIndex = 2 Then 'ÕÊ«·… '
                                                If Option3.value = True Then 'œ›⁄Â „ﬁœ„…
                                                                     Me.DcboCreditSide.BoundText = get_project_customer_account(val(DBCboClientName.BoundText), "Account_Code2", 1) 'œ›⁄«  „ﬁœ„…
                                                                       Else
                                                                           Me.DcboCreditSide.BoundText = get_project_customer_account(val(DBCboClientName.BoundText), "Account_Code", 1) ' Ã«—Ì
                                                                       End If
-                              ElseIf CboPayMentType.ListIndex = 3 Then '‘Ìﬂ „”œœ '
+                              ElseIf CboPaymentType.ListIndex = 3 Then '‘Ìﬂ „”œœ '
                                                       If Option3.value = True Then 'œ›⁄Â „ﬁœ„…
                                                   Me.DcboCreditSide.BoundText = get_project_customer_account(val(DBCboClientName.BoundText), "Account_Code2", 1) 'œ›⁄«  „ﬁœ„…
                                                                       Else
@@ -9889,7 +9923,7 @@ End Sub
 
 Private Sub DCAccounts_Change()
 
-    If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+    If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
         '   Me.DcboCreditSide.BoundText = ModAccounts.GetMyAccountCode("TblRevenuesTypes", "RevenuesID", Val(Me.DcboRevenuesTypes.BoundText))
         Me.DcboCreditSide.BoundText = DCAccounts.BoundText
   
@@ -9901,7 +9935,7 @@ Private Sub DCAccounts_KeyUp(KeyCode As Integer, _
                              Shift As Integer)
 
     If KeyCode = vbKeyF3 Then
-    DCAccounts.text = ""
+    DCAccounts.Text = ""
         Unload Account_search
         Account_search.show
         Account_search.case_id = 1200
@@ -9915,7 +9949,7 @@ DcbAccount_Click (0)
 End Sub
 
 Private Sub DcbAccount_Click(Area As Integer)
-TxtAccount.text = getAccountSerial_Code("Account_Serial", "Account_Code", DcbAccount.BoundText)
+TxtAccount.Text = getAccountSerial_Code("Account_Serial", "Account_Code", DcbAccount.BoundText)
 If 1 = 1 Then
         If DcbAccount.BoundText <> "" Then
             Me.DcboDebitSide.BoundText = DcbAccount.BoundText
@@ -9928,7 +9962,7 @@ DcbIqara_Click (0)
 End Sub
 
 Private Sub DcbIqara_Click(Area As Integer)
-If Me.TxtModFlg.text <> "R" Then
+If Me.TxtModFlg.Text <> "R" Then
 If val(Me.DcbIqara.BoundText) <> 0 Then
 GetAmola val(Me.DcbIqara.BoundText)
 End If
@@ -9956,7 +9990,7 @@ Txtownerid = IIf(IsNull(Rs9("ownerid").value), 0, Rs9("ownerid").value)
         Rd(0).value = True
    End If
         
-      TxtKickbacks.text = IIf(IsNull(Rs9("AmolaValus").value), 0, Rs9("AmolaValus").value)
+      TxtKickbacks.Text = IIf(IsNull(Rs9("AmolaValus").value), 0, Rs9("AmolaValus").value)
 End If
 End If
 End Sub
@@ -9968,7 +10002,7 @@ Dim sql As String
 sql = "select * from tblaqar where Aqarid =" & Aqarid & ""
 Rs9.Open sql, Cn, adOpenStatic, adLockOptimistic, adCmdText
 If Rs9.RecordCount > 0 Then
-Txtownerid.text = IIf(IsNull(Rs9("ownerid").value), 0, Rs9("ownerid").value)
+Txtownerid.Text = IIf(IsNull(Rs9("ownerid").value), 0, Rs9("ownerid").value)
 End If
 End If
 End Sub
@@ -10005,7 +10039,7 @@ Private Sub DcboBankName_Click(Area As Integer)
             End If
         End If
 
-        If CboPayMentType.ListIndex = 2 Or CboPayMentType.ListIndex = 3 Then
+        If CboPaymentType.ListIndex = 2 Or CboPaymentType.ListIndex = 3 Then
                      
             Me.DcboDebitSide.BoundText = RsSavRec.Fields("Account_Code").value
                     
@@ -10410,7 +10444,7 @@ End Sub
 
 Private Sub DcboRevenuesTypes_Change()
 
-    If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+    If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
         Me.DcboCreditSide.BoundText = ModAccounts.GetMyAccountCode("TblRevenuesTypes", "RevenuesID", val(Me.DcboRevenuesTypes.BoundText))
 
 
@@ -10419,9 +10453,9 @@ Private Sub DcboRevenuesTypes_Change()
 End Sub
 
 Private Sub Dcbranch_Click(Area As Integer)
-If Me.TxtModFlg.text <> "R" Then
-    TxtNoteSerial.text = ""
-    TxtNoteSerial1.text = ""
+If Me.TxtModFlg.Text <> "R" Then
+    TxtNoteSerial.Text = ""
+    TxtNoteSerial1.Text = ""
  End If
 End Sub
 
@@ -10478,7 +10512,7 @@ End Sub
 
 Private Sub DcChequeBox_Change()
 
-    If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+    If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
         Me.DcboDebitSide.BoundText = ModAccounts.GetMyAccountCodeRefined("TblBoxesData", "BoxID", val(Me.DCChequeBox.BoundText), "Account_Code1")
     End If
 
@@ -10514,7 +10548,7 @@ If .rows = 2 Then
 .TextMatrix(.rows - 1, .ColIndex("rate")) = 100
 End If
 .TextMatrix(.rows - 1, .ColIndex("id")) = Me.DcEmp.BoundText
-.TextMatrix(.rows - 1, .ColIndex("empname")) = Me.DcEmp.text
+.TextMatrix(.rows - 1, .ColIndex("empname")) = Me.DcEmp.Text
 .rows = .rows + 1
 End With
 With VSFlexGrid2
@@ -10527,7 +10561,7 @@ If .rows = 2 Then
 .TextMatrix(.rows - 1, .ColIndex("rate")) = 100
 End If
 .TextMatrix(.rows - 1, .ColIndex("id")) = Me.DcEmp.BoundText
-.TextMatrix(.rows - 1, .ColIndex("empname")) = Me.DcEmp.text
+.TextMatrix(.rows - 1, .ColIndex("empname")) = Me.DcEmp.Text
 .rows = .rows + 1
 End With
 End If
@@ -10536,11 +10570,11 @@ End Sub
 
 Private Sub DcEmployee_Change()
 
-    If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+    If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
         '   Me.DcboCreditSide.BoundText = ModAccounts.GetMyAccountCode("TblRevenuesTypes", "RevenuesID", Val(Me.DcboRevenuesTypes.BoundText))
         Me.DcboCreditSide.BoundText = get_EMPLOYEE_Account(val(DCEmployee.BoundText), "Account_Code")
        ' TxtCustCode.text = val(dcEmployee.BoundText)
-        TxtCustCode.text = getemployeeCode(val(DCEmployee.BoundText))
+        TxtCustCode.Text = getemployeeCode(val(DCEmployee.BoundText))
        
        
     End If
@@ -10559,7 +10593,7 @@ Private Sub dcCar_Click(Area As Integer)
 End Sub
 Function CheckStatusofUnit(ID As Integer) As Boolean
 
-    If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+    If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
         Dim sql As String
         Dim Status As Boolean
         Dim i As Integer
@@ -10585,7 +10619,7 @@ End If
 End Function
 Function GetDriverInformation(ID As Double)
 
-    If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+    If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
         Dim sql As String
         Dim rs2 As New ADODB.Recordset
  
@@ -10800,7 +10834,7 @@ With DCboCashType2
     .AddItem "«· ’›Ì«  Ê›Ê« Ì— «·ﬂÂ—»«¡"
 End With
 
-    With Me.CboPayMentType
+    With Me.CboPaymentType
         .Clear
         .AddItem "‰ﬁœÌ"
         .AddItem "‘Ìﬂ"
@@ -10829,10 +10863,10 @@ If SystemOptions.AllowHideAssest = False Then
 
     Dcombos.GetAccountingCodes Me.DcboDebitSide
     Dcombos.GetAccountingCodes Me.DcboCreditSide
-    Dcombos.GetBranches Me.dcBranch
+    Dcombos.GetBranches Me.Dcbranch
 
     If SystemOptions.usertype <> UserAdminAll Then
-        Me.dcBranch.Enabled = True
+        Me.Dcbranch.Enabled = True
     End If
 
   '  Set rs = New ADODB.Recordset
@@ -10888,7 +10922,7 @@ If SystemOptions.AllowHideAssest = False Then
     ChkTrans.value = Unchecked
     ChkTrans_Click
    XPBtnMove_Click 1
-    Me.TxtModFlg.text = "R"
+    Me.TxtModFlg.Text = "R"
     WriteInfo
      NoOfDayl
     Dim My_SQL As String
@@ -10928,7 +10962,7 @@ ErrTrap:
 End Sub
 
 Private Sub FrmPriodDate_Change()
-   If Me.TxtModFlg.text <> "R" Then
+   If Me.TxtModFlg.Text <> "R" Then
      
     FrmPriodDateH.value = ToHijriDate(FrmPriodDate.value)
     
@@ -10936,7 +10970,7 @@ End If
 End Sub
 
 Private Sub FrmPriodDateH_LostFocus()
- If Me.TxtModFlg.text <> "R" Then
+ If Me.TxtModFlg.Text <> "R" Then
              FrmPriodDate.value = ToGregorianDate(FrmPriodDateH.value)
         End If
 End Sub
@@ -10995,9 +11029,9 @@ Function ReLineGrid(Optional idd As Integer = 0)
  With Me.Grid3
  Dim InstalNo As Double
  InstalNo = 0
- If Me.TxtModFlg.text <> "R" And TxtModFlg.text <> "" Then
+ If Me.TxtModFlg.Text <> "R" And TxtModFlg.Text <> "" Then
     lblremain.Caption = 0
- ElseIf Me.TxtModFlg.text = "R" Then
+ ElseIf Me.TxtModFlg.Text = "R" Then
     Exit Function
  End If
  Dim RamainValue As Double
@@ -11010,7 +11044,7 @@ If idd = 0 Then
                   If val(.TextMatrix(i, .ColIndex("InstallNo"))) <> 0 Then
                   InstalNo = val(.TextMatrix(i, .ColIndex("InstallNo")))
                   End If
-                  If Me.TxtModFlg.text <> "R" And TxtModFlg.text <> "" Then
+                  If Me.TxtModFlg.Text <> "R" And TxtModFlg.Text <> "" Then
                   If Round(val(.TextMatrix(i, .ColIndex("VATValue"))), 2) < (Round(val(.TextMatrix(i, .ColIndex("ActVAT"))), 2) + Round(val(.TextMatrix(i, .ColIndex("VATPayed"))), 2)) Then
                   If SystemOptions.UserInterface = ArabicInterface Then
                   MsgBox "·«Ì„ﬂ‰ «‰   Ã«Ê“ «·ﬁÌ„… «·„÷«›… «·«’·Ì…"
@@ -11022,7 +11056,7 @@ If idd = 0 Then
                   End If
                   End If
                   
-                  If Me.TxtModFlg.text <> "R" And TxtModFlg.text <> "" Then
+                  If Me.TxtModFlg.Text <> "R" And TxtModFlg.Text <> "" Then
                   If Round(val(.TextMatrix(i, .ColIndex("RentValue"))), 2) < (Round(val(.TextMatrix(i, .ColIndex("ActRent"))), 2) + Round(val(.TextMatrix(i, .ColIndex("RentValuePayed"))), 2)) Then
                   If SystemOptions.UserInterface = ArabicInterface Then
                   MsgBox "·«Ì„ﬂ‰ «‰   Ã«Ê“ ﬁÌ„… «·«ÌÃ«— «·«’·Ì…"
@@ -11033,7 +11067,7 @@ If idd = 0 Then
                   Exit Function
                   End If
                   End If
-                  If Me.TxtModFlg.text <> "R" And TxtModFlg.text <> "" Then
+                  If Me.TxtModFlg.Text <> "R" And TxtModFlg.Text <> "" Then
                      If Round(val(.TextMatrix(i, .ColIndex("Commissions"))), 2) < (Round(val(.TextMatrix(i, .ColIndex("ActComm"))), 2) + Round(val(.TextMatrix(i, .ColIndex("CommissionsPayed"))), 2)) Then
                   If SystemOptions.UserInterface = ArabicInterface Then
                   MsgBox "·«Ì„ﬂ‰ «‰   Ã«Ê“ ﬁÌ„… «·”⁄Ì «·«’·Ì…"
@@ -11044,7 +11078,7 @@ If idd = 0 Then
                   Exit Function
                   End If
                   End If
-                  If Me.TxtModFlg.text <> "R" And TxtModFlg.text <> "" Then
+                  If Me.TxtModFlg.Text <> "R" And TxtModFlg.Text <> "" Then
                   If Round(val(.TextMatrix(i, .ColIndex("Insurance"))), 2) < (Round(val(.TextMatrix(i, .ColIndex("ActInsu"))), 2) + Round(val(.TextMatrix(i, .ColIndex("InsurancePayed"))), 2)) Then
                   If SystemOptions.UserInterface = ArabicInterface Then
                   MsgBox "·«Ì„ﬂ‰ «‰   Ã«Ê“ ﬁÌ„… «· √„Ì‰ «·«’·Ì…"
@@ -11064,7 +11098,7 @@ If idd = 0 Then
                   Exit Function
                   End If
                   End If
-                  If Me.TxtModFlg.text <> "R" And TxtModFlg.text <> "" Then
+                  If Me.TxtModFlg.Text <> "R" And TxtModFlg.Text <> "" Then
                 If Round(val(.TextMatrix(i, .ColIndex("Electric"))), 2) < (Round(val(.TextMatrix(i, .ColIndex("ActElec"))), 2) + Round(val(.TextMatrix(i, .ColIndex("ElectricPayed"))), 2)) Then
                   If SystemOptions.UserInterface = ArabicInterface Then
                   MsgBox "·«Ì„ﬂ‰ «‰   Ã«Ê“ ﬁÌ„… «·ﬂÂ—»«¡ «·«’·Ì…"
@@ -11083,7 +11117,7 @@ If idd = 0 Then
                   .TextMatrix(i, .ColIndex("OldValuePayed")) = 0
                   Exit Function
                   End If
-               If Me.TxtModFlg.text <> "R" And TxtModFlg.text <> "" Then
+               If Me.TxtModFlg.Text <> "R" And TxtModFlg.Text <> "" Then
                  If Round(val(.TextMatrix(i, .ColIndex("TelandNet"))), 2) < (Round(val(.TextMatrix(i, .ColIndex("ActService"))), 2) + Round(val(.TextMatrix(i, .ColIndex("TelandNetPayed"))), 2)) Then
                   If SystemOptions.UserInterface = ArabicInterface Then
                   MsgBox "·«Ì„ﬂ‰ «‰   Ã«Ê“ ﬁÌ„… «·Œœ„«  «·«’·Ì…"
@@ -11188,7 +11222,7 @@ Totalss = 0
         End If
 
         Next i
-If Me.TxtModFlg.text <> "R" And TxtModFlg.text <> "" Then
+If Me.TxtModFlg.Text <> "R" And TxtModFlg.Text <> "" Then
 lblremain.Caption = RamainValue
 End If
 totalPayed = 0
@@ -11270,7 +11304,7 @@ SUM = 0
   
     LblTotal.Caption = val(lblrent.Caption) + val(lblcomision.Caption) + val(lblservice.Caption)
    If val(DCboCashType.ListIndex) = 8 Then
-      Me.XPTxtVal.text = totalPayed
+      Me.XPTxtVal.Text = totalPayed
       If ComResid(1).value = True Then
       If DCboCashType2.ListIndex = 0 Then
       
@@ -11306,10 +11340,10 @@ SUM = 0
         'salimhere
    
         Else
-            TxtVATValue.text = 0
+            TxtVATValue.Text = 0
       End If
       End If
-TxtVATValue.text = 0
+TxtVATValue.Text = 0
 
 End Function
 
@@ -11488,7 +11522,7 @@ End If
     
     Dim FirstPeriod As Date
     getFirstPeriodDateInthisYear FirstPeriod
-    ShowReport DcboCreditSide.BoundText, DcboCreditSide.text, FirstPeriod, Date
+    ShowReport DcboCreditSide.BoundText, DcboCreditSide.Text, FirstPeriod, Date
 
 End Sub
 
@@ -11584,7 +11618,7 @@ Private Sub Option6_Click()
 End Sub
 
 Private Sub ToPriodDate_Change()
-   If Me.TxtModFlg.text <> "R" Then
+   If Me.TxtModFlg.Text <> "R" Then
      
     ToPriodDateH.value = ToHijriDate(ToPriodDate.value)
     
@@ -11592,7 +11626,7 @@ End If
 End Sub
 
 Private Sub ToPriodDateH_LostFocus()
- If Me.TxtModFlg.text <> "R" Then
+ If Me.TxtModFlg.Text <> "R" Then
              
              ToPriodDate.value = ToGregorianDate(ToPriodDateH.value)
 
@@ -11601,27 +11635,27 @@ Private Sub ToPriodDateH_LostFocus()
 End Sub
 
 Private Sub TxtAccount_KeyPress(KeyAscii As Integer)
-DcbAccount.BoundText = getAccountSerial_Code("Account_Code", "Account_Serial", TxtAccount.text)
+DcbAccount.BoundText = getAccountSerial_Code("Account_Code", "Account_Serial", TxtAccount.Text)
 End Sub
 
 Private Sub TxtCommission_Change()
 If Me.TxtModFlg <> "R" Then
-txtTotal1.text = val(Txtcommission.text) + val(TxtWater.text) + val(txtinstrunce.text)
-If val(XPTxtVal.text) >= (val(Txtcommission.text) - val(TxtCommissionOut.text)) Then
-txtComisin.text = val(Txtcommission.text) - val(TxtCommissionOut.text)
+txtTotal1.Text = val(Txtcommission.Text) + val(TxtWater.Text) + val(txtinstrunce.Text)
+If val(XPTxtVal.Text) >= (val(Txtcommission.Text) - val(TxtCommissionOut.Text)) Then
+txtComisin.Text = val(Txtcommission.Text) - val(TxtCommissionOut.Text)
 Else
-txtComisin.text = val(XPTxtVal.text)
+txtComisin.Text = val(XPTxtVal.Text)
 End If
 End If
 End Sub
 
 Private Sub TxtCommissionOut_Change()
 If Me.TxtModFlg <> "R" Then
-txtTotal1.text = val(Txtcommission.text) + val(TxtWater.text) + val(txtinstrunce.text)
-If val(XPTxtVal.text) >= (val(Txtcommission.text) - val(TxtCommissionOut.text)) Then
-txtComisin.text = val(Txtcommission.text) - val(TxtCommissionOut.text)
+txtTotal1.Text = val(Txtcommission.Text) + val(TxtWater.Text) + val(txtinstrunce.Text)
+If val(XPTxtVal.Text) >= (val(Txtcommission.Text) - val(TxtCommissionOut.Text)) Then
+txtComisin.Text = val(Txtcommission.Text) - val(TxtCommissionOut.Text)
 Else
-txtComisin.text = val(XPTxtVal.text)
+txtComisin.Text = val(XPTxtVal.Text)
 End If
 End If
 End Sub
@@ -11630,7 +11664,7 @@ Function GetIDNo(Optional NoteSerial1 As String, Optional ID As Double) As Boole
 Dim sql As String
 Dim Rs3 As ADODB.Recordset
 Set Rs3 = New ADODB.Recordset
-sql = " SELECT      ID,FlgPayed From dbo.TblOtheExpensAqar where (FlgPayed is null) and NoteSerial1='" & NoteSerial1 & "' and BranchID=" & val(Me.dcBranch.BoundText) & " "
+sql = " SELECT      ID,FlgPayed From dbo.TblOtheExpensAqar where (FlgPayed is null) and NoteSerial1='" & NoteSerial1 & "' and BranchID=" & val(Me.Dcbranch.BoundText) & " "
 Rs3.Open sql, Cn, adOpenStatic, adLockOptimistic, adCmdText
 If Rs3.RecordCount > 0 Then
 ID = IIf(IsNull(Rs3("ID").value), 0, Rs3("ID").value)
@@ -11643,23 +11677,23 @@ ID = 0
 End If
 End Function
 Sub Calculte()
-If Me.TxtModFlg.text <> "R" Then
-TxtTotal23.text = val(TxtMaintOther3.text) + val(TxtWindows3.text) + val(TxtMaintDoors3.text) + val(TxtMaintenance3.text) + val(TxtRemainRent3.text) + val(TxtMaintCondition3.text) + val(TxtMaintClean3.text) + val(TxtPaints3.text) + val(TxtMaintkitchen3.text) + val(TxtElectricity13.text)
-txtTotal.text = val(TxtMaintenance.text) + val(txtRemainRent.text) + val(TxtMaintCondition.text) + val(TxtMaintClean.text)
-txtTotal.text = val(txtTotal.text) + val(TxtPaints.text) + val(TxtMaintkitchen.text) + val(TxtElectricity1.text)
-txtTotal.text = val(txtTotal.text) + val(TxtMaintDoors.text) + val(TxtWindows.text) + val(TxtMaintOther.text)
-txtNet.text = val(TxtRemMaintenance.text) + val(TxtRemRemainRent.text) + val(TxtRemMaintCondition.text) + val(TxtRemMaintClean.text)
-txtNet.text = val(txtNet.text) + val(TxtRemPaints.text) + val(TxtRemMaintkitchen.text) + val(TxtRemElectricity.text)
-txtNet.text = val(txtNet.text) + val(TxtRemMaintDoors.text) + val(TxtRemWindows.text) + val(TxtRemMaintOther.text)
+If Me.TxtModFlg.Text <> "R" Then
+TxtTotal23.Text = val(TxtMaintOther3.Text) + val(TxtWindows3.Text) + val(TxtMaintDoors3.Text) + val(TxtMaintenance3.Text) + val(TxtRemainRent3.Text) + val(TxtMaintCondition3.Text) + val(TxtMaintClean3.Text) + val(TxtPaints3.Text) + val(TxtMaintkitchen3.Text) + val(TxtElectricity13.Text)
+txtTotal.Text = val(TxtMaintenance.Text) + val(txtRemainRent.Text) + val(TxtMaintCondition.Text) + val(TxtMaintClean.Text)
+txtTotal.Text = val(txtTotal.Text) + val(TxtPaints.Text) + val(TxtMaintkitchen.Text) + val(TxtElectricity1.Text)
+txtTotal.Text = val(txtTotal.Text) + val(TxtMaintDoors.Text) + val(TxtWindows.Text) + val(TxtMaintOther.Text)
+txtNet.Text = val(TxtRemMaintenance.Text) + val(TxtRemRemainRent.Text) + val(TxtRemMaintCondition.Text) + val(TxtRemMaintClean.Text)
+txtNet.Text = val(txtNet.Text) + val(TxtRemPaints.Text) + val(TxtRemMaintkitchen.Text) + val(TxtRemElectricity.Text)
+txtNet.Text = val(txtNet.Text) + val(TxtRemMaintDoors.Text) + val(TxtRemWindows.Text) + val(TxtRemMaintOther.Text)
 If RdTypeTrans(0).value Then
-XPTxtVal.text = val(txtTotal.text)
+XPTxtVal.Text = val(txtTotal.Text)
 Else
-XPTxtVal.text = val(Me.TxtPrice.text)
+XPTxtVal.Text = val(Me.TxtPrice.Text)
 End If
 End If
 End Sub
 Function CheckValue() As Boolean
-If val(txtTotal.text) < val(Me.TxtTotal22.text) + val(Me.TxtTotal23.text) Then
+If val(txtTotal.Text) < val(Me.TxtTotal22.Text) + val(Me.TxtTotal23.Text) Then
 CheckValue = True
 Else
 CheckValue = False
@@ -11686,51 +11720,51 @@ End If
 End If
 If RdTypeTrans(0).value = True Then
      Frame11.Visible = True
-txtInsurance.text = IIf(IsNull(Rs3("Insurance").value), 0, Rs3("Insurance").value)
-txtDiscount.text = IIf(IsNull(Rs3("Discount").value), 0, Rs3("Discount").value)
-TxtMaintenance2.text = IIf(IsNull(Rs3("Maintenance").value), 0, Rs3("Maintenance").value)
-TxtRemainRent2.text = IIf(IsNull(Rs3("RemainRent").value), 0, Rs3("RemainRent").value)
-TxtMaintCondition2.text = IIf(IsNull(Rs3("MaintCondition").value), 0, Rs3("MaintCondition").value)
-TxtMaintClean2.text = IIf(IsNull(Rs3("MaintClean").value), 0, Rs3("MaintClean").value)
-TxtPaints2.text = IIf(IsNull(Rs3("Paints").value), 0, Rs3("Paints").value)
-TxtMaintkitchen2.text = IIf(IsNull(Rs3("MaintKitchen").value), 0, Rs3("MaintKitchen").value)
-TxtElectricity12.text = IIf(IsNull(Rs3("Electricity").value), 0, Rs3("Electricity").value)
-TxtMaintDoors2.text = IIf(IsNull(Rs3("MaintDoors").value), 0, Rs3("MaintDoors").value)
-TxtWindows2.text = IIf(IsNull(Rs3("Windows").value), 0, Rs3("Windows").value)
-TxtMaintOther2.text = IIf(IsNull(Rs3("MaintOther").value), 0, Rs3("MaintOther").value)
-TxtTotal22.text = IIf(IsNull(Rs3("Total").value), 0, Rs3("Total").value)
+txtInsurance.Text = IIf(IsNull(Rs3("Insurance").value), 0, Rs3("Insurance").value)
+txtDiscount.Text = IIf(IsNull(Rs3("Discount").value), 0, Rs3("Discount").value)
+TxtMaintenance2.Text = IIf(IsNull(Rs3("Maintenance").value), 0, Rs3("Maintenance").value)
+TxtRemainRent2.Text = IIf(IsNull(Rs3("RemainRent").value), 0, Rs3("RemainRent").value)
+TxtMaintCondition2.Text = IIf(IsNull(Rs3("MaintCondition").value), 0, Rs3("MaintCondition").value)
+TxtMaintClean2.Text = IIf(IsNull(Rs3("MaintClean").value), 0, Rs3("MaintClean").value)
+TxtPaints2.Text = IIf(IsNull(Rs3("Paints").value), 0, Rs3("Paints").value)
+TxtMaintkitchen2.Text = IIf(IsNull(Rs3("MaintKitchen").value), 0, Rs3("MaintKitchen").value)
+TxtElectricity12.Text = IIf(IsNull(Rs3("Electricity").value), 0, Rs3("Electricity").value)
+TxtMaintDoors2.Text = IIf(IsNull(Rs3("MaintDoors").value), 0, Rs3("MaintDoors").value)
+TxtWindows2.Text = IIf(IsNull(Rs3("Windows").value), 0, Rs3("Windows").value)
+TxtMaintOther2.Text = IIf(IsNull(Rs3("MaintOther").value), 0, Rs3("MaintOther").value)
+TxtTotal22.Text = IIf(IsNull(Rs3("Total").value), 0, Rs3("Total").value)
 'TxtTotalAftreIns2.Text = IIf(IsNull(RS3("TotalAfterIns").value), 0, RS3("TotalAfterIns").value)
 'TxtNet2.Text = IIf(IsNull(RS3("Net").value), 0, RS3("Net").value)
      Else
      Frame11.Visible = False
      Frame13.Visible = True
-     TxtPrice2.text = IIf(IsNull(Rs3("Valuee").value), 0, Rs3("Valuee").value)
+     TxtPrice2.Text = IIf(IsNull(Rs3("Valuee").value), 0, Rs3("Valuee").value)
      End If
 End If
 End Sub
 Private Sub TxtContNo_Change()
-If Me.DCboCashType.ListIndex = 13 And (Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E") Then
-If GetIDNo(txtContractNo.text) = True Then
-FillFIlBill val(TxtContNo.text)
+If Me.DCboCashType.ListIndex = 13 And (Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E") Then
+If GetIDNo(txtContractNo.Text) = True Then
+FillFIlBill val(TxtContNo.Text)
 GetTotalPayedElect
 Calculte
 
 End If
-ElseIf Me.DCboCashType.ListIndex = 8 And (Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E") Then
+ElseIf Me.DCboCashType.ListIndex = 8 And (Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E") Then
        ' FillGridWithDataContract val(TXTContNo.text)
-      FillGridWithDataContract txtContractNo, val(XPTxtID.text)
- FillGridWithDatSales val(TxtContNo.text)
+      FillGridWithDataContract txtContractNo, val(XPTxtID.Text)
+ FillGridWithDatSales val(TxtContNo.Text)
     End If
 End Sub
 
 Private Sub TxtContractNo_Change()
 Dim ID As Double
 
-If val(DCboCashType.ListIndex) = 13 And Me.TxtModFlg.text <> "R" Then
+If val(DCboCashType.ListIndex) = 13 And Me.TxtModFlg.Text <> "R" Then
 ClearText
 
-If GetIDNo(txtContractNo.text, ID) = True Then
-TxtContNo.text = ID
+If GetIDNo(txtContractNo.Text, ID) = True Then
+TxtContNo.Text = ID
 Else
 If SystemOptions.UserInterface = ArabicInterface Then
 MsgBox " «ﬂœ „‰ —ﬁ„ «·Õ—ﬂ… «Ê ﬁœÌﬂÊ‰  „ ”œ«œÂ« „‰ ﬁ»·"
@@ -11740,63 +11774,63 @@ Calculte
 Exit Sub
 End If
 Else
-FillGridWithData1 val(TxtContNo.text)
-lbl(66).Caption = Me.txtContractNo.text
+FillGridWithData1 val(TxtContNo.Text)
+lbl(66).Caption = Me.txtContractNo.Text
 DcbIqara_Click (0)
 End If
 End Sub
 Sub ClearText()
-TxtMaintenance2.text = 0
-TxtRemainRent2.text = 0
-TxtMaintCondition2.text = 0
-TxtMaintClean2.text = 0
-TxtPaints2.text = 0
-TxtMaintkitchen2.text = 0
-TxtElectricity12.text = 0
-TxtMaintDoors2.text = 0
-TxtWindows2.text = 0
-TxtMaintOther2.text = 0
-txtNet.text = 0
-txtTotal.text = 0
-TxtTotal23.text = 0
-TxtMaintenance3.text = 0
-TxtRemainRent3.text = 0
-TxtMaintCondition3.text = 0
-TxtMaintClean3.text = 0
-TxtPaints3.text = 0
-TxtMaintkitchen3.text = 0
-TxtElectricity13.text = 0
-TxtMaintDoors3.text = 0
-TxtWindows3.text = 0
-TxtMaintOther3.text = 0
-TxtTotal22.text = 0
+TxtMaintenance2.Text = 0
+TxtRemainRent2.Text = 0
+TxtMaintCondition2.Text = 0
+TxtMaintClean2.Text = 0
+TxtPaints2.Text = 0
+TxtMaintkitchen2.Text = 0
+TxtElectricity12.Text = 0
+TxtMaintDoors2.Text = 0
+TxtWindows2.Text = 0
+TxtMaintOther2.Text = 0
+txtNet.Text = 0
+txtTotal.Text = 0
+TxtTotal23.Text = 0
+TxtMaintenance3.Text = 0
+TxtRemainRent3.Text = 0
+TxtMaintCondition3.Text = 0
+TxtMaintClean3.Text = 0
+TxtPaints3.Text = 0
+TxtMaintkitchen3.Text = 0
+TxtElectricity13.Text = 0
+TxtMaintDoors3.Text = 0
+TxtWindows3.Text = 0
+TxtMaintOther3.Text = 0
+TxtTotal22.Text = 0
 
-TxtMaintenance.text = 0
-txtRemainRent.text = 0
-TxtMaintCondition.text = 0
-TxtMaintClean.text = 0
-TxtPaints.text = 0
-TxtMaintkitchen.text = 0
-TxtElectricity1.text = 0
-TxtMaintDoors.text = 0
-TxtWindows.text = 0
-TxtMaintOther.text = 0
+TxtMaintenance.Text = 0
+txtRemainRent.Text = 0
+TxtMaintCondition.Text = 0
+TxtMaintClean.Text = 0
+TxtPaints.Text = 0
+TxtMaintkitchen.Text = 0
+TxtElectricity1.Text = 0
+TxtMaintDoors.Text = 0
+TxtWindows.Text = 0
+TxtMaintOther.Text = 0
 
-TxtRemMaintenance.text = 0
-TxtRemRemainRent.text = 0
-TxtRemMaintCondition.text = 0
-TxtRemMaintClean.text = 0
-TxtRemPaints.text = 0
-TxtRemMaintkitchen.text = 0
-TxtRemElectricity.text = 0
-TxtRemMaintDoors.text = 0
-TxtRemWindows.text = 0
-TxtRemMaintOther.text = 0
+TxtRemMaintenance.Text = 0
+TxtRemRemainRent.Text = 0
+TxtRemMaintCondition.Text = 0
+TxtRemMaintClean.Text = 0
+TxtRemPaints.Text = 0
+TxtRemMaintkitchen.Text = 0
+TxtRemElectricity.Text = 0
+TxtRemMaintDoors.Text = 0
+TxtRemWindows.Text = 0
+TxtRemMaintOther.Text = 0
 
-TxtPrice2.text = 0
-TxtPrice3.text = 0
-TxtPrice.text = 0
-TxtRemPrice.text = 0
+TxtPrice2.Text = 0
+TxtPrice3.Text = 0
+TxtPrice.Text = 0
+TxtRemPrice.Text = 0
 End Sub
 Private Sub TxtCustCode_KeyPress(KeyAscii As Integer)
     Dim CUSTID As Integer
@@ -11805,14 +11839,14 @@ Dim EmpID As Integer
     
             If DCboCashType.ListIndex <> 6 Then
              
-                 GetCustomersDetail CUSTID, , TxtCustCode.text ' , DCboCashType.ListIndex + 1
+                 GetCustomersDetail CUSTID, , TxtCustCode.Text ' , DCboCashType.ListIndex + 1
                  DBCboClientName.BoundText = CUSTID
               
              ElseIf DCboCashType.ListIndex = 6 Then
              
              
                       
-                             GetEmployeeIDFromCode TxtCustCode.text, EmpID
+                             GetEmployeeIDFromCode TxtCustCode.Text, EmpID
                              Me.DCEmployee.BoundText = EmpID
                    
              
@@ -11829,14 +11863,14 @@ Calculte
 End Sub
 
 Private Sub TxtElectricity1_LostFocus()
-If Me.TxtModFlg.text <> "R" Then
-If val(TxtElectricity1.text) > val(TxtRemElectricity.text) Then
+If Me.TxtModFlg.Text <> "R" Then
+If val(TxtElectricity1.Text) > val(TxtRemElectricity.Text) Then
 If SystemOptions.UserInterface = ArabicInterface Then
 MsgBox "«·ﬁÌ„… «·„œ›Ê⁄… «ﬂ»— „‰ «·„ »ﬁÌ"
 Else
 MsgBox "Required value is greater than required"
 End If
-TxtElectricity1.text = 0
+TxtElectricity1.Text = 0
 TxtElectricity1.SetFocus
 Exit Sub
 End If
@@ -11879,7 +11913,7 @@ End Sub
 
 Private Sub txtinstrunce_Change()
 If Me.TxtModFlg <> "R" Then
-txtTotal1.text = val(Txtcommission.text) + val(TxtWater.text) + val(txtinstrunce.text)
+txtTotal1.Text = val(Txtcommission.Text) + val(TxtWater.Text) + val(txtinstrunce.Text)
 End If
 End Sub
 
@@ -11888,14 +11922,14 @@ Calculte
 End Sub
 
 Private Sub TxtMaintClean_LostFocus()
-If Me.TxtModFlg.text <> "R" Then
-If val(TxtMaintClean.text) > val(TxtRemMaintClean.text) Then
+If Me.TxtModFlg.Text <> "R" Then
+If val(TxtMaintClean.Text) > val(TxtRemMaintClean.Text) Then
 If SystemOptions.UserInterface = ArabicInterface Then
 MsgBox "«·ﬁÌ„… «·„œ›Ê⁄… «ﬂ»— „‰ «·„ »ﬁÌ"
 Else
 MsgBox "Required value is greater than required"
 End If
-TxtMaintClean.text = 0
+TxtMaintClean.Text = 0
 TxtMaintClean.SetFocus
 Exit Sub
 End If
@@ -11907,14 +11941,14 @@ Calculte
 End Sub
 
 Private Sub TxtMaintCondition_LostFocus()
-If Me.TxtModFlg.text <> "R" Then
-If val(TxtMaintCondition.text) > val(TxtRemMaintCondition.text) Then
+If Me.TxtModFlg.Text <> "R" Then
+If val(TxtMaintCondition.Text) > val(TxtRemMaintCondition.Text) Then
 If SystemOptions.UserInterface = ArabicInterface Then
 MsgBox "«·ﬁÌ„… «·„œ›Ê⁄… «ﬂ»— „‰ «·„ »ﬁÌ"
 Else
 MsgBox "Required value is greater than required"
 End If
-TxtMaintCondition.text = 0
+TxtMaintCondition.Text = 0
 TxtMaintCondition.SetFocus
 Exit Sub
 End If
@@ -11926,14 +11960,14 @@ Calculte
 End Sub
 
 Private Sub TxtMaintDoors_LostFocus()
-If Me.TxtModFlg.text <> "R" Then
-If val(TxtMaintDoors.text) > val(TxtRemMaintDoors.text) Then
+If Me.TxtModFlg.Text <> "R" Then
+If val(TxtMaintDoors.Text) > val(TxtRemMaintDoors.Text) Then
 If SystemOptions.UserInterface = ArabicInterface Then
 MsgBox "«·ﬁÌ„… «·„œ›Ê⁄… «ﬂ»— „‰ «·„ »ﬁÌ"
 Else
 MsgBox "Required value is greater than required"
 End If
-TxtMaintDoors.text = 0
+TxtMaintDoors.Text = 0
 TxtMaintDoors.SetFocus
 Exit Sub
 End If
@@ -11945,14 +11979,14 @@ Calculte
 End Sub
 
 Private Sub TxtMaintenance_LostFocus()
-If Me.TxtModFlg.text <> "R" Then
-If val(TxtMaintenance.text) > val(TxtRemMaintenance.text) Then
+If Me.TxtModFlg.Text <> "R" Then
+If val(TxtMaintenance.Text) > val(TxtRemMaintenance.Text) Then
 If SystemOptions.UserInterface = ArabicInterface Then
 MsgBox "«·ﬁÌ„… «·„œ›Ê⁄… «ﬂ»— „‰ «·„ »ﬁÌ"
 Else
 MsgBox "Required value is greater than required"
 End If
-TxtMaintenance.text = 0
+TxtMaintenance.Text = 0
  TxtMaintenance.SetFocus
 Exit Sub
 End If
@@ -11964,14 +11998,14 @@ Calculte
 End Sub
 
 Private Sub TxtMaintkitchen_LostFocus()
-If Me.TxtModFlg.text <> "R" Then
-If val(TxtMaintkitchen.text) > val(TxtRemMaintkitchen.text) Then
+If Me.TxtModFlg.Text <> "R" Then
+If val(TxtMaintkitchen.Text) > val(TxtRemMaintkitchen.Text) Then
 If SystemOptions.UserInterface = ArabicInterface Then
 MsgBox "«·ﬁÌ„… «·„œ›Ê⁄… «ﬂ»— „‰ «·„ »ﬁÌ"
 Else
 MsgBox "Required value is greater than required"
 End If
-TxtMaintkitchen.text = 0
+TxtMaintkitchen.Text = 0
 TxtMaintkitchen.SetFocus
 Exit Sub
 End If
@@ -11983,14 +12017,14 @@ Calculte
 End Sub
 
 Private Sub TxtMaintOther_LostFocus()
-If Me.TxtModFlg.text <> "R" Then
-If val(TxtMaintOther.text) > val(TxtRemMaintOther.text) Then
+If Me.TxtModFlg.Text <> "R" Then
+If val(TxtMaintOther.Text) > val(TxtRemMaintOther.Text) Then
 If SystemOptions.UserInterface = ArabicInterface Then
 MsgBox "«·ﬁÌ„… «·„œ›Ê⁄… «ﬂ»— „‰ «·„ »ﬁÌ"
 Else
 MsgBox "Required value is greater than required"
 End If
-TxtMaintOther.text = 0
+TxtMaintOther.Text = 0
 TxtMaintOther.SetFocus
 Exit Sub
 End If
@@ -12000,7 +12034,7 @@ End Sub
 Private Sub TxtModFlg_Change()
     On Error GoTo ErrTrap
 
-    Select Case Me.TxtModFlg.text
+    Select Case Me.TxtModFlg.Text
 
         Case "R"
     
@@ -12033,7 +12067,7 @@ Private Sub TxtModFlg_Change()
             XPMTxtRemarks.locked = True
             DBCboClientName.locked = True
             DCboCashType.locked = True
-            Me.CboPayMentType.locked = True
+            Me.CboPaymentType.locked = True
             Me.DcboBox.locked = True
             Me.DcboBankName.locked = True
             Me.TxtChequeNumber.locked = True
@@ -12078,7 +12112,7 @@ Private Sub TxtModFlg_Change()
             DCboCashType.locked = False
             DCboCashType.ListIndex = 0
         
-            Me.CboPayMentType.locked = False
+            Me.CboPaymentType.locked = False
             Me.DcboBox.locked = False
             Me.DcboBankName.locked = False
             Me.TxtChequeNumber.locked = False
@@ -12135,7 +12169,7 @@ Grid3.Enabled = True
             DCboCashType.locked = False
             Fra(0).Enabled = True
             ChkTrans.Enabled = True
-            Me.CboPayMentType.locked = False
+            Me.CboPaymentType.locked = False
             Me.DcboBox.locked = False
             Me.DcboBankName.locked = False
             Me.TxtChequeNumber.locked = False
@@ -12161,14 +12195,14 @@ Calculte
 End Sub
 
 Private Sub TxtPaints_LostFocus()
-If Me.TxtModFlg.text <> "R" Then
-If val(TxtPaints.text) > val(TxtRemPaints.text) Then
+If Me.TxtModFlg.Text <> "R" Then
+If val(TxtPaints.Text) > val(TxtRemPaints.Text) Then
 If SystemOptions.UserInterface = ArabicInterface Then
 MsgBox "«·ﬁÌ„… «·„œ›Ê⁄… «ﬂ»— „‰ «·„ »ﬁÌ"
 Else
 MsgBox "Required value is greater than required"
 End If
-TxtPaints.text = 0
+TxtPaints.Text = 0
 TxtPaints.SetFocus
 Exit Sub
 End If
@@ -12180,14 +12214,14 @@ Calculte
 End Sub
 
 Private Sub TxtPrice_LostFocus()
-If Me.TxtModFlg.text <> "R" Then
-If val(Me.TxtPrice.text) > val(TxtRemPrice.text) Then
+If Me.TxtModFlg.Text <> "R" Then
+If val(Me.TxtPrice.Text) > val(TxtRemPrice.Text) Then
 If SystemOptions.UserInterface = ArabicInterface Then
 MsgBox "«·ﬁÌ„… «·„œ›Ê⁄… «ﬂ»— „‰ «·„ »ﬁÌ"
 Else
 MsgBox "Required value is greater than required"
 End If
-TxtPrice.text = 0
+TxtPrice.Text = 0
 TxtPrice.SetFocus
 Exit Sub
 End If
@@ -12199,14 +12233,14 @@ Calculte
 End Sub
 
 Private Sub TxtRemainRent_LostFocus()
-If Me.TxtModFlg.text <> "R" Then
-If val(txtRemainRent.text) > val(TxtRemRemainRent.text) Then
+If Me.TxtModFlg.Text <> "R" Then
+If val(txtRemainRent.Text) > val(TxtRemRemainRent.Text) Then
 If SystemOptions.UserInterface = ArabicInterface Then
 MsgBox "«·ﬁÌ„… «·„œ›Ê⁄… «ﬂ»— „‰ «·„ »ﬁÌ"
 Else
 MsgBox "Required value is greater than required"
 End If
-txtRemainRent.text = 0
+txtRemainRent.Text = 0
 txtRemainRent.SetFocus
 Exit Sub
 End If
@@ -12214,33 +12248,33 @@ End If
 End Sub
 
 Private Sub TxtService_KeyPress(KeyAscii As Integer)
-KeyAscii = KeyAscii_Num(KeyAscii, Me.TxtService.text)
+KeyAscii = KeyAscii_Num(KeyAscii, Me.TxtService.Text)
 End Sub
 
 Private Sub txttotal1_Change()
 If Me.TxtModFlg <> "R" Then
-txtTotal2.text = val(XPTxtVal.text) - val(txtTotal1.text)
+txtTotal2.Text = val(XPTxtVal.Text) - val(txtTotal1.Text)
 End If
 End Sub
 
 Private Sub txttotal2_Change()
 If Me.TxtModFlg <> "R" Then
-If val(txtTotal2.text) > 0 Then
-txtinstranc.text = txtTotal2.text
+If val(txtTotal2.Text) > 0 Then
+txtinstranc.Text = txtTotal2.Text
 Else
-txtinstranc.text = 0
+txtinstranc.Text = 0
 End If
 End If
 End Sub
 
 Private Sub TxtTransID_Change()
 
-    If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
-        If Me.TxtTransID.text <> "" Then
+    If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
+        If Me.TxtTransID.Text <> "" Then
             If Me.CboTrans.ListIndex = 0 Or Me.CboTrans.ListIndex = 1 Then
-                Me.TxtTransSerial.text = GetTransIDSerial(1, val(Me.TxtTransID.text))
+                Me.TxtTransSerial.Text = GetTransIDSerial(1, val(Me.TxtTransID.Text))
             Else
-                Me.TxtTransSerial.text = Me.TxtTransID.text
+                Me.TxtTransSerial.Text = Me.TxtTransID.Text
             End If
         End If
     End If
@@ -12248,11 +12282,11 @@ Private Sub TxtTransID_Change()
 End Sub
 
 Private Sub TxtTransSerial_KeyPress(KeyAscii As Integer)
-    KeyAscii = KeyAscii_Num(KeyAscii, Me.TxtTransSerial.text, 1)
+    KeyAscii = KeyAscii_Num(KeyAscii, Me.TxtTransSerial.Text, 1)
 End Sub
 
 Private Sub txtWater_Change()
-txtTotal1.text = val(Txtcommission.text) + val(TxtWater.text) + val(txtinstrunce.text)
+txtTotal1.Text = val(Txtcommission.Text) + val(TxtWater.Text) + val(txtinstrunce.Text)
 End Sub
 
 Private Sub ValidityDate_CallbackKeyDown(ByVal KeyCode As Integer, ByVal Shift As Integer, ByVal CallbackField As String, CallbackDate As Date)
@@ -12264,14 +12298,14 @@ Calculte
 End Sub
 
 Private Sub TxtWindows_LostFocus()
-If Me.TxtModFlg.text <> "R" Then
-If val(TxtWindows.text) > val(TxtRemWindows.text) Then
+If Me.TxtModFlg.Text <> "R" Then
+If val(TxtWindows.Text) > val(TxtRemWindows.Text) Then
 If SystemOptions.UserInterface = ArabicInterface Then
 MsgBox "«·ﬁÌ„… «·„œ›Ê⁄… «ﬂ»— „‰ «·„ »ﬁÌ"
 Else
 MsgBox "Required value is greater than required"
 End If
-TxtWindows.text = 0
+TxtWindows.Text = 0
 TxtWindows.SetFocus
 Exit Sub
 End If
@@ -12624,9 +12658,9 @@ Public Sub XPBtnMove_Click(Index As Integer)
 Dim StrSQL As String
     On Error GoTo ErrTrap
 
-    If Me.TxtModFlg.text = "N" Then
+    If Me.TxtModFlg.Text = "N" Then
         clear_all Me
-        Me.TxtModFlg.text = "R"
+        Me.TxtModFlg.Text = "R"
         XPBtnMove_Click (1)
     End If
 
@@ -12665,7 +12699,7 @@ StrSQL = StrSQL & " and CashingType >= 7"
             StrSQL = StrSQL & " and  UserID = " & user_id
              End If
   
-        Me.dcBranch.Enabled = True
+        Me.Dcbranch.Enabled = True
       
       
     End If
@@ -12727,19 +12761,19 @@ Public Sub Retrive(Optional Lngid As Long = 0)
    '     Me.DcCostCenter.BoundText = IIf(rs("general_cost_center").value = "", "", rs("general_cost_center").value)
    ' End If
 
-    dcBranch.BoundText = IIf(IsNull(rs("branch_no").value), "", rs("branch_no").value)
+    Dcbranch.BoundText = IIf(IsNull(rs("branch_no").value), "", rs("branch_no").value)
     Me.DcEmp.BoundText = IIf(IsNull(rs("EmpId")), "", rs("EmpId"))
     DcboCreditSide.BoundText = IIf(IsNull(rs("CreditSide").value), "", rs("CreditSide").value)
     DcboDebitSide.BoundText = IIf(IsNull(rs("DebitSide").value), "", rs("DebitSide").value)
     
-    Me.Text1.text = IIf(IsNull(rs("foxy_no").value), "", rs("foxy_no").value)
-    XPTxtID.text = IIf(IsNull(rs("NoteID").value), "", val(rs("NoteID").value))
-    TxtNoteSerial.text = IIf(IsNull(rs("NoteSerial").value), "", rs("NoteSerial").value)
-    TxtNoteSerial1.text = IIf(IsNull(rs("NoteSerial1").value), "", rs("NoteSerial1").value)
-    TxtManulaNO.text = IIf(IsNull(rs("ManulaNO").value), "", rs("ManulaNO").value)
-    TxtBookNo.text = IIf(IsNull(rs("BookNo").value), "", rs("BookNo").value)
-    Me.TxtContNo.text = IIf(IsNull(rs("ContNo").value), "", rs("ContNo").value)
-        Me.txtContractNo.text = IIf(IsNull(rs("ContractNo").value), "", rs("ContractNo").value)
+    Me.Text1.Text = IIf(IsNull(rs("foxy_no").value), "", rs("foxy_no").value)
+    XPTxtID.Text = IIf(IsNull(rs("NoteID").value), "", val(rs("NoteID").value))
+    TxtNoteSerial.Text = IIf(IsNull(rs("NoteSerial").value), "", rs("NoteSerial").value)
+    TxtNoteSerial1.Text = IIf(IsNull(rs("NoteSerial1").value), "", rs("NoteSerial1").value)
+    TxtManulaNO.Text = IIf(IsNull(rs("ManulaNO").value), "", rs("ManulaNO").value)
+    TxtBookNo.Text = IIf(IsNull(rs("BookNo").value), "", rs("BookNo").value)
+    Me.TxtContNo.Text = IIf(IsNull(rs("ContNo").value), "", rs("ContNo").value)
+        Me.txtContractNo.Text = IIf(IsNull(rs("ContractNo").value), "", rs("ContractNo").value)
         If Not IsNull(rs("ComResid").value) Then
         If (rs("ComResid").value) = 1 Then
         ComResid(1).value = True
@@ -12759,18 +12793,18 @@ Public Sub Retrive(Optional Lngid As Long = 0)
         Rd(0).value = True
         End If
         
-      TxtKickbacks.text = IIf(IsNull(rs("AmolaValus").value), 0, rs("AmolaValus").value)
-    Me.oldtxtNoteSerial1.text = IIf(IsNull(rs("OldNoteSerial1").value), IIf(IsNull(rs("NoteSerial1").value), "", rs("NoteSerial1").value), rs("OldNoteSerial1").value)
+      TxtKickbacks.Text = IIf(IsNull(rs("AmolaValus").value), 0, rs("AmolaValus").value)
+    Me.oldtxtNoteSerial1.Text = IIf(IsNull(rs("OldNoteSerial1").value), IIf(IsNull(rs("NoteSerial1").value), "", rs("NoteSerial1").value), rs("OldNoteSerial1").value)
 
     lbl(46).Caption = showLabel(TxtNoteSerial1, oldtxtNoteSerial1)
-TxtPrice.text = IIf(IsNull(rs("Price").value), 0, rs("Price").value)
-TxtPrice2.text = IIf(IsNull(rs("Price2").value), 0, rs("Price2").value)
-TxtPrice3.text = IIf(IsNull(rs("Price3").value), 0, rs("Price3").value)
-TxtRemPrice.text = IIf(IsNull(rs("RemPrice").value), 0, rs("RemPrice").value)
-TxtVATValue.text = IIf(IsNull(rs("VAT").value), 0, rs("VAT").value)
+TxtPrice.Text = IIf(IsNull(rs("Price").value), 0, rs("Price").value)
+TxtPrice2.Text = IIf(IsNull(rs("Price2").value), 0, rs("Price2").value)
+TxtPrice3.Text = IIf(IsNull(rs("Price3").value), 0, rs("Price3").value)
+TxtRemPrice.Text = IIf(IsNull(rs("RemPrice").value), 0, rs("RemPrice").value)
+TxtVATValue.Text = IIf(IsNull(rs("VAT").value), 0, rs("VAT").value)
 'rs("VAT").value = IIf(TxtVATValue.Text = "", Null, val(TxtVATValue.Text))
 lblremain.Caption = IIf(IsNull(rs("RemaiValue").value), 0, rs("RemaiValue").value)
-    txtperson.text = IIf(IsNull(rs("person").value), "", rs("person").value)
+    txtperson.Text = IIf(IsNull(rs("person").value), "", rs("person").value)
 Option1.value = False
 Option2.value = False
 Option3.value = False
@@ -12794,21 +12828,21 @@ End If
 
  
    
-    XPTxtVal.text = IIf(IsNull(rs("Note_Value").value), "", Trim(rs("Note_Value").value))
+    XPTxtVal.Text = IIf(IsNull(rs("Note_Value").value), "", Trim(rs("Note_Value").value))
     
-    Me.txtoldvalue.text = val(XPTxtVal.text)
+    Me.txtoldvalue.Text = val(XPTxtVal.Text)
     ''//
     DcbAccount.BoundText = IIf(IsNull(rs("AccountPaym").value), "", rs("AccountPaym").value)
-    TxtService.text = IIf(IsNull(rs("Servce").value), 0, Trim(rs("Servce").value))
-           TxtRent.text = IIf(IsNull(rs("rent").value), "", Trim(rs("rent").value))
-          Txtcommission.text = IIf(IsNull(rs("commission").value), "", Trim(rs("commission").value))
-          Me.TxtCommissionOut.text = IIf(IsNull(rs("CommissionOut").value), "", Trim(rs("CommissionOut").value))
-          TxtWater.text = IIf(IsNull(rs("Water").value), "", Trim(rs("Water").value))
-          TxtElectricity.text = IIf(IsNull(rs("Electricity").value), "", Trim(rs("Electricity").value))
-         txtinstrunce.text = IIf(IsNull(rs("Instrunce").value), "", Trim(rs("Instrunce").value))
-         txtComisin.text = IIf(IsNull(rs("comX").value), "", Trim(rs("comX").value))
-          txtinstranc.text = IIf(IsNull(rs("ComY").value), "", Trim(rs("ComY").value))
-          TxtTelphone.text = IIf(IsNull(rs("Telephone").value), "", Trim(rs("Telephone").value))
+    TxtService.Text = IIf(IsNull(rs("Servce").value), 0, Trim(rs("Servce").value))
+           TxtRent.Text = IIf(IsNull(rs("rent").value), "", Trim(rs("rent").value))
+          Txtcommission.Text = IIf(IsNull(rs("commission").value), "", Trim(rs("commission").value))
+          Me.TxtCommissionOut.Text = IIf(IsNull(rs("CommissionOut").value), "", Trim(rs("CommissionOut").value))
+          TxtWater.Text = IIf(IsNull(rs("Water").value), "", Trim(rs("Water").value))
+          TxtElectricity.Text = IIf(IsNull(rs("Electricity").value), "", Trim(rs("Electricity").value))
+         txtinstrunce.Text = IIf(IsNull(rs("Instrunce").value), "", Trim(rs("Instrunce").value))
+         txtComisin.Text = IIf(IsNull(rs("comX").value), "", Trim(rs("comX").value))
+          txtinstranc.Text = IIf(IsNull(rs("ComY").value), "", Trim(rs("ComY").value))
+          TxtTelphone.Text = IIf(IsNull(rs("Telephone").value), "", Trim(rs("Telephone").value))
           If rs("StatusEarnest").value = 1 Then
           CheckStatusEarnest(0).value = vbChecked
    ElseIf rs("StatusEarnest").value = 2 Then
@@ -12829,13 +12863,13 @@ End If
     FrmPriodDateH.value = IIf(IsNull(rs("FrmPriodDateH").value), ToHijriDate(FrmPriodDate.value), rs("FrmPriodDateH").value)
     XPDtbTrans.value = IIf(IsNull(rs("ToPriodDate").value), Date, rs("ToPriodDate").value)
     ToPriodDateH.value = IIf(IsNull(rs("ToPriodDateH").value), ToHijriDate(ToPriodDate.value), rs("ToPriodDateH").value)
-    txtRemarks.text = IIf(IsNull(rs("Remark2").value), "", Trim(rs("Remark2").value))
+    TxtRemarks.Text = IIf(IsNull(rs("Remark2").value), "", Trim(rs("Remark2").value))
     ''//
-    TXTBankName.text = IIf(IsNull(rs("BankName").value), "", Trim(rs("BankName").value))
+    TXTBankName.Text = IIf(IsNull(rs("BankName").value), "", Trim(rs("BankName").value))
  
-    txtAdv_payment_value.text = IIf(IsNull(rs("Adv_payment_value").value), "", Trim(rs("Adv_payment_value").value))
+    txtAdv_payment_value.Text = IIf(IsNull(rs("Adv_payment_value").value), "", Trim(rs("Adv_payment_value").value))
 
-    XPMTxtRemarks.text = IIf(IsNull(rs("Remark").value), "", Trim(rs("Remark").value))
+    XPMTxtRemarks.Text = IIf(IsNull(rs("Remark").value), "", Trim(rs("Remark").value))
     'dcproject.BoundText = IIf(IsNull(Rs("Remark").value), "", Trim(Rs("Remark").value))
 
     XPDtbTrans.value = IIf(IsNull(rs("NoteDate").value), Date, rs("NoteDate").value)
@@ -12851,34 +12885,34 @@ End If
   DcbUnitType_Change
      Me.DcbUnitNo.BoundText = val(IIf(IsNull(rs.Fields("UnitNo").value), -1, rs.Fields("UnitNo").value))
 
-TxtInterval.text = IIf(IsNull(rs("interval").value), 0, (rs("interval").value))
+TxtInterval.Text = IIf(IsNull(rs("interval").value), 0, (rs("interval").value))
 cbointervaltype.ListIndex = IIf(IsNull(rs("intervaltype").value), 0, (rs("intervaltype").value))
-    txtrenterName.text = IIf(IsNull(rs("renterName").value), "", Trim(rs("renterName").value))
-TxtFilterNo.text = IIf(IsNull(rs("FilterID").value), "", Trim(rs("FilterID").value))
-TXtFilter.text = IIf(IsNull(rs("FIlterTotal").value), "", Trim(rs("FIlterTotal").value))
-txtTotalinsuranceS.text = IIf(IsNull(rs("TotalInsurances").value), "", Trim(rs("TotalInsurances").value))
+    txtrenterName.Text = IIf(IsNull(rs("renterName").value), "", Trim(rs("renterName").value))
+TxtFilterNo.Text = IIf(IsNull(rs("FilterID").value), "", Trim(rs("FilterID").value))
+TXtFilter.Text = IIf(IsNull(rs("FIlterTotal").value), "", Trim(rs("FIlterTotal").value))
+txtTotalinsuranceS.Text = IIf(IsNull(rs("TotalInsurances").value), "", Trim(rs("TotalInsurances").value))
 
 
     '-----------------------------------------------------------------------------
     If IsNull(rs("NoteCashingType").value) Then
-        Me.CboPayMentType.ListIndex = 0
+        Me.CboPaymentType.ListIndex = 0
         Me.DcboBox.BoundText = IIf(IsNull(rs("BoxID").value), 0, rs("BoxID").value)
     
         'project_Expensen_account
         Me.DcboBankName.BoundText = ""
-        Me.TxtChequeNumber.text = ""
+        Me.TxtChequeNumber.Text = ""
         Me.DCChequeBox.BoundText = ""
     ElseIf rs("NoteCashingType").value = 0 Then
-        Me.CboPayMentType.ListIndex = 0
+        Me.CboPaymentType.ListIndex = 0
         Me.DcboBox.BoundText = IIf(IsNull(rs("BoxID").value), 0, rs("BoxID").value)
         Me.DcboBankName.BoundText = ""
-        Me.TxtChequeNumber.text = ""
+        Me.TxtChequeNumber.Text = ""
         Me.DCChequeBox.BoundText = ""
     ElseIf rs("NoteCashingType").value = 1 Then
-        Me.CboPayMentType.ListIndex = 1
+        Me.CboPaymentType.ListIndex = 1
         Me.DcboBox.BoundText = ""
     
-        Me.TxtChequeNumber.text = rs("ChqueNum").value
+        Me.TxtChequeNumber.Text = rs("ChqueNum").value
         Me.DtpChequeDueDate.value = rs("DueDate").value
     
         If SystemOptions.ChequeBox = True Then
@@ -12899,17 +12933,17 @@ txtTotalinsuranceS.text = IIf(IsNull(rs("TotalInsurances").value), "", Trim(rs("
             Me.DcboBankName.BoundText = rs("BankID").value
         End If
 
-        Me.CboPayMentType.ListIndex = 2
+        Me.CboPaymentType.ListIndex = 2
         Me.DcboBox.BoundText = ""
         Me.DcboBankName.BoundText = rs("BankID").value
-        Me.TxtChequeNumber.text = rs("ChqueNum").value
+        Me.TxtChequeNumber.Text = rs("ChqueNum").value
         Me.DtpChequeDueDate.value = rs("DueDate").value
         Me.DCChequeBox.BoundText = ""
 ElseIf rs("NoteCashingType").value = 4 Then
-Me.CboPayMentType.ListIndex = 4
+Me.CboPaymentType.ListIndex = 4
 Me.DcboBox.BoundText = ""
      Me.DcboBankName.BoundText = ""
-        Me.TxtChequeNumber.text = ""
+        Me.TxtChequeNumber.Text = ""
         Me.DCChequeBox.BoundText = ""
     ElseIf rs("NoteCashingType").value = 3 Then
 
@@ -12922,10 +12956,10 @@ Me.DcboBox.BoundText = ""
             Me.DcboBankName.BoundText = rs("BankID").value
         End If
 
-        Me.CboPayMentType.ListIndex = 3
+        Me.CboPaymentType.ListIndex = 3
         Me.DcboBox.BoundText = ""
         Me.DcboBankName.BoundText = rs("BankID").value
-        Me.TxtChequeNumber.text = rs("ChqueNum").value
+        Me.TxtChequeNumber.Text = rs("ChqueNum").value
         Me.DtpChequeDueDate.value = rs("DueDate").value
         Me.DCChequeBox.BoundText = ""
     
@@ -12942,55 +12976,55 @@ DCboCashType.ListIndex = IIf(IsNull(rs("CashingType").value), -1, rs("CashingTyp
     Else
     RdTypeTrans(0).value = True
     End If
-    txtInsurance.text = IIf(IsNull(rs("Insurance").value), 0, rs("Insurance").value)
-    txtDiscount.text = IIf(IsNull(rs("Discount").value), 0, rs("Discount").value)
-    TxtMaintenance2.text = IIf(IsNull(rs("Maintenance2").value), 0, rs("Maintenance2").value)
-    TxtMaintenance3.text = IIf(IsNull(rs("Maintenance3").value), 0, rs("Maintenance3").value)
-    TxtMaintenance.text = IIf(IsNull(rs("Maintenance").value), 0, rs("Maintenance").value)
-    txtRemainRent.text = IIf(IsNull(rs("RemainRent").value), 0, rs("RemainRent").value)
-    TxtRemainRent2.text = IIf(IsNull(rs("RemainRent2").value), 0, rs("RemainRent2").value)
-    TxtRemainRent3.text = IIf(IsNull(rs("RemainRent3").value), 0, rs("RemainRent3").value)
-    TxtMaintCondition3.text = IIf(IsNull(rs("MaintCondition3").value), 0, rs("MaintCondition3").value)
-    TxtMaintCondition2.text = IIf(IsNull(rs("MaintCondition2").value), 0, rs("MaintCondition2").value)
-    TxtMaintCondition.text = IIf(IsNull(rs("MaintCondition").value), 0, rs("MaintCondition").value)
-    TxtMaintClean3.text = IIf(IsNull(rs("MaintClean3").value), 0, rs("MaintClean3").value)
-    TxtMaintClean2.text = IIf(IsNull(rs("MaintClean2").value), 0, rs("MaintClean2").value)
-    TxtMaintClean.text = IIf(IsNull(rs("MaintClean").value), 0, rs("MaintClean").value)
-    TxtPaints2.text = IIf(IsNull(rs("Paints2").value), 0, rs("Paints2").value)
-    TxtPaints3.text = IIf(IsNull(rs("Paints3").value), 0, rs("Paints3").value)
-    TxtPaints.text = IIf(IsNull(rs("Paints").value), 0, rs("Paints").value)
-    TxtMaintkitchen2.text = IIf(IsNull(rs("Maintkitchen2").value), 0, rs("Maintkitchen2").value)
-    TxtMaintkitchen3.text = IIf(IsNull(rs("Maintkitchen3").value), 0, rs("Maintkitchen3").value)
+    txtInsurance.Text = IIf(IsNull(rs("Insurance").value), 0, rs("Insurance").value)
+    txtDiscount.Text = IIf(IsNull(rs("Discount").value), 0, rs("Discount").value)
+    TxtMaintenance2.Text = IIf(IsNull(rs("Maintenance2").value), 0, rs("Maintenance2").value)
+    TxtMaintenance3.Text = IIf(IsNull(rs("Maintenance3").value), 0, rs("Maintenance3").value)
+    TxtMaintenance.Text = IIf(IsNull(rs("Maintenance").value), 0, rs("Maintenance").value)
+    txtRemainRent.Text = IIf(IsNull(rs("RemainRent").value), 0, rs("RemainRent").value)
+    TxtRemainRent2.Text = IIf(IsNull(rs("RemainRent2").value), 0, rs("RemainRent2").value)
+    TxtRemainRent3.Text = IIf(IsNull(rs("RemainRent3").value), 0, rs("RemainRent3").value)
+    TxtMaintCondition3.Text = IIf(IsNull(rs("MaintCondition3").value), 0, rs("MaintCondition3").value)
+    TxtMaintCondition2.Text = IIf(IsNull(rs("MaintCondition2").value), 0, rs("MaintCondition2").value)
+    TxtMaintCondition.Text = IIf(IsNull(rs("MaintCondition").value), 0, rs("MaintCondition").value)
+    TxtMaintClean3.Text = IIf(IsNull(rs("MaintClean3").value), 0, rs("MaintClean3").value)
+    TxtMaintClean2.Text = IIf(IsNull(rs("MaintClean2").value), 0, rs("MaintClean2").value)
+    TxtMaintClean.Text = IIf(IsNull(rs("MaintClean").value), 0, rs("MaintClean").value)
+    TxtPaints2.Text = IIf(IsNull(rs("Paints2").value), 0, rs("Paints2").value)
+    TxtPaints3.Text = IIf(IsNull(rs("Paints3").value), 0, rs("Paints3").value)
+    TxtPaints.Text = IIf(IsNull(rs("Paints").value), 0, rs("Paints").value)
+    TxtMaintkitchen2.Text = IIf(IsNull(rs("Maintkitchen2").value), 0, rs("Maintkitchen2").value)
+    TxtMaintkitchen3.Text = IIf(IsNull(rs("Maintkitchen3").value), 0, rs("Maintkitchen3").value)
     
-    TxtMaintkitchen2.text = IIf(IsNull(rs("Maintkitchen2").value), 0, rs("Maintkitchen2").value)
-    TxtMaintkitchen3.text = IIf(IsNull(rs("Maintkitchen3").value), 0, rs("Maintkitchen3").value)
-    TxtMaintkitchen.text = IIf(IsNull(rs("Maintkitchen").value), 0, rs("Maintkitchen").value)
-    TxtElectricity12.text = IIf(IsNull(rs("Electricity12").value), 0, rs("Electricity12").value)
-    TxtElectricity13.text = IIf(IsNull(rs("Electricity13").value), 0, rs("Electricity13").value)
-    TxtElectricity1.text = IIf(IsNull(rs("Electricity1").value), 0, rs("Electricity1").value)
-    TxtMaintDoors2.text = IIf(IsNull(rs("MaintDoors2").value), 0, rs("MaintDoors2").value)
-    TxtMaintDoors3.text = IIf(IsNull(rs("MaintDoors3").value), 0, rs("MaintDoors3").value)
-    TxtMaintDoors.text = IIf(IsNull(rs("MaintDoors").value), 0, rs("MaintDoors").value)
-    TxtWindows2.text = IIf(IsNull(rs("Windows2").value), 0, rs("Windows2").value)
-    TxtWindows3.text = IIf(IsNull(rs("Windows3").value), 0, rs("Windows3").value)
-    TxtWindows.text = IIf(IsNull(rs("Windows").value), 0, rs("Windows").value)
-    TxtMaintOther2.text = IIf(IsNull(rs("MaintOther2").value), 0, rs("MaintOther2").value)
-    TxtMaintOther.text = IIf(IsNull(rs("MaintOther").value), 0, rs("MaintOther").value)
-    TxtMaintOther3.text = IIf(IsNull(rs("MaintOther3").value), 0, rs("MaintOther3").value)
-    TxtTotal22.text = IIf(IsNull(rs("Total22").value), 0, rs("Total22").value)
-    TxtTotal23.text = IIf(IsNull(rs("Total23").value), 0, rs("Total23").value)
-    txtTotal.text = IIf(IsNull(rs("Total21").value), 0, rs("Total21").value)
-    TxtTotalAftreIns.text = IIf(IsNull(rs("TotalAftreIns").value), 0, rs("TotalAftreIns").value)
-    TxtTotalAftreIns2.text = IIf(IsNull(rs("TotalAftreIns2").value), 0, rs("TotalAftreIns2").value)
-    TxtTotalAftreIns3.text = IIf(IsNull(rs("TotalAftreIns3").value), 0, rs("TotalAftreIns3").value)
-    txtNet.text = IIf(IsNull(rs("Net").value), 0, rs("Net").value)
-    txtNet2.text = IIf(IsNull(rs("Net2").value), 0, rs("Net2").value)
-    TxtNet3.text = IIf(IsNull(rs("Net3").value), 0, rs("Net3").value)
+    TxtMaintkitchen2.Text = IIf(IsNull(rs("Maintkitchen2").value), 0, rs("Maintkitchen2").value)
+    TxtMaintkitchen3.Text = IIf(IsNull(rs("Maintkitchen3").value), 0, rs("Maintkitchen3").value)
+    TxtMaintkitchen.Text = IIf(IsNull(rs("Maintkitchen").value), 0, rs("Maintkitchen").value)
+    TxtElectricity12.Text = IIf(IsNull(rs("Electricity12").value), 0, rs("Electricity12").value)
+    TxtElectricity13.Text = IIf(IsNull(rs("Electricity13").value), 0, rs("Electricity13").value)
+    TxtElectricity1.Text = IIf(IsNull(rs("Electricity1").value), 0, rs("Electricity1").value)
+    TxtMaintDoors2.Text = IIf(IsNull(rs("MaintDoors2").value), 0, rs("MaintDoors2").value)
+    TxtMaintDoors3.Text = IIf(IsNull(rs("MaintDoors3").value), 0, rs("MaintDoors3").value)
+    TxtMaintDoors.Text = IIf(IsNull(rs("MaintDoors").value), 0, rs("MaintDoors").value)
+    TxtWindows2.Text = IIf(IsNull(rs("Windows2").value), 0, rs("Windows2").value)
+    TxtWindows3.Text = IIf(IsNull(rs("Windows3").value), 0, rs("Windows3").value)
+    TxtWindows.Text = IIf(IsNull(rs("Windows").value), 0, rs("Windows").value)
+    TxtMaintOther2.Text = IIf(IsNull(rs("MaintOther2").value), 0, rs("MaintOther2").value)
+    TxtMaintOther.Text = IIf(IsNull(rs("MaintOther").value), 0, rs("MaintOther").value)
+    TxtMaintOther3.Text = IIf(IsNull(rs("MaintOther3").value), 0, rs("MaintOther3").value)
+    TxtTotal22.Text = IIf(IsNull(rs("Total22").value), 0, rs("Total22").value)
+    TxtTotal23.Text = IIf(IsNull(rs("Total23").value), 0, rs("Total23").value)
+    txtTotal.Text = IIf(IsNull(rs("Total21").value), 0, rs("Total21").value)
+    TxtTotalAftreIns.Text = IIf(IsNull(rs("TotalAftreIns").value), 0, rs("TotalAftreIns").value)
+    TxtTotalAftreIns2.Text = IIf(IsNull(rs("TotalAftreIns2").value), 0, rs("TotalAftreIns2").value)
+    TxtTotalAftreIns3.Text = IIf(IsNull(rs("TotalAftreIns3").value), 0, rs("TotalAftreIns3").value)
+    txtNet.Text = IIf(IsNull(rs("Net").value), 0, rs("Net").value)
+    txtNet2.Text = IIf(IsNull(rs("Net2").value), 0, rs("Net2").value)
+    TxtNet3.Text = IIf(IsNull(rs("Net3").value), 0, rs("Net3").value)
     End If
     DCboCashType.ListIndex = IIf(IsNull(rs("CashingType").value), -1, rs("CashingType").value)
-    XPTxtVal.text = IIf(IsNull(rs("Note_Value2").value), IIf(IsNull(rs("Note_Value").value), 0, (rs("Note_Value").value)), (rs("Note_Value2").value)) - IIf(IsNull(rs("PreVAT").value), 0, (rs("PreVAT").value))
-    If val(XPTxtVal.text) = 0 Or val(XPTxtVal.text) < val(rs("Note_Value").value & "") Then
-        XPTxtVal.text = val(rs("Note_Value").value & "") - IIf(IsNull(rs("PreVAT").value), 0, (rs("PreVAT").value))
+    XPTxtVal.Text = IIf(IsNull(rs("Note_Value2").value), IIf(IsNull(rs("Note_Value").value), 0, (rs("Note_Value").value)), (rs("Note_Value2").value)) - IIf(IsNull(rs("PreVAT").value), 0, (rs("PreVAT").value))
+    If val(XPTxtVal.Text) = 0 Or val(XPTxtVal.Text) < val(rs("Note_Value").value & "") Then
+        XPTxtVal.Text = val(rs("Note_Value").value & "") - IIf(IsNull(rs("PreVAT").value), 0, (rs("PreVAT").value))
     End If
     '-----------------------------------------------------------------------------
     If Not IsNull(rs("Transaction_ID").value) Then
@@ -13001,8 +13035,8 @@ DCboCashType.ListIndex = IIf(IsNull(rs("CashingType").value), -1, rs("CashingTyp
         RsTemp.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
 
         If Not (RsTemp.BOF Or RsTemp.EOF) Then
-            Me.TxtTransID.text = RsTemp("Transaction_ID").value
-            Me.TxtTransSerial.text = IIf(IsNull(RsTemp("Transaction_Serial").value), "", RsTemp("Transaction_Serial").value)
+            Me.TxtTransID.Text = RsTemp("Transaction_ID").value
+            Me.TxtTransSerial.Text = IIf(IsNull(RsTemp("Transaction_Serial").value), "", RsTemp("Transaction_Serial").value)
 
             If Not (IsNull(RsTemp("Transaction_Type").value)) Then
                 If RsTemp("Transaction_Type").value = 5 Then
@@ -13016,19 +13050,19 @@ DCboCashType.ListIndex = IIf(IsNull(rs("CashingType").value), -1, rs("CashingTyp
     ElseIf Not IsNull(rs("MaintananceID").value) Then
         Me.ChkTrans.value = vbChecked
         Me.CboTrans.ListIndex = 2
-        Me.TxtTransID.text = rs("MaintananceID").value
-        Me.TxtTransSerial.text = rs("MaintananceID").value
+        Me.TxtTransID.Text = rs("MaintananceID").value
+        Me.TxtTransSerial.Text = rs("MaintananceID").value
     ElseIf Not IsNull(rs("RevenuesID").value) Then
         Me.DcboRevenuesTypes.BoundText = rs("RevenuesID").value
         Me.ChkTrans.value = vbUnchecked
         Me.CboTrans.ListIndex = -1
-        Me.TxtTransID.text = ""
-        Me.TxtTransSerial.text = ""
+        Me.TxtTransID.Text = ""
+        Me.TxtTransSerial.Text = ""
     Else
         Me.ChkTrans.value = vbUnchecked
         Me.CboTrans.ListIndex = -1
-        Me.TxtTransID.text = ""
-        Me.TxtTransSerial.text = ""
+        Me.TxtTransID.Text = ""
+        Me.TxtTransSerial.Text = ""
     End If
 
     If DCboCashType.ListIndex = 5 Then
@@ -13064,7 +13098,7 @@ My_SQL = My_SQL & "                      dbo.TBLSalesRepGroups.name , dbo.TBLSal
 My_SQL = My_SQL & " FROM         dbo.TblNotesSales LEFT OUTER JOIN"
 My_SQL = My_SQL & "                      dbo.TBLSalesRepGroups ON dbo.TblNotesSales.GroupID = dbo.TBLSalesRepGroups.id LEFT OUTER JOIN"
 My_SQL = My_SQL & "                      dbo.TblEmployee ON dbo.TblNotesSales.EmpID = dbo.TblEmployee.Emp_ID"
-My_SQL = My_SQL & " Where (dbo.TblNotesSales.Type = 0) And (dbo.TblNotesSales.NoteID =" & val(Me.XPTxtID.text) & ")"
+My_SQL = My_SQL & " Where (dbo.TblNotesSales.Type = 0) And (dbo.TblNotesSales.NoteID =" & val(Me.XPTxtID.Text) & ")"
 'My_SQL = My_SQL & " Where (dbo.TblCOntractSales.ContNo =" & val(Me.TXTContNo.text) & ")"
     rs2.Open My_SQL, Cn, adOpenKeyset, adLockReadOnly, adCmdText
 '    rs1.Open My_SQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
@@ -13111,7 +13145,7 @@ My_SQL = My_SQL & "                      dbo.TBLSalesRepGroups.name , dbo.TBLSal
 My_SQL = My_SQL & " FROM         dbo.TblNotesSales LEFT OUTER JOIN"
 My_SQL = My_SQL & "                      dbo.TBLSalesRepGroups ON dbo.TblNotesSales.GroupID = dbo.TBLSalesRepGroups.id LEFT OUTER JOIN"
 My_SQL = My_SQL & "                      dbo.TblEmployee ON dbo.TblNotesSales.EmpID = dbo.TblEmployee.Emp_ID"
-My_SQL = My_SQL & " Where (dbo.TblNotesSales.Type = 1) And (dbo.TblNotesSales.NoteID =" & val(Me.XPTxtID.text) & ")"
+My_SQL = My_SQL & " Where (dbo.TblNotesSales.Type = 1) And (dbo.TblNotesSales.NoteID =" & val(Me.XPTxtID.Text) & ")"
 'My_SQL = My_SQL & " Where (dbo.TblCOntractSales.ContNo =" & val(Me.TXTContNo.text) & ")"
     rs2.Open My_SQL, Cn, adOpenKeyset, adLockReadOnly, adCmdText
 '    rs1.Open My_SQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
@@ -13154,7 +13188,7 @@ My_SQL = My_SQL & " Where (dbo.TblNotesSales.Type = 1) And (dbo.TblNotesSales.No
     '-----------------------------------------------------------------------------
     If DcboDebitSide.BoundText = "" And DcboCreditSide.BoundText = "" Then
     If SystemOptions.SysAppAccoutingType = CompeleteAccounting Then
-        StrSQL = "Select * From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(Me.XPTxtID.text)
+        StrSQL = "Select * From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(Me.XPTxtID.Text)
         StrSQL = StrSQL + " Order By DEV_ID_Line_No "
         Set RsDev = New ADODB.Recordset
         RsDev.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
@@ -13182,13 +13216,13 @@ End If
     ChkTrans_Click
     '⁄—÷ «·„” Œ·’« 
     'If DCboCashType.ListIndex = 5 Then
-    FillGridWithData val(Me.DBCboClientName.BoundText), TxtNoteSerial.text
+    FillGridWithData val(Me.DBCboClientName.BoundText), TxtNoteSerial.Text
     '⁄—÷ «·«ﬁ”« ÿ ·⁄ﬁÊœ  « ··«ÌÃ«—
-       FillGridWithDataContract txtContractNo.text, val(XPTxtID.text)
+       FillGridWithDataContract txtContractNo.Text, val(XPTxtID.Text)
        ReLineGrid
     '  End If
     
-   FillGridWithData1 val(TxtContNo.text)
+   FillGridWithData1 val(TxtContNo.Text)
 If val(Me.DcbIqara.BoundText) <> 0 Then
 GetAmola val(Me.DcbIqara.BoundText)
 End If
@@ -13212,139 +13246,139 @@ sql = " SELECT    SUM(Price) AS SumPrice, SUM(Insurance) AS SumInsurance, SUM(Ma
 sql = sql & "                       SUM(Paints) AS SumPaints, SUM(Maintkitchen) AS SumMaintkitchen, SUM(Electricity1) AS SumElectricity1, SUM(MaintDoors) AS SumMaintDoors, SUM(Windows)"
 sql = sql & "                      AS SumWindows, SUM(MaintOther) AS SumMaintOther, SUM(TotalAftreIns) AS SumTotalAftreIns, SUM(RemainRent) AS SumRemainRent, SUM(Net) AS SumNet"
 sql = sql & " From dbo.Notes"
-sql = sql & " Where (CashingType = 13) And (ContNo = " & val(TxtContNo.text) & ")"
+sql = sql & " Where (CashingType = 13) And (ContNo = " & val(TxtContNo.Text) & ")"
 sql = sql & " GROUP BY ContNo"
 rs2.Open sql, Cn, adOpenStatic, adLockOptimistic, adCmdText
 If rs2.RecordCount > 0 Then
-TxtMaintenance3.text = IIf(IsNull(rs2("SumMaintenance").value), 0, rs2("SumMaintenance").value)
-TxtRemainRent3.text = IIf(IsNull(rs2("SumRemainRent").value), 0, rs2("SumRemainRent").value)
-TxtMaintCondition3.text = IIf(IsNull(rs2("SumMaintCondition").value), 0, rs2("SumMaintCondition").value)
-TxtMaintClean3.text = IIf(IsNull(rs2("SumMaintClean").value), 0, rs2("SumMaintClean").value)
-TxtPaints3.text = IIf(IsNull(rs2("SumPaints").value), 0, rs2("SumPaints").value)
-TxtMaintkitchen3.text = IIf(IsNull(rs2("SumMaintkitchen").value), 0, rs2("SumMaintkitchen").value)
-TxtElectricity13.text = IIf(IsNull(rs2("SumElectricity1").value), 0, rs2("SumElectricity1").value)
-TxtMaintDoors3.text = IIf(IsNull(rs2("SumMaintDoors").value), 0, rs2("SumMaintDoors").value)
-TxtWindows3.text = IIf(IsNull(rs2("SumWindows").value), 0, rs2("SumWindows").value)
-TxtMaintOther3.text = IIf(IsNull(rs2("SumMaintOther").value), 0, rs2("SumMaintOther").value)
-TxtPrice3.text = IIf(IsNull(rs2("SumPrice").value), 0, rs2("SumPrice").value)
+TxtMaintenance3.Text = IIf(IsNull(rs2("SumMaintenance").value), 0, rs2("SumMaintenance").value)
+TxtRemainRent3.Text = IIf(IsNull(rs2("SumRemainRent").value), 0, rs2("SumRemainRent").value)
+TxtMaintCondition3.Text = IIf(IsNull(rs2("SumMaintCondition").value), 0, rs2("SumMaintCondition").value)
+TxtMaintClean3.Text = IIf(IsNull(rs2("SumMaintClean").value), 0, rs2("SumMaintClean").value)
+TxtPaints3.Text = IIf(IsNull(rs2("SumPaints").value), 0, rs2("SumPaints").value)
+TxtMaintkitchen3.Text = IIf(IsNull(rs2("SumMaintkitchen").value), 0, rs2("SumMaintkitchen").value)
+TxtElectricity13.Text = IIf(IsNull(rs2("SumElectricity1").value), 0, rs2("SumElectricity1").value)
+TxtMaintDoors3.Text = IIf(IsNull(rs2("SumMaintDoors").value), 0, rs2("SumMaintDoors").value)
+TxtWindows3.Text = IIf(IsNull(rs2("SumWindows").value), 0, rs2("SumWindows").value)
+TxtMaintOther3.Text = IIf(IsNull(rs2("SumMaintOther").value), 0, rs2("SumMaintOther").value)
+TxtPrice3.Text = IIf(IsNull(rs2("SumPrice").value), 0, rs2("SumPrice").value)
 'TxtTotal23.Text = val(TxtWindows3.Text) + val(TxtMaintOther3.Text) + val(TxtMaintDoors3.Text) + val(TxtElectricity13.Text) + val(TxtMaintkitchen3.Text) + val(TxtPaints3.Text) + val(TxtMaintCondition3.Text) + val(TxtMaintClean3.Text) + val(TxtMaintenance3.Text) + val(TxtRemainRent3.Text)
 Else
-TxtPrice3.text = 0
+TxtPrice3.Text = 0
 'TxtTotal23.Text = val(TxtInsurance.Text) + val(TxtDiscount.Text)
-TxtMaintenance3.text = 0
-TxtRemainRent3.text = 0
-TxtMaintCondition3.text = 0
-TxtMaintClean3.text = 0
-TxtPaints3.text = 0
-TxtMaintkitchen3.text = 0
-TxtElectricity13.text = 0
-TxtMaintDoors3.text = 0
-TxtWindows3.text = 0
-TxtMaintOther3.text = 0
+TxtMaintenance3.Text = 0
+TxtRemainRent3.Text = 0
+TxtMaintCondition3.Text = 0
+TxtMaintClean3.Text = 0
+TxtPaints3.Text = 0
+TxtMaintkitchen3.Text = 0
+TxtElectricity13.Text = 0
+TxtMaintDoors3.Text = 0
+TxtWindows3.Text = 0
+TxtMaintOther3.Text = 0
 End If
 Dim totalPayed As Double
 FlgNew = False
 Calculte
- totalPayed = val(txtInsurance.text) + val(txtDiscount.text)
+ totalPayed = val(txtInsurance.Text) + val(txtDiscount.Text)
 If totalPayed > 0 Then
 FlgNew = True
-If val(TxtMaintenance2.text) >= totalPayed And totalPayed > 0 Then
-TxtMaintenance3.text = val(TxtMaintenance3.text) + totalPayed
+If val(TxtMaintenance2.Text) >= totalPayed And totalPayed > 0 Then
+TxtMaintenance3.Text = val(TxtMaintenance3.Text) + totalPayed
 totalPayed = 0
 ElseIf totalPayed > 0 Then
-TxtMaintenance3.text = val(TxtMaintenance3.text) + val(TxtMaintenance2.text)
-totalPayed = totalPayed - val(TxtMaintenance2.text)
+TxtMaintenance3.Text = val(TxtMaintenance3.Text) + val(TxtMaintenance2.Text)
+totalPayed = totalPayed - val(TxtMaintenance2.Text)
 End If
-If val(TxtRemainRent2.text) >= totalPayed And totalPayed > 0 Then
-TxtRemainRent3.text = val(TxtRemainRent3.text) + totalPayed
+If val(TxtRemainRent2.Text) >= totalPayed And totalPayed > 0 Then
+TxtRemainRent3.Text = val(TxtRemainRent3.Text) + totalPayed
 totalPayed = 0
 ElseIf totalPayed > 0 Then
-TxtRemainRent3.text = val(TxtRemainRent3.text) + val(TxtRemainRent2.text)
-totalPayed = totalPayed - val(TxtRemainRent2.text)
+TxtRemainRent3.Text = val(TxtRemainRent3.Text) + val(TxtRemainRent2.Text)
+totalPayed = totalPayed - val(TxtRemainRent2.Text)
 End If
 ''''
-If val(TxtMaintCondition2.text) >= totalPayed And totalPayed > 0 Then
-TxtMaintCondition3.text = val(TxtMaintCondition3.text) + totalPayed
+If val(TxtMaintCondition2.Text) >= totalPayed And totalPayed > 0 Then
+TxtMaintCondition3.Text = val(TxtMaintCondition3.Text) + totalPayed
 totalPayed = 0
 ElseIf totalPayed > 0 Then
-TxtMaintCondition3.text = val(TxtMaintCondition3.text) + val(TxtMaintCondition2.text)
-totalPayed = totalPayed - val(TxtMaintCondition2.text)
+TxtMaintCondition3.Text = val(TxtMaintCondition3.Text) + val(TxtMaintCondition2.Text)
+totalPayed = totalPayed - val(TxtMaintCondition2.Text)
 End If
-If val(TxtMaintClean2.text) >= totalPayed And totalPayed > 0 Then
-TxtMaintClean3.text = val(TxtMaintClean3.text) + totalPayed
+If val(TxtMaintClean2.Text) >= totalPayed And totalPayed > 0 Then
+TxtMaintClean3.Text = val(TxtMaintClean3.Text) + totalPayed
 totalPayed = 0
 ElseIf totalPayed > 0 Then
-TxtMaintClean3.text = val(TxtMaintClean3.text) + val(TxtMaintClean2.text)
-totalPayed = totalPayed - val(TxtMaintClean2.text)
-End If
-''//
-If val(TxtPaints2.text) >= totalPayed And totalPayed > 0 Then
-TxtPaints3.text = val(TxtPaints3.text) + totalPayed
-totalPayed = 0
-ElseIf totalPayed > 0 Then
-TxtPaints3.text = val(TxtPaints3.text) + val(TxtPaints2.text)
-totalPayed = totalPayed - val(TxtPaints2.text)
+TxtMaintClean3.Text = val(TxtMaintClean3.Text) + val(TxtMaintClean2.Text)
+totalPayed = totalPayed - val(TxtMaintClean2.Text)
 End If
 ''//
-If val(TxtMaintkitchen2.text) >= totalPayed And totalPayed > 0 Then
-TxtMaintkitchen3.text = val(TxtMaintkitchen3.text) + totalPayed
+If val(TxtPaints2.Text) >= totalPayed And totalPayed > 0 Then
+TxtPaints3.Text = val(TxtPaints3.Text) + totalPayed
 totalPayed = 0
 ElseIf totalPayed > 0 Then
-TxtMaintkitchen3.text = val(TxtMaintkitchen3.text) + val(TxtMaintkitchen2.text)
-totalPayed = totalPayed - val(TxtMaintkitchen2.text)
+TxtPaints3.Text = val(TxtPaints3.Text) + val(TxtPaints2.Text)
+totalPayed = totalPayed - val(TxtPaints2.Text)
 End If
 ''//
-If val(TxtElectricity12.text) >= totalPayed And totalPayed > 0 Then
-TxtElectricity13.text = val(TxtElectricity13.text) + totalPayed
+If val(TxtMaintkitchen2.Text) >= totalPayed And totalPayed > 0 Then
+TxtMaintkitchen3.Text = val(TxtMaintkitchen3.Text) + totalPayed
 totalPayed = 0
 ElseIf totalPayed > 0 Then
-TxtElectricity13.text = val(TxtElectricity13.text) + val(TxtElectricity12.text)
-totalPayed = totalPayed - val(TxtElectricity12.text)
-End If
-If val(TxtMaintDoors2.text) >= totalPayed And totalPayed > 0 Then
-TxtMaintDoors3.text = val(TxtMaintDoors3.text) + totalPayed
-totalPayed = 0
-ElseIf totalPayed > 0 Then
-TxtMaintDoors3.text = val(TxtMaintDoors3.text) + val(TxtMaintDoors2.text)
-totalPayed = totalPayed - val(TxtMaintDoors2.text)
+TxtMaintkitchen3.Text = val(TxtMaintkitchen3.Text) + val(TxtMaintkitchen2.Text)
+totalPayed = totalPayed - val(TxtMaintkitchen2.Text)
 End If
 ''//
-If val(TxtWindows2.text) >= totalPayed And totalPayed > 0 Then
-TxtWindows3.text = val(TxtWindows3.text) + totalPayed
+If val(TxtElectricity12.Text) >= totalPayed And totalPayed > 0 Then
+TxtElectricity13.Text = val(TxtElectricity13.Text) + totalPayed
 totalPayed = 0
 ElseIf totalPayed > 0 Then
-TxtWindows3.text = val(TxtWindows3.text) + val(TxtWindows2.text)
-totalPayed = totalPayed - val(TxtWindows2.text)
+TxtElectricity13.Text = val(TxtElectricity13.Text) + val(TxtElectricity12.Text)
+totalPayed = totalPayed - val(TxtElectricity12.Text)
+End If
+If val(TxtMaintDoors2.Text) >= totalPayed And totalPayed > 0 Then
+TxtMaintDoors3.Text = val(TxtMaintDoors3.Text) + totalPayed
+totalPayed = 0
+ElseIf totalPayed > 0 Then
+TxtMaintDoors3.Text = val(TxtMaintDoors3.Text) + val(TxtMaintDoors2.Text)
+totalPayed = totalPayed - val(TxtMaintDoors2.Text)
 End If
 ''//
-If val(TxtMaintOther2.text) >= totalPayed And totalPayed > 0 Then
-TxtMaintOther3.text = val(TxtMaintOther3.text) + totalPayed
+If val(TxtWindows2.Text) >= totalPayed And totalPayed > 0 Then
+TxtWindows3.Text = val(TxtWindows3.Text) + totalPayed
 totalPayed = 0
 ElseIf totalPayed > 0 Then
-TxtMaintOther3.text = val(TxtMaintOther3.text) + val(TxtMaintOther2.text)
-totalPayed = totalPayed - val(TxtMaintOther2.text)
+TxtWindows3.Text = val(TxtWindows3.Text) + val(TxtWindows2.Text)
+totalPayed = totalPayed - val(TxtWindows2.Text)
+End If
+''//
+If val(TxtMaintOther2.Text) >= totalPayed And totalPayed > 0 Then
+TxtMaintOther3.Text = val(TxtMaintOther3.Text) + totalPayed
+totalPayed = 0
+ElseIf totalPayed > 0 Then
+TxtMaintOther3.Text = val(TxtMaintOther3.Text) + val(TxtMaintOther2.Text)
+totalPayed = totalPayed - val(TxtMaintOther2.Text)
 End If
 End If
 CalCulteRemainElec
 End Sub
 Sub CalCulteRemainElec()
-TxtRemMaintenance.text = val(TxtMaintenance2.text) - val(TxtMaintenance3.text)
-TxtRemRemainRent.text = val(TxtRemainRent2.text) - val(TxtRemainRent3.text)
-TxtRemMaintCondition.text = val(TxtMaintCondition2.text) - val(TxtMaintCondition3.text)
-TxtRemMaintClean.text = val(TxtMaintClean2.text) - val(TxtMaintClean3.text)
-TxtRemPaints.text = val(TxtPaints2.text) - val(TxtPaints3.text)
-TxtRemMaintkitchen.text = val(TxtMaintkitchen2.text) - val(TxtMaintkitchen3.text)
-TxtRemElectricity.text = val(TxtElectricity12.text) - val(TxtElectricity13.text)
-TxtRemMaintDoors.text = val(TxtMaintDoors2.text) - val(TxtMaintDoors3.text)
-TxtRemWindows.text = val(TxtWindows2.text) - val(TxtWindows3.text)
-TxtRemMaintOther.text = val(TxtMaintOther2.text) - val(TxtMaintOther3.text)
-TxtRemPrice.text = val(TxtPrice2.text) - val(TxtPrice3.text)
+TxtRemMaintenance.Text = val(TxtMaintenance2.Text) - val(TxtMaintenance3.Text)
+TxtRemRemainRent.Text = val(TxtRemainRent2.Text) - val(TxtRemainRent3.Text)
+TxtRemMaintCondition.Text = val(TxtMaintCondition2.Text) - val(TxtMaintCondition3.Text)
+TxtRemMaintClean.Text = val(TxtMaintClean2.Text) - val(TxtMaintClean3.Text)
+TxtRemPaints.Text = val(TxtPaints2.Text) - val(TxtPaints3.Text)
+TxtRemMaintkitchen.Text = val(TxtMaintkitchen2.Text) - val(TxtMaintkitchen3.Text)
+TxtRemElectricity.Text = val(TxtElectricity12.Text) - val(TxtElectricity13.Text)
+TxtRemMaintDoors.Text = val(TxtMaintDoors2.Text) - val(TxtMaintDoors3.Text)
+TxtRemWindows.Text = val(TxtWindows2.Text) - val(TxtWindows3.Text)
+TxtRemMaintOther.Text = val(TxtMaintOther2.Text) - val(TxtMaintOther3.Text)
+TxtRemPrice.Text = val(TxtPrice2.Text) - val(TxtPrice3.Text)
 End Sub
 Sub GetCommInformation(Optional ByRef EmpID As Double, Optional ByRef Amount As Double)
 Dim sql As String
 Dim rs2 As ADODB.Recordset
 Set rs2 = New ADODB.Recordset
-sql = "Select * from TblAqarCommissions where NoteID=" & val(XPTxtID.text) & " "
+sql = "Select * from TblAqarCommissions where NoteID=" & val(XPTxtID.Text) & " "
 rs2.Open sql, Cn, adOpenStatic, adLockOptimistic, adCmdText
 If rs2.RecordCount > 0 Then
 EmpID = IIf(IsNull(rs2("EmpID").value), 0, rs2("EmpID").value)
@@ -13376,7 +13410,7 @@ Set cProgress = New ClsProgress
     Dim depit_side As String
     Dim Msg As String
      Dim i As Integer
-Msgdes = "»‰«¡ ⁄·Ï „ﬁ»Ê÷«  «„·«ﬂ «·€Ì— —ﬁ„ " & TxtNoteSerial1.text & " "
+Msgdes = "»‰«¡ ⁄·Ï „ﬁ»Ê÷«  «„·«ﬂ «·€Ì— —ﬁ„ " & TxtNoteSerial1.Text & " "
 Dim Percetage As Double
 Dim commissionvalue As Double
 Dim vaTAccount As String
@@ -13386,7 +13420,7 @@ Dim vaTAccount As String
 vaTAccount = AccountCode ''///  «·ﬁÌ„… «·„÷«›… ··”⁄Ì
 'salimhere
     With Grid3
-Msg = XPMTxtRemarks.text & CHR(13) & Msgdes
+Msg = XPMTxtRemarks.Text & CHR(13) & Msgdes
 depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClientName.BoundText), "Account_code")
         For i = .FixedRows To .rows - 1
  
@@ -13401,7 +13435,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                
                 If total_value > 0 Then
                 lineno = lineno + 1
-                 If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "—’Ìœ „ »ﬁÌ ⁄·Ì «·„” √Ã—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                 If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "—’Ìœ „ »ﬁÌ ⁄·Ì «·„” √Ã—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -13414,7 +13448,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                         AccountCode = GetAqarAcountCode(val(DcbIqara.BoundText))
                     End If
                   '  AccountCode = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Txtownerid), "Account_code")
-                      If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "—’Ìœ „ »ﬁÌ ⁄·Ì «·„” √Ã—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                      If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "—’Ìœ „ »ﬁÌ ⁄·Ì «·„” √Ã—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13431,7 +13465,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
           End If
              If total_value > 0 Then
              
-                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«·«ÌÃ«—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«·«ÌÃ«—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -13441,7 +13475,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                         AccountCode = GetAqarAcountCode(val(DcbIqara.BoundText))
                     End If
                   '  AccountCode = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Txtownerid), "Account_code")
-                      If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·«ÌÃ«—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                      If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·«ÌÃ«—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13453,7 +13487,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                     total_value = total_value / (Percetage / 100 + 1)
                     End If
                     
-                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«·”⁄Ì", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«·”⁄Ì", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -13461,7 +13495,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                      AccountCode = get_account_code_branch(81, my_branch)
      
                     
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·”⁄Ì", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·”⁄Ì", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13471,7 +13505,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
               ''///«·„Ì«Â
                 total_value = Round(.TextMatrix(i, .ColIndex("WaterPayed")), 2)
              If total_value > 0 Then
-                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«·„Ì«Â", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«·„Ì«Â", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -13482,7 +13516,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                         AccountCode = GetAqarAcountCode(val(DcbIqara.BoundText))
                     End If
                     'salimhere
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·„Ì«Â", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·„Ì«Â", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13491,7 +13525,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                           ''///«·ﬂÂ—»«¡
                 total_value = Round(.TextMatrix(i, .ColIndex("ElectricPayed")), 2)
              If total_value > 0 Then
-                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«·ﬂÂ—»«¡", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«·ﬂÂ—»«¡", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -13503,7 +13537,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                     End If
                     'salimhere
                     
-                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·ﬂÂ—»«¡", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·ﬂÂ—»«¡", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13516,13 +13550,13 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                     total_value = total_value / (Percetage / 100 + 1)
                     End If
                     
-                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«·Œœ„« .", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«·Œœ„« .", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
                
                      AccountCode = get_account_code_branch(85, my_branch)
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·Œœ„« ...", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·Œœ„« ...", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13531,7 +13565,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                                                    ''///«· «„Ì‰
                 total_value = Round(.TextMatrix(i, .ColIndex("InsurancePayed")), 2)
              If total_value > 0 Then
-                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«· «„Ì‰", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«· «„Ì‰", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -13541,7 +13575,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                         AccountCode = GetAqarAcountCode(val(DcbIqara.BoundText))
                     End If
                     ' AccountCode = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Txtownerid), "Account_code")
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«· «„Ì‰", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«· «„Ì‰", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13552,12 +13586,12 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
               commissionvalue = total_value * Percetage / 100
                
              If total_value > 0 And commissionvalue > 0 Then
-                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, commissionvalue, 0, Msg & " " & "«·ﬁÌ„… «·„÷«›… ··”⁄Ì", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, commissionvalue, 0, Msg & " " & "«·ﬁÌ„… «·„÷«›… ··”⁄Ì", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
                      
-                         If ModAccounts.AddNewDev(LngDevID, lineno, vaTAccount, commissionvalue, 1, Msg & " " & "«·ﬁÌ„… «·„÷«›… ··”⁄Ì/", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, vaTAccount, commissionvalue, 1, Msg & " " & "«·ﬁÌ„… «·„÷«›… ··”⁄Ì/", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13568,12 +13602,12 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
               commissionvalue = total_value * Percetage / 100
                
              If total_value > 0 And commissionvalue > 0 Then
-                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, commissionvalue, 0, Msg & " " & "«·ﬁÌ„… «·„÷«›… ··Œœ„« ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, commissionvalue, 0, Msg & " " & "«·ﬁÌ„… «·„÷«›… ··Œœ„« ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
                      
-                         If ModAccounts.AddNewDev(LngDevID, lineno, vaTAccount, commissionvalue, 1, Msg & " " & "«·ﬁÌ„… «·„÷«›… ··Œœ„« /", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, vaTAccount, commissionvalue, 1, Msg & " " & "«·ﬁÌ„… «·„÷«›… ··Œœ„« /", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13595,7 +13629,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
              If total_value > 0 Then
           '   netVatPayed = netVatPayed + total_value
              
-                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«·ﬁÌ„… «·„÷«›… ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«·ﬁÌ„… «·„÷«›… ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -13605,7 +13639,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                         AccountCode = GetAqarAcountCode(val(DcbIqara.BoundText))
                     End If
                     '  AccountCode = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Txtownerid), "Account_code")
-                     If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·ﬁÌ„… «·„÷«›… ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                     If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·ﬁÌ„… «·„÷«›… ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13623,14 +13657,14 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
     
     
     'salimhere  ﬁÌœ «·’‰œÊﬁ / «Ê «·»‰ﬂ
-                 total_value = val(XPTxtVal.text) + val(TxtVATValue)
+                 total_value = val(XPTxtVal.Text) + val(TxtVATValue)
              If total_value > 0 Then
-                    If ModAccounts.AddNewDev(LngDevID, lineno, DcboDebitSide.BoundText, total_value, 0, Msg & " " & "«·’‰œÊﬁ/«·»‰ﬂ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, DcboDebitSide.BoundText, total_value, 0, Msg & " " & "«·’‰œÊﬁ/«·»‰ﬂ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
                      
-                         If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 1, Msg & " " & "«·„” «Ã—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 1, Msg & " " & "«·„” «Ã—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13667,7 +13701,7 @@ Dim total_value As Double
     Dim depit_side As String
     Dim Msg As String
      Dim i As Integer
-Msgdes = "»‰«¡ ⁄·Ï „ﬁ»Ê÷«  «„·«ﬂÌ —ﬁ„ " & TxtNoteSerial1.text & " "
+Msgdes = "»‰«¡ ⁄·Ï „ﬁ»Ê÷«  «„·«ﬂÌ —ﬁ„ " & TxtNoteSerial1.Text & " "
 Dim Percetage As Double
 Dim commissionvalue As Double
 Dim AccountCodeVat As String
@@ -13679,19 +13713,19 @@ vaTAccount = AccountCodeVat ''///  ?????? ??????? ?????
 
 
 
-Msg = XPMTxtRemarks.text & CHR(13) & Msgdes
+Msg = XPMTxtRemarks.Text & CHR(13) & Msgdes
 depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClientName.BoundText), "Account_code")
 total_value = val(XPTxtVal)
      'salimhere  ﬁÌœ «·’‰œÊﬁ / «Ê «·»‰ﬂ
-                 total_value = val(XPTxtVal.text) + val(TxtVATValue)
+                 total_value = val(XPTxtVal.Text) + val(TxtVATValue)
              If total_value > 0 Then
              lineno = lineno + 1
-                    If ModAccounts.AddNewDev(LngDevID, lineno, DcboDebitSide.BoundText, total_value, 0, Msg & " " & "«·’‰œÊﬁ/«·»‰ﬂ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, DcboDebitSide.BoundText, total_value, 0, Msg & " " & "«·’‰œÊﬁ/«·»‰ﬂ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
                      
-                         If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 1, Msg & " " & "«·„” «Ã—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 1, Msg & " " & "«·„” «Ã—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13739,7 +13773,7 @@ Set cProgress = New ClsProgress
     Dim depit_side As String
     Dim Msg As String
      Dim i As Integer
-Msgdes = "»‰«¡ ⁄·Ï „ﬁ»Ê÷«  «„·«ﬂÌ —ﬁ„ " & TxtNoteSerial1.text & " "
+Msgdes = "»‰«¡ ⁄·Ï „ﬁ»Ê÷«  «„·«ﬂÌ —ﬁ„ " & TxtNoteSerial1.Text & " "
 Dim Percetage As Double
 Dim commissionvalue As Double
 Dim AccountCodeVat As String
@@ -13752,7 +13786,7 @@ vaTAccount = AccountCodeVat ''///  ?????? ??????? ?????
 
 
     With Grid3
-Msg = XPMTxtRemarks.text & CHR(13) & Msgdes
+Msg = XPMTxtRemarks.Text & CHR(13) & Msgdes
 depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClientName.BoundText), "Account_code")
         For i = .FixedRows To .rows - 1 'salimher  -2
  
@@ -13761,7 +13795,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
               commissionvalue = Round(commissionvalue, 2)
                 total_value = Round(.TextMatrix(i, .ColIndex("RentValuePayed")), 2)
                If total_value > 0 Then
-                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«·«ÌÃ«—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«·«ÌÃ«—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -13769,7 +13803,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
               '''//////ﬂÂ—»«¡
               total_value = Round(.TextMatrix(i, .ColIndex("ElectricPayed")), 2)
              If total_value > 0 Then
-                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«·ﬂÂ—»«¡", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«·ﬂÂ—»«¡", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -13777,7 +13811,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
              '////„Ì«Â
               total_value = Round(.TextMatrix(i, .ColIndex("WaterPayed")), 2)
              If total_value > 0 Then
-                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«·„Ì«Â", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«·„Ì«Â", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -13785,7 +13819,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
              ''///////////Œœ„« 
                            total_value = Round(.TextMatrix(i, .ColIndex("TelandNetPayed")), 2)
              If total_value > 0 Then
-                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "Œœ„« ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "Œœ„« ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -13795,7 +13829,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
               commissionvalue = total_value * Percetage / 100
                   
                   
-                         If ModAccounts.AddNewDev(LngDevID, lineno, vaTAccount, commissionvalue, 1, Msg & " " & " ﬁ „ Œœ„«  ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, vaTAccount, commissionvalue, 1, Msg & " " & " ﬁ „ Œœ„«  ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13810,7 +13844,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
              
         
              If total_value > 0 And commissionvalue > 0 Then
-                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "    ”⁄Ì", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "    ”⁄Ì", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -13819,7 +13853,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
               commissionvalue = total_value * Percetage / 100
                   
                   
-                         If ModAccounts.AddNewDev(LngDevID, lineno, vaTAccount, commissionvalue, 1, Msg & " " & " ﬁ „ ”⁄Ì ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, vaTAccount, commissionvalue, 1, Msg & " " & " ﬁ „ ”⁄Ì ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13844,7 +13878,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                End If
                                     
              If total_value > 0 Then
-                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«·ﬁÌ„… «·„÷«›…", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«·ﬁÌ„… «·„÷«›…", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -13856,7 +13890,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
             total_value = Round(.TextMatrix(i, .ColIndex("RentValuePayed")), 2)
             AccountCode = get_account_code_branch(86, my_branch)
                If total_value > 0 Then
-                 If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·«ÌÃ«—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                 If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·«ÌÃ«—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13865,7 +13899,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                 total_value = Round(.TextMatrix(i, .ColIndex("ElectricPayed")), 2)
              If total_value > 0 Then
                      AccountCode = get_account_code_branch(84, my_branch)
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·ﬂÂ—»«¡", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·ﬂÂ—»«¡", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13874,7 +13908,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                 total_value = Round(.TextMatrix(i, .ColIndex("WaterPayed")), 2)
              If total_value > 0 Then
                      AccountCode = get_account_code_branch(83, my_branch)
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·„Ì«Â", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·„Ì«Â", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13887,7 +13921,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                
              If total_value > 0 Then
                      AccountCode = get_account_code_branch(85, my_branch)
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·Œœ„« ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·Œœ„« ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13900,7 +13934,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                     End If
              If total_value > 0 Then
                      AccountCode = get_account_code_branch(81, my_branch)
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·”⁄Ì", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«·”⁄Ì", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13920,7 +13954,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                     Else
                         AccountCode = GetAqarAcountCode(val(DcbIqara.BoundText))
                     End If
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, total_value, 1, Msg & " " & "«·ﬁÌ„… «·„÷«›… ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, total_value, 1, Msg & " " & "«·ﬁÌ„… «·„÷«›… ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13935,7 +13969,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                   commissionvalue = total_value * Percetage / 100
              If commissionvalue > 0 Then
                      commissionvalue = 0 'salimhere
-                   If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & "«·ﬁÌ„… «·„÷«›… ··”⁄Ì", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                   If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & "«·ﬁÌ„… «·„÷«›… ··”⁄Ì", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13948,7 +13982,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
               
                          If commissionvalue > 0 Then
                     commissionvalue = 0 'salimhere
-                   If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & "«·ﬁÌ„… «·„÷«›… ··Œœ„« ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                   If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & "«·ﬁÌ„… «·„÷«›… ··Œœ„« ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13963,7 +13997,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                                                           ''///«· «„Ì‰
                 total_value = Round(.TextMatrix(i, .ColIndex("InsurancePayed")), 2)
              If total_value > 0 Then
-                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«· «„Ì‰", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "«· «„Ì‰", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -13971,7 +14005,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
           AccountCode = get_account_code_branch(82, my_branch)
           
                     ' AccountCode = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Txtownerid), "Account_code")
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«· «„Ì‰", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "«· «„Ì‰", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -13986,7 +14020,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
                End If
                
                 If total_value > 0 Then
-                 If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "—’Ìœ „ »ﬁÌ ⁄·Ì «·„” √Ã—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                 If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 0, Msg & " " & "—’Ìœ „ »ﬁÌ ⁄·Ì «·„” √Ã—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -13996,7 +14030,7 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
              AccountCode = get_account_code_branch(86, my_branch)
              
                   '  AccountCode = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Txtownerid), "Account_code")
-                      If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "—’Ìœ „ »ﬁÌ ⁄·Ì «·„” √Ã—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                      If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "—’Ìœ „ »ﬁÌ ⁄·Ì «·„” √Ã—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -14017,14 +14051,14 @@ depit_side = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClie
 
     End With
      'salimhere  ﬁÌœ «·’‰œÊﬁ / «Ê «·»‰ﬂ
-                 total_value = val(XPTxtVal.text) + val(TxtVATValue)
+                 total_value = val(XPTxtVal.Text) + val(TxtVATValue)
              If total_value > 0 Then
-                    If ModAccounts.AddNewDev(LngDevID, lineno, DcboDebitSide.BoundText, total_value, 0, Msg & " " & "«·’‰œÊﬁ/«·»‰ﬂ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, DcboDebitSide.BoundText, total_value, 0, Msg & " " & "«·’‰œÊﬁ/«·»‰ﬂ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
                      
-                         If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 1, Msg & " " & "«·„” «Ã—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, depit_side, total_value, 1, Msg & " " & "«·„” «Ã—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -14065,11 +14099,11 @@ Set cProgress = New ClsProgress
     Dim Msg As String
      Dim i As Integer
      Dim AccountCodeDept As String
-Msgdes = "»‰«¡ ⁄·Ï „ﬁ»Ê÷«   ’›Ì… «„·«ﬂ «·€Ì— —ﬁ„ " & TxtNoteSerial1.text & " "
-TxtVATValue.text = 0
+Msgdes = "»‰«¡ ⁄·Ï „ﬁ»Ê÷«   ’›Ì… «„·«ﬂ «·€Ì— —ﬁ„ " & TxtNoteSerial1.Text & " "
+TxtVATValue.Text = 0
 
 Dim AccountCodeVat As String
-Msg = XPMTxtRemarks.text & CHR(13) & Msgdes
+Msg = XPMTxtRemarks.Text & CHR(13) & Msgdes
 AccountCodeDept = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClientName.BoundText), "Account_code")
                   If SystemOptions.OpenAccountAqar = False Then
                         AccountCode = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Txtownerid), "Account_code")
@@ -14077,7 +14111,7 @@ AccountCodeDept = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCb
                         AccountCode = GetAqarAcountCode(val(DcbIqara.BoundText))
                     End If
 'AccountCode = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Txtownerid), "Account_code")
-                total_value = GetValueFiter(val(TxtFilterNo.text), "RemainRent") 'val(XPTxtVal.Text)
+                total_value = GetValueFiter(val(TxtFilterNo.Text), "RemainRent") 'val(XPTxtVal.Text)
                 If ComResid(1).value = True Then
                      PercentgValueAddedAccount_Transec XPDtbTrans.value, 8, 1, AccountCodeVat, Percetage
                 commissionvalue = total_value * Percetage / 100
@@ -14088,26 +14122,26 @@ AccountCodeDept = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCb
                 'salimhere
                fittervat = val(fittervat) + commissionvalue
              If total_value > 0 Then
-                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value + commissionvalue, 0, Msg & " " & "«·«ÌÃ«— ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value + commissionvalue, 0, Msg & " " & "«·«ÌÃ«— ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
                    
                    
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "  «·«ÌÃ«—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "  «·«ÌÃ«—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                     If commissionvalue > 0 Then
                     
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›…··«ÌÃ«— ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›…··«ÌÃ«— ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                     End If
               End If
            ''//////—’Ìœ ”«»ﬁ
-                           total_value = GetValueFiter(val(TxtFilterNo.text), "OldRent") 'val(XPTxtVal.Text)
+                           total_value = GetValueFiter(val(TxtFilterNo.Text), "OldRent") 'val(XPTxtVal.Text)
                 If ComResid(1).value = True Then
                      PercentgValueAddedAccount_Transec XPDtbTrans.value, 8, 1, AccountCodeVat, Percetage
                 commissionvalue = total_value * Percetage / 100
@@ -14120,26 +14154,26 @@ AccountCodeDept = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCb
             'salimhere
             
              If total_value > 0 Then
-                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value + commissionvalue, 0, Msg & " " & "—’Ìœ ”«»ﬁ ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value + commissionvalue, 0, Msg & " " & "—’Ìœ ”«»ﬁ ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
                    
                    
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "  —’Ìœ ”«»ﬁ ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "  —’Ìœ ”«»ﬁ ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                     If commissionvalue > 0 Then
                     
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›…—’Ìœ ”«»ﬁ   ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›…—’Ìœ ”«»ﬁ   ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                     End If
               End If
               ''//////////«ÌÃ«— «Ì«„ “Ì«œ…
-                    total_value = GetValueFiterHeader(val(TxtFilterNo.text), "DaysValueIncrease") 'val(XPTxtVal.Text)
+                    total_value = GetValueFiterHeader(val(TxtFilterNo.Text), "DaysValueIncrease") 'val(XPTxtVal.Text)
                 If ComResid(1).value = True Then
                      PercentgValueAddedAccount_Transec XPDtbTrans.value, 8, 1, AccountCodeVat, Percetage
                 commissionvalue = total_value * Percetage / 100
@@ -14150,19 +14184,19 @@ AccountCodeDept = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCb
               'salimhere
               fittervat = val(fittervat) + commissionvalue
              If total_value > 0 Then
-                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value + commissionvalue, 0, Msg & " " & "«·«ÌÃ«— «Ì«„ “Ì«œ…", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value + commissionvalue, 0, Msg & " " & "«·«ÌÃ«— «Ì«„ “Ì«œ…", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
                    
                    
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "  «·«ÌÃ«— «Ì«„ “Ì«œ…", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "  «·«ÌÃ«— «Ì«„ “Ì«œ…", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                     If commissionvalue > 0 Then
                     
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›…··«ÌÃ«— «·«ÌÃ«— «Ì«„ “Ì«œ…", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›…··«ÌÃ«— «·«ÌÃ«— «Ì«„ “Ì«œ…", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -14170,7 +14204,7 @@ AccountCodeDept = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCb
               End If
               
                 ''//////„Ì«Â
-                          total_value = GetValueFiter(val(TxtFilterNo.text), "RemainWater") 'val(XPTxtVal.Text)
+                          total_value = GetValueFiter(val(TxtFilterNo.Text), "RemainWater") 'val(XPTxtVal.Text)
                If total_value > 0 Then
                 If ComResid(1).value = True Then
                      PercentgValueAddedAccount_Transec XPDtbTrans.value, 8, 1, AccountCodeVat, Percetage
@@ -14180,19 +14214,19 @@ AccountCodeDept = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCb
                      commissionvalue = 0
                 End If
              fittervat = val(fittervat) + commissionvalue
-                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value + commissionvalue, 0, Msg & " " & "„Ì«Â ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value + commissionvalue, 0, Msg & " " & "„Ì«Â ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
                    
                     
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & " „Ì«Â ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & " „Ì«Â ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                     If commissionvalue > 0 Then
                     
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›…··„Ì«Â ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›…··„Ì«Â ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -14200,7 +14234,7 @@ AccountCodeDept = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCb
               End If
               ''//////ﬂÂ—»«¡
               
-                     total_value = GetValueFiter(val(TxtFilterNo.text), "BillPrice") 'val(XPTxtVal.Text)
+                     total_value = GetValueFiter(val(TxtFilterNo.Text), "BillPrice") 'val(XPTxtVal.Text)
                   If total_value > 0 Then
                      PercentgValueAddedAccount_Transec XPDtbTrans.value, 8, 1, AccountCodeVat, Percetage
                 commissionvalue = total_value * Percetage / 100
@@ -14208,20 +14242,20 @@ AccountCodeDept = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCb
      
         fittervat = val(fittervat) + commissionvalue
         
-                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value + commissionvalue, 0, Msg & " " & "ﬂÂ—»«¡ ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value + commissionvalue, 0, Msg & " " & "ﬂÂ—»«¡ ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
                    
                     
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "  ﬂÂ—»«¡", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "  ﬂÂ—»«¡", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                       'salimhere
                If commissionvalue > 0 Then
                     
-                          If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›… ··ﬂÂ—»«¡ ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                          If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›… ··ﬂÂ—»«¡ ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                       GoTo ErrTrap
                     End If
                      lineno = lineno + 1
@@ -14231,12 +14265,12 @@ AccountCodeDept = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCb
               End If
                          ''//////Œœ„« 
               
-                     total_value = GetValueFiter(val(TxtFilterNo.text), "RemainService") 'val(XPTxtVal.Text)
+                     total_value = GetValueFiter(val(TxtFilterNo.Text), "RemainService") 'val(XPTxtVal.Text)
                   If total_value > 0 Then
                      PercentgValueAddedAccount_Transec XPDtbTrans.value, 8, 1, AccountCodeVat, Percetage
      
             
-                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value, 0, Msg & " " & " Œœ„« ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value, 0, Msg & " " & " Œœ„« ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -14248,13 +14282,13 @@ AccountCodeDept = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCb
                     commissionvalue = 0
                     End If
                  
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "  Œœ„« ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "  Œœ„« ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                     If commissionvalue > 0 Then
                     
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›…«·Œœ„«  ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›…«·Œœ„«  ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -14264,11 +14298,11 @@ AccountCodeDept = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCb
               
                                      ''//////”⁄Ì
               
-                     total_value = GetValueFiter(val(TxtFilterNo.text), "RemainCommissions") 'val(XPTxtVal.Text)
+                     total_value = GetValueFiter(val(TxtFilterNo.Text), "RemainCommissions") 'val(XPTxtVal.Text)
                   If total_value > 0 Then
                      PercentgValueAddedAccount_Transec XPDtbTrans.value, 8, 1, AccountCodeVat, Percetage
             
-                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value, 0, Msg & " " & " ”⁄Ì", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value, 0, Msg & " " & " ”⁄Ì", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -14280,13 +14314,13 @@ AccountCodeDept = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCb
                     commissionvalue = 0
                     End If
                      
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "  ”⁄Ì", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "  ”⁄Ì", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                     If commissionvalue > 0 Then
                     
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›…··”⁄Ì ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›…··”⁄Ì ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -14297,7 +14331,7 @@ AccountCodeDept = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCb
                             
                          ''''// «· «„Ì‰ «·”«»ﬁ
               
-            total_value = val(txtTotalinsuranceS.text) - GetValueFiter(val(TxtFilterNo.text), "insurance")
+            total_value = val(txtTotalinsuranceS.Text) - GetValueFiter(val(TxtFilterNo.Text), "insurance")
             total_value = Abs(total_value)
                
           ''''// «· «„Ì‰ «·”«»ﬁ  Salim here
@@ -14314,12 +14348,12 @@ AccountCodeDept = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCb
         '            End If
         '              lineno = lineno + 1
                       
-                             If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 0, Msg & " " & " «„Ì‰ ”«»ﬁ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                             If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 0, Msg & " " & " «„Ì‰ ”«»ﬁ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
                  
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value, 1, Msg & " " & " «„Ì‰”«»ﬁ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value, 1, Msg & " " & " «„Ì‰”«»ﬁ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -14328,7 +14362,7 @@ AccountCodeDept = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCb
                                                
                                        ''''// «· «„Ì‰
               
-            total_value = GetValueFiter(val(TxtFilterNo.text), "insurance")
+            total_value = GetValueFiter(val(TxtFilterNo.Text), "insurance")
             total_value = Abs(total_value)
             'total_value = 0
              If total_value > 0 Then
@@ -14343,12 +14377,12 @@ AccountCodeDept = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCb
                     'End If
                     '  lineno = lineno + 1
                       
-                             If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 0, Msg & " " & " «„Ì‰", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                             If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 0, Msg & " " & " «„Ì‰", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
                  
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value, 1, Msg & " " & " «„Ì‰", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value, 1, Msg & " " & " «„Ì‰", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -14357,14 +14391,14 @@ AccountCodeDept = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCb
               
                
              'salimhere
-                total_value = val(XPTxtVal.text) + val(fittervat)
+                total_value = val(XPTxtVal.Text) + val(fittervat)
              If total_value > 0 Then
-                    If ModAccounts.AddNewDev(LngDevID, lineno, DcboDebitSide.BoundText, total_value, 0, Msg & " " & "«·’‰œÊﬁ/«·»‰ﬂ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, DcboDebitSide.BoundText, total_value, 0, Msg & " " & "«·’‰œÊﬁ/«·»‰ﬂ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
                      
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value, 1, Msg & " " & "«·„” «Ã—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value, 1, Msg & " " & "«·„” «Ã—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -14406,12 +14440,12 @@ Set cProgress = New ClsProgress
      Dim i As Integer
      
      Dim AccountCodeVat As String
-Msgdes = "»‰«¡ ⁄·Ï „ﬁ»Ê÷«   ’›Ì… «„·«ﬂÌ  —ﬁ„ " & TxtNoteSerial1.text & " "
+Msgdes = "»‰«¡ ⁄·Ï „ﬁ»Ê÷«   ’›Ì… «„·«ﬂÌ  —ﬁ„ " & TxtNoteSerial1.Text & " "
 PercentgValueAddedAccount_Transec XPDtbTrans.value, 8, 1, AccountCodeVat, Percetage
 
-Msg = XPMTxtRemarks.text & CHR(13) & Msgdes
+Msg = XPMTxtRemarks.Text & CHR(13) & Msgdes
  AccountCodeDept = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(DBCboClientName.BoundText), "Account_code")
-                total_value = GetValueFiter(val(TxtFilterNo.text), "RemainRent")
+                total_value = GetValueFiter(val(TxtFilterNo.Text), "RemainRent")
                 If total_value > 0 Then
               If ComResid(1).value = True Then
                      commissionvalue = total_value * Percetage / 100
@@ -14420,26 +14454,26 @@ Msg = XPMTxtRemarks.text & CHR(13) & Msgdes
               commissionvalue = 0
               End If
             fittervat = val(fittervat) + commissionvalue
-                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value + commissionvalue, 0, Msg & " " & "«·„” «Ã— ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value + commissionvalue, 0, Msg & " " & "«·„” «Ã— ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
                    
                     AccountCode = get_account_code_branch(86, my_branch)
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & " «Ì—«œ«  «·«ÌÃ«—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & " «Ì—«œ«  «·«ÌÃ«—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                     If commissionvalue > 0 Then
                     
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›… ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›… ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                     End If
               End If
            '////—’Ìœ ”«»ﬁ
-                          total_value = GetValueFiter(val(TxtFilterNo.text), "OldRent")
+                          total_value = GetValueFiter(val(TxtFilterNo.Text), "OldRent")
                 If total_value > 0 Then
               If ComResid(1).value = True Then
                      commissionvalue = total_value * Percetage / 100
@@ -14450,26 +14484,26 @@ Msg = XPMTxtRemarks.text & CHR(13) & Msgdes
             'salim here
             commissionvalue = 0
             
-                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value + commissionvalue, 0, Msg & " " & "—’Ìœ ”«»ﬁ ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value + commissionvalue, 0, Msg & " " & "—’Ìœ ”«»ﬁ ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
                    
                     AccountCode = get_account_code_branch(86, my_branch)
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "  —’Ìœ ”«»ﬁ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "  —’Ìœ ”«»ﬁ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                     If commissionvalue > 0 Then
                     
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›… —’Ìœ ”«»ﬁ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›… —’Ìœ ”«»ﬁ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                     End If
               End If
               '////«·«ÌÃ«— «Ì«„ “Ì«œ…
-                              total_value = GetValueFiterHeader(val(TxtFilterNo.text), "DaysValueIncrease")
+                              total_value = GetValueFiterHeader(val(TxtFilterNo.Text), "DaysValueIncrease")
                 If total_value > 0 Then
               If ComResid(1).value = True Then
                      commissionvalue = total_value * Percetage / 100
@@ -14479,19 +14513,19 @@ Msg = XPMTxtRemarks.text & CHR(13) & Msgdes
               End If
             
             fittervat = val(fittervat) + commissionvalue
-                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value + commissionvalue, 0, Msg & " " & "«ÌÃ«— «Ì«„ “Ì«œ… ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value + commissionvalue, 0, Msg & " " & "«ÌÃ«— «Ì«„ “Ì«œ… ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
                    
                     AccountCode = get_account_code_branch(86, my_branch)
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "  «Ã«— «Ì„ “Ì«œ…", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & "  «Ã«— «Ì„ “Ì«œ…", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                     If commissionvalue > 0 Then
                     
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›… «ÌÃ«— «Ì«„ “Ì«œ…", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›… «ÌÃ«— «Ì«„ “Ì«œ…", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -14499,7 +14533,7 @@ Msg = XPMTxtRemarks.text & CHR(13) & Msgdes
               End If
               
               ''////„Ì«Â
-                              total_value = GetValueFiter(val(TxtFilterNo.text), "RemainWater")
+                              total_value = GetValueFiter(val(TxtFilterNo.Text), "RemainWater")
                 If total_value > 0 Then
 
              If ComResid(1).value = True Then
@@ -14510,19 +14544,19 @@ Msg = XPMTxtRemarks.text & CHR(13) & Msgdes
               commissionvalue = 0
               End If
               fittervat = val(fittervat) + commissionvalue
-                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value + commissionvalue, 0, Msg & " " & "«·„” «Ã— ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value + commissionvalue, 0, Msg & " " & "«·„” «Ã— ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
 
                     AccountCode = get_account_code_branch(83, my_branch)
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & " «Ì—«œ«  «·„Ì«Â", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & " «Ì—«œ«  «·„Ì«Â", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                     If commissionvalue > 0 Then
                     
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›… ··„Ì«Â ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›… ··„Ì«Â ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -14530,24 +14564,24 @@ Msg = XPMTxtRemarks.text & CHR(13) & Msgdes
               End If
               
               ''////«·ﬂÂ—»«¡
-                  total_value = GetValueFiter(val(TxtFilterNo.text), "BillPrice")
+                  total_value = GetValueFiter(val(TxtFilterNo.Text), "BillPrice")
                 If total_value > 0 Then
                      commissionvalue = total_value * Percetage / 100
                      commissionvalue = Round(commissionvalue, 2)
 fittervat = val(fittervat) + commissionvalue
-                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value + commissionvalue, 0, Msg & " " & "«·„” «Ã— ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value + commissionvalue, 0, Msg & " " & "«·„” «Ã— ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
                    
                     AccountCode = get_account_code_branch(84, my_branch)
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & " «Ì—«œ«  «·ﬂÂ—»«¡", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & " «Ì—«œ«  «·ﬂÂ—»«¡", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                     If commissionvalue > 0 Then
                     
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›… ··ﬂÂ—»«¡ ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›… ··ﬂÂ—»«¡ ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -14556,11 +14590,11 @@ fittervat = val(fittervat) + commissionvalue
               
               
                             ''////Œœ„« 
-                              total_value = GetValueFiter(val(TxtFilterNo.text), "RemainService")
+                              total_value = GetValueFiter(val(TxtFilterNo.Text), "RemainService")
                 If total_value > 0 Then
 
             
-                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value, 0, Msg & " " & "«·„” «Ã— ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value, 0, Msg & " " & "«·„” «Ã— ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -14573,23 +14607,23 @@ fittervat = val(fittervat) + commissionvalue
               End If
               
                     AccountCode = get_account_code_branch(85, my_branch)
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & " «Ì—«œ«  Œœ„« ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & " «Ì—«œ«  Œœ„« ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                     If commissionvalue > 0 Then
                     
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›… Œœ„«  ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›… Œœ„«  ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                     End If
               End If
                                           ''////”⁄Ì
-                              total_value = GetValueFiter(val(TxtFilterNo.text), "RemainCommissions")
+                              total_value = GetValueFiter(val(TxtFilterNo.Text), "RemainCommissions")
                 If total_value > 0 Then
             
-                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value, 0, Msg & " " & "«·„” «Ã— ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value, 0, Msg & " " & "«·„” «Ã— ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -14601,13 +14635,13 @@ fittervat = val(fittervat) + commissionvalue
               commissionvalue = 0
               End If
                     AccountCode = get_account_code_branch(81, my_branch)
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & " «Ì—«œ«  «·”⁄Ì", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 1, Msg & " " & " «Ì—«œ«  «·”⁄Ì", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                     If commissionvalue > 0 Then
                     
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›… ··”⁄Ì ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeVat, commissionvalue, 1, Msg & " " & " «·ﬁÌ„… «·„÷«›… ··”⁄Ì ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -14615,18 +14649,18 @@ fittervat = val(fittervat) + commissionvalue
               End If
               ''''// «· «„Ì‰
               
-            total_value = val(txtTotalinsuranceS.text) - GetValueFiter(val(TxtFilterNo.text), "insurance")
+            total_value = val(txtTotalinsuranceS.Text) - GetValueFiter(val(TxtFilterNo.Text), "insurance")
             total_value = Abs(total_value)
              If total_value > 0 Then
              AccountCode = get_account_code_branch(82, my_branch)
              
-                        If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 0, Msg & " " & " «„Ì‰ „” —œ...”«»ﬁ ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                        If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 0, Msg & " " & " «„Ì‰ „” —œ...”«»ﬁ ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                       
                      
-                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value, 1, Msg & " " & " «„Ì‰ „” —œ.”«»ﬁ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value, 1, Msg & " " & " «„Ì‰ „” —œ.”«»ﬁ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -14636,16 +14670,16 @@ fittervat = val(fittervat) + commissionvalue
                             
                         ''''// «· «„Ì‰
               
-            total_value = GetValueFiter(val(TxtFilterNo.text), "insurance")
+            total_value = GetValueFiter(val(TxtFilterNo.Text), "insurance")
              If total_value > 0 Then
              AccountCode = get_account_code_branch(82, my_branch)
-                              If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 0, Msg & " " & " «„Ì‰ „” —œ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                              If ModAccounts.AddNewDev(LngDevID, lineno, AccountCode, total_value, 0, Msg & " " & " «„Ì‰ „” —œ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
                       
                     
-                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value, 1, Msg & " " & " «„Ì‰ „” —œ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value, 1, Msg & " " & " «„Ì‰ „” —œ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
@@ -14665,14 +14699,14 @@ fittervat = val(fittervat) + commissionvalue
               End If
               
              'salimhere
-                total_value = val(XPTxtVal.text) + val(fittervat)
+                total_value = val(XPTxtVal.Text) + val(fittervat)
              If total_value > 0 Then
-                    If ModAccounts.AddNewDev(LngDevID, lineno, DcboDebitSide.BoundText, total_value, 0, Msg & " " & "«·’‰œÊﬁ/«·»‰ﬂ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, lineno, DcboDebitSide.BoundText, total_value, 0, Msg & " " & "«·’‰œÊﬁ/«·»‰ﬂ", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , 0, val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     lineno = lineno + 1
                      
-                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value, 1, Msg & " " & "«·„” «Ã—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(dcBranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
+                         If ModAccounts.AddNewDev(LngDevID, lineno, AccountCodeDept, total_value, 1, Msg & " " & "«·„” «Ã—", val(notes_id), , , , XPDtbTrans.value, user_id, , , , , , , , , CURRENT_LINE, , , , , , , , , val(Dcbranch.BoundText), , , , , , , , , , val(DcbIqara.BoundText), val(DcbUnitType.BoundText), val(DcbUnitNo.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                       lineno = lineno + 1
@@ -14862,7 +14896,7 @@ If SystemOptions.IsElecWaterCont Then
 
 Dim suma As Double
 suma = 0
-   my_branch = val(dcBranch.BoundText)
+   my_branch = val(Dcbranch.BoundText)
   If Me.DCboCashType.ListIndex = 8 And PayVAT() = False Then
     If SystemOptions.CanPartialpayment = False Then
         MsgBox "Ì—ÃÏ œ›⁄ «·ﬁÌ„… «·„÷«›… ﬂ«„·…"
@@ -14920,7 +14954,7 @@ CommissionAcc = get_account_code_branch(81, my_branch)
          
         End If
            
- If val(TxtKickbacks.text) > 0 Then
+ If val(TxtKickbacks.Text) > 0 Then
     CommissionAccDue = get_account_code_branch(125, my_branch)
  
         If CommissionAccDue = "NO branch" Then
@@ -14949,7 +14983,7 @@ End If
   End If
   
   
-    If Me.TxtModFlg.text <> "R" Then
+    If Me.TxtModFlg.Text <> "R" Then
     If val(DCboCashType.ListIndex) = 8 Then
 ' With Grid3
 '     If Grid3.Rows > 1 Then
@@ -14995,7 +15029,7 @@ End If
         End If
 
         If Me.DCboCashType.ListIndex = 0 Or Me.DCboCashType.ListIndex = 1 Or Me.DCboCashType.ListIndex = 2 Then
-            If DBCboClientName.text = "" Then
+            If DBCboClientName.Text = "" Then
                 Msg = "ÌÃ» «Œ Ì«— «”„ «·⁄„Ì· √Ê «·„Ê—œ"
                 MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                 DBCboClientName.SetFocus
@@ -15005,7 +15039,7 @@ End If
         End If
     
            If Me.DCboCashType.ListIndex = 8 Then
-            If txtContractNo.text = "" Then
+            If txtContractNo.Text = "" Then
                 Msg = "ÌÃ» « œŒ«· —ﬁ„ «·⁄ﬁœ"
                 MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                 txtContractNo.SetFocus
@@ -15015,7 +15049,7 @@ End If
         End If
          
            If Me.DCboCashType.ListIndex = 13 Then
-            If txtContractNo.text = "" Then
+            If txtContractNo.Text = "" Then
                 Msg = "ÌÃ» « œŒ«· —ﬁ„ «· ’›Ì«  Ê›Ê« Ì— «·ﬂÂ—»«¡ "
                 MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                 txtContractNo.SetFocus
@@ -15024,7 +15058,7 @@ End If
             End If
         End If
         If Me.DCboCashType.ListIndex = 5 Then
-            If DBCboClientName.text = "" Then
+            If DBCboClientName.Text = "" Then
                 Msg = "ÌÃ» «Œ Ì«— «”„ ««·„‘—Ê⁄"
                 MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                 DBCboClientName.SetFocus
@@ -15059,7 +15093,7 @@ End If
         End If
     
             If Me.DCboCashType.ListIndex = 8 Then
-            If Me.TxtContNo.text = "" Then
+            If Me.TxtContNo.Text = "" Then
                 If SystemOptions.UserInterface = ArabicInterface Then
                     Msg = "ÌÃ»      «Œ Ì«— ⁄ﬁœ "
                 Else
@@ -15140,7 +15174,7 @@ End If
                 Exit Sub
             End If
              If Me.DCboCashType.ListIndex = 10 Then
-            If Me.TxtFilterNo.text = "" Then
+            If Me.TxtFilterNo.Text = "" Then
                 If SystemOptions.UserInterface = ArabicInterface Then
                     Msg = "ÌÃ» «Œ Ì«—  —ﬁ„ «· ’›ÌÂ"
                 Else
@@ -15181,7 +15215,7 @@ End If
             End If
             
             
-           If Me.TxtInterval.text = "" Then
+           If Me.TxtInterval.Text = "" Then
                 If SystemOptions.UserInterface = ArabicInterface Then
                     Msg = "ÌÃ»   ÕœÌœ «·„œ…   "
                 Else
@@ -15196,14 +15230,14 @@ End If
             
         End If
         
-        If XPTxtVal.text = "" Then
+        If XPTxtVal.Text = "" Then
             Msg = "ÌÃ» «œŒ«· ﬁÌ„… «·„ﬁ»Ê÷«  "
             MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
             '        XPTxtVal.SetFocus
             Exit Sub
         End If
 
-        If Not IsNumeric(XPTxtVal.text) Then
+        If Not IsNumeric(XPTxtVal.Text) Then
             Msg = "ﬁÌ„… «·„ﬁ»Ê÷«  ÌÃ» √‰  ﬂÊ‰ ﬁÌ„… —ﬁ„Ì…"
             MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
             XPTxtVal.SetFocus
@@ -15220,7 +15254,7 @@ End If
                 Exit Sub
             End If
 
-            If Trim(Me.TxtTransSerial.text) = "" Then
+            If Trim(Me.TxtTransSerial.Text) = "" Then
                 Msg = "»—Ã«¡ ≈œŒ«· —ﬁ„ «·›« Ê—…..!!!"
                 MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                 TxtTransSerial.SetFocus
@@ -15228,14 +15262,14 @@ End If
             Else
 
                 If Me.CboTrans.ListIndex = 0 Then
-                    StrTemp = GetTransIDSerial(0, , Trim(Me.TxtTransSerial.text), 2)
+                    StrTemp = GetTransIDSerial(0, , Trim(Me.TxtTransSerial.Text), 2)
 
                     If CheckDebitTrans(val(StrTemp)) = False Then
                         Exit Sub
                     End If
 
                 ElseIf Me.CboTrans.ListIndex = 1 Then
-                    StrTemp = GetTransIDSerial(0, , Trim(Me.TxtTransSerial.text), 5)
+                    StrTemp = GetTransIDSerial(0, , Trim(Me.TxtTransSerial.Text), 5)
 
                     If CheckDebitTrans(val(StrTemp)) = False Then
                         Exit Sub
@@ -15243,7 +15277,7 @@ End If
 
                 ElseIf Me.CboTrans.ListIndex = 2 Then
 
-                    If CheckDebitMaintaince(val(Me.TxtTransSerial.text)) = False Then
+                    If CheckDebitMaintaince(val(Me.TxtTransSerial.Text)) = False Then
                         Exit Sub
                     End If
 
@@ -15255,15 +15289,15 @@ End If
             End If
         End If
 
-        If Me.CboPayMentType.ListIndex = -1 Then
+        If Me.CboPaymentType.ListIndex = -1 Then
             Msg = "ÌÃ» ≈Œ Ì«— ÿ—Ìﬁ… «·œ›⁄...!!"
             MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
-            CboPayMentType.SetFocus
+            CboPaymentType.SetFocus
             Sendkeys "{F4}"
             Exit Sub
         End If
-        If Me.CboPayMentType.ListIndex = 4 Then
-        If DcbAccount.BoundText = "" Or DcbAccount.text = "" Then
+        If Me.CboPaymentType.ListIndex = 4 Then
+        If DcbAccount.BoundText = "" Or DcbAccount.Text = "" Then
         If SystemOptions.UserInterface = ArabicInterface Then
         MsgBox "Ì—ÃÏ «Œ Ì«— «·Õ”«»"
         Else
@@ -15273,7 +15307,7 @@ End If
         Exit Sub
         End If
         End If
-        If Me.CboPayMentType.ListIndex = 0 Then
+        If Me.CboPaymentType.ListIndex = 0 Then
             If Me.DcboBox.BoundText = "" Then
                 Msg = "ÌÃ» ≈Œ Ì«— «·Œ“‰…...!!"
                 MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
@@ -15282,7 +15316,7 @@ End If
                 Exit Sub
             End If
 
-        ElseIf Me.CboPayMentType.ListIndex = 1 Then
+        ElseIf Me.CboPaymentType.ListIndex = 1 Then
       
             '  If DateDiff("d", Me.DtpChequeDueDate.value, Date) > 0 Then
             '      Msg = " «—ÌŒ ≈” Õﬁ«ﬁ «·‘Ìﬂ €Ì— ’ÕÌÕ...!!"
@@ -15308,7 +15342,7 @@ End If
                    
                 End If
     
-                If TXTBankName.text = "" Then
+                If TXTBankName.Text = "" Then
                            
                     If SystemOptions.UserInterface = ArabicInterface Then
                         Msg = "«ﬂ » «”„ »‰ﬂ «·‘Ìﬂ    « ...!!"
@@ -15323,7 +15357,7 @@ End If
                     
                 End If
         
-                If Trim$(Me.TxtChequeNumber.text) = "" Then
+                If Trim$(Me.TxtChequeNumber.Text) = "" Then
                     Msg = "ÌÃ» ﬂ «»… —ﬁ„ «·‘Ìﬂ...!!"
                     MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                     TxtChequeNumber.SetFocus
@@ -15340,7 +15374,7 @@ End If
                     Exit Sub
                 End If
 
-                If Trim$(Me.TxtChequeNumber.text) = "" Then
+                If Trim$(Me.TxtChequeNumber.Text) = "" Then
                     Msg = "ÌÃ» ﬂ «»… —ﬁ„ «·‘Ìﬂ...!!"
                     MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                     TxtChequeNumber.SetFocus
@@ -15348,7 +15382,7 @@ End If
                 End If
             End If
     
-        ElseIf Me.CboPayMentType.ListIndex = 2 Then
+        ElseIf Me.CboPaymentType.ListIndex = 2 Then
 
             If Me.DcboBankName.BoundText = "" Then
                 Msg = "ÌÃ» ≈Œ Ì«— «·»‰ﬂ...!!"
@@ -15358,14 +15392,14 @@ End If
                 Exit Sub
             End If
 
-            If Trim$(Me.TxtChequeNumber.text) = "" Then
+            If Trim$(Me.TxtChequeNumber.Text) = "" Then
                 Msg = "ÌÃ» ﬂ «»… —ﬁ„ «·ÕÊ«·Â...!!"
                 MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                 TxtChequeNumber.SetFocus
                 Exit Sub
             End If
      
-        ElseIf Me.CboPayMentType.ListIndex = 3 Then
+        ElseIf Me.CboPaymentType.ListIndex = 3 Then
 
             If Me.DcboBankName.BoundText = "" Then
                 Msg = "ÌÃ» ≈Œ Ì«— «·»‰ﬂ...!!"
@@ -15375,7 +15409,7 @@ End If
                 Exit Sub
             End If
 
-            If Trim$(Me.TxtChequeNumber.text) = "" Then
+            If Trim$(Me.TxtChequeNumber.Text) = "" Then
                 Msg = "ÌÃ» ﬂ «»… —ﬁ„ «·‘Ìﬂ...!!"
                 MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                 TxtChequeNumber.SetFocus
@@ -15386,9 +15420,9 @@ End If
 
         Dim notes_result As String
         Dim Vchr_result As String
-my_branch = val(Me.dcBranch.BoundText)
+my_branch = val(Me.Dcbranch.BoundText)
 
-        If TxtNoteSerial1.text = "" Then
+        If TxtNoteSerial1.Text = "" Then
             Vchr_result = Voucher_coding(val(my_branch), XPDtbTrans.value, 2, 4)
 
             If Vchr_result = "error" Then
@@ -15403,7 +15437,7 @@ my_branch = val(Me.dcBranch.BoundText)
             End If
         End If
     
-        If TxtNoteSerial.text = "" Then
+        If TxtNoteSerial.Text = "" Then
             notes_result = Notes_coding(val(my_branch), XPDtbTrans.value)
 
             If notes_result = "error" Then
@@ -15421,34 +15455,34 @@ my_branch = val(Me.dcBranch.BoundText)
         Cn.BeginTrans
         BeginTrans = True
 
-        If TxtModFlg.text = "N" Then
-            XPTxtID.text = CStr(new_id("Notes", "NoteID", "", True))
+        If TxtModFlg.Text = "N" Then
+            XPTxtID.Text = CStr(new_id("Notes", "NoteID", "", True))
             'Me.TxtNoteSerial.text = CStr(new_id("Notes", "NoteSerial", "", True, "NoteType=4"))
             rs.AddNew
        
-            rs("NoteID").value = val(XPTxtID.text)
-            Me.oldtxtNoteSerial1.text = Trim$(Me.TxtNoteSerial1.text)
+            rs("NoteID").value = val(XPTxtID.Text)
+            Me.oldtxtNoteSerial1.Text = Trim$(Me.TxtNoteSerial1.Text)
          
-        ElseIf TxtModFlg.text = "E" Then
-        StrSQL = "Delete From TblUnitNoInformation Where NoteID=" & val(XPTxtID.text)
+        ElseIf TxtModFlg.Text = "E" Then
+        StrSQL = "Delete From TblUnitNoInformation Where NoteID=" & val(XPTxtID.Text)
             Cn.Execute StrSQL, , adExecuteNoRecords
             
-            StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(XPTxtID.text)
+            StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(XPTxtID.Text)
             Cn.Execute StrSQL, , adExecuteNoRecords
         
-        StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(XPTxtID.text)
+        StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(XPTxtID.Text)
             Cn.Execute StrSQL, , adExecuteNoRecords
             
-            StrSQL = "Delete  TblNotesSales  where NoteID =" & val(XPTxtID.text)
+            StrSQL = "Delete  TblNotesSales  where NoteID =" & val(XPTxtID.Text)
             Cn.Execute StrSQL, , adExecuteNoRecords
             
-StrSQL = " delete   TblAqrEarnest where    NoteID=" & val(XPTxtID.text)
+StrSQL = " delete   TblAqrEarnest where    NoteID=" & val(XPTxtID.Text)
 Cn.Execute StrSQL
 
-   StrSQL = " delete   notes where NoteType= 2000   and  NoteSerial='" & TxtNoteSerial.text & "'"
+   StrSQL = " delete   notes where NoteType= 2000   and  NoteSerial='" & TxtNoteSerial.Text & "'"
   
 Cn.Execute StrSQL
-StrSQL = " delete   TblAqarCommissions where    NoteID=" & val(XPTxtID.text)
+StrSQL = " delete   TblAqarCommissions where    NoteID=" & val(XPTxtID.Text)
 Cn.Execute StrSQL
    StrSQL = "Delete From ContracttBillInstallmentsDone Where NoteID =" & val(Me.XPTxtID)
                 Cn.Execute StrSQL, , adExecuteNoRecords
@@ -15468,21 +15502,21 @@ Cn.Execute StrSQL
 
       End If
       AqrCommisiion (val(Me.DCboCashType.ListIndex))
-        rs("branch_no").value = val(Me.dcBranch.BoundText)
+        rs("branch_no").value = val(Me.Dcbranch.BoundText)
         rs("EmpId").value = IIf(Me.DcEmp.BoundText = "", Null, (Me.DcEmp.BoundText))
-        rs("foxy_no").value = val(Text1.text)
+        rs("foxy_no").value = val(Text1.Text)
         rs("general_cost_center").value = IIf(Me.DcCostCenter.BoundText = "", "", Me.DcCostCenter.BoundText)
     
         rs("CarId").value = IIf(Me.DCCar.BoundText = "", Null, (Me.DCCar.BoundText))
         rs("DriverId").value = IIf(Me.DCDriver.BoundText = "", Null, (Me.DCDriver.BoundText))
     
-        If TxtNoteSerial1.text = "" Then
-            TxtNoteSerial1.text = Voucher_coding(val(my_branch), XPDtbTrans.value, 2, 4)
+        If TxtNoteSerial1.Text = "" Then
+            TxtNoteSerial1.Text = Voucher_coding(val(my_branch), XPDtbTrans.value, 2, 4)
         End If
       rs("CreditSide").value = IIf(Trim(DcboCreditSide.BoundText) = "", Null, (DcboCreditSide.BoundText))
        rs("DebitSide").value = IIf(Trim(DcboDebitSide.BoundText) = "", Null, (DcboDebitSide.BoundText))
-        If TxtNoteSerial.text = "" Then
-            TxtNoteSerial.text = Notes_coding(val(my_branch), XPDtbTrans.value)
+        If TxtNoteSerial.Text = "" Then
+            TxtNoteSerial.Text = Notes_coding(val(my_branch), XPDtbTrans.value)
         End If
              If CheckStatusEarnest(0).value = vbChecked Then
          rs("StatusEarnest").value = 1
@@ -15502,25 +15536,25 @@ Cn.Execute StrSQL
         Else
         rs("ComResid").value = 0
         End If
-          rs("VAT").value = IIf(TxtVATValue.text = "", Null, val(TxtVATValue.text))
+          rs("VAT").value = IIf(TxtVATValue.Text = "", Null, val(TxtVATValue.Text))
           If DCboCashType2.ListIndex = 3 Then ' ’›Ì…
          rs("VAT").value = fittervat
           End If
           
   If Rd(1).value = True Then
   rs.Fields("TypAmola").value = 1
-  rs("AmolaValus").value = IIf(TxtKickbacks.text = "", 0, val(TxtKickbacks.text))
+  rs("AmolaValus").value = IIf(TxtKickbacks.Text = "", 0, val(TxtKickbacks.Text))
   End If
-        rs("Servce").value = IIf(TxtService.text = "", 0, val(TxtService.text))
-        rs("commission").value = IIf(Txtcommission.text = "", 0, Trim(Txtcommission.text))
-        rs("CommissionOut").value = IIf(Me.TxtCommissionOut.text = "", 0, Trim(TxtCommissionOut.text))
-        rs("rent").value = IIf(TxtRent.text = "", 0, Trim(TxtRent.text))
-        rs("Water").value = IIf(TxtWater.text = "", 0, Trim(TxtWater.text))
-        rs("Electricity").value = IIf(Me.TxtElectricity.text = "", 0, Trim(TxtElectricity.text))
-        rs("Instrunce").value = IIf(txtinstrunce.text = "", 0, Trim(txtinstrunce.text))
-        rs("comX").value = IIf(txtComisin.text = "", 0, Trim(txtComisin.text))
-        rs("ComY").value = IIf(txtinstranc.text = "", 0, Trim(txtinstranc.text))
-        rs("Telephone").value = IIf(TxtTelphone.text = "", "", Trim(TxtTelphone.text))
+        rs("Servce").value = IIf(TxtService.Text = "", 0, val(TxtService.Text))
+        rs("commission").value = IIf(Txtcommission.Text = "", 0, Trim(Txtcommission.Text))
+        rs("CommissionOut").value = IIf(Me.TxtCommissionOut.Text = "", 0, Trim(TxtCommissionOut.Text))
+        rs("rent").value = IIf(TxtRent.Text = "", 0, Trim(TxtRent.Text))
+        rs("Water").value = IIf(TxtWater.Text = "", 0, Trim(TxtWater.Text))
+        rs("Electricity").value = IIf(Me.TxtElectricity.Text = "", 0, Trim(TxtElectricity.Text))
+        rs("Instrunce").value = IIf(txtinstrunce.Text = "", 0, Trim(txtinstrunce.Text))
+        rs("comX").value = IIf(txtComisin.Text = "", 0, Trim(txtComisin.Text))
+        rs("ComY").value = IIf(txtinstranc.Text = "", 0, Trim(txtinstranc.Text))
+        rs("Telephone").value = IIf(TxtTelphone.Text = "", "", Trim(TxtTelphone.Text))
         
     If Option1.value = True Then
        rs("NCashingType").value = 1
@@ -15538,86 +15572,86 @@ Cn.Execute StrSQL
   If val(DCboCashType.ListIndex) = 13 Then
   If RdTypeTrans(1).value = True Then
   rs("TypeTrans").value = 1
-    If val(TxtPrice3.text) + val(TxtPrice.text) = val(TxtPrice2.text) Then
-  Cn.Execute "Update TblOtheExpensAqar set FlgPayed=1 where ID=" & val(Me.TxtContNo.text) & "  "
+    If val(TxtPrice3.Text) + val(TxtPrice.Text) = val(TxtPrice2.Text) Then
+  Cn.Execute "Update TblOtheExpensAqar set FlgPayed=1 where ID=" & val(Me.TxtContNo.Text) & "  "
   End If
  ' Cn.Execute "Update TblOtheExpensAqar set FlgPayed=1 where ID=" & val(Me.TXTContNo.Text) & "  "
   Else
   rs("TypeTrans").value = 0
-    If val(TxtTotal23.text) + val(txtTotal.text) = val(TxtTotal22.text) Then
-  Cn.Execute "Update TblOtheExpensAqar set FlgPayed=1 where ID=" & val(Me.TxtContNo.text) & "  "
+    If val(TxtTotal23.Text) + val(txtTotal.Text) = val(TxtTotal22.Text) Then
+  Cn.Execute "Update TblOtheExpensAqar set FlgPayed=1 where ID=" & val(Me.TxtContNo.Text) & "  "
   End If
   End If
 
-       rs("Price").value = IIf(Trim(TxtPrice.text) = "", Null, val(TxtPrice.text))
-       rs("Price2").value = IIf(Trim(TxtPrice2.text) = "", Null, val(TxtPrice2.text))
-       rs("Price3").value = IIf(Trim(TxtPrice3.text) = "", Null, val(TxtPrice3.text))
-       rs("RemPrice").value = IIf(Trim(TxtRemPrice.text) = "", Null, val(TxtRemPrice.text))
+       rs("Price").value = IIf(Trim(TxtPrice.Text) = "", Null, val(TxtPrice.Text))
+       rs("Price2").value = IIf(Trim(TxtPrice2.Text) = "", Null, val(TxtPrice2.Text))
+       rs("Price3").value = IIf(Trim(TxtPrice3.Text) = "", Null, val(TxtPrice3.Text))
+       rs("RemPrice").value = IIf(Trim(TxtRemPrice.Text) = "", Null, val(TxtRemPrice.Text))
      
        
-       rs("Insurance").value = IIf(Trim(txtInsurance.text) = "", Null, val(txtInsurance.text))
-       rs("Discount").value = IIf(Trim(txtDiscount.text) = "", Null, val(txtDiscount.text))
-       rs("Maintenance2").value = IIf(Trim(TxtMaintenance2.text) = "", Null, val(TxtMaintenance2.text))
-       rs("Maintenance3").value = IIf(Trim(TxtMaintenance3.text) = "", Null, val(TxtMaintenance3.text))
-       rs("Maintenance").value = IIf(Trim(TxtMaintenance.text) = "", Null, val(TxtMaintenance.text))
-       rs("RemainRent2").value = IIf(Trim(TxtRemainRent2.text) = "", Null, val(TxtRemainRent2.text))
-       rs("RemainRent3").value = IIf(Trim(TxtRemainRent3.text) = "", Null, val(TxtRemainRent3.text))
-       rs("RemainRent").value = IIf(Trim(txtRemainRent.text) = "", Null, val(txtRemainRent.text))
-       rs("MaintCondition3").value = IIf(Trim(TxtMaintCondition3.text) = "", Null, val(TxtMaintCondition3.text))
-       rs("MaintCondition2").value = IIf(Trim(TxtMaintCondition2.text) = "", Null, val(TxtMaintCondition2.text))
-       rs("MaintCondition").value = IIf(Trim(TxtMaintCondition.text) = "", Null, val(TxtMaintCondition.text))
-       rs("MaintClean3").value = IIf(Trim(TxtMaintClean3.text) = "", Null, val(TxtMaintClean3.text))
-       rs("MaintClean2").value = IIf(Trim(TxtMaintClean2.text) = "", Null, val(TxtMaintClean2.text))
-       rs("MaintClean").value = IIf(Trim(TxtMaintClean.text) = "", Null, val(TxtMaintClean.text))
-       rs("Paints2").value = IIf(Trim(TxtPaints2.text) = "", Null, val(TxtPaints2.text))
-       rs("Paints3").value = IIf(Trim(TxtPaints3.text) = "", Null, val(TxtPaints3.text))
-       rs("Paints").value = IIf(Trim(TxtPaints.text) = "", Null, val(TxtPaints.text))
-       rs("Maintkitchen2").value = IIf(Trim(TxtMaintkitchen2.text) = "", Null, val(TxtMaintkitchen2.text))
-       rs("Maintkitchen3").value = IIf(Trim(TxtMaintkitchen3.text) = "", Null, val(TxtMaintkitchen3.text))
-       rs("Maintkitchen").value = IIf(Trim(TxtMaintkitchen.text) = "", Null, val(TxtMaintkitchen.text))
-       rs("Electricity12").value = IIf(Trim(TxtElectricity12.text) = "", Null, val(TxtElectricity12.text))
-       rs("Electricity13").value = IIf(Trim(TxtElectricity13.text) = "", Null, val(TxtElectricity13.text))
-       rs("Electricity1").value = IIf(Trim(TxtElectricity1.text) = "", Null, val(TxtElectricity1.text))
-       rs("MaintDoors2").value = IIf(Trim(TxtMaintDoors2.text) = "", Null, val(TxtMaintDoors2.text))
-       rs("MaintDoors3").value = IIf(Trim(TxtMaintDoors3.text) = "", Null, val(TxtMaintDoors3.text))
-       rs("MaintDoors").value = IIf(Trim(TxtMaintDoors.text) = "", Null, val(TxtMaintDoors.text))
-       rs("Windows2").value = IIf(Trim(TxtWindows2.text) = "", Null, val(TxtWindows2.text))
-       rs("Windows3").value = IIf(Trim(TxtWindows3.text) = "", Null, val(TxtWindows3.text))
-       rs("Windows").value = IIf(Trim(TxtWindows.text) = "", Null, val(TxtWindows.text))
-       rs("MaintOther2").value = IIf(Trim(TxtMaintOther2.text) = "", Null, val(TxtMaintOther2.text))
-       rs("MaintOther").value = IIf(Trim(TxtMaintOther.text) = "", Null, val(TxtMaintOther.text))
-       rs("MaintOther3").value = IIf(Trim(TxtMaintOther3.text) = "", Null, val(TxtMaintOther3.text))
-       rs("Total22").value = IIf(Trim(TxtTotal22.text) = "", Null, val(TxtTotal22.text))
-       rs("Total23").value = IIf(Trim(TxtTotal23.text) = "", Null, val(TxtTotal23.text))
-       rs("Total21").value = IIf(Trim(txtTotal.text) = "", Null, val(txtTotal.text))
-       rs("TotalAftreIns").value = IIf(Trim(TxtTotalAftreIns.text) = "", Null, val(TxtTotalAftreIns.text))
-       rs("TotalAftreIns2").value = IIf(Trim(TxtTotalAftreIns2.text) = "", Null, val(TxtTotalAftreIns2.text))
-       rs("TotalAftreIns3").value = IIf(Trim(TxtTotalAftreIns3.text) = "", Null, val(TxtTotalAftreIns3.text))
-       rs("Net").value = IIf(Trim(txtNet.text) = "", Null, val(txtNet.text))
-       rs("Net2").value = IIf(Trim(txtNet2.text) = "", Null, val(txtNet2.text))
-       rs("Net3").value = IIf(Trim(TxtNet3.text) = "", Null, val(TxtNet3.text))
+       rs("Insurance").value = IIf(Trim(txtInsurance.Text) = "", Null, val(txtInsurance.Text))
+       rs("Discount").value = IIf(Trim(txtDiscount.Text) = "", Null, val(txtDiscount.Text))
+       rs("Maintenance2").value = IIf(Trim(TxtMaintenance2.Text) = "", Null, val(TxtMaintenance2.Text))
+       rs("Maintenance3").value = IIf(Trim(TxtMaintenance3.Text) = "", Null, val(TxtMaintenance3.Text))
+       rs("Maintenance").value = IIf(Trim(TxtMaintenance.Text) = "", Null, val(TxtMaintenance.Text))
+       rs("RemainRent2").value = IIf(Trim(TxtRemainRent2.Text) = "", Null, val(TxtRemainRent2.Text))
+       rs("RemainRent3").value = IIf(Trim(TxtRemainRent3.Text) = "", Null, val(TxtRemainRent3.Text))
+       rs("RemainRent").value = IIf(Trim(txtRemainRent.Text) = "", Null, val(txtRemainRent.Text))
+       rs("MaintCondition3").value = IIf(Trim(TxtMaintCondition3.Text) = "", Null, val(TxtMaintCondition3.Text))
+       rs("MaintCondition2").value = IIf(Trim(TxtMaintCondition2.Text) = "", Null, val(TxtMaintCondition2.Text))
+       rs("MaintCondition").value = IIf(Trim(TxtMaintCondition.Text) = "", Null, val(TxtMaintCondition.Text))
+       rs("MaintClean3").value = IIf(Trim(TxtMaintClean3.Text) = "", Null, val(TxtMaintClean3.Text))
+       rs("MaintClean2").value = IIf(Trim(TxtMaintClean2.Text) = "", Null, val(TxtMaintClean2.Text))
+       rs("MaintClean").value = IIf(Trim(TxtMaintClean.Text) = "", Null, val(TxtMaintClean.Text))
+       rs("Paints2").value = IIf(Trim(TxtPaints2.Text) = "", Null, val(TxtPaints2.Text))
+       rs("Paints3").value = IIf(Trim(TxtPaints3.Text) = "", Null, val(TxtPaints3.Text))
+       rs("Paints").value = IIf(Trim(TxtPaints.Text) = "", Null, val(TxtPaints.Text))
+       rs("Maintkitchen2").value = IIf(Trim(TxtMaintkitchen2.Text) = "", Null, val(TxtMaintkitchen2.Text))
+       rs("Maintkitchen3").value = IIf(Trim(TxtMaintkitchen3.Text) = "", Null, val(TxtMaintkitchen3.Text))
+       rs("Maintkitchen").value = IIf(Trim(TxtMaintkitchen.Text) = "", Null, val(TxtMaintkitchen.Text))
+       rs("Electricity12").value = IIf(Trim(TxtElectricity12.Text) = "", Null, val(TxtElectricity12.Text))
+       rs("Electricity13").value = IIf(Trim(TxtElectricity13.Text) = "", Null, val(TxtElectricity13.Text))
+       rs("Electricity1").value = IIf(Trim(TxtElectricity1.Text) = "", Null, val(TxtElectricity1.Text))
+       rs("MaintDoors2").value = IIf(Trim(TxtMaintDoors2.Text) = "", Null, val(TxtMaintDoors2.Text))
+       rs("MaintDoors3").value = IIf(Trim(TxtMaintDoors3.Text) = "", Null, val(TxtMaintDoors3.Text))
+       rs("MaintDoors").value = IIf(Trim(TxtMaintDoors.Text) = "", Null, val(TxtMaintDoors.Text))
+       rs("Windows2").value = IIf(Trim(TxtWindows2.Text) = "", Null, val(TxtWindows2.Text))
+       rs("Windows3").value = IIf(Trim(TxtWindows3.Text) = "", Null, val(TxtWindows3.Text))
+       rs("Windows").value = IIf(Trim(TxtWindows.Text) = "", Null, val(TxtWindows.Text))
+       rs("MaintOther2").value = IIf(Trim(TxtMaintOther2.Text) = "", Null, val(TxtMaintOther2.Text))
+       rs("MaintOther").value = IIf(Trim(TxtMaintOther.Text) = "", Null, val(TxtMaintOther.Text))
+       rs("MaintOther3").value = IIf(Trim(TxtMaintOther3.Text) = "", Null, val(TxtMaintOther3.Text))
+       rs("Total22").value = IIf(Trim(TxtTotal22.Text) = "", Null, val(TxtTotal22.Text))
+       rs("Total23").value = IIf(Trim(TxtTotal23.Text) = "", Null, val(TxtTotal23.Text))
+       rs("Total21").value = IIf(Trim(txtTotal.Text) = "", Null, val(txtTotal.Text))
+       rs("TotalAftreIns").value = IIf(Trim(TxtTotalAftreIns.Text) = "", Null, val(TxtTotalAftreIns.Text))
+       rs("TotalAftreIns2").value = IIf(Trim(TxtTotalAftreIns2.Text) = "", Null, val(TxtTotalAftreIns2.Text))
+       rs("TotalAftreIns3").value = IIf(Trim(TxtTotalAftreIns3.Text) = "", Null, val(TxtTotalAftreIns3.Text))
+       rs("Net").value = IIf(Trim(txtNet.Text) = "", Null, val(txtNet.Text))
+       rs("Net2").value = IIf(Trim(txtNet2.Text) = "", Null, val(txtNet2.Text))
+       rs("Net3").value = IIf(Trim(TxtNet3.Text) = "", Null, val(TxtNet3.Text))
   
   End If
        rs("AccountPaym").value = IIf(Trim(DcbAccount.BoundText) = "", Null, DcbAccount.BoundText)
-        rs("ManulaNO").value = IIf(Trim(Me.TxtManulaNO.text) = "", Null, Trim(Me.TxtManulaNO.text))
-        rs("BookNo").value = IIf(Trim(Me.TxtBookNo.text) = "", Null, Trim(Me.TxtBookNo.text))
+        rs("ManulaNO").value = IIf(Trim(Me.TxtManulaNO.Text) = "", Null, Trim(Me.TxtManulaNO.Text))
+        rs("BookNo").value = IIf(Trim(Me.TxtBookNo.Text) = "", Null, Trim(Me.TxtBookNo.Text))
         
         rs("RemaiValue").value = IIf(Trim(Me.lblremain.Caption) = "", Null, val(Me.lblremain.Caption))
-        rs("NoteSerial").value = IIf(Trim(Me.TxtNoteSerial.text) = "", Null, Trim(Me.TxtNoteSerial.text))
-        rs("NoteSerial1").value = IIf(Trim(Me.TxtNoteSerial1.text) = "", Null, Trim(Me.TxtNoteSerial1.text))
-        rs("OldNoteSerial1").value = Trim$(Me.oldtxtNoteSerial1.text) '
+        rs("NoteSerial").value = IIf(Trim(Me.TxtNoteSerial.Text) = "", Null, Trim(Me.TxtNoteSerial.Text))
+        rs("NoteSerial1").value = IIf(Trim(Me.TxtNoteSerial1.Text) = "", Null, Trim(Me.TxtNoteSerial1.Text))
+        rs("OldNoteSerial1").value = Trim$(Me.oldtxtNoteSerial1.Text) '
     
-        rs("person").value = IIf(txtperson.text = "", "", Trim(txtperson.text))
-        rs("Note_Value").value = IIf(XPTxtVal.text = "", Null, val(XPTxtVal.text))
-        rs("Adv_payment_value").value = IIf(txtAdv_payment_value.text = "", Null, val(txtAdv_payment_value.text))
+        rs("person").value = IIf(txtperson.Text = "", "", Trim(txtperson.Text))
+        rs("Note_Value").value = IIf(XPTxtVal.Text = "", Null, val(XPTxtVal.Text))
+        rs("Adv_payment_value").value = IIf(txtAdv_payment_value.Text = "", Null, val(txtAdv_payment_value.Text))
     ''//
 
         
     ''//
     
         '    Rs("Remark").value = IIf(dcproject.BoundText = "", "", Trim(dcproject.BoundText))
-        rs("Remark").value = IIf(XPMTxtRemarks.text = "", "", Trim(XPMTxtRemarks.text))
-        rs("BankName").value = IIf(TXTBankName.text = "", "", Trim(TXTBankName.text))
+        rs("Remark").value = IIf(XPMTxtRemarks.Text = "", "", Trim(XPMTxtRemarks.Text))
+        rs("BankName").value = IIf(TXTBankName.Text = "", "", Trim(TXTBankName.Text))
 
         rs("NoteType").value = 4
            rs("NoteDate").value = XPDtbTrans.value
@@ -15628,7 +15662,7 @@ Cn.Execute StrSQL
         rs("FrmPriodDateH").value = Me.FrmPriodDateH.value
         rs("ToPriodDate").value = Me.ToPriodDate.value
         rs("ToPriodDateH").value = Me.ToPriodDateH.value
-        rs("Remark2").value = Me.txtRemarks.text
+        rs("Remark2").value = Me.TxtRemarks.Text
         ''//
 
         Select Case DCboCashType.ListIndex
@@ -15637,11 +15671,11 @@ Cn.Execute StrSQL
 
                 If Me.ChkTrans.value = vbChecked Then
                     If Me.CboTrans.ListIndex = 0 Or Me.CboTrans.ListIndex = 1 Then
-                        rs("Transaction_ID").value = val(Me.TxtTransID.text)
+                        rs("Transaction_ID").value = val(Me.TxtTransID.Text)
                         rs("MaintananceID").value = Null
                     ElseIf Me.CboTrans.ListIndex = 2 Then
                         rs("Transaction_ID").value = Null
-                        rs("MaintananceID").value = val(Me.TxtTransID.text)
+                        rs("MaintananceID").value = val(Me.TxtTransID.Text)
                     End If
 
                 Else
@@ -15680,7 +15714,7 @@ Cn.Execute StrSQL
         rs("CashingType").value = val(DCboCashType.ListIndex)
     
         If Me.DCboCashType.ListIndex = 0 Or Me.DCboCashType.ListIndex = 1 Or Me.DCboCashType.ListIndex = 2 Or Me.DCboCashType.ListIndex = 4 Or Me.DCboCashType.ListIndex = 8 Or Me.DCboCashType.ListIndex = 9 Or Me.DCboCashType.ListIndex = 10 Or Me.DCboCashType.ListIndex = 11 Or Me.DCboCashType.ListIndex = 12 Or Me.DCboCashType.ListIndex = 13 Then
-            rs("CusID").value = IIf(DBCboClientName.text = "", Null, DBCboClientName.BoundText)
+            rs("CusID").value = IIf(DBCboClientName.Text = "", Null, DBCboClientName.BoundText)
      
         ElseIf Me.DCboCashType.ListIndex = 5 Then
             Dim X As Double
@@ -15702,14 +15736,14 @@ Cn.Execute StrSQL
 
         '--------------------------------------------------------------------------
         'ÿ—Ìﬁ… «·œ›⁄ «·‰ﬁœÏ «Ê «·‘Ìﬂ
-        If Me.CboPayMentType.ListIndex = 0 Then
+        If Me.CboPaymentType.ListIndex = 0 Then
             rs("NoteCashingType").value = 0
             rs("BoxID").value = IIf(DcboBox.BoundText = "", Null, DcboBox.BoundText)
             rs("BankID").value = Null
             rs("ChqueNum").value = Null
             rs("DueDate").value = Null
         
-        ElseIf Me.CboPayMentType.ListIndex = 1 Then
+        ElseIf Me.CboPaymentType.ListIndex = 1 Then
             rs("NoteCashingType").value = 1
             rs("BoxID").value = Null
 
@@ -15720,7 +15754,7 @@ Cn.Execute StrSQL
                 rs("BankID").value = Null
             End If
         
-            rs("ChqueNum").value = Trim$(Me.TxtChequeNumber.text)
+            rs("ChqueNum").value = Trim$(Me.TxtChequeNumber.Text)
             rs("DueDate").value = Me.DtpChequeDueDate.value
 
             If SystemOptions.ChequeBox = True Then
@@ -15730,22 +15764,22 @@ Cn.Execute StrSQL
                 
             End If
                 
-        ElseIf Me.CboPayMentType.ListIndex = 2 Then
+        ElseIf Me.CboPaymentType.ListIndex = 2 Then
             rs("NoteCashingType").value = 2
             rs("BoxID").value = Null
             rs("BankID").value = val(Me.DcboBankName.BoundText)
-            rs("ChqueNum").value = Trim$(Me.TxtChequeNumber.text)
+            rs("ChqueNum").value = Trim$(Me.TxtChequeNumber.Text)
             rs("DueDate").value = Me.DtpChequeDueDate.value
             rs("ChequeBoxID").value = Null
                 
-        ElseIf Me.CboPayMentType.ListIndex = 3 Then
+        ElseIf Me.CboPaymentType.ListIndex = 3 Then
             rs("NoteCashingType").value = 3
             rs("BoxID").value = Null
             rs("BankID").value = val(Me.DcboBankName.BoundText)
-            rs("ChqueNum").value = Trim$(Me.TxtChequeNumber.text)
+            rs("ChqueNum").value = Trim$(Me.TxtChequeNumber.Text)
             rs("DueDate").value = Me.DtpChequeDueDate.value
             rs("ChequeBoxID").value = Null
-          ElseIf Me.CboPayMentType.ListIndex = 4 Then
+          ElseIf Me.CboPaymentType.ListIndex = 4 Then
             rs("NoteCashingType").value = 4
             rs("BoxID").value = Null
                 
@@ -15769,16 +15803,16 @@ Cn.Execute StrSQL
         End If
     
        If DCboCashType.ListIndex = 8 Or DCboCashType.ListIndex = 13 Then
-            rs("ContractNo").value = IIf(txtContractNo.text = "", Null, txtContractNo.text)
-            rs("ContNo").value = IIf(TxtContNo.text = "", Null, TxtContNo.text)
+            rs("ContractNo").value = IIf(txtContractNo.Text = "", Null, txtContractNo.Text)
+            rs("ContNo").value = IIf(TxtContNo.Text = "", Null, TxtContNo.Text)
             Else
              rs("ContractNo").value = Null
              rs("ContNo").value = Null
         End If
          If DCboCashType.ListIndex = 10 Then
-            rs("FilterID").value = IIf(TxtFilterNo.text = "", Null, TxtFilterNo.text)
-            rs("FIlterTotal").value = IIf(TXtFilter.text = "", Null, TXtFilter.text)
-            rs("TotalInsurances").value = IIf(txtTotalinsuranceS.text = "", Null, txtTotalinsuranceS.text)
+            rs("FilterID").value = IIf(TxtFilterNo.Text = "", Null, TxtFilterNo.Text)
+            rs("FIlterTotal").value = IIf(TXtFilter.Text = "", Null, TXtFilter.Text)
+            rs("TotalInsurances").value = IIf(txtTotalinsuranceS.Text = "", Null, txtTotalinsuranceS.Text)
             Else
              rs("FilterID").value = Null
              rs("FIlterTotal").value = Null
@@ -15794,9 +15828,9 @@ Cn.Execute StrSQL
   
      
      
-     rs("interval").value = IIf(TxtInterval.text = "", Null, val(TxtInterval.text))
+     rs("interval").value = IIf(TxtInterval.Text = "", Null, val(TxtInterval.Text))
      rs("intervaltype").value = val(cbointervaltype.ListIndex)
-     rs("renterName").value = IIf(txtrenterName.text = "", Null, txtrenterName.text)
+     rs("renterName").value = IIf(txtrenterName.Text = "", Null, txtrenterName.Text)
               If cbointervaltype.ListIndex = 0 Then
               rs("allowdate").value = DateAdd("d", val(TxtInterval), XPDtbTrans.value)
               ElseIf cbointervaltype.ListIndex = 1 Then
@@ -15822,7 +15856,7 @@ Cn.Execute StrSQL
         rs("sanad_month").value = Month(XPDtbTrans.value)
     
         If DCboCashType.ListIndex = 5 Then
-            rs("note_value_by_characters").value = WriteNo(val(Me.XPTxtVal.text) * 2, 0, True)
+            rs("note_value_by_characters").value = WriteNo(val(Me.XPTxtVal.Text) * 2, 0, True)
         Else
             rs("note_value_by_characters").value = Trim$(Me.lbl(18).Caption)
         End If
@@ -15835,24 +15869,24 @@ Cn.Execute StrSQL
     
    
 
-        saveChequeBoxContents (XPTxtID.text)
+        saveChequeBoxContents (XPTxtID.Text)
         rs.update
            Dim IarType As Integer
             IarType = AqarCommisionType(val(DcbIqara.BoundText))
         '==========================================================================
 If SystemOptions.NoCreatJLInRentContract = True And DCboCashType.ListIndex = 8 Then
             If IarType <> 0 Then
-            OtherOwnerNoreatJlInContract 1, val(XPTxtID.text)
+            OtherOwnerNoreatJlInContract 1, val(XPTxtID.Text)
             Else
-            MyOwnerNoreatJlInContract 1, val(XPTxtID.text)
+            MyOwnerNoreatJlInContract 1, val(XPTxtID.Text)
             End If
 GoTo x22
 End If
 If SystemOptions.NoCreatJLInRentContract = True And DCboCashType.ListIndex = 10 Then
 If IarType <> 0 Then
-OtherOwnerNoreatJlInContractFiter 1, val(XPTxtID.text)
+OtherOwnerNoreatJlInContractFiter 1, val(XPTxtID.Text)
 Else
-MyOwnerNoreatJlInContractFiter 1, val(XPTxtID.text)
+MyOwnerNoreatJlInContractFiter 1, val(XPTxtID.Text)
 End If
 GoTo x22
 End If
@@ -15891,18 +15925,18 @@ If pstate = 1 Then Option7.value = True: GoTo ll
                 If account_codeLegal = "" Or account_codeREVENUE_account = "" Then GoTo ll
        
                 RsDev.AddNew
-                RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+                RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
                 RsDev("Double_Entry_Vouchers_ID").value = LngDevID
                 RsDev("DEV_ID_Line_No").value = 3
                 RsDev("DEV_ID_Line_No1").value = Line3
             
                 RsDev("Account_Code").value = account_codeLegal
-                RsDev("Value").value = val(Me.XPTxtVal.text)
+                RsDev("Value").value = val(Me.XPTxtVal.Text)
                 RsDev("Credit_Or_Debit").value = 0
-                RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text
+                RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text
                 'RsDev("Double_Entry_Vouchers_Description").value = dcproject.BoundText
             
-                RsDev("Notes_ID").value = val(XPTxtID.text)
+                RsDev("Notes_ID").value = val(XPTxtID.Text)
                 RsDev("RecordDate").value = Me.XPDtbTrans.value
                 RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
                 RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -15916,16 +15950,16 @@ If pstate = 1 Then Option7.value = True: GoTo ll
                 '«·ÿ—› «·œ«∆‰
                 RsDev.AddNew
                 lineno = lineno + 1
-                RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+                RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
                 RsDev("Double_Entry_Vouchers_ID").value = LngDevID
                 RsDev("DEV_ID_Line_No").value = lineno
                 RsDev("DEV_ID_Line_No1").value = Line4
                 RsDev("Account_Code").value = account_codeREVENUE_account
-                RsDev("Value").value = val(Me.XPTxtVal.text)
+                RsDev("Value").value = val(Me.XPTxtVal.Text)
                 RsDev("Credit_Or_Debit").value = 1
-                RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text
+                RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text
                 ' RsDev("Double_Entry_Vouchers_Description").value = dcproject.BoundText
-                RsDev("Notes_ID").value = val(XPTxtID.text)
+                RsDev("Notes_ID").value = val(XPTxtID.Text)
                 RsDev("RecordDate").value = Me.XPDtbTrans.value
                 RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
                 RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -15939,20 +15973,20 @@ If pstate = 1 Then Option7.value = True: GoTo ll
             If SystemOptions.DueComm = True Then
             lineno = lineno + 1
       RsDev.AddNew
-            RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+            RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
  If SystemOptions.Create2account4Supp = True Then
  
-  RentAccount = get_account_code_branch(153, val(dcBranch.BoundText))
+  RentAccount = get_account_code_branch(153, val(Dcbranch.BoundText))
    End If
 
             RsDev("Account_Code").value = RentAccount
             RsDev("Value").value = (ComVal)
             RsDev("Credit_Or_Debit").value = 0
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -15962,15 +15996,15 @@ If pstate = 1 Then Option7.value = True: GoTo ll
  
 lineno = lineno + 1
  RsDev.AddNew
-        RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+        RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
             RsDev("Account_Code").value = CommissionAcc
             RsDev("Value").value = ComVal
             RsDev("Credit_Or_Debit").value = 1
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -15995,17 +16029,17 @@ End If
         '==========================================================================
             
               If DCboCashType.ListIndex = 5 Then
-            saveprojectBillPayment TxtNoteSerial.text, val(XPTxtVal.text)
+            saveprojectBillPayment TxtNoteSerial.Text, val(XPTxtVal.Text)
         End If
       
         
         rs.update
                       Save3
             CuurentLogdata
-             save_General_cost_center Me.DcCostCenter.BoundText, Me.DcCostCenter.text, "„ﬁ»Ê÷« ", Me.XPDtbTrans.value
+             save_General_cost_center Me.DcCostCenter.BoundText, Me.DcCostCenter.Text, "„ﬁ»Ê÷« ", Me.XPDtbTrans.value
         save_cost_center
           If val(DCboCashType.ListIndex) <> 8 Then
-           updateNotesValueAndNobytext val(XPTxtID.text), Format(XPTxtVal.text, "###.00")
+           updateNotesValueAndNobytext val(XPTxtID.Text), Format(XPTxtVal.Text, "###.00")
            Else
          '  updateNotesValueAndNobytext val(XPTxtID.text), Format(XPTxtVal.text, "###.00")
        End If
@@ -16020,7 +16054,7 @@ End If
       
     
         If DCboCashType.ListIndex = 5 Then
-            FillGridWithData val(Me.DBCboClientName.BoundText), TxtNoteSerial.text
+            FillGridWithData val(Me.DBCboClientName.BoundText), TxtNoteSerial.Text
         End If
     
     
@@ -16032,13 +16066,13 @@ End If
         
         If Me.ChkTrans.value = vbUnchecked Then
             Me.CboTrans.ListIndex = -1
-            Me.TxtTransSerial.text = ""
-            Me.TxtTransID.text = ""
+            Me.TxtTransSerial.Text = ""
+            Me.TxtTransID.Text = ""
         End If
     SendMessage (1)
         
 'rs.Resync
-        Select Case Me.TxtModFlg.text
+        Select Case Me.TxtModFlg.Text
 
             Case "N"
                 Msg = "  „ Õ›Ÿ »Ì«‰«  Â–Â «·⁄„·Ì… " & CHR(13)
@@ -16054,15 +16088,15 @@ End If
                 lbl(46).Caption = showLabel(TxtNoteSerial1, oldtxtNoteSerial1)
            
         End Select
-       Me.TxtModFlg.text = "R"
-                Retrive val(XPTxtID.text)
+       Me.TxtModFlg.Text = "R"
+                Retrive val(XPTxtID.Text)
         '   If Me.DcCostCenter.BoundText <> "" Then
        
         '   End If
        
     
  
-        TxtModFlg.text = "R"
+        TxtModFlg.Text = "R"
     
 
     WriteCustomerBalPublic Me.DcboCreditSide.BoundText, Balance, balanceString
@@ -16073,7 +16107,7 @@ End If
    
  
 
-    TxtModFlg.text = "R"
+    TxtModFlg.Text = "R"
     Exit Sub
 ErrTrap:
 
@@ -16159,20 +16193,20 @@ Dim i As Integer
        ''//////////////////
             RsDev.AddNew
             lineno = lineno + 1
-            RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+            RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("Aqarid").value = val(DcbIqara.BoundText)
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1 + 1
             RsDev("Account_Code").value = Me.DcboDebitSide.BoundText
-            RsDev("Value").value = val(Me.XPTxtVal.text) + val(TxtVATValue.text)
+            RsDev("Value").value = val(Me.XPTxtVal.Text) + val(TxtVATValue.Text)
             RsDev("Credit_Or_Debit").value = 0
                If DCboCashType.ListIndex = 9 Then
             
-             newdes = "  ⁄—»Ê‰ ÕÃ“  «·⁄ﬁ«—    " & CHR(13) & "  «·⁄ﬁ«—" & DcbIqara.text & CHR(13) & " «·‰Ê⁄ :" & DcbUnitType.text & CHR(13) & "  »—ﬁ„   " & DcbUnitNo.text & CHR(13) & "  ··„” √Ã— " & Me.DBCboClientName.text
+             newdes = "  ⁄—»Ê‰ ÕÃ“  «·⁄ﬁ«—    " & CHR(13) & "  «·⁄ﬁ«—" & DcbIqara.Text & CHR(13) & " «·‰Ê⁄ :" & DcbUnitType.Text & CHR(13) & "  »—ﬁ„   " & DcbUnitNo.Text & CHR(13) & "  ··„” √Ã— " & Me.DBCboClientName.Text
             End If
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16188,7 +16222,7 @@ Dim i As Integer
             If IarType <> 0 Then
                 RsDev.AddNew
                 lineno = lineno + 1
-                RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+                RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
                 RsDev("Double_Entry_Vouchers_ID").value = LngDevID
                 RsDev("DEV_ID_Line_No").value = lineno
                 RsDev("DEV_ID_Line_No1").value = Line2
@@ -16198,29 +16232,29 @@ Dim i As Integer
                 Else
                     RsDev("Account_Code").value = GetAqarAcountCode(val(DcbIqara.BoundText))
                 End If
-                RsDev("Value").value = val(Me.XPTxtVal.text)
+                RsDev("Value").value = val(Me.XPTxtVal.Text)
                 RsDev("Credit_Or_Debit").value = 1
-                RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-                RsDev("Notes_ID").value = val(XPTxtID.text)
+                RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+                RsDev("Notes_ID").value = val(XPTxtID.Text)
                 RsDev("RecordDate").value = Me.XPDtbTrans.value
                 RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
                 RsDev("UserID").value = Me.DCboUserName.BoundText
                 RsDev("Account_Interval_ID").value = SystemOptions.SysCurrentAccountIntervalID
                 RsDev.update
             ''////////////////
-                If val(Me.TxtVATValue.text) <> 0 Then
+                If val(Me.TxtVATValue.Text) <> 0 Then
                       RsDev.AddNew
                       lineno = lineno + 1
-                    RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+                    RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
                     RsDev("Double_Entry_Vouchers_ID").value = LngDevID
                     RsDev("DEV_ID_Line_No").value = lineno
                     RsDev("DEV_ID_Line_No1").value = Line2
                     RsDev("Aqarid").value = val(DcbIqara.BoundText)
                     RsDev("Account_Code").value = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Txtownerid), "Account_VAT")
-                    RsDev("Value").value = val(Me.TxtVATValue.text)
+                    RsDev("Value").value = val(Me.TxtVATValue.Text)
                     RsDev("Credit_Or_Debit").value = 1
-                    RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-                    RsDev("Notes_ID").value = val(XPTxtID.text)
+                    RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+                    RsDev("Notes_ID").value = val(XPTxtID.Text)
                     RsDev("RecordDate").value = Me.XPDtbTrans.value
                     RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
                     RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16235,7 +16269,7 @@ Dim i As Integer
            LngDevID = LngDevID + 1
             RsDev.AddNew
             lineno = lineno + 1
-            RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+            RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Aqarid").value = val(DcbIqara.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
@@ -16254,17 +16288,17 @@ Dim i As Integer
            End If
             
             
-            RsDev("Value").value = val(Me.XPTxtVal.text)
+            RsDev("Value").value = val(Me.XPTxtVal.Text)
             RsDev("Aqarid").value = val(DcbIqara.BoundText)
             RsDev("Credit_Or_Debit").value = 1
              If DCboCashType.ListIndex = 9 Then
             
-             newdes = "  ⁄—»Ê‰ ÕÃ“  «·ÊÕœ…   " & " «·⁄ﬁ«— " & DcbIqara.text & "  ‰Ê⁄ «·ÊÕœ… " & DcbUnitType.text & "  »—ﬁ„   " & DcbUnitNo.text & "  ··„” √Ã— " & txtrenterName
-             newdes = "  ⁄—»Ê‰ ÕÃ“  «·⁄ﬁ«—    " & CHR(13) & "  «·⁄ﬁ«—" & DcbIqara.text & CHR(13) & " «·‰Ê⁄ :" & DcbUnitType.text & CHR(13) & "  »—ﬁ„   " & DcbUnitNo.text & CHR(13) & "  ··„” √Ã— " & Me.DBCboClientName.text
+             newdes = "  ⁄—»Ê‰ ÕÃ“  «·ÊÕœ…   " & " «·⁄ﬁ«— " & DcbIqara.Text & "  ‰Ê⁄ «·ÊÕœ… " & DcbUnitType.Text & "  »—ﬁ„   " & DcbUnitNo.Text & "  ··„” √Ã— " & txtrenterName
+             newdes = "  ⁄—»Ê‰ ÕÃ“  «·⁄ﬁ«—    " & CHR(13) & "  «·⁄ﬁ«—" & DcbIqara.Text & CHR(13) & " «·‰Ê⁄ :" & DcbUnitType.Text & CHR(13) & "  »—ﬁ„   " & DcbUnitNo.Text & CHR(13) & "  ··„” √Ã— " & Me.DBCboClientName.Text
              
             End If
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16329,11 +16363,11 @@ RemainValue = Round(val(RntVal) - commissionvalue, 2)
  
  
  End If
- newdes = "   ﬁ»÷ „‰ «„·«ﬂ «·€Ì— ·   " & DcbUnitType.text & "  »—ﬁ„   " & DcbUnitNo.text & " ··⁄ﬁ«— " & DcbIqara.text
+ newdes = "   ﬁ»÷ „‰ «„·«ﬂ «·€Ì— ·   " & DcbUnitType.Text & "  »—ﬁ„   " & DcbUnitNo.Text & " ··⁄ﬁ«— " & DcbIqara.Text
  'If SystemOptions.NoCreatJLInRentContract = False And DCboCashType.ListIndex = 8 Then
  If DCboCashType.ListIndex = 8 Then
   RsDev.AddNew
-            RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+            RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Aqarid").value = val(DcbIqara.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
@@ -16357,13 +16391,13 @@ RemainValue = Round(val(RntVal) - commissionvalue, 2)
             'Wael   „ «Ìﬁ«›Â ·«‰‰« ‰ﬁ’‰« «·⁄„Ê·… „‰ «·ﬁÌœ RsDev("Value").value = RntVal ' RemainValue ' (RntVal)
             
              If RemainValue = 0 Then
-                RemainValue = val(Me.XPTxtVal.text) + val(TxtVATValue.text)
+                RemainValue = val(Me.XPTxtVal.Text) + val(TxtVATValue.Text)
              End If
             RsDev("Value").value = RemainValue ' (RntVal)
             RsDev("Credit_Or_Debit").value = 0
              
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes & "«ÌÃ«— "
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes & "«ÌÃ«— "
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16373,7 +16407,7 @@ RemainValue = Round(val(RntVal) - commissionvalue, 2)
  
 lineno = lineno + 1
  RsDev.AddNew
-        RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+        RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("Aqarid").value = val(DcbIqara.BoundText)
             RsDev("DEV_ID_Line_No").value = lineno
@@ -16388,7 +16422,7 @@ lineno = lineno + 1
              
             'Wael   „ «Ìﬁ«›Â ·«‰‰« ‰ﬁ’‰« «·⁄„Ê·… „‰ «·ﬁÌœ RsDev("Value").value = RntVal ' RemainValue ' (RntVal)
                          If RemainValue = 0 Then
-                RemainValue = val(Me.XPTxtVal.text) + val(TxtVATValue.text)
+                RemainValue = val(Me.XPTxtVal.Text) + val(TxtVATValue.Text)
              End If
 
             RsDev("Value").value = RemainValue ' (RntVal)
@@ -16396,8 +16430,8 @@ lineno = lineno + 1
             
            '  newdes = "   ﬁ»÷ „‰ «„·«ﬂ «·€Ì— ·   " & DcbUnitType.text & "  »—ﬁ„   " & DcbUnitNo.text & "  ··„” √Ã— " & txtrenterName
             
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes & "«ÌÃ«— "
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes & "«ÌÃ«— "
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16411,21 +16445,21 @@ lineno = lineno + 1
   If SystemOptions.DueComm = True And ComVal > 0 Then
   lineno = lineno + 1
       RsDev.AddNew
-            RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+            RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
             RsDev("Aqarid").value = val(DcbIqara.BoundText)
  If SystemOptions.Create2account4Supp = True Then
  
-  RentAccount = get_account_code_branch(153, val(dcBranch.BoundText))
+  RentAccount = get_account_code_branch(153, val(Dcbranch.BoundText))
    End If
 
             RsDev("Account_Code").value = RentAccount
             RsDev("Value").value = (ComVal)
             RsDev("Credit_Or_Debit").value = 0
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes & " ”⁄Ì  "
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes & " ”⁄Ì  "
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16435,15 +16469,15 @@ lineno = lineno + 1
  
 lineno = lineno + 1
  RsDev.AddNew
-        RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+        RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
             RsDev("Account_Code").value = CommissionAcc
             RsDev("Value").value = ComVal
             RsDev("Credit_Or_Debit").value = 1
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes & " ”⁄Ì "
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes & " ”⁄Ì "
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16483,7 +16517,7 @@ If commissionvalue > 0 Then
 If 1 = 1 And SystemOptions.CommissionDue = True Then
 lineno = lineno + 1
  RsDev.AddNew
-        RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+        RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
@@ -16501,9 +16535,9 @@ lineno = lineno + 1
             
             RsDev("Value").value = commissionvalue
             RsDev("Credit_Or_Debit").value = 0
-           newdes = "   ﬁ»÷  ⁄„Ê·Â „‰ «„·«ﬂ «·€Ì— ·‹‹‹‹‹   " & DcbUnitType.text & "  »—ﬁ„   " & DcbUnitNo.text & "  ··„” √Ã— " & txtrenterName
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+           newdes = "   ﬁ»÷  ⁄„Ê·Â „‰ «„·«ﬂ «·€Ì— ·‹‹‹‹‹   " & DcbUnitType.Text & "  »—ﬁ„   " & DcbUnitNo.Text & "  ··„” √Ã— " & txtrenterName
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16516,7 +16550,7 @@ lineno = lineno + 1
 
 lineno = lineno + 1
  RsDev.AddNew
-        RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+        RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
@@ -16533,9 +16567,9 @@ lineno = lineno + 1
             
             RsDev("Value").value = commissionvalue
             RsDev("Credit_Or_Debit").value = 1
-           newdes = "   ﬁ»÷ ⁄„Ê·Â „‰ «„·«ﬂ «·€Ì— ·   " & DcbUnitType.text & "  »—ﬁ„   " & DcbUnitNo.text & "  ··„” √Ã— " & txtrenterName
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+           newdes = "   ﬁ»÷ ⁄„Ê·Â „‰ «„·«ﬂ «·€Ì— ·   " & DcbUnitType.Text & "  »—ﬁ„   " & DcbUnitNo.Text & "  ··„” √Ã— " & txtrenterName
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16551,7 +16585,7 @@ lineno = lineno + 1
            Dim account As String
             PercentgValueAddedAccount_Transec XPDtbTrans.value, 21, 1, account
             RsDev.AddNew
-        RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+        RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
@@ -16564,8 +16598,8 @@ lineno = lineno + 1
 
             RsDev("Value").value = mVATValue1Com
             RsDev("Credit_Or_Debit").value = 0
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes & " ÷—Ì»… «·⁄„Ê·… "
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes & " ÷—Ì»… «·⁄„Ê·… "
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16586,15 +16620,15 @@ lineno = lineno + 1
             End If
 
             RsDev.AddNew
-        RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+        RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
             RsDev("Account_Code").value = account
             RsDev("Value").value = mVATValue1Com
             RsDev("Credit_Or_Debit").value = 1
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes & " ÷—Ì»… «·⁄„Ê·… "
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes & " ÷—Ì»… «·⁄„Ê·… "
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16619,7 +16653,7 @@ PercentgValueAddedAccount_Transec XPDtbTrans.value, 51, 1, RentAccountX, PERCNTA
 If SystemOptions.DueComm = True And commissionvalue > 0 Then
 lineno = lineno + 1
  RsDev.AddNew
-        RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+        RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
@@ -16632,9 +16666,9 @@ lineno = lineno + 1
 
        
             RsDev("Credit_Or_Debit").value = 0
-           newdes = "   ﬁ»÷ ⁄„Ê·Â „‰ «„·«ﬂ «·€Ì— ·   " & DcbUnitType.text & "  »—ﬁ„   " & DcbUnitNo.text & "  ··„” √Ã— " & txtrenterName '& "«·⁄„Ê·Â „⁄ ﬁ „"
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+           newdes = "   ﬁ»÷ ⁄„Ê·Â „‰ «„·«ﬂ «·€Ì— ·   " & DcbUnitType.Text & "  »—ﬁ„   " & DcbUnitNo.Text & "  ··„” √Ã— " & txtrenterName '& "«·⁄„Ê·Â „⁄ ﬁ „"
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16645,7 +16679,7 @@ lineno = lineno + 1
             
             lineno = lineno + 1
  RsDev.AddNew
-        RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+        RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
@@ -16666,9 +16700,9 @@ lineno = lineno + 1
             
             
             RsDev("Credit_Or_Debit").value = 1
-           newdes = "   ﬁ»÷ ⁄„Ê·Â „‰ «„·«ﬂ «·€Ì— ·   zzz " & DcbUnitType.text & "  »—ﬁ„   " & DcbUnitNo.text & "  ··„” √Ã— " & txtrenterName & "«·⁄„Ê·Â  "
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+           newdes = "   ﬁ»÷ ⁄„Ê·Â „‰ «„·«ﬂ «·€Ì— ·   zzz " & DcbUnitType.Text & "  »—ﬁ„   " & DcbUnitNo.Text & "  ··„” √Ã— " & txtrenterName & "«·⁄„Ê·Â  "
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16681,7 +16715,7 @@ If commissionvalue * PERCNTAGE / 100 > 0 Then
 lineno = lineno + 1
 
  RsDev.AddNew
-        RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+        RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
@@ -16690,9 +16724,9 @@ lineno = lineno + 1
             RsDev("Account_Code").value = RentAccount
             RsDev("Value").value = commissionvalue * PERCNTAGE / 100 ' 0.05
             RsDev("Credit_Or_Debit").value = 1
-           newdes = "  zzz  ﬁ»÷ „‰ «„·«ﬂ «·€Ì— ·   " & DcbUnitType.text & "  »—ﬁ„   " & DcbUnitNo.text & "  ··„” √Ã— " & txtrenterName & "  ﬁ „÷«›… "
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+           newdes = "  zzz  ﬁ»÷ „‰ «„·«ﬂ «·€Ì— ·   " & DcbUnitType.Text & "  »—ﬁ„   " & DcbUnitNo.Text & "  ··„” √Ã— " & txtrenterName & "  ﬁ „÷«›… "
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16733,7 +16767,7 @@ End If
     If commissionvalue > 0 Then
 lineno = lineno + 1
  RsDev.AddNew
-        RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+        RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
@@ -16741,9 +16775,9 @@ lineno = lineno + 1
             RsDev("Value").value = CommissionVAT
             RsDev("Aqarid").value = val(DcbIqara.BoundText)
             RsDev("Credit_Or_Debit").value = 0
-            newdes = "   ﬁ»÷ „‰ «„·«ﬂ «·€Ì— ·   " & DcbUnitType.text & "  »—ﬁ„   " & DcbUnitNo.text & "  ··„” √Ã— " & txtrenterName
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            newdes = "   ﬁ»÷ „‰ «„·«ﬂ «·€Ì— ·   " & DcbUnitType.Text & "  »—ﬁ„   " & DcbUnitNo.Text & "  ··„” √Ã— " & txtrenterName
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16753,7 +16787,7 @@ lineno = lineno + 1
 
 lineno = lineno + 1
  RsDev.AddNew
-        RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+        RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
@@ -16762,9 +16796,9 @@ lineno = lineno + 1
             RsDev("Account_Code").value = RentAccount
             RsDev("Value").value = CommissionVAT
             RsDev("Credit_Or_Debit").value = 1
-           newdes = "   ﬁ»÷ „‰ «„·«ﬂ «·€Ì— ·   " & DcbUnitType.text & "  »—ﬁ„   " & DcbUnitNo.text & "  ··„” √Ã— " & txtrenterName
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+           newdes = "   ﬁ»÷ „‰ «„·«ﬂ «·€Ì— ·   " & DcbUnitType.Text & "  »—ﬁ„   " & DcbUnitNo.Text & "  ··„” √Ã— " & txtrenterName
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16777,22 +16811,22 @@ End If
     ''///////////////////////
     
     If DCboCashType.ListIndex = 9 Then
-    If val(TxtVATValue.text) > 0 Then
+    If val(TxtVATValue.Text) > 0 Then
 
 lineno = lineno + 1
  RsDev.AddNew
-        RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+        RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
            ' GetValueAddedAccount XPDtbTrans.value, , RentAccount, 1, 21
             PercentgValueAddedAccount_Transec XPDtbTrans.value, 8, 1, RentAccount
             RsDev("Account_Code").value = RentAccount
-            RsDev("Value").value = val(TxtVATValue.text)
+            RsDev("Value").value = val(TxtVATValue.Text)
             RsDev("Credit_Or_Debit").value = 1
-           newdes = "   ﬁ»÷ „‰ «„·«ﬂ «·€Ì— ·   " & DcbUnitType.text & "  »—ﬁ„   " & DcbUnitNo.text & "  ··„” √Ã— " & txtrenterName
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+           newdes = "   ﬁ»÷ „‰ «„·«ﬂ «·€Ì— ·   " & DcbUnitType.Text & "  »—ﬁ„   " & DcbUnitNo.Text & "  ··„” √Ã— " & txtrenterName
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16821,21 +16855,21 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("WaterPayed"))) + val(.TextMatrix
  If ComVal > 0 Then
  lineno = lineno + 1
       RsDev.AddNew
-            RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+            RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
             If Rd(1).value = False Then '«„·«ﬂÌ
             
-                 RentAccount = get_account_code_branch(154, val(dcBranch.BoundText))
+                 RentAccount = get_account_code_branch(154, val(Dcbranch.BoundText))
             
             Else
             
-                  RentAccount = get_account_code_branch(123, val(dcBranch.BoundText))
+                  RentAccount = get_account_code_branch(123, val(Dcbranch.BoundText))
             
                       If SystemOptions.ServicesOnOwner = True Then
                                If SystemOptions.Create2account4Supp = True Then
-                                  RentAccount = GetMyAccountCode("TblCustemers", "CusID", CLng(Txtownerid.text), "Account_Code1")
+                                  RentAccount = GetMyAccountCode("TblCustemers", "CusID", CLng(Txtownerid.Text), "Account_Code1")
                              End If
             
                         End If
@@ -16846,8 +16880,8 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("WaterPayed"))) + val(.TextMatrix
             RsDev("Account_Code").value = RentAccount
             RsDev("Value").value = (ComVal)
             RsDev("Credit_Or_Debit").value = 0
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes & "   „Ì«Â   "
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes & "   „Ì«Â   "
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16857,21 +16891,21 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("WaterPayed"))) + val(.TextMatrix
  
 lineno = lineno + 1
             RsDev.AddNew
-            RentAccount = get_account_code_branch(83, val(dcBranch.BoundText))
-            RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+            RentAccount = get_account_code_branch(83, val(Dcbranch.BoundText))
+            RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
             
                If Rd(1).value = False Then '«„·«ﬂÌ
             
-                 RentAccount = get_account_code_branch(83, val(dcBranch.BoundText))
+                 RentAccount = get_account_code_branch(83, val(Dcbranch.BoundText))
             
             Else
             
                         If SystemOptions.ServicesOnOwner = True Then
                                    
-                                  RentAccount = GetMyAccountCode("TblCustemers", "CusID", CLng(Txtownerid.text), "Account_Code")
+                                  RentAccount = GetMyAccountCode("TblCustemers", "CusID", CLng(Txtownerid.Text), "Account_Code")
                        End If
                     
 
@@ -16882,8 +16916,8 @@ lineno = lineno + 1
             RsDev("Value").value = ComVal
             RsDev("Credit_Or_Debit").value = 1
             
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes & "   „Ì«Â   "
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes & "   „Ì«Â   "
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16908,23 +16942,23 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("ElectricPayed"))) + val(.TextMat
  If ComVal > 0 Then
  lineno = lineno + 1
       RsDev.AddNew
-            RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+            RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
-            RentAccount = get_account_code_branch(155, val(dcBranch.BoundText))
+            RentAccount = get_account_code_branch(155, val(Dcbranch.BoundText))
             
             If Rd(1).value = False Then '«„·«ﬂÌ
             
-                 RentAccount = get_account_code_branch(155, val(dcBranch.BoundText))
+                 RentAccount = get_account_code_branch(155, val(Dcbranch.BoundText))
             
             Else
             
-                  RentAccount = get_account_code_branch(123, val(dcBranch.BoundText))
+                  RentAccount = get_account_code_branch(123, val(Dcbranch.BoundText))
             
                       If SystemOptions.ServicesOnOwner = True Then
                                If SystemOptions.Create2account4Supp = True Then
-                                  RentAccount = GetMyAccountCode("TblCustemers", "CusID", CLng(Txtownerid.text), "Account_Code1")
+                                  RentAccount = GetMyAccountCode("TblCustemers", "CusID", CLng(Txtownerid.Text), "Account_Code1")
                              End If
             
                         End If
@@ -16935,8 +16969,8 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("ElectricPayed"))) + val(.TextMat
             RsDev("Account_Code").value = RentAccount
             RsDev("Value").value = (ComVal)
             RsDev("Credit_Or_Debit").value = 0
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes & "   ﬂÂ—»«¡   "
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes & "   ﬂÂ—»«¡   "
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16946,21 +16980,21 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("ElectricPayed"))) + val(.TextMat
  
 lineno = lineno + 1
  RsDev.AddNew
- RentAccount = get_account_code_branch(84, val(dcBranch.BoundText))
-           RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+ RentAccount = get_account_code_branch(84, val(Dcbranch.BoundText))
+           RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
             
                            If Rd(1).value = False Then '«„·«ﬂÌ
             
-                 RentAccount = get_account_code_branch(84, val(dcBranch.BoundText))
+                 RentAccount = get_account_code_branch(84, val(Dcbranch.BoundText))
             
             Else
             
                         If SystemOptions.ServicesOnOwner = True Then
                                    
-                                  RentAccount = GetMyAccountCode("TblCustemers", "CusID", CLng(Txtownerid.text), "Account_Code")
+                                  RentAccount = GetMyAccountCode("TblCustemers", "CusID", CLng(Txtownerid.Text), "Account_Code")
                        End If
                     
 
@@ -16968,8 +17002,8 @@ lineno = lineno + 1
               RsDev("Account_Code").value = RentAccount
             RsDev("Value").value = ComVal
             RsDev("Credit_Or_Debit").value = 1
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes & "   ﬂÂ—»«¡   "
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes & "   ﬂÂ—»«¡   "
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -16994,22 +17028,22 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("TelandNetPayed"))) + val(.TextMa
  If ComVal > 0 Then
       RsDev.AddNew
       lineno = lineno + 1
-            RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+            RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
-            RentAccount = get_account_code_branch(156, val(dcBranch.BoundText))
+            RentAccount = get_account_code_branch(156, val(Dcbranch.BoundText))
                         If Rd(1).value = False Then '«„·«ﬂÌ
             
-                 RentAccount = get_account_code_branch(156, val(dcBranch.BoundText))
+                 RentAccount = get_account_code_branch(156, val(Dcbranch.BoundText))
             
             Else
             
-                  RentAccount = get_account_code_branch(123, val(dcBranch.BoundText))
+                  RentAccount = get_account_code_branch(123, val(Dcbranch.BoundText))
             
                       If SystemOptions.ServicesOnOwner = True Then
                                If SystemOptions.Create2account4Supp = True Then
-                                  RentAccount = GetMyAccountCode("TblCustemers", "CusID", CLng(Txtownerid.text), "Account_Code1")
+                                  RentAccount = GetMyAccountCode("TblCustemers", "CusID", CLng(Txtownerid.Text), "Account_Code1")
                              End If
             
                         End If
@@ -17019,8 +17053,8 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("TelandNetPayed"))) + val(.TextMa
             RsDev("Account_Code").value = RentAccount
             RsDev("Value").value = (ComVal)
             RsDev("Credit_Or_Debit").value = 0
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes & "   Œœ„«    "
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes & "   Œœ„«    "
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -17030,20 +17064,20 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("TelandNetPayed"))) + val(.TextMa
  
 lineno = lineno + 1
  RsDev.AddNew
- RentAccount = get_account_code_branch(85, val(dcBranch.BoundText))
-           RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+ RentAccount = get_account_code_branch(85, val(Dcbranch.BoundText))
+           RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
                            If Rd(1).value = False Then '«„·«ﬂÌ
             
-                 RentAccount = get_account_code_branch(85, val(dcBranch.BoundText))
+                 RentAccount = get_account_code_branch(85, val(Dcbranch.BoundText))
             
             Else
             
                         If SystemOptions.ServicesOnOwner = True Then
                                    
-                                  RentAccount = GetMyAccountCode("TblCustemers", "CusID", CLng(Txtownerid.text), "Account_Code")
+                                  RentAccount = GetMyAccountCode("TblCustemers", "CusID", CLng(Txtownerid.Text), "Account_Code")
                        End If
                     
 
@@ -17052,8 +17086,8 @@ lineno = lineno + 1
             RsDev("Account_Code").value = RentAccount
             RsDev("Value").value = ComVal
             RsDev("Credit_Or_Debit").value = 1
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes & "   Œœ„«    "
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes & "   Œœ„«    "
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -17077,23 +17111,23 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("CommissionsPayed"))) + val(.Text
  If ComVal > 0 Then
       RsDev.AddNew
       lineno = lineno + 1
-            RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+            RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
             RsDev("Aqarid").value = val(DcbIqara.BoundText)
-            RentAccount = get_account_code_branch(153, val(dcBranch.BoundText))
+            RentAccount = get_account_code_branch(153, val(Dcbranch.BoundText))
                         If Rd(1).value = False Then '«„·«ﬂÌ
             
-                 RentAccount = get_account_code_branch(153, val(dcBranch.BoundText))
+                 RentAccount = get_account_code_branch(153, val(Dcbranch.BoundText))
             
             Else
             
-                  RentAccount = get_account_code_branch(123, val(dcBranch.BoundText))
+                  RentAccount = get_account_code_branch(123, val(Dcbranch.BoundText))
             
                       If SystemOptions.ServicesOnOwner = True Then
                                If SystemOptions.Create2account4Supp = True Then
-                                  RentAccount = GetMyAccountCode("TblCustemers", "CusID", CLng(Txtownerid.text), "Account_Code1")
+                                  RentAccount = GetMyAccountCode("TblCustemers", "CusID", CLng(Txtownerid.Text), "Account_Code1")
                              End If
             
                         End If
@@ -17103,8 +17137,8 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("CommissionsPayed"))) + val(.Text
             RsDev("Account_Code").value = RentAccount
             RsDev("Value").value = (ComVal)
             RsDev("Credit_Or_Debit").value = 0
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes & "  ø ”⁄Ì   "
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes & "  ø ”⁄Ì   "
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -17116,7 +17150,7 @@ lineno = lineno + 1
  RsDev.AddNew
  CommissionAcc = get_account_code_branch(81, my_branch)
  
-        RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+        RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
@@ -17124,8 +17158,8 @@ lineno = lineno + 1
             RsDev("Account_Code").value = CommissionAcc
             RsDev("Value").value = ComVal
             RsDev("Credit_Or_Debit").value = 1
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes & "  ø ”⁄Ì   "
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes & "  ø ”⁄Ì   "
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -17151,7 +17185,7 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("InsurancePayed"))) + val(.TextMa
  If ComVal > 0 Then
 lineno = lineno + 1
 RsDev.AddNew
-            RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+            RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Aqarid").value = val(DcbIqara.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
@@ -17175,8 +17209,8 @@ RsDev.AddNew
             RsDev("Value").value = ComVal  ' RemainValue ' (RntVal)
             RsDev("Credit_Or_Debit").value = 0
              
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes & " √„Ì‰ „” —œ "
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes & " √„Ì‰ „” —œ "
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -17186,7 +17220,7 @@ RsDev.AddNew
  
 lineno = lineno + 1
  RsDev.AddNew
-        RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+        RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("Aqarid").value = val(DcbIqara.BoundText)
             RsDev("DEV_ID_Line_No").value = lineno
@@ -17204,8 +17238,8 @@ lineno = lineno + 1
             
            '  newdes = "   ﬁ»÷ „‰ «„·«ﬂ «·€Ì— ·   " & DcbUnitType.text & "  »—ﬁ„   " & DcbUnitNo.text & "  ··„” √Ã— " & txtrenterName
             
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes & " √„Ì‰ „” —œ "
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes & " √„Ì‰ „” —œ "
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -17223,7 +17257,7 @@ End Sub
 Sub Save3()
     save2
         If DCboCashType.ListIndex = 8 Then
-               FillGridWithDataContract txtContractNo.text, val(XPTxtID.text)
+               FillGridWithDataContract txtContractNo.Text, val(XPTxtID.Text)
         End If
            GetUonitStatus
  SaveUoitInformation val(DCboCashType.ListIndex)
@@ -17245,7 +17279,7 @@ Dim RsDev As ADODB.Recordset
 'sql = "Select * from TblAqarCommissions where NoteID=" & val(XPTxtID.Text) & " "
 sql = " SELECT     SUM(Amount) AS Amount, EmpID"
 sql = sql & " From dbo.TblAqarCommissions"
-sql = sql & " Where (NoteID = " & val(XPTxtID.text) & ")"
+sql = sql & " Where (NoteID = " & val(XPTxtID.Text) & ")"
 sql = sql & " GROUP BY EmpID"
 
 rs2.Open sql, Cn, adOpenStatic, adLockOptimistic, adCmdText
@@ -17261,16 +17295,16 @@ ComVal = IIf(IsNull(rs2("Amount").value), 0, rs2("Amount").value)
  Line1 = Line1 + 1
             RsDev.AddNew
             lineno = lineno + 1
-            RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+            RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
-            RentAccount = get_account_code_branch(161, val(dcBranch.BoundText))
+            RentAccount = get_account_code_branch(161, val(Dcbranch.BoundText))
             RsDev("Account_Code").value = RentAccount
             RsDev("Value").value = (ComVal)
             RsDev("Credit_Or_Debit").value = 0
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes & " Õ”«» ⁄„Ê·«  «·„‰«œÌ»  "
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes & " Õ”«» ⁄„Ê·«  «·„‰«œÌ»  "
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = val(Me.DCboUserName.BoundText)
@@ -17280,15 +17314,15 @@ ComVal = IIf(IsNull(rs2("Amount").value), 0, rs2("Amount").value)
             lineno = lineno + 1
             RsDev.AddNew
             CommissionAcc = get_EMPLOYEE_Account(EmpID22, "Account_code1")
-            RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+            RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno + 1
             RsDev("DEV_ID_Line_No1").value = Line1
             RsDev("Account_Code").value = CommissionAcc
             RsDev("Value").value = ComVal
             RsDev("Credit_Or_Debit").value = 1
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -17320,7 +17354,7 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("RentValuePayed")))
  lineno = lineno + 1
  Line1 = Line1 + 1
       RsDev.AddNew
-            RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+            RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
@@ -17330,8 +17364,8 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("RentValuePayed")))
             RsDev("Account_Code").value = RentAccount
             RsDev("Value").value = (ComVal)
             RsDev("Credit_Or_Debit").value = 1
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -17352,17 +17386,17 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("WaterPayed")))
  If ComVal > 0 Then
  lineno = lineno + 1
       RsDev.AddNew
-            RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+            RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Aqarid").value = val(DcbIqara.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
-            RentAccount = get_account_code_branch(83, val(dcBranch.BoundText))
+            RentAccount = get_account_code_branch(83, val(Dcbranch.BoundText))
             RsDev("Account_Code").value = RentAccount
             RsDev("Value").value = (ComVal)
             RsDev("Credit_Or_Debit").value = 1
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -17383,16 +17417,16 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("ElectricPayed")))
  If ComVal > 0 Then
  lineno = lineno + 1
       RsDev.AddNew
-            RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+            RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
-            RentAccount = get_account_code_branch(84, val(dcBranch.BoundText))
+            RentAccount = get_account_code_branch(84, val(Dcbranch.BoundText))
             RsDev("Account_Code").value = RentAccount
             RsDev("Value").value = (ComVal)
             RsDev("Credit_Or_Debit").value = 1
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -17415,16 +17449,16 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("TelandNetPayed")))
  If ComVal > 0 Then
  lineno = lineno + 1
       RsDev.AddNew
-            RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+            RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
-            RentAccount = get_account_code_branch(85, val(dcBranch.BoundText))
+            RentAccount = get_account_code_branch(85, val(Dcbranch.BoundText))
             RsDev("Account_Code").value = RentAccount
             RsDev("Value").value = (ComVal)
             RsDev("Credit_Or_Debit").value = 1
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -17446,16 +17480,16 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("CommissionsPayed")))
  If ComVal > 0 Then
  lineno = lineno + 1
       RsDev.AddNew
-            RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+            RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
-            RentAccount = get_account_code_branch(81, val(dcBranch.BoundText))
+            RentAccount = get_account_code_branch(81, val(Dcbranch.BoundText))
             RsDev("Account_Code").value = RentAccount
             RsDev("Value").value = (ComVal)
             RsDev("Credit_Or_Debit").value = 1
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -17464,12 +17498,12 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("CommissionsPayed")))
             RsDev.update
  
  End If
-   ComVal = val(TxtVATValue.text)
+   ComVal = val(TxtVATValue.Text)
 
  If ComVal > 0 Then
  lineno = lineno + 1
       RsDev.AddNew
-            RsDev("branch_id").value = val(Me.dcBranch.BoundText)
+            RsDev("branch_id").value = val(Me.Dcbranch.BoundText)
             RsDev("Double_Entry_Vouchers_ID").value = LngDevID
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("DEV_ID_Line_No1").value = Line1
@@ -17480,8 +17514,8 @@ ComVal = ComVal + val(.TextMatrix(i, .ColIndex("CommissionsPayed")))
             RsDev("Account_Code").value = RentAccount
             RsDev("Value").value = (ComVal)
             RsDev("Credit_Or_Debit").value = 1
-            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & CHR(13) & newdes
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & CHR(13) & newdes
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
             RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -17498,7 +17532,7 @@ Dim StrSQL As String
 Dim i As Integer
         If DCboCashType.ListIndex = 8 Then
            
- saveContractInstallments val(Me.XPTxtID), XPDtbTrans.value, Txt_DateHigri.value, val(XPTxtVal.text), val(TxtContNo.text)
+ saveContractInstallments val(Me.XPTxtID), XPDtbTrans.value, Txt_DateHigri.value, val(XPTxtVal.Text), val(TxtContNo.Text)
         End If
     ''///
        Set RsDetails1 = New ADODB.Recordset
@@ -17517,7 +17551,7 @@ If VSFlexGrid2.rows > 1 Then
               If .TextMatrix(i, .ColIndex("empname")) <> "" Then
            RsDetails1.AddNew
            RsDetails1("Type").value = 0
-          RsDetails1("NoteID").value = val(XPTxtID.text)
+          RsDetails1("NoteID").value = val(XPTxtID.Text)
           RsDetails1("valu").value = val(.TextMatrix(i, .ColIndex("values")))
             RsDetails1("rate").value = val(.TextMatrix(i, .ColIndex("rate")))
             RsDetails1("ValueAmount").value = val(.TextMatrix(i, .ColIndex("ValueAmount")))
@@ -17544,13 +17578,13 @@ If VSFlexGrid2.rows > 1 Then
    RsDetails1.Open StrSQL, Cn, adOpenKeyset, adLockOptimistic, adCmdText
    
            RsDetails1.AddNew
-           RsDetails1("CoustomerName").value = IIf(txtrenterName.text = "", "", txtrenterName.text)
-          RsDetails1("Telephone").value = IIf(TxtTelphone.text = "", "", TxtTelphone.text)
+           RsDetails1("CoustomerName").value = IIf(txtrenterName.Text = "", "", txtrenterName.Text)
+          RsDetails1("Telephone").value = IIf(TxtTelphone.Text = "", "", TxtTelphone.Text)
           RsDetails1("RecordDate").value = XPDtbTrans.value
             RsDetails1("RecordDateH").value = Txt_DateHigri.value
             
                RsDetails1("UnitNo").value = IIf(DcbUnitNo.BoundText = "", 0, DcbUnitNo.BoundText)
-             RsDetails1("Earnest").value = IIf(XPTxtVal.text = "", 0, XPTxtVal.text)
+             RsDetails1("Earnest").value = IIf(XPTxtVal.Text = "", 0, XPTxtVal.Text)
              '''\\\
              
              If cbointervaltype.ListIndex = 0 Then
@@ -17563,8 +17597,8 @@ If VSFlexGrid2.rows > 1 Then
              
              End If
             RsDetails1("ValidityDateH").value = ToHijriDate(rs("allowdate").value)
-            RsDetails1("Earnest").value = IIf(XPTxtVal.text = "", 0, XPTxtVal.text)
-            RsDetails1("NoteID").value = IIf(XPTxtID.text = "", 0, XPTxtID.text)
+            RsDetails1("Earnest").value = IIf(XPTxtVal.Text = "", 0, XPTxtVal.Text)
+            RsDetails1("NoteID").value = IIf(XPTxtID.Text = "", 0, XPTxtID.Text)
      If CheckStatusEarnest(0).value = vbChecked Then
          RsDetails1("StatusEarnest").value = 1
          
@@ -17641,7 +17675,7 @@ If VSFlexGrid1.rows > 1 Then
        
            RsDetails1.AddNew
            RsDetails1("Type").value = 1
-          RsDetails1("NoteID").value = val(XPTxtID.text)
+          RsDetails1("NoteID").value = val(XPTxtID.Text)
           RsDetails1("valu").value = val(.TextMatrix(i, .ColIndex("values")))
             RsDetails1("rate").value = val(.TextMatrix(i, .ColIndex("rate")))
              RsDetails1("EmpID").value = val(.TextMatrix(i, .ColIndex("id")))
@@ -17680,11 +17714,11 @@ Function saveChequeBoxContents(NoteID As Double)
             
     rs2("RecordDate").value = XPDtbTrans.value
     rs2("DueDate").value = DtpChequeDueDate.value
-    rs2("BankName").value = TXTBankName.text
-    rs2("ChequeNo").value = TxtChequeNumber.text
-    rs2("ChequeValue").value = val(XPTxtVal.text)
+    rs2("BankName").value = TXTBankName.Text
+    rs2("ChequeNo").value = TxtChequeNumber.Text
+    rs2("ChequeValue").value = val(XPTxtVal.Text)
     
-    rs2("Remarks").value = DcboCreditSide.text
+    rs2("Remarks").value = DcboCreditSide.Text
     rs2("Deposited").value = 0
     rs2("Collected").value = 0
     rs2("CreditAccount").value = (DcboCreditSide.BoundText)
@@ -17711,7 +17745,7 @@ End Function
 Function save_cost_center()
 
     'on error resume next
-    If Not IsNumeric(Text1.text) Then Exit Function
+    If Not IsNumeric(Text1.Text) Then Exit Function
     Dim i As Integer
     Dim rs2 As ADODB.Recordset
     Set rs2 = New ADODB.Recordset
@@ -17719,14 +17753,14 @@ Function save_cost_center()
 
     'Rs.Open "", Cn, adOpenStatic, adLockOptimistic, adCmdTable
 
-    sql_str = "select * from marakes_taklefa_temp where kedno=" & Text1.text
+    sql_str = "select * from marakes_taklefa_temp where kedno=" & Text1.Text
     rs2.Open sql_str, Cn, adOpenStatic, adLockOptimistic, adCmdText
 
     For i = 1 To rs2.RecordCount
         rs2("ok").value = 1
         rs2("NoteDate").value = XPDtbTrans.value
-        rs2("NoteSerial").value = TxtNoteSerial.text
-        rs2("Remark").value = "”‰œ „ﬁ»Ê÷«     —ﬁ„ " & TxtNoteSerial1.text & "    " & Me.TxtCustCode
+        rs2("NoteSerial").value = TxtNoteSerial.Text
+        rs2("Remark").value = "”‰œ „ﬁ»Ê÷«     —ﬁ„ " & TxtNoteSerial1.Text & "    " & Me.TxtCustCode
  
         rs2.update
         rs2.MoveNext
@@ -17743,7 +17777,7 @@ Public Function save_General_cost_center(cost_center_id As String, _
  
     Dim StrSQL As String
 
-    StrSQL = "Delete  marakes_taklefa_temp  where general_des=1 AND  kedno =" & val(Text1.text)
+    StrSQL = "Delete  marakes_taklefa_temp  where general_des=1 AND  kedno =" & val(Text1.Text)
     Cn.Execute StrSQL, , adExecuteNoRecords
     
     If Me.DcCostCenter.BoundText = "" Then
@@ -17774,13 +17808,13 @@ Public Function save_General_cost_center(cost_center_id As String, _
     rs2("general_des").value = 1
     rs2("cost_center_id").value = cost_center_id
     rs2("cost_center").value = cost_center
-    rs2("value").value = XPTxtVal.text
+    rs2("value").value = XPTxtVal.Text
     rs2("depit_or_credit").value = "œ«∆‰"
-    rs2("opr_id").value = Me.Text1.text
-    rs2("kedno").value = Me.Text1.text
+    rs2("opr_id").value = Me.Text1.Text
+    rs2("kedno").value = Me.Text1.Text
 
     rs2("opr_type").value = opr_type
-    rs2("account_name").value = DcboCreditSide.text
+    rs2("account_name").value = DcboCreditSide.Text
     rs2("account_no").value = DcboCreditSide.BoundText
     rs2("line_no").value = Line2
     rs2("record_date").value = record_date
@@ -17818,7 +17852,7 @@ Function Distribute_to_bills(SQL1 As String, CusID As Double)
     If Rs3.RecordCount = 0 Then Exit Function
     Dim total_value As Double
     Dim current_value As Double
-    total_value = val(XPTxtVal.text)
+    total_value = val(XPTxtVal.Text)
   
     For i = 1 To Rs3.RecordCount
 
@@ -17837,8 +17871,8 @@ Function Distribute_to_bills(SQL1 As String, CusID As Double)
         Rs3.MoveNext
     Next i
 
-    txtAdv_payment_value.text = total_value
-    change_adv_payment_value XPTxtID.text, total_value
+    txtAdv_payment_value.Text = total_value
+    change_adv_payment_value XPTxtID.Text, total_value
 
     ' If IsNull(Rs3("UserName").value) Then FIFO_FUNCTION = "": Exit Function
   
@@ -17853,7 +17887,7 @@ Function FIFO_FUNCTION(CusID As Double)
     Dim sql As String
     Dim i As Integer
 
-   sql = " delete   notes where NoteType= 2000   and  NoteSerial='" & TxtNoteSerial.text & "'"
+   sql = " delete   notes where NoteType= 2000   and  NoteSerial='" & TxtNoteSerial.Text & "'"
  'Cn.Execute sql
 Cn.Execute sql
 
@@ -17865,7 +17899,7 @@ Cn.Execute sql
     If Rs3.RecordCount = 0 Then Exit Function
     Dim total_value As Double
     Dim current_value As Double
-    total_value = val(Me.XPTxtVal.text)
+    total_value = val(Me.XPTxtVal.Text)
   
     For i = 1 To Rs3.RecordCount
 
@@ -17885,7 +17919,7 @@ Cn.Execute sql
     Next i
 
     ' If IsNull(Rs3("UserName").value) Then FIFO_FUNCTION = "": Exit Function
-    txtAdv_payment_value.text = total_value
+    txtAdv_payment_value.Text = total_value
   '  change_adv_payment_value XPTxtID.text, total_value
     ' If Not IsNull(Rs3("UserName").value) Then get_user_name = Rs3("UserName").value: Exit Function
     Rs3.Close
@@ -17908,7 +17942,7 @@ Function Add_new_notes(NoteDate As Date, NoteType As Integer, Note_Value As Doub
     RsDev.AddNew
       
     RsDev("NoteID").value = CStr(new_id("Notes", "NoteID", "", True))
-    RsDev("NoteSerial").value = TxtNoteSerial.text ' CStr(new_id("Notes", "NoteSerial", "", True, "NoteType=2000"))
+    RsDev("NoteSerial").value = TxtNoteSerial.Text ' CStr(new_id("Notes", "NoteSerial", "", True, "NoteType=2000"))
               
     RsDev("NoteDate").value = NoteDate
     RsDev("NoteType").value = NoteType
@@ -17931,23 +17965,23 @@ End Function
 Private Sub Undo()
     On Error GoTo ErrTrap
 
-    Select Case TxtModFlg.text
+    Select Case TxtModFlg.Text
 
         Case "N"
             clear_all Me
-            Me.TxtModFlg.text = "R"
+            Me.TxtModFlg.Text = "R"
             XPBtnMove_Click (1)
 
         Case "E"
-            rs.Find "NoteID='" & val(XPTxtID.text) & "'", , adSearchForward, adBookmarkFirst
+            rs.Find "NoteID='" & val(XPTxtID.Text) & "'", , adSearchForward, adBookmarkFirst
 
             If rs.EOF Or rs.BOF Then
-                Me.TxtModFlg.text = "R"
+                Me.TxtModFlg.Text = "R"
                 Exit Sub
             End If
 
             Retrive
-            Me.TxtModFlg.text = "R"
+            Me.TxtModFlg.Text = "R"
     End Select
 
     Exit Sub
@@ -17958,7 +17992,7 @@ Private Sub Del_Trans()
     Dim Msg As String
     On Error GoTo ErrTrap
 
-  If XPTxtID.text <> "" Then
+  If XPTxtID.Text <> "" Then
 '        If Me.CboPayMentType.ListIndex = 0 Then
 '            If CheckBoxAccount(Me.DcboBox.BoundText, val(Me.XPTxtVal.text), Date, False) = False Then
 '                Msg = "·‰ Ì„ﬂ‰ «·”„«Õ »Õ–› Â–« «·⁄„·Ì…..!!!"
@@ -17978,7 +18012,7 @@ Private Sub Del_Trans()
         '  End If
     
         Msg = "”Ì „ Õ–› »Ì«‰«  «·⁄„·Ì… —ﬁ„ " & CHR(13)
-        Msg = Msg + (TxtNoteSerial.text) & CHR(13)
+        Msg = Msg + (TxtNoteSerial.Text) & CHR(13)
         Msg = Msg + " Â·  —€» ›Ì Õ–› Â–Â «·»Ì«‰« ø"
 
         If MsgBox(Msg, vbYesNo + vbQuestion + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title) = vbYes Then
@@ -17986,24 +18020,24 @@ Private Sub Del_Trans()
                 CuurentLogdata ("D")
                 rs.delete
                 Dim StrSQL As String
-                StrSQL = "Delete From TblUnitNoInformation Where NoteID=" & val(XPTxtID.text)
+                StrSQL = "Delete From TblUnitNoInformation Where NoteID=" & val(XPTxtID.Text)
             Cn.Execute StrSQL, , adExecuteNoRecords
              '   StrSQL = "Delete From notes  Where  (NoteType=2000 OR NoteType=4 ) AND  NoteSerial=" & val(TxtNoteSerial.Text)
              '   Cn.Execute StrSQL, , adExecuteNoRecords
-        StrSQL = " delete   TblAqarCommissions where    NoteID=" & val(XPTxtID.text)
+        StrSQL = " delete   TblAqarCommissions where    NoteID=" & val(XPTxtID.Text)
 Cn.Execute StrSQL
-                StrSQL = "Delete  marakes_taklefa_temp  where kedno =" & val(Text1.text)
+                StrSQL = "Delete  marakes_taklefa_temp  where kedno =" & val(Text1.Text)
                 Cn.Execute StrSQL, , adExecuteNoRecords
        
-                StrSQL = "Delete From ReciveDetails Where NoteSerial1='" & val(TxtNoteSerial1.text) & "'"
+                StrSQL = "Delete From ReciveDetails Where NoteSerial1='" & val(TxtNoteSerial1.Text) & "'"
                 Cn.Execute StrSQL, , adExecuteNoRecords
-                StrSQL = "Delete From TblAqrEarnest Where NoteID =" & val(Text1.text)
+                StrSQL = "Delete From TblAqrEarnest Where NoteID =" & val(Text1.Text)
                 Cn.Execute StrSQL, , adExecuteNoRecords
     
-                StrSQL = "Delete From ProjectBillBuy Where TxtNoteSerial='" & TxtNoteSerial.text & "'"
+                StrSQL = "Delete From ProjectBillBuy Where TxtNoteSerial='" & TxtNoteSerial.Text & "'"
                 Cn.Execute StrSQL, , adExecuteNoRecords
          If val(DCboCashType.ListIndex) = 13 Then
-         Cn.Execute "Update TblOtheExpensAqar set FlgPayed=null where ID=" & val(Me.TxtContNo.text) & "  "
+         Cn.Execute "Update TblOtheExpensAqar set FlgPayed=null where ID=" & val(Me.TxtContNo.Text) & "  "
          End If
     
                 StrSQL = "Delete From ContracttBillInstallmentsDone Where NoteID =" & val(Me.XPTxtID)
@@ -18191,7 +18225,7 @@ lbl(51).Caption = "Book No."
     DCboCashType.AddItem "From Employee"
     DCboCashType.AddItem "From  Account"
 DCboCashType.AddItem "From  Contract"
-    With Me.CboPayMentType
+    With Me.CboPaymentType
         .Clear
         .AddItem "Cash"
         .AddItem "Cheque"
@@ -18211,9 +18245,9 @@ DCboCashType.AddItem "From  Contract"
 End Sub
 
 Function CuurentLogdata(Optional Currentmode As String)
-    LogTextA = "    ‘«‘… " & ScreenNameArabic & CHR(13) & " —ﬁ„ «·”‰œ " & TxtNoteSerial1.text & CHR(13) & "   «· «—ÌŒ " & XPDtbTrans & CHR(13) & "   ‰Ê⁄ «·„ﬁ»Ê÷«  " & DCboCashType & CHR(13) & "   «·›—⁄  " & dcBranch & CHR(13) & "   «·«”„  " & DBCboClientName & CHR(13) & "   ﬁÌ„Â «·„ﬁ»Ê÷«   " & XPTxtVal & CHR(13) & "   ÿ—Ìﬁ… «·ﬁ»÷ " & CboPayMentType & CHR(13) & "   «·Œ“Ì‰…  " & DcboBox & CHR(13) & "   «·»‰ﬂ  " & DcboBankName & CHR(13) & "   —ﬁ„ «·‘Ìﬂ  " & TxtChequeNumber & CHR(13) & "    «—ÌŒ «·«” Õﬁ«ﬁ  " & DtpChequeDueDate & CHR(13) & "     »‰«¡ ⁄·Ï   " & XPMTxtRemarks & CHR(13) & "   —ﬁ„ «·ﬁÌœ   " & TxtNoteSerial & CHR(13) & "   —ﬁ„ «·ﬁÌœ   " & TxtNoteSerial & CHR(13) & "ÿ—› „œÌ‰  " & DcboDebitSide & CHR(13) & " ÿ—› œ«∆‰ " & DcboCreditSide & CHR(13) & " «·„‰œÊ» " & DcEmp
+    LogTextA = "    ‘«‘… " & ScreenNameArabic & CHR(13) & " —ﬁ„ «·”‰œ " & TxtNoteSerial1.Text & CHR(13) & "   «· «—ÌŒ " & XPDtbTrans & CHR(13) & "   ‰Ê⁄ «·„ﬁ»Ê÷«  " & DCboCashType & CHR(13) & "   «·›—⁄  " & Dcbranch & CHR(13) & "   «·«”„  " & DBCboClientName & CHR(13) & "   ﬁÌ„Â «·„ﬁ»Ê÷«   " & XPTxtVal & CHR(13) & "   ÿ—Ìﬁ… «·ﬁ»÷ " & CboPaymentType & CHR(13) & "   «·Œ“Ì‰…  " & DcboBox & CHR(13) & "   «·»‰ﬂ  " & DcboBankName & CHR(13) & "   —ﬁ„ «·‘Ìﬂ  " & TxtChequeNumber & CHR(13) & "    «—ÌŒ «·«” Õﬁ«ﬁ  " & DtpChequeDueDate & CHR(13) & "     »‰«¡ ⁄·Ï   " & XPMTxtRemarks & CHR(13) & "   —ﬁ„ «·ﬁÌœ   " & TxtNoteSerial & CHR(13) & "   —ﬁ„ «·ﬁÌœ   " & TxtNoteSerial & CHR(13) & "ÿ—› „œÌ‰  " & DcboDebitSide & CHR(13) & " ÿ—› œ«∆‰ " & DcboCreditSide & CHR(13) & " «·„‰œÊ» " & DcEmp
                         
-    LogTexte = "    Screen  " & ScreenNameEnglish & CHR(13) & " Vchr. NO.  " & TxtNoteSerial1.text & CHR(13) & "   Date " & XPDtbTrans & CHR(13) & "  Payment Type " & DCboCashType & CHR(13) & "   Branch  " & dcBranch & CHR(13) & "   Name  " & DBCboClientName & CHR(13) & "  Value" & XPTxtVal & CHR(13) & "   Cash/   Cheque " & CboPayMentType & CHR(13) & "   Box  " & DcboBox & CHR(13) & "   Bank  " & DcboBankName & CHR(13) & "   Cheque No" & TxtChequeNumber & CHR(13) & "  Due Date  " & DtpChequeDueDate & CHR(13) & " Ge NO.  " & TxtNoteSerial & CHR(13) & "Debit " & DcboDebitSide & CHR(13) & "Credit " & DcboCreditSide & CHR(13) & " UserName " & DCboUserName & CHR(13) & " Sales Person " & DcEmp
+    LogTexte = "    Screen  " & ScreenNameEnglish & CHR(13) & " Vchr. NO.  " & TxtNoteSerial1.Text & CHR(13) & "   Date " & XPDtbTrans & CHR(13) & "  Payment Type " & DCboCashType & CHR(13) & "   Branch  " & Dcbranch & CHR(13) & "   Name  " & DBCboClientName & CHR(13) & "  Value" & XPTxtVal & CHR(13) & "   Cash/   Cheque " & CboPaymentType & CHR(13) & "   Box  " & DcboBox & CHR(13) & "   Bank  " & DcboBankName & CHR(13) & "   Cheque No" & TxtChequeNumber & CHR(13) & "  Due Date  " & DtpChequeDueDate & CHR(13) & " Ge NO.  " & TxtNoteSerial & CHR(13) & "Debit " & DcboDebitSide & CHR(13) & "Credit " & DcboCreditSide & CHR(13) & " UserName " & DCboUserName & CHR(13) & " Sales Person " & DcEmp
                      
     If Currentmode <> "D" Then
         AddToLogFile CInt(user_id), 4, Date, Time, LogTextA, LogTexte, Me.Name, Me.TxtModFlg, , , val(TxtNoteSerial), TxtNoteSerial1
@@ -18228,14 +18262,14 @@ Private Sub Form_KeyDown(KeyCode As Integer, _
     On Error GoTo ErrTrap
 
     If KeyCode = vbKeyReturn Then
-        If Me.TxtModFlg.text = "R" Then
+        If Me.TxtModFlg.Text = "R" Then
             Cmd_Click (0)
         Else
             Sendkeys "{TAB}"
         End If
     End If
 
-    If Me.TxtModFlg.text = "R" Then
+    If Me.TxtModFlg.Text = "R" Then
         If KeyCode = vbKeyDown Or KeyCode = vbKeyEnd Then
             XPBtnMove_Click (2)
         ElseIf KeyCode = vbKeyUp Or KeyCode = vbKeyHome Then
@@ -18388,9 +18422,9 @@ Private Sub Form_QueryUnload(Cancel As Integer, _
     Dim StrMSG As String
     On Error GoTo ErrTrap
 
-    If Me.TxtModFlg.text <> "R" Then
+    If Me.TxtModFlg.Text <> "R" Then
 
-        Select Case Me.TxtModFlg.text
+        Select Case Me.TxtModFlg.Text
 
             Case "N"
     
@@ -18454,15 +18488,15 @@ ErrTrap:
 End Sub
 
 Private Sub XPDtbTrans_Change()
-If Me.TxtModFlg.text <> "R" Then
-    If Trim(TxtNoteSerial1.text) <> "" Then
-        oldtxtNoteSerial1.text = TxtNoteSerial1.text
+If Me.TxtModFlg.Text <> "R" Then
+    If Trim(TxtNoteSerial1.Text) <> "" Then
+        oldtxtNoteSerial1.Text = TxtNoteSerial1.Text
     End If
 
-    TxtNoteSerial.text = ""
-    TxtNoteSerial1.text = ""
+    TxtNoteSerial.Text = ""
+    TxtNoteSerial1.Text = ""
     
-    If Me.TxtModFlg.text <> "R" Then
+    If Me.TxtModFlg.Text <> "R" Then
      
     Txt_DateHigri.value = ToHijriDate(XPDtbTrans.value)
        TxtContNo_Change
@@ -18471,7 +18505,7 @@ End If
 End Sub
 
 Private Sub Txt_DateHigri_LostFocus()
-      If Me.TxtModFlg.text <> "R" Then
+      If Me.TxtModFlg.Text <> "R" Then
              XPDtbTrans.value = ToGregorianDate(Txt_DateHigri.value)
         End If
 End Sub
@@ -18480,32 +18514,32 @@ Private Sub XPTxtVal_Change()
     'Me.lbl(18).Caption = WriteNo(Me.XPTxtVal.text, 0, True)
     'txtAdv_payment_value.text = Format(Val(XPTxtVal.text), "#,###." & String(Abs(SystemOptions.SysDefCurrencyForamt), "0"))
     If Me.TxtModFlg <> "R" And val(DCboCashType.ListIndex) = 9 Then
-txtTotal2.text = val(XPTxtVal.text) - val(txtTotal1.text)
+txtTotal2.Text = val(XPTxtVal.Text) - val(txtTotal1.Text)
 ClculteVAT
-If val(XPTxtVal.text) >= (val(Txtcommission.text) - val(TxtCommissionOut.text)) Then
-txtComisin.text = val(Txtcommission.text) - val(TxtCommissionOut.text)
+If val(XPTxtVal.Text) >= (val(Txtcommission.Text) - val(TxtCommissionOut.Text)) Then
+txtComisin.Text = val(Txtcommission.Text) - val(TxtCommissionOut.Text)
 Else
-txtComisin.text = val(XPTxtVal.text)
+txtComisin.Text = val(XPTxtVal.Text)
 End If
 End If
     If SystemOptions.UserInterface = ArabicInterface Then
-        Me.lbl(18).Caption = WriteNo(Format(Me.XPTxtVal.text, "0.00"), 0, True, ".", , 0)
+        Me.lbl(18).Caption = WriteNo(Format(Me.XPTxtVal.Text, "0.00"), 0, True, ".", , 0)
 
     Else
  
-        Me.lbl(18).Caption = WriteNo(Format(Me.XPTxtVal.text, "0.00"), 0, True, ".", , 1)
+        Me.lbl(18).Caption = WriteNo(Format(Me.XPTxtVal.Text, "0.00"), 0, True, ".", , 1)
 
     End If
 
     'If TxtModFlg.text = "N" Or TxtModFlg.text = "E" And Option3.value = True Then
-    If TxtModFlg.text = "N" Or TxtModFlg.text = "E" Then
-        txtAdv_payment_value.text = XPTxtVal.text
+    If TxtModFlg.Text = "N" Or TxtModFlg.Text = "E" Then
+        txtAdv_payment_value.Text = XPTxtVal.Text
     End If
 
 End Sub
 
 Private Sub XPTxtVal_KeyPress(KeyAscii As Integer)
-    KeyAscii = KeyAscii_Num(KeyAscii, XPTxtVal.text, 0)
+    KeyAscii = KeyAscii_Num(KeyAscii, XPTxtVal.Text, 0)
 End Sub
 
 Private Function CheckDebitTrans(LngTransID As Long) As Boolean
@@ -18530,7 +18564,7 @@ Private Function CheckDebitTrans(LngTransID As Long) As Boolean
     
         If Not (RsTemp.BOF Or RsTemp.EOF) Then
             If RsTemp("PaymentType").value = 0 Then
-                Msg = "⁄›Ê« «·›« Ê—… —ﬁ„ " & Trim(Me.TxtTransSerial.text)
+                Msg = "⁄›Ê« «·›« Ê—… —ﬁ„ " & Trim(Me.TxtTransSerial.Text)
                 Msg = Msg & CHR(13) & "›« Ê—… ‰ﬁœÌ… ...Ê·«Ì„ﬂ‰  Õ’Ì· ·Â« „ﬁ»Ê÷« "
                 MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                 TxtTransSerial.SetFocus
@@ -18538,15 +18572,15 @@ Private Function CheckDebitTrans(LngTransID As Long) As Boolean
             End If
 
             If Me.DBCboClientName.BoundText <> IIf(IsNull(RsTemp("CusID").value), "", RsTemp("CusID").value) Then
-                Msg = "⁄›Ê« «·›« Ê—… —ﬁ„ " & Trim(Me.TxtTransSerial.text)
-                Msg = Msg & CHR(13) & "·Ì”  „”Ã·… „⁄ «·⁄„Ì· " & Me.DBCboClientName.text
+                Msg = "⁄›Ê« «·›« Ê—… —ﬁ„ " & Trim(Me.TxtTransSerial.Text)
+                Msg = Msg & CHR(13) & "·Ì”  „”Ã·… „⁄ «·⁄„Ì· " & Me.DBCboClientName.Text
                 MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                 TxtTransSerial.SetFocus
                 Exit Function
             End If
 
-            If LngTransID <> val(Me.TxtTransID.text) Then
-                Me.TxtTransID.text = LngTransID
+            If LngTransID <> val(Me.TxtTransID.Text) Then
+                Me.TxtTransID.Text = LngTransID
             End If
         
             DblCreditNoteValue = 0
@@ -18581,7 +18615,7 @@ Private Function CheckDebitTrans(LngTransID As Long) As Boolean
                 Exit Function
             End If
 
-            If DblCreditNoteValue < val(Me.XPTxtVal.text) Then
+            If DblCreditNoteValue < val(Me.XPTxtVal.Text) Then
                 Msg = "⁄›Ê« ..."
                 Msg = Msg & CHR(13) & "«·ﬁÌ„… «·√Ã·… „‰ «·›« Ê—… .. «’€— „‰ «·ﬁÌ„…"
                 Msg = Msg & CHR(13) & "«·„—«œ  ”ÃÌ·Â« «·√‰..»—Ã«¡ „—«Ã⁄… «·ﬁÌ„… «·„”Ã·….!"
@@ -18596,8 +18630,8 @@ Private Function CheckDebitTrans(LngTransID As Long) As Boolean
             StrSQL = "SELECT Transactions.Transaction_ID, Transactions.Transaction_Serial," & "Transactions.Transaction_Type, Transactions.PaymentType," & "Sum(Notes.Note_Value) AS SumNote_Value "
             StrSQL = StrSQL + " FROM Transactions INNER JOIN Notes ON Transactions.Transaction_ID =" & "Notes.Transaction_ID " & " Where ((Notes.NoteType = 4 OR Notes.NoteType = 9) And Transactions.Transaction_ID = " & LngTransID & ")"
 
-            If Me.TxtModFlg.text = "E" Then
-                StrSQL = StrSQL + " And Notes.NoteID <>" & Me.XPTxtID.text & ""
+            If Me.TxtModFlg.Text = "E" Then
+                StrSQL = StrSQL + " And Notes.NoteID <>" & Me.XPTxtID.Text & ""
             End If
 
             StrSQL = StrSQL + " GROUP BY Transactions.Transaction_ID, Transactions.Transaction_Serial," & "Transactions.Transaction_Type, Transactions.PaymentType "
@@ -18610,7 +18644,7 @@ Private Function CheckDebitTrans(LngTransID As Long) As Boolean
                     Msg = Msg & CHR(13) & "Ê·«Ì„ﬂ‰  Õ’Ì· «Ì… „ﬁ»Ê÷«  ≈÷«›Ì… ⁄·ÌÂ«."
                     MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                     Exit Function
-                ElseIf RsTemp("SumNote_Value").value + val(Me.XPTxtVal.text) > DblCreditNoteValue Then
+                ElseIf RsTemp("SumNote_Value").value + val(Me.XPTxtVal.Text) > DblCreditNoteValue Then
                     Msg = "⁄›Ê« ..."
                     Msg = Msg & CHR(13) & "·ﬁœ  „  Õ’Ì· „ﬁ»Ê÷«  √Ê (⁄„· Œ’Ê„«  „”„ÊÕ…) „”»ﬁ« ·Â–Â «·›« Ê—…"
                     Msg = Msg & CHR(13) & "Ê»≈÷«›… «·ﬁÌ„… «·Õ«·Ì… ”Ê›   ŒÿÏ «·ﬁÌ„… «·√Ã·… „‰ «·›« Ê—…"
@@ -18624,8 +18658,8 @@ Private Function CheckDebitTrans(LngTransID As Long) As Boolean
             End If
 
         Else
-            Msg = "⁄›Ê« «·›« Ê—… —ﬁ„ " & Trim(Me.TxtTransSerial.text)
-            Msg = Msg & CHR(13) & "·Ì”  „”Ã·… „⁄ «·⁄„Ì· " & Me.DBCboClientName.text
+            Msg = "⁄›Ê« «·›« Ê—… —ﬁ„ " & Trim(Me.TxtTransSerial.Text)
+            Msg = Msg & CHR(13) & "·Ì”  „”Ã·… „⁄ «·⁄„Ì· " & Me.DBCboClientName.Text
             MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
             TxtTransSerial.SetFocus
             Exit Function
@@ -18659,7 +18693,7 @@ Private Function CheckDebitMaintaince(LngTransID As Long) As Boolean
     
         If Not (RsTemp.BOF Or RsTemp.EOF) Then
             If RsTemp("PaymentType").value = 0 Then
-                Msg = "⁄›Ê« «·›« Ê—… —ﬁ„ " & Trim(Me.TxtTransSerial.text)
+                Msg = "⁄›Ê« «·›« Ê—… —ﬁ„ " & Trim(Me.TxtTransSerial.Text)
                 Msg = Msg & CHR(13) & "›« Ê—… ‰ﬁœÌ… ...Ê·«Ì„ﬂ‰  Õ’Ì· ·Â« „ﬁ»Ê÷« "
                 MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                 TxtTransSerial.SetFocus
@@ -18667,15 +18701,15 @@ Private Function CheckDebitMaintaince(LngTransID As Long) As Boolean
             End If
 
             If Me.DBCboClientName.BoundText <> IIf(IsNull(RsTemp("CusID").value), "", RsTemp("CusID").value) Then
-                Msg = "⁄›Ê« «·›« Ê—… —ﬁ„ " & Trim(Me.TxtTransSerial.text)
-                Msg = Msg & CHR(13) & "·Ì”  „”Ã·… „⁄ «·⁄„Ì· " & Me.DBCboClientName.text
+                Msg = "⁄›Ê« «·›« Ê—… —ﬁ„ " & Trim(Me.TxtTransSerial.Text)
+                Msg = Msg & CHR(13) & "·Ì”  „”Ã·… „⁄ «·⁄„Ì· " & Me.DBCboClientName.Text
                 MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                 TxtTransSerial.SetFocus
                 Exit Function
             End If
 
-            If LngTransID <> val(Me.TxtTransID.text) Then
-                Me.TxtTransID.text = LngTransID
+            If LngTransID <> val(Me.TxtTransID.Text) Then
+                Me.TxtTransID.Text = LngTransID
             End If
         
             DblCreditNoteValue = 0
@@ -18710,7 +18744,7 @@ Private Function CheckDebitMaintaince(LngTransID As Long) As Boolean
                 Exit Function
             End If
 
-            If DblCreditNoteValue < val(Me.XPTxtVal.text) Then
+            If DblCreditNoteValue < val(Me.XPTxtVal.Text) Then
                 Msg = "⁄›Ê« ..."
                 Msg = Msg & CHR(13) & "«·ﬁÌ„… «·√Ã·… „‰ «·›« Ê—… .. «’€— „‰ «·ﬁÌ„…"
                 Msg = Msg & CHR(13) & "«·„—«œ  ”ÃÌ·Â« «·√‰..»—Ã«¡ „—«Ã⁄… «·ﬁÌ„… «·„”Ã·….!"
@@ -18726,8 +18760,8 @@ Private Function CheckDebitMaintaince(LngTransID As Long) As Boolean
             StrSQL = "SELECT  TblMaintenece.MaintananceID," & "TblMaintenece.MType, TblMaintenece.PaymentType," & "Sum(Notes.Note_Value) AS SumNote_Value "
             StrSQL = StrSQL + " FROM TblMaintenece INNER JOIN Notes ON TblMaintenece.MaintananceID =" & "Notes.MaintananceID " & " Where ((Notes.NoteType = 4) And TblMaintenece.MaintananceID = " & LngTransID & ")"
 
-            If Me.TxtModFlg.text = "E" Then
-                StrSQL = StrSQL + " And Notes.NoteID <>" & Me.XPTxtID.text & ""
+            If Me.TxtModFlg.Text = "E" Then
+                StrSQL = StrSQL + " And Notes.NoteID <>" & Me.XPTxtID.Text & ""
             End If
 
             StrSQL = StrSQL + " GROUP BY TblMaintenece.MaintananceID," & "TblMaintenece.MType, TblMaintenece.PaymentType"
@@ -18741,7 +18775,7 @@ Private Function CheckDebitMaintaince(LngTransID As Long) As Boolean
                     Msg = Msg & CHR(13) & "Ê·«Ì„ﬂ‰  Õ’Ì· «Ì… „ﬁ»Ê÷«  ≈÷«›Ì… ⁄·ÌÂ«."
                     MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                     Exit Function
-                ElseIf RsTemp("SumNote_Value").value + val(Me.XPTxtVal.text) > DblCreditNoteValue Then
+                ElseIf RsTemp("SumNote_Value").value + val(Me.XPTxtVal.Text) > DblCreditNoteValue Then
                     Msg = "⁄›Ê« ..."
                     Msg = Msg & CHR(13) & "·ﬁœ  „  Õ’Ì· „ﬁ»Ê÷«  „”»ﬁ« ·Â–Â «·›« Ê—…"
                     Msg = Msg & CHR(13) & "Ê»≈÷«›… «·ﬁÌ„… «·Õ«·Ì… ”Ê›   ŒÿÏ «·ﬁÌ„… «·√Ã·… „‰ «·›« Ê—…"
@@ -18755,8 +18789,8 @@ Private Function CheckDebitMaintaince(LngTransID As Long) As Boolean
             End If
 
         Else
-            Msg = "⁄›Ê« «·›« Ê—… —ﬁ„ " & Trim(Me.TxtTransSerial.text)
-            Msg = Msg & CHR(13) & "·Ì”  „”Ã·… „⁄ «·⁄„Ì· " & Me.DBCboClientName.text
+            Msg = "⁄›Ê« «·›« Ê—… —ﬁ„ " & Trim(Me.TxtTransSerial.Text)
+            Msg = Msg & CHR(13) & "·Ì”  „”Ã·… „⁄ «·⁄„Ì· " & Me.DBCboClientName.Text
             MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
             TxtTransSerial.SetFocus
             Exit Function

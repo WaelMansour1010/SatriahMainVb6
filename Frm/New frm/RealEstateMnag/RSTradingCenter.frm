@@ -23,6 +23,15 @@ Begin VB.Form RSAkar
    ScaleHeight     =   9450
    ScaleWidth      =   18225
    WindowState     =   2  'Maximized
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame frm2 
       Caption         =   "Frame5"
       Height          =   375

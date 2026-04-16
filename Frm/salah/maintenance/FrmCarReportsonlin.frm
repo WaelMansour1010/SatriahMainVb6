@@ -18,6 +18,15 @@ Begin VB.Form FrmCarReporonlin
    ScaleHeight     =   8805
    ScaleWidth      =   20025
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CheckBox chkAll 
       Alignment       =   1  'Right Justify
       Caption         =   "«ŸÂ«— «·ﬂ·"

@@ -20,6 +20,15 @@ Begin VB.Form FrmBillCarMaintExtrSearch
    ScaleWidth      =   6780
    ShowInTaskbar   =   0   'False
    StartUpPosition =   1  'CenterOwner
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame2 
       BackColor       =   &H00E2E9E9&
       Height          =   4815

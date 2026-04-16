@@ -1,5 +1,8 @@
-﻿byte*bb*18.210.170.36\SQLExpress*
-[2000]*2000*.*
+﻿Nagahat*Nagahat*WAEL\SQL2019*
+Adnan*Adnan*WAEL\SQL2019*
+Henaki2026*Henaki2026*WAEL\SQL2019*
+GhalinaERP*GhalinaERP*Wael\SQL2019*
+GhalinaERP*GhalinaERP*Wael\SQL2019*
 Byte2023*Byte2023*.*
 Byte2024*Byte2024*.*
 Fish*Fish*.*
@@ -9,7 +12,6 @@ InvoiceCustomer*InvoiceCustomer*.*
 RSMDB*RSMDB*.*
 Mo*Mo*.*
 Egg*Egg*.*
-
 Baltan*Baltan*.*
 Magal*Magal*.*
 Raka*Raka*.*

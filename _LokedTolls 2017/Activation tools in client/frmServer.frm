@@ -15,6 +15,15 @@ Begin VB.Form FrmActivation
    ScaleWidth      =   11040
    ShowInTaskbar   =   0   'False
    StartUpPosition =   3  'Windows Default
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox TxtNoOFUsers 
       Alignment       =   1  'Right Justify
       Enabled         =   0   'False

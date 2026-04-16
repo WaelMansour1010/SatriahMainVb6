@@ -10,6 +10,15 @@ Begin VB.Form FrmReportControl
    MDIChild        =   -1  'True
    ScaleHeight     =   7170
    ScaleWidth      =   9825
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin XtremeReportControl.ReportControl ReportControl1 
       Height          =   5985
       Left            =   660

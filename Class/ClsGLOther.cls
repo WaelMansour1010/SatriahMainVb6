@@ -277,6 +277,10 @@ End If
       ' «‘⁄«— „œÌ‰ 383
       ' 381 «‘⁄«— œ«∆‰
     inv.InvoiceTypeCode.ID = val(InvoiceTypeCodeID)
+    
+    If InvoiceTypeCodename = "" Then
+        InvoiceTypeCodename = "0100000"
+    End If
   inv.InvoiceTypeCode.Name = InvoiceTypeCodename
     'inv.invoiceTypeCode.Name based on format NNPNESB
     'NN 01 ··›« Ê—… «·÷—Ì»Ì…
@@ -2607,7 +2611,9 @@ If HeaderDiscEx > 0# Then
     ' Ã“¡ «·Œ’„ «·Ê«ﬁ⁄ ⁄·Ï «·»‰Êœ «·Œ«÷⁄… S
     If Allow_S > 0# Then
         Dim allowanceS As Object
-        Set allowanceS = CreateObject("ZatcaUBLXMLGenerator.AllowanceCharge")
+        
+        Set allowanceS = SafeCreateObject("ZatcaUBLXMLGenerator.AllowanceCharge")
+        If allowanceS Is Nothing Then Exit Function
         allowanceS.ChargeIndicator = False
         allowanceS.Amount = Format(Allow_S, "0.##")
         allowanceS.AllowanceChargeReason = "Invoice discount (unified)"
@@ -4719,7 +4725,8 @@ If HeaderDiscEx > 0# Then
     ' Ã“¡ «·Œ’„ «·Ê«ﬁ⁄ ⁄·Ï «·»‰Êœ «·Œ«÷⁄… S (‘«„· «·÷—Ì»…)
     If Allow_S_Inc > 0# Then
         Dim allowanceS As Object
-        Set allowanceS = CreateObject("ZatcaUBLXMLGenerator.AllowanceCharge")
+         Set allowanceS = SafeCreateObject("ZatcaUBLXMLGenerator.AllowanceCharge")
+        If allowanceS Is Nothing Then Exit Function
         allowanceS.ChargeIndicator = False
         Allow_S_Inc = Allow_S_Inc
         allowanceS.Amount = Format(Allow_S_Inc, "0.##")          ' Œ’„ Œ«÷⁄ ‘«„· VAT
@@ -5333,7 +5340,9 @@ If HeaderDiscEx > 0# Then
     ' Ã“¡ «·Œ’„ «·Ê«ﬁ⁄ ⁄·Ï «·»‰Êœ «·Œ«÷⁄… S (‘«„· «·÷—Ì»…)
     If Allow_S_Inc > 0# Then
         Dim allowanceS As Object
-        Set allowanceS = CreateObject("ZatcaUBLXMLGenerator.AllowanceCharge")
+         Set allowanceS = SafeCreateObject("ZatcaUBLXMLGenerator.AllowanceCharge")
+        If allowanceS Is Nothing Then Exit Function
+        
         allowanceS.ChargeIndicator = False
         Allow_S_Inc = Allow_S_Inc
         allowanceS.Amount = Format(Allow_S_Inc, "0.##")          ' Œ’„ Œ«÷⁄ ‘«„· VAT
@@ -7747,6 +7756,7 @@ Private Sub ConectionFirst()
     On Error GoTo ConnErr
 Dim SysSQLServerUserpassword2 As String
 SysSQLServerUserpassword2 = "Admin.com"
+'SysSQLServerUserpassword2 = "Admin@123"
 
     If Not POSConnection Is Nothing Then
         If POSConnection.State = adStateOpen Then
@@ -8254,6 +8264,11 @@ If HeaderDiscEx > 0# Then
     If Allow_S > 0# Then
         Dim allowanceS As Object
         Set allowanceS = CreateObject("ZatcaUBLXMLGenerator.AllowanceCharge")
+        If Err.Number <> 0 Then
+            MsgBox "Œÿ√: ·„ Ì „ «·⁄ÀÊ— ⁄·Ï „ﬂÊ‰ ZatcaUBLXMLGenerator.  √ﬂœ „‰  ”ÃÌ· «·‹ DLL", vbCritical
+            GenerateInvoice_ZatcaV3 = False
+            Exit Function
+        End If
         allowanceS.ChargeIndicator = False
         allowanceS.Amount = Format(Allow_S, "0.##")
         allowanceS.AllowanceChargeReason = "Invoice discount (unified)"
@@ -8430,6 +8445,1493 @@ End If
 End Function
 
 
+Public Sub ValidateGeneratedInvoiceXml(ByVal xmlText As String)
+    On Error GoTo eh
+
+    Dim dom As Object
+    Set dom = CreateObject("MSXML2.DOMDocument.6.0")
+    dom.async = False
+    dom.validateOnParse = False
+    dom.setProperty "SelectionLanguage", "XPath"
+
+    If Not dom.loadXML(xmlText) Then
+        Debug.Print "XML Parse Error: "; dom.parseError.reason
+        Exit Sub
+    End If
+
+    Dim ns As String
+    ns = "xmlns:cbc='urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2' " & _
+         "xmlns:cac='urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2' " & _
+         "xmlns='urn:oasis:names:specification:ubl:schema:xsd:Invoice-2'"
+    dom.setProperty "SelectionNamespaces", ns
+
+    Dim nodes As Object, nd As Object
+    Dim sumLineEx As Double, sumLineTax As Double
+    sumLineEx = 0
+    sumLineTax = 0
+
+    Set nodes = dom.selectNodes("//cac:InvoiceLine")
+    For Each nd In nodes
+        sumLineEx = sumLineEx + CDbl(GetNodeText(nd.selectSingleNode("./cbc:LineExtensionAmount")))
+        sumLineTax = sumLineTax + CDbl(GetNodeText(nd.selectSingleNode("./cac:TaxTotal/cbc:TaxAmount")))
+    Next
+
+    Dim hdrLineEx As Double, hdrTaxEx As Double, hdrTaxInc As Double, hdrPayable As Double, hdrTax As Double
+    hdrLineEx = CDbl(GetNodeText(dom.selectSingleNode("//cac:LegalMonetaryTotal/cbc:LineExtensionAmount")))
+    hdrTaxEx = CDbl(GetNodeText(dom.selectSingleNode("//cac:LegalMonetaryTotal/cbc:TaxExclusiveAmount")))
+    hdrTaxInc = CDbl(GetNodeText(dom.selectSingleNode("//cac:LegalMonetaryTotal/cbc:TaxInclusiveAmount")))
+    hdrPayable = CDbl(GetNodeText(dom.selectSingleNode("//cac:LegalMonetaryTotal/cbc:PayableAmount")))
+    hdrTax = CDbl(GetNodeText(dom.selectSingleNode("(//cac:TaxTotal/cbc:TaxAmount)[last()]")))
+
+    Debug.Print "----------- XML VALIDATION -----------"
+    Debug.Print "SumLineEx   = "; Format(sumLineEx, "0.00")
+    Debug.Print "HdrLineEx   = "; Format(hdrLineEx, "0.00")
+    Debug.Print "SumLineTax  = "; Format(sumLineTax, "0.00")
+    Debug.Print "HdrTax      = "; Format(hdrTax, "0.00")
+    Debug.Print "HdrTaxEx    = "; Format(hdrTaxEx, "0.00")
+    Debug.Print "HdrTaxInc   = "; Format(hdrTaxInc, "0.00")
+    Debug.Print "HdrPayable  = "; Format(hdrPayable, "0.00")
+
+    If Abs(sumLineEx - hdrLineEx) > 0.01 Then Debug.Print "? LineExtension mismatch"
+    If Abs(sumLineTax - hdrTax) > 0.01 Then Debug.Print "? Tax mismatch"
+    If Abs((hdrTaxEx + hdrTax) - hdrTaxInc) > 0.01 Then Debug.Print "? TaxInclusive mismatch"
+
+    Debug.Print "-------------------------------------"
+    Exit Sub
+
+eh:
+    Debug.Print "ValidateGeneratedInvoiceXml Error: "; Err.Number; Err.Description
+End Sub
+
+Private Function GetNodeText(ByVal nd As Object) As String
+    If nd Is Nothing Then
+        GetNodeText = "0"
+    ElseIf Len(Trim$(nd.Text & "")) = 0 Then
+        GetNodeText = "0"
+    Else
+        GetNodeText = nd.Text
+    End If
+End Function
+
+Private Sub SaveTextToFile(ByVal FileName As String, ByVal Txt As String)
+    On Error Resume Next
+    Dim ff As Integer
+    ff = FreeFile
+    Open FileName For Output As #ff
+    Print #ff, Txt
+    Close #ff
+End Sub
+' =====================================================
+' GenerateInvoice_ZatcaV4_Test
+' ‰”Œ…  Ã—Ì»Ì…:
+' -  Ê“⁄ Œ’„ «·›« Ê—… ⁄·Ï «·”ÿÊ—
+' -  ÷Ì› Line Allowance ·ﬂ· ”ÿ—
+' - ·«  ÷Ì› Header Allowance Õ Ï ·« Ì ﬂ—— «·Œ’„
+' -   —ﬂ «·„ﬂ »…  Õ”» «·≈Ã„«·Ì«  „‰ «·”ÿÊ—
+' =====================================================
+' =====================================================
+' GenerateInvoice_ZatcaV4_1_Final
+' ?????? ????????:
+' 1) ?? TotalDiscountPerLine ????? ????? ?????? -> ?? ???? ????? Trans_Discount
+' 2) ?? ?? ???? ??? ???? ??? ?????? -> ???? ??? ???????? ??? ??????
+' 3) ?? ???? Header Allowance ??? ?? ???? Double Discount
+' 4) ???? ??????? ???? TaxTotal ? LegalMonetaryTotal ?? ??????
+' =====================================================
+
+Public Function GenerateInvoice_ZatcaV4_1_Final( _
+    Optional ByVal docType As Integer = 0, _
+    Optional ByVal mTableName As String = "Transactions", _
+    Optional ByVal mFieldIDName As String = "Transaction_ID", _
+    Optional ByVal ActivityTypeIdInv As Integer = 0, _
+    Optional ByVal branch_idInv As Integer = 0 _
+) As Boolean
+
+    On Error GoTo eh
+
+    Dim ubl As Object, inv As Object, res As Object
+    Set ubl = CreateObject("ZatcaUBLXMLGenerator.UBLXML")
+    Set inv = CreateObject("ZatcaUBLXMLGenerator.Invoice")
+    Set res = CreateObject("ZatcaUBLXMLGenerator.Result")
+
+    If SystemOptions.CanUploadZakatOpt Then
+        ConectionFirst
+        Set cn2 = POSConnection
+    Else
+        Set cn2 = Cn
+    End If
+
+    If SystemOptions.ApplyEinvoiceWithActive Or SystemOptions.ApplyEinvoiceWithBranch Then
+        fillmycompanydata ActivityTypeIdInv, branch_idInv
+    Else
+        fillmycompanydata
+    End If
+
+    ' ---------------------- BillingReference ----------------------
+    If (val(InvoiceTypeCodeID) = 381 Or val(InvoiceTypeCodeID) = 383) Then
+        If Len(Trim$(InvoiceDocumentReferenceID & "")) > 0 And IsNumeric(InvoiceDocumentReferenceID) Then
+            Dim InvoiceDocumentReference As Object
+            Set InvoiceDocumentReference = CreateObject("ZatcaUBLXMLGenerator.InvoiceDocumentReference")
+            InvoiceDocumentReference.ID = CLng(InvoiceDocumentReferenceID)
+            inv.BillingReference.invoiceDocumentReferences.Add InvoiceDocumentReference
+        End If
+    End If
+
+    inv.InvoiceTypeCode.ID = val(InvoiceTypeCodeID)
+    inv.InvoiceTypeCode.Name = InvoiceTypeCodename
+
+    If DocumentCurrencyCode = "" Or DocumentCurrencyCode = "SR" Then DocumentCurrencyCode = "SAR"
+    If TaxCurrencyCode = "" Or TaxCurrencyCode = "SR" Then TaxCurrencyCode = "SAR"
+    inv.DocumentCurrencyCode = DocumentCurrencyCode
+    inv.TaxCurrencyCode = TaxCurrencyCode
+
+    inv.AdditionalDocumentReferencePIH.EmbeddedDocumentBinaryObject = CalllastPIH(uuidCounter)
+
+    Dim icvStr As String, icvOnlyDigits As String, i As Long, Ch As String
+    icvOnlyDigits = ""
+    icvStr = Trim$(uuidCounter & "")
+    If icvStr = "" Then icvStr = "1"
+
+    For i = 1 To Len(icvStr)
+        Ch = mId$(icvStr, i, 1)
+        If Ch >= "0" And Ch <= "9" Then icvOnlyDigits = icvOnlyDigits & Ch
+    Next i
+
+    If icvOnlyDigits = "" Then icvOnlyDigits = "1"
+    inv.AdditionalDocumentReferenceICV.UUID = CLng(icvOnlyDigits)
+
+    inv.ID = ID
+
+    If IsNull(IssueDate) Or Trim$(IssueDate & "") = "" Then IssueDate = Date
+    inv.IssueDate = Format$(IssueDate, "yyyy-mm-dd")
+
+    If IsNull(IssueTim) Or Trim$(IssueTim & "") = "" Then IssueTim = Now
+    inv.IssueTime = Format$(IssueTim, "HH:mm:ss")
+
+    If Len(Trim$(ActualDeliveryDate & "")) = 0 Then ActualDeliveryDate = IssueDate
+    If Len(Trim$(LatestDeliveryDate & "")) = 0 Then LatestDeliveryDate = IssueDate
+    inv.Delivery.ActualDeliveryDate = Format$(ActualDeliveryDate, "yyyy-mm-dd")
+    If val(InvoiceTypeCodeID) = 388 Then
+        inv.Delivery.LatestDeliveryDate = Format$(LatestDeliveryDate, "yyyy-mm-dd")
+    End If
+
+    ' ---------------------- PaymentMeans ----------------------
+    Dim paymentmean As Object
+    Set paymentmean = CreateObject("ZatcaUBLXMLGenerator.PaymentMeans")
+    paymentmean.PaymentMeansCode = Trim$(PaymentMeansCode & "")
+
+    If val(InvoiceTypeCodeID) = 383 Or val(InvoiceTypeCodeID) = 381 Then
+        paymentmean.InstructionNote = "Returned items"
+    End If
+
+    If Len(Trim$(PayeeFinancialAccount & "")) > 0 Then
+        paymentmean.PayeeFinancialAccount.ID = Trim$(PayeeFinancialAccount & "")
+    End If
+
+    If Len(Trim$(paymentnote & "")) > 0 Then
+        paymentmean.PayeeFinancialAccount.paymentnote = Trim$(paymentnote & "")
+    End If
+
+    inv.PaymentMeans.Add paymentmean
+
+    ' ---------------------- Supplier ----------------------
+    inv.SupplierParty.PartyIdentification.ID = Trim$(cIdentificationID & "")
+    If Len(Trim$(cschemeID & "")) = 0 Then cschemeID = "CRN"
+    inv.SupplierParty.PartyIdentification.schemeID = cschemeID
+
+    inv.SupplierParty.PostalAddress.StreetName = IIf(Len(Trim$(cStreetName & "")) = 0, "N/A", Trim$(cStreetName & ""))
+    inv.SupplierParty.PostalAddress.AdditionalStreetName = Trim$(cAdditionalStreetName & "")
+    inv.SupplierParty.PostalAddress.BuildingNumber = IIf(Len(Trim$(cBuildingNumber & "")) = 0, "N/A", Trim$(cBuildingNumber & ""))
+    inv.SupplierParty.PostalAddress.PlotIdentification = Trim$(cPlotIdentification & "")
+    inv.SupplierParty.PostalAddress.CityName = IIf(Len(Trim$(cCityName & "")) = 0, "N/A", Trim$(cCityName & ""))
+    inv.SupplierParty.PostalAddress.PostalZone = IIf(Len(Trim$(cPostalZone & "")) = 0, "00000", Trim$(cPostalZone & ""))
+    inv.SupplierParty.PostalAddress.CountrySubentity = Trim$(cCountrySubentity & "")
+    inv.SupplierParty.PostalAddress.CitySubdivisionName = Trim$(cCitySubdivisionName & "")
+    inv.SupplierParty.PostalAddress.Country.IdentificationCode = CleanCountryCode(cIdentificationCode)
+
+    inv.SupplierParty.PartyLegalEntity.RegistrationName = Trim$(Companynameforvat & "")
+    inv.SupplierParty.PartyTaxScheme.CompanyID = Trim$(cCompanyID & "")
+
+    ' ---------------------- Customer ----------------------
+    Dim isStandard As Boolean
+    Dim isSimplified As Boolean
+
+    isStandard = (left$(InvoiceTypeCodename & "", 2) = "01")
+    isSimplified = (left$(InvoiceTypeCodename & "", 2) = "02") _
+                   And (LCase$(mTableName) = "tbleinvoice" _
+                     Or LCase$(mTableName) = "propertyduebatchdetail" _
+                     Or LCase$(mTableName) = "debitandcreditnotification")
+
+    If isStandard Or isSimplified Then
+        Dim CUSTID As String
+        Dim custSchemeID As String
+
+        If Len(Trim$(Id700 & "")) > 0 Then
+            CUSTID = Trim$(Id700 & "")
+            custSchemeID = "MOM"
+        Else
+            CUSTID = Trim$(Identificationid & "")
+            custSchemeID = Trim$(schemeID & "")
+        End If
+
+        If isStandard Then
+            If CUSTID = "300000000000003" Or CUSTID = "" Or CUSTID = "0" Or UCase$(CUSTID) = "N/A" Then
+                If Len(Trim$(CompanyID & "")) = 15 And IsNumeric(CompanyID) Then
+                    CUSTID = Trim$(CompanyID)
+                    custSchemeID = "TIN"
+                Else
+                    CUSTID = "300000000000003"
+                    custSchemeID = "OTH"
+                End If
+            End If
+        Else
+            If Len(CUSTID) = 0 Or UCase$(CUSTID) = "N/A" Or CUSTID = "0" Then
+                CUSTID = "300000000000003"
+                custSchemeID = "OTH"
+            End If
+        End If
+
+        custSchemeID = GetCorrectSchemeID(CUSTID, custSchemeID)
+
+        inv.CustomerParty.PartyIdentification.ID = CUSTID
+        inv.CustomerParty.PartyIdentification.schemeID = custSchemeID
+
+        inv.CustomerParty.PostalAddress.StreetName = IIf(Len(Trim$(StreetName & "")) = 0, "N/A", Trim$(StreetName & ""))
+        inv.CustomerParty.PostalAddress.AdditionalStreetName = Trim$(AdditionalStreetName & "")
+        inv.CustomerParty.PostalAddress.BuildingNumber = IIf(Len(Trim$(BuildingNumber & "")) = 0, "N/A", Trim$(BuildingNumber & ""))
+        inv.CustomerParty.PostalAddress.PlotIdentification = Trim$(PlotIdentification & "")
+        inv.CustomerParty.PostalAddress.CityName = IIf(Len(Trim$(CityName & "")) = 0, "N/A", Trim$(CityName & ""))
+        inv.CustomerParty.PostalAddress.PostalZone = IIf(Len(Trim$(PostalZone & "")) = 0, "00000", Trim$(PostalZone & ""))
+        inv.CustomerParty.PostalAddress.CountrySubentity = Trim$(CountrySubentity & "")
+        inv.CustomerParty.PostalAddress.CitySubdivisionName = Trim$(CitySubdivisionName & "")
+        inv.CustomerParty.PostalAddress.Country.IdentificationCode = CleanCountryCode(IdentificationCode)
+
+        inv.CustomerParty.PartyLegalEntity.RegistrationName = Trim$(RegistrationName & "")
+
+        If Len(Trim$(Id700 & "")) > 0 Then
+            inv.CustomerParty.PartyTaxScheme.CompanyID = ""
+        Else
+            inv.CustomerParty.PartyTaxScheme.CompanyID = Trim$(CompanyID & "")
+        End If
+    End If
+
+    ' =========================================================
+    ' ============   ????? ?????? ??? + ????? ????????  =======
+    ' =========================================================
+    Dim StrSQL As String
+    StrSQL = ""
+    StrSQL = StrSQL & "SELECT "
+    StrSQL = StrSQL & "  I.ItemName, I.ItemNamee, ISNULL(I.ItemWithOutVAT,0) AS ItemWithOutVAT, "
+    StrSQL = StrSQL & "  T.Trans_DiscountType, ISNULL(T.Trans_Discount,0) AS Trans_Discount, "
+    StrSQL = StrSQL & "  TD.ShowQty, "
+    StrSQL = StrSQL & "  TD.ItemDiscountType, "
+    StrSQL = StrSQL & "  ISNULL(TD.ItemDiscount,0) AS ItemDiscount, "
+    StrSQL = StrSQL & "  ISNULL(TD.TotalDiscountPerLine,0) AS TotalDiscountPerLine, "
+    StrSQL = StrSQL & "  VatRate = CASE WHEN ISNULL(I.ItemWithOutVAT,0)=0 THEN ISNULL(TD.Vatyo,0) ELSE 0 END, "
+
+    If SystemOptions.PriceWithVAT Then
+        StrSQL = StrSQL & "  BasePrice_Ex = ROUND(TD.showPrice / (1 + (CASE WHEN ISNULL(I.ItemWithOutVAT,0)=0 THEN ISNULL(TD.Vatyo,0) ELSE 0 END)/100.0), 6), "
+        StrSQL = StrSQL & "  LineEx_NoDisc = ROUND((TD.showPrice * TD.ShowQty) / (1 + (CASE WHEN ISNULL(I.ItemWithOutVAT,0)=0 THEN ISNULL(TD.Vatyo,0) ELSE 0 END)/100.0), 6) "
+    Else
+        StrSQL = StrSQL & "  BasePrice_Ex = ROUND(TD.showPrice, 6), "
+        StrSQL = StrSQL & "  LineEx_NoDisc = ROUND(TD.showPrice * TD.ShowQty, 6) "
+    End If
+
+    StrSQL = StrSQL & "FROM dbo.Transactions AS T "
+    StrSQL = StrSQL & "INNER JOIN dbo.Transaction_Details AS TD ON T.Transaction_ID = TD.Transaction_ID "
+    StrSQL = StrSQL & "INNER JOIN dbo.TblItems AS I ON TD.Item_ID = I.ItemID "
+    StrSQL = StrSQL & "WHERE T.Transaction_ID = " & Transaction_ID
+    StrSQL = StrSQL & " ORDER BY TD.ID"
+
+    Dim rs As New ADODB.Recordset
+    rs.Open StrSQL, cn2, adOpenStatic, adLockReadOnly, adCmdText
+
+    If rs.EOF Then
+        ErrorMessageS = "No invoice lines found."
+        savewarrninganderror Transaction_ID, , CStr(ErrorMessageS), mTableName, mFieldIDName
+        GenerateInvoice_ZatcaV4_1_Final = False
+        Exit Function
+    End If
+
+    Dim LineCount As Long
+    LineCount = 0
+    rs.MoveFirst
+    Do Until rs.EOF
+        LineCount = LineCount + 1
+        rs.MoveNext
+    Loop
+    rs.MoveFirst
+
+    Dim arrItemName() As String
+    Dim arrQty() As Double
+    Dim arrBasePriceEx() As Double
+    Dim arrLineExNoDisc() As Double
+    Dim arrLineOwnDiscEx() As Double
+    Dim arrLineNetBeforeHdr() As Double
+    Dim arrHdrShareEx() As Double
+    Dim arrRatePct() As Double
+    Dim arrTaxCatID() As String
+    Dim arrExemptCode() As String
+    Dim arrExemptReason() As String
+    Dim arrIsExempt() As Boolean
+
+    ReDim arrItemName(1 To LineCount)
+    ReDim arrQty(1 To LineCount)
+    ReDim arrBasePriceEx(1 To LineCount)
+    ReDim arrLineExNoDisc(1 To LineCount)
+    ReDim arrLineOwnDiscEx(1 To LineCount)
+    ReDim arrLineNetBeforeHdr(1 To LineCount)
+    ReDim arrHdrShareEx(1 To LineCount)
+    ReDim arrRatePct(1 To LineCount)
+    ReDim arrTaxCatID(1 To LineCount)
+    ReDim arrExemptCode(1 To LineCount)
+    ReDim arrExemptReason(1 To LineCount)
+    ReDim arrIsExempt(1 To LineCount)
+
+    Dim SumNetBeforeHdr_Taxable As Double
+    Dim SumNetBeforeHdr_Exempt As Double
+    Dim SumNetBeforeHdr_All As Double
+    Dim SumStoredLineDiscountEx As Double
+
+    Dim mTrans_DiscountType As Integer
+    Dim mTrans_Discount As Double
+
+    mTrans_DiscountType = val(rs!Trans_DiscountType & "")
+    mTrans_Discount = val(rs!Trans_Discount & "")
+
+    Dim n As Long
+    n = 0
+
+    Do Until rs.EOF
+        n = n + 1
+
+        Dim lineEx As Double
+        Dim Qty As Double
+        Dim basePrice As Double
+        Dim Rate As Double
+        Dim ratePct As Double
+        Dim discType As Long
+        Dim discPercent As Double
+        Dim discValue As Double
+        Dim discRaw As Double
+        Dim lineDiscEx As Double
+        Dim lineBaseForPercent As Double
+        Dim isItemExempt As Boolean
+
+        arrItemName(n) = rs!ItemName & ""
+        Qty = val(rs!ShowQty & "")
+        basePrice = val(rs!BasePrice_Ex & "")
+        lineEx = val(rs!LineEx_NoDisc & "")
+        Rate = val(rs!vatRate & "")
+        isItemExempt = (val(rs!ItemWithOutVAT & "") <> 0)
+
+        ratePct = IIf(Rate > 1, Rate, Rate * 100)
+
+        discType = val(rs!ItemDiscountType & "")
+        discPercent = val(rs!ItemDiscount & "")
+        discValue = val(rs!ItemDiscount & "")
+        discRaw = 0
+
+        Select Case discType
+            Case 3
+                If SystemOptions.PriceWithVAT And Rate > 0 Then
+                    lineBaseForPercent = lineEx * (1 + Rate / 100#)
+                Else
+                    lineBaseForPercent = lineEx
+                End If
+                discRaw = Round(lineBaseForPercent * discPercent / 100#, 6) + val(rs!TotalDiscountPerLine & "")
+            Case 2
+                discRaw = discValue + val(rs!TotalDiscountPerLine & "")
+            Case Else
+                discRaw = val(rs!TotalDiscountPerLine & "")
+        End Select
+
+        If SystemOptions.PriceWithVAT And Rate > 0 Then
+            lineDiscEx = Round(discRaw / (1 + (Rate / 100#)), 6)
+        Else
+            lineDiscEx = Round(discRaw, 6)
+        End If
+
+        If lineDiscEx < 0 Then lineDiscEx = 0
+        If lineDiscEx > lineEx Then lineDiscEx = lineEx
+
+        arrQty(n) = Qty
+        arrBasePriceEx(n) = basePrice
+        arrLineExNoDisc(n) = lineEx
+        arrLineOwnDiscEx(n) = lineDiscEx
+        arrLineNetBeforeHdr(n) = Round(lineEx - lineDiscEx, 6)
+        If arrLineNetBeforeHdr(n) < 0 Then arrLineNetBeforeHdr(n) = 0
+
+        arrRatePct(n) = IIf(isItemExempt, 0, ratePct)
+        arrIsExempt(n) = isItemExempt
+
+        Dim taxCatID As String
+        Dim exemptCode As String
+        Dim exemptReason As String
+
+        taxCatID = "S"
+        exemptCode = ""
+        exemptReason = ""
+
+        If Round(basePrice, 2) = 0 Then
+            taxCatID = "Z"
+            exemptCode = "VATEX-SA-00"
+            exemptReason = "Free sample"
+        ElseIf ratePct > 0 And Not isItemExempt Then
+            taxCatID = "S"
+        Else
+            If docType = 6 And isItemExempt Then
+                taxCatID = "E"
+                exemptCode = "VATEX-SA-30"
+                exemptReason = "Real estate residential lease/sale"
+            ElseIf InvoiceTypeCodename = "0100100" Then
+                taxCatID = "Z"
+                exemptCode = "VATEX-SA-32"
+                exemptReason = "Export of goods"
+            ElseIf InvoiceTypeCodename = "0100000" And docType = 6 Then
+                taxCatID = "O"
+                exemptCode = "VATEX-SA-OOS"
+                exemptReason = "Out of scope of VAT"
+            ElseIf LCase$(mTableName) = "debitandcreditnotification" And ratePct = 0 Then
+                taxCatID = "O"
+                exemptCode = "VATEX-SA-OOS"
+                exemptReason = "Out of scope of VAT"
+            Else
+                taxCatID = "E"
+                exemptCode = "VATEX-SA-29"
+                exemptReason = "Financial services specified in Article 29"
+            End If
+        End If
+
+        arrTaxCatID(n) = taxCatID
+        arrExemptCode(n) = exemptCode
+        arrExemptReason(n) = exemptReason
+
+        If taxCatID = "S" Then
+            SumNetBeforeHdr_Taxable = SumNetBeforeHdr_Taxable + arrLineNetBeforeHdr(n)
+        Else
+            SumNetBeforeHdr_Exempt = SumNetBeforeHdr_Exempt + arrLineNetBeforeHdr(n)
+        End If
+
+        SumNetBeforeHdr_All = SumNetBeforeHdr_All + arrLineNetBeforeHdr(n)
+        SumStoredLineDiscountEx = SumStoredLineDiscountEx + lineDiscEx
+
+        rs.MoveNext
+    Loop
+
+    rs.Close
+
+    ' =========================================================
+    ' ============   ???? ??? ???????? ???????   ==============
+    ' =========================================================
+    Dim HeaderDiscountExWanted As Double
+    Dim TransDiscountRaw As Double
+    Dim TransDiscountEx As Double
+    Dim ShouldDistributeHeaderDiscount As Boolean
+
+    HeaderDiscountExWanted = 0#
+    TransDiscountRaw = val(mTrans_Discount & "")
+    TransDiscountEx = 0#
+
+    ' ?? ????? ????? ?????? ??? ??????? ?? ???? ??????
+    ShouldDistributeHeaderDiscount = (Round(SumStoredLineDiscountEx, 2) = 0)
+
+    If ShouldDistributeHeaderDiscount And TransDiscountRaw <> 0 Then
+        If mTrans_DiscountType = 1 Then
+            ' ???? ?????
+            If SystemOptions.PriceWithVAT And SumNetBeforeHdr_Taxable > 0 Then
+                Dim TotalWithVATBeforeHdr As Double
+                TotalWithVATBeforeHdr = SumNetBeforeHdr_All + Round(SumNetBeforeHdr_Taxable * 0.15, 6)
+                TransDiscountRaw = Round(TotalWithVATBeforeHdr * TransDiscountRaw / 100#, 6)
+
+                If SumNetBeforeHdr_All > 0 Then
+                    TransDiscountEx = Round(TransDiscountRaw / (1 + ((SumNetBeforeHdr_Taxable / SumNetBeforeHdr_All) * 0.15)), 6)
+                Else
+                    TransDiscountEx = 0
+                End If
+            Else
+                TransDiscountEx = Round(SumNetBeforeHdr_All * TransDiscountRaw / 100#, 6)
+            End If
+        Else
+            ' ???? ????
+            If SystemOptions.PriceWithVAT And SumNetBeforeHdr_Taxable > 0 Then
+                If SumNetBeforeHdr_All > 0 Then
+                    TransDiscountEx = Round(TransDiscountRaw / (1 + ((SumNetBeforeHdr_Taxable / SumNetBeforeHdr_All) * 0.15)), 6)
+                Else
+                    TransDiscountEx = 0
+                End If
+            Else
+                TransDiscountEx = Round(TransDiscountRaw, 6)
+            End If
+        End If
+
+        HeaderDiscountExWanted = Round(TransDiscountEx, 6)
+        If HeaderDiscountExWanted < 0 Then HeaderDiscountExWanted = 0
+        If HeaderDiscountExWanted > SumNetBeforeHdr_All Then HeaderDiscountExWanted = SumNetBeforeHdr_All
+    Else
+        HeaderDiscountExWanted = 0#
+    End If
+
+    Dim DistTotal As Double
+    DistTotal = 0#
+
+    For n = 1 To LineCount
+        arrHdrShareEx(n) = 0#
+
+        If HeaderDiscountExWanted > 0 And SumNetBeforeHdr_All > 0 Then
+            arrHdrShareEx(n) = Round(HeaderDiscountExWanted * (arrLineNetBeforeHdr(n) / SumNetBeforeHdr_All), 6)
+            If arrHdrShareEx(n) > arrLineNetBeforeHdr(n) Then
+                arrHdrShareEx(n) = arrLineNetBeforeHdr(n)
+            End If
+            DistTotal = DistTotal + arrHdrShareEx(n)
+        End If
+    Next n
+
+    ' ????? ??? ?????? ??? ??? ??? ????
+    Dim diffDist As Double
+    diffDist = Round(HeaderDiscountExWanted - DistTotal, 6)
+
+    If HeaderDiscountExWanted > 0 And Abs(diffDist) > 0.000001 Then
+        For n = LineCount To 1 Step -1
+            If arrLineNetBeforeHdr(n) > 0 Then
+                arrHdrShareEx(n) = arrHdrShareEx(n) + diffDist
+                If arrHdrShareEx(n) < 0 Then arrHdrShareEx(n) = 0
+                If arrHdrShareEx(n) > arrLineNetBeforeHdr(n) Then arrHdrShareEx(n) = arrLineNetBeforeHdr(n)
+                Exit For
+            End If
+        Next n
+    End If
+
+    ' =========================================================
+    ' ============   ???? ?????? ?? line allowances ===========
+    ' =========================================================
+    For n = 1 To LineCount
+        Dim invline As Object
+        Set invline = CreateObject("ZatcaUBLXMLGenerator.InvoiceLine")
+
+        invline.ID = CStr(n)
+        invline.InvoiceQuantity = CDbl(Format$(arrQty(n), "0.######"))
+        invline.Price.PriceAmount = CDbl(Format$(arrBasePriceEx(n), "0.######"))
+        invline.Price.BaseQuantity = 1
+        invline.Price.EncludingVat = False
+        invline.Item.Name = arrItemName(n)
+
+        invline.Item.classifiedTaxCategory.ID = arrTaxCatID(n)
+        invline.Item.classifiedTaxCategory.Percent = IIf(arrTaxCatID(n) = "S", arrRatePct(n), 0)
+
+        invline.TaxTotal.TaxSubtotal.taxCategory.ID = arrTaxCatID(n)
+        invline.TaxTotal.TaxSubtotal.taxCategory.Percent = IIf(arrTaxCatID(n) = "S", arrRatePct(n), 0)
+
+        On Error Resume Next
+        If arrExemptCode(n) <> "" Then
+            invline.TaxTotal.TaxSubtotal.taxCategory.TaxExemptionReasonCode = arrExemptCode(n)
+            invline.TaxTotal.TaxSubtotal.taxCategory.TaxExemptionReason = arrExemptReason(n)
+            invline.Item.classifiedTaxCategory.TaxExemptionReasonCode = arrExemptCode(n)
+            invline.Item.classifiedTaxCategory.TaxExemptionReason = arrExemptReason(n)
+        End If
+        On Error GoTo eh
+
+        ' ????? ?????? ?????? ??? ?????
+        If Round(arrLineOwnDiscEx(n), 2) > 0 Then
+            Dim lineAllowanceOwn As Object
+            Set lineAllowanceOwn = CreateObject("ZatcaUBLXMLGenerator.AllowanceCharge")
+            lineAllowanceOwn.ChargeIndicator = False
+            lineAllowanceOwn.Amount = CDbl(Format$(Round(arrLineOwnDiscEx(n), 2), "0.00"))
+            lineAllowanceOwn.AllowanceChargeReason = "Line discount"
+            lineAllowanceOwn.taxCategory.ID = arrTaxCatID(n)
+            lineAllowanceOwn.taxCategory.Percent = IIf(arrTaxCatID(n) = "S", arrRatePct(n), 0)
+            invline.allowanceCharges.Add lineAllowanceOwn
+        End If
+
+        ' ???? ??? ??? ??? ????? ???? ??? ????????
+        If Round(arrHdrShareEx(n), 2) > 0 Then
+            Dim lineAllowanceHdr As Object
+            Set lineAllowanceHdr = CreateObject("ZatcaUBLXMLGenerator.AllowanceCharge")
+            lineAllowanceHdr.ChargeIndicator = False
+            lineAllowanceHdr.Amount = CDbl(Format$(Round(arrHdrShareEx(n), 2), "0.00"))
+            lineAllowanceHdr.AllowanceChargeReason = "Invoice discount distributed"
+            lineAllowanceHdr.taxCategory.ID = arrTaxCatID(n)
+            lineAllowanceHdr.taxCategory.Percent = IIf(arrTaxCatID(n) = "S", arrRatePct(n), 0)
+            invline.allowanceCharges.Add lineAllowanceHdr
+        End If
+
+        inv.InvoiceLines.Add invline
+    Next n
+
+    ' =========================================================
+    ' ============   ?? ???? Header Allowance ???   ===========
+    ' =========================================================
+
+    If val(InvoiceTypeCodeID) = 388 Then
+        inv.LegalMonetaryTotal.PrepaidAmount = Round(val(PrepaidAmount & ""), 2)
+    Else
+        inv.LegalMonetaryTotal.PrepaidAmount = 0
+    End If
+
+    inv.LegalMonetaryTotal.PayableAmount = 0
+    inv.LegalMonetaryTotal.PayableRoundingAmount = 0
+    inv.LegalMonetaryTotal.ChargeTotalAmount = 0
+    inv.LegalMonetaryTotal.AllowanceTotalAmount = 0
+
+    ' =========================================================
+    ' ==================   ??????? / ???????   =================
+    ' =========================================================
+    Dim SendingMode As Integer: SendingMode = SystemOptions.SendingMode
+    Dim SecretKey As String:    SecretKey = SystemOptions.SecretKey
+
+    If SendingMode <> 0 Then
+        inv.CSIDInfo.CertPem = SystemOptions.PublickeycertPem
+        inv.CSIDInfo.Privatekey = SystemOptions.Privatekey
+    End If
+
+    Set res = ubl.GenerateInvoiceXML(inv, App.path)
+
+    If res.IsValid = True Then
+        InvoiceHash = res.InvoiceHash
+        SingedXML = res.SingedXML
+        EncodedInvoice = res.EncodedInvoice
+        UUID = res.UUID
+        QRCode = res.QRCode
+        PIH = res.PIH
+        SingedXMLFileName = res.SingedXMLFileName
+
+        Dim apireqlogic As Object, tokenresponse As Object
+        Dim invrequestbody As Object, invoicereportingmodel As Object, invoiceclearingmodel As Object
+        Set apireqlogic = CreateObject("ZatcaUBLXMLGenerator.BLL.ApiRequestLogic")
+        Set tokenresponse = CreateObject("ZatcaUBLXMLGenerator.HelperContracts.ComplianceCsrResponse")
+        Set invrequestbody = CreateObject("ZatcaUBLXMLGenerator.HelperContracts.InvoiceReportingRequest")
+        Set invoicereportingmodel = CreateObject("ZatcaUBLXMLGenerator.HelperContracts.InvoiceReportingResponse")
+        Set invoiceclearingmodel = CreateObject("ZatcaUBLXMLGenerator.HelperContracts.InvoiceClearanceResponse")
+
+        invrequestbody.invoice = res.EncodedInvoice
+        invrequestbody.InvoiceHash = res.InvoiceHash
+        invrequestbody.UUID = res.UUID
+
+        Select Case SendingMode
+            Case 0
+                apireqlogic.SetApiRequestLogic 0
+                Set tokenresponse = apireqlogic.GetComplianceCSIDAPI("12345", "", App.path)
+                If tokenresponse.errorMessage = "" Then
+                    Set invoicereportingmodel = apireqlogic.CallComplianceInvoiceAPI(tokenresponse.BinarySecurityToken, tokenresponse.Secret, invrequestbody)
+                    If invoicereportingmodel.IsSuccess = True Then
+                        If invoicereportingmodel.StatusCode = 202 Then
+                            WarningMessage = invoicereportingmodel.WarningMessage
+                            savewarrninganderror Transaction_ID, CStr(WarningMessage), , mTableName, mFieldIDName
+                        End If
+                        ErrorMessageS = invoicereportingmodel.ReportingStatus
+                        savewarrninganderror Transaction_ID, , CStr(ErrorMessageS), mTableName, mFieldIDName
+                        zatcaStatus = 1
+                        cn2.Execute "UPDATE " & mTableName & " SET zatcaStatus=1 WHERE " & mFieldIDName & "=" & Transaction_ID
+                        updatedatatable val(docType), mTableName, mFieldIDName
+                    Else
+                        ErrorMessageS = invoicereportingmodel.errorMessage
+                        savewarrninganderror Transaction_ID, , CStr(ErrorMessageS), mTableName, mFieldIDName
+                    End If
+                Else
+                    ErrorMessageS = tokenresponse.errorMessage
+                    savewarrninganderror Transaction_ID, , CStr(ErrorMessageS), mTableName, mFieldIDName
+                End If
+
+            Case 1
+                apireqlogic.SetApiRequestLogic 1
+                apireqlogic.SetToSaveClearedXMLFile App.path, True
+                Set invoiceclearingmodel = apireqlogic.CallClearanceAPI(apireqlogic.ToBase64Encode(inv.CSIDInfo.CertPem), SecretKey, invrequestbody)
+                If invoiceclearingmodel.IsSuccess = True Then
+                    If invoiceclearingmodel.StatusCode = 202 Then
+                        WarningMessage = invoiceclearingmodel.WarningMessage
+                        savewarrninganderror Transaction_ID, CStr(WarningMessage), , mTableName, mFieldIDName
+                    End If
+                    ErrorMessageS = invoiceclearingmodel.ClearanceStatus
+                    savewarrninganderror Transaction_ID, , CStr(ErrorMessageS), mTableName, mFieldIDName
+                    QRCode = invoiceclearingmodel.QRCode
+                    zatcaStatus = 1
+                    cn2.Execute "UPDATE " & mTableName & " SET zatcaStatus=1 WHERE " & mFieldIDName & "=" & Transaction_ID
+                    updatedatatable val(docType), mTableName, mFieldIDName
+                Else
+                    ErrorMessageS = invoiceclearingmodel.errorMessage
+                    savewarrninganderror Transaction_ID, , CStr(ErrorMessageS), mTableName, mFieldIDName
+                End If
+
+            Case 2
+                apireqlogic.SetApiRequestLogic 2
+                apireqlogic.SetToSaveClearedXMLFile App.path, True
+                Set invoiceclearingmodel = apireqlogic.CallClearanceAPI(apireqlogic.ToBase64Encode(inv.CSIDInfo.CertPem), SecretKey, invrequestbody)
+                If invoiceclearingmodel.IsSuccess = True Then
+                    If invoiceclearingmodel.StatusCode = 202 Then
+                        WarningMessage = invoiceclearingmodel.WarningMessage
+                        savewarrninganderror Transaction_ID, CStr(WarningMessage), , mTableName, mFieldIDName
+                    End If
+                    ErrorMessageS = invoiceclearingmodel.ClearanceStatus
+                    savewarrninganderror Transaction_ID, , CStr(ErrorMessageS), mTableName, mFieldIDName
+                    QRCode = invoiceclearingmodel.QRCode
+                    zatcaStatus = 1
+                    cn2.Execute "UPDATE " & mTableName & " SET zatcaStatus=1 WHERE " & mFieldIDName & "=" & Transaction_ID
+                    updatedatatable val(docType), mTableName, mFieldIDName
+                Else
+                    ErrorMessageS = invoiceclearingmodel.errorMessage
+                    savewarrninganderror Transaction_ID, , CStr(ErrorMessageS), mTableName, mFieldIDName
+                End If
+        End Select
+
+        GenerateInvoice_ZatcaV4_1_Final = True
+    Else
+        ErrorMessageS = res.errorMessage
+        savewarrninganderror Transaction_ID, , CStr(ErrorMessageS), mTableName, mFieldIDName
+        GenerateInvoice_ZatcaV4_1_Final = False
+    End If
+
+    Exit Function
+
+eh:
+    ErrorMessageS = "GenerateInvoice_ZatcaV4_1_Final Error: " & Err.Number & " - " & Err.Description
+    On Error Resume Next
+    savewarrninganderror Transaction_ID, , CStr(ErrorMessageS), mTableName, mFieldIDName
+    GenerateInvoice_ZatcaV4_1_Final = False
+End Function
+Public Function GenerateInvoice_ZatcaV4_Test( _
+    Optional ByVal docType As Integer = 0, _
+    Optional ByVal mTableName As String = "Transactions", _
+    Optional ByVal mFieldIDName As String = "Transaction_ID", _
+    Optional ByVal ActivityTypeIdInv As Integer = 0, _
+    Optional ByVal branch_idInv As Integer = 0 _
+) As Boolean
+
+    On Error GoTo eh
+
+    Dim ubl As Object, inv As Object, res As Object
+    Set ubl = CreateObject("ZatcaUBLXMLGenerator.UBLXML")
+    Set inv = CreateObject("ZatcaUBLXMLGenerator.Invoice")
+    Set res = CreateObject("ZatcaUBLXMLGenerator.Result")
+
+    If SystemOptions.CanUploadZakatOpt Then
+        ConectionFirst
+        Set cn2 = POSConnection
+    Else
+        Set cn2 = Cn
+    End If
+
+    If SystemOptions.ApplyEinvoiceWithActive Or SystemOptions.ApplyEinvoiceWithBranch Then
+        fillmycompanydata ActivityTypeIdInv, branch_idInv
+    Else
+        fillmycompanydata
+    End If
+
+    ' ---------------------- BillingReference ----------------------
+    If (val(InvoiceTypeCodeID) = 381 Or val(InvoiceTypeCodeID) = 383) Then
+        If Len(Trim$(InvoiceDocumentReferenceID & "")) > 0 And IsNumeric(InvoiceDocumentReferenceID) Then
+            Dim InvoiceDocumentReference As Object
+            Set InvoiceDocumentReference = CreateObject("ZatcaUBLXMLGenerator.InvoiceDocumentReference")
+            InvoiceDocumentReference.ID = CLng(InvoiceDocumentReferenceID)
+            inv.BillingReference.invoiceDocumentReferences.Add InvoiceDocumentReference
+        End If
+    End If
+
+    inv.InvoiceTypeCode.ID = val(InvoiceTypeCodeID)
+    inv.InvoiceTypeCode.Name = InvoiceTypeCodename
+
+    If DocumentCurrencyCode = "" Or DocumentCurrencyCode = "SR" Then DocumentCurrencyCode = "SAR"
+    If TaxCurrencyCode = "" Or TaxCurrencyCode = "SR" Then TaxCurrencyCode = "SAR"
+    inv.DocumentCurrencyCode = DocumentCurrencyCode
+    inv.TaxCurrencyCode = TaxCurrencyCode
+
+    inv.AdditionalDocumentReferencePIH.EmbeddedDocumentBinaryObject = CalllastPIH(uuidCounter)
+
+    Dim icvStr As String, icvOnlyDigits As String, i As Long, Ch As String
+    icvOnlyDigits = ""
+    icvStr = Trim$(uuidCounter & "")
+    If icvStr = "" Then icvStr = "1"
+
+    For i = 1 To Len(icvStr)
+        Ch = mId$(icvStr, i, 1)
+        If Ch >= "0" And Ch <= "9" Then icvOnlyDigits = icvOnlyDigits & Ch
+    Next i
+
+    If icvOnlyDigits = "" Then icvOnlyDigits = "1"
+    inv.AdditionalDocumentReferenceICV.UUID = CLng(icvOnlyDigits)
+
+    inv.ID = ID
+
+    If IsNull(IssueDate) Or Trim$(IssueDate & "") = "" Then IssueDate = Date
+    inv.IssueDate = Format$(IssueDate, "yyyy-mm-dd")
+
+    If IsNull(IssueTim) Or Trim$(IssueTim & "") = "" Then IssueTim = Now
+    inv.IssueTime = Format$(IssueTim, "HH:mm:ss")
+
+    If Len(Trim$(ActualDeliveryDate & "")) = 0 Then ActualDeliveryDate = IssueDate
+    If Len(Trim$(LatestDeliveryDate & "")) = 0 Then LatestDeliveryDate = IssueDate
+    inv.Delivery.ActualDeliveryDate = Format$(ActualDeliveryDate, "yyyy-mm-dd")
+    If val(InvoiceTypeCodeID) = 388 Then
+        inv.Delivery.LatestDeliveryDate = Format$(LatestDeliveryDate, "yyyy-mm-dd")
+    End If
+
+    ' ---------------------- PaymentMeans ----------------------
+    Dim paymentmean As Object
+    Set paymentmean = CreateObject("ZatcaUBLXMLGenerator.PaymentMeans")
+    paymentmean.PaymentMeansCode = Trim$(PaymentMeansCode & "")
+
+    If val(InvoiceTypeCodeID) = 383 Or val(InvoiceTypeCodeID) = 381 Then
+        paymentmean.InstructionNote = "Returned items"
+    End If
+
+    If Len(Trim$(PayeeFinancialAccount & "")) > 0 Then
+        paymentmean.PayeeFinancialAccount.ID = Trim$(PayeeFinancialAccount & "")
+    End If
+
+    If Len(Trim$(paymentnote & "")) > 0 Then
+        paymentmean.PayeeFinancialAccount.paymentnote = Trim$(paymentnote & "")
+    End If
+
+    inv.PaymentMeans.Add paymentmean
+
+    ' ---------------------- Supplier ----------------------
+    inv.SupplierParty.PartyIdentification.ID = Trim$(cIdentificationID & "")
+    If Len(Trim$(cschemeID & "")) = 0 Then cschemeID = "CRN"
+    inv.SupplierParty.PartyIdentification.schemeID = cschemeID
+
+    inv.SupplierParty.PostalAddress.StreetName = IIf(Len(Trim$(cStreetName & "")) = 0, "N/A", Trim$(cStreetName & ""))
+    inv.SupplierParty.PostalAddress.AdditionalStreetName = Trim$(cAdditionalStreetName & "")
+    inv.SupplierParty.PostalAddress.BuildingNumber = IIf(Len(Trim$(cBuildingNumber & "")) = 0, "N/A", Trim$(cBuildingNumber & ""))
+    inv.SupplierParty.PostalAddress.PlotIdentification = Trim$(cPlotIdentification & "")
+    inv.SupplierParty.PostalAddress.CityName = IIf(Len(Trim$(cCityName & "")) = 0, "N/A", Trim$(cCityName & ""))
+    inv.SupplierParty.PostalAddress.PostalZone = IIf(Len(Trim$(cPostalZone & "")) = 0, "00000", Trim$(cPostalZone & ""))
+    inv.SupplierParty.PostalAddress.CountrySubentity = Trim$(cCountrySubentity & "")
+    inv.SupplierParty.PostalAddress.CitySubdivisionName = Trim$(cCitySubdivisionName & "")
+    inv.SupplierParty.PostalAddress.Country.IdentificationCode = CleanCountryCode(cIdentificationCode)
+
+    inv.SupplierParty.PartyLegalEntity.RegistrationName = Trim$(Companynameforvat & "")
+    inv.SupplierParty.PartyTaxScheme.CompanyID = Trim$(cCompanyID & "")
+
+    ' ---------------------- Customer ----------------------
+    Dim isStandard As Boolean
+    Dim isSimplified As Boolean
+
+    isStandard = (left$(InvoiceTypeCodename & "", 2) = "01")
+    isSimplified = (left$(InvoiceTypeCodename & "", 2) = "02") _
+                   And (LCase$(mTableName) = "tbleinvoice" _
+                     Or LCase$(mTableName) = "propertyduebatchdetail" _
+                     Or LCase$(mTableName) = "debitandcreditnotification")
+
+    If isStandard Or isSimplified Then
+        Dim CUSTID As String
+        Dim custSchemeID As String
+
+        If Len(Trim$(Id700 & "")) > 0 Then
+            CUSTID = Trim$(Id700 & "")
+            custSchemeID = "MOM"
+        Else
+            CUSTID = Trim$(Identificationid & "")
+            custSchemeID = Trim$(schemeID & "")
+        End If
+
+        If isStandard Then
+            If CUSTID = "300000000000003" Or CUSTID = "" Or CUSTID = "0" Or UCase$(CUSTID) = "N/A" Then
+                If Len(Trim$(CompanyID & "")) = 15 And IsNumeric(CompanyID) Then
+                    CUSTID = Trim$(CompanyID)
+                    custSchemeID = "TIN"
+                Else
+                    CUSTID = "300000000000003"
+                    custSchemeID = "OTH"
+                End If
+            End If
+        Else
+            If Len(CUSTID) = 0 Or UCase$(CUSTID) = "N/A" Or CUSTID = "0" Then
+                CUSTID = "300000000000003"
+                custSchemeID = "OTH"
+            End If
+        End If
+
+        custSchemeID = GetCorrectSchemeID(CUSTID, custSchemeID)
+
+        inv.CustomerParty.PartyIdentification.ID = CUSTID
+        inv.CustomerParty.PartyIdentification.schemeID = custSchemeID
+
+        inv.CustomerParty.PostalAddress.StreetName = IIf(Len(Trim$(StreetName & "")) = 0, "N/A", Trim$(StreetName & ""))
+        inv.CustomerParty.PostalAddress.AdditionalStreetName = Trim$(AdditionalStreetName & "")
+        inv.CustomerParty.PostalAddress.BuildingNumber = IIf(Len(Trim$(BuildingNumber & "")) = 0, "N/A", Trim$(BuildingNumber & ""))
+        inv.CustomerParty.PostalAddress.PlotIdentification = Trim$(PlotIdentification & "")
+        inv.CustomerParty.PostalAddress.CityName = IIf(Len(Trim$(CityName & "")) = 0, "N/A", Trim$(CityName & ""))
+        inv.CustomerParty.PostalAddress.PostalZone = IIf(Len(Trim$(PostalZone & "")) = 0, "00000", Trim$(PostalZone & ""))
+        inv.CustomerParty.PostalAddress.CountrySubentity = Trim$(CountrySubentity & "")
+        inv.CustomerParty.PostalAddress.CitySubdivisionName = Trim$(CitySubdivisionName & "")
+        inv.CustomerParty.PostalAddress.Country.IdentificationCode = CleanCountryCode(IdentificationCode)
+
+        inv.CustomerParty.PartyLegalEntity.RegistrationName = Trim$(RegistrationName & "")
+
+        If Len(Trim$(Id700 & "")) > 0 Then
+            inv.CustomerParty.PartyTaxScheme.CompanyID = ""
+        Else
+            inv.CustomerParty.PartyTaxScheme.CompanyID = Trim$(CompanyID & "")
+        End If
+    End If
+
+    ' =========================================================
+    ' ============    Õ„Ì· «·»‰Êœ Œ«„ +  Ê“Ì⁄ «·Œ’„   ==========
+    ' =========================================================
+    Dim StrSQL As String
+    StrSQL = ""
+    StrSQL = StrSQL & "SELECT "
+    StrSQL = StrSQL & "  I.ItemName, I.ItemNamee, ISNULL(I.ItemWithOutVAT,0) AS ItemWithOutVAT, "
+    StrSQL = StrSQL & "  T.Trans_DiscountType, ISNULL(T.Trans_Discount,0) AS Trans_Discount, "
+    StrSQL = StrSQL & "  TD.ShowQty, "
+    StrSQL = StrSQL & "  TD.ItemDiscountType, "
+    StrSQL = StrSQL & "  ISNULL(TD.ItemDiscount,0) AS ItemDiscount, "
+    StrSQL = StrSQL & "  ISNULL(TD.TotalDiscountPerLine,0) AS TotalDiscountPerLine, "
+    StrSQL = StrSQL & "  VatRate = CASE WHEN ISNULL(I.ItemWithOutVAT,0)=0 THEN ISNULL(TD.Vatyo,0) ELSE 0 END, "
+
+    If SystemOptions.PriceWithVAT Then
+        StrSQL = StrSQL & "  BasePrice_Ex = ROUND(TD.showPrice / (1 + (CASE WHEN ISNULL(I.ItemWithOutVAT,0)=0 THEN ISNULL(TD.Vatyo,0) ELSE 0 END)/100.0), 6), "
+        StrSQL = StrSQL & "  LineEx_NoDisc = ROUND((TD.showPrice * TD.ShowQty) / (1 + (CASE WHEN ISNULL(I.ItemWithOutVAT,0)=0 THEN ISNULL(TD.Vatyo,0) ELSE 0 END)/100.0), 6) "
+    Else
+        StrSQL = StrSQL & "  BasePrice_Ex = ROUND(TD.showPrice, 6), "
+        StrSQL = StrSQL & "  LineEx_NoDisc = ROUND(TD.showPrice * TD.ShowQty, 6) "
+    End If
+
+    StrSQL = StrSQL & "FROM dbo.Transactions AS T "
+    StrSQL = StrSQL & "INNER JOIN dbo.Transaction_Details AS TD ON T.Transaction_ID = TD.Transaction_ID "
+    StrSQL = StrSQL & "INNER JOIN dbo.TblItems AS I ON TD.Item_ID = I.ItemID "
+    StrSQL = StrSQL & "WHERE T.Transaction_ID = " & Transaction_ID
+    StrSQL = StrSQL & " ORDER BY TD.ID"
+
+    Dim rs As New ADODB.Recordset
+    rs.Open StrSQL, cn2, adOpenStatic, adLockReadOnly, adCmdText
+
+    If rs.EOF Then
+        ErrorMessageS = "No invoice lines found."
+        savewarrninganderror Transaction_ID, , CStr(ErrorMessageS), mTableName, mFieldIDName
+        GenerateInvoice_ZatcaV4_Test = False
+        Exit Function
+    End If
+
+    Dim LineCount As Long
+    LineCount = 0
+    rs.MoveFirst
+    Do Until rs.EOF
+        LineCount = LineCount + 1
+        rs.MoveNext
+    Loop
+    rs.MoveFirst
+
+    Dim arrItemName() As String
+    Dim arrQty() As Double
+    Dim arrBasePriceEx() As Double
+    Dim arrLineExNoDisc() As Double
+    Dim arrLineOwnDiscEx() As Double
+    Dim arrLineNetBeforeHdr() As Double
+    Dim arrHdrShareEx() As Double
+    Dim arrRatePct() As Double
+    Dim arrTaxCatID() As String
+    Dim arrExemptCode() As String
+    Dim arrExemptReason() As String
+    Dim arrIsExempt() As Boolean
+
+    ReDim arrItemName(1 To LineCount)
+    ReDim arrQty(1 To LineCount)
+    ReDim arrBasePriceEx(1 To LineCount)
+    ReDim arrLineExNoDisc(1 To LineCount)
+    ReDim arrLineOwnDiscEx(1 To LineCount)
+    ReDim arrLineNetBeforeHdr(1 To LineCount)
+    ReDim arrHdrShareEx(1 To LineCount)
+    ReDim arrRatePct(1 To LineCount)
+    ReDim arrTaxCatID(1 To LineCount)
+    ReDim arrExemptCode(1 To LineCount)
+    ReDim arrExemptReason(1 To LineCount)
+    ReDim arrIsExempt(1 To LineCount)
+
+    Dim SumNetBeforeHdr_Taxable As Double
+    Dim SumNetBeforeHdr_Exempt As Double
+    Dim SumNetBeforeHdr_All As Double
+
+    Dim mTrans_DiscountType As Integer
+    Dim mTrans_Discount As Double
+
+    mTrans_DiscountType = val(rs!Trans_DiscountType & "")
+    mTrans_Discount = val(rs!Trans_Discount & "")
+
+    Dim n As Long
+    n = 0
+
+    Do Until rs.EOF
+        n = n + 1
+
+        Dim lineEx As Double
+        Dim Qty As Double
+        Dim basePrice As Double
+        Dim Rate As Double
+        Dim ratePct As Double
+        Dim discType As Long
+        Dim discPercent As Double
+        Dim discValue As Double
+        Dim discRaw As Double
+        Dim lineDiscEx As Double
+        Dim lineBaseForPercent As Double
+        Dim isItemExempt As Boolean
+
+        arrItemName(n) = rs!ItemName & ""
+        Qty = val(rs!ShowQty & "")
+        basePrice = val(rs!BasePrice_Ex & "")
+        lineEx = val(rs!LineEx_NoDisc & "")
+        Rate = val(rs!vatRate & "")
+        isItemExempt = (val(rs!ItemWithOutVAT & "") <> 0)
+
+        ratePct = IIf(Rate > 1, Rate, Rate * 100)
+
+        discType = val(rs!ItemDiscountType & "")
+        discPercent = val(rs!ItemDiscount & "")
+        discValue = val(rs!ItemDiscount & "")
+        discRaw = 0
+
+        Select Case discType
+            Case 3
+                If SystemOptions.PriceWithVAT And Rate > 0 Then
+                    lineBaseForPercent = lineEx * (1 + Rate / 100#)
+                Else
+                    lineBaseForPercent = lineEx
+                End If
+                discRaw = Round(lineBaseForPercent * discPercent / 100#, 6) + val(rs!TotalDiscountPerLine & "")
+            Case 2
+                discRaw = discValue + val(rs!TotalDiscountPerLine & "")
+            Case Else
+                discRaw = val(rs!TotalDiscountPerLine & "")
+        End Select
+
+        If SystemOptions.PriceWithVAT And Rate > 0 Then
+            lineDiscEx = Round(discRaw / (1 + (Rate / 100#)), 6)
+        Else
+            lineDiscEx = Round(discRaw, 6)
+        End If
+
+        If lineDiscEx < 0 Then lineDiscEx = 0
+        If lineDiscEx > lineEx Then lineDiscEx = lineEx
+
+        arrQty(n) = Qty
+        arrBasePriceEx(n) = basePrice
+        arrLineExNoDisc(n) = lineEx
+        arrLineOwnDiscEx(n) = lineDiscEx
+        arrLineNetBeforeHdr(n) = Round(lineEx - lineDiscEx, 6)
+        If arrLineNetBeforeHdr(n) < 0 Then arrLineNetBeforeHdr(n) = 0
+
+        arrRatePct(n) = IIf(isItemExempt, 0, ratePct)
+        arrIsExempt(n) = isItemExempt
+
+        Dim taxCatID As String
+        Dim exemptCode As String
+        Dim exemptReason As String
+
+        taxCatID = "S"
+        exemptCode = ""
+        exemptReason = ""
+
+        If Round(basePrice, 2) = 0 Then
+            taxCatID = "Z"
+            exemptCode = "VATEX-SA-00"
+            exemptReason = "Free sample"
+        ElseIf ratePct > 0 And Not isItemExempt Then
+            taxCatID = "S"
+        Else
+            If docType = 6 And isItemExempt Then
+                taxCatID = "E"
+                exemptCode = "VATEX-SA-30"
+                exemptReason = "Real estate residential lease/sale"
+            ElseIf InvoiceTypeCodename = "0100100" Then
+                taxCatID = "Z"
+                exemptCode = "VATEX-SA-32"
+                exemptReason = "Export of goods"
+            ElseIf InvoiceTypeCodename = "0100000" And docType = 6 Then
+                taxCatID = "O"
+                exemptCode = "VATEX-SA-OOS"
+                exemptReason = "Out of scope of VAT"
+            ElseIf LCase$(mTableName) = "debitandcreditnotification" And ratePct = 0 Then
+                taxCatID = "O"
+                exemptCode = "VATEX-SA-OOS"
+                exemptReason = "Out of scope of VAT"
+            Else
+                taxCatID = "E"
+                exemptCode = "VATEX-SA-29"
+                exemptReason = "Financial services specified in Article 29"
+            End If
+        End If
+
+        arrTaxCatID(n) = taxCatID
+        arrExemptCode(n) = exemptCode
+        arrExemptReason(n) = exemptReason
+
+        If taxCatID = "S" Then
+            SumNetBeforeHdr_Taxable = SumNetBeforeHdr_Taxable + arrLineNetBeforeHdr(n)
+        Else
+            SumNetBeforeHdr_Exempt = SumNetBeforeHdr_Exempt + arrLineNetBeforeHdr(n)
+        End If
+
+        SumNetBeforeHdr_All = SumNetBeforeHdr_All + arrLineNetBeforeHdr(n)
+
+        rs.MoveNext
+    Loop
+
+    rs.Close
+
+    ' =========================================================
+    ' ============   Õ”«» Œ’„ «·›« Ê—… Ê Ê“Ì⁄Â   ==============
+    ' =========================================================
+    Dim HeaderDiscountExWanted As Double
+    HeaderDiscountExWanted = 0#
+
+    Dim TransDiscountRaw As Double
+    Dim TransDiscountEx As Double
+
+    TransDiscountRaw = val(mTrans_Discount & "")
+
+    If TransDiscountRaw <> 0 Then
+        If mTrans_DiscountType = 1 Then
+            ' ‰”»… „∆ÊÌ…
+            If SystemOptions.PriceWithVAT And SumNetBeforeHdr_Taxable > 0 Then
+                Dim TotalWithVATBeforeHdr As Double
+                TotalWithVATBeforeHdr = SumNetBeforeHdr_All + Round(SumNetBeforeHdr_Taxable * 0.15, 6)
+                TransDiscountRaw = Round(TotalWithVATBeforeHdr * TransDiscountRaw / 100#, 6)
+
+                If SumNetBeforeHdr_All > 0 Then
+                    TransDiscountEx = Round(TransDiscountRaw / (1 + ((SumNetBeforeHdr_Taxable / SumNetBeforeHdr_All) * 0.15)), 6)
+                Else
+                    TransDiscountEx = 0
+                End If
+            Else
+                TransDiscountEx = Round(SumNetBeforeHdr_All * TransDiscountRaw / 100#, 6)
+            End If
+        Else
+            ' „»·€ À«» 
+            If SystemOptions.PriceWithVAT And SumNetBeforeHdr_Taxable > 0 Then
+                If SumNetBeforeHdr_All > 0 Then
+                    TransDiscountEx = Round(TransDiscountRaw / (1 + ((SumNetBeforeHdr_Taxable / SumNetBeforeHdr_All) * 0.15)), 6)
+                Else
+                    TransDiscountEx = 0
+                End If
+            Else
+                TransDiscountEx = Round(TransDiscountRaw, 6)
+            End If
+        End If
+    End If
+
+    HeaderDiscountExWanted = Round(TransDiscountEx, 6)
+    If HeaderDiscountExWanted < 0 Then HeaderDiscountExWanted = 0
+    If HeaderDiscountExWanted > SumNetBeforeHdr_All Then HeaderDiscountExWanted = SumNetBeforeHdr_All
+
+    '  Ê“Ì⁄ ⁄·Ï «·”ÿÊ— Õ”» ’«›Ì «·”ÿ— ﬁ»· Œ’„ «·›« Ê—…
+    Dim DistTotal As Double
+    DistTotal = 0#
+
+    For n = 1 To LineCount
+        If SumNetBeforeHdr_All > 0 Then
+            arrHdrShareEx(n) = Round(HeaderDiscountExWanted * (arrLineNetBeforeHdr(n) / SumNetBeforeHdr_All), 6)
+        Else
+            arrHdrShareEx(n) = 0
+        End If
+
+        If arrHdrShareEx(n) > arrLineNetBeforeHdr(n) Then
+            arrHdrShareEx(n) = arrLineNetBeforeHdr(n)
+        End If
+
+        DistTotal = DistTotal + arrHdrShareEx(n)
+    Next n
+
+    '  ”ÊÌ… ›—ﬁ «·ﬂ”Ê— ⁄·Ï ¬Œ— ”ÿ— „ÊÃ»
+    Dim diffDist As Double
+    diffDist = Round(HeaderDiscountExWanted - DistTotal, 6)
+
+    If Abs(diffDist) > 0.000001 Then
+        For n = LineCount To 1 Step -1
+            If arrLineNetBeforeHdr(n) > 0 Then
+                arrHdrShareEx(n) = arrHdrShareEx(n) + diffDist
+                If arrHdrShareEx(n) < 0 Then arrHdrShareEx(n) = 0
+                If arrHdrShareEx(n) > arrLineNetBeforeHdr(n) Then arrHdrShareEx(n) = arrLineNetBeforeHdr(n)
+                Exit For
+            End If
+        Next n
+    End If
+
+    ' =========================================================
+    ' ============   »‰«¡ «·”ÿÊ— „⁄ line allowances ===========
+    ' =========================================================
+    Dim finalSumEx As Double
+    Dim finalSumVat As Double
+    finalSumEx = 0#
+    finalSumVat = 0#
+
+    For n = 1 To LineCount
+        Dim invline As Object
+        Set invline = CreateObject("ZatcaUBLXMLGenerator.InvoiceLine")
+
+        invline.ID = CStr(n)
+        invline.InvoiceQuantity = CDbl(Format$(arrQty(n), "0.######"))
+        invline.Price.PriceAmount = CDbl(Format$(arrBasePriceEx(n), "0.######"))
+        invline.Price.BaseQuantity = 1
+        invline.Price.EncludingVat = False
+        invline.Item.Name = arrItemName(n)
+
+        invline.Item.classifiedTaxCategory.ID = arrTaxCatID(n)
+        invline.Item.classifiedTaxCategory.Percent = IIf(arrTaxCatID(n) = "S", arrRatePct(n), 0)
+
+        invline.TaxTotal.TaxSubtotal.taxCategory.ID = arrTaxCatID(n)
+        invline.TaxTotal.TaxSubtotal.taxCategory.Percent = IIf(arrTaxCatID(n) = "S", arrRatePct(n), 0)
+
+        On Error Resume Next
+        If arrExemptCode(n) <> "" Then
+            invline.TaxTotal.TaxSubtotal.taxCategory.TaxExemptionReasonCode = arrExemptCode(n)
+            invline.TaxTotal.TaxSubtotal.taxCategory.TaxExemptionReason = arrExemptReason(n)
+            invline.Item.classifiedTaxCategory.TaxExemptionReasonCode = arrExemptCode(n)
+            invline.Item.classifiedTaxCategory.TaxExemptionReason = arrExemptReason(n)
+        End If
+        On Error GoTo eh
+
+        ' 1) Œ’„ «·”ÿ— «·√’·Ì
+        If arrLineOwnDiscEx(n) > 0 Then
+            Dim lineAllowanceOwn As Object
+            Set lineAllowanceOwn = CreateObject("ZatcaUBLXMLGenerator.AllowanceCharge")
+            lineAllowanceOwn.ChargeIndicator = False
+            lineAllowanceOwn.Amount = CDbl(Format$(Round(arrLineOwnDiscEx(n), 2), "0.00"))
+            lineAllowanceOwn.AllowanceChargeReason = "Line discount"
+            lineAllowanceOwn.taxCategory.ID = arrTaxCatID(n)
+            lineAllowanceOwn.taxCategory.Percent = IIf(arrTaxCatID(n) = "S", arrRatePct(n), 0)
+            invline.allowanceCharges.Add lineAllowanceOwn
+        End If
+
+        ' 2) ‰’Ì» «·”ÿ— „‰ Œ’„ «·›« Ê—…
+        If arrHdrShareEx(n) > 0 Then
+            Dim lineAllowanceHdr As Object
+            Set lineAllowanceHdr = CreateObject("ZatcaUBLXMLGenerator.AllowanceCharge")
+            lineAllowanceHdr.ChargeIndicator = False
+            lineAllowanceHdr.Amount = CDbl(Format$(Round(arrHdrShareEx(n), 2), "0.00"))
+            lineAllowanceHdr.AllowanceChargeReason = "Invoice discount distributed"
+            lineAllowanceHdr.taxCategory.ID = arrTaxCatID(n)
+            lineAllowanceHdr.taxCategory.Percent = IIf(arrTaxCatID(n) = "S", arrRatePct(n), 0)
+            invline.allowanceCharges.Add lineAllowanceHdr
+        End If
+
+        inv.InvoiceLines.Add invline
+
+        ' ··√€—«÷ «· ‘ŒÌ’Ì… ›ﬁÿ
+        Dim lineFinalEx As Double
+        Dim lineFinalVat As Double
+        lineFinalEx = Round(arrLineNetBeforeHdr(n) - arrHdrShareEx(n), 2)
+        If lineFinalEx < 0 Then lineFinalEx = 0
+
+        If arrTaxCatID(n) = "S" Then
+            lineFinalVat = Round(lineFinalEx * (arrRatePct(n) / 100#), 2)
+        Else
+            lineFinalVat = 0
+        End If
+
+        finalSumEx = finalSumEx + lineFinalEx
+        finalSumVat = finalSumVat + lineFinalVat
+    Next n
+
+    ' =========================================================
+    ' ============   ·« ‰÷Ì› Header Allowance Â‰«   ===========
+    ' =========================================================
+    ' „Â„ Ãœ«:
+    ' «·„ﬂ »… ” Œ’„ header allowance „—… √Œ—Ï „‰ «·≈Ã„«·Ì« 
+    ' ·–·ﬂ ‰ —ﬂ «·Œ’„ ﬂ·Â ⁄·Ï „” ÊÏ «·”ÿÊ— ›ﬁÿ.
+
+    ' =========================================================
+    ' ============   ≈⁄œ«œ Prepaid ›ﬁÿ Ê —ﬂ «·»«ﬁÌ ··„ﬂ »… ====
+    ' =========================================================
+    If val(InvoiceTypeCodeID) = 388 Then
+        inv.LegalMonetaryTotal.PrepaidAmount = Round(val(PrepaidAmount & ""), 2)
+    Else
+        inv.LegalMonetaryTotal.PrepaidAmount = 0
+    End If
+
+    ' ”ÌÃ⁄· «·„ﬂ »…  Õ”» Payable Ê Rounding »‰›”Â«
+    inv.LegalMonetaryTotal.PayableAmount = 0
+    inv.LegalMonetaryTotal.PayableRoundingAmount = 0
+    inv.LegalMonetaryTotal.ChargeTotalAmount = 0
+    inv.LegalMonetaryTotal.AllowanceTotalAmount = 0
+
+    ' =========================================================
+    ' ==================   «·≈—”«· / «· Ê·Ìœ   =================
+    ' =========================================================
+    Dim SendingMode As Integer: SendingMode = SystemOptions.SendingMode
+    Dim SecretKey As String:    SecretKey = SystemOptions.SecretKey
+
+    If SendingMode <> 0 Then
+        inv.CSIDInfo.CertPem = SystemOptions.PublickeycertPem
+        inv.CSIDInfo.Privatekey = SystemOptions.Privatekey
+    End If
+
+    Set res = ubl.GenerateInvoiceXML(inv, App.path)
+
+    If res.IsValid = True Then
+        InvoiceHash = res.InvoiceHash
+        SingedXML = res.SingedXML
+        EncodedInvoice = res.EncodedInvoice
+        UUID = res.UUID
+        QRCode = res.QRCode
+        PIH = res.PIH
+        SingedXMLFileName = res.SingedXMLFileName
+
+        Dim apireqlogic As Object, tokenresponse As Object
+        Dim invrequestbody As Object, invoicereportingmodel As Object, invoiceclearingmodel As Object
+        Set apireqlogic = CreateObject("ZatcaUBLXMLGenerator.BLL.ApiRequestLogic")
+        Set tokenresponse = CreateObject("ZatcaUBLXMLGenerator.HelperContracts.ComplianceCsrResponse")
+        Set invrequestbody = CreateObject("ZatcaUBLXMLGenerator.HelperContracts.InvoiceReportingRequest")
+        Set invoicereportingmodel = CreateObject("ZatcaUBLXMLGenerator.HelperContracts.InvoiceReportingResponse")
+        Set invoiceclearingmodel = CreateObject("ZatcaUBLXMLGenerator.HelperContracts.InvoiceClearanceResponse")
+
+        invrequestbody.invoice = res.EncodedInvoice
+        invrequestbody.InvoiceHash = res.InvoiceHash
+        invrequestbody.UUID = res.UUID
+
+        Select Case SendingMode
+            Case 0
+                apireqlogic.SetApiRequestLogic 0
+                Set tokenresponse = apireqlogic.GetComplianceCSIDAPI("12345", "", App.path)
+                If tokenresponse.errorMessage = "" Then
+                    Set invoicereportingmodel = apireqlogic.CallComplianceInvoiceAPI(tokenresponse.BinarySecurityToken, tokenresponse.Secret, invrequestbody)
+                    If invoicereportingmodel.IsSuccess = True Then
+                        If invoicereportingmodel.StatusCode = 202 Then
+                            WarningMessage = invoicereportingmodel.WarningMessage
+                            savewarrninganderror Transaction_ID, CStr(WarningMessage), , mTableName, mFieldIDName
+                        End If
+                        ErrorMessageS = invoicereportingmodel.ReportingStatus
+                        savewarrninganderror Transaction_ID, , CStr(ErrorMessageS), mTableName, mFieldIDName
+                        zatcaStatus = 1
+                        cn2.Execute "UPDATE " & mTableName & " SET zatcaStatus=1 WHERE " & mFieldIDName & "=" & Transaction_ID
+                        updatedatatable val(docType), mTableName, mFieldIDName
+                    Else
+                        ErrorMessageS = invoicereportingmodel.errorMessage
+                        savewarrninganderror Transaction_ID, , CStr(ErrorMessageS), mTableName, mFieldIDName
+                    End If
+                Else
+                    ErrorMessageS = tokenresponse.errorMessage
+                    savewarrninganderror Transaction_ID, , CStr(ErrorMessageS), mTableName, mFieldIDName
+                End If
+
+            Case 1
+                apireqlogic.SetApiRequestLogic 1
+                apireqlogic.SetToSaveClearedXMLFile App.path, True
+                Set invoiceclearingmodel = apireqlogic.CallClearanceAPI(apireqlogic.ToBase64Encode(inv.CSIDInfo.CertPem), SecretKey, invrequestbody)
+                If invoiceclearingmodel.IsSuccess = True Then
+                    If invoiceclearingmodel.StatusCode = 202 Then
+                        WarningMessage = invoiceclearingmodel.WarningMessage
+                        savewarrninganderror Transaction_ID, CStr(WarningMessage), , mTableName, mFieldIDName
+                    End If
+                    ErrorMessageS = invoiceclearingmodel.ClearanceStatus
+                    savewarrninganderror Transaction_ID, , CStr(ErrorMessageS), mTableName, mFieldIDName
+                    QRCode = invoiceclearingmodel.QRCode
+                    zatcaStatus = 1
+                    cn2.Execute "UPDATE " & mTableName & " SET zatcaStatus=1 WHERE " & mFieldIDName & "=" & Transaction_ID
+                    updatedatatable val(docType), mTableName, mFieldIDName
+                Else
+                    ErrorMessageS = invoiceclearingmodel.errorMessage
+                    savewarrninganderror Transaction_ID, , CStr(ErrorMessageS), mTableName, mFieldIDName
+                End If
+
+            Case 2
+                apireqlogic.SetApiRequestLogic 2
+                apireqlogic.SetToSaveClearedXMLFile App.path, True
+                Set invoiceclearingmodel = apireqlogic.CallClearanceAPI(apireqlogic.ToBase64Encode(inv.CSIDInfo.CertPem), SecretKey, invrequestbody)
+                If invoiceclearingmodel.IsSuccess = True Then
+                    If invoiceclearingmodel.StatusCode = 202 Then
+                        WarningMessage = invoiceclearingmodel.WarningMessage
+                        savewarrninganderror Transaction_ID, CStr(WarningMessage), , mTableName, mFieldIDName
+                    End If
+                    ErrorMessageS = invoiceclearingmodel.ClearanceStatus
+                    savewarrninganderror Transaction_ID, , CStr(ErrorMessageS), mTableName, mFieldIDName
+                    QRCode = invoiceclearingmodel.QRCode
+                    zatcaStatus = 1
+                    cn2.Execute "UPDATE " & mTableName & " SET zatcaStatus=1 WHERE " & mFieldIDName & "=" & Transaction_ID
+                    updatedatatable val(docType), mTableName, mFieldIDName
+                Else
+                    ErrorMessageS = invoiceclearingmodel.errorMessage
+                    savewarrninganderror Transaction_ID, , CStr(ErrorMessageS), mTableName, mFieldIDName
+                End If
+        End Select
+
+        GenerateInvoice_ZatcaV4_Test = True
+    Else
+        ErrorMessageS = res.errorMessage
+        savewarrninganderror Transaction_ID, , CStr(ErrorMessageS), mTableName, mFieldIDName
+        GenerateInvoice_ZatcaV4_Test = False
+    End If
+
+    Exit Function
+
+eh:
+    ErrorMessageS = "GenerateInvoice_ZatcaV4_Test Error: " & Err.Number & " - " & Err.Description
+    On Error Resume Next
+    savewarrninganderror Transaction_ID, , CStr(ErrorMessageS), mTableName, mFieldIDName
+    GenerateInvoice_ZatcaV4_Test = False
+End Function
+
+Public Function Test_GenerateInvoice_ZatcaV4(ByVal pTransactionID As Long) As Boolean
+    On Error GoTo eh
+
+    Dim oldTransId As Long
+    oldTransId = Transaction_ID
+    Transaction_ID = pTransactionID
+
+    Dim ok As Boolean
+    ok = GenerateInvoice_ZatcaV4_BuildOnly(0, "Transactions", "Transaction_ID", 0, 0)
+
+    Transaction_ID = oldTransId
+    Test_GenerateInvoice_ZatcaV4 = ok
+    Exit Function
+
+eh:
+    Debug.Print "Test_GenerateInvoice_ZatcaV4 Error: "; Err.Number; Err.Description
+    Test_GenerateInvoice_ZatcaV4 = False
+End Function
+
+
+Public Function GenerateInvoice_ZatcaV4_BuildOnly( _
+    Optional ByVal docType As Integer = 0, _
+    Optional ByVal mTableName As String = "Transactions", _
+    Optional ByVal mFieldIDName As String = "Transaction_ID", _
+    Optional ByVal ActivityTypeIdInv As Integer = 0, _
+    Optional ByVal branch_idInv As Integer = 0 _
+) As Boolean
+
+    On Error GoTo eh
+
+    Dim ubl As Object, inv As Object
+    Set ubl = CreateObject("ZatcaUBLXMLGenerator.UBLXML")
+    Set inv = CreateObject("ZatcaUBLXMLGenerator.Invoice")
+
+    ' ‰›” „‰ÿﬁ  ÃÂÌ“ inv «·„ÊÃÊœ ›Ì GenerateInvoice_ZatcaV4_Test
+    ' · Ã‰» «· ﬂ—«—:
+    ' 1) «‰”Œ ﬂ· «·ﬂÊœ „‰ √Ê· CreateObject ·Õœ ﬁ»· ”ÿ—:
+    '    Set res = ubl.GenerateInvoiceXML(inv, App.Path)
+    ' 2) Ê»⁄œÂ« «” »œ·Â »«·Ã“¡ «· «·Ì:
+
+    Dim xmlOut As String
+    Dim errMsg As String
+    Dim ok As Boolean
+
+    ok = ubl.GenerateSampleXML(inv, inv.InvoiceTypeCode.Name, inv.InvoiceTypeCode.ID, App.path, xmlOut, errMsg)
+
+    Debug.Print "================ ZATCA TEST ================"
+    Debug.Print "Transaction_ID = "; Transaction_ID
+    Debug.Print "GenerateSampleXML OK = "; ok
+    Debug.Print "Error = "; errMsg
+
+    If ok Then
+        Debug.Print "XML Len = "; Len(xmlOut)
+        Call ValidateGeneratedInvoiceXml(xmlOut)
+        SaveTextToFile App.path & "\zatca_test_" & CStr(Transaction_ID) & ".xml", xmlOut
+    End If
+
+    GenerateInvoice_ZatcaV4_BuildOnly = ok
+    Exit Function
+
+eh:
+    Debug.Print "GenerateInvoice_ZatcaV4_BuildOnly Error: "; Err.Number; Err.Description
+    GenerateInvoice_ZatcaV4_BuildOnly = False
+End Function
+Function SafeCreateObject(ByVal progID As String) As Object
+    On Error GoTo errHandler
+    Set SafeCreateObject = CreateObject(progID)
+    Exit Function
+
+errHandler:
+    MsgBox "›‘· ≈‰‘«¡ «·ﬂ«∆‰: " & progID, vbCritical
+    Set SafeCreateObject = Nothing
+End Function
 ' =====================================================
 ' œ«·…  ‰ŸÌ› ﬂÊœ «·œÊ·… (BR-CL-14)
 ' =====================================================

@@ -21,6 +21,15 @@ Begin VB.Form FrmMain
    RightToLeft     =   -1  'True
    ScaleHeight     =   6660
    ScaleWidth      =   9285
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin ciaXPProgress30.ProgressBar30 PrgBarLoad 
       Height          =   255
       Left            =   30

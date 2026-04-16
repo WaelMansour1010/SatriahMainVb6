@@ -19,6 +19,15 @@ Begin VB.Form frm_marakez_taklefa
    RightToLeft     =   -1  'True
    ScaleHeight     =   7110
    ScaleWidth      =   8370
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin ALLButtonS.ALLButton ALLButton1 
       Height          =   375
       Left            =   0

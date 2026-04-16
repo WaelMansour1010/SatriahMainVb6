@@ -19,6 +19,15 @@ Begin VB.Form ArrowsHistory
    RightToLeft     =   -1  'True
    ScaleHeight     =   6240
    ScaleWidth      =   8805
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.PictureBox Picture1 
       Height          =   3255
       Left            =   9960

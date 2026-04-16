@@ -20,6 +20,15 @@ Begin VB.Form FrmCitiesDistance
    ScaleHeight     =   7830
    ScaleWidth      =   11070
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Tab C1Tab1 
       Height          =   7770
       Left            =   0

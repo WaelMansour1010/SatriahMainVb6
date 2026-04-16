@@ -14,6 +14,15 @@ Begin VB.Form FrmBillBuy
    ClientLeft      =   45
    ClientTop       =   375
    ClientWidth     =   15870
+   BeginProperty Font 
+      Name            =   "Arial"
+      Size            =   8.25
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    HelpContextID   =   100
    Icon            =   "FrmBillBuy.frx":0000
    KeyPreview      =   -1  'True
@@ -50,7 +59,7 @@ Begin VB.Form FrmBillBuy
       _cx             =   27993
       _cy             =   16378
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -107,7 +116,7 @@ Begin VB.Form FrmBillBuy
          _cx             =   27914
          _cy             =   9525
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -125,9 +134,9 @@ Begin VB.Form FrmBillBuy
          BackTabColor    =   12648447
          TabOutlineColor =   -2147483632
          FrontTabForeColor=   16711680
-         Caption         =   "«·√’‰«›|«·√Ê—«ﬁ «·„«·Ì…|„·«ÕŸ«  ⁄·Ï «·›« Ê—…|”‰œ«  «·’—›|«·ÿ·»Ì« |›Ê« Ì— „«·Ì…|„’—Ê›«   ﬁœÌ—ÌÂ|«·„—›ﬁ« |«·ﬁÌ„… «·„÷«›…"
+         Caption         =   $"FrmBillBuy.frx":2BC6
          Align           =   0
-         CurrTab         =   5
+         CurrTab         =   0
          FirstTab        =   0
          Style           =   3
          Position        =   1
@@ -151,12 +160,12 @@ Begin VB.Form FrmBillBuy
          AccessibleDescription=   ""
          AccessibleValue =   ""
          AccessibleRole  =   37
-         Picture(0)      =   "FrmBillBuy.frx":2BC6
-         Picture(1)      =   "FrmBillBuy.frx":2F60
+         Picture(0)      =   "FrmBillBuy.frx":2C50
+         Picture(1)      =   "FrmBillBuy.frx":2FEA
          Flags(2)        =   2
          Begin C1SizerLibCtl.C1Elastic C1Elastic5 
             Height          =   4935
-            Left            =   16770
+            Left            =   18270
             TabIndex        =   166
             TabStop         =   0   'False
             Top             =   45
@@ -164,7 +173,7 @@ Begin VB.Form FrmBillBuy
             _cx             =   27755
             _cy             =   8705
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -223,7 +232,7 @@ Begin VB.Form FrmBillBuy
                _cx             =   27781
                _cy             =   8467
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -275,7 +284,7 @@ Begin VB.Form FrmBillBuy
                   Alignment       =   1  'Right Justify
                   BackColor       =   &H0080FFFF&
                   BeginProperty Font 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   9.75
                      Charset         =   178
                      Weight          =   700
@@ -370,8 +379,9 @@ Begin VB.Form FrmBillBuy
                      ButtonPositionImage=   1
                      Caption         =   "ÿ»«⁄Â «·ﬁÌœ"
                      BackColor       =   14871017
+                     FontName        =   "Arial"
                      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                        Name            =   "MS Sans Serif"
+                        Name            =   "Arial"
                         Size            =   8.25
                         Charset         =   178
                         Weight          =   400
@@ -413,7 +423,7 @@ Begin VB.Form FrmBillBuy
                   BorderStyle     =   1
                   Enabled         =   -1  'True
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -453,7 +463,7 @@ Begin VB.Form FrmBillBuy
                   ColWidthMin     =   0
                   ColWidthMax     =   0
                   ExtendLastCol   =   0   'False
-                  FormatString    =   $"FrmBillBuy.frx":32FA
+                  FormatString    =   $"FrmBillBuy.frx":3384
                   ScrollTrack     =   0   'False
                   ScrollBars      =   3
                   ScrollTips      =   0   'False
@@ -512,7 +522,7 @@ Begin VB.Form FrmBillBuy
                   BorderStyle     =   1
                   Enabled         =   0   'False
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -552,7 +562,7 @@ Begin VB.Form FrmBillBuy
                   ColWidthMin     =   0
                   ColWidthMax     =   0
                   ExtendLastCol   =   -1  'True
-                  FormatString    =   $"FrmBillBuy.frx":3494
+                  FormatString    =   $"FrmBillBuy.frx":351E
                   ScrollTrack     =   0   'False
                   ScrollBars      =   3
                   ScrollTips      =   0   'False
@@ -608,8 +618,9 @@ Begin VB.Form FrmBillBuy
                   ButtonPositionImage=   1
                   Caption         =   "«·„—›ﬁ« "
                   BackColor       =   14871017
+                  FontName        =   "Arial"
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -653,7 +664,7 @@ Begin VB.Form FrmBillBuy
          End
          Begin C1SizerLibCtl.C1Elastic C1Elastic4 
             Height          =   4935
-            Left            =   16470
+            Left            =   17970
             TabIndex        =   165
             TabStop         =   0   'False
             Top             =   45
@@ -661,7 +672,7 @@ Begin VB.Form FrmBillBuy
             _cx             =   27755
             _cy             =   8705
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -720,7 +731,7 @@ Begin VB.Form FrmBillBuy
                _cx             =   27781
                _cy             =   8467
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -823,7 +834,7 @@ Begin VB.Form FrmBillBuy
                   BorderStyle     =   1
                   Enabled         =   0   'False
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -863,7 +874,7 @@ Begin VB.Form FrmBillBuy
                   ColWidthMin     =   0
                   ColWidthMax     =   0
                   ExtendLastCol   =   0   'False
-                  FormatString    =   $"FrmBillBuy.frx":3587
+                  FormatString    =   $"FrmBillBuy.frx":3611
                   ScrollTrack     =   0   'False
                   ScrollBars      =   2
                   ScrollTips      =   0   'False
@@ -966,7 +977,7 @@ Begin VB.Form FrmBillBuy
                      CaptionAlignment=   4
                      CaptionBackColor=   -2147483633
                      BeginProperty CaptionFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                        Name            =   "MS Sans Serif"
+                        Name            =   "Arial"
                         Size            =   8.25
                         Charset         =   178
                         Weight          =   400
@@ -988,7 +999,7 @@ Begin VB.Form FrmBillBuy
                      BrowsePictureStretchV=   0
                      Enabled         =   -1  'True
                      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                        Name            =   "MS Sans Serif"
+                        Name            =   "Arial"
                         Size            =   8.25
                         Charset         =   178
                         Weight          =   400
@@ -1004,7 +1015,7 @@ Begin VB.Form FrmBillBuy
                      MultiLine       =   0
                      OnFocus         =   3
                      PasswordChar    =   ""
-                     Picture         =   "FrmBillBuy.frx":3888
+                     Picture         =   "FrmBillBuy.frx":3912
                      PictureAlignment=   5
                      PictureBackColor=   -2147483624
                      PictureStretchH =   0
@@ -1084,8 +1095,9 @@ Begin VB.Form FrmBillBuy
                   ButtonPositionImage=   1
                   Caption         =   "Õ–› ”ÿ—"
                   BackColor       =   14871017
+                  FontName        =   "Arial"
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -1093,7 +1105,7 @@ Begin VB.Form FrmBillBuy
                      Italic          =   0   'False
                      Strikethrough   =   0   'False
                   EndProperty
-                  ButtonImage     =   "FrmBillBuy.frx":3E22
+                  ButtonImage     =   "FrmBillBuy.frx":3EAC
                   ColorButton     =   14871017
                   DrawFocusRectangle=   0   'False
                End
@@ -1124,7 +1136,7 @@ Begin VB.Form FrmBillBuy
          Begin C1SizerLibCtl.C1Elastic Ele 
             Height          =   4935
             Index           =   0
-            Left            =   -17580
+            Left            =   45
             TabIndex        =   22
             TabStop         =   0   'False
             Top             =   45
@@ -1132,7 +1144,7 @@ Begin VB.Form FrmBillBuy
             _cx             =   27755
             _cy             =   8705
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -1175,7 +1187,7 @@ Begin VB.Form FrmBillBuy
             FrameColor      =   -2147483628
             FrameShadow     =   -2147483632
             FloodStyle      =   1
-            _GridInfo       =   $"FrmBillBuy.frx":43BC
+            _GridInfo       =   $"FrmBillBuy.frx":4446
             AccessibleName  =   ""
             AccessibleDescription=   ""
             AccessibleValue =   ""
@@ -1192,7 +1204,7 @@ Begin VB.Form FrmBillBuy
                BorderStyle     =   1
                Enabled         =   -1  'True
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -1232,7 +1244,7 @@ Begin VB.Form FrmBillBuy
                ColWidthMin     =   0
                ColWidthMax     =   0
                ExtendLastCol   =   -1  'True
-               FormatString    =   $"FrmBillBuy.frx":4460
+               FormatString    =   $"FrmBillBuy.frx":44EA
                ScrollTrack     =   0   'False
                ScrollBars      =   3
                ScrollTips      =   0   'False
@@ -1301,7 +1313,7 @@ Begin VB.Form FrmBillBuy
                _cx             =   27649
                _cy             =   1640
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -1450,7 +1462,7 @@ Begin VB.Form FrmBillBuy
                   Top             =   630
                   Width           =   3540
                   _ExtentX        =   6244
-                  _ExtentY        =   556
+                  _ExtentY        =   582
                   _Version        =   393216
                   BackColor       =   65535
                   Text            =   ""
@@ -1463,7 +1475,7 @@ Begin VB.Form FrmBillBuy
                   Top             =   630
                   Width           =   1980
                   _ExtentX        =   3493
-                  _ExtentY        =   556
+                  _ExtentY        =   582
                   _Version        =   393216
                   BackColor       =   65535
                   Text            =   ""
@@ -1481,8 +1493,9 @@ Begin VB.Form FrmBillBuy
                   ButtonPositionImage=   4
                   Caption         =   ""
                   BackColor       =   14871017
+                  FontName        =   "Arial"
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -1491,7 +1504,7 @@ Begin VB.Form FrmBillBuy
                      Strikethrough   =   0   'False
                   EndProperty
                   BackStyle       =   0
-                  ButtonImage     =   "FrmBillBuy.frx":49BB
+                  ButtonImage     =   "FrmBillBuy.frx":4A45
                   ColorButton     =   14871017
                   ColorHighlight  =   16777215
                   ColorHoverText  =   16711680
@@ -1509,7 +1522,7 @@ Begin VB.Form FrmBillBuy
                   Top             =   0
                   Width           =   3555
                   _ExtentX        =   6271
-                  _ExtentY        =   556
+                  _ExtentY        =   582
                   _Version        =   393216
                   Text            =   ""
                   RightToLeft     =   -1  'True
@@ -1531,7 +1544,7 @@ Begin VB.Form FrmBillBuy
                   BackStyle       =   0  'Transparent
                   Caption         =   "«·»«—ﬂÊœ"
                   BeginProperty Font 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   9.75
                      Charset         =   178
                      Weight          =   700
@@ -1646,7 +1659,7 @@ Begin VB.Form FrmBillBuy
          Begin C1SizerLibCtl.C1Elastic Ele 
             Height          =   4935
             Index           =   2
-            Left            =   -17280
+            Left            =   16470
             TabIndex        =   25
             TabStop         =   0   'False
             Top             =   45
@@ -1654,7 +1667,7 @@ Begin VB.Form FrmBillBuy
             _cx             =   27755
             _cy             =   8705
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -1697,7 +1710,7 @@ Begin VB.Form FrmBillBuy
             FrameColor      =   -2147483628
             FrameShadow     =   -2147483632
             FloodStyle      =   1
-            _GridInfo       =   $"FrmBillBuy.frx":4D55
+            _GridInfo       =   $"FrmBillBuy.frx":4DDF
             AccessibleName  =   ""
             AccessibleDescription=   ""
             AccessibleValue =   ""
@@ -1713,7 +1726,7 @@ Begin VB.Form FrmBillBuy
                _cx             =   27755
                _cy             =   3942
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -1756,7 +1769,7 @@ Begin VB.Form FrmBillBuy
                FrameColor      =   -2147483628
                FrameShadow     =   -2147483632
                FloodStyle      =   1
-               _GridInfo       =   $"FrmBillBuy.frx":4DC6
+               _GridInfo       =   $"FrmBillBuy.frx":4E50
                AccessibleName  =   ""
                AccessibleDescription=   ""
                AccessibleValue =   ""
@@ -1772,7 +1785,7 @@ Begin VB.Form FrmBillBuy
                   _cx             =   27702
                   _cy             =   767
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -1842,8 +1855,9 @@ Begin VB.Form FrmBillBuy
                      _ExtentY        =   609
                      Caption         =   " ”ÃÌ· «·‘Ìﬂ« "
                      BackColor       =   14871017
+                     FontName        =   "Arial"
                      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                        Name            =   "MS Sans Serif"
+                        Name            =   "Arial"
                         Size            =   8.25
                         Charset         =   178
                         Weight          =   400
@@ -1861,7 +1875,7 @@ Begin VB.Form FrmBillBuy
                      Top             =   0
                      Width           =   2370
                      _ExtentX        =   4180
-                     _ExtentY        =   556
+                     _ExtentY        =   582
                      _Version        =   393216
                      Text            =   ""
                      RightToLeft     =   -1  'True
@@ -1957,7 +1971,7 @@ Begin VB.Form FrmBillBuy
                   BorderStyle     =   1
                   Enabled         =   -1  'True
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -1997,7 +2011,7 @@ Begin VB.Form FrmBillBuy
                   ColWidthMin     =   0
                   ColWidthMax     =   0
                   ExtendLastCol   =   -1  'True
-                  FormatString    =   $"FrmBillBuy.frx":4E64
+                  FormatString    =   $"FrmBillBuy.frx":4EEE
                   ScrollTrack     =   0   'False
                   ScrollBars      =   3
                   ScrollTips      =   0   'False
@@ -2054,7 +2068,7 @@ Begin VB.Form FrmBillBuy
                _cx             =   27755
                _cy             =   4260
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -2097,7 +2111,7 @@ Begin VB.Form FrmBillBuy
                FrameColor      =   -2147483628
                FrameShadow     =   -2147483632
                FloodStyle      =   1
-               _GridInfo       =   $"FrmBillBuy.frx":4F98
+               _GridInfo       =   $"FrmBillBuy.frx":5022
                AccessibleName  =   ""
                AccessibleDescription=   ""
                AccessibleValue =   ""
@@ -2113,7 +2127,7 @@ Begin VB.Form FrmBillBuy
                   _cx             =   27702
                   _cy             =   820
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -2218,8 +2232,9 @@ Begin VB.Form FrmBillBuy
                      Caption         =   "Õ”«» «·√ﬁ”«ÿ"
                      BackColor       =   14871017
                      Enabled         =   0   'False
+                     FontName        =   "Arial"
                      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                        Name            =   "MS Sans Serif"
+                        Name            =   "Arial"
                         Size            =   8.25
                         Charset         =   178
                         Weight          =   400
@@ -2227,7 +2242,7 @@ Begin VB.Form FrmBillBuy
                         Italic          =   0   'False
                         Strikethrough   =   0   'False
                      EndProperty
-                     ButtonImage     =   "FrmBillBuy.frx":5036
+                     ButtonImage     =   "FrmBillBuy.frx":50C0
                      ColorButton     =   14871017
                      ColorHighlight  =   16777215
                      ColorHoverText  =   16711680
@@ -2286,7 +2301,7 @@ Begin VB.Form FrmBillBuy
                   BorderStyle     =   1
                   Enabled         =   -1  'True
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -2326,7 +2341,7 @@ Begin VB.Form FrmBillBuy
                   ColWidthMin     =   0
                   ColWidthMax     =   0
                   ExtendLastCol   =   -1  'True
-                  FormatString    =   $"FrmBillBuy.frx":53D0
+                  FormatString    =   $"FrmBillBuy.frx":545A
                   ScrollTrack     =   0   'False
                   ScrollBars      =   3
                   ScrollTips      =   0   'False
@@ -2382,7 +2397,7 @@ Begin VB.Form FrmBillBuy
                   _cx             =   27702
                   _cy             =   397
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -2679,7 +2694,7 @@ Begin VB.Form FrmBillBuy
                _cx             =   27755
                _cy             =   503
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -2769,7 +2784,7 @@ Begin VB.Form FrmBillBuy
                   Visible         =   0   'False
                   Width           =   30
                   _ExtentX        =   53
-                  _ExtentY        =   556
+                  _ExtentY        =   582
                   _Version        =   393216
                   Text            =   ""
                   RightToLeft     =   -1  'True
@@ -2816,7 +2831,7 @@ Begin VB.Form FrmBillBuy
          Begin C1SizerLibCtl.C1Elastic Ele 
             Height          =   4935
             Index           =   15
-            Left            =   -16980
+            Left            =   16770
             TabIndex        =   43
             TabStop         =   0   'False
             Top             =   45
@@ -2867,7 +2882,7 @@ Begin VB.Form FrmBillBuy
             FrameColor      =   -2147483628
             FrameShadow     =   -2147483632
             FloodStyle      =   1
-            _GridInfo       =   $"FrmBillBuy.frx":54A1
+            _GridInfo       =   $"FrmBillBuy.frx":552B
             AccessibleName  =   ""
             AccessibleDescription=   ""
             AccessibleValue =   ""
@@ -2883,7 +2898,7 @@ Begin VB.Form FrmBillBuy
                _cx             =   27702
                _cy             =   370
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -3016,7 +3031,7 @@ Begin VB.Form FrmBillBuy
                _cx             =   27702
                _cy             =   370
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -3146,7 +3161,7 @@ Begin VB.Form FrmBillBuy
                _cx             =   27702
                _cy             =   1402
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -3277,7 +3292,7 @@ Begin VB.Form FrmBillBuy
                _cx             =   27702
                _cy             =   450
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -3421,7 +3436,7 @@ Begin VB.Form FrmBillBuy
          End
          Begin C1SizerLibCtl.C1Elastic C1Elastic1 
             Height          =   4935
-            Left            =   -16680
+            Left            =   17070
             TabIndex        =   162
             TabStop         =   0   'False
             Top             =   45
@@ -3429,7 +3444,7 @@ Begin VB.Form FrmBillBuy
             _cx             =   27755
             _cy             =   8705
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -3547,7 +3562,7 @@ Begin VB.Form FrmBillBuy
                   BorderStyle     =   1
                   Enabled         =   -1  'True
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -3587,7 +3602,7 @@ Begin VB.Form FrmBillBuy
                   ColWidthMin     =   0
                   ColWidthMax     =   0
                   ExtendLastCol   =   0   'False
-                  FormatString    =   $"FrmBillBuy.frx":5518
+                  FormatString    =   $"FrmBillBuy.frx":55A2
                   ScrollTrack     =   0   'False
                   ScrollBars      =   3
                   ScrollTips      =   0   'False
@@ -3687,7 +3702,7 @@ Begin VB.Form FrmBillBuy
          End
          Begin C1SizerLibCtl.C1Elastic C1Elastic2 
             Height          =   4935
-            Left            =   -16380
+            Left            =   17370
             TabIndex        =   163
             TabStop         =   0   'False
             Top             =   45
@@ -3695,7 +3710,7 @@ Begin VB.Form FrmBillBuy
             _cx             =   27755
             _cy             =   8705
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -3782,7 +3797,7 @@ Begin VB.Form FrmBillBuy
                   BorderStyle     =   1
                   Enabled         =   -1  'True
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -3822,7 +3837,7 @@ Begin VB.Form FrmBillBuy
                   ColWidthMin     =   0
                   ColWidthMax     =   0
                   ExtendLastCol   =   0   'False
-                  FormatString    =   $"FrmBillBuy.frx":5733
+                  FormatString    =   $"FrmBillBuy.frx":57BD
                   ScrollTrack     =   0   'False
                   ScrollBars      =   3
                   ScrollTips      =   0   'False
@@ -3884,7 +3899,7 @@ Begin VB.Form FrmBillBuy
          End
          Begin C1SizerLibCtl.C1Elastic C1Elastic3 
             Height          =   4935
-            Left            =   45
+            Left            =   17670
             TabIndex        =   164
             TabStop         =   0   'False
             Top             =   45
@@ -3892,7 +3907,7 @@ Begin VB.Form FrmBillBuy
             _cx             =   27755
             _cy             =   8705
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -3997,7 +4012,7 @@ Begin VB.Form FrmBillBuy
                   BorderStyle     =   1
                   Enabled         =   -1  'True
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -4037,7 +4052,7 @@ Begin VB.Form FrmBillBuy
                   ColWidthMin     =   0
                   ColWidthMax     =   0
                   ExtendLastCol   =   0   'False
-                  FormatString    =   $"FrmBillBuy.frx":583B
+                  FormatString    =   $"FrmBillBuy.frx":58C5
                   ScrollTrack     =   0   'False
                   ScrollBars      =   3
                   ScrollTips      =   0   'False
@@ -4123,7 +4138,7 @@ Begin VB.Form FrmBillBuy
          End
          Begin C1SizerLibCtl.C1Elastic C1Elastic6 
             Height          =   4935
-            Left            =   17070
+            Left            =   18570
             TabIndex        =   301
             TabStop         =   0   'False
             Top             =   45
@@ -4131,7 +4146,7 @@ Begin VB.Form FrmBillBuy
             _cx             =   27755
             _cy             =   8705
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -4231,7 +4246,7 @@ Begin VB.Form FrmBillBuy
                BorderStyle     =   1
                Enabled         =   -1  'True
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -4271,7 +4286,7 @@ Begin VB.Form FrmBillBuy
                ColWidthMin     =   0
                ColWidthMax     =   0
                ExtendLastCol   =   -1  'True
-               FormatString    =   $"FrmBillBuy.frx":59FF
+               FormatString    =   $"FrmBillBuy.frx":5A89
                ScrollTrack     =   0   'False
                ScrollBars      =   3
                ScrollTips      =   0   'False
@@ -4322,7 +4337,7 @@ Begin VB.Form FrmBillBuy
                BackStyle       =   0  'Transparent
                Caption         =   "«œŒ«· «·‰”»… «·ÌœÊÌ…"
                BeginProperty Font 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   700
@@ -4357,6 +4372,239 @@ Begin VB.Form FrmBillBuy
                TabIndex        =   303
                Top             =   120
                Width           =   3015
+            End
+         End
+         Begin C1SizerLibCtl.C1Elastic C1Elastic8 
+            Height          =   4935
+            Index           =   1
+            Left            =   18870
+            TabIndex        =   348
+            TabStop         =   0   'False
+            Top             =   45
+            Width           =   15735
+            _cx             =   27755
+            _cy             =   8705
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Arial"
+               Size            =   8.25
+               Charset         =   178
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Enabled         =   -1  'True
+            Appearance      =   4
+            MousePointer    =   0
+            Version         =   801
+            BackColor       =   14871017
+            ForeColor       =   -2147483630
+            FloodColor      =   6553600
+            ForeColorDisabled=   -2147483631
+            Caption         =   ""
+            Align           =   0
+            AutoSizeChildren=   7
+            BorderWidth     =   6
+            ChildSpacing    =   4
+            Splitter        =   0   'False
+            FloodDirection  =   0
+            FloodPercent    =   0
+            CaptionPos      =   1
+            WordWrap        =   -1  'True
+            MaxChildSize    =   0
+            MinChildSize    =   0
+            TagWidth        =   0
+            TagPosition     =   0
+            Style           =   0
+            TagSplit        =   2
+            PicturePos      =   4
+            CaptionStyle    =   0
+            ResizeFonts     =   0   'False
+            GridRows        =   0
+            GridCols        =   0
+            Frame           =   3
+            FrameStyle      =   0
+            FrameWidth      =   1
+            FrameColor      =   -2147483628
+            FrameShadow     =   -2147483632
+            FloodStyle      =   1
+            _GridInfo       =   ""
+            AccessibleName  =   ""
+            AccessibleDescription=   ""
+            AccessibleValue =   ""
+            AccessibleRole  =   9
+            Begin VB.CheckBox Check1 
+               Alignment       =   1  'Right Justify
+               Caption         =   " ÕœÌœ «·ﬂ·"
+               Height          =   180
+               Left            =   14430
+               RightToLeft     =   -1  'True
+               TabIndex        =   349
+               Top             =   270
+               Width           =   975
+            End
+            Begin VSFlex8Ctl.VSFlexGrid VSFlexGrid4 
+               Height          =   3525
+               Left            =   180
+               TabIndex        =   350
+               Top             =   540
+               Width           =   17145
+               _cx             =   30242
+               _cy             =   6218
+               Appearance      =   2
+               BorderStyle     =   1
+               Enabled         =   -1  'True
+               BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+                  Name            =   "Arial"
+                  Size            =   8.25
+                  Charset         =   178
+                  Weight          =   400
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               MousePointer    =   0
+               BackColor       =   -2147483643
+               ForeColor       =   -2147483640
+               BackColorFixed  =   14871017
+               ForeColorFixed  =   -2147483630
+               BackColorSel    =   -2147483635
+               ForeColorSel    =   -2147483634
+               BackColorBkg    =   -2147483636
+               BackColorAlternate=   -2147483643
+               GridColor       =   -2147483633
+               GridColorFixed  =   -2147483632
+               TreeColor       =   -2147483632
+               FloodColor      =   192
+               SheetBorder     =   -2147483642
+               FocusRect       =   1
+               HighLight       =   1
+               AllowSelection  =   -1  'True
+               AllowBigSelection=   -1  'True
+               AllowUserResizing=   1
+               SelectionMode   =   1
+               GridLines       =   1
+               GridLinesFixed  =   2
+               GridLineWidth   =   1
+               Rows            =   1
+               Cols            =   20
+               FixedRows       =   1
+               FixedCols       =   1
+               RowHeightMin    =   0
+               RowHeightMax    =   0
+               ColWidthMin     =   0
+               ColWidthMax     =   0
+               ExtendLastCol   =   -1  'True
+               FormatString    =   $"FrmBillBuy.frx":5BBB
+               ScrollTrack     =   0   'False
+               ScrollBars      =   3
+               ScrollTips      =   0   'False
+               MergeCells      =   0
+               MergeCompare    =   0
+               AutoResize      =   -1  'True
+               AutoSizeMode    =   0
+               AutoSearch      =   0
+               AutoSearchDelay =   2
+               MultiTotals     =   -1  'True
+               SubtotalPosition=   1
+               OutlineBar      =   0
+               OutlineCol      =   0
+               Ellipsis        =   0
+               ExplorerBar     =   1
+               PicturesOver    =   0   'False
+               FillStyle       =   0
+               RightToLeft     =   -1  'True
+               PictureType     =   0
+               TabBehavior     =   0
+               OwnerDraw       =   0
+               Editable        =   2
+               ShowComboButton =   1
+               WordWrap        =   0   'False
+               TextStyle       =   0
+               TextStyleFixed  =   0
+               OleDragMode     =   0
+               OleDropMode     =   0
+               DataMode        =   0
+               VirtualData     =   -1  'True
+               DataMember      =   ""
+               ComboSearch     =   3
+               AutoSizeMouse   =   -1  'True
+               FrozenRows      =   0
+               FrozenCols      =   0
+               AllowUserFreezing=   0
+               BackColorFrozen =   0
+               ForeColorFrozen =   0
+               WallPaperAlignment=   9
+               AccessibleName  =   ""
+               AccessibleDescription=   ""
+               AccessibleValue =   ""
+               AccessibleRole  =   24
+            End
+            Begin VB.Label lbl 
+               Alignment       =   1  'Right Justify
+               BackColor       =   &H00E2E9E9&
+               Caption         =   "«·«Ã„«·Ì »œÊ‰ ›« "
+               Height          =   240
+               Index           =   111
+               Left            =   10575
+               TabIndex        =   356
+               Top             =   4245
+               Width           =   1455
+            End
+            Begin VB.Label lbl 
+               Alignment       =   1  'Right Justify
+               BackColor       =   &H00E2E9E9&
+               Caption         =   "0"
+               Height          =   240
+               Index           =   112
+               Left            =   8025
+               TabIndex        =   355
+               Top             =   4245
+               Width           =   1275
+            End
+            Begin VB.Label lbl 
+               Alignment       =   1  'Right Justify
+               BackColor       =   &H00E2E9E9&
+               Caption         =   "«Ã„«·Ì «·›« "
+               Height          =   240
+               Index           =   113
+               Left            =   6015
+               TabIndex        =   354
+               Top             =   4245
+               Width           =   1455
+            End
+            Begin VB.Label lbl 
+               Alignment       =   1  'Right Justify
+               BackColor       =   &H00E2E9E9&
+               Caption         =   "0"
+               Height          =   240
+               Index           =   114
+               Left            =   4005
+               TabIndex        =   353
+               Top             =   4245
+               Width           =   1650
+            End
+            Begin VB.Label lbl 
+               Alignment       =   1  'Right Justify
+               BackColor       =   &H00E2E9E9&
+               Caption         =   "0"
+               Height          =   240
+               Index           =   115
+               Left            =   210
+               TabIndex        =   352
+               Top             =   4245
+               Width           =   1455
+            End
+            Begin VB.Label lbl 
+               Alignment       =   1  'Right Justify
+               BackColor       =   &H00E2E9E9&
+               Caption         =   "«·’«›Ì"
+               Height          =   240
+               Index           =   116
+               Left            =   2370
+               TabIndex        =   351
+               Top             =   4245
+               Width           =   1455
             End
          End
       End
@@ -4521,8 +4769,9 @@ Begin VB.Form FrmBillBuy
             ButtonStyle     =   1
             ButtonPositionImage=   3
             Caption         =   ""
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -4530,7 +4779,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":5B31
+            ButtonImage     =   "FrmBillBuy.frx":5ED4
             DrawFocusRectangle=   0   'False
          End
          Begin ImpulseButton.ISButton XPBtnMove 
@@ -4545,8 +4794,9 @@ Begin VB.Form FrmBillBuy
             ButtonStyle     =   1
             ButtonPositionImage=   4
             Caption         =   ""
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -4554,7 +4804,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":5ECB
+            ButtonImage     =   "FrmBillBuy.frx":626E
             ColorHighlight  =   4194304
             ColorHoverText  =   16777215
             ColorShadow     =   -2147483631
@@ -4576,8 +4826,9 @@ Begin VB.Form FrmBillBuy
             ButtonStyle     =   1
             ButtonPositionImage=   4
             Caption         =   ""
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -4585,7 +4836,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":6265
+            ButtonImage     =   "FrmBillBuy.frx":6608
             ColorHighlight  =   4194304
             ColorHoverText  =   16777215
             ColorShadow     =   -2147483631
@@ -4607,8 +4858,9 @@ Begin VB.Form FrmBillBuy
             ButtonStyle     =   1
             ButtonPositionImage=   4
             Caption         =   ""
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -4616,7 +4868,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":65FF
+            ButtonImage     =   "FrmBillBuy.frx":69A2
             ColorHighlight  =   4194304
             ColorHoverText  =   16777215
             ColorShadow     =   -2147483631
@@ -4638,8 +4890,9 @@ Begin VB.Form FrmBillBuy
             ButtonStyle     =   1
             ButtonPositionImage=   4
             Caption         =   ""
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -4647,7 +4900,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":6999
+            ButtonImage     =   "FrmBillBuy.frx":6D3C
             ColorHighlight  =   4194304
             ColorHoverText  =   16777215
             ColorShadow     =   -2147483631
@@ -4668,8 +4921,9 @@ Begin VB.Form FrmBillBuy
             ButtonStyle     =   1
             ButtonPositionImage=   3
             Caption         =   ""
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -4677,7 +4931,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":6D33
+            ButtonImage     =   "FrmBillBuy.frx":70D6
             DrawFocusRectangle=   0   'False
          End
          Begin ImpulseButton.ISButton CmdInfo 
@@ -4692,8 +4946,9 @@ Begin VB.Form FrmBillBuy
             ButtonPositionImage=   4
             Caption         =   ""
             BackColor       =   16777215
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -4701,8 +4956,8 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":72CD
-            ButtonImageHover=   "FrmBillBuy.frx":7FA7
+            ButtonImage     =   "FrmBillBuy.frx":7670
+            ButtonImageHover=   "FrmBillBuy.frx":834A
             ColorButton     =   16777215
             DrawFocusRectangle=   0   'False
          End
@@ -4716,7 +4971,7 @@ Begin VB.Form FrmBillBuy
             _ExtentX        =   2752
             _ExtentY        =   556
             _Version        =   393216
-            Format          =   201195521
+            Format          =   233177089
             CurrentDate     =   38784
          End
          Begin MSComCtl2.DTPicker txtToDateReSave 
@@ -4729,7 +4984,7 @@ Begin VB.Form FrmBillBuy
             _ExtentX        =   2752
             _ExtentY        =   556
             _Version        =   393216
-            Format          =   201195521
+            Format          =   233177089
             CurrentDate     =   38784
          End
          Begin VB.Label LBLGross 
@@ -4745,7 +5000,7 @@ Begin VB.Form FrmBillBuy
          Begin VB.Image ImgFavorites 
             Height          =   390
             Left            =   11880
-            Picture         =   "FrmBillBuy.frx":8C81
+            Picture         =   "FrmBillBuy.frx":9024
             Stretch         =   -1  'True
             Top             =   0
             Width           =   525
@@ -4780,11 +5035,11 @@ Begin VB.Form FrmBillBuy
          TabIndex        =   84
          TabStop         =   0   'False
          Top             =   615
-         Width           =   15825
-         _cx             =   27914
+         Width           =   15810
+         _cx             =   27887
          _cy             =   3995
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -4832,13 +5087,21 @@ Begin VB.Form FrmBillBuy
          AccessibleDescription=   ""
          AccessibleValue =   ""
          AccessibleRole  =   9
+         Begin VB.TextBox txtAdvPay 
+            Alignment       =   1  'Right Justify
+            Height          =   315
+            Left            =   2655
+            TabIndex        =   344
+            Top             =   1290
+            Width           =   1170
+         End
          Begin VB.TextBox txtContainerNo 
             BackColor       =   &H0000FFFF&
             Height          =   345
             Left            =   7080
             TabIndex        =   341
             Top             =   360
-            Width           =   1155
+            Width           =   1140
          End
          Begin VB.CheckBox chkTaxExempt 
             Alignment       =   1  'Right Justify
@@ -4852,7 +5115,7 @@ Begin VB.Form FrmBillBuy
          Begin VB.CommandButton cmdInsertItems 
             Caption         =   "...."
             Height          =   285
-            Left            =   9690
+            Left            =   9675
             TabIndex        =   334
             Top             =   780
             Width           =   615
@@ -4871,7 +5134,7 @@ Begin VB.Form FrmBillBuy
          Begin VB.TextBox TxtVATNO 
             Alignment       =   1  'Right Justify
             Height          =   315
-            Left            =   8040
+            Left            =   8025
             MaxLength       =   55
             RightToLeft     =   -1  'True
             TabIndex        =   312
@@ -4891,15 +5154,15 @@ Begin VB.Form FrmBillBuy
          End
          Begin VB.ComboBox Dcbtyp 
             BackColor       =   &H0000FFFF&
-            Height          =   315
-            ItemData        =   "FrmBillBuy.frx":C8E9
+            Height          =   330
+            ItemData        =   "FrmBillBuy.frx":CC8C
             Left            =   6795
-            List            =   "FrmBillBuy.frx":C8EB
+            List            =   "FrmBillBuy.frx":CC8E
             RightToLeft     =   -1  'True
             TabIndex        =   10
             Text            =   "Dcbtyp"
             Top             =   1875
-            Width           =   1425
+            Width           =   1410
          End
          Begin VB.CheckBox ChkCompsBill 
             Alignment       =   1  'Right Justify
@@ -4915,7 +5178,7 @@ Begin VB.Form FrmBillBuy
          Begin VB.TextBox TxtPhone 
             Alignment       =   1  'Right Justify
             Height          =   300
-            Left            =   10485
+            Left            =   10470
             TabIndex        =   219
             Top             =   1110
             Width           =   1650
@@ -4923,7 +5186,7 @@ Begin VB.Form FrmBillBuy
          Begin VB.TextBox TxtEmployeeID 
             Alignment       =   1  'Right Justify
             Height          =   345
-            Left            =   13275
+            Left            =   13260
             TabIndex        =   215
             Top             =   1410
             Width           =   1305
@@ -4935,7 +5198,7 @@ Begin VB.Form FrmBillBuy
             Left            =   0
             RightToLeft     =   -1  'True
             TabIndex        =   213
-            Top             =   720
+            Top             =   300
             Width           =   2775
             Begin VB.TextBox TxtBillComment 
                Alignment       =   1  'Right Justify
@@ -4952,7 +5215,7 @@ Begin VB.Form FrmBillBuy
          Begin VB.TextBox TxtCashCustomerName 
             Alignment       =   1  'Right Justify
             Height          =   300
-            Left            =   12645
+            Left            =   12630
             RightToLeft     =   -1  'True
             TabIndex        =   159
             Top             =   1110
@@ -4962,7 +5225,7 @@ Begin VB.Form FrmBillBuy
             Alignment       =   1  'Right Justify
             BackColor       =   &H0000FFFF&
             Height          =   315
-            Left            =   13275
+            Left            =   13260
             RightToLeft     =   -1  'True
             TabIndex        =   6
             Top             =   780
@@ -4982,17 +5245,17 @@ Begin VB.Form FrmBillBuy
             Alignment       =   1  'Right Justify
             BackColor       =   &H0000FFFF&
             Height          =   300
-            Left            =   11145
+            Left            =   11130
             RightToLeft     =   -1  'True
             TabIndex        =   1
             Top             =   0
             Width           =   1140
          End
          Begin VB.ComboBox CBoBasedON 
-            Height          =   315
-            ItemData        =   "FrmBillBuy.frx":C8ED
-            Left            =   11115
-            List            =   "FrmBillBuy.frx":C8EF
+            Height          =   330
+            ItemData        =   "FrmBillBuy.frx":CC90
+            Left            =   11100
+            List            =   "FrmBillBuy.frx":CC92
             RightToLeft     =   -1  'True
             Style           =   2  'Dropdown List
             TabIndex        =   145
@@ -5013,7 +5276,7 @@ Begin VB.Form FrmBillBuy
             Alignment       =   1  'Right Justify
             BackColor       =   &H0000FFFF&
             Height          =   300
-            Left            =   13290
+            Left            =   13275
             Locked          =   -1  'True
             RightToLeft     =   -1  'True
             TabIndex        =   0
@@ -5024,7 +5287,7 @@ Begin VB.Form FrmBillBuy
             Alignment       =   1  'Right Justify
             BackColor       =   &H0000FFFF&
             Height          =   330
-            Left            =   8850
+            Left            =   8835
             MaxLength       =   55
             RightToLeft     =   -1  'True
             TabIndex        =   5
@@ -5033,9 +5296,9 @@ Begin VB.Form FrmBillBuy
          End
          Begin VB.ComboBox CboPayMentType 
             Height          =   315
-            ItemData        =   "FrmBillBuy.frx":C8F1
+            ItemData        =   "FrmBillBuy.frx":CC94
             Left            =   5040
-            List            =   "FrmBillBuy.frx":C8F3
+            List            =   "FrmBillBuy.frx":CC96
             RightToLeft     =   -1  'True
             Style           =   2  'Dropdown List
             TabIndex        =   94
@@ -5043,13 +5306,13 @@ Begin VB.Form FrmBillBuy
             Width           =   1230
          End
          Begin VB.ComboBox XPCboDiscountType 
-            Height          =   315
+            Height          =   330
             Left            =   7860
             RightToLeft     =   -1  'True
             Style           =   2  'Dropdown List
             TabIndex        =   93
             Top             =   1080
-            Width           =   1230
+            Width           =   1215
          End
          Begin VB.TextBox XPTxtDiscountVal 
             Alignment       =   1  'Right Justify
@@ -5064,7 +5327,7 @@ Begin VB.Form FrmBillBuy
          Begin VB.TextBox TxtTransSerial 
             Alignment       =   1  'Right Justify
             Height          =   255
-            Left            =   15795
+            Left            =   15780
             RightToLeft     =   -1  'True
             TabIndex        =   91
             Top             =   1710
@@ -5074,7 +5337,7 @@ Begin VB.Form FrmBillBuy
          Begin VB.TextBox XPTxtBillID 
             Alignment       =   1  'Right Justify
             Height          =   270
-            Left            =   10335
+            Left            =   10320
             Locked          =   -1  'True
             RightToLeft     =   -1  'True
             TabIndex        =   90
@@ -5086,7 +5349,7 @@ Begin VB.Form FrmBillBuy
             Alignment       =   1  'Right Justify
             BackColor       =   &H0000FFFF&
             Height          =   315
-            Left            =   13275
+            Left            =   13260
             RightToLeft     =   -1  'True
             TabIndex        =   8
             Top             =   1920
@@ -5095,7 +5358,7 @@ Begin VB.Form FrmBillBuy
          Begin VB.TextBox TxtCusID 
             Alignment       =   1  'Right Justify
             Height          =   210
-            Left            =   13380
+            Left            =   13365
             RightToLeft     =   -1  'True
             TabIndex        =   89
             Top             =   855
@@ -5140,19 +5403,19 @@ Begin VB.Form FrmBillBuy
             Top             =   0
             Width           =   840
             _ExtentX        =   1482
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             Text            =   ""
             RightToLeft     =   -1  'True
          End
          Begin MSDataListLib.DataCombo DBCboClientName 
             Height          =   315
-            Left            =   10320
+            Left            =   10305
             TabIndex        =   7
             Top             =   780
             Width           =   2955
             _ExtentX        =   5212
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             BackColor       =   65535
             Text            =   ""
@@ -5160,12 +5423,12 @@ Begin VB.Form FrmBillBuy
          End
          Begin MSDataListLib.DataCombo DCboStoreName 
             Height          =   315
-            Left            =   9705
+            Left            =   9690
             TabIndex        =   9
             Top             =   1875
             Width           =   3525
             _ExtentX        =   6218
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             BackColor       =   65535
             Text            =   ""
@@ -5173,19 +5436,19 @@ Begin VB.Form FrmBillBuy
          End
          Begin MSComCtl2.DTPicker XPDtbBill 
             Height          =   330
-            Left            =   13275
+            Left            =   13260
             TabIndex        =   4
             Top             =   375
             Width           =   1305
             _ExtentX        =   2302
             _ExtentY        =   582
             _Version        =   393216
-            Format          =   201195521
+            Format          =   233177089
             CurrentDate     =   38784
          End
          Begin ImpulseButton.ISButton XPBtnNewClients 
             Height          =   270
-            Left            =   14490
+            Left            =   14475
             TabIndex        =   95
             TabStop         =   0   'False
             Top             =   825
@@ -5197,8 +5460,9 @@ Begin VB.Form FrmBillBuy
             ButtonPositionImage=   4
             Caption         =   ""
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -5206,7 +5470,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":C8F5
+            ButtonImage     =   "FrmBillBuy.frx":CC98
             ColorButton     =   14871017
             ColorHighlight  =   16777215
             ColorShadow     =   -2147483631
@@ -5215,13 +5479,13 @@ Begin VB.Form FrmBillBuy
             DisabledImageStyle=   1
          End
          Begin MSDataListLib.DataCombo DCproject 
-            Height          =   315
+            Height          =   330
             Left            =   4155
             TabIndex        =   107
             Top             =   1500
-            Width           =   4065
-            _ExtentX        =   7170
-            _ExtentY        =   556
+            Width           =   4050
+            _ExtentX        =   7144
+            _ExtentY        =   582
             _Version        =   393216
             Text            =   ""
             RightToLeft     =   -1  'True
@@ -5235,17 +5499,17 @@ Begin VB.Form FrmBillBuy
             _ExtentX        =   2434
             _ExtentY        =   529
             _Version        =   393216
-            Format          =   201195521
+            Format          =   233177089
             CurrentDate     =   38784
          End
          Begin MSDataListLib.DataCombo dcBranch 
-            Height          =   315
+            Height          =   330
             Left            =   7530
             TabIndex        =   2
             Top             =   0
-            Width           =   2910
-            _ExtentX        =   5133
-            _ExtentY        =   556
+            Width           =   2895
+            _ExtentX        =   5106
+            _ExtentY        =   582
             _Version        =   393216
             BackColor       =   65535
             Text            =   ""
@@ -5258,7 +5522,7 @@ Begin VB.Form FrmBillBuy
             Top             =   360
             Width           =   1890
             _ExtentX        =   3334
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             Enabled         =   0   'False
             Text            =   ""
@@ -5271,7 +5535,7 @@ Begin VB.Form FrmBillBuy
             Top             =   30
             Width           =   2550
             _ExtentX        =   4498
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             BackColor       =   65535
             Text            =   ""
@@ -5290,8 +5554,9 @@ Begin VB.Form FrmBillBuy
             Caption         =   "⁄—÷"
             BackColor       =   12632256
             ForeColor       =   16711680
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -5318,17 +5583,17 @@ Begin VB.Form FrmBillBuy
             _ExtentX        =   2170
             _ExtentY        =   529
             _Version        =   393216
-            Format          =   201261057
+            Format          =   233242625
             CurrentDate     =   38784
          End
          Begin MSDataListLib.DataCombo DcboEmp 
             Height          =   315
-            Left            =   9705
+            Left            =   9690
             TabIndex        =   216
             Top             =   1410
             Width           =   3525
             _ExtentX        =   6218
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             ListField       =   "7"
             Text            =   ""
@@ -5336,7 +5601,7 @@ Begin VB.Form FrmBillBuy
          End
          Begin ImpulseButton.ISButton SearchCashCustomer 
             Height          =   360
-            Left            =   10035
+            Left            =   10020
             TabIndex        =   218
             TabStop         =   0   'False
             ToolTipText     =   "«÷€ÿ ·«÷«›… ⁄„Ì· ÃœÌœ"
@@ -5348,8 +5613,9 @@ Begin VB.Form FrmBillBuy
             ButtonPositionImage=   4
             Caption         =   ""
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -5358,7 +5624,7 @@ Begin VB.Form FrmBillBuy
                Strikethrough   =   0   'False
             EndProperty
             BackStyle       =   0
-            ButtonImage     =   "FrmBillBuy.frx":CC8F
+            ButtonImage     =   "FrmBillBuy.frx":D032
             ColorButton     =   14871017
             ColorHighlight  =   16777215
             ColorShadow     =   -2147483631
@@ -5374,7 +5640,7 @@ Begin VB.Form FrmBillBuy
             _ExtentX        =   2170
             _ExtentY        =   529
             _Version        =   393216
-            Format          =   201261057
+            Format          =   233242625
             CurrentDate     =   38784
          End
          Begin MSDataListLib.DataCombo DcboBankName 
@@ -5384,11 +5650,56 @@ Begin VB.Form FrmBillBuy
             Top             =   360
             Width           =   1710
             _ExtentX        =   3016
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             Enabled         =   0   'False
             Text            =   ""
             RightToLeft     =   -1  'True
+         End
+         Begin VB.Label lbl 
+            Alignment       =   1  'Right Justify
+            BackColor       =   &H00E2E9E9&
+            Caption         =   "œ›⁄Â „"
+            Height          =   285
+            Index           =   83
+            Left            =   3510
+            TabIndex        =   347
+            Top             =   1395
+            Width           =   1080
+         End
+         Begin VB.Label lbl 
+            Alignment       =   1  'Right Justify
+            BackColor       =   &H00E2E9E9&
+            Caption         =   "«·’«›Ì"
+            Height          =   285
+            Index           =   96
+            Left            =   1650
+            RightToLeft     =   -1  'True
+            TabIndex        =   346
+            Top             =   1395
+            Width           =   840
+         End
+         Begin VB.Label lbl 
+            Alignment       =   1  'Right Justify
+            Appearance      =   0  'Flat
+            BackColor       =   &H00FFFFFF&
+            BorderStyle     =   1  'Fixed Single
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   12
+               Charset         =   178
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FF0000&
+            Height          =   345
+            Index           =   110
+            Left            =   0
+            TabIndex        =   345
+            Top             =   1305
+            Width           =   1665
          End
          Begin VB.Label Label14 
             Alignment       =   2  'Center
@@ -5400,7 +5711,7 @@ Begin VB.Form FrmBillBuy
             Left            =   7740
             TabIndex        =   342
             Top             =   420
-            Width           =   1590
+            Width           =   1575
          End
          Begin VB.Label Label5 
             Alignment       =   2  'Center
@@ -5419,7 +5730,7 @@ Begin VB.Form FrmBillBuy
             Caption         =   "—ﬁ„ VAT"
             Height          =   285
             Index           =   79
-            Left            =   9015
+            Left            =   9000
             RightToLeft     =   -1  'True
             TabIndex        =   313
             Top             =   780
@@ -5444,7 +5755,7 @@ Begin VB.Form FrmBillBuy
             Caption         =   "Õ«·… «·ﬁÌ„… «·„÷«›…"
             Height          =   285
             Index           =   77
-            Left            =   8325
+            Left            =   8310
             RightToLeft     =   -1  'True
             TabIndex        =   309
             Top             =   1875
@@ -5456,7 +5767,7 @@ Begin VB.Form FrmBillBuy
             Caption         =   " ·Ì›Ê‰"
             Height          =   300
             Index           =   84
-            Left            =   11955
+            Left            =   11940
             TabIndex        =   220
             Top             =   1170
             Width           =   645
@@ -5467,7 +5778,7 @@ Begin VB.Form FrmBillBuy
             Caption         =   " «·„‰œÊ»"
             Height          =   225
             Index           =   72
-            Left            =   14625
+            Left            =   14610
             RightToLeft     =   -1  'True
             TabIndex        =   212
             Top             =   1500
@@ -5491,7 +5802,7 @@ Begin VB.Form FrmBillBuy
             Caption         =   "«·„Ê—œ «·‰ﬁœÌ"
             Height          =   195
             Index           =   70
-            Left            =   14625
+            Left            =   14610
             RightToLeft     =   -1  'True
             TabIndex        =   160
             Top             =   1140
@@ -5506,7 +5817,7 @@ Begin VB.Form FrmBillBuy
             RightToLeft     =   -1  'True
             TabIndex        =   158
             Top             =   780
-            Width           =   1275
+            Width           =   1260
          End
          Begin VB.Label lbl 
             Alignment       =   1  'Right Justify
@@ -5537,7 +5848,7 @@ Begin VB.Form FrmBillBuy
             Caption         =   "›« Ê—… «·„Ê—œ"
             Height          =   195
             Index           =   53
-            Left            =   12225
+            Left            =   12210
             RightToLeft     =   -1  'True
             TabIndex        =   150
             Top             =   0
@@ -5561,7 +5872,7 @@ Begin VB.Form FrmBillBuy
             Caption         =   "«·—ﬁ„"
             Height          =   285
             Index           =   66
-            Left            =   10125
+            Left            =   10110
             RightToLeft     =   -1  'True
             TabIndex        =   147
             Top             =   375
@@ -5573,7 +5884,7 @@ Begin VB.Form FrmBillBuy
             Caption         =   "»‰«¡ ⁄·Ï"
             Height          =   285
             Index           =   65
-            Left            =   12390
+            Left            =   12375
             RightToLeft     =   -1  'True
             TabIndex        =   146
             Top             =   375
@@ -5585,7 +5896,7 @@ Begin VB.Form FrmBillBuy
             Caption         =   "«·›—⁄"
             ForeColor       =   &H00000000&
             Height          =   195
-            Left            =   10545
+            Left            =   10530
             TabIndex        =   111
             Top             =   75
             Width           =   435
@@ -5609,7 +5920,7 @@ Begin VB.Form FrmBillBuy
             Caption         =   "«·„‘—Ê⁄"
             Height          =   285
             Index           =   58
-            Left            =   8325
+            Left            =   8310
             RightToLeft     =   -1  'True
             TabIndex        =   106
             Top             =   1530
@@ -5645,7 +5956,7 @@ Begin VB.Form FrmBillBuy
             Caption         =   " «—ÌŒ «·›« Ê—…"
             Height          =   285
             Index           =   7
-            Left            =   14565
+            Left            =   14550
             RightToLeft     =   -1  'True
             TabIndex        =   103
             Top             =   375
@@ -5670,7 +5981,7 @@ Begin VB.Form FrmBillBuy
             Caption         =   "—ﬁ„ «·›« Ê—…"
             Height          =   195
             Index           =   8
-            Left            =   14640
+            Left            =   14625
             RightToLeft     =   -1  'True
             TabIndex        =   101
             Top             =   15
@@ -5682,7 +5993,7 @@ Begin VB.Form FrmBillBuy
             Caption         =   " «·„Ê—œ"
             Height          =   195
             Index           =   6
-            Left            =   14640
+            Left            =   14625
             RightToLeft     =   -1  'True
             TabIndex        =   100
             Top             =   750
@@ -5694,7 +6005,7 @@ Begin VB.Form FrmBillBuy
             Caption         =   "‰Ê⁄ «·Œ’„"
             Height          =   285
             Index           =   5
-            Left            =   9165
+            Left            =   9150
             RightToLeft     =   -1  'True
             TabIndex        =   99
             Top             =   1110
@@ -5706,7 +6017,7 @@ Begin VB.Form FrmBillBuy
             Caption         =   " «·„Œ“‰"
             Height          =   300
             Index           =   4
-            Left            =   14520
+            Left            =   14505
             RightToLeft     =   -1  'True
             TabIndex        =   98
             Top             =   1875
@@ -5717,7 +6028,7 @@ Begin VB.Form FrmBillBuy
             BackColor       =   &H00E2E9E9&
             Caption         =   "%"
             BeginProperty Font 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   9.75
                Charset         =   178
                Weight          =   700
@@ -5759,7 +6070,7 @@ Begin VB.Form FrmBillBuy
          _cx             =   27940
          _cy             =   767
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -5827,7 +6138,7 @@ Begin VB.Form FrmBillBuy
             Top             =   90
             Width           =   1350
             _ExtentX        =   2381
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             Enabled         =   0   'False
             Text            =   ""
@@ -6215,6 +6526,7 @@ Begin VB.Form FrmBillBuy
       End
       Begin C1SizerLibCtl.C1Elastic C1Elastic8 
          Height          =   510
+         Index           =   0
          Left            =   15
          TabIndex        =   245
          TabStop         =   0   'False
@@ -6223,7 +6535,7 @@ Begin VB.Form FrmBillBuy
          _cx             =   27940
          _cy             =   900
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -6284,8 +6596,9 @@ Begin VB.Form FrmBillBuy
             ButtonPositionImage=   1
             Caption         =   " ⁄œÌ·"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6315,8 +6628,9 @@ Begin VB.Form FrmBillBuy
             ButtonPositionImage=   1
             Caption         =   "Õ›Ÿ"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6346,8 +6660,9 @@ Begin VB.Form FrmBillBuy
             ButtonPositionImage=   1
             Caption         =   " —«Ã⁄"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6377,8 +6692,9 @@ Begin VB.Form FrmBillBuy
             ButtonPositionImage=   1
             Caption         =   "Õ–›"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6408,8 +6724,9 @@ Begin VB.Form FrmBillBuy
             ButtonPositionImage=   1
             Caption         =   "»ÕÀ"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6439,8 +6756,9 @@ Begin VB.Form FrmBillBuy
             ButtonPositionImage=   1
             Caption         =   "Œ—ÊÃ"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6470,8 +6788,9 @@ Begin VB.Form FrmBillBuy
             ButtonPositionImage=   1
             Caption         =   "ÿ»«⁄…"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6500,8 +6819,9 @@ Begin VB.Form FrmBillBuy
             ButtonPositionImage=   1
             Caption         =   "‰”ŒÂ „„«À·Â"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6531,8 +6851,9 @@ Begin VB.Form FrmBillBuy
             ButtonPositionImage=   1
             Caption         =   "ÃœÌœ"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6562,8 +6883,9 @@ Begin VB.Form FrmBillBuy
             ButtonPositionImage=   1
             Caption         =   "ÿ»«⁄Â «·ﬁÌœ"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6586,7 +6908,7 @@ Begin VB.Form FrmBillBuy
       BackColor       =   &H00E0E0E0&
       Caption         =   "«·„»·€ «·„œ›Ê⁄"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   9.75
          Charset         =   178
          Weight          =   700
@@ -6619,8 +6941,9 @@ Begin VB.Form FrmBillBuy
             _ExtentX        =   1931
             _ExtentY        =   1720
             Caption         =   ""
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6628,7 +6951,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":D08C
+            ButtonImage     =   "FrmBillBuy.frx":D42F
          End
          Begin ImpulseButton.ISButton CmdNos 
             Height          =   975
@@ -6641,8 +6964,9 @@ Begin VB.Form FrmBillBuy
             _ExtentY        =   1720
             Caption         =   ""
             BackColor       =   16777215
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6650,7 +6974,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":D84C
+            ButtonImage     =   "FrmBillBuy.frx":DBEF
             ColorButton     =   16777215
          End
          Begin ImpulseButton.ISButton CmdNos 
@@ -6664,8 +6988,9 @@ Begin VB.Form FrmBillBuy
             _ExtentY        =   1720
             Caption         =   ""
             BackColor       =   16777215
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6673,7 +6998,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":DE4E
+            ButtonImage     =   "FrmBillBuy.frx":E1F1
             ColorButton     =   16777215
          End
          Begin ImpulseButton.ISButton CmdNos 
@@ -6687,8 +7012,9 @@ Begin VB.Form FrmBillBuy
             _ExtentY        =   1720
             Caption         =   ""
             BackColor       =   16777215
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6696,7 +7022,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":E635
+            ButtonImage     =   "FrmBillBuy.frx":E9D8
             ColorButton     =   16777215
          End
          Begin ImpulseButton.ISButton CmdNos 
@@ -6710,8 +7036,9 @@ Begin VB.Form FrmBillBuy
             _ExtentY        =   1720
             Caption         =   ""
             BackColor       =   16777215
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6719,7 +7046,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":EE4A
+            ButtonImage     =   "FrmBillBuy.frx":F1ED
             ColorButton     =   16777215
          End
          Begin ImpulseButton.ISButton CmdNos 
@@ -6733,8 +7060,9 @@ Begin VB.Form FrmBillBuy
             _ExtentY        =   1720
             Caption         =   ""
             BackColor       =   16777215
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6742,7 +7070,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":F5D5
+            ButtonImage     =   "FrmBillBuy.frx":F978
             ColorButton     =   16777215
          End
          Begin ImpulseButton.ISButton CmdNos 
@@ -6756,8 +7084,9 @@ Begin VB.Form FrmBillBuy
             _ExtentY        =   1720
             Caption         =   ""
             BackColor       =   16777215
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6765,7 +7094,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":FD94
+            ButtonImage     =   "FrmBillBuy.frx":10137
             ColorButton     =   16777215
          End
          Begin ImpulseButton.ISButton CmdNos 
@@ -6779,8 +7108,9 @@ Begin VB.Form FrmBillBuy
             _ExtentY        =   1720
             Caption         =   ""
             BackColor       =   16777215
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6788,7 +7118,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":1052E
+            ButtonImage     =   "FrmBillBuy.frx":108D1
             ColorButton     =   16777215
          End
          Begin ImpulseButton.ISButton CmdNos 
@@ -6802,8 +7132,9 @@ Begin VB.Form FrmBillBuy
             _ExtentY        =   1720
             Caption         =   ""
             BackColor       =   16777215
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6811,7 +7142,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":10C31
+            ButtonImage     =   "FrmBillBuy.frx":10FD4
             ColorButton     =   16777215
          End
          Begin ImpulseButton.ISButton CmdNos 
@@ -6825,8 +7156,9 @@ Begin VB.Form FrmBillBuy
             _ExtentY        =   1720
             Caption         =   ""
             BackColor       =   16777215
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6834,7 +7166,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":1144C
+            ButtonImage     =   "FrmBillBuy.frx":117EF
             ColorButton     =   16777215
          End
          Begin ImpulseButton.ISButton CmdNos 
@@ -6848,8 +7180,9 @@ Begin VB.Form FrmBillBuy
             _ExtentY        =   1720
             Caption         =   ""
             BackColor       =   16777215
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6857,7 +7190,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":11BDB
+            ButtonImage     =   "FrmBillBuy.frx":11F7E
             ColorButton     =   16777215
          End
          Begin ImpulseButton.ISButton CmdNos 
@@ -6871,8 +7204,9 @@ Begin VB.Form FrmBillBuy
             _ExtentY        =   1720
             Caption         =   ""
             BackColor       =   16777215
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6880,7 +7214,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":12722
+            ButtonImage     =   "FrmBillBuy.frx":12AC5
             ColorButton     =   16777215
          End
          Begin ImpulseButton.ISButton CmdNos 
@@ -6894,8 +7228,9 @@ Begin VB.Form FrmBillBuy
             _ExtentY        =   1720
             Caption         =   ""
             BackColor       =   16777215
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6903,7 +7238,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":12C14
+            ButtonImage     =   "FrmBillBuy.frx":12FB7
             ColorButton     =   16777215
          End
          Begin ImpulseButton.ISButton CmdNos 
@@ -6917,8 +7252,9 @@ Begin VB.Form FrmBillBuy
             _ExtentY        =   1720
             Caption         =   ""
             BackColor       =   16777215
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6926,7 +7262,7 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":1347B
+            ButtonImage     =   "FrmBillBuy.frx":1381E
             ColorButton     =   16777215
          End
          Begin ImpulseButton.ISButton CmdNos 
@@ -6940,8 +7276,9 @@ Begin VB.Form FrmBillBuy
             _ExtentY        =   5106
             Caption         =   ""
             BackColor       =   16777215
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -6949,15 +7286,15 @@ Begin VB.Form FrmBillBuy
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            ButtonImage     =   "FrmBillBuy.frx":13B8C
-            ButtonImageDisabled=   "FrmBillBuy.frx":14F3A
+            ButtonImage     =   "FrmBillBuy.frx":13F2F
+            ButtonImageDisabled=   "FrmBillBuy.frx":152DD
             ColorButton     =   16777215
          End
          Begin VB.Label LBLPayVal 
             Alignment       =   2  'Center
             BackStyle       =   0  'Transparent
             BeginProperty Font 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   24
                Charset         =   178
                Weight          =   700
@@ -6975,7 +7312,7 @@ Begin VB.Form FrmBillBuy
          Begin VB.Image Image13 
             Height          =   1035
             Left            =   120
-            Picture         =   "FrmBillBuy.frx":152D5
+            Picture         =   "FrmBillBuy.frx":15678
             Stretch         =   -1  'True
             Top             =   120
             Width           =   5295
@@ -6984,7 +7321,7 @@ Begin VB.Form FrmBillBuy
       Begin VB.CommandButton CmdValue 
          Caption         =   "1500"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   24
             Charset         =   178
             Weight          =   400
@@ -7002,7 +7339,7 @@ Begin VB.Form FrmBillBuy
       Begin VB.CommandButton CmdValue 
          Caption         =   "2000"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   24
             Charset         =   178
             Weight          =   400
@@ -7029,7 +7366,7 @@ Begin VB.Form FrmBillBuy
             Alignment       =   2  'Center
             BackColor       =   &H00000000&
             BeginProperty Font 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   18
                Charset         =   178
                Weight          =   700
@@ -7049,7 +7386,7 @@ Begin VB.Form FrmBillBuy
             Alignment       =   2  'Center
             BackColor       =   &H00000000&
             BeginProperty Font 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   18
                Charset         =   178
                Weight          =   700
@@ -7069,7 +7406,7 @@ Begin VB.Form FrmBillBuy
             Alignment       =   2  'Center
             BackColor       =   &H00000000&
             BeginProperty Font 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   18
                Charset         =   178
                Weight          =   700
@@ -7091,7 +7428,7 @@ Begin VB.Form FrmBillBuy
             BackStyle       =   0  'Transparent
             Caption         =   "«·«Ã„«·Ì"
             BeginProperty Font 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   13.5
                Charset         =   178
                Weight          =   700
@@ -7113,7 +7450,7 @@ Begin VB.Form FrmBillBuy
             BackStyle       =   0  'Transparent
             Caption         =   "«·„œ›Ê⁄"
             BeginProperty Font 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   13.5
                Charset         =   178
                Weight          =   700
@@ -7135,7 +7472,7 @@ Begin VB.Form FrmBillBuy
             BackStyle       =   0  'Transparent
             Caption         =   "«·„ »ﬁÌ"
             BeginProperty Font 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   13.5
                Charset         =   178
                Weight          =   700
@@ -7155,7 +7492,7 @@ Begin VB.Form FrmBillBuy
       Begin VB.CommandButton CmdValue 
          Caption         =   "1000"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   24
             Charset         =   178
             Weight          =   400
@@ -7173,7 +7510,7 @@ Begin VB.Form FrmBillBuy
       Begin VB.CommandButton CmdValue 
          Caption         =   "500"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   24
             Charset         =   178
             Weight          =   400
@@ -7191,7 +7528,7 @@ Begin VB.Form FrmBillBuy
       Begin VB.CommandButton CmdValue 
          Caption         =   "200"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   24
             Charset         =   178
             Weight          =   400
@@ -7209,7 +7546,7 @@ Begin VB.Form FrmBillBuy
       Begin VB.CommandButton CmdValue 
          Caption         =   "100"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   24
             Charset         =   178
             Weight          =   400
@@ -7227,7 +7564,7 @@ Begin VB.Form FrmBillBuy
       Begin VB.CommandButton CmdValue 
          Caption         =   "50"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   24
             Charset         =   178
             Weight          =   400
@@ -7245,7 +7582,7 @@ Begin VB.Form FrmBillBuy
       Begin VB.CommandButton CmdValue 
          Caption         =   "20"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   24
             Charset         =   178
             Weight          =   400
@@ -7263,7 +7600,7 @@ Begin VB.Form FrmBillBuy
       Begin VB.CommandButton CmdValue 
          Caption         =   "10"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   24
             Charset         =   178
             Weight          =   400
@@ -7282,7 +7619,7 @@ Begin VB.Form FrmBillBuy
       Begin VB.CommandButton CmdValue 
          Caption         =   "5"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   24
             Charset         =   178
             Weight          =   400
@@ -7309,9 +7646,10 @@ Begin VB.Form FrmBillBuy
          Caption         =   "”œ«œ"
          ForeColor       =   16777215
          FontSize        =   24
+         FontName        =   "Arial"
          FontBold        =   -1  'True
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   24
             Charset         =   178
             Weight          =   700
@@ -7319,7 +7657,7 @@ Begin VB.Form FrmBillBuy
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         ButtonImage     =   "FrmBillBuy.frx":1568B
+         ButtonImage     =   "FrmBillBuy.frx":15A2E
          ColorHoverText  =   16777215
          ColorToggledText=   16777215
          ColorToggledHoverText=   16777215
@@ -7337,7 +7675,7 @@ Begin VB.Form FrmBillBuy
          BorderStyle     =   1
          Enabled         =   -1  'True
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -7377,7 +7715,7 @@ Begin VB.Form FrmBillBuy
          ColWidthMin     =   0
          ColWidthMax     =   0
          ExtendLastCol   =   -1  'True
-         FormatString    =   $"FrmBillBuy.frx":15C05
+         FormatString    =   $"FrmBillBuy.frx":15FA8
          ScrollTrack     =   0   'False
          ScrollBars      =   3
          ScrollTips      =   0   'False
@@ -7427,7 +7765,7 @@ Begin VB.Form FrmBillBuy
          BackStyle       =   0  'Transparent
          Caption         =   "X"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   9.75
             Charset         =   178
             Weight          =   700
@@ -7448,7 +7786,7 @@ Begin VB.Form FrmBillBuy
          BackStyle       =   0  'Transparent
          Caption         =   "X"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   13.5
             Charset         =   178
             Weight          =   400
@@ -7504,10 +7842,76 @@ Dim mValue As Double
 Dim mIsFinishSave As Boolean
 Dim IsSaveWithOutMsg As Boolean
 Dim mIsStart As Boolean
+Dim Msg As String
+Private Sub SaveInstall(ByVal note_id As Long)
+   'Õ›Ÿ «·√›”«ÿ
+   Dim StrSQL As String
+   Dim RsTemp As ADODB.Recordset
+    If Me.XPChkPayType(1).value = Checked Then
+        If ChkInstall.value = vbChecked Then
+            'Save installment Data
+            Set RsTemp = New ADODB.Recordset
+            
+            '      RsTemp.Open "InstallMent", Cn, adOpenStatic, adLockOptimistic, adCmdTable
+                 
+            StrSQL = " SELECT       * FROM  dbo.InstallMent WHERE     (PartID = - 1)"
+            RsTemp.Open StrSQL, Cn, adOpenKeyset, adLockOptimistic, adCmdText
+      
+            RsTemp.AddNew
+            RsTemp("PartID").value = CStr(new_id("InstallMent", "PartID", "", True))
+            RsTemp("NoteID").value = note_id
+            RsTemp("BasicAmmount").value = IIf(XPTxtValue(1).Text = "", 0, val(XPTxtValue(1).Text))
+            RsTemp("InterestType").value = val(Me.LblPrecenType.Tag)
+            RsTemp("InterestVal").value = val(LblPrecenValue.Caption)
+            RsTemp("Total").value = val(LblInstallTotal.Caption)
+            RsTemp("InstallCount").value = val(LblInstallCount.Caption)
+            RsTemp("FirstInstallDate").value = CDate(Me.LblFirstInstallDate.Caption)
+
+            If val(LblInstallmentType.Tag) = 0 Then
+                RsTemp("InstallmentType").value = 0
+            ElseIf val(LblInstallmentType.Tag) = 1 Then
+                RsTemp("InstallmentType").value = 1
+            ElseIf val(LblInstallmentType.Tag) = 2 Then
+                RsTemp("InstallmentType").value = 2
+            End If
+
+            RsTemp("InstallSeprator").value = val(Me.LblInstallSeprator.Caption)
+            RsTemp("StartValue").value = IIf(val(Me.LblStartValue.Caption) = 0, Null, val(Me.LblStartValue.Caption))
+            RsTemp("CustID").value = IIf(DBCboClientName.BoundText = "", Null, val(DBCboClientName.BoundText))
+            RsTemp("Type").value = 1
+            RsTemp.update
+            'save installment Details
+            Dim RsDetalis As ADODB.Recordset
+            Set RsDetalis = New ADODB.Recordset
+            Dim RowNum As Long
+            '   RsDetalis.Open "InstallMentDetails", Cn, adOpenStatic, adLockOptimistic, adCmdTable
+
+            StrSQL = " SELECT       * FROM  dbo.InstallMentDetails WHERE     (PartID = - 1)"
+            RsDetalis.Open StrSQL, Cn, adOpenKeyset, adLockOptimistic, adCmdText
+      
+            With Me.FgInstallments
+
+                For RowNum = 1 To .rows - 1
+                    RsDetalis.AddNew
+                    RsDetalis("QestID").value = CStr(new_id("InstallMentDetails", "QestID", "", True))
+                    RsDetalis("PartID").value = RsTemp("PartID").value
+                    RsDetalis("QeqtNum").value = IIf(.TextMatrix(RowNum, .ColIndex("Serial")) = "", "", .TextMatrix(RowNum, .ColIndex("Serial")))
+                    RsDetalis("Value").value = IIf(.TextMatrix(RowNum, .ColIndex("Value")) = "", "", val(.TextMatrix(RowNum, .ColIndex("Value"))))
+                    RsDetalis("DueDate").value = IIf(.TextMatrix(RowNum, .ColIndex("Due_Date")) = "", "", .TextMatrix(RowNum, .ColIndex("Due_Date")))
+                    RsDetalis("Receipt").value = False
+                    RsDetalis.update
+                Next RowNum
+
+            End With
+
+        End If
+    End If
+
+End Sub
 
 Public Sub chkTaxExempt_Click()
  Dim i As Integer
-If Me.TxtModFlg.text <> "R" Then
+If Me.TxtModFlg.Text <> "R" Then
 If chkTaxExempt.value = vbChecked Then
     ChecVAT.value = vbUnchecked
 Else
@@ -7563,7 +7967,7 @@ Private Sub Command8_Click()
   For Num = 1 To FG.rows - 1 'RsDetails.RecordCount
     
         
-            FG.TextMatrix(Num, FG.ColIndex("Account_Name")) = Trim(Me.cmbAccounts.text)
+            FG.TextMatrix(Num, FG.ColIndex("Account_Name")) = Trim(Me.cmbAccounts.Text)
             FG.TextMatrix(Num, FG.ColIndex("Account_Code")) = Trim(Me.cmbAccounts.BoundText)
             FG.TextMatrix(Num, FG.ColIndex("Account_Serial2")) = ClsAcc.Get_Account_Serial(Me.cmbAccounts.BoundText)
        
@@ -7575,7 +7979,7 @@ Private Sub Command8_Click()
 End Sub
 
 Private Sub txtContainerNo_Change()
- If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+ If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
     Dim s As String
     Dim rsDummy As New ADODB.Recordset
     s = "Select NoteSerial1 from Transactions where ContainerNo = '" & Trim(txtContainerNo) & "' and Transaction_Type = 29"
@@ -7742,7 +8146,7 @@ End Function
 Sub RelinVatGrid()
 Dim k As Integer
 If FG.ColIndex("Vat") = -1 Then Exit Sub
-If val(DcbTyp.ListIndex) <> -1 Then
+If val(Dcbtyp.ListIndex) <> -1 Then
 For k = FG.FixedRows To FG.rows - 1
 FG.TextMatrix(k, FG.ColIndex("Vat")) = 0
 FG.TextMatrix(k, FG.ColIndex("Vatyo")) = 0
@@ -7774,15 +8178,15 @@ FG.TextMatrix(k, FG.ColIndex("Vat")) = 0
 FG.TextMatrix(k, FG.ColIndex("Vatyo")) = 0
 End If
 Next k
-If val(Me.DcbTyp.ListIndex) > -1 Then
-.TextMatrix(i, .ColIndex("Typ")) = val(Me.DcbTyp.ListIndex) + 1
+If val(Me.Dcbtyp.ListIndex) > -1 Then
+.TextMatrix(i, .ColIndex("Typ")) = val(Me.Dcbtyp.ListIndex) + 1
 End If
 End If
 Next i
 End With
-TxtValueAdded.text = Format(SmValu, ".##")
+TxtValueAdded.Text = Format(SmValu, ".##")
 LblValueAdded.Caption = Format(SmValu, ".##")
-Me.LblTotal.Caption = val(XPTxtSum.text) + val(LblValueAdded.Caption)
+Me.LblTotal.Caption = val(XPTxtSum.Text) + val(LblValueAdded.Caption)
 End Sub
 Function SaveItemsData(Optional Transaction_ID As String = 0, Optional StoreID3 As Integer)
 If SystemOptions.WorkWithItemsDetails = False Then Exit Function
@@ -7798,7 +8202,7 @@ If SystemOptions.WorkWithItemsDetails = False Then Exit Function
     Dim StrSQL As String
     strFilterText = ","
     Set RsgGrantee = New ADODB.Recordset
-    Cn.Execute "delete ItemsDetails   where Transaction_ID= " & val(Me.XPTxtBillID.text)
+    Cn.Execute "delete ItemsDetails   where Transaction_ID= " & val(Me.XPTxtBillID.Text)
     
   '  RsgGrantee.Open "TBLRegularMaint", Cn, adOpenStatic, adLockOptimistic, adCmdTable
 
@@ -7848,7 +8252,7 @@ If StoreID3 <> 0 Then
                          RsgGrantee("ClassId").value = val(astrSplitItems1(6))
                          RsgGrantee("ProductionDate").value = IIf(IsDate((astrSplitItems1(7))), astrSplitItems1(7), Null)
                          RsgGrantee("ExpireDate").value = IIf(IsDate((astrSplitItems1(8))), astrSplitItems1(8), Null)
-                        RsgGrantee("Transaction_ID").value = val(Me.XPTxtBillID.text)
+                        RsgGrantee("Transaction_ID").value = val(Me.XPTxtBillID.Text)
                         RsgGrantee("ItemId").value = FG.TextMatrix(RowNum, FG.ColIndex("Code"))
                        RsgGrantee("EffectN").value = 1
                     RsgGrantee.update
@@ -7862,7 +8266,7 @@ If StoreID3 <> 0 Then
                 RsgGrantee("ColorID").value = IIf((FG.TextMatrix(RowNum, FG.ColIndex("ColorID")) = ""), 1, val(FG.TextMatrix(RowNum, FG.ColIndex("ColorID"))))
                 RsgGrantee("sizeid").value = IIf((FG.TextMatrix(RowNum, FG.ColIndex("ItemSize")) = ""), 1, Trim$(FG.TextMatrix(RowNum, FG.ColIndex("ItemSize"))))
                 RsgGrantee("ClassId").value = IIf((FG.TextMatrix(RowNum, FG.ColIndex("ClassId")) = ""), 1, val(FG.TextMatrix(RowNum, FG.ColIndex("ClassId"))))
-                RsgGrantee("Transaction_ID").value = val(Me.XPTxtBillID.text)
+                RsgGrantee("Transaction_ID").value = val(Me.XPTxtBillID.Text)
                 RsgGrantee("ItemId").value = FG.TextMatrix(RowNum, FG.ColIndex("Code"))
                 RsgGrantee("ItemDetailedCode").value = FG.TextMatrix(RowNum, FG.ColIndex("ItemDetailedCode"))
                 RsgGrantee("EffectN").value = 1
@@ -7895,7 +8299,7 @@ If StoreID3 <> 0 Then
                          RsgGrantee("ClassId").value = val(astrSplitItems1(6))
                          RsgGrantee("ProductionDate").value = IIf(IsDate((astrSplitItems1(7))), astrSplitItems1(7), Null)
                          RsgGrantee("ExpireDate").value = IIf(IsDate((astrSplitItems1(8))), astrSplitItems1(8), Null)
-                        RsgGrantee("Transaction_ID").value = val(Me.XPTxtBillID.text)
+                        RsgGrantee("Transaction_ID").value = val(Me.XPTxtBillID.Text)
                         RsgGrantee("ItemId").value = FG.TextMatrix(RowNum, FG.ColIndex("Code"))
                        RsgGrantee("EffectN").value = 1
                     RsgGrantee.update
@@ -7909,7 +8313,7 @@ If StoreID3 <> 0 Then
                 RsgGrantee("ColorID").value = IIf((FG.TextMatrix(RowNum, FG.ColIndex("ColorID")) = ""), 1, val(FG.TextMatrix(RowNum, FG.ColIndex("ColorID"))))
                 RsgGrantee("sizeid").value = IIf((FG.TextMatrix(RowNum, FG.ColIndex("ItemSize")) = ""), 1, Trim$(FG.TextMatrix(RowNum, FG.ColIndex("ItemSize"))))
                 RsgGrantee("ClassId").value = IIf((FG.TextMatrix(RowNum, FG.ColIndex("ClassId")) = ""), 1, val(FG.TextMatrix(RowNum, FG.ColIndex("ClassId"))))
-                RsgGrantee("Transaction_ID").value = val(Me.XPTxtBillID.text)
+                RsgGrantee("Transaction_ID").value = val(Me.XPTxtBillID.Text)
                 RsgGrantee("ItemId").value = FG.TextMatrix(RowNum, FG.ColIndex("Code"))
                 RsgGrantee("ItemDetailedCode").value = FG.TextMatrix(RowNum, FG.ColIndex("ItemDetailedCode"))
                 RsgGrantee("EffectN").value = 1
@@ -7940,7 +8344,7 @@ Function SaveGoldData()
     Dim StrSQL As String
     strFilterText = ","
     Set RsgGrantee = New ADODB.Recordset
-    Cn.Execute "delete TblGoldDetail   where Transaction_ID= " & val(Me.XPTxtBillID.text)
+    Cn.Execute "delete TblGoldDetail   where Transaction_ID= " & val(Me.XPTxtBillID.Text)
     
   '  RsgGrantee.Open "TBLRegularMaint", Cn, adOpenStatic, adLockOptimistic, adCmdTable
 
@@ -7996,7 +8400,7 @@ Dim NooFRows As Double
             RsgGrantee("weight").value = val(astrSplitItems1(5))
             RsgGrantee("Count").value = val(astrSplitItems1(6))
             RsgGrantee("InstallPrice").value = val(astrSplitItems1(7))
-         RsgGrantee("Transaction_ID").value = val(Me.XPTxtBillID.text)
+         RsgGrantee("Transaction_ID").value = val(Me.XPTxtBillID.Text)
          
       
   
@@ -8085,7 +8489,7 @@ If val(Price) > 0 Then
     Next
      
      
-    TxtFillData.text = "F"
+    TxtFillData.Text = "F"
     TxtFillData_Change
     Exit Sub
 ErrTrap:
@@ -8095,7 +8499,7 @@ End Sub
 Function CheckMyData() As Boolean
     CheckMyData = True
 my_branch = val(Me.dcBranch.BoundText)
-    If TxtNoteSerial.text = "" Then
+    If TxtNoteSerial.Text = "" Then
         If Notes_coding(val(my_branch), XPDtbBill.value) = "error" Then
             MsgBox " ·« Ì„ﬂ‰ «÷«›… ﬁÌÊœ ·Â–… «·⁄„·Ì… ·«‰ﬂ  ⁄œÌ  «·Õœ «·«ﬁ’Ì ··ﬁÌÊœ ﬂ„« Õœœ  ›Ì  —ﬁÌ„ «·”‰œ«  ": GoTo ErrTrap
         Else
@@ -8103,7 +8507,7 @@ my_branch = val(Me.dcBranch.BoundText)
             If Notes_coding(val(my_branch), XPDtbBill.value) = "" Then
                 MsgBox " ·«Ì„ﬂ‰ «‰‘«¡ «·ﬁÌœ ·Â–« «·„” ‰œ ·«‰ﬂ Õœœ   —ﬁÌ„ ﬁÌÊœ ÌœÊÌ  ": GoTo ErrTrap
             Else
-                TxtNoteSerial.text = Notes_coding(val(my_branch), XPDtbBill.value)
+                TxtNoteSerial.Text = Notes_coding(val(my_branch), XPDtbBill.value)
             End If
         End If
     End If
@@ -8122,7 +8526,7 @@ my_branch = val(Me.dcBranch.BoundText)
              '       End If
  
  Dim NoteSerial1str  As String
-     If TxtNoteSerial1.text = "" Then
+     If TxtNoteSerial1.Text = "" Then
     
     NoteSerial1str = Voucher_coding(val(my_branch), XPDtbBill.value, 6, 150, , 22, , val(DCboStoreName.BoundText))
                     If NoteSerial1str = "error" Then
@@ -8132,7 +8536,7 @@ my_branch = val(Me.dcBranch.BoundText)
                         If NoteSerial1str = "" Then
                             MsgBox " ·«»œ „‰ ﬂ «»… —ﬁ„ ›« Ê—… „‘ —Ì«   ÌœÊÌ« ﬂ„« Õœœ   ": GoTo ErrTrap
                         Else
-                            TxtNoteSerial1.text = NoteSerial1str
+                            TxtNoteSerial1.Text = NoteSerial1str
                         End If
                     End If
     End If
@@ -8252,10 +8656,10 @@ Function FillVoucherGrid(Optional OPtype As Integer = 0)
     Set RsExp = New ADODB.Recordset
     'My_SQL = "SELECT dbo.Transactions.closed,dbo.Transactions.NoteSerial1, dbo.Transactions.Transaction_ID,dbo.Transactions.order_no , dbo.Transactions.Transaction_Date,dbo.Transactions.CusID, dbo.TblCustemers.CusName FROM dbo.Transactions  INNER JOIN dbo.TblCustemers ON dbo.Transactions.CusID = dbo.TblCustemers.CusID Where  Transaction_Type=20   and   dbo.TblCustemers.CusID=" & Val(DBCboClientName.BoundText)
     If OPtype = 0 Then
-        My_SQL = "SELECT dbo.Transactions.NoteID,dbo.Transactions.ManualNO,dbo.Transactions.closed,dbo.Transactions.NoteSerial1,dbo.Transactions.NoteSerial, dbo.Transactions.Transaction_ID,dbo.Transactions.order_no , dbo.Transactions.Transaction_Date,dbo.Transactions.CusID, dbo.TblCustemers.CusName FROM dbo.Transactions  INNER JOIN dbo.TblCustemers ON dbo.Transactions.CusID = dbo.TblCustemers.CusID Where  Transaction_ID= " & val(Text1.text) & " or Transaction_ID in ( " & GetTrnasectionID(val(XPTxtBillID.text), 22) & " )"
+        My_SQL = "SELECT dbo.Transactions.NoteID,dbo.Transactions.ManualNO,dbo.Transactions.closed,dbo.Transactions.NoteSerial1,dbo.Transactions.NoteSerial, dbo.Transactions.Transaction_ID,dbo.Transactions.order_no , dbo.Transactions.Transaction_Date,dbo.Transactions.CusID, dbo.TblCustemers.CusName FROM dbo.Transactions  INNER JOIN dbo.TblCustemers ON dbo.Transactions.CusID = dbo.TblCustemers.CusID Where  Transaction_ID= " & val(Text1.Text) & " or Transaction_ID in ( " & GetTrnasectionID(val(XPTxtBillID.Text), 22) & " )"
     Else
         'My_SQL = "SELECT dbo.Transactions.closed,dbo.Transactions.NoteSerial1,dbo.Transactions.NoteSerial, dbo.Transactions.Transaction_ID,dbo.Transactions.order_no , dbo.Transactions.Transaction_Date,dbo.Transactions.CusID, dbo.TblCustemers.CusName FROM dbo.Transactions  INNER JOIN dbo.TblCustemers ON dbo.Transactions.CusID = dbo.TblCustemers.CusID Where  Transaction_ID= " & Val(Text1.text)
-        My_SQL = "SELECT dbo.Transactions.NoteID, dbo.Transactions.ManualNO, dbo.Transactions.closed,dbo.Transactions.NoteSerial1,dbo.Transactions.NoteSerial, dbo.Transactions.Transaction_ID,dbo.Transactions.order_no , dbo.Transactions.Transaction_Date,dbo.Transactions.CusID, dbo.TblCustemers.CusName FROM dbo.Transactions  INNER JOIN dbo.TblCustemers ON dbo.Transactions.CusID = dbo.TblCustemers.CusID Where   ( (nots='" & Me.XPTxtBillID.text & "' and  Transaction_Type=20) or(Transaction_ID in ( " & GetTrnasectionID(val(XPTxtBillID.text), 22) & " ))or ( Transaction_Type=20   and  closed =0 and (nots='' or nots is null) ) and  (dbo.TblCustemers.CusID=" & val(DBCboClientName.BoundText) & ")) "
+        My_SQL = "SELECT dbo.Transactions.NoteID, dbo.Transactions.ManualNO, dbo.Transactions.closed,dbo.Transactions.NoteSerial1,dbo.Transactions.NoteSerial, dbo.Transactions.Transaction_ID,dbo.Transactions.order_no , dbo.Transactions.Transaction_Date,dbo.Transactions.CusID, dbo.TblCustemers.CusName FROM dbo.Transactions  INNER JOIN dbo.TblCustemers ON dbo.Transactions.CusID = dbo.TblCustemers.CusID Where   ( (nots='" & Me.XPTxtBillID.Text & "' and  Transaction_Type=20) or(Transaction_ID in ( " & GetTrnasectionID(val(XPTxtBillID.Text), 22) & " ))or ( Transaction_Type=20   and  closed =0 and (nots='' or nots is null) ) and  (dbo.TblCustemers.CusID=" & val(DBCboClientName.BoundText) & ")) "
     End If
 
     RsExp.Open My_SQL, Cn, adOpenKeyset, adLockReadOnly, adCmdText
@@ -8309,7 +8713,7 @@ Function CloseIssueVoucher()
     Dim sql As String
   
     If BillBasedOn(1).value = False Then Exit Function
-DeleteTransactiomsVoucher val(Text1.text)
+DeleteTransactiomsVoucher val(Text1.Text)
 
     With GRID1
 
@@ -8317,7 +8721,7 @@ DeleteTransactiomsVoucher val(Text1.text)
      
             If .cell(flexcpChecked, i, .ColIndex("select")) = flexChecked Then
            
-                sql = "update transactions set closed=1" & ",nots=" & val(Me.XPTxtBillID.text) & ",nots2='" & Me.TxtNoteSerial1.text & "' where  Transaction_ID= " & val(.TextMatrix(i, .ColIndex("Transaction_ID")))
+                sql = "update transactions set closed=1" & ",nots=" & val(Me.XPTxtBillID.Text) & ",nots2='" & Me.TxtNoteSerial1.Text & "' where  Transaction_ID= " & val(.TextMatrix(i, .ColIndex("Transaction_ID")))
             Else
                 sql = "update transactions set closed=0 ,nots='' ,nots2='' where  Transaction_ID=" & val(.TextMatrix(i, .ColIndex("Transaction_ID"))) ' & "nots=" & "" & "nots2=" & ""
                
@@ -8361,9 +8765,9 @@ DBCboClientName_Change
 End Sub
 
 Private Sub CBoBasedON_Change()
-If Me.TxtModFlg.text <> "R" Then
+If Me.TxtModFlg.Text <> "R" Then
 
-TXT_order_no.text = ""
+TXT_order_no.Text = ""
 End If
 
     If Me.CBoBasedON.ListIndex = 0 Then
@@ -8385,7 +8789,7 @@ End If
         End If
     End If
 
-    If TXT_order_no.text <> "" Then
+    If TXT_order_no.Text <> "" Then
         Txt_order_no_Change
     End If
 
@@ -8399,15 +8803,15 @@ End Sub
 
 Private Sub ChAddToTotal_Click()
 If ChAddToTotal.value = vbChecked Then
-txtAddValue.Caption = val(TXTFactoryExpenses.text)
+TxtAddValue.Caption = val(TXTFactoryExpenses.Text)
 TXTFactoryExpensesVat = ""
 If val(Fg_Journal.rows) > 1 Then
-    TXTFactoryExpensesVat.text = Fg_Journal.Aggregate(flexSTSum, Fg_Journal.FixedRows, Fg_Journal.ColIndex("Vat"), Fg_Journal.rows - 1, Fg_Journal.ColIndex("Vat"))
+    TXTFactoryExpensesVat.Text = Fg_Journal.Aggregate(flexSTSum, Fg_Journal.FixedRows, Fg_Journal.ColIndex("Vat"), Fg_Journal.rows - 1, Fg_Journal.ColIndex("Vat"))
 End If
-LblValueAdded.Caption = val(LblValueAdded.Caption) + val(TXTFactoryExpensesVat.text)
+LblValueAdded.Caption = val(LblValueAdded.Caption) + val(TXTFactoryExpensesVat.Text)
 Else
-LblValueAdded.Caption = val(LblValueAdded.Caption) - val(TXTFactoryExpensesVat.text)
-txtAddValue.Caption = 0
+LblValueAdded.Caption = val(LblValueAdded.Caption) - val(TXTFactoryExpensesVat.Text)
+TxtAddValue.Caption = 0
 End If
 XPTxtSum_Change
 End Sub
@@ -8441,7 +8845,7 @@ Private Sub ChkTaxAdd_Click()
         lbl(39).Enabled = True
         lbl(46).Enabled = True
     Else
-        TxtTaxAddValue.text = ""
+        TxtTaxAddValue.Text = ""
         TxtTaxAddValue.Enabled = False
         lbl(39).Enabled = False
         lbl(46).Enabled = False
@@ -8459,7 +8863,7 @@ Private Sub ChkTaxSerivce_Click()
         lbl(43).Enabled = True
         lbl(47).Enabled = True
     Else
-        TxtTaxServiceValue.text = ""
+        TxtTaxServiceValue.Text = ""
         TxtTaxServiceValue.Enabled = False
         lbl(43).Enabled = False
         lbl(47).Enabled = False
@@ -8476,7 +8880,7 @@ Private Sub ChkTaxStamp_Click()
         lbl(41).Enabled = True
         lbl(48).Enabled = True
     Else
-        TxtTaxStampValue.text = ""
+        TxtTaxStampValue.Text = ""
         TxtTaxStampValue.Enabled = False
         lbl(41).Enabled = False
         lbl(48).Enabled = False
@@ -8520,7 +8924,7 @@ End Function
     Dim i As Long
     Dim rs2 As ADODB.Recordset
     Set rs2 = New ADODB.Recordset
-    StrSQL = "select * from TblItems where ItemID in(" & TxtItemsIDes.text & ")"
+    StrSQL = "select * from TblItems where ItemID in(" & TxtItemsIDes.Text & ")"
     rs2.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
    If rs2.RecordCount > 0 Then
         
@@ -8557,7 +8961,7 @@ Private Function CheckPOItems() As Boolean
     
     End If
     '----------------------------
-    StrSQL = "Select * From Transaction_Details Where Transaction_ID=" & val(Me.poTransaction_ID.text) & ""
+    StrSQL = "Select * From Transaction_Details Where Transaction_ID=" & val(Me.poTransaction_ID.Text) & ""
     StrSQL = StrSQL + " Order  By ID"
     rs.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
     CheckPOItems = False
@@ -8579,7 +8983,7 @@ Private Function CheckPOItems() As Boolean
                     If rs.BOF Or rs.EOF Then
                         Msg = "«·’‰› : " & .cell(flexcpTextDisplay, i, .ColIndex("Name"))
                         Msg = Msg & CHR(13) & "Ê«·„ÊÃÊœ ›Ï «·”ÿ— —ﬁ„ : " & i
-                        Msg = Msg & CHR(13) & "·„ Ìﬂ‰ „ÊÃÊœ ›Ï «„— «·‘—«¡ —ﬁ„ : " & Me.TXT_order_no.text
+                        Msg = Msg & CHR(13) & "·„ Ìﬂ‰ „ÊÃÊœ ›Ï «„— «·‘—«¡ —ﬁ„ : " & Me.TXT_order_no.Text
                         MsgBox Msg, vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                         CheckPOItems = False
                         rs.Close
@@ -8592,7 +8996,7 @@ Private Function CheckPOItems() As Boolean
                             Msg = "«·ﬁÿ⁄… –«  «·”Ì—Ì«·:  " & Trim(.TextMatrix(i, .ColIndex("Serial")))
                             Msg = Msg & CHR(13) & "„‰ «·’‰› : " & .cell(flexcpTextDisplay, i, .ColIndex("Name"))
                             Msg = Msg & CHR(13) & "Ê«·„ÊÃÊœ ›Ï «·”ÿ— —ﬁ„  : " & i
-                            Msg = Msg & CHR(13) & "·„ Ìﬂ‰ „ÊÃÊœ ›Ï «„— «·‘—«¡ —ﬁ„  : " & Me.TXT_order_no.text
+                            Msg = Msg & CHR(13) & "·„ Ìﬂ‰ „ÊÃÊœ ›Ï «„— «·‘—«¡ —ﬁ„  : " & Me.TXT_order_no.Text
                             MsgBox Msg, vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                             CheckPOItems = False
                             rs.Close
@@ -8629,7 +9033,7 @@ Private Sub Cmd_Click(Index As Integer)
             If DoPremis(Do_New, Me.Name, True) = False Then
                 Exit Sub
             End If
-            With Me.Grid4
+            With Me.grid4
                 .rows = .FixedRows
    
             End With
@@ -8639,18 +9043,19 @@ Private Sub Cmd_Click(Index As Integer)
             Txt_EXport.Enabled = True
             '  Grid.Visible = True
             clear_all Me
-            TxtModFlg.text = "N"
+            TxtModFlg.Text = "N"
+            txtAdvPay = ""
             ' Me.TxtNoteID.text = CStr(new_id("Notes", "NoteID", "", True))
             BillBasedOn(0).value = True
             BLDate.value = Date
-            XPTxtBillID.text = CStr(new_id("Transactions", "Transaction_ID", "", True))
+            XPTxtBillID.Text = CStr(new_id("Transactions", "Transaction_ID", "", True))
 
             If BillType = 22 Then
-                TxtTransSerial.text = CStr(new_id("Transactions", "Transaction_Serial", "", True, "Transaction_Type=22"))
+                TxtTransSerial.Text = CStr(new_id("Transactions", "Transaction_Serial", "", True, "Transaction_Type=22"))
             End If
         
             If BillType = 1 Then
-                TxtTransSerial.text = CStr(new_id("Transactions", "Transaction_Serial", "", True, "Transaction_Type=1"))
+                TxtTransSerial.Text = CStr(new_id("Transactions", "Transaction_Serial", "", True, "Transaction_Type=1"))
             End If
 
             '      TxtTransSerial.text = CStr(new_id("Transactions", "Transaction_Serial", "",  True  )
@@ -8727,7 +9132,7 @@ Private Sub Cmd_Click(Index As Integer)
             GRID1.rows = 1
             GRID1.Enabled = True
           
-            Dccurrency.BoundText = MainCurrency()
+            DcCurrency.BoundText = MainCurrency()
             TxtNoteSerial1V = ""
             If Voucher_coding(val(Me.dcBranch.BoundText), XPDtbBill.value, 6, 150, 22) = "" Then
                 TxtNoteSerial1.locked = False
@@ -8735,7 +9140,7 @@ Private Sub Cmd_Click(Index As Integer)
                 TxtNoteSerial1.locked = True
  
             End If
-            XPTxtBillID.text = 0
+            XPTxtBillID.Text = 0
             
             If SystemOptions.IsHiddenTransportInv Then
                 CBoBasedON.ListIndex = 1
@@ -8772,7 +9177,7 @@ Private Sub Cmd_Click(Index As Integer)
             '     End If
             ' End If
 
-            TxtModFlg.text = "E"
+            TxtModFlg.Text = "E"
             If Trim(txtPassword) <> "Alex2025" Then
                 Me.DCboUserName.BoundText = user_id
             End If
@@ -8786,7 +9191,7 @@ Private Sub Cmd_Click(Index As Integer)
     
         Case 2
          
-            If SystemOptions.POMustentryAndBillMustEntry = True And (TXT_order_no.text = "" Or CBoBasedON.ListIndex = 0) Then
+            If SystemOptions.POMustentryAndBillMustEntry = True And (TXT_order_no.Text = "" Or CBoBasedON.ListIndex = 0) Then
                 MsgBox "·«Ì„ﬂ‰ «·Õ›Ÿ ·⁄œ„ «Œ Ì«— »‰«¡ ⁄·Ì Ê ÕœÌœ «·—ﬁ„", vbCritical
                 Exit Sub
             End If
@@ -8797,12 +9202,12 @@ Private Sub Cmd_Click(Index As Integer)
             If CboPayMentType.ListIndex = 1 Then
                 XPChkPayType(1).value = 1
                 '  XPTxtValue(1).text = Val(LblTotalAll.Caption)
-                XPTxtValue(1).text = val(LblTotal.Caption)
+                XPTxtValue(1).Text = val(LblTotal.Caption)
 
             Else
                 XPChkPayType(0).value = 1
                 '  XPTxtValue(0).text = Val(LblTotalAll.Caption)
-                XPTxtValue(0).text = val(LblTotal.Caption)
+                XPTxtValue(0).Text = val(LblTotal.Caption)
 
             End If
             If SystemOptions.PoCreateVoucher = True Then
@@ -8831,7 +9236,7 @@ Private Sub Cmd_Click(Index As Integer)
     
             End If
         
-            If Dccurrency.BoundText = "" Then
+            If DcCurrency.BoundText = "" Then
     
                 If SystemOptions.UserInterface = ArabicInterface Then
                     Msg = "«Œ — «·⁄„·… «Ê·« "
@@ -8841,16 +9246,32 @@ Private Sub Cmd_Click(Index As Integer)
                 End If
 
                 MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
-                Dccurrency.SetFocus
+                DcCurrency.SetFocus
                 Sendkeys "{F4}"
                 Screen.MousePointer = vbDefault
                 Exit Sub
     
+           End If
+        
+            If Trim$(txtAdvPay.Text) = "" Or Not IsNumeric(txtAdvPay.Text) Then
+                txtAdvPay.Text = 0
+            End If
+        
+            If val(txtAdvPay.Text) > val(LblTotal.Caption) Then
+                If SystemOptions.UserInterface = ArabicInterface Then
+                    MsgBox "ﬁÌ„… «·œ›⁄… «·„ﬁœ„… ·« Ì„ﬂ‰ √‰  ﬂÊ‰ √ﬂ»— „‰ ≈Ã„«·Ì «·›« Ê—…", vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+                Else
+                    MsgBox "Advance payment can not be greater than invoice total", vbExclamation, App.Title
+                End If
+                txtAdvPay.SetFocus
+                Exit Sub
             End If
         
             Dim NoteSerialT As String
+            
+            
             If SystemOptions.DontDuplicateManulaNoInPurchase = True Then
-                If ChekInvoiceNoPurchasemanualExist(val(Me.XPTxtBillID.text), val(DBCboClientName.BoundText), Me.TxtManualNO, NoteSerialT) = True Then
+                If ChekInvoiceNoPurchasemanualExist(val(Me.XPTxtBillID.Text), val(DBCboClientName.BoundText), Me.txtManualNO, NoteSerialT) = True Then
         
                     If SystemOptions.UserInterface = ArabicInterface Then
                         MsgBox "Ì—ÃÏ  €ÌÌ—  «·—ﬁ„ «·ÌœÊÌ ·«‰ „ﬂ—— „‰ ﬁ»· ›Ì ›« Ê—… —ﬁ„  " & NoteSerialT
@@ -8920,7 +9341,7 @@ Private Sub Cmd_Click(Index As Integer)
              
             ' End If
             If val(CboPayMentType.ListIndex) = 2 And SystemOptions.AllowPurchasesMultyPayed = True Then
-                If val(TxtRemainValue2.text) <> 0 Then
+                If val(TxtRemainValue2.Text) <> 0 Then
                     If SystemOptions.UserInterface = ArabicInterface Then
                         MsgBox "«·ﬁÌ„… «·„œŒ·… €Ì— ’ÕÌÕ…"
                     Else
@@ -8928,7 +9349,7 @@ Private Sub Cmd_Click(Index As Integer)
                     End If
                     Exit Sub
                 End If
-                If val(TxtPayedValue2.text) = 0 Then
+                If val(TxtPayedValue2.Text) = 0 Then
                     If SystemOptions.UserInterface = ArabicInterface Then
                         MsgBox "Ì—ÃÏ «œŒ«· «·ﬁÌ„… "
                     Else
@@ -8936,7 +9357,7 @@ Private Sub Cmd_Click(Index As Integer)
                     End If
                     Exit Sub
                 End If
-                If val(TxtPayedValue2.text) <> val(LblTotal.Caption) Then
+                If val(TxtPayedValue2.Text) <> val(LblTotal.Caption) Then
                     If SystemOptions.UserInterface = ArabicInterface Then
                         MsgBox "Ì—ÃÏ «œŒ«· «·ﬁÌ„… «·’ÕÌÕ… "
                     Else
@@ -8946,7 +9367,7 @@ Private Sub Cmd_Click(Index As Integer)
                 End If
                 FramePay.Visible = False
             End If
-            If val(Me.TxtValueAdded.text) > 0 Then
+            If val(Me.TxtValueAdded.Text) > 0 Then
                 If GetValueAddedAccount(XPDtbBill.value, , , 1, 22) = False Then
                     If SystemOptions.UserInterface = ArabicInterface Then
                         MsgBox "·„ Ì „  ÕœÌœ Õ”«» «·ﬁÌ„… «·„÷«›…"
@@ -8956,7 +9377,7 @@ Private Sub Cmd_Click(Index As Integer)
                     Exit Sub
                 End If
             End If
-            If TxtModFlg.text = "E" Then
+            If TxtModFlg.Text = "E" Then
                 FIllSotreIfEmpty
             End If
             If NewGrid.CaseStoredLin() = 1 Then
@@ -9093,7 +9514,7 @@ SaveDirect:
             RemoveFactoryExpenses
 
         Case 10
-            ShowGL_cc TxtNoteSerial.text, , 200
+            ShowGL_cc TxtNoteSerial.Text, , 200
         
     End Select
 
@@ -9132,13 +9553,13 @@ Private Sub CmdHelp_Click()
 '    SystemOptions.SysHelp.HHDisplayTopicID Me.hWnd
 
 
-   TxtModFlg.text = "N"
-            Me.XPTxtBillID.text = ""
+   TxtModFlg.Text = "N"
+            Me.XPTxtBillID.Text = ""
  
             Me.DCboUserName.BoundText = user_id
               'Me.DcBranch.BoundText = Current_branch
-     TxtNoteSerial.text = ""
-     TxtNoteSerial1.text = ""
+     TxtNoteSerial.Text = ""
+     TxtNoteSerial1.Text = ""
  
      
 End Sub
@@ -9183,7 +9604,7 @@ Private Sub ResaveOneTransaction(ByVal TransID As Long)
     On Error GoTo eh
     
     '???? ????????
-    Me.TxtModFlg.text = "R"
+    Me.TxtModFlg.Text = "R"
     Me.Retrive TransID
     DoEvents
     
@@ -9315,8 +9736,8 @@ Dcbranch_Click (0)
 End Sub
 
 Private Sub DcbTyp_Change()
-If Me.TxtModFlg.text <> "R" Then
-If val(DcbTyp.ListIndex) = -1 Then
+If Me.TxtModFlg.Text <> "R" Then
+If val(Dcbtyp.ListIndex) = -1 Then
 NewGrid.DtpBillDate_Change
 Else
 RelinVatGrid
@@ -9329,7 +9750,7 @@ DcbTyp_Change
 End Sub
 
 Private Sub dcproject_KeyUp(KeyCode As Integer, Shift As Integer)
-If Me.TxtModFlg.text <> "R" Then
+If Me.TxtModFlg.Text <> "R" Then
        If KeyCode = vbKeyF3 Then
            FrmProjectSearch.lblSearchtype.Caption = 29
                FrmProjectSearch.show vbModal
@@ -9342,7 +9763,7 @@ ReLineGrid2
 End Sub
 
 Private Sub Grid22_Click()
-If TxtPayedValue2.text = "" Or val(TxtPayedValue2.text) = 0 Then
+If TxtPayedValue2.Text = "" Or val(TxtPayedValue2.Text) = 0 Then
 With Me.Grid22
 .TextMatrix(.Row, .ColIndex("Value")) = LBLPayVal.Caption
 ReLineGrid2
@@ -9354,7 +9775,7 @@ Private Sub CmdINSTALLMENT_Click()
     Dim Msg As String
     Dim i As Integer
 
-    If XPTxtValue(1).text = "" Then
+    If XPTxtValue(1).Text = "" Then
         Msg = "ÌÃ»  ÕœÌœ «·ﬁÌ„… «·¬Ã·… ﬁ»·  ”ÃÌ· «·√ﬁ”«ÿ"
         MsgBox Msg, vbOKOnly + vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
 
@@ -9370,22 +9791,22 @@ Private Sub CmdINSTALLMENT_Click()
 
     With FrmInstallMent
 
-        If Me.TxtModFlg.text = "R" Then
+        If Me.TxtModFlg.Text = "R" Then
             .Tag = "R"
             .Retrive val(XPTxtValue(1).Tag)
         Else
             .Tag = "N"
-            .Txt(1).text = XPTxtValue(1).text
-            .LblNoteID.Caption = XPTxtSerial(1).text
+            .Txt(1).Text = XPTxtValue(1).Text
+            .LblNoteID.Caption = XPTxtSerial(1).Text
             .CboPrecenType.ListIndex = val(Me.LblPrecenType.Tag)
-            .Txt(3).text = val(LblPrecenValue.Caption)
-            .Txt(5).text = val(LblInstallCount.Caption)
+            .Txt(3).Text = val(LblPrecenValue.Caption)
+            .Txt(5).Text = val(LblInstallCount.Caption)
 
             If IsDate(Me.LblFirstInstallDate.Caption) Then
                 .Dtp_First.value = Me.LblFirstInstallDate.Caption
             End If
 
-            .Txt(7).text = val(LblInstallSeprator.Caption)
+            .Txt(7).Text = val(LblInstallSeprator.Caption)
 
             If val(LblInstallmentType.Tag) = 0 Then
                 .OptInt(0).value = True
@@ -9417,7 +9838,7 @@ ErrTrap:
 End Sub
 
 Private Sub CmdNotes_Click()
-    ShowRelatedNotes val(Me.XPTxtBillID.text), 1
+    ShowRelatedNotes val(Me.XPTxtBillID.Text), 1
 End Sub
 
 Private Sub CmdNotes_MouseMove(Button As Integer, _
@@ -9438,7 +9859,7 @@ End Sub
 Private Sub CMDPAy_Click()
 '
 If val(CboPayMentType.ListIndex) = 2 And SystemOptions.AllowPurchasesMultyPayed = True Then
-If val(TxtRemainValue2.text) <> 0 Then
+If val(TxtRemainValue2.Text) <> 0 Then
 If SystemOptions.UserInterface = ArabicInterface Then
 MsgBox "«·ﬁÌ„… «·„œŒ·… €Ì— ’ÕÌÕ…"
 Else
@@ -9483,16 +9904,16 @@ Dim NoteID2 As Double
 NoteID2 = general_noteid
     LngDevID = new_id("DOUBLE_ENTREY_VOUCHERS", "Double_Entry_Vouchers_ID", "")
     '«·ÿ—› «·„œÌ‰
-    SngTemp = ((NewGrid.GetItemsTotal(ItemsGoodType) + val(TXTFactoryExpenses.text) - val(LblDiscountsTotal.Caption) + val(LblCommision.Caption)) * val(txt_Currency_rate.text) + val(TXTToTAlELSHahn.text) - val(TXTFactoryExpenses.text) * val(txt_Currency_rate.text))
-    SngTemp2 = ((NewGrid.GetItemsTotal(ItemsGoodType) + val(TXTFactoryExpenses.text) - val(LblDiscountsTotal.Caption) + val(LblCommision.Caption)) + val(TXTToTAlELSHahn.text) - val(TXTFactoryExpenses.text))
+    SngTemp = ((NewGrid.GetItemsTotal(ItemsGoodType) + val(TXTFactoryExpenses.Text) - val(LblDiscountsTotal.Caption) + val(LblCommision.Caption)) * val(txt_Currency_rate.Text) + val(TXTToTAlELSHahn.Text) - val(TXTFactoryExpenses.Text) * val(txt_Currency_rate.Text))
+    SngTemp2 = ((NewGrid.GetItemsTotal(ItemsGoodType) + val(TXTFactoryExpenses.Text) - val(LblDiscountsTotal.Caption) + val(LblCommision.Caption)) + val(TXTToTAlELSHahn.Text) - val(TXTFactoryExpenses.Text))
     StoredID6 = val(DCboStoreName.BoundText)
     
 If StoreID3 <> 0 Then
 
-ExpenssValue = val(TXTFactoryExpenses.text) * GetItemsTotalExpensessByStore(val(XPTxtBillID.text), StoreID3)
+ExpenssValue = val(TXTFactoryExpenses.Text) * GetItemsTotalExpensessByStore(val(XPTxtBillID.Text), StoreID3)
 ExpenssValue = Round(ExpenssValue, SystemOptions.SysDefCurrencyForamt)
-SngTemp2 = GetItemsTotalByStore(val(XPTxtBillID.text), StoreID3) + ExpenssValue
-SngTemp = (GetItemsTotalByStore(val(XPTxtBillID.text), StoreID3) + ExpenssValue) * val(txt_Currency_rate.text) + ((val(txt_total_bill.text) + val(Txt_EXport.text)) * GetItemsTotalExpensessByStore(val(XPTxtBillID.text), StoreID3))
+SngTemp2 = GetItemsTotalByStore(val(XPTxtBillID.Text), StoreID3) + ExpenssValue
+SngTemp = (GetItemsTotalByStore(val(XPTxtBillID.Text), StoreID3) + ExpenssValue) * val(txt_Currency_rate.Text) + ((val(txt_total_bill.Text) + val(Txt_EXport.Text)) * GetItemsTotalExpensessByStore(val(XPTxtBillID.Text), StoreID3))
 
 StoredID6 = StoreID3
 End If
@@ -9535,9 +9956,9 @@ StoredID5 = StoredID6
             ' StrTempAccountCode = "a1a2a5" '„Œ“Ê‰ «·»÷«⁄…
             If SystemOptions.UserInterface = ArabicInterface Then
                 If SystemOptions.UserInterface = ArabicInterface Then
-                    StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.text
+                    StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.Text
                 Else
-                    StrTempDes = "Ò Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.text
+                    StrTempDes = "Ò Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.Text
                 End If
             
             Else
@@ -9551,7 +9972,7 @@ SngTemp = 0
 End If
 
 
-            If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, Transaction_ID, , , SngTemp2, Dccurrency.text, val(txt_Currency_rate.text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
+            If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, Transaction_ID, , , SngTemp2, DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
                 GoTo ErrTrap
             End If
 
@@ -9590,14 +10011,14 @@ End If
 
             ' StrTempAccountCode = "a1a2a5" '„Õ“Ê‰ «·»÷«⁄…
             If SystemOptions.UserInterface = ArabicInterface Then
-                StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.text
+                StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.Text
             Else
-                StrTempDes = "Ò Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.text
+                StrTempDes = "Ò Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.Text
             End If
             
             LngDevNO = LngDevNO + 1
 
-            If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, Transaction_ID, , , SngTemp2, Dccurrency.text, val(txt_Currency_rate.text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
+            If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, Transaction_ID, , , SngTemp2, DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
                 GoTo ErrTrap
             End If
 
@@ -9627,29 +10048,29 @@ If StoreID3 <> 0 Then
 
                         line_value = 0
 
-                        line_value = FG.TextMatrix(i, FG.ColIndex("Price")) * FG.TextMatrix(i, FG.ColIndex("Count")) * val(txt_Currency_rate.text)
+                        line_value = FG.TextMatrix(i, FG.ColIndex("Price")) * FG.TextMatrix(i, FG.ColIndex("Count")) * val(txt_Currency_rate.Text)
     
-                        total_shahn = Round((((line_value) / (val(LblTotal.Caption) * val(txt_Currency_rate.text))) * val(TXTToTAlELSHahn.text)), SystemOptions.SysDefCurrencyForamt)  'ﬁÌ„… «Ã„«·Ì ‘Õ‰ ”ÿ—
+                        total_shahn = Round((((line_value) / (val(LblTotal.Caption) * val(txt_Currency_rate.Text))) * val(TXTToTAlELSHahn.Text)), SystemOptions.SysDefCurrencyForamt)  'ﬁÌ„… «Ã„«·Ì ‘Õ‰ ”ÿ—
                         line_value = line_value + total_shahn + val(FG.TextMatrix(i, FG.ColIndex("LineShahn")))
                         line_value = Round(line_value, SystemOptions.SysDefCurrencyForamt)
                         
                         
                        SngTemp2 = FG.TextMatrix(i, FG.ColIndex("Price")) * FG.TextMatrix(i, FG.ColIndex("Count"))
     
-                        total_shahn = Round((((line_value) / (val(LblTotal.Caption))) * val(TXTToTAlELSHahn.text)), SystemOptions.SysDefCurrencyForamt)   'ﬁÌ„… «Ã„«·Ì ‘Õ‰ ”ÿ—
+                        total_shahn = Round((((line_value) / (val(LblTotal.Caption))) * val(TXTToTAlELSHahn.Text)), SystemOptions.SysDefCurrencyForamt)   'ﬁÌ„… «Ã„«·Ì ‘Õ‰ ”ÿ—
                         SngTemp2 = SngTemp2 + total_shahn + val(FG.TextMatrix(i, FG.ColIndex("LineShahn")))
                         SngTemp2 = Round(SngTemp2, SystemOptions.SysDefCurrencyForamt)
                         
      
                         If SystemOptions.UserInterface = ArabicInterface Then
-                            StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.text
+                            StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.Text
                         Else
-                            StrTempDes = "Ò Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.text
+                            StrTempDes = "Ò Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.Text
                         End If
    
                         LngDevNO = LngDevNO + 1
 
-                        If ModAccounts.AddNewDev(LngDevID, LngDevNO, groupAccount, line_value, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, Transaction_ID, , , SngTemp2, Dccurrency.text, val(txt_Currency_rate.text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
+                        If ModAccounts.AddNewDev(LngDevID, LngDevNO, groupAccount, line_value, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, Transaction_ID, , , SngTemp2, DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
                             GoTo ErrTrap
                         End If
     
@@ -9672,29 +10093,29 @@ If StoreID3 <> 0 Then
 
                         line_value = 0
 
-                        line_value = FG.TextMatrix(i, FG.ColIndex("Price")) * FG.TextMatrix(i, FG.ColIndex("Count")) * val(txt_Currency_rate.text)
+                        line_value = FG.TextMatrix(i, FG.ColIndex("Price")) * FG.TextMatrix(i, FG.ColIndex("Count")) * val(txt_Currency_rate.Text)
     
-                        total_shahn = Round((((line_value) / (val(LblTotal.Caption) * val(txt_Currency_rate.text))) * val(TXTToTAlELSHahn.text)), SystemOptions.SysDefCurrencyForamt)  'ﬁÌ„… «Ã„«·Ì ‘Õ‰ ”ÿ—
+                        total_shahn = Round((((line_value) / (val(LblTotal.Caption) * val(txt_Currency_rate.Text))) * val(TXTToTAlELSHahn.Text)), SystemOptions.SysDefCurrencyForamt)  'ﬁÌ„… «Ã„«·Ì ‘Õ‰ ”ÿ—
                         line_value = line_value + total_shahn + val(FG.TextMatrix(i, FG.ColIndex("LineShahn")))
                         line_value = Round(line_value, SystemOptions.SysDefCurrencyForamt)
                         
                         
                        SngTemp2 = FG.TextMatrix(i, FG.ColIndex("Price")) * FG.TextMatrix(i, FG.ColIndex("Count"))
     
-                        total_shahn = Round((((line_value) / (val(LblTotal.Caption))) * val(TXTToTAlELSHahn.text)), SystemOptions.SysDefCurrencyForamt)   'ﬁÌ„… «Ã„«·Ì ‘Õ‰ ”ÿ—
+                        total_shahn = Round((((line_value) / (val(LblTotal.Caption))) * val(TXTToTAlELSHahn.Text)), SystemOptions.SysDefCurrencyForamt)   'ﬁÌ„… «Ã„«·Ì ‘Õ‰ ”ÿ—
                         SngTemp2 = SngTemp2 + total_shahn + val(FG.TextMatrix(i, FG.ColIndex("LineShahn")))
                         SngTemp2 = Round(SngTemp2, SystemOptions.SysDefCurrencyForamt)
                         
      
                         If SystemOptions.UserInterface = ArabicInterface Then
-                            StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.text
+                            StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.Text
                         Else
-                            StrTempDes = "Ò Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.text
+                            StrTempDes = "Ò Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.Text
                         End If
    
                         LngDevNO = LngDevNO + 1
 
-                        If ModAccounts.AddNewDev(LngDevID, LngDevNO, groupAccount, line_value, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, Transaction_ID, , , SngTemp2, Dccurrency.text, val(txt_Currency_rate.text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
+                        If ModAccounts.AddNewDev(LngDevID, LngDevNO, groupAccount, line_value, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, Transaction_ID, , , SngTemp2, DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
                             GoTo ErrTrap
                         End If
     
@@ -9708,26 +10129,26 @@ If StoreID3 <> 0 Then
         End If
 
         '«·ÿ—› «·œ«∆‰
-        SngTemp = (NewGrid.GetItemsTotal(ItemsGoodType) - val(Me.LblDiscountsTotal.Caption)) * val(txt_Currency_rate.text) '+ Val(TXTToTAlELSHahn.text)
+        SngTemp = (NewGrid.GetItemsTotal(ItemsGoodType) - val(Me.LblDiscountsTotal.Caption)) * val(txt_Currency_rate.Text) '+ Val(TXTToTAlELSHahn.text)
         SngTemp2 = (NewGrid.GetItemsTotal(ItemsGoodType) - val(Me.LblDiscountsTotal.Caption))
         If ChAddToTotal.value = vbChecked Then
-       SngTemp = SngTemp + val(TXTFactoryExpenses.text) * val(txt_Currency_rate.text)
-       SngTemp2 = SngTemp2 + val(TXTFactoryExpenses.text)
+       SngTemp = SngTemp + val(TXTFactoryExpenses.Text) * val(txt_Currency_rate.Text)
+       SngTemp2 = SngTemp2 + val(TXTFactoryExpenses.Text)
        End If
        If StoreID3 <> 0 Then
        If ChAddToTotal.value = vbChecked Then
-       SngTemp2 = GetItemsTotalByStore(val(XPTxtBillID.text), StoreID3) + ExpenssValue
-        SngTemp = (GetItemsTotalByStore(val(XPTxtBillID.text), StoreID3) + ExpenssValue) * val(txt_Currency_rate.text)
+       SngTemp2 = GetItemsTotalByStore(val(XPTxtBillID.Text), StoreID3) + ExpenssValue
+        SngTemp = (GetItemsTotalByStore(val(XPTxtBillID.Text), StoreID3) + ExpenssValue) * val(txt_Currency_rate.Text)
       
       Else
-        SngTemp = GetItemsTotalByStore(val(XPTxtBillID.text), StoreID3) * val(txt_Currency_rate.text)
+        SngTemp = GetItemsTotalByStore(val(XPTxtBillID.Text), StoreID3) * val(txt_Currency_rate.Text)
       SngTemp2 = SngTemp
       End If
      End If
         If SngTemp > 0 Then
             
             If SystemOptions.PoCreateVoucher = True And CboPayMentType.ListIndex = 1 Then
-            If TXT_order_no.text <> "" Then
+            If TXT_order_no.Text <> "" Then
                StrTempAccountCode = GetMyAccountCode("TblCustemers", "CusID", val(Me.DBCboClientName.BoundText))
             GoTo NewGl3
             End If
@@ -9774,9 +10195,9 @@ If StoreID3 <> 0 Then
                 End If
 NewGl3:
                 If SystemOptions.UserInterface = ArabicInterface Then
-                    StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.text
+                    StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.Text
                 Else
-                    StrTempDes = "Ò Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.text
+                    StrTempDes = "Ò Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.Text
                 End If
             
                 LngDevNO = LngDevNO + 1
@@ -9793,7 +10214,7 @@ End If
 
 
 
-                If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, Transaction_ID, , , SngTemp2, Dccurrency.text, val(txt_Currency_rate.text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
+                If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, Transaction_ID, , , SngTemp2, DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
                     GoTo ErrTrap
                 End If
          
@@ -9822,21 +10243,21 @@ If StoreID3 <> 0 Then
                             End If
 
                             line_value = 0
-                            line_value = FG.TextMatrix(i, FG.ColIndex("Price")) * FG.TextMatrix(i, FG.ColIndex("Count")) * val(txt_Currency_rate.text)
+                            line_value = FG.TextMatrix(i, FG.ColIndex("Price")) * FG.TextMatrix(i, FG.ColIndex("Count")) * val(txt_Currency_rate.Text)
                             SngTemp2 = FG.TextMatrix(i, FG.ColIndex("Price")) * FG.TextMatrix(i, FG.ColIndex("Count"))
                             '  total_shahn = Round((((line_value) / (Val(LblTotal.Caption) * Val(txt_Currency_rate.text))) * Val(TXTToTAlELSHahn.text)), 2)  'ﬁÌ„… «Ã„«·Ì ‘Õ‰ ”ÿ—
                             '  line_value = line_value + total_shahn + Val(FG.TextMatrix(I, FG.ColIndex("LineShahn")))
                             line_value = Round(line_value, SystemOptions.SysDefCurrencyForamt)
      
                             If SystemOptions.UserInterface = ArabicInterface Then
-                                StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.text
+                                StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.Text
                             Else
-                                StrTempDes = "Ò Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.text
+                                StrTempDes = "Ò Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.Text
                             End If
             
                             LngDevNO = LngDevNO + 1
 
-                            If ModAccounts.AddNewDev(LngDevID, LngDevNO, groupAccount, line_value, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, Transaction_ID, , , SngTemp2, Dccurrency.text, val(txt_Currency_rate.text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
+                            If ModAccounts.AddNewDev(LngDevID, LngDevNO, groupAccount, line_value, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, Transaction_ID, , , SngTemp2, DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
                                 GoTo ErrTrap
                             End If
     
@@ -9858,21 +10279,21 @@ Else
                             End If
 
                             line_value = 0
-                            line_value = FG.TextMatrix(i, FG.ColIndex("Price")) * FG.TextMatrix(i, FG.ColIndex("Count")) * val(txt_Currency_rate.text)
+                            line_value = FG.TextMatrix(i, FG.ColIndex("Price")) * FG.TextMatrix(i, FG.ColIndex("Count")) * val(txt_Currency_rate.Text)
                             SngTemp2 = FG.TextMatrix(i, FG.ColIndex("Price")) * FG.TextMatrix(i, FG.ColIndex("Count"))
                             '  total_shahn = Round((((line_value) / (Val(LblTotal.Caption) * Val(txt_Currency_rate.text))) * Val(TXTToTAlELSHahn.text)), 2)  'ﬁÌ„… «Ã„«·Ì ‘Õ‰ ”ÿ—
                             '  line_value = line_value + total_shahn + Val(FG.TextMatrix(I, FG.ColIndex("LineShahn")))
                             line_value = Round(line_value, 2)
      
                             If SystemOptions.UserInterface = ArabicInterface Then
-                                StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.text
+                                StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.Text
                             Else
-                                StrTempDes = "Ò Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.text
+                                StrTempDes = "Ò Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.Text
                             End If
             
                             LngDevNO = LngDevNO + 1
 
-                            If ModAccounts.AddNewDev(LngDevID, LngDevNO, groupAccount, line_value, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, Transaction_ID, , , SngTemp2, Dccurrency.text, val(txt_Currency_rate.text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
+                            If ModAccounts.AddNewDev(LngDevID, LngDevNO, groupAccount, line_value, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, Transaction_ID, , , SngTemp2, DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
                                 GoTo ErrTrap
                             End If
     
@@ -9897,15 +10318,15 @@ End If
                 If .cell(flexcpChecked, i, .ColIndex("select")) = flexChecked Then
             
                     If SystemOptions.UserInterface = ArabicInterface Then
-                        StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.text
+                        StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.Text
                     Else
-                        StrTempDes = "Ò Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.text
+                        StrTempDes = "Ò Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.Text
                     End If
             
                     LngDevNO = LngDevNO + 1
                     Account_code = Grid.TextMatrix(i, Grid.ColIndex("Account_code"))
                     If StoreID3 <> 0 Then
-                    Note_Value = Grid.TextMatrix(i, Grid.ColIndex("Note_value")) * GetItemsTotalExpensessByStore(val(XPTxtBillID.text), StoreID3)
+                    Note_Value = Grid.TextMatrix(i, Grid.ColIndex("Note_value")) * GetItemsTotalExpensessByStore(val(XPTxtBillID.Text), StoreID3)
                     Else
                     Note_Value = Grid.TextMatrix(i, Grid.ColIndex("Note_value"))
                     End If
@@ -9921,24 +10342,24 @@ End If
 
         'ﬁÌœ «·›Ê« Ì—
      
-        With Grid4
+        With grid4
 
-            For i = 1 To Grid4.rows - 1
+            For i = 1 To grid4.rows - 1
 
                 If .cell(flexcpChecked, i, .ColIndex("select")) = flexChecked Then
                                             
                     If SystemOptions.UserInterface = ArabicInterface Then
-                        StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.text
+                        StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.Text
                     Else
-                        StrTempDes = "Ò Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.text
+                        StrTempDes = "Ò Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.Text
                     End If
                                                         
                     LngDevNO = LngDevNO + 1
-                    Account_code = Grid4.TextMatrix(i, Grid4.ColIndex("Account_code"))
+                    Account_code = grid4.TextMatrix(i, grid4.ColIndex("Account_code"))
                     If StoreID3 <> 0 Then
-                    Note_Value = Grid4.TextMatrix(i, Grid4.ColIndex("Note_value")) * GetItemsTotalExpensessByStore(val(XPTxtBillID.text), StoreID3)
+                    Note_Value = grid4.TextMatrix(i, grid4.ColIndex("Note_value")) * GetItemsTotalExpensessByStore(val(XPTxtBillID.Text), StoreID3)
                     Else
-                    Note_Value = Grid4.TextMatrix(i, Grid4.ColIndex("Note_value"))
+                    Note_Value = grid4.TextMatrix(i, grid4.ColIndex("Note_value"))
                     End If
 
                     If ModAccounts.AddNewDev(LngDevID, LngDevNO, Account_code, Note_Value, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, Transaction_ID, , , , , , , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
@@ -9961,17 +10382,17 @@ End If
                 If .TextMatrix(i, .ColIndex("AccountCode")) <> "" And val(.TextMatrix(i, .ColIndex("value"))) <> 0 Then
             
                     If SystemOptions.UserInterface = ArabicInterface Then
-                        StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.text & CHR(13) & Trim(.TextMatrix(i, .ColIndex("des")))
+                        StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.Text & CHR(13) & Trim(.TextMatrix(i, .ColIndex("des")))
                     Else
-                        StrTempDes = "Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.text & CHR(13) & Trim(.TextMatrix(i, .ColIndex("des")))
+                        StrTempDes = "Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.Text & CHR(13) & Trim(.TextMatrix(i, .ColIndex("des")))
                     End If
             
                     LngDevNO = LngDevNO + 1
                     Account_code = .TextMatrix(i, .ColIndex("AccountCode"))
                     If StoreID3 <> 0 Then
-                    Note_Value = val(.TextMatrix(i, .ColIndex("value"))) * GetItemsTotalExpensessByStore(val(XPTxtBillID.text), StoreID3) * val(txt_Currency_rate.text)
+                    Note_Value = val(.TextMatrix(i, .ColIndex("value"))) * GetItemsTotalExpensessByStore(val(XPTxtBillID.Text), StoreID3) * val(txt_Currency_rate.Text)
                     Else
-                    Note_Value = val(.TextMatrix(i, .ColIndex("value"))) * val(txt_Currency_rate.text)
+                    Note_Value = val(.TextMatrix(i, .ColIndex("value"))) * val(txt_Currency_rate.Text)
                     End If
                     Note_Value2 = val(.TextMatrix(i, .ColIndex("value")))
                      
@@ -10013,7 +10434,7 @@ Dim CommissionAccount As String
                   CommissionAccount = get_account_code_branch(96, my_branch)
   
                     
-                    Note_Value = val(LblCommision.Caption) * val(txt_Currency_rate.text)
+                    Note_Value = val(LblCommision.Caption) * val(txt_Currency_rate.Text)
 If Note_Value > 0 Then
                     If ModAccounts.AddNewDev(LngDevID, LngDevNO, CommissionAccount, Note_Value, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, Transaction_ID, , , , , , , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
                         GoTo ErrTrap
@@ -10056,7 +10477,7 @@ Function CreateRecieveVouchers2()
     '>>>>>>>>>>>>>>>>>>>>>>>>>
     CurrentVoucherNo = ""
     CurrentVoucherSerialNo = ""
-    CurrentVoucherNo = Trim(GetVoucherGLNO(val(Text1.text), CurrentVoucherSerialNo))
+    CurrentVoucherNo = Trim(GetVoucherGLNO(val(Text1.Text), CurrentVoucherSerialNo))
           
 TxtNoteSerial1V = ""
    ' DeleteTransactiomsVoucher val(Text1.Text)
@@ -10072,7 +10493,7 @@ Dim StoreID3 As Integer
 Set rs2 = New ADODB.Recordset
 sql = " SELECT     StoreID2"
 sql = sql & " From dbo.Transaction_Details"
-sql = sql & " Where (Transaction_ID = " & val(XPTxtBillID.text) & ")"
+sql = sql & " Where (Transaction_ID = " & val(XPTxtBillID.Text) & ")"
 sql = sql & " GROUP BY StoreID2"
 rs2.Open sql, Cn, adOpenStatic, adLockOptimistic, adCmdText
 If rs2.RecordCount > 0 Then
@@ -10148,7 +10569,7 @@ StoreID3 = IIf(IsNull(rs2("StoreID2").value), 0, rs2("StoreID2").value)
         Dim sql22 As String
         
      Transaction_ID = CStr(new_id("Transactions", "Transaction_ID", "", True))
-     sql22 = "INSERT INTO  Transactions (CBoBasedON,Transaction_ID ,Transaction_Serial,Transaction_Date,Transaction_Type ,CusID,StoreID,UserID,Emp_ID,nots,NoteSerial,NoteSerial1,NoteId,BranchId,nots2,TransactionComment)SELECT 5," & Transaction_ID & "," & MYTEXT & ",Transaction_Date,Transaction_Type = 20,CusID,StoreID,UserID,Emp_ID,nots='" & TxtNoteSerial1.text & "',NoteSerial=' " & TxtNoteSerialV & "',NoteSerial1='" & TxtNoteSerial1V & "',NoteId=" & general_noteid & ",BranchId ," & TxtNoteSerial1 & "  ,TransactionComment  From Transactions Where Transaction_ID =" & XPTxtBillID.text + " And Transaction_Type = 22"
+     sql22 = "INSERT INTO  Transactions (CBoBasedON,Transaction_ID ,Transaction_Serial,Transaction_Date,Transaction_Type ,CusID,StoreID,UserID,Emp_ID,nots,NoteSerial,NoteSerial1,NoteId,BranchId,nots2,TransactionComment)SELECT 5," & Transaction_ID & "," & MYTEXT & ",Transaction_Date,Transaction_Type = 20,CusID,StoreID,UserID,Emp_ID,nots='" & TxtNoteSerial1.Text & "',NoteSerial=' " & TxtNoteSerialV & "',NoteSerial1='" & TxtNoteSerial1V & "',NoteId=" & general_noteid & ",BranchId ," & TxtNoteSerial1 & "  ,TransactionComment  From Transactions Where Transaction_ID =" & XPTxtBillID.Text + " And Transaction_Type = 22"
      
      Cn.Execute sql22
      SaveTrnasectionID val(XPTxtBillID), Transaction_ID, 22
@@ -10162,8 +10583,8 @@ StoreID3 = IIf(IsNull(rs2("StoreID2").value), 0, rs2("StoreID2").value)
     '
     
   
-       sql = "INSERT INTO  dbo.Transaction_Details(showPrice,guaranteeTime,Transaction_ID,Item_ID,ItemCase,ItemSerial,Quantity,Price,ColorID,ItemSize,UnitId,ShowQty,QtyBySmalltUnit,BranchId,FoxyNo,OrderArrivalDate,order_no,ClassID,ProductionDate,ExpiryDate,LotNO,OldQty,OldCost,NewQty,NewCost,StoreID2,length,OUTR,INR,Height,Width ,NoCount) " & "SELECT   ( ( (round(Commisionvalue," & SystemOptions.SysDefCurrencyForamt & ")+showPrice-( round(discountvalue," & SystemOptions.SysDefCurrencyForamt & ")+TotalDiscountPerLine)*QtyBySmalltUnit)*" & val(txt_Currency_rate.text) & ")+(ToTAlELSHahn+LineShahn-(" & val(TXTFactoryExpenses.text) & "  * LineExpenses))*QtyBySmalltUnit)+(" & val(TXTFactoryExpenses.text) & "  * LineExpenses * " & val(txt_Currency_rate.text) & ") "
-       sql = sql & ",guaranteeTime," & Transaction_ID & ",Item_ID,ItemCase,ItemSerial , Quantity, (( ( round(Commisionvalue," & SystemOptions.SysDefCurrencyForamt & ")+ Price-(round(discountvalue," & SystemOptions.SysDefCurrencyForamt & " )+TotalDiscountPerLine))*" & val(txt_Currency_rate.text) & ")+(ToTAlELSHahn+LineShahn) ), ColorID,ItemSize, UnitId, ShowQty, QtyBySmalltUnit,BranchId,FoxyNo,OrderArrivalDate,order_no,ClassID," & Me.XPDtbBill.value & ",ExpiryDate,LotNO ,OldQty,OldCost,NewQty,NewCost ,StoreID2,length,OUTR,INR,Height,Width ,NoCount From dbo.Transaction_Details Where Transaction_ID = " & XPTxtBillID.text & "  And StoreID2 = " & StoreID3 & ""
+       sql = "INSERT INTO  dbo.Transaction_Details(showPrice,guaranteeTime,Transaction_ID,Item_ID,ItemCase,ItemSerial,Quantity,Price,ColorID,ItemSize,UnitId,ShowQty,QtyBySmalltUnit,BranchId,FoxyNo,OrderArrivalDate,order_no,ClassID,ProductionDate,ExpiryDate,LotNO,OldQty,OldCost,NewQty,NewCost,StoreID2,length,OUTR,INR,Height,Width ,NoCount) " & "SELECT   ( ( (round(Commisionvalue," & SystemOptions.SysDefCurrencyForamt & ")+showPrice-( round(discountvalue," & SystemOptions.SysDefCurrencyForamt & ")+TotalDiscountPerLine)*QtyBySmalltUnit)*" & val(txt_Currency_rate.Text) & ")+(ToTAlELSHahn+LineShahn-(" & val(TXTFactoryExpenses.Text) & "  * LineExpenses))*QtyBySmalltUnit)+(" & val(TXTFactoryExpenses.Text) & "  * LineExpenses * " & val(txt_Currency_rate.Text) & ") "
+       sql = sql & ",guaranteeTime," & Transaction_ID & ",Item_ID,ItemCase,ItemSerial , Quantity, (( ( round(Commisionvalue," & SystemOptions.SysDefCurrencyForamt & ")+ Price-(round(discountvalue," & SystemOptions.SysDefCurrencyForamt & " )+TotalDiscountPerLine))*" & val(txt_Currency_rate.Text) & ")+(ToTAlELSHahn+LineShahn) ), ColorID,ItemSize, UnitId, ShowQty, QtyBySmalltUnit,BranchId,FoxyNo,OrderArrivalDate,order_no,ClassID," & Me.XPDtbBill.value & ",ExpiryDate,LotNO ,OldQty,OldCost,NewQty,NewCost ,StoreID2,length,OUTR,INR,Height,Width ,NoCount From dbo.Transaction_Details Where Transaction_ID = " & XPTxtBillID.Text & "  And StoreID2 = " & StoreID3 & ""
          Cn.Execute sql
        Cn.Execute "Update Transactions set StoreID =" & StoreID3 & " where Transaction_ID=" & Transaction_ID & " "
        Dim StrTransaction_ID As String
@@ -10180,7 +10601,7 @@ NoteSerial = CurrentVoucherNo
 End If
 'TxtNoteSerialV
 Dim SngTemp As Double
-    SngTemp = ((NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption) + val(LblCommision.Caption)) * val(txt_Currency_rate.text) + val(TXTToTAlELSHahn.text))
+    SngTemp = ((NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption) + val(LblCommision.Caption)) * val(txt_Currency_rate.Text) + val(TXTToTAlELSHahn.Text))
      CreateNotes NoteID, (XPDtbBill.value), val(dcBranch.BoundText), 160, SngTemp, NoteSerial, TxtNoteSerial1V, "Transactions", "Transaction_ID", Transaction_ID, TxtNoteSerial1V, ToHijriDate(XPDtbBill.value)
           ' TxtNoteID.text = NoteID
      general_noteid = NoteID
@@ -10231,12 +10652,12 @@ IsVouc = False
 If NewGrid.CaseStoredLin() = 2 Then
     CurrentVoucherNo = ""
     CurrentVoucherSerialNo = ""
-    CurrentVoucherNo = Trim(GetVoucherGLNO(val(Text1.text), CurrentVoucherSerialNo))
+    CurrentVoucherNo = Trim(GetVoucherGLNO(val(Text1.Text), CurrentVoucherSerialNo))
           
 TxtNoteSerial1V = ""
-    DeleteTransactiomsVoucher val(Text1.text)
+    DeleteTransactiomsVoucher val(Text1.Text)
     
-    If SystemOptions.NotCrtResvVouchProjects = True And val(dcproject.BoundText) <> 0 Then
+    If SystemOptions.NotCrtResvVouchProjects = True And val(DCproject.BoundText) <> 0 Then
         IsVouc = True
         CreateRecieveVouchers = True
         Exit Function
@@ -10250,11 +10671,11 @@ Else
     If BillBasedOn(1).value = True Then IsVouc = True: CreateRecieveVouchers = True: Exit Function
         CurrentVoucherNo = ""
     CurrentVoucherSerialNo = ""
-    CurrentVoucherNo = Trim(GetVoucherGLNO(val(Text1.text), CurrentVoucherSerialNo))
+    CurrentVoucherNo = Trim(GetVoucherGLNO(val(Text1.Text), CurrentVoucherSerialNo))
           
 TxtNoteSerial1V = ""
-    DeleteTransactiomsVoucher val(Text1.text)
-        If SystemOptions.NotCrtResvVouchProjects = True And dcproject.BoundText <> "" Then
+    DeleteTransactiomsVoucher val(Text1.Text)
+        If SystemOptions.NotCrtResvVouchProjects = True And DCproject.BoundText <> "" Then
         IsVouc = True
         CreateRecieveVouchers = True
     Exit Function
@@ -10337,12 +10758,12 @@ TxtNoteSerial1V = ""
         Dim sql22 As String
         
      Transaction_ID = CStr(new_id("Transactions", "Transaction_ID", "", True))
-     sql22 = "INSERT INTO  Transactions (CBoBasedON,Transaction_ID ,Transaction_Serial,Transaction_Date,Transaction_Type ,CusID,StoreID,UserID,Emp_ID,nots,NoteSerial,NoteSerial1,NoteId,BranchId,nots2,TransactionComment)SELECT 5," & Transaction_ID & "," & MYTEXT & ",Transaction_Date,Transaction_Type = 20,CusID,StoreID,UserID,Emp_ID,nots='" & TxtNoteSerial1.text & "',NoteSerial=' " & TxtNoteSerialV & "',NoteSerial1='" & TxtNoteSerial1V & "',NoteId=" & general_noteid & ",BranchId ," & TxtNoteSerial1 & "  ,TransactionComment  From Transactions Where Transaction_ID =" & XPTxtBillID.text + " And Transaction_Type = 22"
+     sql22 = "INSERT INTO  Transactions (CBoBasedON,Transaction_ID ,Transaction_Serial,Transaction_Date,Transaction_Type ,CusID,StoreID,UserID,Emp_ID,nots,NoteSerial,NoteSerial1,NoteId,BranchId,nots2,TransactionComment)SELECT 5," & Transaction_ID & "," & MYTEXT & ",Transaction_Date,Transaction_Type = 20,CusID,StoreID,UserID,Emp_ID,nots='" & TxtNoteSerial1.Text & "',NoteSerial=' " & TxtNoteSerialV & "',NoteSerial1='" & TxtNoteSerial1V & "',NoteId=" & general_noteid & ",BranchId ," & TxtNoteSerial1 & "  ,TransactionComment  From Transactions Where Transaction_ID =" & XPTxtBillID.Text + " And Transaction_Type = 22"
      
      Cn.Execute sql22
     
     
-       StrSQL = "UPDATE Transactions SET NOTS=" & Transaction_ID & " WHERE Transaction_ID=" & val(Me.XPTxtBillID.text)
+       StrSQL = "UPDATE Transactions SET NOTS=" & Transaction_ID & " WHERE Transaction_ID=" & val(Me.XPTxtBillID.Text)
         Cn.Execute StrSQL
  
  'salimhere************************
@@ -10381,7 +10802,7 @@ TxtNoteSerial1V = ""
     Dim sql As String
   
        sql = "INSERT INTO  dbo.Transaction_Details(showPrice,guaranteeTime,Transaction_ID,Item_ID,ItemCase,ItemSerial,Quantity,Price,ColorID,ItemSize,UnitId,ShowQty,QtyBySmalltUnit,BranchId,FoxyNo,OrderArrivalDate,order_no,ClassID,ProductionDate,ExpiryDate,LotNO,OldQty,OldCost,NewQty,NewCost,length,OUTR,INR,Height,Width ,NoCount) " & "SELECT   ( ( (round(Commisionvalue," & SystemOptions.SysDefCurrencyForamt & ")+showPrice-( round(discountvalue," & SystemOptions.SysDefCurrencyForamt & " "
-     sql = sql & " )+TotalDiscountPerLine)*QtyBySmalltUnit)*" & val(txt_Currency_rate.text) & ")+(ToTAlELSHahn+LineShahn)*QtyBySmalltUnit) ,guaranteeTime," & Transaction_ID & ",Item_ID,ItemCase,ItemSerial , Quantity, (( ( round(Commisionvalue,2)+ Price-(round(discountvalue,2)+TotalDiscountPerLine))*" & val(txt_Currency_rate.text) & ")+(ToTAlELSHahn+LineShahn) ), ColorID,ItemSize, UnitId, ShowQty, QtyBySmalltUnit,BranchId,FoxyNo,OrderArrivalDate,order_no,ClassID," & Me.XPDtbBill.value & ",ExpiryDate,LotNO ,OldQty,OldCost,NewQty,NewCost ,length,OUTR,INR,Height,Width ,NoCount From dbo.Transaction_Details Where Transaction_ID =" & val(XPTxtBillID.text)
+     sql = sql & " )+TotalDiscountPerLine)*QtyBySmalltUnit)*" & val(txt_Currency_rate.Text) & ")+(ToTAlELSHahn+LineShahn)*QtyBySmalltUnit) ,guaranteeTime," & Transaction_ID & ",Item_ID,ItemCase,ItemSerial , Quantity, (( ( round(Commisionvalue,2)+ Price-(round(discountvalue,2)+TotalDiscountPerLine))*" & val(txt_Currency_rate.Text) & ")+(ToTAlELSHahn+LineShahn) ), ColorID,ItemSize, UnitId, ShowQty, QtyBySmalltUnit,BranchId,FoxyNo,OrderArrivalDate,order_no,ClassID," & Me.XPDtbBill.value & ",ExpiryDate,LotNO ,OldQty,OldCost,NewQty,NewCost ,length,OUTR,INR,Height,Width ,NoCount From dbo.Transaction_Details Where Transaction_ID =" & val(XPTxtBillID.Text)
     Cn.Execute sql
     SaveItemsData (Transaction_ID) ' ›«’Ì· «·«’‰«›
     UpdateTransactionsCost CStr(Transaction_ID)  '«· ﬂ·›Â »«·‘ﬂ· «·ÃœÌœ
@@ -10395,7 +10816,7 @@ If CurrentVoucherNo <> "" Then
 End If
 'TxtNoteSerialV
 Dim SngTemp As Double
-    SngTemp = ((NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption) + val(LblCommision.Caption)) * val(txt_Currency_rate.text) + val(TXTToTAlELSHahn.text))
+    SngTemp = ((NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption) + val(LblCommision.Caption)) * val(txt_Currency_rate.Text) + val(TXTToTAlELSHahn.Text))
      CreateNotes NoteID, (XPDtbBill.value), val(dcBranch.BoundText), 160, SngTemp, NoteSerial, TxtNoteSerial1V, "Transactions", "Transaction_ID", Transaction_ID, TxtNoteSerial1V, ToHijriDate(XPDtbBill.value)
           ' TxtNoteID.text = NoteID
      general_noteid = NoteID
@@ -10429,7 +10850,7 @@ End Sub
 Private Sub Command2_Click()
 
     '    ⁄»∆… «·«–Ê‰ «·„’—Ê›« 
-    If CBoBasedON.ListIndex = 0 Or CBoBasedON.ListIndex = 1 Or TXT_order_no.text = "" Then
+    If CBoBasedON.ListIndex = 0 Or CBoBasedON.ListIndex = 1 Or TXT_order_no.Text = "" Then
 
         With Me.Grid
             .rows = .FixedRows
@@ -10474,23 +10895,23 @@ My_SQL = My_SQL & "  FROM         dbo.Notes INNER JOIN"
 My_SQL = My_SQL & "                        dbo.ExpensesType ON dbo.Notes.ExpensesID = dbo.ExpensesType.ID INNER JOIN"
 My_SQL = My_SQL & "                        dbo.notes_all ON dbo.Notes.notes_all = dbo.notes_all.NoteID INNER JOIN"
 My_SQL = My_SQL & "                        dbo.DOUBLE_ENTREY_VOUCHERS ON dbo.Notes.NoteID = dbo.DOUBLE_ENTREY_VOUCHERS.Notes_ID"
-If Me.TxtModFlg.text = "R" Or Me.TxtModFlg.text = "" Then
+If Me.TxtModFlg.Text = "R" Or Me.TxtModFlg.Text = "" Then
             If CBoBasedON.ListIndex = 0 Then ' »·«
-            My_SQL = My_SQL + " WHERE     (dbo.Notes.NoteType = 3)  AND (dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit = 0) and  (  dbo.notes_all.BasedONID = 0 ) and  dbo.DOUBLE_ENTREY_VOUCHERS.Transaction_ID1=" & val(Me.XPTxtBillID.text)
+            My_SQL = My_SQL + " WHERE     (dbo.Notes.NoteType = 3)  AND (dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit = 0) and  (  dbo.notes_all.BasedONID = 0 ) and  dbo.DOUBLE_ENTREY_VOUCHERS.Transaction_ID1=" & val(Me.XPTxtBillID.Text)
             Else
             My_SQL = My_SQL + " WHERE     (dbo.Notes.NoteType = 3) AND (dbo.Notes.ORDER_NO = '" & TXT_order_no & "') AND (dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit = 0) and  (  dbo.notes_all.BasedONID = 1 or dbo.notes_all.BasedONID = 2) "
             End If
 
-ElseIf Me.TxtModFlg.text = "E" Then
+ElseIf Me.TxtModFlg.Text = "E" Then
 
 
             If CBoBasedON.ListIndex = 0 Then
-            My_SQL = My_SQL + " WHERE   (   dbo.Notes.NoteType = 3   AND  dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit = 0 and     dbo.notes_all.BasedONID = 0   and   ( dbo.DOUBLE_ENTREY_VOUCHERS.buy is null or dbo.DOUBLE_ENTREY_VOUCHERS.buy=0) ) and  dbo.DOUBLE_ENTREY_VOUCHERS.Transaction_ID1=" & val(Me.XPTxtBillID.text)
+            My_SQL = My_SQL + " WHERE   (   dbo.Notes.NoteType = 3   AND  dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit = 0 and     dbo.notes_all.BasedONID = 0   and   ( dbo.DOUBLE_ENTREY_VOUCHERS.buy is null or dbo.DOUBLE_ENTREY_VOUCHERS.buy=0) ) and  dbo.DOUBLE_ENTREY_VOUCHERS.Transaction_ID1=" & val(Me.XPTxtBillID.Text)
             Else
             My_SQL = My_SQL + " WHERE     (dbo.Notes.NoteType = 3) AND (dbo.Notes.ORDER_NO = '" & TXT_order_no & "') AND (dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit = 0) and  (  dbo.notes_all.BasedONID = 1 or dbo.notes_all.BasedONID = 2)"
             End If
 
-ElseIf Me.TxtModFlg.text = "N" Then
+ElseIf Me.TxtModFlg.Text = "N" Then
 
 
             If CBoBasedON.ListIndex = 0 Then
@@ -10513,7 +10934,7 @@ My_SQL = My_SQL + " and ( dbo.DOUBLE_ENTREY_VOUCHERS.hideline = 0 or dbo.DOUBLE_
         If RsExp.RecordCount > 0 Then
             .rows = RsExp.RecordCount + 1
             RsExp.MoveFirst
-TxtVATCustoms1.text = IIf(IsNull(RsExp("VATCustoms").value), 0, RsExp("VATCustoms").value)
+TxtVATCustoms1.Text = IIf(IsNull(RsExp("VATCustoms").value), 0, RsExp("VATCustoms").value)
             For i = 1 To .rows - 1
                    .TextMatrix(i, .ColIndex("Double_Entry_Vouchers_ID")) = IIf(IsNull(RsExp.Fields("Double_Entry_Vouchers_ID").value), 0, RsExp.Fields("Double_Entry_Vouchers_ID").value)
                 .TextMatrix(i, .ColIndex("ItemID")) = IIf(IsNull(RsExp.Fields("ItemID").value), "", RsExp.Fields("ItemID").value)
@@ -10581,7 +11002,7 @@ Private Sub Command3_Click()
 
     ' ⁄»∆… «Ê«„— «·‘—«¡ Ê «·»Ì⁄
 
-    With Me.Grid2
+    With Me.GRID2
         .rows = .FixedRows
         .ExtendLastCol = True
         .RowHeightMin = 300
@@ -10600,7 +11021,7 @@ Private Sub Command3_Click()
 
     RsExp.Open My_SQL, Cn, adOpenKeyset, adLockReadOnly, adCmdText
 
-    With Me.Grid2
+    With Me.GRID2
         .rows = 2
         .Clear flexClearScrollable
 
@@ -10625,7 +11046,7 @@ Private Sub Command3_Click()
         .RowHeight(-1) = 300
     End With
 
-    Grid2.Visible = True
+    GRID2.Visible = True
 
 End Sub
 
@@ -10640,7 +11061,7 @@ Private Sub Command4_Click()
 '        End With
 'Exit Sub
 'End If
-       With Me.Grid4
+       With Me.grid4
             .rows = .FixedRows
    
         End With
@@ -10649,9 +11070,9 @@ Private Sub Command4_Click()
 
     'Frame2.Caption = FG.TextMatrix(FG.Row, FG.ColIndex("name"))
 
-    If CBoBasedON.ListIndex = 0 Or CBoBasedON.ListIndex = 1 Or TXT_order_no.text = "" Then
+    If CBoBasedON.ListIndex = 0 Or CBoBasedON.ListIndex = 1 Or TXT_order_no.Text = "" Then
 
-        With Me.Grid4
+        With Me.grid4
             .rows = .FixedRows
    
         End With
@@ -10660,7 +11081,7 @@ Private Sub Command4_Click()
 
     End If
 
-    With Me.Grid4
+    With Me.grid4
         .rows = .FixedRows
         .ExtendLastCol = True
         .RowHeightMin = 300
@@ -10698,23 +11119,23 @@ My_SQL = My_SQL + " dbo.DOUBLE_ENTREY_VOUCHERS ON dbo.Notes.NoteID = dbo.DOUBLE_
 My_SQL = My_SQL + " dbo.ACCOUNTS ON dbo.DOUBLE_ENTREY_VOUCHERS.Account_Code = dbo.ACCOUNTS.Account_Code INNER JOIN"
 My_SQL = My_SQL + " dbo.notes_all ON dbo.Notes.notes_all = dbo.notes_all.NoteID"
 
-If Me.TxtModFlg.text = "R" Or Me.TxtModFlg.text = "" Then
+If Me.TxtModFlg.Text = "R" Or Me.TxtModFlg.Text = "" Then
             If CBoBasedON.ListIndex = 0 Then ' »·«
-            My_SQL = My_SQL + " WHERE  ( DOUBLE_ENTREY_VOUCHERS.FlgVat is null ) and    (dbo.Notes.NoteType = 80)  AND (dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit = 0) and  (  dbo.notes_all.BasedONID = 0 ) and  dbo.DOUBLE_ENTREY_VOUCHERS.Transaction_ID1=" & val(Me.XPTxtBillID.text)
+            My_SQL = My_SQL + " WHERE  ( DOUBLE_ENTREY_VOUCHERS.FlgVat is null ) and    (dbo.Notes.NoteType = 80)  AND (dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit = 0) and  (  dbo.notes_all.BasedONID = 0 ) and  dbo.DOUBLE_ENTREY_VOUCHERS.Transaction_ID1=" & val(Me.XPTxtBillID.Text)
             Else
             My_SQL = My_SQL + " WHERE   ( DOUBLE_ENTREY_VOUCHERS.FlgVat is null ) and    (dbo.Notes.NoteType = 80) AND (dbo.Notes.ORDER_NO = '" & TXT_order_no & "') AND (dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit = 0) and  (  dbo.notes_all.BasedONID = 1 or dbo.notes_all.BasedONID = 2) "
             End If
 
-ElseIf Me.TxtModFlg.text = "E" Then
+ElseIf Me.TxtModFlg.Text = "E" Then
 
 
             If CBoBasedON.ListIndex = 0 Then
-            My_SQL = My_SQL + " WHERE   ( DOUBLE_ENTREY_VOUCHERS.FlgVat is null ) and   (   dbo.Notes.NoteType = 80   AND  dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit = 0 and     dbo.notes_all.BasedONID = 0   and   ( dbo.DOUBLE_ENTREY_VOUCHERS.buy is null or dbo.DOUBLE_ENTREY_VOUCHERS.buy=0) ) or  dbo.DOUBLE_ENTREY_VOUCHERS.Transaction_ID1=" & val(Me.XPTxtBillID.text)
+            My_SQL = My_SQL + " WHERE   ( DOUBLE_ENTREY_VOUCHERS.FlgVat is null ) and   (   dbo.Notes.NoteType = 80   AND  dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit = 0 and     dbo.notes_all.BasedONID = 0   and   ( dbo.DOUBLE_ENTREY_VOUCHERS.buy is null or dbo.DOUBLE_ENTREY_VOUCHERS.buy=0) ) or  dbo.DOUBLE_ENTREY_VOUCHERS.Transaction_ID1=" & val(Me.XPTxtBillID.Text)
             Else
             My_SQL = My_SQL + " WHERE     ( DOUBLE_ENTREY_VOUCHERS.FlgVat is null ) and   (dbo.Notes.NoteType = 80) AND (dbo.Notes.ORDER_NO = '" & TXT_order_no & "') AND (dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit = 0) and  (  dbo.notes_all.BasedONID = 1 or dbo.notes_all.BasedONID = 2)"
             End If
 
-ElseIf Me.TxtModFlg.text = "N" Then
+ElseIf Me.TxtModFlg.Text = "N" Then
 
 
             If CBoBasedON.ListIndex = 0 Then
@@ -10726,7 +11147,7 @@ ElseIf Me.TxtModFlg.text = "N" Then
 End If
 
 My_SQL = My_SQL & " AND (dbo.DOUBLE_ENTREY_VOUCHERS.Transaction_ID1 IS NULL " & _
-                 "      OR dbo.DOUBLE_ENTREY_VOUCHERS.Transaction_ID1=" & val(Me.XPTxtBillID.text) & ")"
+                 "      OR dbo.DOUBLE_ENTREY_VOUCHERS.Transaction_ID1=" & val(Me.XPTxtBillID.Text) & ")"
 
 My_SQL = My_SQL + " and ( dbo.DOUBLE_ENTREY_VOUCHERS.hideline = 0 or dbo.DOUBLE_ENTREY_VOUCHERS.hideline is null)"
 My_SQL = My_SQL + "  order by dbo.DOUBLE_ENTREY_VOUCHERS.buy desc ,dbo.Notes.NoteSerial1"
@@ -10735,14 +11156,14 @@ My_SQL = My_SQL + "  order by dbo.DOUBLE_ENTREY_VOUCHERS.buy desc ,dbo.Notes.Not
     Dim StrSQL As String
     Dim rs As New ADODB.Recordset
 
-    With Me.Grid4
+    With Me.grid4
         .rows = 1
         .Clear flexClearScrollable
 
         If RsExp.RecordCount > 0 Then
             .rows = RsExp.RecordCount + 1
             RsExp.MoveFirst
-TxtVATCustoms.text = IIf(IsNull(RsExp("VATCustoms").value), 0, RsExp("VATCustoms").value)
+TxtVATCustoms.Text = IIf(IsNull(RsExp("VATCustoms").value), 0, RsExp("VATCustoms").value)
             For i = 1 To .rows - 1
                 .TextMatrix(i, .ColIndex("Double_Entry_Vouchers_ID")) = IIf(IsNull(RsExp.Fields("Double_Entry_Vouchers_ID").value), 0, RsExp.Fields("Double_Entry_Vouchers_ID").value)
            
@@ -10795,7 +11216,7 @@ TxtVATCustoms.text = IIf(IsNull(RsExp("VATCustoms").value), 0, RsExp("VATCustoms
  
  
  If Not IsNull(RsExp("Transaction_ID1").value) Then
-    If val(RsExp("Transaction_ID1").value) = val(Me.XPTxtBillID.text) Then
+    If val(RsExp("Transaction_ID1").value) = val(Me.XPTxtBillID.Text) Then
         .TextMatrix(i, .ColIndex("Select")) = 1
     Else
         .TextMatrix(i, .ColIndex("Select")) = 0
@@ -10806,7 +11227,7 @@ End If
 
                 ' .TextMatrix(i, .ColIndex("Select")) = IIf(IsNull(RsExp.Fields("buy").value), _
                   0, RsExp.Fields("buy").value)
-                  If CBoBasedON.ListIndex = 1 And Me.TxtModFlg.text = "R" Then
+                  If CBoBasedON.ListIndex = 1 And Me.TxtModFlg.Text = "R" Then
            '   .TextMatrix(i, .ColIndex("Select")) = 1
               End If
               
@@ -10819,7 +11240,7 @@ End If
         .RowHeight(-1) = 300
     End With
 
-    Grid4.Visible = True
+    grid4.Visible = True
 
     ' End If
   
@@ -10832,7 +11253,7 @@ Exit Sub
 '        End With
 'Exit Sub
 'End If
-       With Me.Grid4
+       With Me.grid4
             .rows = .FixedRows
    
         End With
@@ -10841,9 +11262,9 @@ Exit Sub
 
     'Frame2.Caption = FG.TextMatrix(FG.Row, FG.ColIndex("name"))
 
-    If CBoBasedON.ListIndex = 0 Or CBoBasedON.ListIndex = 1 Or TXT_order_no.text = "" Then
+    If CBoBasedON.ListIndex = 0 Or CBoBasedON.ListIndex = 1 Or TXT_order_no.Text = "" Then
 
-        With Me.Grid4
+        With Me.grid4
             .rows = .FixedRows
    
         End With
@@ -10852,7 +11273,7 @@ Exit Sub
 
     End If
 
-    With Me.Grid4
+    With Me.grid4
         .rows = .FixedRows
         .ExtendLastCol = True
         .RowHeightMin = 300
@@ -10890,24 +11311,24 @@ My_SQL = My_SQL + " dbo.DOUBLE_ENTREY_VOUCHERS ON dbo.Notes.NoteID = dbo.DOUBLE_
 My_SQL = My_SQL + " dbo.ACCOUNTS ON dbo.DOUBLE_ENTREY_VOUCHERS.Account_Code = dbo.ACCOUNTS.Account_Code INNER JOIN"
 My_SQL = My_SQL + " dbo.notes_all ON dbo.Notes.notes_all = dbo.notes_all.NoteID"
 
-If Me.TxtModFlg.text = "R" Or Me.TxtModFlg.text = "" Then
+If Me.TxtModFlg.Text = "R" Or Me.TxtModFlg.Text = "" Then
             If CBoBasedON.ListIndex = 0 Then ' »·«
-            My_SQL = My_SQL + " WHERE  ( DOUBLE_ENTREY_VOUCHERS.FlgVat is null ) and    (dbo.Notes.NoteType = 80)  AND (dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit = 0) and  (  dbo.notes_all.BasedONID = 0 ) and  dbo.DOUBLE_ENTREY_VOUCHERS.Transaction_ID1=" & val(Me.XPTxtBillID.text)
+            My_SQL = My_SQL + " WHERE  ( DOUBLE_ENTREY_VOUCHERS.FlgVat is null ) and    (dbo.Notes.NoteType = 80)  AND (dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit = 0) and  (  dbo.notes_all.BasedONID = 0 ) and  dbo.DOUBLE_ENTREY_VOUCHERS.Transaction_ID1=" & val(Me.XPTxtBillID.Text)
             Else
             My_SQL = My_SQL + " WHERE   ( DOUBLE_ENTREY_VOUCHERS.FlgVat is null ) and    (dbo.Notes.NoteType = 80) AND (dbo.Notes.ORDER_NO = '" & TXT_order_no & "') AND (dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit = 0) and  (  dbo.notes_all.BasedONID = 1 or dbo.notes_all.BasedONID = 2) "
             End If
 
-ElseIf Me.TxtModFlg.text = "E" Then
+ElseIf Me.TxtModFlg.Text = "E" Then
 
 
             If CBoBasedON.ListIndex = 0 Then
          '   My_SQL = My_SQL + " WHERE   ( DOUBLE_ENTREY_VOUCHERS.FlgVat is null ) and   (   dbo.Notes.NoteType = 80   AND  dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit = 0 and     dbo.notes_all.BasedONID = 0   and   ( dbo.DOUBLE_ENTREY_VOUCHERS.buy is null or dbo.DOUBLE_ENTREY_VOUCHERS.buy=0) ) or  dbo.DOUBLE_ENTREY_VOUCHERS.Transaction_ID1=" & val(Me.XPTxtBillID.text)
-            My_SQL = My_SQL + " WHERE  ( DOUBLE_ENTREY_VOUCHERS.FlgVat is null ) and    (dbo.Notes.NoteType = 80)  AND (dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit = 0) and  (  dbo.notes_all.BasedONID = 0 ) and  dbo.DOUBLE_ENTREY_VOUCHERS.Transaction_ID1=" & val(Me.XPTxtBillID.text)
+            My_SQL = My_SQL + " WHERE  ( DOUBLE_ENTREY_VOUCHERS.FlgVat is null ) and    (dbo.Notes.NoteType = 80)  AND (dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit = 0) and  (  dbo.notes_all.BasedONID = 0 ) and  dbo.DOUBLE_ENTREY_VOUCHERS.Transaction_ID1=" & val(Me.XPTxtBillID.Text)
             Else
             My_SQL = My_SQL + " WHERE     ( DOUBLE_ENTREY_VOUCHERS.FlgVat is null ) and   (dbo.Notes.NoteType = 80) AND (dbo.Notes.ORDER_NO = '" & TXT_order_no & "') AND (dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit = 0) and  (  dbo.notes_all.BasedONID = 1 or dbo.notes_all.BasedONID = 2)"
             End If
 
-ElseIf Me.TxtModFlg.text = "N" Then
+ElseIf Me.TxtModFlg.Text = "N" Then
 
 
             If CBoBasedON.ListIndex = 0 Then
@@ -10925,14 +11346,14 @@ My_SQL = My_SQL + "  order by dbo.DOUBLE_ENTREY_VOUCHERS.buy desc ,dbo.Notes.Not
 '    Dim StrSQL As String
 '    Dim rs As New ADODB.Recordset
 
-    With Me.Grid4
+    With Me.grid4
         .rows = 1
         .Clear flexClearScrollable
 
         If RsExp.RecordCount > 0 Then
             .rows = RsExp.RecordCount + 1
             RsExp.MoveFirst
-TxtVATCustoms.text = IIf(IsNull(RsExp("VATCustoms").value), 0, RsExp("VATCustoms").value)
+TxtVATCustoms.Text = IIf(IsNull(RsExp("VATCustoms").value), 0, RsExp("VATCustoms").value)
             For i = 1 To .rows - 1
                 .TextMatrix(i, .ColIndex("Double_Entry_Vouchers_ID")) = IIf(IsNull(RsExp.Fields("Double_Entry_Vouchers_ID").value), 0, RsExp.Fields("Double_Entry_Vouchers_ID").value)
            
@@ -10987,7 +11408,7 @@ TxtVATCustoms.text = IIf(IsNull(RsExp("VATCustoms").value), 0, RsExp("VATCustoms
                 
                 ' .TextMatrix(i, .ColIndex("Select")) = IIf(IsNull(RsExp.Fields("buy").value), _
                   0, RsExp.Fields("buy").value)
-                  If CBoBasedON.ListIndex = 1 And Me.TxtModFlg.text = "R" Then
+                  If CBoBasedON.ListIndex = 1 And Me.TxtModFlg.Text = "R" Then
              ' .TextMatrix(i, .ColIndex("Select")) = 1
               End If
               
@@ -11000,7 +11421,7 @@ TxtVATCustoms.text = IIf(IsNull(RsExp("VATCustoms").value), 0, RsExp("VATCustoms
         .RowHeight(-1) = 300
     End With
 
-    Grid4.Visible = True
+    grid4.Visible = True
 
     ' End If
   
@@ -11036,7 +11457,7 @@ Private Sub save_expenses()
           If .cell(flexcpChecked, i, .ColIndex("select")) = flexChecked Then
                 check_item_Exist_in_Grid val(.TextMatrix(i, .ColIndex("ItemID"))), val(.TextMatrix(i, .ColIndex("Note_value")))
         
-                sql = "update DOUBLE_ENTREY_VOUCHERS set Transaction_ID1=" & val(Me.XPTxtBillID.text) & " , buy='1',itemid=" & IIf(val(.TextMatrix(i, .ColIndex("itemid"))) = 0, "Null", val(.TextMatrix(i, .ColIndex("itemid")))) & " where Double_Entry_Vouchers_ID=" & val(.TextMatrix(i, .ColIndex("Double_Entry_Vouchers_ID")))
+                sql = "update DOUBLE_ENTREY_VOUCHERS set Transaction_ID1=" & val(Me.XPTxtBillID.Text) & " , buy='1',itemid=" & IIf(val(.TextMatrix(i, .ColIndex("itemid"))) = 0, "Null", val(.TextMatrix(i, .ColIndex("itemid")))) & " where Double_Entry_Vouchers_ID=" & val(.TextMatrix(i, .ColIndex("Double_Entry_Vouchers_ID")))
         
             Else
                 sql = "update DOUBLE_ENTREY_VOUCHERS set Transaction_ID1=null , buy=Null,itemid=Null where Double_Entry_Vouchers_ID=" & val(.TextMatrix(i, .ColIndex("Double_Entry_Vouchers_ID")))
@@ -11058,7 +11479,7 @@ End Sub
 Function Expenses_update_total()
     Dim i As Integer
     On Error Resume Next
-    Txt_EXport.text = 0
+    Txt_EXport.Text = 0
 
     If Grid.rows = 1 Then Exit Function
 
@@ -11068,7 +11489,7 @@ Function Expenses_update_total()
         
             If .cell(flexcpChecked, i, .ColIndex("select")) = flexChecked And Grid.TextMatrix(i, Grid.ColIndex("ItemID")) = "" Then
             
-                Txt_EXport.text = val(Txt_EXport.text) + val(Grid.TextMatrix(i, Grid.ColIndex("note_value")))
+                Txt_EXport.Text = val(Txt_EXport.Text) + val(Grid.TextMatrix(i, Grid.ColIndex("note_value")))
             End If
             
             If val(Grid.TextMatrix(i, Grid.ColIndex("select"))) = 0 Then
@@ -11103,23 +11524,23 @@ Private Sub Save_Financial_invoice()
 
     End With
     If Not IsClicKCommand4 Then Exit Sub
-    With Grid4
+    With grid4
  
-        For i = 1 To Grid4.rows - 1
+        For i = 1 To grid4.rows - 1
       
 '            Cn.BeginTrans
  
             If .cell(flexcpChecked, i, .ColIndex("select")) = flexChecked Then
                 check_item_Exist_in_Grid val(.TextMatrix(i, .ColIndex("ItemID"))), val(.TextMatrix(i, .ColIndex("Note_value")))
         
-                sql = "update DOUBLE_ENTREY_VOUCHERS set Transaction_ID1=" & val(Me.XPTxtBillID.text) & " , buy='1',itemid=" & IIf(val(Grid4.TextMatrix(i, Grid4.ColIndex("itemid"))) = 0, "Null", val(Grid4.TextMatrix(i, Grid4.ColIndex("itemid")))) & " where Double_Entry_Vouchers_ID=" & val(Grid4.TextMatrix(i, Grid4.ColIndex("Double_Entry_Vouchers_ID")))
+                sql = "update DOUBLE_ENTREY_VOUCHERS set Transaction_ID1=" & val(Me.XPTxtBillID.Text) & " , buy='1',itemid=" & IIf(val(grid4.TextMatrix(i, grid4.ColIndex("itemid"))) = 0, "Null", val(grid4.TextMatrix(i, grid4.ColIndex("itemid")))) & " where Double_Entry_Vouchers_ID=" & val(grid4.TextMatrix(i, grid4.ColIndex("Double_Entry_Vouchers_ID")))
         
             Else
           '      sql = "update DOUBLE_ENTREY_VOUCHERS set Transaction_ID1=null , buy=Null,itemid=Null where Double_Entry_Vouchers_ID=" & val(Grid4.TextMatrix(i, Grid4.ColIndex("Double_Entry_Vouchers_ID")))
                 sql = "update DOUBLE_ENTREY_VOUCHERS " & _
       "set Transaction_ID1=null, buy=null, itemid=null " & _
-      "where Double_Entry_Vouchers_ID=" & val(Grid4.TextMatrix(i, Grid4.ColIndex("Double_Entry_Vouchers_ID"))) & _
-      "  and Transaction_ID1=" & val(Me.XPTxtBillID.text)
+      "where Double_Entry_Vouchers_ID=" & val(grid4.TextMatrix(i, grid4.ColIndex("Double_Entry_Vouchers_ID"))) & _
+      "  and Transaction_ID1=" & val(Me.XPTxtBillID.Text)
 
 
             End If
@@ -11141,23 +11562,23 @@ End Sub
 Function update_finincial_invoice_total()
     On Error Resume Next
     Dim i As Integer
-    txt_total_bill.text = 0
+    txt_total_bill.Text = 0
 
-    If Grid4.rows = 1 Then Exit Function
+    If grid4.rows = 1 Then Exit Function
 
-    With Grid4
+    With grid4
 
-        For i = 1 To Grid4.rows - 1
+        For i = 1 To grid4.rows - 1
         
-            If .cell(flexcpChecked, i, .ColIndex("select")) = flexChecked And Grid4.TextMatrix(i, Grid4.ColIndex("ItemID")) = "" Then
-                txt_total_bill.text = val(txt_total_bill.text) + val(Grid4.TextMatrix(i, Grid4.ColIndex("note_value")))
+            If .cell(flexcpChecked, i, .ColIndex("select")) = flexChecked And grid4.TextMatrix(i, grid4.ColIndex("ItemID")) = "" Then
+                txt_total_bill.Text = val(txt_total_bill.Text) + val(grid4.TextMatrix(i, grid4.ColIndex("note_value")))
   
             End If
             
-            If val(Grid4.TextMatrix(i, Grid4.ColIndex("select"))) = 0 Then
-                Grid4.TextMatrix(i, Grid4.ColIndex("ItemID")) = ""
-                Grid4.TextMatrix(i, Grid4.ColIndex("ItemCode")) = ""
-                Grid4.TextMatrix(i, Grid4.ColIndex("ItemName")) = ""
+            If val(grid4.TextMatrix(i, grid4.ColIndex("select"))) = 0 Then
+                grid4.TextMatrix(i, grid4.ColIndex("ItemID")) = ""
+                grid4.TextMatrix(i, grid4.ColIndex("ItemCode")) = ""
+                grid4.TextMatrix(i, grid4.ColIndex("ItemName")) = ""
             
             End If
 
@@ -11187,9 +11608,9 @@ Private Sub DBCboClientName_Change()
     Dim fullcode As String
  
     GetCustomersDetail val(DBCboClientName.BoundText), , fullcode, 2
-    TxtSearchCode.text = fullcode
+    TxtSearchCode.Text = fullcode
 
-    If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+    If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
         If DBCboClientName.BoundText <> "" Then
             If DBCboClientName.BoundText = 1 Or DBCboClientName.BoundText = 2 Then
                 '   CboPayMentType.locked = True
@@ -11200,7 +11621,7 @@ Private Sub DBCboClientName_Change()
         End If
     End If
 
-    If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+    If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
         StrSQL = "Select * From TblCustemers Where CusID=" & val(DBCboClientName.BoundText)
         Set RsTemp = New ADODB.Recordset
         RsTemp.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
@@ -11212,15 +11633,15 @@ Private Sub DBCboClientName_Change()
                     '   mina             Me.XPTxtDiscountVal.text = 0
                 ElseIf RsTemp("Trans_DiscountTypePur").value = 1 Then
                     Me.XPCboDiscountType.ListIndex = 1
-                    Me.XPTxtDiscountVal.text = IIf(IsNull(RsTemp("Trans_DiscountPur").value), "", RsTemp("Trans_DiscountPur").value)
+                    Me.XPTxtDiscountVal.Text = IIf(IsNull(RsTemp("Trans_DiscountPur").value), "", RsTemp("Trans_DiscountPur").value)
                 ElseIf RsTemp("Trans_DiscountTypePur").value = 2 Then
                     Me.XPCboDiscountType.ListIndex = 2
-                    Me.XPTxtDiscountVal.text = IIf(IsNull(RsTemp("Trans_DiscountPur").value), "", RsTemp("Trans_DiscountPur").value)
+                    Me.XPTxtDiscountVal.Text = IIf(IsNull(RsTemp("Trans_DiscountPur").value), "", RsTemp("Trans_DiscountPur").value)
                 End If
 
             Else
                 Me.XPCboDiscountType.ListIndex = 0
-                Me.XPTxtDiscountVal.text = 0
+                Me.XPTxtDiscountVal.Text = 0
             End If
 
         Else
@@ -11228,7 +11649,7 @@ Private Sub DBCboClientName_Change()
             '     mina   Me.XPTxtDiscountVal.text = 0
         End If
       
-      Me.TxtVATNO.text = IIf(IsNull(RsTemp("VATNO").value), "", RsTemp("VATNO").value)
+      Me.TxtVATNO.Text = IIf(IsNull(RsTemp("VATNO").value), "", RsTemp("VATNO").value)
       CreditInterval = IIf(IsNull(RsTemp("CreditInterval").value), 0, RsTemp("CreditInterval").value)
       CreditIntervalID = IIf(IsNull(RsTemp("CreditIntervalID").value), 0, RsTemp("CreditIntervalID").value)
       If CreditIntervalID = 0 Then
@@ -11289,11 +11710,11 @@ Function ReloadCombos()
     Dcombos.GetDocTypebyid Me.DCDocTypes, 22, val(Me.dcBranch.BoundText)
     Dcombos.GetBanks Me.DcboBankName
     StrSQL = "  select  BankID,BankName  from BanksData   "
-    fill_combo Dcbanks, StrSQL
+    fill_combo dcbanks, StrSQL
     StrSQL = " select id,code from currency"
-    fill_combo Me.Dccurrency, StrSQL
+    fill_combo Me.DcCurrency, StrSQL
     StrSQL = " select id,Project_name from projects"
-    fill_combo Me.dcproject, StrSQL
+    fill_combo Me.DCproject, StrSQL
  Dcombos.GetStores Me.DCboStoreName
 End Function
 
@@ -11335,7 +11756,7 @@ End Sub
 
 Private Sub DCboStoreName_Change()
 
-TxtStoreID.text = getStoreCoding(val(DCboStoreName.BoundText))
+TxtStoreID.Text = getStoreCoding(val(DCboStoreName.BoundText))
 
     If Me.TxtModFlg = "N" Or Me.TxtModFlg = "E" Then
 
@@ -11347,8 +11768,8 @@ StroreChanged = True
 
 
   CurrentVoucherNo = ""
-    TxtNoteSerial.text = ""
-    TxtNoteSerial1.text = ""
+    TxtNoteSerial.Text = ""
+    TxtNoteSerial1.Text = ""
     DateChanged = True
     
     
@@ -11393,8 +11814,8 @@ Private Sub Dcbranch_Click(Area As Integer)
     Dcbranch_Change
 
     If Voucher_coding(val(val(Me.dcBranch.BoundText)), XPDtbBill.value, 6, 150, , 22) = "" Then Exit Sub
-    TxtNoteSerial.text = ""
-    TxtNoteSerial1.text = ""
+    TxtNoteSerial.Text = ""
+    TxtNoteSerial1.Text = ""
     
          TxtNoteSerial1V = ""
      
@@ -11403,8 +11824,8 @@ Private Sub Dcbranch_Click(Area As Integer)
 
 
   CurrentVoucherNo = ""
-    TxtNoteSerial.text = ""
-    TxtNoteSerial1.text = ""
+    TxtNoteSerial.Text = ""
+    TxtNoteSerial1.Text = ""
     DateChanged = True
     
     
@@ -11431,11 +11852,11 @@ End Sub
 
 Private Sub DcCurrency_Change()
 
-    If Me.TxtModFlg.text = "" Or Me.TxtModFlg.text = "R" Or cmdReSave.Visible = True Then Exit Sub
-    If Me.Dccurrency.BoundText <> "" Then
-        txt_Currency_rate.text = get_currency_rate(Me.Dccurrency.BoundText)
+    If Me.TxtModFlg.Text = "" Or Me.TxtModFlg.Text = "R" Or cmdReSave.Visible = True Then Exit Sub
+    If Me.DcCurrency.BoundText <> "" Then
+        txt_Currency_rate.Text = get_currency_rate(Me.DcCurrency.BoundText)
     Else
-        txt_Currency_rate.text = 1
+        txt_Currency_rate.Text = 1
     End If
      ReLineGrid
      ChAddToTotal_Click
@@ -11452,7 +11873,7 @@ Private Sub DCCurrency_KeyUp(KeyCode As Integer, _
         Dim StrSQL As String
         StrSQL = " select id,code from currency"
  
-        fill_combo Me.Dccurrency, StrSQL
+        fill_combo Me.DcCurrency, StrSQL
     End If
 
 End Sub
@@ -11584,8 +12005,8 @@ Public Sub Fg_Journal_AfterEdit(ByVal Row As Long, _
                 End If
             Case "PriceTotal"
                 AddVAT Row
-                Me.TXTFactoryExpenses.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("Price"), .rows - 1, .ColIndex("Price"))
-                TXTFactoryExpensesVat.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("Vat"), .rows - 1, .ColIndex("Vat"))
+                Me.TXTFactoryExpenses.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("Price"), .rows - 1, .ColIndex("Price"))
+                TXTFactoryExpensesVat.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("Vat"), .rows - 1, .ColIndex("Vat"))
            Case "Account_Name2"
                 StrAccountCode = .ComboData
                 LngRow = .FindRow(StrAccountCode, .FixedRows, .ColIndex("Accountcode2"), False, True)
@@ -11619,7 +12040,7 @@ AddVAT Row
            
                 .TextMatrix(Row, .ColIndex("value")) = val(.TextMatrix(Row, .ColIndex("Price")))
                 AddVAT Row
-                Me.TXTFactoryExpenses.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("Value"), .rows - 1, .ColIndex("Value"))
+                Me.TXTFactoryExpenses.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("Value"), .rows - 1, .ColIndex("Value"))
                 
                 
                 '    sgl = "update  marakes_taklefa_temp  set value=0 where  line_no=" & Val(Fg_Journal.TextMatrix(Fg_Journal.Row, Fg_Journal.ColIndex("LineNo1")))
@@ -11628,14 +12049,14 @@ AddVAT Row
                 '  Me.XPTxtVal.text = Format(Me.XPTxtVal.text, SystemOptions.SysDefCurrencyForamt)
         End Select
 
-        Me.TXTFactoryExpenses.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("Value"), .rows - 1, .ColIndex("Value"))
+        Me.TXTFactoryExpenses.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("Value"), .rows - 1, .ColIndex("Value"))
 
         ' Me.XPTxtVal.text = Format(Me.XPTxtVal.text, SystemOptions.SysDefCurrencyForamt)
         'to Add new row if needed
         If Row = .rows - 1 Then
             .rows = .rows + 1
         End If
-          TXTFactoryExpensesVat.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("Vat"), .rows - 1, .ColIndex("Vat"))
+          TXTFactoryExpensesVat.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("Vat"), .rows - 1, .ColIndex("Vat"))
         ' ReLineGrid
     End With
 
@@ -11664,8 +12085,8 @@ SumValue = 0
             SumValue = SumValue + val(.TextMatrix(i, .ColIndex("Value")))
            End If
         Next i
-Me.TXTFactoryExpenses.text = SumValue
-TXTFactoryExpensesVat.text = Fg_Journal.Aggregate(flexSTSum, Fg_Journal.FixedRows, Fg_Journal.ColIndex("Vat"), Fg_Journal.rows - 1, Fg_Journal.ColIndex("Vat"))
+Me.TXTFactoryExpenses.Text = SumValue
+TXTFactoryExpensesVat.Text = Fg_Journal.Aggregate(flexSTSum, Fg_Journal.FixedRows, Fg_Journal.ColIndex("Vat"), Fg_Journal.rows - 1, Fg_Journal.ColIndex("Vat"))
 
 
     End With
@@ -11753,10 +12174,10 @@ Private Sub Fg_Journal_DblClick()
         ' no note to show? then bail out
         If r <= 0 Or c <= 0 Then Exit Sub
         If typename(Fg_Journal.cell(flexcpData, r, c)) <> "String" Then
-            TxtDes.text = ""
+            TxtDes.Text = ""
         Else
             '
-            TxtDes.text = Fg_Journal.cell(flexcpData, r, c)
+            TxtDes.Text = Fg_Journal.cell(flexcpData, r, c)
         End If
 
         ' show new note
@@ -11913,8 +12334,8 @@ With Fg_Journal
 .TextMatrix(Row, .ColIndex("value")) = .TextMatrix(Row, .ColIndex("Price"))
 .TextMatrix(Row, .ColIndex("Vatyo")) = PercentgValueAddedAccount(XPDtbBill.value, .TextMatrix(Row, .ColIndex("AccountCode2")), val(dcBranch.BoundText), ForcedFlg)
 
-If val(txtManulaVat.text) > 0 Then
-.TextMatrix(Row, .ColIndex("Vatyo")) = val(txtManulaVat.text)
+If val(txtManulaVat.Text) > 0 Then
+.TextMatrix(Row, .ColIndex("Vatyo")) = val(txtManulaVat.Text)
 
 End If
 
@@ -12030,7 +12451,7 @@ My_SQL = My_SQL & "                      TblProductOrderFactoryExpenses.Vat ,Tbl
 My_SQL = My_SQL & " FROM         dbo.TblProductOrderFactoryExpenses LEFT OUTER JOIN"
 My_SQL = My_SQL & "                      dbo.ACCOUNTS ACCOUNTS_1 ON dbo.TblProductOrderFactoryExpenses.Accountcode2 = ACCOUNTS_1.Account_Code LEFT OUTER JOIN"
 My_SQL = My_SQL & "                      dbo.ACCOUNTS ON dbo.TblProductOrderFactoryExpenses.Accountcode = dbo.ACCOUNTS.Account_Code"
-My_SQL = My_SQL & " Where (dbo.TblProductOrderFactoryExpenses.Transaction_ID = " & val(XPTxtBillID.text) & ")"
+My_SQL = My_SQL & " Where (dbo.TblProductOrderFactoryExpenses.Transaction_ID = " & val(XPTxtBillID.Text) & ")"
     RsExp.Open My_SQL, Cn, adOpenKeyset, adLockReadOnly, adCmdText
     Dim StrSQL  As String
 
@@ -12081,7 +12502,7 @@ My_SQL = My_SQL & " Where (dbo.TblProductOrderFactoryExpenses.Transaction_ID = "
     End With
 
     With Me.Fg_Journal
-        Me.TXTFactoryExpenses.text = .Aggregate(flexSTSum, .FixedRows - 1, .ColIndex("Value"), .rows - 1, .ColIndex("Value"))
+        Me.TXTFactoryExpenses.Text = .Aggregate(flexSTSum, .FixedRows - 1, .ColIndex("Value"), .rows - 1, .ColIndex("Value"))
     End With
  
 End Function
@@ -12094,7 +12515,7 @@ Private Sub Form_Activate()
 End Sub
 
 Private Sub CmdRetruns_Click()
-    ShowRelatedTransactions val(Me.XPTxtBillID.text), 1
+    ShowRelatedTransactions val(Me.XPTxtBillID.Text), 1
 End Sub
 
 Private Sub Form_Resize()
@@ -12363,10 +12784,10 @@ Function Retrive_orders_data(Transaction_ID As Double, Optional str As String)
         Exit Function
     Else
         DBCboClientName.BoundText = IIf(IsNull(rs("CusID").value), "", rs("CusID").value)
-        Me.Dccurrency.BoundText = IIf(IsNull(rs("Currency_id").value), 1, rs("Currency_id").value)
+        Me.DcCurrency.BoundText = IIf(IsNull(rs("Currency_id").value), 1, rs("Currency_id").value)
         'txt_Currency_rate.text = IIf(IsNull(rs("Currency_rate").value), 1, (rs("Currency_rate").value))
-        TxtLcNo.text = IIf(IsNull(rs("LcNo").value), "", (rs("LcNo").value))
-    TxtBillComment.text = IIf(IsNull(rs("TransactionComment")), "", (rs("TransactionComment").value))
+        TxtLCNO.Text = IIf(IsNull(rs("LcNo").value), "", (rs("LcNo").value))
+    TxtBillComment.Text = IIf(IsNull(rs("TransactionComment")), "", (rs("TransactionComment").value))
 Me.DCboStoreName.BoundText = IIf(IsNull(rs("StoreID").value), "", rs("StoreID").value)
     
  If IsNull(rs("chkTaxExempt").value) Then
@@ -12399,7 +12820,7 @@ Exit Function
 End If
 'str
     RsDetails.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
-    XPTxtSum.text = ""
+    XPTxtSum.Text = ""
 
     FG.rows = 2
     FG.Clear flexClearScrollable, flexClearEverything
@@ -12434,7 +12855,7 @@ End If
             FG.TextMatrix(Num, FG.ColIndex("ColorID")) = IIf(IsNull(RsDetails("ColorID")), 1, (RsDetails("ColorID").value))
             FG.TextMatrix(Num, FG.ColIndex("StoreID2")) = val(Me.DCboStoreName.BoundText)
             
-            FG.TextMatrix(Num, FG.ColIndex("Account_Name")) = Trim(Me.cmbAccounts.text)
+            FG.TextMatrix(Num, FG.ColIndex("Account_Name")) = Trim(Me.cmbAccounts.Text)
             FG.TextMatrix(Num, FG.ColIndex("Account_Code")) = Trim(Me.cmbAccounts.BoundText)
            
 
@@ -12497,7 +12918,7 @@ Private Sub Grid_StartEdit(ByVal Row As Long, _
                 StrSQL = "Select * from QRY_temp_bill_items"
                 
                 rs.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
-                StrComboList = Grid4.BuildComboList(rs, "ItemName", "ItemID")
+                StrComboList = grid4.BuildComboList(rs, "ItemName", "ItemID")
                 Debug.Print StrSQL
  
                 If StrComboList <> "" Then
@@ -12577,7 +12998,7 @@ str = mId(str, 1, Len(str) - 1)
 End If
 
 Retrive_orders_data Transaction_ID, str
-                 If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+                 If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
                             NewGrid.DtpBillDate_Change
                             NewGrid.Calculate 1, , , True
                         End If
@@ -12586,10 +13007,10 @@ End Function
 
 Private Sub GRID2_Click()
 
-    With Grid2
+    With GRID2
 
         If .cell(flexcpChecked, .Row, .ColIndex("select")) = flexChecked Then
-            Retrive_orders_data (val(Grid2.TextMatrix(Grid2.Row, Grid2.ColIndex("Transaction_ID"))))
+            Retrive_orders_data (val(GRID2.TextMatrix(GRID2.Row, GRID2.ColIndex("Transaction_ID"))))
             
         End If
 
@@ -12634,7 +13055,7 @@ Private Sub grid4_AfterEdit(ByVal Row As Long, _
     Dim LngRow As Long
     Dim sql As String
        
-    With Grid4
+    With grid4
 
         Select Case .ColKey(Col)
    
@@ -12726,7 +13147,7 @@ Private Sub grid4_BeforeEdit(ByVal Row As Long, _
                              ByVal Col As Long, _
                              Cancel As Boolean)
 
-    With Grid4
+    With grid4
 
         If .ColKey(Col) <> "ItemName" Then
             .ComboList = ""
@@ -12754,7 +13175,7 @@ Private Sub grid4_StartEdit(ByVal Row As Long, _
     'StrAccountType = " (ACCOUNTS.Account_Code Like 'a1%' Or ACCOUNTS.Account_Code Like 'a3%')"
     'Case "CreditName"
     'StrAccountType = " (ACCOUNTS.Account_Code Like 'a2%' Or ACCOUNTS.Account_Code Like 'a4%')"
-    With Grid4
+    With grid4
 
         Select Case .ColKey(Col)
 
@@ -12763,7 +13184,7 @@ Private Sub grid4_StartEdit(ByVal Row As Long, _
                 StrSQL = "Select * from QRY_temp_bill_items"
                 
                 rs.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
-                StrComboList = Grid4.BuildComboList(rs, "ItemName", "ItemID")
+                StrComboList = grid4.BuildComboList(rs, "ItemName", "ItemID")
                 Debug.Print StrSQL
  
                 If StrComboList <> "" Then
@@ -12783,24 +13204,24 @@ End Sub
 
 Private Sub ISButton1_Click()
     FrmLC.show
-    FrmLC.Retrive Trim(Me.TxtLcNo.text)
+    FrmLC.Retrive Trim(Me.TxtLCNO.Text)
 
 End Sub
 
 Private Sub ISButton2_Click()
-ShowGL_cc TxtNoteSerial.text, , 200, val(Me.TXTNoteID.text)
+ShowGL_cc TxtNoteSerial.Text, , 200, val(Me.TXTNoteID.Text)
 End Sub
 
 Private Sub LblDiscountsTotal_Change()
-    LblDiscountsTotalView.Caption = Format(val(LblDiscountsTotal.Caption), "#,###." & String(Abs(SystemOptions.SysDefCurrencyForamt), "0"))
+    LblDiscountsTotalview.Caption = Format(val(LblDiscountsTotal.Caption), "#,###." & String(Abs(SystemOptions.SysDefCurrencyForamt), "0"))
 End Sub
 
 Private Sub lblexit_Click(Index As Integer)
-If Me.TxtModFlg.text <> "R" Then
+If Me.TxtModFlg.Text <> "R" Then
 If Index = 90 Then
 '
 If val(CboPayMentType.ListIndex) = 2 And SystemOptions.AllowPurchasesMultyPayed = True Then
-If val(TxtRemainValue2.text) <> 0 Then
+If val(TxtRemainValue2.Text) <> 0 Then
 If SystemOptions.UserInterface = ArabicInterface Then
 MsgBox "«·ﬁÌ„… «·„œŒ·… €Ì— ’ÕÌÕ…"
 Else
@@ -12819,12 +13240,12 @@ End Sub
 Private Sub LblTotal_Change()
 
     If CboPayMentType.ListIndex = 1 Then
-        XPTxtValue(1).text = LblTotal.Caption
+        XPTxtValue(1).Text = LblTotal.Caption
     ElseIf CboPayMentType.ListIndex = 0 Or CboPayMentType.ListIndex = 2 Then
-        XPTxtValue(0).text = LblTotal.Caption
+        XPTxtValue(0).Text = LblTotal.Caption
     End If
          
-    LblTotalView.Caption = Format(val(LblTotal.Caption), "#,###." & String(Abs(SystemOptions.SysDefCurrencyForamt), "0"))
+    LblTotalview.Caption = Format(val(LblTotal.Caption), "#,###." & String(Abs(SystemOptions.SysDefCurrencyForamt), "0"))
 End Sub
 
 Private Sub LblTotal_MouseMove(Button As Integer, _
@@ -12835,7 +13256,7 @@ Private Sub LblTotal_MouseMove(Button As Integer, _
 End Sub
 
 Private Sub LblTotalAll_Change()
-    LblTotalAllView.Caption = Format(val(LblTotalAll.Caption), "#,###." & String(Abs(SystemOptions.SysDefCurrencyForamt), "0"))
+    LblTotalAllview.Caption = Format(val(LblTotalAll.Caption), "#,###." & String(Abs(SystemOptions.SysDefCurrencyForamt), "0"))
 End Sub
 
 Private Sub m_FrmSearch_Unload(Cancel As Integer)
@@ -12844,8 +13265,8 @@ End Sub
 
 Private Sub m_MenuShowItemCostEffect_Click()
 
-    If Me.TxtModFlg.text = "R" Then
-        ShowItemCostEffectForTrans 1, , Trim$(Me.TxtTransSerial.text)
+    If Me.TxtModFlg.Text = "R" Then
+        ShowItemCostEffectForTrans 1, , Trim$(Me.TxtTransSerial.Text)
     End If
 
 End Sub
@@ -12961,14 +13382,14 @@ RelinVatGrid
 End Sub
 
 Private Sub Txt_EXport_Change()
-    Me.TXTToTAlELSHahn.text = IIf(Not IsNumeric(Txt_EXport.text), 0, val(Txt_EXport.text)) + IIf(Not IsNumeric(txt_total_bill.text), 0, val(txt_total_bill.text)) + IIf(Not IsNumeric(TXTFactoryExpenses.text), 0, val(TXTFactoryExpenses.text))
-    Me.TXTToTAlELSHahn.text = IIf(Not IsNumeric(Txt_EXport.text), 0, val(Txt_EXport.text)) + IIf(Not IsNumeric(txt_total_bill.text), 0, val(txt_total_bill.text)) + IIf(Not IsNumeric(TXTFactoryExpenses.text), 0, val(TXTFactoryExpenses.text) * val(Me.txt_Currency_rate.text))
-    Me.TXTToTAlELSHahn.text = Round(Me.TXTToTAlELSHahn.text, 2)
+    Me.TXTToTAlELSHahn.Text = IIf(Not IsNumeric(Txt_EXport.Text), 0, val(Txt_EXport.Text)) + IIf(Not IsNumeric(txt_total_bill.Text), 0, val(txt_total_bill.Text)) + IIf(Not IsNumeric(TXTFactoryExpenses.Text), 0, val(TXTFactoryExpenses.Text))
+    Me.TXTToTAlELSHahn.Text = IIf(Not IsNumeric(Txt_EXport.Text), 0, val(Txt_EXport.Text)) + IIf(Not IsNumeric(txt_total_bill.Text), 0, val(txt_total_bill.Text)) + IIf(Not IsNumeric(TXTFactoryExpenses.Text), 0, val(TXTFactoryExpenses.Text) * val(Me.txt_Currency_rate.Text))
+    Me.TXTToTAlELSHahn.Text = Round(Me.TXTToTAlELSHahn.Text, 2)
 End Sub
 
 Private Sub Txt_order_no_Change()
 Dim StrSQL As String
-    With Me.Grid4
+    With Me.grid4
         .rows = .FixedRows
  
     End With
@@ -12978,11 +13399,11 @@ Dim StrSQL As String
  
     End With
 
-    If TXT_order_no.text = "" Then
-        txt_total_bill.text = ""
-        Txt_EXport.text = ""
+    If TXT_order_no.Text = "" Then
+        txt_total_bill.Text = ""
+        Txt_EXport.Text = ""
     End If
-If Trim(Me.TxtModFlg.text) <> "R" And Trim(Me.TxtModFlg.text) <> "" Then
+If Trim(Me.TxtModFlg.Text) <> "R" And Trim(Me.TxtModFlg.Text) <> "" Then
     Command4_Click
  End If
  
@@ -13001,18 +13422,18 @@ If Trim(Me.TxtModFlg.text) <> "R" And Trim(Me.TxtModFlg.text) <> "" Then
     End If
 
 If CBoBasedON.ListIndex = 2 Then '›« Ê—… „»œ∆Ì…
-    Transaction_ID = get_transactionData("NoteSerial1", TXT_order_no.text, "Transaction_ID", Transaction_Type)
+    Transaction_ID = get_transactionData("NoteSerial1", TXT_order_no.Text, "Transaction_ID", Transaction_Type)
 ElseIf CBoBasedON.ListIndex = 3 Then
        If Me.TxtModFlg = "R" Then Exit Sub
         Dim orderStatus As Integer
      
         MintDone = 0
         Dim rs2 As New ADODB.Recordset
-        StrSQL = "select * from TblCardAuthorizationReform where WorkOrder = " & val(TXT_order_no.text) & " "
+        StrSQL = "select * from TblCardAuthorizationReform where WorkOrder = " & val(TXT_order_no.Text) & " "
         rs2.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
             If rs2.RecordCount > 0 Then
                 orderStatus = IIf(IsNull(rs2("OrderStatus").value), 0, rs2("OrderStatus").value)
-                TxtCashCustomerName.text = IIf(IsNull(rs2("ClientName").value), "", rs2("ClientName").value)
+                TxtCashCustomerName.Text = IIf(IsNull(rs2("ClientName").value), "", rs2("ClientName").value)
                 'DCOPrType =
                 
                 
@@ -13037,7 +13458,7 @@ ElseIf CBoBasedON.ListIndex = 3 Then
                     
                     s = "Select TblCardAuthorizationReformItems.qty, tblitems.itemid,TblCardAuthorizationReformItems.Price ,TblCardAuthorizationReformItems.TotalWithVat ,tblItems.ItemCode,tblItems.ItemName from TblCardAuthorizationReformItems Left Outer Join tblItems On tblItems.ItemID =TblCardAuthorizationReformItems.ItemID Left Outer join TblCardAuthorizationReform On TblCardAuthorizationReform.Id = TblCardAuthorizationReformItems.id"
                     
-                    s = s & "  Where (dbo.TblCardAuthorizationReform.WorkOrder = " & val(TXT_order_no.text) & ") "
+                    s = s & "  Where (dbo.TblCardAuthorizationReform.WorkOrder = " & val(TXT_order_no.Text) & ") "
                            
                      RsData3.Open s, Cn, adOpenStatic, adLockReadOnly, adCmdText
                      FG.rows = 1
@@ -13066,7 +13487,7 @@ ElseIf CBoBasedON.ListIndex = 3 Then
                         
                         RsData3.MoveNext
                      Loop
-              If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+              If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
                   NewGrid.DtpBillDate_Change
 
          NewGrid.Calculate 1, , , True
@@ -13076,21 +13497,21 @@ ElseIf CBoBasedON.ListIndex = 3 Then
                      Exit Sub
                 End If
             Else
-                TxtCashCustomerName.text = ""
+                TxtCashCustomerName.Text = ""
                 MintDone = -1
             End If
            ' LoadCar
            Exit Sub
 
 Else
-Transaction_ID = get_transactionData("order_no", TXT_order_no.text, "Transaction_ID", Transaction_Type)
+Transaction_ID = get_transactionData("order_no", TXT_order_no.Text, "Transaction_ID", Transaction_Type)
 End If
 
     If Me.TxtModFlg <> "R" And Me.TxtModFlg <> "" Then
         Retrive_orders_data (val(Transaction_ID))
     End If
 'NewGrid.DtpBillDate_Change
-              If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+              If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
                   NewGrid.DtpBillDate_Change
 
          NewGrid.Calculate 1, , , True
@@ -13107,7 +13528,7 @@ Private Sub Txt_order_no_KeyDown(KeyCode As Integer, Shift As Integer)
    Dim rs2 As New ADODB.Recordset
    If KeyCode <> vbKeyReturn Then Exit Sub
    If CBoBasedON.ListIndex = 1 Then
-        StrSQL = "SELECT NoteSerial1 FROM Transactions where Transaction_Type = 22 and IsNull(order_no,0)  = '" & val(TXT_order_no.text) & "' and Transaction_ID <> " & val(XPTxtBillID)
+        StrSQL = "SELECT NoteSerial1 FROM Transactions where Transaction_Type = 22 and IsNull(order_no,0)  = '" & val(TXT_order_no.Text) & "' and Transaction_ID <> " & val(XPTxtBillID)
         rs2.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
         If Not rs2.EOF Then
             MsgBox "Â–« «·«„— ·« Ì„ﬂ‰ «œ—«ÃÂ ›ﬁœ «œ—Ã „‰ ﬁ»· ›Ï «·›« Ê—… —ﬁ„" & rs2!NoteSerial1 & ""
@@ -13120,7 +13541,7 @@ Private Sub Txt_order_no_KeyDown(KeyCode As Integer, Shift As Integer)
        
         If SystemOptions.MaintOrderCantRepeatBillBuy Then
             
-            StrSQL = "SELECT NoteSerial1 FROM Transactions where Transaction_Type = 22 and IsNull(order_no,0)  = '" & val(TXT_order_no.text) & "' and Transaction_ID <> " & val(XPTxtBillID)
+            StrSQL = "SELECT NoteSerial1 FROM Transactions where Transaction_Type = 22 and IsNull(order_no,0)  = '" & val(TXT_order_no.Text) & "' and Transaction_ID <> " & val(XPTxtBillID)
             rs2.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
             If Not rs2.EOF Then
                 MsgBox "Â–« «·«„— ·« Ì„ﬂ‰ «œ—«ÃÂ ›ﬁœ «œ—Ã „‰ ﬁ»· ›Ï «·›« Ê—… —ﬁ„" & rs2!NoteSerial1 & ""
@@ -13133,16 +13554,16 @@ Private Sub Txt_order_no_KeyDown(KeyCode As Integer, Shift As Integer)
      
         MintDone = 0
         Set rs2 = New ADODB.Recordset
-        StrSQL = "select * from TblCardAuthorizationReform where WorkOrder = " & val(TXT_order_no.text) & " "
+        StrSQL = "select * from TblCardAuthorizationReform where WorkOrder = " & val(TXT_order_no.Text) & " "
         rs2.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
             If rs2.RecordCount > 0 Then
                 orderStatus = IIf(IsNull(rs2("OrderStatus").value), 0, rs2("OrderStatus").value)
-                TxtCashCustomerName.text = IIf(IsNull(rs2("ClientName").value), "", rs2("ClientName").value)
+                TxtCashCustomerName.Text = IIf(IsNull(rs2("ClientName").value), "", rs2("ClientName").value)
                 If orderStatus = 2 Or orderStatus = 4 Or orderStatus = 5 Then
                     MintDone = 1
                 End If
             Else
-                TxtCashCustomerName.text = ""
+                TxtCashCustomerName.Text = ""
                 MintDone = -1
             End If
         Exit Sub
@@ -13159,11 +13580,11 @@ Private Sub txt_ORDER_NO_KeyUp(KeyCode As Integer, _
                 
         Else
                 
-            TXT_order_no.text = ""
+            TXT_order_no.Text = ""
             
            Order_no_search.show
             Order_no_search.RetrunType = 3
-            Order_no_search.mTransactionID = CLng(val(XPTxtBillID.text))
+            Order_no_search.mTransactionID = CLng(val(XPTxtBillID.Text))
         
            Order_no_search.lblSpecificsearch.Caption = val(CBoBasedON.ListIndex)
         End If
@@ -13173,20 +13594,20 @@ Private Sub txt_ORDER_NO_KeyUp(KeyCode As Integer, _
 End Sub
 
 Private Sub txt_total_bill_Change()
-    Me.TXTToTAlELSHahn.text = IIf(Not IsNumeric(Txt_EXport.text), 0, val(Txt_EXport.text)) + IIf(Not IsNumeric(txt_total_bill.text), 0, val(txt_total_bill.text)) + IIf(Not IsNumeric(TXTFactoryExpenses.text), 0, val(TXTFactoryExpenses.text))
-Me.TXTToTAlELSHahn.text = IIf(Not IsNumeric(Txt_EXport.text), 0, val(Txt_EXport.text)) + IIf(Not IsNumeric(txt_total_bill.text), 0, val(txt_total_bill.text)) + IIf(Not IsNumeric(TXTFactoryExpenses.text), 0, val(TXTFactoryExpenses.text) * val(Me.txt_Currency_rate.text))
-Me.TXTToTAlELSHahn.text = Round(Me.TXTToTAlELSHahn.text, 2)
+    Me.TXTToTAlELSHahn.Text = IIf(Not IsNumeric(Txt_EXport.Text), 0, val(Txt_EXport.Text)) + IIf(Not IsNumeric(txt_total_bill.Text), 0, val(txt_total_bill.Text)) + IIf(Not IsNumeric(TXTFactoryExpenses.Text), 0, val(TXTFactoryExpenses.Text))
+Me.TXTToTAlELSHahn.Text = IIf(Not IsNumeric(Txt_EXport.Text), 0, val(Txt_EXport.Text)) + IIf(Not IsNumeric(txt_total_bill.Text), 0, val(txt_total_bill.Text)) + IIf(Not IsNumeric(TXTFactoryExpenses.Text), 0, val(TXTFactoryExpenses.Text) * val(Me.txt_Currency_rate.Text))
+Me.TXTToTAlELSHahn.Text = Round(Me.TXTToTAlELSHahn.Text, 2)
 End Sub
 
 Private Sub TXTFactoryExpenses_Change()
-    Me.TXTToTAlELSHahn.text = IIf(Not IsNumeric(Txt_EXport.text), 0, val(Txt_EXport.text)) + IIf(Not IsNumeric(txt_total_bill.text), 0, val(txt_total_bill.text)) + IIf(Not IsNumeric(TXTFactoryExpenses.text), 0, val(TXTFactoryExpenses.text))
-Me.TXTToTAlELSHahn.text = IIf(Not IsNumeric(Txt_EXport.text), 0, val(Txt_EXport.text)) + IIf(Not IsNumeric(txt_total_bill.text), 0, val(txt_total_bill.text)) + IIf(Not IsNumeric(TXTFactoryExpenses.text), 0, val(TXTFactoryExpenses.text) * val(Me.txt_Currency_rate.text))
-Me.TXTToTAlELSHahn.text = Round(Me.TXTToTAlELSHahn.text, 2)
+    Me.TXTToTAlELSHahn.Text = IIf(Not IsNumeric(Txt_EXport.Text), 0, val(Txt_EXport.Text)) + IIf(Not IsNumeric(txt_total_bill.Text), 0, val(txt_total_bill.Text)) + IIf(Not IsNumeric(TXTFactoryExpenses.Text), 0, val(TXTFactoryExpenses.Text))
+Me.TXTToTAlELSHahn.Text = IIf(Not IsNumeric(Txt_EXport.Text), 0, val(Txt_EXport.Text)) + IIf(Not IsNumeric(txt_total_bill.Text), 0, val(txt_total_bill.Text)) + IIf(Not IsNumeric(TXTFactoryExpenses.Text), 0, val(TXTFactoryExpenses.Text) * val(Me.txt_Currency_rate.Text))
+Me.TXTToTAlELSHahn.Text = Round(Me.TXTToTAlELSHahn.Text, 2)
 End Sub
 
 Private Sub TxtFillData_Change()
 
-    If TxtFillData.text = "F" Then
+    If TxtFillData.Text = "F" Then
         NewGrid.Calculate 1, , , True
     End If
 
@@ -13208,7 +13629,7 @@ Private Sub TxtSearchCode_KeyPress(KeyAscii As Integer)
     Dim CUSTID As Integer
 
     If KeyAscii = vbKeyReturn Then
-        GetCustomersDetail CUSTID, , TxtSearchCode.text, 2
+        GetCustomersDetail CUSTID, , TxtSearchCode.Text, 2
         DBCboClientName.BoundText = CUSTID
          On Error Resume Next
          txtItemCodeSearch.SetFocus
@@ -13218,7 +13639,7 @@ End Sub
 
 Private Sub TxtShortName_KeyDown(KeyCode As Integer, Shift As Integer)
 '   LoadSpecificItems
-SerchItems (TxtShortName.text)
+SerchItems (TxtShortName.Text)
 DoEvents
 DoEvents
 DoEvents
@@ -13386,7 +13807,7 @@ End Sub
 
 Private Sub ChecVAT_Click()
   Dim i As Integer
-If Me.TxtModFlg.text <> "R" Then
+If Me.TxtModFlg.Text <> "R" Then
     If ChecVAT.value = vbChecked Then
 
         With Me.VatGrid
@@ -13421,9 +13842,9 @@ End Sub
 Public Sub XPBtnMove_Click(Index As Integer)
 invoiceSerach = False
     'On Error GoTo ErrTrap
-    If Me.TxtModFlg.text = "N" Then
+    If Me.TxtModFlg.Text = "N" Then
         clear_all Me
-        Me.TxtModFlg.text = "R"
+        Me.TxtModFlg.Text = "R"
         XPBtnMove_Click (1)
     End If
 
@@ -13444,7 +13865,7 @@ invoiceSerach = False
             End If
 
         Case 2
-Me.TxtModFlg.text = ""
+Me.TxtModFlg.Text = ""
 
         Dim StrSQL As String
      StrSQL = "SELECT * FROM Transactions WHERE Transaction_Type=22 "
@@ -13508,7 +13929,7 @@ End If
             If Not (rs.EOF Or rs.BOF) Then
                 rs.MoveLast
             End If
-   Me.TxtModFlg.text = "R"
+   Me.TxtModFlg.Text = "R"
 
    
         Case 3
@@ -13535,7 +13956,7 @@ Private Sub Form_KeyDown(KeyCode As Integer, _
     On Error GoTo ErrTrap
 
     If KeyCode = vbKeyReturn Then
-        If Me.TxtModFlg.text = "R" Then
+        If Me.TxtModFlg.Text = "R" Then
             '        Cmd_Click (0)
         Else
             '      SendKeys "{TAB}"
@@ -13578,13 +13999,13 @@ Private Sub Form_KeyDown(KeyCode As Integer, _
     End If
 
     If KeyCode = vbKeyF2 Then
-        If TxtModFlg.text = "N" Or TxtModFlg.text = "E" Then
+        If TxtModFlg.Text = "N" Or TxtModFlg.Text = "E" Then
             'XPBtnAdd_Click
         End If
     End If
 
     If KeyCode = vbKeyF3 Then
-        If TxtModFlg.text = "N" Or TxtModFlg.text = "E" Then
+        If TxtModFlg.Text = "N" Or TxtModFlg.Text = "E" Then
             'XPBtnRemove_Click
         End If
     End If
@@ -13597,7 +14018,7 @@ Private Sub Form_KeyDown(KeyCode As Integer, _
 
     If Shift = 2 Then
         If KeyCode = vbKeySpace Then
-            If TxtModFlg.text = "N" Or TxtModFlg.text = "E" Then
+            If TxtModFlg.Text = "N" Or TxtModFlg.Text = "E" Then
                 'XPFillData_Click
             End If
         End If
@@ -13652,7 +14073,7 @@ Private Sub Form_Load()
         txtManulaVat.Visible = True
     Else
         txtManulaVat.Enabled = False
-        txtManulaVat.text = 0
+        txtManulaVat.Text = 0
         txtManulaVat.Visible = False
     End If
 
@@ -13672,7 +14093,7 @@ Private Sub Form_Load()
 
     If SystemOptions.UserInterface = ArabicInterface Then
 
-        With Me.DcbTyp
+        With Me.Dcbtyp
             .Clear
             .AddItem "·„ ÌﬁÊ„ «·„Ê—œ »«÷«›… ﬁÌ„…"
             .AddItem "«·„Ê—œ „⁄›Ï"
@@ -13682,7 +14103,7 @@ Private Sub Form_Load()
 
     Else
 
-        With Me.DcbTyp
+        With Me.Dcbtyp
             .Clear
             .AddItem "Supplier did not add VAT"
             .AddItem "Supplier is exempt"
@@ -13819,15 +14240,15 @@ If SystemOptions.IsHiddenTransportInv Then
     Dcombos.GetAccountingCodes cmbAccounts
     
     StrSQL = "  select  BankID,BankName  from BanksData   "
-    fill_combo Dcbanks, StrSQL
+    fill_combo dcbanks, StrSQL
  
     StrSQL = " select id,code from currency"
  
-    fill_combo Me.Dccurrency, StrSQL
+    fill_combo Me.DcCurrency, StrSQL
 
     StrSQL = " select id,Project_name from projects"
  
-    fill_combo Me.dcproject, StrSQL
+    fill_combo Me.DCproject, StrSQL
       
     Set cSearchDcbo(0) = New clsDCboSearch
     Set cSearchDcbo(0).Client = Me.DBCboClientName
@@ -13899,7 +14320,7 @@ If SystemOptions.IsHiddenTransportInv Then
             End If
 
             Retrive
-            Me.TxtModFlg.text = "R"
+            Me.TxtModFlg.Text = "R"
             'Resize_Form Me, TransactionSize
             BillType = 22
     
@@ -13913,14 +14334,14 @@ If SystemOptions.IsHiddenTransportInv Then
             End If
 
             Retrive
-            Me.TxtModFlg.text = "R"
+            Me.TxtModFlg.Text = "R"
             '  Resize_Form Me, TransactionSize
             BillType = 1
             Exit Sub
         End If
     End If
 
-    Me.TxtModFlg.text = "R"
+    Me.TxtModFlg.Text = "R"
     '  Command2_Click
     '  Command4_Click
 
@@ -13942,7 +14363,7 @@ sql = " SELECT     dbo.TransactionValueAdded.Transaction_Type, dbo.TransactionVa
 sql = sql & " dbo.TransactionValueAdded.ItemID , dbo.TblItems.itemname, dbo.TblItems.Fullcode, dbo.TblItems.ItemNamee ,dbo.TransactionValueAdded.selectd ,dbo.TransactionValueAdded.Typ ,dbo.TransactionValueAdded.Valu "
 sql = sql & " FROM         dbo.TransactionValueAdded LEFT OUTER JOIN"
 sql = sql & "                      dbo.TblItems ON dbo.TransactionValueAdded.ItemID = dbo.TblItems.ItemID"
-sql = sql & " Where (dbo.TransactionValueAdded.Transaction_Type = 22) And (dbo.TransactionValueAdded.Transaction_ID = " & val(XPTxtBillID.text) & ")"
+sql = sql & " Where (dbo.TransactionValueAdded.Transaction_Type = 22) And (dbo.TransactionValueAdded.Transaction_ID = " & val(XPTxtBillID.Text) & ")"
 rs2.Open sql, Cn, adOpenStatic, adLockOptimistic, adCmdText
 If rs2.RecordCount > 0 Then
 With Me.VatGrid
@@ -13969,12 +14390,12 @@ End If
 End Sub
 Sub SaveValueAdded()
 chkTaxExempt_Click
-Cn.Execute "Update tblItems set DefaultSupplier =  " & DBCboClientName.BoundText & " Where ItemId In (SELECT Item_ID FROM Transaction_Details WHERE Transaction_ID  = " & val(val(XPTxtBillID.text)) & ")"
+Cn.Execute "Update tblItems set DefaultSupplier =  " & DBCboClientName.BoundText & " Where ItemId In (SELECT Item_ID FROM Transaction_Details WHERE Transaction_ID  = " & val(val(XPTxtBillID.Text)) & ")"
 Dim sss As String
 sss = "Update TblItemsUnits set UnitPurPrice =  "
-sss = sss & " (SELECT Top 1 Transaction_Details.ShowPrice FROM Transaction_Details WHERE Transaction_ID  = " & val(val(XPTxtBillID.text)) & " "
+sss = sss & " (SELECT Top 1 Transaction_Details.ShowPrice FROM Transaction_Details WHERE Transaction_ID  = " & val(val(XPTxtBillID.Text)) & " "
 sss = sss & " and Transaction_Details.Item_Id =TblItemsUnits.ItemID and TblItemsUnits.UnitId = Transaction_Details.UnitId )"
-sss = sss & " Where ItemId In (SELECT Item_ID FROM Transaction_Details WHERE Transaction_ID  = " & val(val(XPTxtBillID.text)) & ")"
+sss = sss & " Where ItemId In (SELECT Item_ID FROM Transaction_Details WHERE Transaction_ID  = " & val(val(XPTxtBillID.Text)) & ")"
 Cn.Execute sss
 
 
@@ -13989,7 +14410,7 @@ With Me.VatGrid
 For i = 1 To .rows - 1
 If val(.TextMatrix(i, .ColIndex("ItemID"))) <> 0 Then
 rs2.AddNew
-rs2("Transaction_ID").value = val(Me.XPTxtBillID.text)
+rs2("Transaction_ID").value = val(Me.XPTxtBillID.Text)
 rs2("Transaction_Type").value = 22
 rs2("ItemID").value = val(.TextMatrix(i, .ColIndex("ItemID")))
 rs2("Vatyo").value = val(.TextMatrix(i, .ColIndex("Vatyo")))
@@ -14202,7 +14623,7 @@ ISButton1.Caption = "View"
         .TextMatrix(0, .ColIndex("ItemName")) = "Item Name"
     End With
 
-    With Me.Grid2
+    With Me.GRID2
  
         .TextMatrix(0, .ColIndex("Select")) = "Select"
         .TextMatrix(0, .ColIndex("order_no")) = "order No"
@@ -14223,7 +14644,7 @@ ISButton1.Caption = "View"
  
     'End With
 
-    With Me.Grid4
+    With Me.grid4
         '
 
         .TextMatrix(0, .ColIndex("Select")) = "Select"
@@ -14296,9 +14717,9 @@ ISButton1.Caption = "View"
 End Sub
 
 Function CuurentLogdata(Optional Currentmode As String)
-    LogTextA = "    ‘«‘… " & ScreenNameArabic & CHR(13) & " —ﬁ„ «·›« Ê—…   " & TxtNoteSerial1.text & CHR(13) & " —ﬁ„ ›« Ê—… «·„Ê—œ   " & TxtManualNO.text & CHR(13) & " «· «—ÌŒ " & XPDtbBill.value & CHR(13) & " «·Œ“Ì‰… " & DcboBox.text & CHR(13) & " «·„Œ“‰  " & DCboStoreName.text & CHR(13) & "  «·⁄„Ì· / «·„Ê—œ   " & DBCboClientName.text & CHR(13) & "‰Ê⁄ «·”‰œ " & DCDocTypes & CHR(13) & "»‰«¡ ⁄·Ï " & CBoBasedON & "»—ﬁ„   " & TXT_order_no & CHR(13) & "ÿ—Ìﬁ… «·œ›⁄ " & CboPayMentType & CHR(13) & "‰Ê⁄ «·Œ’„ " & XPCboDiscountType & CHR(13) & "ﬁÌ„… «·Œ’„ " & XPTxtDiscountVal & CHR(13) & "  Ê’Ê· «·‘Õ‰… " & DTArrivalDate & CHR(13) & "  «·«” Õﬁ«ﬁ " & DtpDelayDate & CHR(13) & " «·⁄„·Â " & Dccurrency & CHR(13) & "—ﬁ„ «·ﬁÌœ " & TxtNoteSerial
+    LogTextA = "    ‘«‘… " & ScreenNameArabic & CHR(13) & " —ﬁ„ «·›« Ê—…   " & TxtNoteSerial1.Text & CHR(13) & " —ﬁ„ ›« Ê—… «·„Ê—œ   " & txtManualNO.Text & CHR(13) & " «· «—ÌŒ " & XPDtbBill.value & CHR(13) & " «·Œ“Ì‰… " & DcboBox.Text & CHR(13) & " «·„Œ“‰  " & DCboStoreName.Text & CHR(13) & "  «·⁄„Ì· / «·„Ê—œ   " & DBCboClientName.Text & CHR(13) & "‰Ê⁄ «·”‰œ " & DCDocTypes & CHR(13) & "»‰«¡ ⁄·Ï " & CBoBasedON & "»—ﬁ„   " & TXT_order_no & CHR(13) & "ÿ—Ìﬁ… «·œ›⁄ " & CboPayMentType & CHR(13) & "‰Ê⁄ «·Œ’„ " & XPCboDiscountType & CHR(13) & "ﬁÌ„… «·Œ’„ " & XPTxtDiscountVal & CHR(13) & "  Ê’Ê· «·‘Õ‰… " & DTArrivalDate & CHR(13) & "  «·«” Õﬁ«ﬁ " & DtpDelayDate & CHR(13) & " «·⁄„·Â " & DcCurrency & CHR(13) & "—ﬁ„ «·ﬁÌœ " & TxtNoteSerial
                      
-    LogTexte = "    Screen  " & ScreenNameEnglish & CHR(13) & " Bill No " & TxtNoteSerial1.text & CHR(13) & "Supplier Bill No " & TxtManualNO.text & CHR(13) & " Date " & XPDtbBill.value & CHR(13) & " Box " & DcboBox.text & CHR(13) & " Store  " & DCboStoreName.text & CHR(13) & " Supplier/Cuxtomer" & DBCboClientName.text & CHR(13) & "Doc Type" & DCDocTypes & CHR(13) & "Based On" & CBoBasedON & "No :   " & TXT_order_no & CHR(13) & "Payment Type" & CboPayMentType & CHR(13) & "Discount Type  " & XPCboDiscountType & CHR(13) & " Discount Vaalue   " & XPTxtDiscountVal & CHR(13) & " Shipment Arival Date" & DTArrivalDate & CHR(13) & "Due Date " & DtpDelayDate & CHR(13) & " Currency " & Dccurrency & CHR(13) & " GE NO" & TxtNoteSerial
+    LogTexte = "    Screen  " & ScreenNameEnglish & CHR(13) & " Bill No " & TxtNoteSerial1.Text & CHR(13) & "Supplier Bill No " & txtManualNO.Text & CHR(13) & " Date " & XPDtbBill.value & CHR(13) & " Box " & DcboBox.Text & CHR(13) & " Store  " & DCboStoreName.Text & CHR(13) & " Supplier/Cuxtomer" & DBCboClientName.Text & CHR(13) & "Doc Type" & DCDocTypes & CHR(13) & "Based On" & CBoBasedON & "No :   " & TXT_order_no & CHR(13) & "Payment Type" & CboPayMentType & CHR(13) & "Discount Type  " & XPCboDiscountType & CHR(13) & " Discount Vaalue   " & XPTxtDiscountVal & CHR(13) & " Shipment Arival Date" & DTArrivalDate & CHR(13) & "Due Date " & DtpDelayDate & CHR(13) & " Currency " & DcCurrency & CHR(13) & " GE NO" & TxtNoteSerial
                      
     If Currentmode <> "D" Then
         AddToLogFile CInt(user_id), 150, Date, Time, LogTextA, LogTexte, Me.Name, Me.TxtModFlg, "", , TxtNoteSerial, TxtNoteSerial1
@@ -14346,7 +14767,7 @@ End Sub
 Private Sub TxtModFlg_Change()
     On Error GoTo ErrTrap
 
-    Select Case Me.TxtModFlg.text
+    Select Case Me.TxtModFlg.Text
 
         Case "R"
 
@@ -14538,13 +14959,13 @@ Public Sub Retrive(Optional Lngid As Long = 0)
     Me.CmdRetruns.Visible = False
     Me.CmdRetruns.Tag = ""
     ChkTaxAdd.value = vbUnchecked
-    Me.TxtTaxAddValue.text = ""
+    Me.TxtTaxAddValue.Text = ""
     ChkTaxStamp.value = vbUnchecked
-    Me.TxtTaxStampValue.text = ""
+    Me.TxtTaxStampValue.Text = ""
     ChkTaxStamp.value = vbUnchecked
-    Me.TxtTaxStampValue.text = ""
+    Me.TxtTaxStampValue.Text = ""
     ChkTaxSerivce.value = vbUnchecked
-    Me.TxtTaxServiceValue.text = ""
+    Me.TxtTaxServiceValue.Text = ""
 
     '---------------------------------------------
     '---------------------------------------------
@@ -14566,31 +14987,31 @@ Public Sub Retrive(Optional Lngid As Long = 0)
         End If
     End If
 
-    TxtFillData.text = "T"
+    TxtFillData.Text = "T"
     Screen.MousePointer = vbArrowHourglass
     BLDate.value = IIf(IsNull(rs("BLDate").value), Date, rs("BLDate").value)
     dcBranch.BoundText = IIf(IsNull(rs("BranchId").value), "", rs("BranchId").value)
-    Me.dcproject.BoundText = IIf(IsNull(rs("project_id").value), "", rs("project_id").value)
-    Me.TxtNoteSerial.text = IIf(IsNull(rs("NoteSerial").value), "", (rs("NoteSerial").value))
-    Me.TxtNoteSerial1.text = IIf(IsNull(rs("NoteSerial1").value), "", (rs("NoteSerial1").value))
-    Me.oldtxtNoteSerial1.text = IIf(IsNull(rs("OldNoteSerial1").value), IIf(IsNull(rs("NoteSerial1").value), "", rs("NoteSerial1").value), rs("OldNoteSerial1").value)
+    Me.DCproject.BoundText = IIf(IsNull(rs("project_id").value), "", rs("project_id").value)
+    Me.TxtNoteSerial.Text = IIf(IsNull(rs("NoteSerial").value), "", (rs("NoteSerial").value))
+    Me.TxtNoteSerial1.Text = IIf(IsNull(rs("NoteSerial1").value), "", (rs("NoteSerial1").value))
+    Me.oldtxtNoteSerial1.Text = IIf(IsNull(rs("OldNoteSerial1").value), IIf(IsNull(rs("NoteSerial1").value), "", rs("NoteSerial1").value), rs("OldNoteSerial1").value)
 
     lbl(67).Caption = showLabel(TxtNoteSerial1, oldtxtNoteSerial1)
 
-    Me.TXTNoteID.text = IIf(IsNull(rs("NoteID").value), "", (rs("NoteID").value))
+    Me.TXTNoteID.Text = IIf(IsNull(rs("NoteID").value), "", (rs("NoteID").value))
     If Not (IsNull(rs("CashCustomerPhone").value)) Then
-        Me.TxtPhone.text = rs("CashCustomerPhone").value
+        Me.TxtPhone.Text = rs("CashCustomerPhone").value
     Else
-        Me.TxtPhone.text = ""
+        Me.TxtPhone.Text = ""
     End If
-    TxtVATCustoms.text = IIf(IsNull(rs("VATCustoms").value), 0, (rs("VATCustoms").value))
-    TxtVATCustoms1.text = IIf(IsNull(rs("VATCustoms1").value), 0, (rs("VATCustoms1").value))
- TxtValueAdded.text = IIf(IsNull(rs("VAT").value), 0, (rs("VAT").value))
+    TxtVATCustoms.Text = IIf(IsNull(rs("VATCustoms").value), 0, (rs("VATCustoms").value))
+    TxtVATCustoms1.Text = IIf(IsNull(rs("VATCustoms1").value), 0, (rs("VATCustoms1").value))
+ TxtValueAdded.Text = IIf(IsNull(rs("VAT").value), 0, (rs("VAT").value))
  LblValueAdded.Caption = IIf(IsNull(rs("VAT").value), 0, (rs("VAT").value))
- Me.DcbTyp.ListIndex = IIf(IsNull(rs("Typ").value), -1, (rs("Typ").value))
- TXtResonVAT.text = IIf(IsNull(rs("ResonVAT").value), "", (rs("ResonVAT").value))
- TxtVATNO.text = IIf(IsNull(rs("VATNO").value), "", (rs("VATNO").value))
- poTransaction_ID.text = IIf(IsNull(rs("poTransaction_ID").value), "", (rs("poTransaction_ID").value))
+ Me.Dcbtyp.ListIndex = IIf(IsNull(rs("Typ").value), -1, (rs("Typ").value))
+ TXtResonVAT.Text = IIf(IsNull(rs("ResonVAT").value), "", (rs("ResonVAT").value))
+ TxtVATNO.Text = IIf(IsNull(rs("VATNO").value), "", (rs("VATNO").value))
+ poTransaction_ID.Text = IIf(IsNull(rs("poTransaction_ID").value), "", (rs("poTransaction_ID").value))
      txtContainerNo = IIf(IsNull(rs("ContainerNo").value), "", rs("ContainerNo").value)
     If Not (IsNull(rs("CompsBill").value)) Then
          
@@ -14640,23 +15061,26 @@ Public Sub Retrive(Optional Lngid As Long = 0)
    ' End If
     
     
-    TXT_order_no.text = IIf(IsNull(rs("order_no").value), "", (rs("order_no").value))
-    TxtManualNO.text = IIf(IsNull(rs("ManualNO").value), "", (rs("ManualNO").value))
+    TXT_order_no.Text = IIf(IsNull(rs("order_no").value), "", (rs("order_no").value))
+    txtManualNO.Text = IIf(IsNull(rs("ManualNO").value), "", (rs("ManualNO").value))
 
-    TxtManualNo1.text = IIf(IsNull(rs("ManualNo1").value), "", (rs("ManualNo1").value))
-txtManulaVat.text = IIf(IsNull(rs("txtManulaVat").value), 0, (rs("txtManulaVat").value))
-txtManulaVat.text = val(txtManulaVat.text)
+    TxtManualNo1.Text = IIf(IsNull(rs("ManualNo1").value), "", (rs("ManualNo1").value))
+txtManulaVat.Text = IIf(IsNull(rs("txtManulaVat").value), 0, (rs("txtManulaVat").value))
+txtManulaVat.Text = val(txtManulaVat.Text)
  
  
-    txt_Currency_rate.text = IIf(IsNull(rs("Currency_rate").value), 1, (rs("Currency_rate").value))
+    txtAdvPay.Text = IIf(IsNull(rs("AdvPay").value), 0, rs("AdvPay").value)
+    txt_Currency_rate.Text = IIf(IsNull(rs("Currency_rate").value), 1, (rs("Currency_rate").value))
+
+
     Me.DcboEmp.BoundText = IIf(IsNull(rs("Emp_ID").value), "", rs("Emp_ID").value)
     DtpDelayDate.value = IIf(IsNull(rs("DueDate").value), Date, (rs("DueDate").value))
-    XPTxtBillID.text = IIf(IsNull(rs("Transaction_ID").value), "", (rs("Transaction_ID").value))
-    TxtTransSerial.text = IIf(IsNull(rs("Transaction_Serial").value), "", (rs("Transaction_Serial").value))
+    XPTxtBillID.Text = IIf(IsNull(rs("Transaction_ID").value), "", (rs("Transaction_ID").value))
+    TxtTransSerial.Text = IIf(IsNull(rs("Transaction_Serial").value), "", (rs("Transaction_Serial").value))
     XPDtbBill.value = IIf(IsNull(rs("Transaction_Date").value), "", (rs("Transaction_Date").value))
     DTArrivalDate.value = IIf(IsNull(rs("ArrivalDate").value), Date, (rs("ArrivalDate").value))
 ''//
-txtAddValue.Caption = IIf(IsNull(rs("AddValue").value), 0, (rs("AddValue").value))
+TxtAddValue.Caption = IIf(IsNull(rs("AddValue").value), 0, (rs("AddValue").value))
 If Not IsNull(rs("AddToTotal").value) Then
 If rs("AddToTotal").value = 1 Then
 ChAddToTotal.value = vbChecked
@@ -14670,23 +15094,23 @@ DTArrivalDate.value = IIf(IsNull(rs("ArrivalDate").value), Date, (rs("ArrivalDat
 
     XPCboDiscountType.ListIndex = IIf(IsNull(rs("Trans_DiscountType").value), 0, rs("Trans_DiscountType").value)
 
-    XPTxtDiscountVal.text = IIf(IsNull(rs("Trans_Discount").value), "", Trim(rs("Trans_Discount").value))
+    XPTxtDiscountVal.Text = IIf(IsNull(rs("Trans_Discount").value), "", Trim(rs("Trans_Discount").value))
     If Not (IsNull(rs("CashCustomerName").value)) Then
-        Me.TxtCashCustomerName.text = rs("CashCustomerName").value
+        Me.TxtCashCustomerName.Text = rs("CashCustomerName").value
     Else
-        Me.TxtCashCustomerName.text = ""
+        Me.TxtCashCustomerName.Text = ""
     End If
 
-    TXTToTAlELSHahn.text = IIf(Not IsNumeric(rs("ToTAlELSHahn").value), 0, rs("ToTAlELSHahn").value)
-    Txt_EXport.text = IIf(Not IsNumeric(rs("total_expenses").value), 0, rs("total_expenses").value)
+    TXTToTAlELSHahn.Text = IIf(Not IsNumeric(rs("ToTAlELSHahn").value), 0, rs("ToTAlELSHahn").value)
+    Txt_EXport.Text = IIf(Not IsNumeric(rs("total_expenses").value), 0, rs("total_expenses").value)
 
 If IsSaveWithOutMsg Then
-    TXTToTAlELSHahn.text = 0
+    TXTToTAlELSHahn.Text = 0
 End If
-If val(TXTToTAlELSHahn.text) <> 0 Then
-    txt_total_bill.text = 0
+If val(TXTToTAlELSHahn.Text) <> 0 Then
+    txt_total_bill.Text = 0
 End If
-    txt_total_bill.text = 0
+    txt_total_bill.Text = 0
     Command4_Click
     'txt_total_bill.text = IIf(Not IsNumeric(rs("total_payments").value), 0, rs("total_payments").value)
     If val(txt_total_bill) <> 0 Then
@@ -14696,7 +15120,7 @@ End If
     
     DCDocTypes.BoundText = IIf(IsNull(rs("Doctype").value), "", rs("Doctype").value)
 
-    TxtBillComment.text = IIf(IsNull(rs("TransactionComment").value), "", (rs("TransactionComment").value))
+    TxtBillComment.Text = IIf(IsNull(rs("TransactionComment").value), "", (rs("TransactionComment").value))
     
     If IIf(IsNull(rs("PaymentType").value), 0, rs("PaymentType").value) = 3 Then
         If SystemOptions.AllowPurchasesMultyPayed Then
@@ -14716,24 +15140,24 @@ End If
     '
     Me.DcboBankName.BoundText = IIf(IsNull(rs("BankID").value), "", rs("BankID").value)
     
-    Text1.text = IIf(IsNull(rs("nots").value), "", (rs("nots").value))
+    Text1.Text = IIf(IsNull(rs("nots").value), "", (rs("nots").value))
     'Text1.text = IIf(IsNull(Rs("nots").Value), "", (Rs("nots").Value))
 
     'txt_Shipment_no.text = IIf(IsNull(Rs("Shipment_no").value), "", Trim(Rs("Shipment_no").value))
     'Txt_order_no.text = IIf(IsNull(Rs("order_no").value), "", Trim(Rs("order_no").value))
-    Me.Dccurrency.BoundText = IIf(IsNull(rs("Currency_id").value), "", rs("Currency_id").value)
+    Me.DcCurrency.BoundText = IIf(IsNull(rs("Currency_id").value), "", rs("Currency_id").value)
 
-    TxtLcNo.text = IIf(IsNull(rs("LcNo").value), "", (rs("LcNo").value))
+    TxtLCNO.Text = IIf(IsNull(rs("LcNo").value), "", (rs("LcNo").value))
 
     '÷—»Ì… «·„»Ì⁄« 
-    XPTxtTaxValue.text = IIf(IsNull(rs("TaxValue").value), "", (rs("TaxValue").value))
+    XPTxtTaxValue.Text = IIf(IsNull(rs("TaxValue").value), "", (rs("TaxValue").value))
     XPChkTAX.value = IIf(rs("TaxFound") = True, Checked, Unchecked)
 
     '÷—»Ì… «·Œ’„ Ê«·≈÷«›…
     If Not IsNull(rs("TaxAddValue").value) Then
         If rs("TaxAddValue").value > 0 Then
             ChkTaxAdd.value = vbChecked
-            Me.TxtTaxAddValue.text = rs("TaxAddValue").value
+            Me.TxtTaxAddValue.Text = rs("TaxAddValue").value
         End If
     End If
 
@@ -14741,7 +15165,7 @@ End If
     If Not IsNull(rs("TaxStampValue").value) Then
         If rs("TaxStampValue").value > 0 Then
             ChkTaxStamp.value = vbChecked
-            Me.TxtTaxStampValue.text = rs("TaxStampValue").value
+            Me.TxtTaxStampValue.Text = rs("TaxStampValue").value
         End If
     End If
 
@@ -14749,13 +15173,13 @@ End If
     If Not IsNull(rs("TaxServiceValue").value) Then
         If rs("TaxServiceValue").value > 0 Then
             ChkTaxSerivce.value = vbChecked
-            Me.TxtTaxServiceValue.text = rs("TaxServiceValue").value
+            Me.TxtTaxServiceValue.Text = rs("TaxServiceValue").value
         End If
     End If
 
     FG.rows = 2
     FG.Clear flexClearScrollable, flexClearEverything
-    XPTxtSum.text = ""
+    XPTxtSum.Text = ""
    CBoBasedON.ListIndex = IIf(IsNull(rs("CBoBasedON").value), 0, (rs("CBoBasedON").value))
 
     If Not IsNull(rs("BillBasedOn").value) Then
@@ -14933,11 +15357,11 @@ StrSQL = StrSQL & "              ON  dbo.ACCOUNTS.Account_Code = dbo.Transaction
     XPChkPayType(0).value = Unchecked
     XPChkPayType(1).value = Unchecked
     XPChkPayType(2).value = Unchecked
-    XPTxtValue(0).text = ""
-    XPTxtValue(1).text = ""
+    XPTxtValue(0).Text = ""
+    XPTxtValue(1).Text = ""
 
-    XPTxtSerial(0).text = ""
-    XPTxtSerial(1).text = ""
+    XPTxtSerial(0).Text = ""
+    XPTxtSerial(1).Text = ""
    ' DtpDelayDate.value = Date
     StrSQL = "select * From Notes where Transaction_ID=" & val(rs("Transaction_ID").value)
     Set RsNotes = New ADODB.Recordset
@@ -14951,8 +15375,8 @@ StrSQL = StrSQL & "              ON  dbo.ACCOUNTS.Account_Code = dbo.Transaction
                 XPChkPayType(0).value = Checked
                 XPChkPayType_Click (0)
                 'Me.TxtNoteID(0).text = IIf(IsNull(RsNotes("NOTEID").Value), "", (RsNotes("NOTEID").Value))
-                XPTxtValue(0).text = IIf(IsNull(RsNotes("Note_Value").value), "", (RsNotes("Note_Value").value))
-                XPTxtSerial(0).text = IIf(IsNull(RsNotes("NoteSerial").value), "", Trim(RsNotes("NoteSerial").value))
+                XPTxtValue(0).Text = IIf(IsNull(RsNotes("Note_Value").value), "", (RsNotes("Note_Value").value))
+                XPTxtSerial(0).Text = IIf(IsNull(RsNotes("NoteSerial").value), "", Trim(RsNotes("NoteSerial").value))
                 Me.DcboBox.BoundText = IIf(IsNull(RsNotes("BoxID").value), "", RsNotes("BoxID").value)
             End If
 
@@ -14960,9 +15384,9 @@ StrSQL = StrSQL & "              ON  dbo.ACCOUNTS.Account_Code = dbo.Transaction
                 XPChkPayType(1).value = Checked
                 XPChkPayType_Click (1)
                 'Me.TxtNoteID(1).text = IIf(IsNull(RsNotes("NOTEID").Value), "", (RsNotes("NOTEID").Value))
-                XPTxtValue(1).text = IIf(IsNull(RsNotes("Note_Value").value), "", (RsNotes("Note_Value").value))
+                XPTxtValue(1).Text = IIf(IsNull(RsNotes("Note_Value").value), "", (RsNotes("Note_Value").value))
                 XPTxtValue(1).Tag = IIf(IsNull(RsNotes("NoteID").value), "", (RsNotes("NoteID").value))
-                XPTxtSerial(1).text = IIf(IsNull(RsNotes("NoteSerial").value), "", Trim(RsNotes("NoteSerial").value))
+                XPTxtSerial(1).Text = IIf(IsNull(RsNotes("NoteSerial").value), "", Trim(RsNotes("NoteSerial").value))
                 DtpDelayDate.value = IIf(IsNull(RsNotes("DueDate").value), "", (RsNotes("DueDate").value))
             End If
 
@@ -15092,16 +15516,16 @@ StrSQL = StrSQL & "              ON  dbo.ACCOUNTS.Account_Code = dbo.Transaction
 
     NewGrid.Calculate 1, , , True
     Dim SngRelatedNotesValues As Single
-    Me.CmdNotes.Visible = ShowRelatedNotes(val(Me.XPTxtBillID.text), 0, SngRelatedNotesValues)
+    Me.CmdNotes.Visible = ShowRelatedNotes(val(Me.XPTxtBillID.Text), 0, SngRelatedNotesValues)
     Me.CmdNotes.Tag = SngRelatedNotesValues
 
     SngRelatedNotesValues = 0
-    Me.CmdRetruns.Visible = ShowRelatedTransactions(val(Me.XPTxtBillID.text), 0, SngRelatedNotesValues)
+    Me.CmdRetruns.Visible = ShowRelatedTransactions(val(Me.XPTxtBillID.Text), 0, SngRelatedNotesValues)
     Me.CmdRetruns.Tag = SngRelatedNotesValues
     
     '-----------------------------------------------------------------------------------------------
     Screen.MousePointer = vbDefault
-    TxtFillData.text = "F"
+    TxtFillData.Text = "F"
     XPTxtCurrent.Caption = rs.AbsolutePosition
     XPTxtCount.Caption = rs.RecordCount
     fill_bill_items_table
@@ -15109,12 +15533,12 @@ StrSQL = StrSQL & "              ON  dbo.ACCOUNTS.Account_Code = dbo.Transaction
     
     '«” —Ã«⁄ «·„’—Ê›«  «· ﬁœÌ—ÌÂ
     fillExpensesFactoryGrid
-     If Me.TxtModFlg.text = "R" Or Me.TxtModFlg.text = "" Then
+     If Me.TxtModFlg.Text = "R" Or Me.TxtModFlg.Text = "" Then
           FillGridWithDataSalesPayment
           RetriveValueAdded
           
           End If
-    TXT_order_no.text = IIf(IsNull(rs("order_no").value), "", (rs("order_no").value))
+    TXT_order_no.Text = IIf(IsNull(rs("order_no").value), "", (rs("order_no").value))
     'Command4_Click
      'Command2_Click
     ChAddToTotal_Click
@@ -15152,19 +15576,19 @@ End If
 ElseIf Index = 13 Then 'ar
  LBLPayVal.Caption = ""
 
-TxtPayedValue2.text = ""
+TxtPayedValue2.Text = ""
 cleargrid
 
 ElseIf Index = 14 Then
-TxtPayedValue2.text = val(LBLPayVal)
+TxtPayedValue2.Text = val(LBLPayVal)
 
  
         With Grid22
-          .TextMatrix(.Row, .ColIndex("Value")) = TxtPayedValue2.text
+          .TextMatrix(.Row, .ColIndex("Value")) = TxtPayedValue2.Text
           End With
     ReLineGrid2
      
- TxtRemainValue2.text = val(Me.TxtPayedValue2.text) - val(Me.TxtNetValue2.text)
+ TxtRemainValue2.Text = val(Me.TxtPayedValue2.Text) - val(Me.TxtNetValue2.Text)
  
 
 End If
@@ -15224,7 +15648,7 @@ Private Sub Undo()
 
     On Error GoTo ErrTrap
 
-    Select Case TxtModFlg.text
+    Select Case TxtModFlg.Text
 
         Case "N"
 
@@ -15237,7 +15661,7 @@ Private Sub Undo()
 
             If MsgBox(Msg, vbQuestion + vbYesNo + vbMsgBoxRight + vbMsgBoxRtlReading + vbDefaultButton2, App.Title) = vbYes Then
                 clear_all Me
-                Me.TxtModFlg.text = "R"
+                Me.TxtModFlg.Text = "R"
                 XPBtnMove_Click (1)
             End If
 
@@ -15252,15 +15676,15 @@ Private Sub Undo()
             End If
   
             If MsgBox(Msg, vbQuestion + vbYesNo + vbMsgBoxRight + vbMsgBoxRtlReading + vbDefaultButton2, App.Title) = vbYes Then
-                rs.Find "Transaction_ID='" & val(XPTxtBillID.text) & "'", , adSearchForward, adBookmarkFirst
+                rs.Find "Transaction_ID='" & val(XPTxtBillID.Text) & "'", , adSearchForward, adBookmarkFirst
 
                 If rs.EOF Or rs.BOF Then
-                    Me.TxtModFlg.text = "R"
+                    Me.TxtModFlg.Text = "R"
                     Exit Sub
                 End If
 
                 If Not rs.EOF Or rs.BOF Then
-                    Me.TxtModFlg.text = "R"
+                    Me.TxtModFlg.Text = "R"
                     Retrive
                 End If
             End If
@@ -15281,7 +15705,7 @@ Dim sql As String
 Dim Rs5 As ADODB.Recordset
 Set Rs5 = New ADODB.Recordset
 ChekPaymet = False
-sql = "select * from  TblNotesBillBuyPayment where NoteID=" & val(Me.XPTxtBillID.text) & " "
+sql = "select * from  TblNotesBillBuyPayment where NoteID=" & val(Me.XPTxtBillID.Text) & " "
 Rs5.Open sql, Cn, adOpenStatic, adLockOptimistic, adCmdText
 If Rs5.RecordCount > 0 Then
 ChekPaymet = True
@@ -15297,7 +15721,7 @@ Private Sub Del_TransAction()
     order_no = Me.TXT_order_no
     On Error GoTo ErrTrap
 
-    If XPTxtBillID.text <> "" Then
+    If XPTxtBillID.Text <> "" Then
     If ChekPaymet() = True Then
 If SystemOptions.UserInterface = ArabicInterface Then
 Msg = "·«Ì„ﬂ‰ «·”„«Õ »Õ–› Â–Â «·⁄„·Ì…"
@@ -15312,11 +15736,11 @@ End If
 
     If SystemOptions.UserInterface = ArabicInterface Then
         Msg = "”Ì „ Õ–› »Ì«‰«  «·›« Ê—…  —ﬁ„ " & CHR(13)
-        Msg = Msg + TxtNoteSerial1.text & CHR(13)
+        Msg = Msg + TxtNoteSerial1.Text & CHR(13)
         Msg = Msg + " Â·  —€» ›Ì Õ–› Â–Â «·»Ì«‰« ø"
 Else
         Msg = "Confirm Delete Invoice No: " & CHR(13)
-        Msg = Msg + TxtNoteSerial1.text & CHR(13)
+        Msg = Msg + TxtNoteSerial1.Text & CHR(13)
         Msg = Msg + " yes/no?"
 
 
@@ -15327,19 +15751,19 @@ End If
                 If Not rs.RecordCount < 1 Then
                     Cn.BeginTrans
                     BegainTrans = True
-                            DeleteTransactiomsVoucher val(Text1.text)
+                            DeleteTransactiomsVoucher val(Text1.Text)
                             
                 deletelinktoVoucher
-                Cn.Execute "Delete from TransactionValueAdded where Transaction_ID=" & val(Me.XPTxtBillID.text) & ""
-                 StrSQL = "delete From TblSalesPayment where TransID=" & val(Me.XPTxtBillID.text) 'Val(rs("Transaction_ID").value)
+                Cn.Execute "Delete from TransactionValueAdded where Transaction_ID=" & val(Me.XPTxtBillID.Text) & ""
+                 StrSQL = "delete From TblSalesPayment where TransID=" & val(Me.XPTxtBillID.Text) 'Val(rs("Transaction_ID").value)
                Cn.Execute StrSQL, , adExecuteNoRecords
                     StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS  " & "Where DOUBLE_ENTREY_VOUCHERS.Transaction_ID=" & rs("Transaction_ID").value
                     Cn.Execute StrSQL, , adExecuteNoRecords
                 ''//////////////
-                  Cn.Execute "delete from Transaction_Details where Transaction_ID in ( " & GetTrnasectionID(val(XPTxtBillID.text), 22) & " )"
-                  Cn.Execute "delete from Transactions where Transaction_ID in ( " & GetTrnasectionID(val(XPTxtBillID.text), 22) & " )"
-                  Cn.Execute "delete from DOUBLE_ENTREY_VOUCHERS where Transaction_ID in ( " & GetTrnasectionID(val(XPTxtBillID.text), 22) & " )"
-                  Cn.Execute "Delete From TblTransctionIDES where Transaction_Type=22 and MainTransaction_ID=" & val(XPTxtBillID.text) & " "
+                  Cn.Execute "delete from Transaction_Details where Transaction_ID in ( " & GetTrnasectionID(val(XPTxtBillID.Text), 22) & " )"
+                  Cn.Execute "delete from Transactions where Transaction_ID in ( " & GetTrnasectionID(val(XPTxtBillID.Text), 22) & " )"
+                  Cn.Execute "delete from DOUBLE_ENTREY_VOUCHERS where Transaction_ID in ( " & GetTrnasectionID(val(XPTxtBillID.Text), 22) & " )"
+                  Cn.Execute "Delete From TblTransctionIDES where Transaction_Type=22 and MainTransaction_ID=" & val(XPTxtBillID.Text) & " "
                 ''////////
                     StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS  " & "Where DOUBLE_ENTREY_VOUCHERS.Transaction_ID=" & get_transaction_id(rs("nots").value, 20)
                     Cn.Execute StrSQL, , adExecuteNoRecords
@@ -15347,13 +15771,13 @@ End If
                     StrSQL = "Delete From Transactions  " & "Where Transaction_ID=" & get_transaction_id(rs("nots").value, 20)
                     Cn.Execute StrSQL, , adExecuteNoRecords
                 
-                    StrSQL = "update Notes set  Transaction_ID1=Null , ItemID=NUll, buy = null Where   (Transaction_ID1=" & val(Me.XPTxtBillID.text) & ")"
+                    StrSQL = "update Notes set  Transaction_ID1=Null , ItemID=NUll, buy = null Where   (Transaction_ID1=" & val(Me.XPTxtBillID.Text) & ")"
                     Cn.Execute StrSQL
             
-                    StrSQL = "update DOUBLE_ENTREY_VOUCHERS set Transaction_ID1=Null ,  ItemID=NUll, buy = null Where  ( Transaction_ID1=" & val(Me.XPTxtBillID.text) & ")"
+                    StrSQL = "update DOUBLE_ENTREY_VOUCHERS set Transaction_ID1=Null ,  ItemID=NUll, buy = null Where  ( Transaction_ID1=" & val(Me.XPTxtBillID.Text) & ")"
                     Cn.Execute StrSQL
             
-                    StrSQL = "delete From Notes where  NoteType= 150 and  noteid=" & val(TXTNoteID.text)
+                    StrSQL = "delete From Notes where  NoteType= 150 and  noteid=" & val(TXTNoteID.Text)
     
                     Cn.Execute StrSQL, , adExecuteNoRecords
                 
@@ -15366,7 +15790,7 @@ End If
 
         
                     close_order2 order_no
-                                             With Me.Grid4
+                                             With Me.grid4
             .rows = .FixedRows
    
         End With
@@ -15586,14 +16010,14 @@ Function Closeorders()
 
     Dim j As Integer
 
-    With Grid2
+    With GRID2
 
-        For i = 1 To Grid2.rows - 1
+        For i = 1 To GRID2.rows - 1
             close_order = True
 
             If .cell(flexcpChecked, i, .ColIndex("select")) = flexChecked Then
            
-                sql = "select * from QRY_items_orders_data where order_no='" & Grid2.TextMatrix(i, Grid2.ColIndex("order_no")) & "'"
+                sql = "select * from QRY_items_orders_data where order_no='" & GRID2.TextMatrix(i, GRID2.ColIndex("order_no")) & "'"
                 Rs3.Open sql, Cn, adOpenStatic, adLockOptimistic, adCmdText
 
                 If Rs3.RecordCount = 0 Then GoTo ll
@@ -15611,7 +16035,7 @@ Function Closeorders()
                 Next j
            
                 If close_order = True Then
-                    sql = "select * from Transactions where Transaction_Type=6 and order_no='" & Grid2.TextMatrix(i, Grid2.ColIndex("order_no")) & "'"
+                    sql = "select * from Transactions where Transaction_Type=6 and order_no='" & GRID2.TextMatrix(i, GRID2.ColIndex("order_no")) & "'"
                     Rs4.Open sql, Cn, adOpenStatic, adLockOptimistic, adCmdText
                     Rs4("Closed").value = 1
                     Rs4.update
@@ -15648,9 +16072,9 @@ If ChkCompsBill.value = vbUnchecked Then Exit Function
     SupplierAccount = GetMyAccountCode("TblCustemers", "CusID", val(Me.DBCboClientName.BoundText))
     LngDevNO = 2
             If SystemOptions.UserInterface = ArabicInterface Then
-                StrTempDes = "›« Ê—… ‘—«¡ —ﬁ„ " & Me.TxtNoteSerial1.text & " " & TxtBillComment.text
+                StrTempDes = "›« Ê—… ‘—«¡ —ﬁ„ " & Me.TxtNoteSerial1.Text & " " & TxtBillComment.Text
             Else
-                StrTempDes = "Purchase Invoice No: " & Me.TxtNoteSerial1.text & " " & TxtBillComment.text
+                StrTempDes = "Purchase Invoice No: " & Me.TxtNoteSerial1.Text & " " & TxtBillComment.Text
             End If
 
    
@@ -15666,7 +16090,7 @@ If ChkCompsBill.value = vbUnchecked Then Exit Function
 StrSQL = StrSQL & " FROM         dbo.Transactions INNER JOIN"
 StrSQL = StrSQL & "  dbo.Transaction_Details ON dbo.Transactions.Transaction_ID = dbo.Transaction_Details.Transaction_ID LEFT OUTER JOIN"
 StrSQL = StrSQL & " dbo.TblCustemers ON dbo.Transaction_Details.SupplierID = dbo.TblCustemers.CusID"
-StrSQL = StrSQL & " Where (dbo.Transactions.Transaction_ID = " & val(XPTxtBillID.text) & ")"
+StrSQL = StrSQL & " Where (dbo.Transactions.Transaction_ID = " & val(XPTxtBillID.Text) & ")"
 StrSQL = StrSQL & " GROUP BY dbo.TblCustemers.CusName, dbo.TblCustemers.Account_Code"
  
      supplierGL.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
@@ -15683,18 +16107,18 @@ TotalValue = 0
     
     If value > 0 And Account_code <> "" Then
   '  value = Round(value, SystemOptions.SysDefCurrencyForamt)
-    SngTemp = Round(value * val(txt_Currency_rate.text), SystemOptions.SysDefCurrencyForamt)
+    SngTemp = Round(value * val(txt_Currency_rate.Text), SystemOptions.SysDefCurrencyForamt)
    
      SngTempe = value
      LngDevNO = LngDevNO + 1
      TotalValue = TotalValue + SngTempe
               If SystemOptions.UserInterface = ArabicInterface Then
-                StrTempDes = "›« Ê—… ‘—«¡ —ﬁ„ " & Me.TxtNoteSerial1.text & " " & TxtBillComment.text & " «À»«  „‘ —Ì«  «·„Ê—œ " & CusName
+                StrTempDes = "›« Ê—… ‘—«¡ —ﬁ„ " & Me.TxtNoteSerial1.Text & " " & TxtBillComment.Text & " «À»«  „‘ —Ì«  «·„Ê—œ " & CusName
             Else
-                StrTempDes = "Purchase Invoice No: " & Me.TxtNoteSerial1.text & " " & TxtBillComment.text
+                StrTempDes = "Purchase Invoice No: " & Me.TxtNoteSerial1.Text & " " & TxtBillComment.Text
             End If
             
-        If ModAccounts.AddNewDev(LngDevID, LngDevNO, Account_code, SngTemp, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.text), , , SngTempe, , , , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
+        If ModAccounts.AddNewDev(LngDevID, LngDevNO, Account_code, SngTemp, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , SngTempe, , , , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
                 GoTo ErrTrap
             End If
             
@@ -15704,13 +16128,13 @@ TotalValue = 0
    
      LngDevNO = LngDevNO + 1
      
-    SngTemp = LblCommision * val(txt_Currency_rate.text)
+    SngTemp = LblCommision * val(txt_Currency_rate.Text)
     SngTempe = LblCommision
     SngTemp = Round(SngTemp, SystemOptions.SysDefCurrencyForamt)
    If SngTemp > 0 Then
 
 
-            If ModAccounts.AddNewDev(LngDevID, LngDevNO, CommissionAccount, SngTemp, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.text), , , SngTempe, , , , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
+            If ModAccounts.AddNewDev(LngDevID, LngDevNO, CommissionAccount, SngTemp, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , SngTempe, , , , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     
@@ -15718,7 +16142,7 @@ TotalValue = 0
             
              LngDevNO = LngDevNO + 1
              
-                If ModAccounts.AddNewDev(LngDevID, LngDevNO, SupplierAccount, SngTemp, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.text), , , SngTempe, , , , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
+                If ModAccounts.AddNewDev(LngDevID, LngDevNO, SupplierAccount, SngTemp, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , SngTempe, , , , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
             
@@ -15732,12 +16156,12 @@ TotalValue = 0
   '' SngTemp = (LblTotalAll - LblDiscountsTotal) * val(txt_Currency_rate.text)
    ' SngTempe = (LblTotalAll - LblDiscountsTotal)
     
-    TotalValue = TotalValue * val(txt_Currency_rate.text) '+ Round(LblCommision * val(txt_Currency_rate.text), SystemOptions.SysDefCurrencyForamt)
+    TotalValue = TotalValue * val(txt_Currency_rate.Text) '+ Round(LblCommision * val(txt_Currency_rate.text), SystemOptions.SysDefCurrencyForamt)
       LngDevNO = 1
    If TotalValue > 0 Then
 
 
-    If ModAccounts.AddNewDev(LngDevID, LngDevNO, Account_Code_dynamic, TotalValue, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.text), , , SngTempe, , , , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
+    If ModAccounts.AddNewDev(LngDevID, LngDevNO, Account_Code_dynamic, TotalValue, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , SngTempe, , , , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
                 GoTo ErrTrap
             End If
             
@@ -15757,7 +16181,7 @@ Function SaveNewGl2()
 
  
  If SystemOptions.PoCreateVoucher = True And CboPayMentType.ListIndex = 1 Then
-        If TXT_order_no.text = "" Then
+        If TXT_order_no.Text = "" Then
          Exit Function
         Else
          
@@ -15785,9 +16209,9 @@ End If
 
  
             If SystemOptions.UserInterface = ArabicInterface Then
-                StrTempDes = "›« Ê—… ‘—«¡ —ﬁ„ " & Me.TxtNoteSerial1.text & " " & TxtBillComment.text
+                StrTempDes = "›« Ê—… ‘—«¡ —ﬁ„ " & Me.TxtNoteSerial1.Text & " " & TxtBillComment.Text
             Else
-                StrTempDes = "Purchase Invoice No: " & Me.TxtNoteSerial1.text & " " & TxtBillComment.text
+                StrTempDes = "Purchase Invoice No: " & Me.TxtNoteSerial1.Text & " " & TxtBillComment.Text
             End If
 
    
@@ -15808,7 +16232,7 @@ Dim value2 As Variant
 
 TotalValue = 0
    LngDevNO = 1
-   value = (NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.text)
+   value = (NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.Text)
    value2 = (NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption))
  
   '  Account_Code = Account_Code_dynamic101
@@ -15822,12 +16246,12 @@ TotalValue = 0
      LngDevNO = LngDevNO + 1
      TotalValue = TotalValue + SngTempe
               If SystemOptions.UserInterface = ArabicInterface Then
-                StrTempDes = "›« Ê—… ‘—«¡ —ﬁ„ " & Me.TxtNoteSerial1.text & " " & TxtBillComment.text & " «À»«  „‘ —Ì«  «·„Ê—œ " & Me.DBCboClientName.text
+                StrTempDes = "›« Ê—… ‘—«¡ —ﬁ„ " & Me.TxtNoteSerial1.Text & " " & TxtBillComment.Text & " «À»«  „‘ —Ì«  «·„Ê—œ " & Me.DBCboClientName.Text
             Else
-                StrTempDes = "Purchase Invoice No: " & Me.TxtNoteSerial1.text & " " & TxtBillComment.text
+                StrTempDes = "Purchase Invoice No: " & Me.TxtNoteSerial1.Text & " " & TxtBillComment.Text
             End If
             
-        If ModAccounts.AddNewDev(LngDevID, LngDevNO, Account_Code_dynamic102, SngTemp, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.text), , , SngTempe2, Dccurrency.text, val(txt_Currency_rate.text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
+        If ModAccounts.AddNewDev(LngDevID, LngDevNO, Account_Code_dynamic102, SngTemp, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , SngTempe2, DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
                 GoTo ErrTrap
             End If
             
@@ -15840,7 +16264,7 @@ TotalValue = 0
    If value > 0 Then
 
 
-            If ModAccounts.AddNewDev(LngDevID, LngDevNO, Account_Code_dynamic101, SngTemp, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.text), , , SngTempe2, Dccurrency.text, val(txt_Currency_rate.text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
+            If ModAccounts.AddNewDev(LngDevID, LngDevNO, Account_Code_dynamic101, SngTemp, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , SngTempe2, DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
     
@@ -15890,7 +16314,7 @@ Dim Msg As String
             ' hany  XPTxtValue(1).text = Val(LblTotalAll.Caption)
         End If
         
-        If Trim(Me.TxtTransSerial.text) = "" Then
+        If Trim(Me.TxtTransSerial.Text) = "" Then
             If SystemOptions.UserInterface = ArabicInterface Then
                 Msg = "ÌÃ» ﬂ «»… —ﬁ„ ›« Ê—… «·‘—«¡..!!!"
             Else
@@ -15908,11 +16332,11 @@ Dim Msg As String
         Dim BolTemp As Boolean
         
         If Voucher_coding(val(my_branch), XPDtbBill.value, 6, 150, , 22) = "" Then
-            If Me.TxtModFlg.text = "N" Then
+            If Me.TxtModFlg.Text = "N" Then
            
-                BolTemp = UniqueNoteSerial1(Trim(Me.TxtNoteSerial1.text), 22, , val(dcBranch.BoundText))
-            ElseIf Me.TxtModFlg.text = "E" Then
-                BolTemp = UniqueNoteSerial1(Trim(Me.TxtNoteSerial1.text), 22, val(Me.XPTxtBillID.text), val(dcBranch.BoundText))
+                BolTemp = UniqueNoteSerial1(Trim(Me.TxtNoteSerial1.Text), 22, , val(dcBranch.BoundText))
+            ElseIf Me.TxtModFlg.Text = "E" Then
+                BolTemp = UniqueNoteSerial1(Trim(Me.TxtNoteSerial1.Text), 22, val(Me.XPTxtBillID.Text), val(dcBranch.BoundText))
             End If
         
             If BolTemp = False Then
@@ -15937,7 +16361,7 @@ Dim Msg As String
         
         Screen.MousePointer = vbArrowHourglass
         
-        If DBCboClientName.text = "" Then
+        If DBCboClientName.Text = "" Then
             If SystemOptions.UserInterface = ArabicInterface Then
                 Msg = "„‰ ›÷·ﬂ √œŒ· «”„ «·„Ê—œ"
             Else
@@ -15953,7 +16377,7 @@ Dim Msg As String
             Exit Function
         End If
         
-        If DCboStoreName.text = "" Then
+        If DCboStoreName.Text = "" Then
             If SystemOptions.UserInterface = ArabicInterface Then
                 Msg = "„‰ ›÷·ﬂ Õœœ «”„ «·„Œ“‰"
             Else
@@ -15969,7 +16393,7 @@ Dim Msg As String
         End If
         
         If XPCboDiscountType.ListIndex = 1 Or XPCboDiscountType.ListIndex = 2 Then
-            If XPTxtDiscountVal.text = "" Then
+            If XPTxtDiscountVal.Text = "" Then
                 If SystemOptions.UserInterface = ArabicInterface Then
                     Msg = "ÌÃ»  ÕœÌœ ﬁÌ„… «·Œ’„ «·ﬂ·Ì ⁄·Ï «·›« Ê—…"
                 Else
@@ -15984,7 +16408,7 @@ Dim Msg As String
                 Exit Function
             End If
         
-            If Not IsNumeric(XPTxtDiscountVal.text) Then
+            If Not IsNumeric(XPTxtDiscountVal.Text) Then
                 If SystemOptions.UserInterface = ArabicInterface Then
                     Msg = "ﬁÌ„… «·Œ’„ «·ﬂ·Ì ⁄·Ï «·›« Ê—… ÌÃ» √‰  ﬂÊ‰ ﬁÌ„… —ﬁ„Ì…"
                 Else
@@ -16033,16 +16457,16 @@ Dim Msg As String
                 Exit Function
             End If
         
-            If Me.TxtModFlg.text = "N" Then
-                If CheckBoxAccount(Me.DcboBox.BoundText, val(Me.XPTxtValue(0).text), Me.XPDtbBill.value) = False Then
+            If Me.TxtModFlg.Text = "N" Then
+                If CheckBoxAccount(Me.DcboBox.BoundText, val(Me.XPTxtValue(0).Text), Me.XPDtbBill.value) = False Then
                     Screen.MousePointer = vbDefault
                     CheckBeforSave = False
                     Exit Function
                 End If
         
-            ElseIf Me.TxtModFlg.text = "E" Then
+            ElseIf Me.TxtModFlg.Text = "E" Then
         
-                If CheckBoxAccount(Me.DcboBox.BoundText, val(Me.XPTxtValue(0).text), Me.XPDtbBill.value, , , val(Me.XPTxtValue(0).Tag)) = False Then
+                If CheckBoxAccount(Me.DcboBox.BoundText, val(Me.XPTxtValue(0).Text), Me.XPDtbBill.value, , , val(Me.XPTxtValue(0).Tag)) = False Then
                     Screen.MousePointer = vbDefault
                     CheckBeforSave = False
                     Exit Function
@@ -16068,7 +16492,7 @@ Dim Msg As String
               
         End If
 
-        If val(Me.XPTxtValue(1).text) > 0 Then
+        If val(Me.XPTxtValue(1).Text) > 0 Then
             If ChkInstall.value = vbChecked Then
                 If val(Me.LblInstallTotal.Caption) = 0 Then
                     Msg = "ÌÃ» Õ”«» «·√ﬁ”«ÿ ﬁ»· ⁄„·Ì… «·Õ›Ÿ..!!!"
@@ -16081,6 +16505,50 @@ Dim Msg As String
              
             End If
         End If
+    End If
+    
+       If XPChkPayType(2).value = vbChecked Then
+        If val(Me.lbl(18).Caption) = 0 Then
+            If SystemOptions.UserInterface = ArabicInterface Then
+                Msg = "ÌÃ» ≈œŒ«· «·‘Ìﬂ«  ﬁ»· ⁄„·Ì… «·Õ›Ÿ..!!!"
+            Else
+                Msg = "Enter Cheques Data Before Save"
+            End If
+
+            MsgBox Msg, vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+            Me.XPTab301.CurrTab = 1
+            Screen.MousePointer = vbDefault
+            Exit Function
+        End If
+
+        If dcbanks.BoundText = "" Then
+            If SystemOptions.UserInterface = ArabicInterface Then
+                Msg = Msg + "ÌÃ»  ÕœÌœ «”„ «·»‰ﬂ     " & CHR(13)
+            Else
+                Msg = Msg + " Specify Bank NAme     " & CHR(13)
+            End If
+        
+            MsgBox Msg, vbOKOnly + vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+            '            Dcbanks.SetFocus
+            Sendkeys "{F4}"
+            Screen.MousePointer = vbDefault
+            Exit Function
+        Else
+    
+            Dim rsbank As New ADODB.Recordset
+            Set rsbank = New ADODB.Recordset
+            rsbank.Open "[TblOptions]", Cn, adOpenStatic, adLockOptimistic, adCmdTable
+       
+            If Not (rsbank.EOF Or rsbank.BOF) Then
+                If rsbank!banks_Accounts = True Then
+                    bank_account = get_bank_Account(val(Me.dcbanks.BoundText), "Account_Code2")
+                Else
+                    bank_account = get_bank_Account(val(Me.dcbanks.BoundText), "Account_Code")
+                End If
+            End If
+        
+        End If
+    
     End If
 
 End Function
@@ -16113,49 +16581,7 @@ Private Sub SaveData()
    '*************************
    If Not CheckBeforSave() Then Exit Sub
     '**********************************
-    If XPChkPayType(2).value = vbChecked Then
-        If val(Me.lbl(18).Caption) = 0 Then
-            If SystemOptions.UserInterface = ArabicInterface Then
-                Msg = "ÌÃ» ≈œŒ«· «·‘Ìﬂ«  ﬁ»· ⁄„·Ì… «·Õ›Ÿ..!!!"
-            Else
-                Msg = "Enter Cheques Data Before Save"
-            End If
-
-            MsgBox Msg, vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
-            Me.XPTab301.CurrTab = 1
-            Screen.MousePointer = vbDefault
-            Exit Sub
-        End If
-
-        If Dcbanks.BoundText = "" Then
-            If SystemOptions.UserInterface = ArabicInterface Then
-                Msg = Msg + "ÌÃ»  ÕœÌœ «”„ «·»‰ﬂ     " & CHR(13)
-            Else
-                Msg = Msg + " Specify Bank NAme     " & CHR(13)
-            End If
-        
-            MsgBox Msg, vbOKOnly + vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
-            '            Dcbanks.SetFocus
-            Sendkeys "{F4}"
-            Screen.MousePointer = vbDefault
-            Exit Sub
-        Else
-    
-            Dim rsbank As New ADODB.Recordset
-            Set rsbank = New ADODB.Recordset
-            rsbank.Open "[TblOptions]", Cn, adOpenStatic, adLockOptimistic, adCmdTable
-       
-            If Not (rsbank.EOF Or rsbank.BOF) Then
-                If rsbank!banks_Accounts = True Then
-                    bank_account = get_bank_Account(val(Me.Dcbanks.BoundText), "Account_Code2")
-                Else
-                    bank_account = get_bank_Account(val(Me.Dcbanks.BoundText), "Account_Code")
-                End If
-            End If
-        
-        End If
-    
-    End If
+ 
 
     XPTab301.CurrTab = 0
 
@@ -16182,9 +16608,9 @@ Private Sub SaveData()
 
     '-------------------------------
  
-    DblNotesTotal = DblNotesTotal + val(Me.XPTxtValue(1).text)
+    DblNotesTotal = DblNotesTotal + val(Me.XPTxtValue(1).Text)
  
-    DblNotesTotal = val(Me.XPTxtValue(0).text) + val(Me.XPTxtValue(1).text) + val(lbl(18).Caption)
+    DblNotesTotal = val(Me.XPTxtValue(0).Text) + val(Me.XPTxtValue(1).Text) + val(lbl(18).Caption)
 
     If CboPayMentType.ListIndex = 1 Then
         Me.XPChkPayType(1).value = 1
@@ -16197,7 +16623,7 @@ Private Sub SaveData()
     'Create big notes
     GoTo xll
 
-    If TxtNoteSerial.text = "" Then
+    If TxtNoteSerial.Text = "" Then
         If Notes_coding(val(my_branch), XPDtbBill.value) = "error" Then
             MsgBox " ·« Ì„ﬂ‰ «÷«›… ﬁÌÊœ ·Â–… «·⁄„·Ì… ·«‰ﬂ  ⁄œÌ  «·Õœ «·«ﬁ’Ì ··ﬁÌÊœ ﬂ„« Õœœ  ›Ì  —ﬁÌ„ «·”‰œ«  ": Exit Sub
         Else
@@ -16205,14 +16631,14 @@ Private Sub SaveData()
             If Notes_coding(val(my_branch), XPDtbBill.value) = "" Then
                 MsgBox " ·«Ì„ﬂ‰ «‰‘«¡ «·ﬁÌœ ·Â–« «·„” ‰œ ·«‰ﬂ Õœœ   —ﬁÌ„ ﬁÌÊœ ÌœÊÌ  ": Exit Sub
             Else
-                TxtNoteSerial.text = Notes_coding(val(my_branch), XPDtbBill.value)
+                TxtNoteSerial.Text = Notes_coding(val(my_branch), XPDtbBill.value)
             End If
         End If
     End If
         
     Dim NoteSerial1str As String
         
-    If TxtNoteSerial1.text = "" Then
+    If TxtNoteSerial1.Text = "" Then
     
         NoteSerial1str = Voucher_coding(val(my_branch), XPDtbBill.value, 6, 150, , 22, , val(DCboStoreName.BoundText))
 
@@ -16223,7 +16649,7 @@ Private Sub SaveData()
             If NoteSerial1str = "" Then
                 MsgBox " ·«»œ „‰ ﬂ «»… —ﬁ„ ›« Ê—… „‘ —Ì«   ÌœÊÌ« ﬂ„« Õœœ   ": Exit Sub
             Else
-                TxtNoteSerial1.text = NoteSerial1str
+                TxtNoteSerial1.Text = NoteSerial1str
             End If
         End If
     End If
@@ -16238,7 +16664,7 @@ xll:
     Cn.BeginTrans
     BeginTrans = True
     
-    Cn.Execute "delete DOUBLE_ENTREY_VOUCHERS where Transaction_ID = " & val(Text2.text)
+    Cn.Execute "delete DOUBLE_ENTREY_VOUCHERS where Transaction_ID = " & val(Text2.Text)
     Save_Financial_invoice
     save_expenses
 
@@ -16253,48 +16679,48 @@ xll:
     StrSQL = "SELECT     dbo.Notes.* from dbo.Notes Where (NoteID = -1)"
     RsNotes.Open StrSQL, Cn, adOpenKeyset, adLockOptimistic, adCmdText
 
-    If Me.TxtModFlg.text = "N" Then
-        XPTxtBillID.text = CStr(new_id("Transactions", "Transaction_ID", "", True))
+    If Me.TxtModFlg.Text = "N" Then
+        XPTxtBillID.Text = CStr(new_id("Transactions", "Transaction_ID", "", True))
         rs.AddNew
-        rs("Transaction_ID").value = val(XPTxtBillID.text)
+        rs("Transaction_ID").value = val(XPTxtBillID.Text)
 
         If TxtNoteSerial1 = "" Then
-            TxtNoteSerial1.text = Voucher_coding(val(my_branch), XPDtbBill.value, 6, 150, , 22, , val(DCboStoreName.BoundText))
+            TxtNoteSerial1.Text = Voucher_coding(val(my_branch), XPDtbBill.value, 6, 150, , 22, , val(DCboStoreName.BoundText))
         End If
       
-        Me.TxtTransSerial.text = CStr(new_id("Transactions", "Transaction_Serial", "", True, "Transaction_Type=21"))
+        Me.TxtTransSerial.Text = CStr(new_id("Transactions", "Transaction_Serial", "", True, "Transaction_Type=21"))
          
-        Me.oldtxtNoteSerial1.text = Trim$(Me.TxtNoteSerial1.text)
+        Me.oldtxtNoteSerial1.Text = Trim$(Me.TxtNoteSerial1.Text)
           
-    ElseIf Me.TxtModFlg.text = "E" Then
+    ElseIf Me.TxtModFlg.Text = "E" Then
 
-        If rs("Transaction_ID").value <> val(XPTxtBillID.text) Then
-            rs.Find "Transaction_ID=" & val(XPTxtBillID.text), , adSearchForward, 1
+        If rs("Transaction_ID").value <> val(XPTxtBillID.Text) Then
+            rs.Find "Transaction_ID=" & val(XPTxtBillID.Text), , adSearchForward, 1
         End If
 
-        Cn.Execute "delete from Transaction_Details where Transaction_ID in ( " & GetTrnasectionID(val(XPTxtBillID.text), 22) & " )"
-        Cn.Execute "delete from Transactions where Transaction_ID in ( " & GetTrnasectionID(val(XPTxtBillID.text), 22) & " )"
-        Cn.Execute "delete from DOUBLE_ENTREY_VOUCHERS where Transaction_ID in ( " & GetTrnasectionID(val(XPTxtBillID.text), 22) & " )"
-        Cn.Execute "Delete From TblTransctionIDES where Transaction_Type=22 and MainTransaction_ID=" & val(XPTxtBillID.text) & " "
+        Cn.Execute "delete from Transaction_Details where Transaction_ID in ( " & GetTrnasectionID(val(XPTxtBillID.Text), 22) & " )"
+        Cn.Execute "delete from Transactions where Transaction_ID in ( " & GetTrnasectionID(val(XPTxtBillID.Text), 22) & " )"
+        Cn.Execute "delete from DOUBLE_ENTREY_VOUCHERS where Transaction_ID in ( " & GetTrnasectionID(val(XPTxtBillID.Text), 22) & " )"
+        Cn.Execute "Delete From TblTransctionIDES where Transaction_Type=22 and MainTransaction_ID=" & val(XPTxtBillID.Text) & " "
   
-        Cn.Execute "Delete from TransactionValueAdded where Transaction_ID=" & val(Me.XPTxtBillID.text) & ""
-        StrSqlDel = "delete From TblSalesPayment where TransID=" & val(Me.XPTxtBillID.text) 'Val(rs("Transaction_ID").value)
+        Cn.Execute "Delete from TransactionValueAdded where Transaction_ID=" & val(Me.XPTxtBillID.Text) & ""
+        StrSqlDel = "delete From TblSalesPayment where TransID=" & val(Me.XPTxtBillID.Text) 'Val(rs("Transaction_ID").value)
         Cn.Execute StrSqlDel, , adExecuteNoRecords
         StrSqlDel = "delete From Transaction_Details where Transaction_ID=" & val(rs("Transaction_ID").value)
         Cn.Execute StrSqlDel, , adExecuteNoRecords
           
         StrSqlDel = "delete From Notes where Transaction_ID=" & val(rs("Transaction_ID").value)
         Cn.Execute StrSqlDel, , adExecuteNoRecords
-        StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Transaction_ID=" & val(Me.XPTxtBillID.text)
+        StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Transaction_ID=" & val(Me.XPTxtBillID.Text)
         Cn.Execute StrSQL
         
-        StrSqlDel = "delete From Notes where   NoteType= 150 and noteid=" & val(TXTNoteID.text)
+        StrSqlDel = "delete From Notes where   NoteType= 150 and noteid=" & val(TXTNoteID.Text)
         Cn.Execute StrSqlDel
         
-        general_noteid = val(TXTNoteID.text)
+        general_noteid = val(TXTNoteID.Text)
 
-        If TxtNoteSerial.text = "" Then
-            TxtNoteSerial1.text = Voucher_coding(val(my_branch), XPDtbBill.value, 6, 150, , 22, , val(DCboStoreName.BoundText))
+        If TxtNoteSerial.Text = "" Then
+            TxtNoteSerial1.Text = Voucher_coding(val(my_branch), XPDtbBill.value, 6, 150, , 22, , val(DCboStoreName.BoundText))
         End If
         
     End If
@@ -16311,39 +16737,39 @@ xll:
         rs("VstReverse").value = 0
     End If
  
-    rs("txtManulaVat").value = val(txtManulaVat.text)
+    rs("txtManulaVat").value = val(txtManulaVat.Text)
 
-    rs("VATCustoms").value = val(TxtVATCustoms.text)
-    rs("VATCustoms1").value = val(TxtVATCustoms1.text)
-    rs("VATNO").value = IIf(Trim(Me.TxtVATNO.text) = "", Null, Trim(Me.TxtVATNO.text))
-    rs("VAT").value = val(TxtValueAdded.text)
+    rs("VATCustoms").value = val(TxtVATCustoms.Text)
+    rs("VATCustoms1").value = val(TxtVATCustoms1.Text)
+    rs("VATNO").value = IIf(Trim(Me.TxtVATNO.Text) = "", Null, Trim(Me.TxtVATNO.Text))
+    rs("VAT").value = val(TxtValueAdded.Text)
     rs("Emp_ID").value = IIf(DcboEmp.BoundText = "", Null, val(DcboEmp.BoundText))
-    rs("ManualNo1").value = IIf(TxtManualNo1.text = "", Null, val(TxtManualNo1.text))
+    rs("ManualNo1").value = IIf(TxtManualNo1.Text = "", Null, val(TxtManualNo1.Text))
     rs("BranchId").value = IIf(Me.dcBranch.BoundText = "", 0, val(dcBranch.BoundText))
-    rs("NoteSerial").value = IIf(Trim(Me.TxtNoteSerial.text) = "", Null, Trim(Me.TxtNoteSerial.text))
-    rs("NoteSerial1").value = IIf(Trim(Me.TxtNoteSerial1.text) = "", Null, Trim(Me.TxtNoteSerial1.text))
-    rs("OldNoteSerial1").value = Trim$(Me.oldtxtNoteSerial1.text) '
-    rs("NoteId").value = val(TXTNoteID.text)
-    rs("order_no").value = IIf((TXT_order_no.text) = "", Null, TXT_order_no.text)
-    rs("ContainerNo").value = IIf(txtContainerNo.text = "", Null, Trim(txtContainerNo.text))
+    rs("NoteSerial").value = IIf(Trim(Me.TxtNoteSerial.Text) = "", Null, Trim(Me.TxtNoteSerial.Text))
+    rs("NoteSerial1").value = IIf(Trim(Me.TxtNoteSerial1.Text) = "", Null, Trim(Me.TxtNoteSerial1.Text))
+    rs("OldNoteSerial1").value = Trim$(Me.oldtxtNoteSerial1.Text) '
+    rs("NoteId").value = val(TXTNoteID.Text)
+    rs("order_no").value = IIf((TXT_order_no.Text) = "", Null, TXT_order_no.Text)
+    rs("ContainerNo").value = IIf(txtContainerNo.Text = "", Null, Trim(txtContainerNo.Text))
     rs("poTransaction_ID").value = val(poTransaction_ID)
     
-    rs("Currency_rate").value = IIf(Not IsNumeric(txt_Currency_rate.text), 1, txt_Currency_rate.text)
-    rs("Transaction_Serial").value = IIf(Trim(Me.TxtTransSerial.text) = "", Null, Trim(Me.TxtTransSerial.text))
+    rs("Currency_rate").value = IIf(Not IsNumeric(txt_Currency_rate.Text), 1, txt_Currency_rate.Text)
+    rs("Transaction_Serial").value = IIf(Trim(Me.TxtTransSerial.Text) = "", Null, Trim(Me.TxtTransSerial.Text))
     rs("Transaction_Date").value = XPDtbBill.value
     rs("ArrivalDate").value = DTArrivalDate.value
     rs("Doctype").value = IIf(Me.DCDocTypes.BoundText = "", Null, val(DCDocTypes.BoundText))
     rs("Transaction_Type").value = BillType
     rs("DueDate").value = DtpDelayDate.value
     rs("UserID").value = user_id
-    rs("nots").value = Text1.text
-    rs("Typ").value = val(Me.DcbTyp.ListIndex)
-    rs("ResonVAT").value = TXtResonVAT.text
+    rs("nots").value = Text1.Text
+    rs("Typ").value = val(Me.Dcbtyp.ListIndex)
+    rs("ResonVAT").value = TXtResonVAT.Text
     rs("BLDate").value = BLDate.value
-    rs("TransactionComment").value = IIf(Trim$(TxtBillComment.text) = "", Null, Trim$(TxtBillComment.text))
+    rs("TransactionComment").value = IIf(Trim$(TxtBillComment.Text) = "", Null, Trim$(TxtBillComment.Text))
 
-    If Trim$(Me.TxtCashCustomerName.text) <> "" Then
-        rs("CashCustomerName").value = Trim$(Me.TxtCashCustomerName.text)
+    If Trim$(Me.TxtCashCustomerName.Text) <> "" Then
+        rs("CashCustomerName").value = Trim$(Me.TxtCashCustomerName.Text)
     Else
         rs("CashCustomerName").value = Null
     End If
@@ -16358,7 +16784,7 @@ xll:
         rs("Trans_Discount").value = Null
  
     Else
-        rs("Trans_Discount").value = IIf(XPTxtDiscountVal.text = "", Null, (XPTxtDiscountVal.text))
+        rs("Trans_Discount").value = IIf(XPTxtDiscountVal.Text = "", Null, (XPTxtDiscountVal.Text))
     End If
 
     If CboPayMentType.ListIndex = -1 Then
@@ -16372,13 +16798,13 @@ xll:
         End If
     End If
 
-    If Trim$(Me.TxtPhone.text) <> "" Then
-        rs("CashCustomerPhone").value = Trim$(Me.TxtPhone.text)
+    If Trim$(Me.TxtPhone.Text) <> "" Then
+        rs("CashCustomerPhone").value = Trim$(Me.TxtPhone.Text)
     Else
         rs("CashCustomerPhone").value = Null
     End If
 
-    rs("AddValue").value = IIf(val(txtAddValue.Caption) = 0, Null, val(txtAddValue.Caption))
+    rs("AddValue").value = IIf(val(TxtAddValue.Caption) = 0, Null, val(TxtAddValue.Caption))
 
     If ChAddToTotal.value = vbChecked Then
         rs("AddToTotal").value = 1
@@ -16386,16 +16812,19 @@ xll:
         rs("AddToTotal").value = Null
     End If
      
-    rs("project_id").value = IIf(dcproject.BoundText = "", Null, (dcproject.BoundText))
+  
+      rs("project_id").value = IIf(DCproject.BoundText = "", Null, (DCproject.BoundText))
     rs("CusID").value = IIf(DBCboClientName.BoundText = "", Null, (DBCboClientName.BoundText))
     rs("StoreID").value = IIf(DCboStoreName.BoundText = "", Null, (DCboStoreName.BoundText))
+    rs("AdvPay").value = IIf(txtAdvPay.Text = "", 0, val(txtAdvPay.Text))
     rs("TaxFound").value = IIf(XPChkTAX.value = Checked, True, False)
-    rs("TaxValue").value = IIf(XPTxtTaxValue.text = "", Null, val(XPTxtTaxValue.text))
-    rs("ToTAlELSHahn").value = IIf(Not IsNumeric(TXTToTAlELSHahn.text), 0, Me.TXTToTAlELSHahn.text)
+
+    rs("TaxValue").value = IIf(XPTxtTaxValue.Text = "", Null, val(XPTxtTaxValue.Text))
+    rs("ToTAlELSHahn").value = IIf(Not IsNumeric(TXTToTAlELSHahn.Text), 0, Me.TXTToTAlELSHahn.Text)
     
-    rs("total_expenses").value = IIf(Not IsNumeric(Txt_EXport.text), 0, Txt_EXport.text)
-    rs("total_payments").value = IIf(Not IsNumeric(txt_total_bill.text), 0, txt_total_bill.text)
-    rs("LcNo").value = IIf(TxtLcNo.text = "", Null, (TxtLcNo.text))
+    rs("total_expenses").value = IIf(Not IsNumeric(Txt_EXport.Text), 0, Txt_EXport.Text)
+    rs("total_payments").value = IIf(Not IsNumeric(txt_total_bill.Text), 0, txt_total_bill.Text)
+    rs("LcNo").value = IIf(TxtLCNO.Text = "", Null, (TxtLCNO.Text))
     rs("Transaction_NetValue").value = val(LblTotal.Caption)
 
 
@@ -16406,33 +16835,33 @@ xll:
         End If
 
     '÷—»Ì… Œ’„ Ê≈÷«›…
-    If ChkTaxAdd.value = vbChecked And val(Me.TxtTaxAddValue.text) > 0 Then
-        rs("TaxAddValue").value = val(Me.TxtTaxAddValue.text)
+    If ChkTaxAdd.value = vbChecked And val(Me.TxtTaxAddValue.Text) > 0 Then
+        rs("TaxAddValue").value = val(Me.TxtTaxAddValue.Text)
     Else
         rs("TaxAddValue").value = 0
     End If
 
     '÷—»Ì… œ„€…
-    If ChkTaxStamp.value = vbChecked And val(Me.TxtTaxStampValue.text) > 0 Then
-        rs("TaxStampValue").value = val(Me.TxtTaxStampValue.text)
+    If ChkTaxStamp.value = vbChecked And val(Me.TxtTaxStampValue.Text) > 0 Then
+        rs("TaxStampValue").value = val(Me.TxtTaxStampValue.Text)
     Else
         rs("TaxStampValue").value = 0
     End If
 
     '÷—»Ì… Œœ„…
-    If ChkTaxSerivce.value = vbChecked And val(Me.TxtTaxServiceValue.text) > 0 Then
-        rs("TaxServiceValue").value = val(Me.TxtTaxServiceValue.text)
+    If ChkTaxSerivce.value = vbChecked And val(Me.TxtTaxServiceValue.Text) > 0 Then
+        rs("TaxServiceValue").value = val(Me.TxtTaxServiceValue.Text)
     Else
         rs("TaxServiceValue").value = 0
     End If
 
     'rs("Shipment_no").value = IIf(txt_Shipment_no.text = "", Null, (txt_Shipment_no.text))
-    rs("order_no").value = IIf(TXT_order_no.text = "", Null, (TXT_order_no.text))
-    rs("Currency_id").value = IIf(Dccurrency.BoundText = "", Null, val(Dccurrency.BoundText))
+    rs("order_no").value = IIf(TXT_order_no.Text = "", Null, (TXT_order_no.Text))
+    rs("Currency_id").value = IIf(DcCurrency.BoundText = "", Null, val(DcCurrency.BoundText))
     rs("BoxID").value = IIf(Me.DcboBox.BoundText = "", Null, val(DcboBox.BoundText))
     '
     rs("BankID").value = IIf(Me.DcboBankName.BoundText = "", Null, val(DcboBankName.BoundText))
-    rs("ManualNO").value = IIf(TxtManualNO.text = "", Null, (TxtManualNO.text))
+    rs("ManualNO").value = IIf(txtManualNO.Text = "", Null, (txtManualNO.Text))
 
     If XPCboDiscountType.ListIndex = -1 Then
         rs("CBoBasedON").value = 0
@@ -16456,26 +16885,26 @@ xll:
     Dim Notevalue  As Double
     Dim des        As String
 
-    If Me.TxtNoteSerial.text <> "" Then
-        NoteSerial = Me.TxtNoteSerial.text
+    If Me.TxtNoteSerial.Text <> "" Then
+        NoteSerial = Me.TxtNoteSerial.Text
     End If
         
     If ChAddToTotal.value = vbUnchecked Then
-        Notevalue = (NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.text)
+        Notevalue = (NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.Text)
     Else
         '  If ChSameCurrncy.value = vbChecked Then
         '  Notevalue = (val(TxtAddValue.Caption) + NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.Text)
         '  Else
-        Notevalue = (val(txtAddValue.Caption) + NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.text)
+        Notevalue = (val(TxtAddValue.Caption) + NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.Text)
         '  End If
     End If
 
-    Notevalue = Notevalue + val(LblValueAdded.Caption) * val(txt_Currency_rate.text)
+    Notevalue = Notevalue + val(LblValueAdded.Caption) * val(txt_Currency_rate.Text)
          
-    SaveSalesPayment val(Me.XPTxtBillID.text)
+    SaveSalesPayment val(Me.XPTxtBillID.Text)
 
-    CreateNotes NoteID, (XPDtbBill.value), val(dcBranch.BoundText), 150, Notevalue, NoteSerial, TxtNoteSerial1, "Transactions", "Transaction_ID", val(XPTxtBillID.text), TxtNoteSerial1.text, ToHijriDate(XPDtbBill.value), TxtManualNO.text
-    TXTNoteID.text = NoteID
+    CreateNotes NoteID, (XPDtbBill.value), val(dcBranch.BoundText), 150, Notevalue, NoteSerial, TxtNoteSerial1, "Transactions", "Transaction_ID", val(XPTxtBillID.Text), TxtNoteSerial1.Text, ToHijriDate(XPDtbBill.value), txtManualNO.Text
+    TXTNoteID.Text = NoteID
     general_noteid = NoteID
     
     Dim mTaxExemptTotal As Double
@@ -16485,7 +16914,7 @@ xll:
         'Check Repeat Serial
         If FG.TextMatrix(RowNum, FG.ColIndex("Serial")) <> "" Then
             StrSQL = "select * From Transaction_Details where ItemSerial='" & FG.TextMatrix(RowNum, FG.ColIndex("Serial")) & "'"
-            StrSQL = StrSQL + " and Transaction_ID =" & XPTxtBillID.text
+            StrSQL = StrSQL + " and Transaction_ID =" & XPTxtBillID.Text
             Set RsTemp = New ADODB.Recordset
             RsTemp.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
 
@@ -16521,7 +16950,7 @@ xll:
             RSTransDetails.AddNew
             RSTransDetails("BranchId").value = Me.dcBranch.BoundText
             RSTransDetails("OrderArrivalDate").value = IIf(Not IsDate(FG.TextMatrix(RowNum, FG.ColIndex("OrderArrivalDate"))), Me.XPDtbBill.value, FG.TextMatrix(RowNum, FG.ColIndex("OrderArrivalDate")))
-            RSTransDetails("Transaction_ID").value = val(XPTxtBillID.text)
+            RSTransDetails("Transaction_ID").value = val(XPTxtBillID.Text)
             RSTransDetails("Item_ID").value = IIf((FG.TextMatrix(RowNum, FG.ColIndex("Code")) = ""), Null, val(FG.TextMatrix(RowNum, FG.ColIndex("Code"))))
             RSTransDetails("Quantity").value = IIf((FG.TextMatrix(RowNum, FG.ColIndex("Count")) = ""), Null, val(FG.TextMatrix(RowNum, FG.ColIndex("Count"))))
             RSTransDetails("StoreID2").value = IIf((FG.TextMatrix(RowNum, FG.ColIndex("StoreID2")) = ""), Null, val(FG.TextMatrix(RowNum, FG.ColIndex("StoreID2"))))
@@ -16630,7 +17059,7 @@ xll:
             RSTransDetails("discountvalue").value = IIf((FG.TextMatrix(RowNum, FG.ColIndex("discountvalue")) = ""), Null, val(FG.TextMatrix(RowNum, FG.ColIndex("discountvalue")))) / RSTransDetails("Quantity").value
       
             'RATE = IIf((Fg.TextMatrix(RowNum, Fg.ColIndex("ScurrencyID")) = ""), Null, val(Fg.TextMatrix(RowNum, Fg.ColIndex("ScurrencyID"))))
-            RSTransDetails("rate").value = val(txt_Currency_rate.text)
+            RSTransDetails("rate").value = val(txt_Currency_rate.Text)
 
             If val(LblTotal.Caption) = 0 Then LblTotal.Caption = 1
             ' RSTransDetails("ToTAlELSHahn") = Round((((RSTransDetails("showPrice") * _
@@ -16640,22 +17069,22 @@ xll:
 
             If SystemOptions.ExpensesByQtyOnly = True Then
             
-                TotalShahnPerLine = ((((IIf(IsNull(RSTransDetails("price")), 0, 1) * IIf(IsNull(RSTransDetails("Quantity")), 0, RSTransDetails("Quantity")) / (LblTotalQty.Caption))) * val(TXTToTAlELSHahn.text)) / IIf(IsNull(RSTransDetails("Quantity")), 0, RSTransDetails("Quantity")))
+                TotalShahnPerLine = ((((IIf(IsNull(RSTransDetails("price")), 0, 1) * IIf(IsNull(RSTransDetails("Quantity")), 0, RSTransDetails("Quantity")) / (LblTotalQty.Caption))) * val(TXTToTAlELSHahn.Text)) / IIf(IsNull(RSTransDetails("Quantity")), 0, RSTransDetails("Quantity")))
             
             Else
-                TotalShahnPerLine = ((((IIf(IsNull(RSTransDetails("price")), 0, RSTransDetails("price")) * IIf(IsNull(RSTransDetails("Quantity")), 0, RSTransDetails("Quantity")) / (LblTotalAll.Caption))) * val(TXTToTAlELSHahn.text)) / IIf(IsNull(RSTransDetails("Quantity")), 0, RSTransDetails("Quantity")))
+                TotalShahnPerLine = ((((IIf(IsNull(RSTransDetails("price")), 0, RSTransDetails("price")) * IIf(IsNull(RSTransDetails("Quantity")), 0, RSTransDetails("Quantity")) / (LblTotalAll.Caption))) * val(TXTToTAlELSHahn.Text)) / IIf(IsNull(RSTransDetails("Quantity")), 0, RSTransDetails("Quantity")))
             End If
             
             TotalShahnPerLine = Round(TotalShahnPerLine, 15) 'Val(Format(TotalShahnPerLine, "." & String(Abs(18), "#")))
             RSTransDetails("ToTAlELSHahn") = TotalShahnPerLine
          
             If Me.XPCboDiscountType.ListIndex = 1 Then
-                TotalBillDiscount = IIf(XPTxtDiscountVal.text = "", Null, (XPTxtDiscountVal.text))
+                TotalBillDiscount = IIf(XPTxtDiscountVal.Text = "", Null, (XPTxtDiscountVal.Text))
                      
             ElseIf XPCboDiscountType.ListIndex = 2 Then
 
-                If XPTxtDiscountVal.text <> "" Then
-                    TotalBillDiscount = IIf(XPTxtDiscountVal.text = "", Null, (XPTxtDiscountVal.text)) * val(LblTotalAll.Caption) / 100
+                If XPTxtDiscountVal.Text <> "" Then
+                    TotalBillDiscount = IIf(XPTxtDiscountVal.Text = "", Null, (XPTxtDiscountVal.Text)) * val(LblTotalAll.Caption) / 100
                              
                 Else
                     TotalBillDiscount = 0
@@ -16760,12 +17189,12 @@ xll:
         note_id = RsNotes("NoteID").value
         RsNotes("NoteDate").value = XPDtbBill.value
  
-        RsNotes("remark").value = Me.TxtNoteSerial1.text
+        RsNotes("remark").value = Me.TxtNoteSerial1.Text
         RsNotes("NoteSerial").value = Null
 
-        RsNotes("Transaction_ID").value = val(XPTxtBillID.text)
+        RsNotes("Transaction_ID").value = val(XPTxtBillID.Text)
         RsNotes("NoteType").value = 1
-        RsNotes("Note_Value").value = IIf(XPTxtValue(1).text = "", Null, val(XPTxtValue(1).text))
+        RsNotes("Note_Value").value = IIf(XPTxtValue(1).Text = "", Null, val(XPTxtValue(1).Text))
         RsNotes("Member_ID").value = IIf(DBCboClientName.BoundText = "", Null, val(DBCboClientName.BoundText))
         RsNotes("BankID").value = Null
         RsNotes("CusID").value = IIf(DBCboClientName.BoundText = "", Null, val(DBCboClientName.BoundText)) 'Null SALIM MY BE ERROR
@@ -16786,65 +17215,9 @@ chkTaxExempt_Click
 
     End If
 
-    'Õ›Ÿ «·√›”«ÿ
-    If Me.XPChkPayType(1).value = Checked Then
-        If ChkInstall.value = vbChecked Then
-            'Save installment Data
-            Set RsTemp = New ADODB.Recordset
-            
-            '      RsTemp.Open "InstallMent", Cn, adOpenStatic, adLockOptimistic, adCmdTable
-                 
-            StrSQL = " SELECT       * FROM  dbo.InstallMent WHERE     (PartID = - 1)"
-            RsTemp.Open StrSQL, Cn, adOpenKeyset, adLockOptimistic, adCmdText
-      
-            RsTemp.AddNew
-            RsTemp("PartID").value = CStr(new_id("InstallMent", "PartID", "", True))
-            RsTemp("NoteID").value = note_id
-            RsTemp("BasicAmmount").value = IIf(XPTxtValue(1).text = "", 0, val(XPTxtValue(1).text))
-            RsTemp("InterestType").value = val(Me.LblPrecenType.Tag)
-            RsTemp("InterestVal").value = val(LblPrecenValue.Caption)
-            RsTemp("Total").value = val(LblInstallTotal.Caption)
-            RsTemp("InstallCount").value = val(LblInstallCount.Caption)
-            RsTemp("FirstInstallDate").value = CDate(Me.LblFirstInstallDate.Caption)
-
-            If val(LblInstallmentType.Tag) = 0 Then
-                RsTemp("InstallmentType").value = 0
-            ElseIf val(LblInstallmentType.Tag) = 1 Then
-                RsTemp("InstallmentType").value = 1
-            ElseIf val(LblInstallmentType.Tag) = 2 Then
-                RsTemp("InstallmentType").value = 2
-            End If
-
-            RsTemp("InstallSeprator").value = val(Me.LblInstallSeprator.Caption)
-            RsTemp("StartValue").value = IIf(val(Me.LblStartValue.Caption) = 0, Null, val(Me.LblStartValue.Caption))
-            RsTemp("CustID").value = IIf(DBCboClientName.BoundText = "", Null, val(DBCboClientName.BoundText))
-            RsTemp("Type").value = 1
-            RsTemp.update
-            'save installment Details
-            Set RsDetalis = New ADODB.Recordset
-            '   RsDetalis.Open "InstallMentDetails", Cn, adOpenStatic, adLockOptimistic, adCmdTable
-
-            StrSQL = " SELECT       * FROM  dbo.InstallMentDetails WHERE     (PartID = - 1)"
-            RsDetalis.Open StrSQL, Cn, adOpenKeyset, adLockOptimistic, adCmdText
-      
-            With Me.FgInstallments
-
-                For RowNum = 1 To .rows - 1
-                    RsDetalis.AddNew
-                    RsDetalis("QestID").value = CStr(new_id("InstallMentDetails", "QestID", "", True))
-                    RsDetalis("PartID").value = RsTemp("PartID").value
-                    RsDetalis("QeqtNum").value = IIf(.TextMatrix(RowNum, .ColIndex("Serial")) = "", "", .TextMatrix(RowNum, .ColIndex("Serial")))
-                    RsDetalis("Value").value = IIf(.TextMatrix(RowNum, .ColIndex("Value")) = "", "", val(.TextMatrix(RowNum, .ColIndex("Value"))))
-                    RsDetalis("DueDate").value = IIf(.TextMatrix(RowNum, .ColIndex("Due_Date")) = "", "", .TextMatrix(RowNum, .ColIndex("Due_Date")))
-                    RsDetalis("Receipt").value = False
-                    RsDetalis.update
-                Next RowNum
-
-            End With
-
-        End If
-    End If
-
+  SaveInstall note_id
+ 
+ 
     Dim LngDevID             As Long, LngDevNO            As Integer, StrTempAccountCode  As String, StrTempDes          As String
     Dim SngTemp              As Variant
     Dim SngTemp2             As Variant
@@ -16853,7 +17226,7 @@ chkTaxExempt_Click
     'If SystemOptions.PoCreateVoucher = True And CBoBasedON.ListIndex = 1 And TXT_order_no.text <> "" Then GoTo NewGL2
 
     If SystemOptions.PoCreateVoucher = True And CboPayMentType.ListIndex = 1 Then
-        If TXT_order_no.text = "" Then
+        If TXT_order_no.Text = "" Then
  
         Else
             GoTo NewGL2
@@ -16864,9 +17237,23 @@ chkTaxExempt_Click
     Dim Note_Value   As Double
     Dim Note_Value2  As Double
     Dim Account_code As String
+    Dim AdvancedAccount As String
+    Dim AdvPayLocal As Double
+
    
     ''
     LngDevID = new_id("DOUBLE_ENTREY_VOUCHERS", "Double_Entry_Vouchers_ID", "")
+
+    If SystemOptions.CustomerhavethreeAccounts = True Then
+        AdvancedAccount = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Me.DBCboClientName.BoundText), "Account_code2")
+    Else
+        AdvancedAccount = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(Me.DBCboClientName.BoundText), "Account_code")
+    End If
+
+    If AdvancedAccount = "" Then txtAdvPay.Text = 0
+    AdvPayLocal = Round(val(txtAdvPay.Text) * val(txt_Currency_rate.Text), SystemOptions.SysDefCurrencyForamt)
+
+
 
     If ChkCompsBill.value = vbChecked Then GoTo NewGL
     If ChAddToTotal.value = vbUnchecked Then
@@ -16879,14 +17266,14 @@ chkTaxExempt_Click
                 If .TextMatrix(i, .ColIndex("AccountCode")) <> "" And val(.TextMatrix(i, .ColIndex("value"))) <> 0 And .TextMatrix(i, .ColIndex("AccountCode2")) <> "" Then
             
                     If SystemOptions.UserInterface = ArabicInterface Then
-                        StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.text & CHR(13) & Trim(.TextMatrix(i, .ColIndex("des")))
+                        StrTempDes = "”‰œ «” ·«„ —ﬁ„ " & TxtNoteSerial1V & " »‰«¡ ⁄·Ï ›« Ê—… „‘ —Ì«  —ﬁ„ " & Me.TxtNoteSerial1.Text & CHR(13) & Trim(.TextMatrix(i, .ColIndex("des")))
                     Else
-                        StrTempDes = "Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.text & CHR(13) & Trim(.TextMatrix(i, .ColIndex("des")))
+                        StrTempDes = "Recieve Voucher No. " & TxtNoteSerial1V & " Based On Purchase Invoice NO:" & Me.TxtNoteSerial1.Text & CHR(13) & Trim(.TextMatrix(i, .ColIndex("des")))
                     End If
             
                     LngDevNO = LngDevNO + 1
                     Account_code = .TextMatrix(i, .ColIndex("AccountCode"))
-                    Note_Value = val(.TextMatrix(i, .ColIndex("value"))) * val(txt_Currency_rate.text)
+                    Note_Value = val(.TextMatrix(i, .ColIndex("value"))) * val(txt_Currency_rate.Text)
                     Note_Value2 = val(.TextMatrix(i, .ColIndex("value")))
                     mDisc = Trim(.TextMatrix(i, .ColIndex("des")))
 
@@ -16917,10 +17304,10 @@ chkTaxExempt_Click
     
     '    SngTemp = (Val(Me.lblTotal.Caption) * Val(txt_Currency_rate.text))
     If ChAddToTotal.value = vbChecked Then
-        SngTemp2 = (val(txtAddValue.Caption) + NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption))
-        SngTemp = (val(txtAddValue.Caption) + NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.text)
+        SngTemp2 = (val(TxtAddValue.Caption) + NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption))
+        SngTemp = (val(TxtAddValue.Caption) + NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.Text)
     Else
-        SngTemp = (NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.text)
+        SngTemp = (NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.Text)
         SngTemp2 = (NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption))
     End If
 
@@ -16974,18 +17361,18 @@ chkTaxExempt_Click
             
             ' StrTempAccountCode = "a1a2a5" '„Œ“Ê‰ «·»÷«⁄…
             If SystemOptions.UserInterface = ArabicInterface Then
-                StrTempDes = "›« Ê—… ‘—«¡ —ﬁ„ " & Me.TxtNoteSerial1.text & " " & TxtBillComment.text
+                StrTempDes = "›« Ê—… ‘—«¡ —ﬁ„ " & Me.TxtNoteSerial1.Text & " " & TxtBillComment.Text
             Else
-                StrTempDes = "Purchase Invoice No: " & Me.TxtNoteSerial1.text & " " & TxtBillComment.text
+                StrTempDes = "Purchase Invoice No: " & Me.TxtNoteSerial1.Text & " " & TxtBillComment.Text
             End If
 
             LngDevNO = LngDevNO + 1
     
-            If TxtManualNO.text <> "" Then
+            If txtManualNO.Text <> "" Then
                 If SystemOptions.UserInterface = ArabicInterface Then
-                    StrTempDes = StrTempDes & " ›« Ê—… „Ê—œ —ﬁ„  " & TxtManualNO
+                    StrTempDes = StrTempDes & " ›« Ê—… „Ê—œ —ﬁ„  " & txtManualNO
                 Else
-                    StrTempDes = StrTempDes & " Supp Bill# " & TxtManualNO
+                    StrTempDes = StrTempDes & " Supp Bill# " & txtManualNO
                 End If
             
             End If
@@ -16993,8 +17380,8 @@ chkTaxExempt_Click
             Dim Material_account As String
             Dim project_id       As Integer
 
-            If SystemOptions.NotCrtResvVouchProjects = True And dcproject.BoundText <> "" Then
-                project_id = val(dcproject.BoundText)
+            If SystemOptions.NotCrtResvVouchProjects = True And DCproject.BoundText <> "" Then
+                project_id = val(DCproject.BoundText)
                 Material_account = get_project_Account(project_id, "Material_account")
                 
                 If Material_account <> "" Then
@@ -17035,7 +17422,7 @@ chkTaxExempt_Click
                         LngDevNO = LngDevNO + 1
 
                         mValue = val((val(FG.TextMatrix(i, FG.ColIndex("Count"))) * val(FG.TextMatrix(i, FG.ColIndex("Price"))))) - val(FG.TextMatrix(i, FG.ColIndex("DiscountValue")))
-                        If ModAccounts.AddNewDev(LngDevID, LngDevNO, Trim(FG.TextMatrix(i, FG.ColIndex("Account_Code"))), mValue, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.text), , , mValue, Dccurrency.text, val(txt_Currency_rate.text), , , , , val(dcproject.BoundText), , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
+                        If ModAccounts.AddNewDev(LngDevID, LngDevNO, Trim(FG.TextMatrix(i, FG.ColIndex("Account_Code"))), mValue, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , mValue, DcCurrency.Text, val(txt_Currency_rate.Text), , , , , val(DCproject.BoundText), , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
                             GoTo ErrTrap
                         End If
                 
@@ -17047,7 +17434,7 @@ chkTaxExempt_Click
                 
         
             Else
-                If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.text), , , SngTemp2, Dccurrency.text, val(txt_Currency_rate.text), , , , , val(dcproject.BoundText), , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
+                If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , SngTemp2, DcCurrency.Text, val(txt_Currency_rate.Text), , , , , val(DCproject.BoundText), , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
                     GoTo ErrTrap
                 End If
         
@@ -17056,7 +17443,7 @@ chkTaxExempt_Click
       
 
             '''/////////////////////
-            If val(TxtValueAdded.text) > 0 Then
+            If val(TxtValueAdded.Text) > 0 Then
                 Dim AccountVATCreit As String
                 GetValueAddedAccount XPDtbBill.value, AccountVATCreit, , 1, 22
                 LngDevNO = LngDevNO + 1
@@ -17067,10 +17454,10 @@ chkTaxExempt_Click
                     StrTempDes = StrTempDes & " VAT "
                 End If
 
-                SngTemp = Round(val(TxtValueAdded.text) * val(txt_Currency_rate.text), 2)
-                SngTemp2 = val(TxtValueAdded.text)
+                SngTemp = Round(val(TxtValueAdded.Text) * val(txt_Currency_rate.Text), 2)
+                SngTemp2 = val(TxtValueAdded.Text)
 
-                If ModAccounts.AddNewDev(LngDevID, LngDevNO, AccountVATCreit, SngTemp, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.text), , , SngTemp2, Dccurrency.text, val(txt_Currency_rate.text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
+                If ModAccounts.AddNewDev(LngDevID, LngDevNO, AccountVATCreit, SngTemp, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , SngTemp2, DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
                     GoTo ErrTrap
                 End If
             End If
@@ -17100,27 +17487,27 @@ chkTaxExempt_Click
                             GoTo ErrTrap
                         End If
 
-                        line_value = FG.TextMatrix(i, FG.ColIndex("Price")) * val(txt_Currency_rate.text) * FG.TextMatrix(i, FG.ColIndex("Count"))
+                        line_value = FG.TextMatrix(i, FG.ColIndex("Price")) * val(txt_Currency_rate.Text) * FG.TextMatrix(i, FG.ColIndex("Count"))
                         SngTemp2 = FG.TextMatrix(i, FG.ColIndex("Price")) * FG.TextMatrix(i, FG.ColIndex("Count"))
 
                         If SystemOptions.UserInterface = ArabicInterface Then
-                            StrTempDes = "›« Ê—… ‘—«¡ —ﬁ„ " & Me.TxtNoteSerial1.text & " " & TxtBillComment.text
+                            StrTempDes = "›« Ê—… ‘—«¡ —ﬁ„ " & Me.TxtNoteSerial1.Text & " " & TxtBillComment.Text
                         Else
-                            StrTempDes = "Purchase Invoice No: " & Me.TxtNoteSerial1.text & " " & TxtBillComment.text
+                            StrTempDes = "Purchase Invoice No: " & Me.TxtNoteSerial1.Text & " " & TxtBillComment.Text
                         End If
                             
-                        If TxtManualNO.text <> "" Then
+                        If txtManualNO.Text <> "" Then
                             If SystemOptions.UserInterface = ArabicInterface Then
-                                StrTempDes = StrTempDes & " ›« Ê—… „Ê—œ —ﬁ„  " & TxtManualNO
+                                StrTempDes = StrTempDes & " ›« Ê—… „Ê—œ —ﬁ„  " & txtManualNO
                             Else
-                                StrTempDes = StrTempDes & " Supp Bill# " & TxtManualNO
+                                StrTempDes = StrTempDes & " Supp Bill# " & txtManualNO
                             End If
             
                         End If
 
                         LngDevNO = LngDevNO + 1
 
-                        If ModAccounts.AddNewDev(LngDevID, LngDevNO, groupAccount, line_value, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.text), , , SngTemp2, Dccurrency.text, val(txt_Currency_rate.text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
+                        If ModAccounts.AddNewDev(LngDevID, LngDevNO, groupAccount, line_value, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , SngTemp2, DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
                             GoTo ErrTrap
                         End If
     
@@ -17153,18 +17540,18 @@ chkTaxExempt_Click
                             GoTo ErrTrap
                         End If
 
-                        line_value = (FG.TextMatrix(i, FG.ColIndex("Price")) * val(txt_Currency_rate.text) * FG.TextMatrix(i, FG.ColIndex("Count"))) - FG.TextMatrix(i, FG.ColIndex("Valu"))
+                        line_value = (FG.TextMatrix(i, FG.ColIndex("Price")) * val(txt_Currency_rate.Text) * FG.TextMatrix(i, FG.ColIndex("Count"))) - FG.TextMatrix(i, FG.ColIndex("Valu"))
                         SngTemp2 = (FG.TextMatrix(i, FG.ColIndex("Price")) * FG.TextMatrix(i, FG.ColIndex("Count"))) - FG.TextMatrix(i, FG.ColIndex("Valu"))
 
                         If SystemOptions.UserInterface = ArabicInterface Then
-                            StrTempDes = "›« Ê—… ‘—«¡ —ﬁ„ " & Me.TxtNoteSerial1.text & " " & TxtBillComment.text
+                            StrTempDes = "›« Ê—… ‘—«¡ —ﬁ„ " & Me.TxtNoteSerial1.Text & " " & TxtBillComment.Text
                         Else
-                            StrTempDes = "Purchase Invoice No: " & Me.TxtNoteSerial1.text & " " & TxtBillComment.text
+                            StrTempDes = "Purchase Invoice No: " & Me.TxtNoteSerial1.Text & " " & TxtBillComment.Text
                         End If
 
                         LngDevNO = LngDevNO + 1
 
-                        If ModAccounts.AddNewDev(LngDevID, LngDevNO, groupAccount, line_value, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.text), , , SngTemp2, Dccurrency.text, val(txt_Currency_rate.text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
+                        If ModAccounts.AddNewDev(LngDevID, LngDevNO, groupAccount, line_value, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , SngTemp2, DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
                             GoTo ErrTrap
                         End If
     
@@ -17179,7 +17566,7 @@ chkTaxExempt_Click
     End If
 
     '«·œ«∆‰
-    If Me.XPChkPayType(0).value = vbChecked Then
+ If Me.XPChkPayType(0).value = vbChecked Then
         If val(CboPayMentType.ListIndex) = 0 Then
 
             '«·Œ“Ì‰…
@@ -17201,16 +17588,16 @@ chkTaxExempt_Click
             End If
 
             If SystemOptions.UserInterface = ArabicInterface Then
-                StrTempDes = "›« Ê—… ‘—«¡ —ﬁ„ " & Me.TxtNoteSerial1.text & " " & TxtBillComment.text
+                StrTempDes = "›« Ê—… ‘—«¡ —ﬁ„ " & Me.TxtNoteSerial1.Text & " " & TxtBillComment.Text
             Else
-                StrTempDes = "Purchase Invoice No: " & Me.TxtNoteSerial1.text & " " & TxtBillComment.text
+                StrTempDes = "Purchase Invoice No: " & Me.TxtNoteSerial1.Text & " " & TxtBillComment.Text
             End If
     
-            If TxtManualNO.text <> "" Then
+            If txtManualNO.Text <> "" Then
                 If SystemOptions.UserInterface = ArabicInterface Then
-                    StrTempDes = StrTempDes & " ›« Ê—… „Ê—œ —ﬁ„  " & TxtManualNO
+                    StrTempDes = StrTempDes & " ›« Ê—… „Ê—œ —ﬁ„  " & txtManualNO
                 Else
-                    StrTempDes = StrTempDes & " Supp Bill# " & TxtManualNO
+                    StrTempDes = StrTempDes & " Supp Bill# " & txtManualNO
                 End If
             
             End If
@@ -17219,28 +17606,46 @@ chkTaxExempt_Click
             '  SngTemp = (Val(Me.lblTotal.Caption) * Val(txt_Currency_rate.text))
             ' SngTemp = NewGrid.GetItemsTotal(ItemsGoodType) * Val(txt_Currency_rate.text)
             If ChAddToTotal.value = vbChecked Then
-                SngTemp2 = (val(txtAddValue.Caption) + NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption))
-                SngTemp = (val(txtAddValue.Caption) + NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.text)
+                SngTemp2 = (val(TxtAddValue.Caption) + NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption))
+                SngTemp = (val(TxtAddValue.Caption) + NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.Text)
             Else
-                SngTemp = (NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.text)
+                SngTemp = (NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.Text)
                 SngTemp2 = (NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption))
             End If
 
-            SngTemp = SngTemp + val(LblValueAdded.Caption) * val(txt_Currency_rate.text)
+            SngTemp = SngTemp + val(LblValueAdded.Caption) * val(txt_Currency_rate.Text)
             SngTemp2 = SngTemp2 + val(LblValueAdded.Caption)
-            '   SngTemp = Round(SngTemp, SystemOptions.SysDefCurrencyForamt)
             SngTemp = Round(SngTemp, SystemOptions.SysDefCurrencyForamt)
             SngTemp2 = Round(SngTemp2, SystemOptions.SysDefCurrencyForamt)
             LngDevNO = LngDevNO + 1
 
-            If Trim(TxtLcNo) <> "" Then
-                StrTempAccountCode = GetMyAccountCode2("TblLC", "LCNO", TxtLcNo.text)
+            If Trim(TxtLCNO) <> "" Then
+                StrTempAccountCode = GetMyAccountCode2("TblLC", "LCNO", TxtLCNO.Text)
             End If
 
             OtherInformation.NextAccount_Code = get_account_code_branch(4, my_branch)
 
-            If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.text), , , SngTemp2, Dccurrency.text, val(txt_Currency_rate.text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
+            If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp - AdvPayLocal, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , SngTemp2 - val(txtAdvPay.Text), DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
                 GoTo ErrTrap
+            End If
+
+'            If val(txtAdvPay.Text) > 0 Then
+'                LngDevNO = LngDevNO + 1
+'                If ModAccounts.AddNewDev(LngDevID, LngDevNO, AdvancedAccount, AdvPayLocal, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , val(txtAdvPay.Text), DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
+'                    GoTo ErrTrap
+'                End If
+'            End If
+
+            If val(txtAdvPay.Text) > 0 Then
+                LngDevNO = LngDevNO + 1
+                If ModAccounts.AddNewDev(LngDevID, LngDevNO, GetMyAccountCode("TblCustemers", "CusID", val(Me.DBCboClientName.BoundText)), AdvPayLocal, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , val(txtAdvPay.Text), DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , val(Me.DBCboClientName.BoundText), , , OtherInformation) = False Then
+                    GoTo ErrTrap
+                End If
+            
+                LngDevNO = LngDevNO + 1
+                If ModAccounts.AddNewDev(LngDevID, LngDevNO, AdvancedAccount, AdvPayLocal, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , val(txtAdvPay.Text), DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , val(Me.DBCboClientName.BoundText), , , OtherInformation) = False Then
+                    GoTo ErrTrap
+                End If
             End If
 
         ElseIf ((CboPayMentType.ListIndex = 2 And SystemOptions.AllowPurchasesMultyPayed = False) Or (SystemOptions.AllowPurchasesMultyPayed = True And CboPayMentType.ListIndex = 3)) Then
@@ -17265,12 +17670,12 @@ chkTaxExempt_Click
             End If
 
          
-                StrTempDes = "Purchase Invoice No: " & Me.TxtNoteSerial1.text & " " & TxtBillComment.text
+                StrTempDes = "Purchase Invoice No: " & Me.TxtNoteSerial1.Text & " " & TxtBillComment.Text
             
     
-            If TxtManualNO.text <> "" Then
+            If txtManualNO.Text <> "" Then
            
-                    StrTempDes = StrTempDes & " Supp Bill# " & TxtManualNO
+                    StrTempDes = StrTempDes & " Supp Bill# " & txtManualNO
                 
             
             End If
@@ -17279,40 +17684,58 @@ chkTaxExempt_Click
             '  SngTemp = (Val(Me.lblTotal.Caption) * Val(txt_Currency_rate.text))
             ' SngTemp = NewGrid.GetItemsTotal(ItemsGoodType) * Val(txt_Currency_rate.text)
             If ChAddToTotal.value = vbChecked Then
-                SngTemp2 = (val(txtAddValue.Caption) + NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption))
-                SngTemp = (val(txtAddValue.Caption) + NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.text)
+                SngTemp2 = (val(TxtAddValue.Caption) + NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption))
+                SngTemp = (val(TxtAddValue.Caption) + NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.Text)
             Else
-                SngTemp = (NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.text)
+                SngTemp = (NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.Text)
                 SngTemp2 = (NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption))
             End If
 
-            SngTemp = SngTemp + val(LblValueAdded.Caption) * val(txt_Currency_rate.text)
+            SngTemp = SngTemp + val(LblValueAdded.Caption) * val(txt_Currency_rate.Text)
             SngTemp2 = SngTemp2 + val(LblValueAdded.Caption)
-            '   SngTemp = Round(SngTemp, SystemOptions.SysDefCurrencyForamt)
             SngTemp = Round(SngTemp, SystemOptions.SysDefCurrencyForamt)
             SngTemp2 = Round(SngTemp2, SystemOptions.SysDefCurrencyForamt)
             LngDevNO = LngDevNO + 1
 
-            If Trim(TxtLcNo) <> "" Then
-                StrTempAccountCode = GetMyAccountCode2("TblLC", "LCNO", TxtLcNo.text)
+            If Trim(TxtLCNO) <> "" Then
+                StrTempAccountCode = GetMyAccountCode2("TblLC", "LCNO", TxtLCNO.Text)
             End If
 
             OtherInformation.NextAccount_Code = get_account_code_branch(4, my_branch)
 
-            If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.text), , , SngTemp2, Dccurrency.text, val(txt_Currency_rate.text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
+            If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp - AdvPayLocal, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , SngTemp2 - val(txtAdvPay.Text), DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
                 GoTo ErrTrap
             End If
-            
+
+'            If val(txtAdvPay.Text) > 0 Then
+'                LngDevNO = LngDevNO + 1
+'                If ModAccounts.AddNewDev(LngDevID, LngDevNO, AdvancedAccount, AdvPayLocal, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , val(txtAdvPay.Text), DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
+'                    GoTo ErrTrap
+'                End If
+'            End If
+            If val(txtAdvPay.Text) > 0 Then
+    LngDevNO = LngDevNO + 1
+    If ModAccounts.AddNewDev(LngDevID, LngDevNO, GetMyAccountCode("TblCustemers", "CusID", val(Me.DBCboClientName.BoundText)), AdvPayLocal, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , val(txtAdvPay.Text), DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , val(Me.DBCboClientName.BoundText), , , OtherInformation) = False Then
+        GoTo ErrTrap
+    End If
+
+    LngDevNO = LngDevNO + 1
+    If ModAccounts.AddNewDev(LngDevID, LngDevNO, AdvancedAccount, AdvPayLocal, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , val(txtAdvPay.Text), DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , val(Me.DBCboClientName.BoundText), , , OtherInformation) = False Then
+        GoTo ErrTrap
+    End If
+End If
+
+             
 '
             If val(XPTxtDiscountVal) <> 0 Then
                 SngTemp = val(LblDiscountsTotal)
                 LngDevNO = LngDevNO + 1
                 StrTempAccountCode = get_account_code_branch(13, my_branch)
-            If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.text), , , SngTemp2, Dccurrency.text, val(txt_Currency_rate.text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
+            If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , SngTemp2, DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
                 GoTo ErrTrap
             End If
 
-
+End If
             End If
 
         Else
@@ -17325,7 +17748,7 @@ chkTaxExempt_Click
                     StrMSG = ""
 
                     If val(.TextMatrix(i, .ColIndex("Value"))) <> 0 Then
-                        ValuGird = val(.TextMatrix(i, .ColIndex("Value"))) * val(txt_Currency_rate.text)
+                        ValuGird = val(.TextMatrix(i, .ColIndex("Value"))) * val(txt_Currency_rate.Text)
                         SngTemp2 = val(.TextMatrix(i, .ColIndex("Value")))
                         StrMSG = " " & (.TextMatrix(i, .ColIndex("PaymentName")))
 
@@ -17348,12 +17771,12 @@ chkTaxExempt_Click
                             End If
 
                             
-                                StrTempDes = "Purchase Invoice No: " & Me.TxtNoteSerial1.text & " " & TxtBillComment.text
+                                StrTempDes = "Purchase Invoice No: " & Me.TxtNoteSerial1.Text & " " & TxtBillComment.Text
                             
     
-                            If TxtManualNO.text <> "" Then
+                            If txtManualNO.Text <> "" Then
                                 
-                                    StrTempDes = StrTempDes & " Supp Bill# " & TxtManualNO
+                                    StrTempDes = StrTempDes & " Supp Bill# " & txtManualNO
                                 
             
                             End If
@@ -17362,11 +17785,11 @@ chkTaxExempt_Click
                             SngTemp2 = Round(SngTemp2, SystemOptions.SysDefCurrencyForamt)
                             LngDevNO = LngDevNO + 1
 
-                            If Trim(TxtLcNo) <> "" Then
-                                StrTempAccountCode = GetMyAccountCode2("TblLC", "LCNO", TxtLcNo.text)
+                            If Trim(TxtLCNO) <> "" Then
+                                StrTempAccountCode = GetMyAccountCode2("TblLC", "LCNO", TxtLCNO.Text)
                             End If
         
-                            If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.text), , , SngTemp2, Dccurrency.text, val(txt_Currency_rate.text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
+                            If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , SngTemp2, DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
                                 GoTo ErrTrap
                             End If
 
@@ -17375,7 +17798,7 @@ chkTaxExempt_Click
                             SngTemp = Round(ValuGird, 2)
                             LngDevNO = LngDevNO + 1
 
-                            If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 1, StrTempDes & " " & StrMSG, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.text), , , SngTemp2, Dccurrency.text, val(txt_Currency_rate.text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
+                            If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 1, StrTempDes & " " & StrMSG, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , SngTemp2, DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
                                 GoTo ErrTrap
                             End If
                         End If
@@ -17385,21 +17808,23 @@ chkTaxExempt_Click
 
             End With
 
-        End If
+       ' End If
+        
     End If
+
 
     If Me.XPChkPayType(1).value = vbChecked And CboPayMentType.ListIndex <> 2 Then
     
         '«·√Ã·
         If ChAddToTotal.value = vbChecked Then
-            SngTemp2 = (val(txtAddValue.Caption) + NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption))
-            SngTemp = (val(txtAddValue.Caption) + NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.text)
+            SngTemp2 = (val(TxtAddValue.Caption) + NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption))
+            SngTemp = (val(TxtAddValue.Caption) + NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.Text)
         Else
-            SngTemp = (NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.text)
+            SngTemp = (NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption)) * val(txt_Currency_rate.Text)
             SngTemp2 = (NewGrid.GetItemsTotal(ItemsGoodType) - val(LblDiscountsTotal.Caption))
         End If
 
-        SngTemp = SngTemp + val(LblValueAdded.Caption) * val(txt_Currency_rate.text)
+        SngTemp = SngTemp + val(LblValueAdded.Caption) * val(txt_Currency_rate.Text)
         SngTemp2 = SngTemp2 + val(LblValueAdded.Caption)
         SngTemp = Round(SngTemp, SystemOptions.SysDefCurrencyForamt)
         SngTemp2 = Round(SngTemp2, SystemOptions.SysDefCurrencyForamt)
@@ -17422,40 +17847,57 @@ chkTaxExempt_Click
         End If
 
         If SystemOptions.UserInterface = ArabicInterface Then
-            StrTempDes = "›« Ê—… ‘—«¡ —ﬁ„ " & Me.TxtNoteSerial1.text & " " & TxtBillComment.text
+            StrTempDes = "›« Ê—… ‘—«¡ —ﬁ„ " & Me.TxtNoteSerial1.Text & " " & TxtBillComment.Text
         Else
-            StrTempDes = "Purchase Invoice NO: " & Me.TxtNoteSerial1.text & " " & TxtBillComment.text
+            StrTempDes = "Purchase Invoice NO: " & Me.TxtNoteSerial1.Text & " " & TxtBillComment.Text
         End If
 
         LngDevNO = LngDevNO + 1
     
-        If TxtManualNO.text <> "" Then
+        If txtManualNO.Text <> "" Then
             If SystemOptions.UserInterface = ArabicInterface Then
-                StrTempDes = StrTempDes & " ›« Ê—… „Ê—œ —ﬁ„  " & TxtManualNO
+                StrTempDes = StrTempDes & " ›« Ê—… „Ê—œ —ﬁ„  " & txtManualNO
             Else
-                StrTempDes = StrTempDes & " Supp Bill# " & TxtManualNO
+                StrTempDes = StrTempDes & " Supp Bill# " & txtManualNO
             End If
             
         End If
 
-        If Trim(TxtLcNo) <> "" Then
-            StrTempAccountCode = GetMyAccountCode2("TblLC", "LCNO", TxtLcNo.text)
+        If Trim(TxtLCNO) <> "" Then
+            StrTempAccountCode = GetMyAccountCode2("TblLC", "LCNO", TxtLCNO.Text)
         End If
 
         OtherInformation.NextAccount_Code = get_account_code_branch(4, my_branch)
 
-        If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.text), , , SngTemp2, Dccurrency.text, val(txt_Currency_rate.text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
+        If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp - AdvPayLocal, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , SngTemp2 - val(txtAdvPay.Text), DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
             GoTo ErrTrap
         End If
-        
-        
-        
+
+'        If val(txtAdvPay.Text) > 0 Then
+'            LngDevNO = LngDevNO + 1
+'            If ModAccounts.AddNewDev(LngDevID, LngDevNO, AdvancedAccount, AdvPayLocal, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , val(txtAdvPay.Text), DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
+'                GoTo ErrTrap
+'            End If
+'        End If
+'
+            If val(txtAdvPay.Text) > 0 Then
+    LngDevNO = LngDevNO + 1
+    If ModAccounts.AddNewDev(LngDevID, LngDevNO, GetMyAccountCode("TblCustemers", "CusID", val(Me.DBCboClientName.BoundText)), AdvPayLocal, 0, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , val(txtAdvPay.Text), DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , val(Me.DBCboClientName.BoundText), , , OtherInformation) = False Then
+        GoTo ErrTrap
+    End If
+
+    LngDevNO = LngDevNO + 1
+    If ModAccounts.AddNewDev(LngDevID, LngDevNO, AdvancedAccount, AdvPayLocal, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , val(txtAdvPay.Text), DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , val(Me.DBCboClientName.BoundText), , , OtherInformation) = False Then
+        GoTo ErrTrap
+    End If
+End If
+
         '
             If val(XPTxtDiscountVal) <> 0 Then
                 SngTemp = val(LblDiscountsTotal)
                 LngDevNO = LngDevNO + 1
                 StrTempAccountCode = get_account_code_branch(13, my_branch)
-            If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.text), , , SngTemp2, Dccurrency.text, val(txt_Currency_rate.text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
+            If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , SngTemp2, DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText), , , , , , , , , , , , , , , , , , , , , , , , , , , OtherInformation) = False Then
                 GoTo ErrTrap
             End If
 
@@ -17464,7 +17906,7 @@ chkTaxExempt_Click
     End If
 
     If Me.XPChkPayType(2).value = vbChecked Then
-        SngTemp = NewGrid.GetItemsTotal(ItemsGoodType) * val(txt_Currency_rate.text)
+        SngTemp = NewGrid.GetItemsTotal(ItemsGoodType) * val(txt_Currency_rate.Text)
         SngTemp2 = NewGrid.GetItemsTotal(ItemsGoodType)
         SngTemp = Round(SngTemp, SystemOptions.SysDefCurrencyForamt)
         SngTemp2 = Round(SngTemp2, SystemOptions.SysDefCurrencyForamt)
@@ -17473,20 +17915,20 @@ chkTaxExempt_Click
         '    StrTempAccountCode = "a2a3a2" '√Ê—«ﬁ «·œ›⁄
         If SystemOptions.UserInterface = ArabicInterface Then
             StrTempDes = "⁄œœ " & Me.lbl(19).Caption & "  ‘Ìﬂ«  " & CHR(13)
-            StrTempDes = StrTempDes & "›« Ê—… ‘—«¡ —ﬁ„ " & Me.TxtNoteSerial1.text
+            StrTempDes = StrTempDes & "›« Ê—… ‘—«¡ —ﬁ„ " & Me.TxtNoteSerial1.Text
         Else
             StrTempDes = "Count " & Me.lbl(19).Caption & "  Cheque " & CHR(13)
-            StrTempDes = StrTempDes & "Purchase Invoice No:" & Me.TxtNoteSerial1.text
+            StrTempDes = StrTempDes & "Purchase Invoice No:" & Me.TxtNoteSerial1.Text
     
         End If
 
         LngDevNO = LngDevNO + 1
 
-        If Trim(TxtLcNo) <> "" Then
-            StrTempAccountCode = GetMyAccountCode2("TblLC", "LCNO", TxtLcNo.text)
+        If Trim(TxtLCNO) <> "" Then
+            StrTempAccountCode = GetMyAccountCode2("TblLC", "LCNO", TxtLCNO.Text)
         End If
         
-        If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.text), , , SngTemp2, Dccurrency.text, val(txt_Currency_rate.text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
+        If ModAccounts.AddNewDev(LngDevID, LngDevNO, StrTempAccountCode, SngTemp, 1, StrTempDes, general_noteid, , , , Me.XPDtbBill.value, Me.DCboUserName.BoundText, val(Me.XPTxtBillID.Text), , , SngTemp2, DcCurrency.Text, val(txt_Currency_rate.Text), , , , , , , , , , , , val(Me.dcBranch.BoundText)) = False Then
             GoTo ErrTrap
         End If
     End If
@@ -17505,19 +17947,9 @@ NewGL:
     SaveNewGl
 NewGL2:
 
-SaveNewGl2
-    CloseIssueVoucher
-    
-    If SystemOptions.autoReseiveVoucher = True Then
-        IsVouc = False
-
-        If Not CreateRecieveVouchers Then BeginTrans = True: MsgBox "ÕœÀ Œÿ√ «À‰«¡ «‰‘«¡ «–‰ «·«” ·«„ ": GoTo ErrTrap
-            
-    End If
-    
-    SaveValueAdded
-       
-    close_order2 Me.TXT_order_no
+If Not FolowSave(BeginTrans) Then
+    GoTo ErrTrap
+End If
    
 
     Cn.CommitTrans
@@ -17527,20 +17959,64 @@ SaveNewGl2
 
     '·√‰‰« ﬁ„‰« »≈÷«›… Õ—ﬂ… „‰ ‰Ê⁄ „Œ ·›…
       
-    If invoiceSerach = True Then
-        StrSQL = "SELECT * FROM Transactions WHERE Transaction_ID=" & val(Me.XPTxtBillID.text) & "" ' & InvType
+  ExitsubProc
+ErrTrap:
+    
+    If BeginTrans = True Then
+        BeginTrans = False
+        Cn.RollbackTrans
+
+        If rs.State = 0 Then
+     rs.Resync adAffectCurrent
+        End If
+    End If
+
+    Screen.MousePointer = vbDefault
+
+    If SystemOptions.UserInterface = ArabicInterface Then
+        Msg = "⁄›Ê«...ÕœÀ Œÿ√ „« √À‰«¡ Õ›Ÿ Â–Â «·»Ì«‰«  " & CHR(13)
+    Else
+        Msg = "Sorry....Error During Saving" & CHR(13)
+    End If
+ 
+    MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+End Sub
+Private Function FolowSave(ByRef BeginTrans As Boolean) As Boolean
+SaveNewGl2
+    CloseIssueVoucher
+    
+    If SystemOptions.autoReseiveVoucher = True Then
+        IsVouc = False
+
+        If Not CreateRecieveVouchers Then
+            BeginTrans = True:
+            MsgBox "ÕœÀ Œÿ√ «À‰«¡ «‰‘«¡ «–‰ «·«” ·«„ ":
+            FolowSave = False
+        End If
+            
+    End If
+    
+    SaveValueAdded
+       
+    close_order2 Me.TXT_order_no
+    FolowSave = True
+End Function
+Private Sub ExitsubProc()
+Dim StrSQL As String
+  If invoiceSerach = True Then
+        StrSQL = "SELECT * FROM Transactions WHERE Transaction_ID=" & val(Me.XPTxtBillID.Text) & "" ' & InvType
     Else
         StrSQL = "SELECT * FROM Transactions WHERE  Transaction_Type=" & BillType
     End If
  
     Set rs = New ADODB.Recordset
     rs.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
-    Me.Retrive val(Me.XPTxtBillID.text)
+    Me.Retrive val(Me.XPTxtBillID.Text)
     '----------------------------------------------------------------
 
     CuurentLogdata
 
-    Select Case Me.TxtModFlg.text
+    Select Case Me.TxtModFlg.Text
 
         Case "N"
 
@@ -17571,7 +18047,7 @@ SaveNewGl2
     End Select
 
     'Closeorders
-    TxtModFlg.text = "R"
+    TxtModFlg.Text = "R"
     Command4_Click
 
     Screen.MousePointer = vbDefault
@@ -17579,28 +18055,7 @@ SaveNewGl2
     Txt_EXport.Enabled = True
     'Grid.Visible = False
     Exit Sub
-ErrTrap:
-    
-    If BeginTrans = True Then
-        BeginTrans = False
-        Cn.RollbackTrans
-
-        If rs.State = 0 Then
-     rs.Resync adAffectCurrent
-        End If
-    End If
-
-    Screen.MousePointer = vbDefault
-
-    If SystemOptions.UserInterface = ArabicInterface Then
-        Msg = "⁄›Ê«...ÕœÀ Œÿ√ „« √À‰«¡ Õ›Ÿ Â–Â «·»Ì«‰«  " & CHR(13)
-    Else
-        Msg = "Sorry....Error During Saving" & CHR(13)
-    End If
- 
-    MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
 End Sub
-
 Private Function Checks() As Boolean
 Dim StrSQL  As String
     If CBoBasedON.ListIndex = 3 Then
@@ -17608,7 +18063,7 @@ Dim StrSQL  As String
             Dim rs2 As New ADODB.Recordset
             
 
-            StrSQL = "SELECT NoteSerial1 FROM Transactions where Transaction_Type = 22 and IsNull(order_no,0)  = '" & val(TXT_order_no.text) & "' and Transaction_ID <> " & val(XPTxtBillID)
+            StrSQL = "SELECT NoteSerial1 FROM Transactions where Transaction_Type = 22 and IsNull(order_no,0)  = '" & val(TXT_order_no.Text) & "' and Transaction_ID <> " & val(XPTxtBillID)
             rs2.Open StrSQL, Cn, adOpenForwardOnly, adLockReadOnly
             If Not rs2.EOF Then
                 MsgBox "Â–« «·«„— ·« Ì„ﬂ‰ «œ—«ÃÂ ›ﬁœ «œ—Ã „‰ ﬁ»· ›Ï «·›« Ê—… —ﬁ„" & rs2!NoteSerial1 & ""
@@ -17647,14 +18102,14 @@ Private Sub XPCboDiscountType_Click()
     If XPCboDiscountType.ListIndex = 0 Or XPCboDiscountType.ListIndex = 3 Or XPCboDiscountType.ListIndex = -1 Then
         lbl(11).Enabled = False
         XPTxtDiscountVal.Enabled = True
-        XPTxtDiscountVal.text = ""
+        XPTxtDiscountVal.Text = ""
     Else
         lbl(11).Enabled = True
         XPTxtDiscountVal.Enabled = True
-        XPTxtDiscountVal.text = ""
+        XPTxtDiscountVal.Text = ""
     End If
 
-    If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+    If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
         If FG.TextMatrix(1, FG.ColIndex("Code")) <> "" Then
             NewGrid.Calculate 1
         End If
@@ -17687,12 +18142,12 @@ Private Sub XPChkPayType_Click(Index As Integer)
         Case 0
 
             If XPChkPayType(0).value = Checked Then
-                If Me.TxtModFlg.text = "N" Then
-                    XPTxtValue(0).text = ""
-                    XPTxtSerial(0).text = ""
+                If Me.TxtModFlg.Text = "N" Then
+                    XPTxtValue(0).Text = ""
+                    XPTxtSerial(0).Text = ""
                 End If
 
-                If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+                If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
                     XPTxtValue(0).Enabled = True
                     '                XPTxtSerial(0).Enabled = True
                     XPTxtValue(0).locked = False
@@ -17701,19 +18156,19 @@ Private Sub XPChkPayType_Click(Index As Integer)
 
             Else
                 XPTxtValue(0).Enabled = False
-                XPTxtValue(0).text = ""
+                XPTxtValue(0).Text = ""
                 '            XPTxtSerial(0).Enabled = False
             End If
 
         Case 1
 
             If XPChkPayType(1).value = Checked Then
-                If Me.TxtModFlg.text = "N" Then
-                    XPTxtValue(1).text = ""
+                If Me.TxtModFlg.Text = "N" Then
+                    XPTxtValue(1).Text = ""
                     DtpDelayDate.value = Date
                 End If
 
-                If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+                If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
                     XPTxtValue(1).Enabled = True
                     XPTxtValue(1).locked = False
                     DtpDelayDate.Enabled = True
@@ -17724,7 +18179,7 @@ Private Sub XPChkPayType_Click(Index As Integer)
                 Me.ChkInstall.Enabled = True
             Else
                 XPTxtValue(1).Enabled = False
-                XPTxtValue(1).text = ""
+                XPTxtValue(1).Text = ""
                 Me.ChkInstall.Enabled = False
             End If
 
@@ -17733,7 +18188,7 @@ Dim noteseialDuplicates As String
 
         If SystemOptions.DontDuplicateManulaNoInPurchase = True Then
         
-                             If checkManulanoisExist(22, val(Me.XPTxtBillID.text), val(Me.DBCboClientName.BoundText), TxtManualNO.text, noteseialDuplicates) = True Then
+                             If checkManulanoisExist(22, val(Me.XPTxtBillID.Text), val(Me.DBCboClientName.BoundText), txtManualNO.Text, noteseialDuplicates) = True Then
                                          If SystemOptions.UserInterface = ArabicInterface Then
                                              MsgBox "—ﬁ„ ﬁ« Ê—… «·„Ê—œ „ﬂ—— ›Ì ›« Ê—… —ﬁ„ :" & noteseialDuplicates
                                        Else
@@ -17745,7 +18200,7 @@ Dim noteseialDuplicates As String
                   
         End If
         
-            If XPChkPayType(2).value = Checked And Me.TxtModFlg.text <> "R" Then
+            If XPChkPayType(2).value = Checked And Me.TxtModFlg.Text <> "R" Then
                 Me.CmdCheque.Enabled = True
             Else
                 Me.CmdCheque.Enabled = False
@@ -17768,7 +18223,7 @@ Private Sub XPChkTAX_Click()
         lbl(22).Enabled = True
         lbl(45).Enabled = True
     Else
-        XPTxtTaxValue.text = ""
+        XPTxtTaxValue.Text = ""
         XPTxtTaxValue.Enabled = False
         lbl(22).Enabled = False
         lbl(45).Enabled = False
@@ -17780,20 +18235,20 @@ End Sub
 
 Private Sub XPDtbBill_Change()
 
-    If Trim(TxtNoteSerial1.text) <> "" Then
-        oldtxtNoteSerial1.text = TxtNoteSerial1.text
+    If Trim(TxtNoteSerial1.Text) <> "" Then
+        oldtxtNoteSerial1.Text = TxtNoteSerial1.Text
     End If
 
     CurrentVoucherNo = ""
-    TxtNoteSerial.text = ""
-    TxtNoteSerial1.text = ""
+    TxtNoteSerial.Text = ""
+    TxtNoteSerial1.Text = ""
     DateChanged = True
 End Sub
 
 Private Sub XPTab301_Click()
     On Error GoTo ErrTrap
 
-    If Me.TxtModFlg.text <> "R" Then
+    If Me.TxtModFlg.Text <> "R" Then
     
     End If
 
@@ -17808,18 +18263,18 @@ Private Sub printing()
     ShowType = GetSetting(StrAppRegPath, "View_Type", "ReportType", True)
    
     If ShowType = True Then
-        If Not XPTxtBillID.text Then
+        If Not XPTxtBillID.Text Then
             Set BuyReport = New ClsBuyReport
-            BuyReport.ShowBuyData XPTxtBillID.text, 1, True, Round(LblTotal.Caption * val(txt_Currency_rate), 2), TxtManualNO.text, Me.Dccurrency.text, val(Me.dcBranch.BoundText)
+            BuyReport.ShowBuyData XPTxtBillID.Text, 1, True, Round(LblTotal.Caption * val(txt_Currency_rate), 2), txtManualNO.Text, Me.DcCurrency.Text, val(Me.dcBranch.BoundText)
            
             
         End If
 
     Else
 
-        If Not XPTxtBillID.text Then
+        If Not XPTxtBillID.Text Then
             Set BuyReport = New ClsBuyReport
-            BuyReport.ShowBuyDataShort XPTxtBillID.text, val(Me.dcBranch.BoundText)
+            BuyReport.ShowBuyDataShort XPTxtBillID.Text, val(Me.dcBranch.BoundText)
         End If
     End If
 
@@ -17871,7 +18326,7 @@ Private Function AvailableDeal() As Boolean
                 Else
                     Set RsTemp = New ADODB.Recordset
                     LngItemID = val(FG.TextMatrix(RowNum, FG.ColIndex("Code")))
-                    Set RsTemp = GetItemQuantityStock(LngItemID, Me.DCboStoreName.BoundText, Me.XPDtbBill.value, val(Me.XPTxtBillID.text))
+                    Set RsTemp = GetItemQuantityStock(LngItemID, Me.DCboStoreName.BoundText, Me.XPDtbBill.value, val(Me.XPTxtBillID.Text))
 
                     If Not (RsTemp.EOF Or RsTemp.BOF) Then
                         If val(RsTemp("QTY").value) < val(FG.TextMatrix(RowNum, FG.ColIndex("Count"))) Then
@@ -17907,10 +18362,10 @@ Private Sub Form_QueryUnload(Cancel As Integer, _
 
     On Error GoTo ErrTrap
 
-    If Me.TxtModFlg.text = "" Then Exit Sub
-    If Me.TxtModFlg.text <> "R" Then
+    If Me.TxtModFlg.Text = "" Then Exit Sub
+    If Me.TxtModFlg.Text <> "R" Then
 
-        Select Case Me.TxtModFlg.text
+        Select Case Me.TxtModFlg.Text
 
             Case "N"
     
@@ -17986,7 +18441,7 @@ Function FillGridWithDataSalesPayment() As Boolean
     My_SQL = My_SQL & "      FROM         dbo.TblPaymentType RIGHT OUTER JOIN"
     My_SQL = My_SQL & "                   dbo.TblSalesPayment ON dbo.TblPaymentType.PaymentID = dbo.TblSalesPayment.PaymentID LEFT OUTER JOIN"
     My_SQL = My_SQL & "                   dbo.BanksData ON dbo.TblPaymentType.BankId = dbo.BanksData.BankID"
-    My_SQL = My_SQL & "     Where (dbo.TblSalesPayment.TransID = " & val(XPTxtBillID.text) & ")"
+    My_SQL = My_SQL & "     Where (dbo.TblSalesPayment.TransID = " & val(XPTxtBillID.Text) & ")"
     My_SQL = My_SQL & "   ORDER BY dbo.TblPaymentType.PaymentID"
     rs.Open My_SQL, Cn, adOpenKeyset, adLockReadOnly, adCmdText
 
@@ -18033,7 +18488,7 @@ End Function
 Private Sub CboPayMentType_Change()
     On Error GoTo ErrTrap
 FramePay.Visible = False
-    If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+    If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
         If CboPayMentType.ListIndex = 0 Then
             XPChkPayType(0).Enabled = False
             XPChkPayType(1).Enabled = False
@@ -18041,15 +18496,15 @@ FramePay.Visible = False
             XPChkPayType(0).value = Checked
             XPChkPayType(1).value = Unchecked
             XPChkPayType(2).value = Unchecked
-            XPTxtValue(0).text = XPTxtSum.text
-            XPTxtValue(1).text = 0
+            XPTxtValue(0).Text = XPTxtSum.Text
+            XPTxtValue(1).Text = 0
             '        DBCboClientName.Enabled = False
 '            DBCboClientName.Text = ""
             
            '
             DcboBox.Enabled = True
             DcboBox.Visible = True
-            DcboBankName.text = ""
+            DcboBankName.Text = ""
             DcboBankName.Visible = False
             lbl(2).Caption = "«·’‰œÊﬁ"
         ElseIf CboPayMentType.ListIndex = 1 Then
@@ -18059,31 +18514,31 @@ FramePay.Visible = False
             XPChkPayType(0).value = Unchecked
             XPChkPayType(1).value = Unchecked
             XPChkPayType(2).value = Unchecked
-            XPTxtValue(0).text = 0
-            XPTxtValue(1).text = XPTxtSum.text
+            XPTxtValue(0).Text = 0
+            XPTxtValue(1).Text = XPTxtSum.Text
             '         DBCboClientName.Enabled = True
           '
             DcboBox.Enabled = False
             DcboBankName.Enabled = False
             
-            DcboBox.text = ""
+            DcboBox.Text = ""
       '
         ElseIf ((CboPayMentType.ListIndex = 2 And SystemOptions.AllowPurchasesMultyPayed = False) Or (SystemOptions.AllowPurchasesMultyPayed = True And CboPayMentType.ListIndex = 3)) Then
                     
             DcboBox.Visible = False
-            DcboBox.text = ""
+            DcboBox.Text = ""
             DcboBankName.Visible = True
             DcboBankName.Enabled = True
             lbl(2).Caption = "«·»‰ﬂ"
       Else
-    If Me.TxtModFlg.text <> "R" Then
-     If Me.TxtModFlg.text = "N" Then
+    If Me.TxtModFlg.Text <> "R" Then
+     If Me.TxtModFlg.Text = "N" Then
      If val(LblTotal.Caption) > 0 Then
      FramePay.Visible = True
      FillGridWithData222
      LBLPayVal.Caption = 0
 LBLPayVal.Caption = val(LblTotal.Caption)
-TxtNetValue2.text = val(LblTotal.Caption)
+TxtNetValue2.Text = val(LblTotal.Caption)
     With Grid22
           .TextMatrix(.Row, .ColIndex("Value")) = 0
     End With
@@ -18093,7 +18548,7 @@ TxtNetValue2.text = val(LblTotal.Caption)
       FramePay.Visible = True
     If FillGridWithDataSalesPayment() = True Then
      LBLPayVal.Caption = val(LblTotal.Caption)
-     TxtNetValue2.text = val(LblTotal.Caption)
+     TxtNetValue2.Text = val(LblTotal.Caption)
      ReLineGrid2
      Else
      '''/////////////
@@ -18102,7 +18557,7 @@ TxtNetValue2.text = val(LblTotal.Caption)
      FillGridWithData222
      LBLPayVal.Caption = 0
 LBLPayVal.Caption = val(LblTotal.Caption)
-TxtNetValue2.text = val(LblTotal.Caption)
+TxtNetValue2.Text = val(LblTotal.Caption)
     With Grid22
           .TextMatrix(.Row, .ColIndex("Value")) = 0
     End With
@@ -18117,8 +18572,8 @@ TxtNetValue2.text = val(LblTotal.Caption)
         XPChkPayType(0).value = Checked
         XPChkPayType(1).value = Unchecked
         XPChkPayType(2).value = Unchecked
-        XPTxtValue(0).text = XPTxtSum.text
-        XPTxtValue(1).text = ""
+        XPTxtValue(0).Text = XPTxtSum.Text
+        XPTxtValue(1).Text = ""
         DcboBox.Enabled = True
         Frame1.Visible = True
       '  DCPaymentNet.Enabled = True
@@ -18143,7 +18598,7 @@ Private Sub ReLineGrid2()
             If .TextMatrix(i, .ColIndex("value")) <> "" Then
                ' IntCounter = IntCounter + 1
                 totalPayed = totalPayed + .TextMatrix(i, .ColIndex("value"))
-                If totalPayed > val(Me.TxtNetValue2.text) Then
+                If totalPayed > val(Me.TxtNetValue2.Text) Then
                 If SystemOptions.UserInterface = ArabicInterface Then
                 MsgBox "·«Ì„ﬂ‰ «‰  ﬂÊ‰ «·ﬁÌ„… «ﬂ»— „‰ «·«Ã„«·Ì"
                 Else
@@ -18157,8 +18612,8 @@ Private Sub ReLineGrid2()
         Next i
 
     End With
-  TxtPayedValue2.text = totalPayed
-    TxtRemainValue2.text = val(Me.TxtPayedValue2.text) - val(Me.TxtNetValue2.text)
+  TxtPayedValue2.Text = totalPayed
+    TxtRemainValue2.Text = val(Me.TxtPayedValue2.Text) - val(Me.TxtNetValue2.Text)
 End Sub
 Public Sub FillGridWithData222()
 
@@ -18235,7 +18690,7 @@ Private Sub XPTxtDiscountVal_Change()
     Dim Msg As String
     On Error GoTo ErrTrap
 
-    If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+    If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
         NewGrid.Calculate 1, , , True
     End If
 
@@ -18244,7 +18699,7 @@ ErrTrap:
 End Sub
 
 Private Sub XPTxtDiscountVal_KeyPress(KeyAscii As Integer)
-    KeyAscii = KeyAscii_Num(KeyAscii, Me.XPTxtDiscountVal.text, 0)
+    KeyAscii = KeyAscii_Num(KeyAscii, Me.XPTxtDiscountVal.Text, 0)
 End Sub
 
 Private Sub XPTxtSum_Change()
@@ -18252,12 +18707,12 @@ Private Sub XPTxtSum_Change()
 
     If CboPayMentType.ListIndex = 0 Or CboPayMentType.ListIndex = 2 Then
         XPChkPayType(0).value = Checked
-        XPTxtValue(0).text = XPTxtSum.text
+        XPTxtValue(0).Text = XPTxtSum.Text
     End If
 If ChAddToTotal.value = vbChecked Then
-    Me.LblTotal.Caption = val(XPTxtSum.text) + val(txtAddValue.Caption) + val(TxtValueAdded.text)
+    Me.LblTotal.Caption = val(XPTxtSum.Text) + val(TxtAddValue.Caption) + val(TxtValueAdded.Text)
     Else
-    Me.LblTotal.Caption = val(XPTxtSum.text) + val(TxtValueAdded.text)
+    Me.LblTotal.Caption = val(XPTxtSum.Text) + val(TxtValueAdded.Text)
     End If
     Exit Sub
 ErrTrap:
@@ -18343,28 +18798,28 @@ Private Sub SetDefaults()
     Me.DcboBox.BoundText = 1
 End Sub
 Private Sub SaveFlow()
-  If Text1.text <> "" Then
-        Cn.Execute "update Transactions set nots =' " & TxtTransSerial.text & "' where Transaction_Type= 20 and Transaction_Serial=" & Text1.text & ""
+  If Text1.Text <> "" Then
+        Cn.Execute "update Transactions set nots =' " & TxtTransSerial.Text & "' where Transaction_Type= 20 and Transaction_Serial=" & Text1.Text & ""
     End If
 
-    Cn.Execute "update Transactions set NoteSerial =' " & Trim(Me.TxtNoteSerial.text) & "' where Transaction_ID=" & val(Me.XPTxtBillID.text)
+    Cn.Execute "update Transactions set NoteSerial =' " & Trim(Me.TxtNoteSerial.Text) & "' where Transaction_ID=" & val(Me.XPTxtBillID.Text)
 
     'Õ›Ÿ «·„’—Êﬁ«  «· ﬁœÌ—Ì…
     Dim FactoryExpenses As New ADODB.Recordset
 
-    If Me.TxtModFlg.text = "E" Then
+    If Me.TxtModFlg.Text = "E" Then
         
-        Cn.Execute "Delete TblProductOrderFactoryexpenses where Transaction_ID=" & val(XPTxtBillID.text)
+        Cn.Execute "Delete TblProductOrderFactoryexpenses where Transaction_ID=" & val(XPTxtBillID.Text)
     End If
     Dim StrSQL As String
-    StrSQL = "Select * from TblProductOrderFactoryexpenses where Transaction_ID=" & val(XPTxtBillID.text)
+    StrSQL = "Select * from TblProductOrderFactoryexpenses where Transaction_ID=" & val(XPTxtBillID.Text)
     FactoryExpenses.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
     Dim RowNum As Long
     For RowNum = 1 To Fg_Journal.rows - 2
 
         If Fg_Journal.TextMatrix(RowNum, Fg_Journal.ColIndex("AccountName")) <> "" Then
             FactoryExpenses.AddNew
-            FactoryExpenses("Transaction_ID").value = val(XPTxtBillID.text)
+            FactoryExpenses("Transaction_ID").value = val(XPTxtBillID.Text)
             FactoryExpenses("Accountcode2").value = Fg_Journal.TextMatrix(RowNum, Fg_Journal.ColIndex("Accountcode2"))
             FactoryExpenses("Accountcode").value = Fg_Journal.TextMatrix(RowNum, Fg_Journal.ColIndex("Accountcode"))
             FactoryExpenses("AccountName").value = Fg_Journal.TextMatrix(RowNum, Fg_Journal.ColIndex("AccountName"))
@@ -18392,4 +18847,7 @@ Private Sub SaveFlow()
         End If
          
     Next RowNum
+End Sub
+Private Sub txtAdvPay_KeyPress(KeyAscii As Integer)
+    KeyAscii = KeyAscii_Num(KeyAscii, Me.txtAdvPay.Text, 0)
 End Sub

@@ -19,6 +19,15 @@ Begin VB.Form FrmVehicleAllocation
    ScaleHeight     =   9840
    ScaleWidth      =   15075
    WindowState     =   2  'Maximized
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic C1Elastic1 
       Height          =   9840
       Left            =   0

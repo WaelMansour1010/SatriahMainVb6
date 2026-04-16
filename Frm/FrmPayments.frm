@@ -28,6 +28,15 @@ Begin VB.Form FrmPayments
    ScaleHeight     =   9705
    ScaleWidth      =   14730
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox txtAcceptianPeriod 
       Alignment       =   1  'Right Justify
       Height          =   315

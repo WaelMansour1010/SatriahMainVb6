@@ -20,6 +20,15 @@ Begin VB.Form FrmConnectedNow
    ScaleHeight     =   5565
    ScaleWidth      =   6600
    StartUpPosition =   3  'Windows Default
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin ciaXPPanel30.XPPanel30 XPPanel301 
       Height          =   4995
       Left            =   0

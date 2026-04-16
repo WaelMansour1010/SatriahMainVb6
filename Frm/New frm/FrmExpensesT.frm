@@ -24,6 +24,15 @@ Begin VB.Form FrmExpensesT
    RightToLeft     =   -1  'True
    ScaleHeight     =   6765
    ScaleWidth      =   9465
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox TxtLoseProfitValue 
       Alignment       =   1  'Right Justify
       Height          =   285

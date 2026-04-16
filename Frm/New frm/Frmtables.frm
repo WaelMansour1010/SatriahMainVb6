@@ -19,6 +19,15 @@ Begin VB.Form FrmTables
    RightToLeft     =   -1  'True
    ScaleHeight     =   9165
    ScaleWidth      =   12450
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic C1Elastic12 
       Height          =   9165
       Left            =   0

@@ -13,6 +13,15 @@ Begin VB.Form this_year
    RightToLeft     =   -1  'True
    ScaleHeight     =   5715
    ScaleWidth      =   8460
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox Text12 
       Alignment       =   1  'Right Justify
       Height          =   375

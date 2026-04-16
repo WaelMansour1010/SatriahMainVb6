@@ -14,6 +14,15 @@ Begin VB.Form frmMainCars
    MinButton       =   0   'False
    ScaleHeight     =   13845
    ScaleWidth      =   2925
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin ImpulseButton.ISButton Cmd 
       Height          =   975
       Index           =   0

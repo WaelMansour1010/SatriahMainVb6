@@ -26,6 +26,15 @@ Begin VB.Form FrmPayments1
    ScaleHeight     =   8670
    ScaleWidth      =   8130
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Tab C1Tab1 
       Height          =   4695
       Left            =   0

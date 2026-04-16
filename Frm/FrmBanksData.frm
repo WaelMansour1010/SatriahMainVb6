@@ -21,6 +21,15 @@ Begin VB.Form FrmBanksData
    RightToLeft     =   -1  'True
    ScaleHeight     =   7230
    ScaleWidth      =   9585
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox TxtReportName 
       Alignment       =   1  'Right Justify
       Enabled         =   0   'False

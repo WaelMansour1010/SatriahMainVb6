@@ -12,6 +12,15 @@ Begin VB.Form ENZAR
    MDIChild        =   -1  'True
    ScaleHeight     =   3525
    ScaleWidth      =   13290
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CheckBox Check1 
       Height          =   375
       Left            =   3120

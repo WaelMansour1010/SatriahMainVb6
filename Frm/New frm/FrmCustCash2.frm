@@ -24,6 +24,15 @@ Begin VB.Form FrmCustCash2
    ScaleHeight     =   12165
    ScaleWidth      =   12735
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.PictureBox Picture1 
       Height          =   10935
       Left            =   120

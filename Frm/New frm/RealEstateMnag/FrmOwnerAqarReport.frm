@@ -19,6 +19,15 @@ Begin VB.Form FrmOwnerAqarReport
    ScaleHeight     =   5940
    ScaleWidth      =   10425
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CommandButton btnClear 
       BackColor       =   &H00E2E9E9&
       Caption         =   "„”Õ"

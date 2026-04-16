@@ -19,6 +19,15 @@ Begin VB.Form FrmReceptRawMatrialsAlarm
    ScaleHeight     =   8520
    ScaleWidth      =   13605
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame1 
       Height          =   960
       Left            =   0

@@ -19,6 +19,15 @@ Begin VB.Form FrmStrategy4
    RightToLeft     =   -1  'True
    ScaleHeight     =   10095
    ScaleWidth      =   12630
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox Text5 
       Alignment       =   1  'Right Justify
       Height          =   1275

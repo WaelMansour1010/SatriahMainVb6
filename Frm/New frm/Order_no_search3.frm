@@ -19,6 +19,15 @@ Begin VB.Form Order_no_search3
    RightToLeft     =   -1  'True
    ScaleHeight     =   4875
    ScaleWidth      =   9120
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin ALLButtonS.ALLButton ALLButton1 
       Height          =   375
       Left            =   360

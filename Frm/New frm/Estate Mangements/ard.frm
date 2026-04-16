@@ -15,6 +15,15 @@ Begin VB.Form ard
    MinButton       =   0   'False
    ScaleHeight     =   7125
    ScaleWidth      =   10530
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox Text7 
       Alignment       =   1  'Right Justify
       BackColor       =   &H00C0C0C0&

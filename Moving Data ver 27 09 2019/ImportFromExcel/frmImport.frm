@@ -15,6 +15,15 @@ Begin VB.Form frmImport
    ScaleHeight     =   9465
    ScaleWidth      =   16305
    StartUpPosition =   3  'Windows Default
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CheckBox chkIsRepeatName 
       Caption         =   " ﬂ—«— «·«”„"
       Height          =   195

@@ -26,6 +26,15 @@ Begin VB.Form FrmExpenses3
    ScaleHeight     =   8910
    ScaleWidth      =   13215
    WindowState     =   2  'Maximized
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic C1Elastic3 
       Height          =   8910
       Left            =   0

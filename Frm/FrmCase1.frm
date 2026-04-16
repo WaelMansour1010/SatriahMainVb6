@@ -17,6 +17,15 @@ Begin VB.Form FrmCase1
    ScaleHeight     =   6735
    ScaleWidth      =   14190
    WindowState     =   2  'Maximized
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic C1Elastic1 
       Height          =   6735
       Left            =   0

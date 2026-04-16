@@ -23,6 +23,15 @@ Begin VB.Form FrmEmpSalary6
    ScaleHeight     =   9330
    ScaleWidth      =   15120
    WindowState     =   2  'Maximized
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic EleMain 
       Height          =   9330
       Left            =   0

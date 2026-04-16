@@ -23,6 +23,15 @@ Begin VB.Form Frmovers
    ScaleHeight     =   10185
    ScaleWidth      =   18165
    Visible         =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame4 
       Caption         =   "Frame4"
       Height          =   405

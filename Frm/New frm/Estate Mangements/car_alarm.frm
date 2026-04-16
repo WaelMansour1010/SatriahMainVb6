@@ -15,6 +15,15 @@ Begin VB.Form car_alarm
    MDIChild        =   -1  'True
    ScaleHeight     =   7845
    ScaleWidth      =   10980
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin ALLButtonS.ALLButton close_all_alarms 
       Height          =   615
       Left            =   9960

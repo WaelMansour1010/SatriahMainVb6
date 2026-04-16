@@ -19,6 +19,15 @@ Begin VB.Form FrmArchReports
    ScaleHeight     =   9525
    ScaleWidth      =   15915
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame111 
       Caption         =   "Frame1"
       Height          =   8895

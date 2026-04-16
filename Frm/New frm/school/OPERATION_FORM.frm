@@ -14,6 +14,15 @@ Begin VB.Form OPERATION_FORM
    RightToLeft     =   -1  'True
    ScaleHeight     =   8910
    ScaleWidth      =   13485
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox Text15 
       DataField       =   "MEMBER_ID"
       DataSource      =   "Adodc4"

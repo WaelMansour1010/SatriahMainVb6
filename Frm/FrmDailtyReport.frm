@@ -19,6 +19,15 @@ Begin VB.Form FrmDailtyReport
    RightToLeft     =   -1  'True
    ScaleHeight     =   7740
    ScaleWidth      =   15645
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic EleMain 
       Height          =   7740
       Left            =   0

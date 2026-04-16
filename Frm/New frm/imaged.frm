@@ -18,6 +18,15 @@ Begin VB.Form imaged
    ScaleHeight     =   10650
    ScaleWidth      =   18810
    StartUpPosition =   1  'CenterOwner
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame6 
       Caption         =   "Õœœ «”„ «·„—›ﬁ"
       Height          =   2055

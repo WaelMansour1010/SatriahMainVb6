@@ -17,6 +17,15 @@ Begin VB.Form FrmScreenCriteria
    RightToLeft     =   -1  'True
    ScaleHeight     =   7155
    ScaleWidth      =   14040
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame2 
       Caption         =   "ﬁÌ„ «·„Õœœ «·„ ⁄Ì—…"
       Height          =   2415

@@ -20,6 +20,15 @@ Begin VB.Form overs
    RightToLeft     =   -1  'True
    ScaleHeight     =   8700
    ScaleWidth      =   12180
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Branchbox 
       Caption         =   "»Ì«‰«  «·›—Ê⁄ «· Ì Ìÿ»ﬁ ›ÌÂ« «·⁄—÷"
       Height          =   2055

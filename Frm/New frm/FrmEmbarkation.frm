@@ -20,6 +20,15 @@ Begin VB.Form FrmEmbarkation
    RightToLeft     =   -1  'True
    ScaleHeight     =   7005
    ScaleWidth      =   12480
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox Text1 
       Alignment       =   1  'Right Justify
       Enabled         =   0   'False

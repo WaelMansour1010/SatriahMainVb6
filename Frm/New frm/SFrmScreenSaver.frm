@@ -12,6 +12,15 @@ Begin VB.Form SFrmScreenSaver
    ScaleWidth      =   10845
    ShowInTaskbar   =   0   'False
    WindowState     =   2  'Maximized
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Timer Timer1 
       Interval        =   1
       Left            =   1560

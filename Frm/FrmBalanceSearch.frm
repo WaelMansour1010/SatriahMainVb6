@@ -19,6 +19,15 @@ Begin VB.Form FrmBalanceSearch
    RightToLeft     =   -1  'True
    ScaleHeight     =   5820
    ScaleWidth      =   5880
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Fra 
       BackColor       =   &H00E0E0E0&
       Caption         =   "⁄Ê«„· »ÕÀ ≈÷«›Ì…"

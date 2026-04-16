@@ -15,6 +15,15 @@ Begin VB.Form tlbat
    MinButton       =   0   'False
    ScaleHeight     =   7485
    ScaleWidth      =   10725
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.ComboBox Combo3 
       BackColor       =   &H8000000A&
       BeginProperty Font 

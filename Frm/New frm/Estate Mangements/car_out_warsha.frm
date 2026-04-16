@@ -16,6 +16,15 @@ Begin VB.Form car_out_warsha
    MinButton       =   0   'False
    ScaleHeight     =   7485
    ScaleWidth      =   13635
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame4 
       Height          =   5655
       Left            =   1440

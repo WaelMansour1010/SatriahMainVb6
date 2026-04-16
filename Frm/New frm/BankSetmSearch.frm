@@ -17,6 +17,15 @@ Begin VB.Form BankSetmSearch
    ScaleHeight     =   6765
    ScaleWidth      =   13455
    StartUpPosition =   2  'CenterScreen
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame7 
       BackColor       =   &H00E2E9E9&
       Height          =   2055

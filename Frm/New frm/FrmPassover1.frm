@@ -16,6 +16,15 @@ Begin VB.Form Frmpassover1
    RightToLeft     =   -1  'True
    ScaleHeight     =   8205
    ScaleWidth      =   17085
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic EleMain 
       Height          =   8205
       Left            =   0

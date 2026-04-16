@@ -22,6 +22,15 @@ Begin VB.Form FrmEstimations
    ScaleHeight     =   8715
    ScaleWidth      =   21210
    WindowState     =   2  'Maximized
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic EleMain 
       Height          =   8715
       Left            =   0

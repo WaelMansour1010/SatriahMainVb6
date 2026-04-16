@@ -20,6 +20,15 @@ Begin VB.Form Frm_General_Journal
    RightToLeft     =   -1  'True
    ScaleHeight     =   7950
    ScaleWidth      =   12735
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic ElcMainContainer 
       Height          =   7950
       Left            =   0

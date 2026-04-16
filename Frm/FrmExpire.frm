@@ -17,6 +17,15 @@ Begin VB.Form FrmExpire
    ScaleHeight     =   5670
    ScaleWidth      =   4755
    StartUpPosition =   3  'Windows Default
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.PictureBox PctExpire 
       BorderStyle     =   0  'None
       Height          =   5805

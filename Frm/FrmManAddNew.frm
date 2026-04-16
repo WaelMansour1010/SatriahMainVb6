@@ -20,6 +20,15 @@ Begin VB.Form FrmManAddNew
    RightToLeft     =   -1  'True
    ScaleHeight     =   7215
    ScaleWidth      =   11700
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox TxtModFlg 
       Alignment       =   1  'Right Justify
       Height          =   285

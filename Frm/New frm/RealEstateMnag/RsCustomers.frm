@@ -14,6 +14,15 @@ Begin VB.Form RsCustomers
    ClientLeft      =   45
    ClientTop       =   330
    ClientWidth     =   13980
+   BeginProperty Font 
+      Name            =   "Arial"
+      Size            =   8.25
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    HelpContextID   =   50
    Icon            =   "RsCustomers.frx":0000
    KeyPreview      =   -1  'True
@@ -66,7 +75,7 @@ Begin VB.Form RsCustomers
          Alignment       =   1  'Right Justify
          Caption         =   "X"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   12
             Charset         =   178
             Weight          =   700
@@ -370,7 +379,7 @@ Begin VB.Form RsCustomers
          BackColor       =   &H00E2E9E9&
          Caption         =   "%"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   9.75
             Charset         =   178
             Weight          =   700
@@ -430,7 +439,7 @@ Begin VB.Form RsCustomers
          BackColor       =   &H00E2E9E9&
          Caption         =   "%"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   9.75
             Charset         =   178
             Weight          =   700
@@ -857,8 +866,9 @@ Begin VB.Form RsCustomers
          ButtonStyle     =   1
          ButtonPositionImage=   4
          Caption         =   ""
+         FontName        =   "Arial"
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -888,8 +898,9 @@ Begin VB.Form RsCustomers
          ButtonStyle     =   1
          ButtonPositionImage=   4
          Caption         =   ""
+         FontName        =   "Arial"
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -919,8 +930,9 @@ Begin VB.Form RsCustomers
          ButtonStyle     =   1
          ButtonPositionImage=   4
          Caption         =   ""
+         FontName        =   "Arial"
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -950,8 +962,9 @@ Begin VB.Form RsCustomers
          ButtonStyle     =   1
          ButtonPositionImage=   4
          Caption         =   ""
+         FontName        =   "Arial"
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -998,8 +1011,9 @@ Begin VB.Form RsCustomers
       ButtonPositionImage=   1
       Caption         =   "ÃœÌœ"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -1028,8 +1042,9 @@ Begin VB.Form RsCustomers
       ButtonPositionImage=   1
       Caption         =   " ⁄œÌ·"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -1059,8 +1074,9 @@ Begin VB.Form RsCustomers
       ButtonPositionImage=   1
       Caption         =   "Õ›Ÿ"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -1090,8 +1106,9 @@ Begin VB.Form RsCustomers
       ButtonPositionImage=   1
       Caption         =   " —«Ã⁄"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -1121,8 +1138,9 @@ Begin VB.Form RsCustomers
       ButtonPositionImage=   1
       Caption         =   "Õ–›"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -1152,8 +1170,9 @@ Begin VB.Form RsCustomers
       ButtonPositionImage=   1
       Caption         =   "»ÕÀ"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -1183,8 +1202,9 @@ Begin VB.Form RsCustomers
       ButtonPositionImage=   1
       Caption         =   "Œ—ÊÃ"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -1214,8 +1234,9 @@ Begin VB.Form RsCustomers
       ButtonPositionImage=   1
       Caption         =   "ÿ»«⁄…"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -1244,8 +1265,9 @@ Begin VB.Form RsCustomers
       ButtonPositionImage=   1
       Caption         =   "„”«⁄œ…"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -1276,8 +1298,9 @@ Begin VB.Form RsCustomers
       ButtonStyle     =   1
       ButtonPositionImage=   1
       Caption         =   "Õ›Ÿ"
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -1294,7 +1317,7 @@ Begin VB.Form RsCustomers
       Top             =   600
       Width           =   1395
       _ExtentX        =   2461
-      _ExtentY        =   556
+      _ExtentY        =   582
       _Version        =   393216
       BackColor       =   16777215
       Text            =   ""
@@ -1307,7 +1330,7 @@ Begin VB.Form RsCustomers
       Top             =   600
       Width           =   3045
       _ExtentX        =   5371
-      _ExtentY        =   556
+      _ExtentY        =   582
       _Version        =   393216
       BackColor       =   16777215
       Text            =   ""
@@ -1376,7 +1399,7 @@ Begin VB.Form RsCustomers
          _cx             =   24368
          _cy             =   7964
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -1839,7 +1862,7 @@ Begin VB.Form RsCustomers
                Top             =   240
                Width           =   3015
                _ExtentX        =   5318
-               _ExtentY        =   556
+               _ExtentY        =   582
                _Version        =   393216
                Text            =   ""
                RightToLeft     =   -1  'True
@@ -2000,7 +2023,7 @@ Begin VB.Form RsCustomers
          _cx             =   24368
          _cy             =   7964
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -2059,7 +2082,7 @@ Begin VB.Form RsCustomers
             _cx             =   26644
             _cy             =   10504
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2262,7 +2285,7 @@ Begin VB.Form RsCustomers
                   Top             =   150
                   Width           =   2625
                   _ExtentX        =   4630
-                  _ExtentY        =   556
+                  _ExtentY        =   582
                   _Version        =   393216
                   BackColor       =   8421631
                   Text            =   ""
@@ -2275,7 +2298,7 @@ Begin VB.Form RsCustomers
                   Top             =   480
                   Width           =   2625
                   _ExtentX        =   4630
-                  _ExtentY        =   556
+                  _ExtentY        =   582
                   _Version        =   393216
                   BackColor       =   8421631
                   Text            =   ""
@@ -2288,7 +2311,7 @@ Begin VB.Form RsCustomers
                   Top             =   840
                   Width           =   2625
                   _ExtentX        =   4630
-                  _ExtentY        =   556
+                  _ExtentY        =   582
                   _Version        =   393216
                   BackColor       =   8421631
                   Text            =   ""
@@ -2421,7 +2444,7 @@ Begin VB.Form RsCustomers
                   Enabled         =   0   'False
                   CalendarBackColor=   12648447
                   CustomFormat    =   "yyyy/M/d"
-                  Format          =   236257283
+                  Format          =   212140035
                   CurrentDate     =   38718
                End
                Begin VB.Label lbl 
@@ -2527,7 +2550,7 @@ Begin VB.Form RsCustomers
                   Enabled         =   0   'False
                   CalendarBackColor=   12648447
                   CustomFormat    =   "yyyy/M/d"
-                  Format          =   236257283
+                  Format          =   212140035
                   CurrentDate     =   38718
                End
                Begin VB.Label lbl 
@@ -2633,7 +2656,7 @@ Begin VB.Form RsCustomers
                   Enabled         =   0   'False
                   CalendarBackColor=   12648447
                   CustomFormat    =   "yyyy/M/d"
-                  Format          =   236257283
+                  Format          =   212140035
                   CurrentDate     =   38718
                End
                Begin VB.Label lbl 
@@ -2829,8 +2852,9 @@ Begin VB.Form RsCustomers
                   ButtonPositionImage=   1
                   Caption         =   "⁄—÷  ﬁ—Ì— ﬂ‘› Õ”«»"
                   BackColor       =   14871017
+                  FontName        =   "Arial"
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -2878,15 +2902,6 @@ Begin VB.Form RsCustomers
             End
             Begin VB.TextBox txtidffff 
                Alignment       =   1  'Right Justify
-               BeginProperty Font 
-                  Name            =   "Arial"
-                  Size            =   8.25
-                  Charset         =   178
-                  Weight          =   400
-                  Underline       =   0   'False
-                  Italic          =   0   'False
-                  Strikethrough   =   0   'False
-               EndProperty
                Height          =   315
                Index           =   0
                Left            =   -3900
@@ -2902,7 +2917,7 @@ Begin VB.Form RsCustomers
                Top             =   3600
                Width           =   4695
                _ExtentX        =   8281
-               _ExtentY        =   556
+               _ExtentY        =   582
                _Version        =   393216
                Enabled         =   0   'False
                Style           =   2
@@ -2958,8 +2973,9 @@ Begin VB.Form RsCustomers
                ButtonPositionImage=   1
                Caption         =   "«œ—«Ã «·»’„Â"
                BackColor       =   14871017
+               FontName        =   "Arial"
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -2988,8 +3004,9 @@ Begin VB.Form RsCustomers
                ButtonPositionImage=   1
                Caption         =   "⁄—÷ «·»’„Â"
                BackColor       =   14871017
+               FontName        =   "Arial"
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -3209,15 +3226,6 @@ Begin VB.Form RsCustomers
             Begin VB.Label Label5 
                Alignment       =   1  'Right Justify
                BackStyle       =   0  'Transparent
-               BeginProperty Font 
-                  Name            =   "Arial"
-                  Size            =   8.25
-                  Charset         =   178
-                  Weight          =   400
-                  Underline       =   0   'False
-                  Italic          =   0   'False
-                  Strikethrough   =   0   'False
-               EndProperty
                Height          =   375
                Left            =   13695
                RightToLeft     =   -1  'True
@@ -3248,7 +3256,7 @@ Begin VB.Form RsCustomers
       Top             =   1440
       Width           =   3075
       _ExtentX        =   5424
-      _ExtentY        =   556
+      _ExtentY        =   582
       _Version        =   393216
       Text            =   ""
       RightToLeft     =   -1  'True
@@ -3261,7 +3269,7 @@ Begin VB.Form RsCustomers
       Top             =   1440
       Width           =   4275
       _ExtentX        =   7541
-      _ExtentY        =   556
+      _ExtentY        =   582
       _Version        =   393216
       Text            =   ""
       RightToLeft     =   -1  'True
@@ -3278,8 +3286,9 @@ Begin VB.Form RsCustomers
       ButtonPositionImage=   1
       Caption         =   "ÿ»«⁄… ﬂ—  ⁄„Ì·"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -3308,7 +3317,7 @@ Begin VB.Form RsCustomers
       Enabled         =   0   'False
       CalendarBackColor=   12648447
       CustomFormat    =   "yyyy/M/d"
-      Format          =   234094595
+      Format          =   212140035
       CurrentDate     =   38718
    End
    Begin ALLButtonS.ALLButton ALLButton1 
@@ -3323,7 +3332,7 @@ Begin VB.Form RsCustomers
       TX              =   "«·”»»"
       ENAB            =   -1  'True
       BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -3361,8 +3370,9 @@ Begin VB.Form RsCustomers
       ButtonPositionImage=   1
       Caption         =   "«·„—›ﬁ« "
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -3400,7 +3410,7 @@ Begin VB.Form RsCustomers
       _Version        =   393216
       CalendarBackColor=   12648447
       CalendarTitleBackColor=   10383715
-      Format          =   234160131
+      Format          =   212205571
       CurrentDate     =   41640
    End
    Begin Dynamic_Byte.NourHijriCal BrithDateH 
@@ -3691,7 +3701,7 @@ Public calledFromForm As Boolean
 Private m_DealingForm As GridTransType
 Dim Account_Code_dynamic166 As String
 Private m_DcboCustomers As DataCombo
-Public index As Integer
+Public Index As Integer
 Dim FTempLen As Integer
 Dim FRegTemplate As String
 Dim FRegTemp As Variant
@@ -3726,27 +3736,27 @@ Private Sub PassData()
     Dim StrSQL As String
     On Error GoTo ErrTrap
     StrSQL = "SELECT * From TblCustemers"
- If Me.calledFromForm = False Then Exit Sub
-    Select Case Me.DealingForm
-
- 
-        Case InvoiceTransaction
-            fill_combo Me.DcboCustomers, StrSQL
-            Me.DcboCustomers.BoundText = val(XPTxtCusID.text)
- 
-        Case PriceList
-     StrSQL = "SELECT * From TblCustemers where Type=2"
-          'fill_combo FrmMainPriceList.DBCboSupplierName, StrSQL
-          '  FrmMainPriceList.DBCboSupplierName.BoundText = val(XPTxtCusID.Text)
-
-            '⁄—÷ «·√”⁄«—
-        Case ShowPrice
-           fill_combo FrmShowPrice.DBCboClientName, StrSQL
-            FrmShowPrice.DBCboClientName.BoundText = val(XPTxtCusID.text)
-    End Select
- Me.calledFromForm = False
-Unload Me
-    Exit Sub
+    If Me.calledFromForm = False Then Exit Sub
+           Select Case Me.DealingForm
+       
+        
+               Case InvoiceTransaction
+                       fill_combo Me.DcboCustomers, StrSQL
+                       Me.DcboCustomers.BoundText = val(XPTxtCusID.Text)
+        
+               Case PriceList
+                       StrSQL = "SELECT * From TblCustemers where Type=2"
+                 'fill_combo FrmMainPriceList.DBCboSupplierName, StrSQL
+                 '  FrmMainPriceList.DBCboSupplierName.BoundText = val(XPTxtCusID.Text)
+       
+                   '⁄—÷ «·√”⁄«—
+               Case ShowPrice
+                       fill_combo FrmShowPrice.DBCboClientName, StrSQL
+                        FrmShowPrice.DBCboClientName.BoundText = val(XPTxtCusID.Text)
+           End Select
+           Me.calledFromForm = False
+           Unload Me
+       Exit Sub
 ErrTrap:
 End Sub
 
@@ -3755,13 +3765,13 @@ Private Sub ALLButton1_Click()
 End Sub
 
 Private Sub BrithDate_Change()
-If Me.TxtModFlg.text <> "R" Then
+If Me.TxtModFlg.Text <> "R" Then
 BrithDateH.value = ToHijriDate(BrithDate.value)
 End If
 End Sub
 
 Private Sub BrithDateH_LostFocus()
-If Me.TxtModFlg.text <> "R" Then
+If Me.TxtModFlg.Text <> "R" Then
       VBA.Calendar = vbCalGreg
     BrithDate.value = ToGregorianDate(BrithDateH.value)
  End If
@@ -3808,7 +3818,7 @@ End Sub
 Function DeleteOpeningBalance()
     Cmd_Click (1)
     OptType(2).value = True
-    TxtOpenBalance.text = 0
+    TxtOpenBalance.Text = 0
     Cmd_Click (2)
 
 End Function
@@ -3817,7 +3827,7 @@ Private Sub CDMOldContract_Click()
 FrmOldContract.show
 End Sub
 
-Private Sub Cmd_Click(index As Integer)
+Private Sub Cmd_Click(Index As Integer)
 
     On Error GoTo ErrTrap
 
@@ -3827,7 +3837,7 @@ Private Sub Cmd_Click(index As Integer)
  
     Dim Msg As String
 
-    Select Case index
+    Select Case Index
 
         Case 0
 
@@ -3835,7 +3845,7 @@ Private Sub Cmd_Click(index As Integer)
                 Exit Sub
             End If
 
-            TxtModFlg.text = "N"
+            TxtModFlg.Text = "N"
             clear_all Me
     
             Txt_DateExpLincH.value = ToHijriDate(Date)
@@ -3869,7 +3879,7 @@ Private Sub Cmd_Click(index As Integer)
    If SystemOptions.usertype <> UserAdminAll Then
   
   GetUserData user_id, , , , , , EmpID
-        Me.DCEmP.BoundText = EmpID
+        Me.DcEmp.BoundText = EmpID
  
   End If
   
@@ -3883,13 +3893,13 @@ Private Sub Cmd_Click(index As Integer)
                 Exit Sub
             End If
 
-            If XPTxtCusID.text = 2 Then
+            If XPTxtCusID.Text = 2 Then
                 Msg = "·« Ì„ﬂ‰  ⁄œÌ· »Ì«‰«  Â–« «·”Ã·"
                 MsgBox Msg, vbOKOnly + vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                 Exit Sub
             End If
 
-            TxtModFlg.text = "E"
+            TxtModFlg.Text = "E"
 
         Case 2
 
@@ -3897,8 +3907,8 @@ Private Sub Cmd_Click(index As Integer)
         CREATEADDRESS
         
         If checkEeinvoice = False Then Exit Sub
-            If txtid.text = "" Then
-                currentcode = get_coding(branch_id, "TblCustemers", 15, Me.DCPreFix.text)
+            If txtid.Text = "" Then
+                currentcode = get_coding(branch_id, "TblCustemers", 15, Me.DCPreFix.Text)
 
                 If currentcode = "miniError" Then
                     MsgBox "⁄œœ «·Œ«‰«  «· Ì ﬁ„  » ÕœÌœ…  ·Â–« ««ﬂÊœ ’€Ì—… Ãœ« Ì—ÃÌ  €ÌÌ—Â« ›Ì ‘«‘…  ﬂÊÌœ «·ÕﬁÊ· «Ê «·« ’«· »„”∆Ê· «·‰Ÿ«„"
@@ -3941,7 +3951,7 @@ End If
                 Exit Sub
             End If
 
-            If XPTxtCusID.text = 2 Then
+            If XPTxtCusID.Text = 2 Then
                 Msg = "·« Ì„ﬂ‰ Õ–› »Ì«‰«  Â–« «·”Ã·"
                 MsgBox Msg, vbOKOnly + vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                 Exit Sub
@@ -3981,17 +3991,17 @@ End If
         
             Dim FirstPeriod As Date
             getFirstPeriodDateInthisYear FirstPeriod
-            ShowReport IIf(IsNull(rs("Account_Code")), "", rs("Account_Code")), XPTxtCusName.text, FirstPeriod, Date
+            ShowReport IIf(IsNull(rs("Account_Code")), "", rs("Account_Code")), XPTxtCusName.Text, FirstPeriod, Date
         Case 10
-            If val(Me.XPTxtCusID.text) <> 0 Then
-                print_report val(Me.XPTxtCusID.text)
+            If val(Me.XPTxtCusID.Text) <> 0 Then
+                print_report val(Me.XPTxtCusID.Text)
         '" & val(XPTxtCusID.text) & ")"
         
             End If
         
         Case 11
                     On Error Resume Next
-ShowAttachments DCPreFix.text & txtid.text, "270120152"
+ShowAttachments DCPreFix.Text & txtid.Text, "270120152"
  
  
     End Select
@@ -4178,7 +4188,7 @@ Me.DcbDigCustomer.AddItem "7"
     Dcombos.GetAccountingCodes Me.DboParentAccount, False, True
     Dcombos.GetCodeing Me.DCPreFix, 4
     ' Dcombos.GetEmployees Me.DCEmp
-    Dcombos.GetSalesRepData Me.DCEmP
+    Dcombos.GetSalesRepData Me.DcEmp
     Me.Dtp.value = Date
     DtRecord.value = Date
     StrSQL = "select * From TblCustemers where type=56"
@@ -4202,7 +4212,7 @@ Me.DcbDigCustomer.AddItem "7"
     Set rs = New ADODB.Recordset
     rs.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
     XPBtnMove_Click 2
-    Me.TxtModFlg.text = "R"
+    Me.TxtModFlg.Text = "R"
 
     If SystemOptions.UserInterface = EnglishInterface Then
         SetInterface Me
@@ -4249,28 +4259,28 @@ End Sub
 
 Function CuurentLogdata(Optional Currentmode As String)
     LogTextA = "  Õ›Ÿ ‘«‘… " & " »Ì«‰«   «·„” √Ã—Ì‰ " _
-       & CHR(13) & " ﬂÊœ «·⁄„Ì·  " & DCPreFix & txtid.text _
+       & CHR(13) & " ﬂÊœ «·⁄„Ì·  " & DCPreFix & txtid.Text _
        & CHR(13) & "«·«”„ ⁄—»Ì  " & XPTxtCusName _
        & CHR(13) & "   „”∆Ê· «·« ’«·   " & TxtResponsibleContact _
-       & CHR(13) & " —ﬁ„ «·Â« ›     " & XPTxtPhone _
+       & CHR(13) & " —ﬁ„ «·Â« ›     " & xptxtphone _
        & CHR(13) & " —ﬁ„ «·ÃÊ«·     " & XPTxtmobile _
        & CHR(13) & " —ﬁ„ «·›«ﬂ”     " & TxtFaxNumber _
        & CHR(13) & "  «·»—Ìœ «·«·ﬂ —Ê‰Ì       " & TxtE_mail _
-       & CHR(13) & " «·œÊ·Â   " & DcboCountryID.text _
-       & CHR(13) & " «·„Õ«›Ÿ…   " & DcboGovernmentID.text _
-       & CHR(13) & "  «·„œÌ‰…  " & DcboCityID.text _
+       & CHR(13) & " «·œÊ·Â   " & DcboCountryID.Text _
+       & CHR(13) & " «·„Õ«›Ÿ…   " & DcboGovernmentID.Text _
+       & CHR(13) & "  «·„œÌ‰…  " & DcboCityID.Text _
        & CHR(13) & "  «·⁄‰Ê«‰ »«· ›’Ì· " & TxtAddress _
        & CHR(13) & " „·«ÕŸ«   " & XPMTxtRemarks _
-       & CHR(13) & " ‰Ê⁄ «·Œ’„ ··„»Ì⁄«    " & CboDiscountType.text _
+       & CHR(13) & " ‰Ê⁄ «·Œ’„ ··„»Ì⁄«    " & CboDiscountType.Text _
        & CHR(13) & "   ﬁÌ„Â «·Œ’„  " & TxtDiscountValue _
-       & CHR(13) & " ‰Ê⁄ «·Œ’„ ··„‘ —Ì«    " & CboDiscountTypePur.text _
+       & CHR(13) & " ‰Ê⁄ «·Œ’„ ··„‘ —Ì«    " & CboDiscountTypePur.Text _
        & CHR(13) & "   ﬁÌ„Â «·Œ’„  " & TxtDiscountValuePur _
-       & CHR(13) & "  ‰Ê⁄ «·⁄„Ì·  " & DcCustomerType.text _
-       & CHR(13) & " «·„‰œÊ»   " & DCEmP.text _
+       & CHR(13) & "  ‰Ê⁄ «·⁄„Ì·  " & DcCustomerType.Text _
+       & CHR(13) & " «·„‰œÊ»   " & DcEmp.Text _
        & CHR(13) & " Õœ «·«∆ „«‰ „œÌ‰  " & TxtCreditLimit _
-       & CHR(13) & " „œ… «·«∆ „«‰     " & TxtDepitInterval.text & "   " & dcDepitIntervalID.text _
+       & CHR(13) & " „œ… «·«∆ „«‰     " & TxtDepitInterval.Text & "   " & dcDepitIntervalID.Text _
        & CHR(13) & " Õœ «·«∆ „«‰ œ«∆‰   " & TxtCreditlimitCredit _
-       & CHR(13) & " „œ… «·«∆ „«‰      " & TxtCreditInterval.text & "   " & dcCreditIntervalID.text _
+       & CHR(13) & " „œ… «·«∆ „«‰      " & TxtCreditInterval.Text & "   " & dcCreditIntervalID.Text _
                     
        LogTextA = LogTextA & CHR(13) & "«·„” «Ã—  ø       "
 
@@ -4304,28 +4314,28 @@ Function CuurentLogdata(Optional Currentmode As String)
     LogTextA = LogTextA & CHR(13) & "«·Õ”«» «·—∆Ì”Ì    " & DboParentAccount
 
     LogTexte = "  Õ›Ÿ ‘«‘… " & " Customers Data  " _
-       & CHR(13) & "  Code  " & DCPreFix & txtid.text _
+       & CHR(13) & "  Code  " & DCPreFix & txtid.Text _
        & CHR(13) & "Name " & XPTxtCusNamee _
        & CHR(13) & " Contact Person" & TxtResponsibleContact _
-       & CHR(13) & " Tel " & XPTxtPhone _
+       & CHR(13) & " Tel " & xptxtphone _
        & CHR(13) & "Mob " & XPTxtmobile _
        & CHR(13) & " Fax  " & TxtFaxNumber _
        & CHR(13) & "  Email   " & TxtE_mail _
-       & CHR(13) & " Contry   " & DcboCountryID.text _
-       & CHR(13) & " City   " & DcboGovernmentID.text _
-       & CHR(13) & "  Town  " & DcboCityID.text _
+       & CHR(13) & " Contry   " & DcboCountryID.Text _
+       & CHR(13) & " City   " & DcboGovernmentID.Text _
+       & CHR(13) & "  Town  " & DcboCityID.Text _
        & CHR(13) & " Address " & TxtAddress _
        & CHR(13) & " Remarks  " & XPMTxtRemarks _
-       & CHR(13) & " Sales Discount  type  " & CboDiscountType.text _
+       & CHR(13) & " Sales Discount  type  " & CboDiscountType.Text _
        & CHR(13) & " Discount Value " & TxtDiscountValue _
-       & CHR(13) & " Purchase Discount type " & CboDiscountTypePur.text _
+       & CHR(13) & " Purchase Discount type " & CboDiscountTypePur.Text _
        & CHR(13) & "  Discount Value" & TxtDiscountValuePur _
-       & CHR(13) & "  Cust. Type " & DcCustomerType.text _
-       & CHR(13) & " Sales Person   " & DCEmP.text _
+       & CHR(13) & "  Cust. Type " & DcCustomerType.Text _
+       & CHR(13) & " Sales Person   " & DcEmp.Text _
        & CHR(13) & "The limit for debit  " & TxtCreditLimit _
-       & CHR(13) & " Period     " & TxtDepitInterval.text & "   " & dcDepitIntervalID.text _
+       & CHR(13) & " Period     " & TxtDepitInterval.Text & "   " & dcDepitIntervalID.Text _
        & CHR(13) & "The limit for Credit   " & TxtCreditlimitCredit _
-       & CHR(13) & " Period " & TxtCreditInterval.text & "   " & dcCreditIntervalID.text _
+       & CHR(13) & " Period " & TxtCreditInterval.Text & "   " & dcCreditIntervalID.Text _
                     
        LogTexte = LogTexte & CHR(13) & "Customer & Supplier ?  "
 
@@ -4418,21 +4428,21 @@ Private Sub Label2_Click()
     Frame2.Visible = False
 End Sub
 
-Private Sub menue_Click(index As Integer)
-showsforms index
+Private Sub menue_Click(Index As Integer)
+showsforms Index
 End Sub
 
-Private Sub OptType_Click(index As Integer)
+Private Sub OptType_Click(Index As Integer)
     Me.TxtOpenBalance.Enabled = Not OptType(2).value
-    Me.TxtOpenBalance.text = IIf(OptType(2).value = True, 0, Me.TxtOpenBalance.text)
+    Me.TxtOpenBalance.Text = IIf(OptType(2).value = True, 0, Me.TxtOpenBalance.Text)
 End Sub
 
 Private Sub TxtCreditLimit_KeyPress(KeyAscii As Integer)
-    KeyAscii = KeyAscii_Num(KeyAscii, Me.TxtCreditLimit.text, 1)
+    KeyAscii = KeyAscii_Num(KeyAscii, Me.TxtCreditLimit.Text, 1)
 End Sub
 
 Private Sub TxtCreditlimitCredit_KeyPress(KeyAscii As Integer)
-    KeyAscii = KeyAscii_Num(KeyAscii, Me.TxtCreditlimitCredit.text, 1)
+    KeyAscii = KeyAscii_Num(KeyAscii, Me.TxtCreditlimitCredit.Text, 1)
 End Sub
 
 Private Sub txtCustGID_Change()
@@ -4441,8 +4451,8 @@ Private Sub txtCustGID_Change()
     Dim Msg As String
 Dim reson As String
 Dim locked As Boolean
-    If Me.TxtModFlg.text = "N" Then
-        If Len(txtCustGID.text) >= 10 Then
+    If Me.TxtModFlg.Text = "N" Then
+        If Len(txtCustGID.Text) >= 10 Then
             If CheckCustomerID(txtCustGID, Custcode, CustName, locked, reson) = True Then
            If locked = False Then
                 If SystemOptions.UserInterface = ArabicInterface Then
@@ -4471,7 +4481,7 @@ Dim locked As Boolean
             End If
 
                 MsgBox Msg, vbCritical
-                txtCustGID.text = ""
+                txtCustGID.Text = ""
                                         
             End If
         End If
@@ -4480,13 +4490,13 @@ Dim locked As Boolean
 End Sub
 
 Private Sub txtCustGID_KeyPress(KeyAscii As Integer)
-    KeyAscii = KeyAscii_Num(KeyAscii, Me.txtCustGID.text, 0)
+    KeyAscii = KeyAscii_Num(KeyAscii, Me.txtCustGID.Text, 0)
 End Sub
 
 Private Sub TxtModFlg_Change()
     On Error GoTo ErrTrap
 
-    Select Case Me.TxtModFlg.text
+    Select Case Me.TxtModFlg.Text
 
         Case "R"
             DboParentAccount.Enabled = False
@@ -4513,7 +4523,7 @@ Private Sub TxtModFlg_Change()
             '    TxtCustGID.locked = True
             XPTxtCusID.locked = True
             XPTxtCusName.locked = True
-            XPTxtPhone.locked = True
+            xptxtphone.locked = True
             XPTxtmobile.locked = True
             XPMTxtRemarks.locked = True
         
@@ -4560,7 +4570,7 @@ Private Sub TxtModFlg_Change()
         
             XPTxtCusID.locked = True
             XPTxtCusName.locked = False
-            XPTxtPhone.locked = False
+            xptxtphone.locked = False
             XPTxtmobile.locked = False
             XPMTxtRemarks.locked = False
             Fra(0).Enabled = True
@@ -4594,7 +4604,7 @@ Private Sub TxtModFlg_Change()
             Me.XPBtnMove(3).Enabled = False
             XPTxtCusID.locked = True
             XPTxtCusName.locked = False
-            XPTxtPhone.locked = False
+            xptxtphone.locked = False
             XPTxtmobile.locked = False
             XPMTxtRemarks.locked = False
             Fra(0).Enabled = True
@@ -4610,7 +4620,7 @@ ErrTrap:
 End Sub
 
 Private Sub TxtOpenBalance_KeyPress(KeyAscii As Integer)
-    KeyAscii = KeyAscii_Num(KeyAscii, Me.TxtOpenBalance.text, 0)
+    KeyAscii = KeyAscii_Num(KeyAscii, Me.TxtOpenBalance.Text, 0)
 End Sub
 
 Private Sub TxtSalaries1_Change()
@@ -4618,7 +4628,7 @@ ClcAll
 End Sub
 
 Private Sub TxtSalaries1_KeyPress(KeyAscii As Integer)
-    KeyAscii = KeyAscii_Num(KeyAscii, TxtSalaries1.text, 0)
+    KeyAscii = KeyAscii_Num(KeyAscii, TxtSalaries1.Text, 0)
 TxtSalaries1C = 0
 End Sub
 
@@ -4627,7 +4637,7 @@ ClcAll
 End Sub
 
 Private Sub TxtSalaries1C_KeyPress(KeyAscii As Integer)
- KeyAscii = KeyAscii_Num(KeyAscii, TxtSalaries1C.text, 0)
+ KeyAscii = KeyAscii_Num(KeyAscii, TxtSalaries1C.Text, 0)
 TxtSalaries1 = 0
 End Sub
 
@@ -4636,7 +4646,7 @@ ClcAll
 End Sub
 
 Private Sub TxtSalaries2_KeyPress(KeyAscii As Integer)
-    KeyAscii = KeyAscii_Num(KeyAscii, TxtSalaries2.text, 0)
+    KeyAscii = KeyAscii_Num(KeyAscii, TxtSalaries2.Text, 0)
 TxtSalaries2C = 0
 End Sub
 
@@ -4645,12 +4655,12 @@ ClcAll
 End Sub
 
 Private Sub TxtSalaries2C_KeyPress(KeyAscii As Integer)
- KeyAscii = KeyAscii_Num(KeyAscii, TxtSalaries2C.text, 0)
+ KeyAscii = KeyAscii_Num(KeyAscii, TxtSalaries2C.Text, 0)
 TxtSalaries2 = 0
 End Sub
 
 Private Sub TxtSalary_KeyPress(KeyAscii As Integer)
-    KeyAscii = KeyAscii_Num(KeyAscii, Me.TxtSalary.text, 0)
+    KeyAscii = KeyAscii_Num(KeyAscii, Me.TxtSalary.Text, 0)
 End Sub
 
 Private Sub TxtshowPrice1_Change()
@@ -4658,7 +4668,7 @@ ClcAll
 End Sub
 
 Private Sub TxtshowPrice1_KeyPress(KeyAscii As Integer)
-    KeyAscii = KeyAscii_Num(KeyAscii, TxtshowPrice1.text, 0)
+    KeyAscii = KeyAscii_Num(KeyAscii, TxtshowPrice1.Text, 0)
 TxtshowPrice1C = 0
 End Sub
 
@@ -4667,7 +4677,7 @@ ClcAll
 End Sub
 
 Private Sub TxtshowPrice1C_KeyPress(KeyAscii As Integer)
- KeyAscii = KeyAscii_Num(KeyAscii, TxtshowPrice1C.text, 0)
+ KeyAscii = KeyAscii_Num(KeyAscii, TxtshowPrice1C.Text, 0)
  TxtshowPrice1 = 0
  
 End Sub
@@ -4677,7 +4687,7 @@ ClcAll
 End Sub
 
 Private Sub TxtshowPrice2_KeyPress(KeyAscii As Integer)
- KeyAscii = KeyAscii_Num(KeyAscii, TxtshowPrice2.text, 0)
+ KeyAscii = KeyAscii_Num(KeyAscii, TxtshowPrice2.Text, 0)
  TxtshowPrice2C = 0
 End Sub
 
@@ -4686,7 +4696,7 @@ ClcAll
 End Sub
 
 Private Sub TxtshowPrice2C_KeyPress(KeyAscii As Integer)
- KeyAscii = KeyAscii_Num(KeyAscii, TxtshowPrice2C.text, 0)
+ KeyAscii = KeyAscii_Num(KeyAscii, TxtshowPrice2C.Text, 0)
 TxtshowPrice2 = 0
 End Sub
 
@@ -4695,7 +4705,7 @@ ClcAll
 End Sub
 
 Private Sub TxtShowQty1_KeyPress(KeyAscii As Integer)
-    KeyAscii = KeyAscii_Num(KeyAscii, TxtShowQty1.text, 0)
+    KeyAscii = KeyAscii_Num(KeyAscii, TxtShowQty1.Text, 0)
 TxtShowQty1c = 0
 End Sub
 
@@ -4704,20 +4714,20 @@ ClcAll
 End Sub
 
 Private Sub TxtShowQty1c_KeyPress(KeyAscii As Integer)
- KeyAscii = KeyAscii_Num(KeyAscii, TxtShowQty1c.text, 0)
+ KeyAscii = KeyAscii_Num(KeyAscii, TxtShowQty1c.Text, 0)
  TxtShowQty1 = 0
 End Sub
 
-Private Sub XPBtnMove_Click(index As Integer)
+Private Sub XPBtnMove_Click(Index As Integer)
     On Error GoTo ErrTrap
 
-    If Me.TxtModFlg.text = "N" Then
+    If Me.TxtModFlg.Text = "N" Then
         clear_all Me
-        Me.TxtModFlg.text = "R"
+        Me.TxtModFlg.Text = "R"
         XPBtnMove_Click (1)
     End If
 
-    Select Case index
+    Select Case Index
 
         Case 0
 
@@ -4780,32 +4790,32 @@ Public Sub Retrive(Optional Lngid As Long = 0)
         Else
             chkCustomerandVendor.value = vbUnchecked
         End If
-        TxtVATNO.text = IIf(IsNull(rs("VATNO").value), "", rs("VATNO").value)
+        TxtVATNO.Text = IIf(IsNull(rs("VATNO").value), "", rs("VATNO").value)
         
         dcBranch.BoundText = IIf(IsNull(rs("BranchId").value), "", rs("BranchId").value)
 Me.DtRecord.value = IIf(IsNull(rs("RecordDate")), Date, rs("RecordDate"))
-        DCPreFix.text = IIf(IsNull(rs("prifix").value), "", rs("prifix").value)
-        Me.txtid.text = IIf(IsNull(rs("code").value), "", rs("code").value)
-        txtopening_balance_voucher_id.text = IIf(IsNull(rs("opening_balance_voucher_id").value), "", rs("opening_balance_voucher_id").value)
-        XPTxtCusID.text = IIf(IsNull(rs("CusID")), "", val(rs("CusID")))
-        XPTxtCusName.text = IIf(IsNull(rs("CusName")), "", Trim(rs("CusName")))
-        XPTxtCusNamee.text = IIf(IsNull(rs("CusNamee")), "", Trim(rs("CusNamee")))
-        c1.text = IIf(IsNull(rs("c1")), "", Trim(rs("c1")))
-        c2.text = IIf(IsNull(rs("c2")), "", Trim(rs("c2")))
+        DCPreFix.Text = IIf(IsNull(rs("prifix").value), "", rs("prifix").value)
+        Me.txtid.Text = IIf(IsNull(rs("code").value), "", rs("code").value)
+        txtopening_balance_voucher_id.Text = IIf(IsNull(rs("opening_balance_voucher_id").value), "", rs("opening_balance_voucher_id").value)
+        XPTxtCusID.Text = IIf(IsNull(rs("CusID")), "", val(rs("CusID")))
+        XPTxtCusName.Text = IIf(IsNull(rs("CusName")), "", Trim(rs("CusName")))
+        XPTxtCusNamee.Text = IIf(IsNull(rs("CusNamee")), "", Trim(rs("CusNamee")))
+        c1.Text = IIf(IsNull(rs("c1")), "", Trim(rs("c1")))
+        c2.Text = IIf(IsNull(rs("c2")), "", Trim(rs("c2")))
         ''/////////////salah
-    Me.TxtMap.text = IIf(IsNull(rs("Map").value), "", rs("Map").value)
-    Me.txtJob.text = IIf(IsNull(rs("JobName").value), "", rs("JobName").value)
-    Me.TxtEntry.text = IIf(IsNull(rs("Entry").value), "", rs("Entry").value)
+    Me.TxtMap.Text = IIf(IsNull(rs("Map").value), "", rs("Map").value)
+    Me.txtJob.Text = IIf(IsNull(rs("JobName").value), "", rs("JobName").value)
+    Me.TxtEntry.Text = IIf(IsNull(rs("Entry").value), "", rs("Entry").value)
     '''///////////////////
-        Me.TxtResponsibleContact.text = IIf(IsNull(rs("ResponsibleContact").value), "", rs("ResponsibleContact").value)
-        XPTxtPhone.text = IIf(IsNull(rs("Cus_Phone")), "", Trim(rs("Cus_Phone")))
-        txtCustGID.text = IIf(IsNull(rs("CustGID")), "", (rs("CustGID")))
+        Me.TxtResponsibleContact.Text = IIf(IsNull(rs("ResponsibleContact").value), "", rs("ResponsibleContact").value)
+        xptxtphone.Text = IIf(IsNull(rs("Cus_Phone")), "", Trim(rs("Cus_Phone")))
+        txtCustGID.Text = IIf(IsNull(rs("CustGID")), "", (rs("CustGID")))
          BrithDate.value = IIf(IsNull(rs("BrithDate")), Date, Trim(rs("BrithDate")))
          BrithDateH.value = IIf(IsNull(rs("BrithDateH")), ToHijriDate(BrithDate.value), Trim(rs("BrithDateH")))
-         TxtRecordNo.text = IIf(IsNull(rs("RecordNo")), "", rs("RecordNo"))
+         TxtRecordNo.Text = IIf(IsNull(rs("RecordNo")), "", rs("RecordNo"))
     ''///
-    Me.TxtBox.text = IIf(IsNull(rs("Boxmil")), "", Trim(rs("Boxmil")))
-        Me.TxtZib.text = IIf(IsNull(rs("ZipCode")), "", (rs("ZipCode")))
+    Me.TxtBox.Text = IIf(IsNull(rs("Boxmil")), "", Trim(rs("Boxmil")))
+        Me.TxtZib.Text = IIf(IsNull(rs("ZipCode")), "", (rs("ZipCode")))
         DcbDigCustomer.ListIndex = IIf(IsNull(rs("TypeCustomer")), -1, (rs("TypeCustomer")))
             If IsNull(rs("PassWord").value) Then
     chkSendMessage.value = vbUnchecked
@@ -4814,17 +4824,17 @@ Me.DtRecord.value = IIf(IsNull(rs("RecordDate")), Date, rs("RecordDate"))
     chkSendMessage.value = IIf(rs("SendMessage") = 1, 1, 0)
     
     End If
-        txtNoOFDigitUser(2).text = IIf(IsNull(rs("StreetName").value), "", rs("StreetName").value)
-txtNoOFDigitUser(4).text = IIf(IsNull(rs("BuildingNumber").value), "", rs("BuildingNumber").value)
+        txtNoOFDigitUser(2).Text = IIf(IsNull(rs("StreetName").value), "", rs("StreetName").value)
+txtNoOFDigitUser(4).Text = IIf(IsNull(rs("BuildingNumber").value), "", rs("BuildingNumber").value)
 'txtNoOFDigitUser(9).Text = IIf(IsNull(rs("CitySubdivisionName").value), "", rs("CitySubdivisionName").value)
 'txtNoOFDigitUser(6).Text = IIf(IsNull(rs("CityName").value), "", rs("CityName").value)
 'txtNoOFDigitUser(7).Text = IIf(IsNull(rs("PostalZone").value), "", rs("PostalZone").value)
-txtNoOFDigitUser(10).text = IIf(IsNull(rs("IdentificationCode").value), "", rs("IdentificationCode").value)
-txtNoOFDigitUser(5).text = IIf(IsNull(rs("PlotIdentification").value), "", rs("PlotIdentification").value)
-txtNoOFDigitUser(3).text = IIf(IsNull(rs("AdditionalStreetName").value), "", rs("AdditionalStreetName").value)
-txtNoOFDigitUser(8).text = IIf(IsNull(rs("CountrySubentity").value), "", rs("CountrySubentity").value)
+txtNoOFDigitUser(10).Text = IIf(IsNull(rs("IdentificationCode").value), "", rs("IdentificationCode").value)
+txtNoOFDigitUser(5).Text = IIf(IsNull(rs("PlotIdentification").value), "", rs("PlotIdentification").value)
+txtNoOFDigitUser(3).Text = IIf(IsNull(rs("AdditionalStreetName").value), "", rs("AdditionalStreetName").value)
+txtNoOFDigitUser(8).Text = IIf(IsNull(rs("CountrySubentity").value), "", rs("CountrySubentity").value)
 
-txtNoOFDigitUser(0).text = IIf(IsNull(rs("Id700").value), "", rs("Id700").value)
+txtNoOFDigitUser(0).Text = IIf(IsNull(rs("Id700").value), "", rs("Id700").value)
  
  
     '''///////////////////
@@ -4833,9 +4843,9 @@ txtNoOFDigitUser(0).text = IIf(IsNull(rs("Id700").value), "", rs("Id700").value)
 
     
         ''//
-        XPTxtmobile.text = IIf(IsNull(rs("Cus_mobile")), "", Trim(rs("Cus_mobile")))
-        XPMTxtRemarks.text = IIf(IsNull(rs("Remark")), "", Trim(rs("Remark")))
-        XPMTxtRemarks2.text = IIf(IsNull(rs("Remark2")), "", Trim(rs("Remark2")))
+        XPTxtmobile.Text = IIf(IsNull(rs("Cus_mobile")), "", Trim(rs("Cus_mobile")))
+        XPMTxtRemarks.Text = IIf(IsNull(rs("Remark")), "", Trim(rs("Remark")))
+        XPMTxtRemarks2.Text = IIf(IsNull(rs("Remark2")), "", Trim(rs("Remark2")))
         Me.DboParentAccount.BoundText = IIf(IsNull(rs("parent_account")), "", rs("parent_account"))
 
         '    Me.CboSex = IIf(IsNull(rs("Sex")), "", rs("Sex"))
@@ -4852,24 +4862,24 @@ txtNoOFDigitUser(0).text = IIf(IsNull(rs("Id700").value), "", rs("Id700").value)
          
         locked.value = IIf(rs("locked") = True, 1, 0)
     
-        TxtDepitInterval.text = IIf(IsNull(rs("DepitInterval")), 0, rs("DepitInterval"))
-        TxtCreditInterval.text = IIf(IsNull(rs("CreditInterval")), 0, rs("CreditInterval"))
+        TxtDepitInterval.Text = IIf(IsNull(rs("DepitInterval")), 0, rs("DepitInterval"))
+        TxtCreditInterval.Text = IIf(IsNull(rs("CreditInterval")), 0, rs("CreditInterval"))
     
         dcDepitIntervalID.ListIndex = IIf(IsNull(rs("DepitIntervalID")), -1, rs("DepitIntervalID"))
         dcCreditIntervalID.ListIndex = IIf(IsNull(rs("CreditIntervalID")), -1, rs("CreditIntervalID"))
      
-        TxtCreditLimit.text = IIf(IsNull(rs("CreditLimit").value), "0", rs("CreditLimit").value)
+        TxtCreditLimit.Text = IIf(IsNull(rs("CreditLimit").value), "0", rs("CreditLimit").value)
 'gooooooooooooold
-TxtShowQty1.text = IIf(IsNull(rs("ShowQty1").value), "0", rs("ShowQty1").value)
-TxtshowPrice1.text = IIf(IsNull(rs("showPrice1").value), "0", rs("showPrice1").value)
-TxtshowPrice2.text = IIf(IsNull(rs("showPrice2").value), "0", rs("showPrice2").value)
-TxtSalaries1.text = IIf(IsNull(rs("Salaries1").value), "0", rs("Salaries1").value)
-TxtSalaries2.text = IIf(IsNull(rs("Salaries2").value), "0", rs("Salaries2").value)
-TxtShowQty1c.text = IIf(IsNull(rs("ShowQty1c").value), "0", rs("ShowQty1c").value)
-TxtshowPrice1C.text = IIf(IsNull(rs("showPrice1C").value), "0", rs("showPrice1C").value)
-TxtshowPrice2C.text = IIf(IsNull(rs("showPrice2C").value), "0", rs("showPrice2C").value)
-TxtSalaries1C.text = IIf(IsNull(rs("Salaries1C").value), "0", rs("Salaries1C").value)
- TxtSalaries2C.text = IIf(IsNull(rs("Salaries2C").value), "0", rs("Salaries2C").value)
+TxtShowQty1.Text = IIf(IsNull(rs("ShowQty1").value), "0", rs("ShowQty1").value)
+TxtshowPrice1.Text = IIf(IsNull(rs("showPrice1").value), "0", rs("showPrice1").value)
+TxtshowPrice2.Text = IIf(IsNull(rs("showPrice2").value), "0", rs("showPrice2").value)
+TxtSalaries1.Text = IIf(IsNull(rs("Salaries1").value), "0", rs("Salaries1").value)
+TxtSalaries2.Text = IIf(IsNull(rs("Salaries2").value), "0", rs("Salaries2").value)
+TxtShowQty1c.Text = IIf(IsNull(rs("ShowQty1c").value), "0", rs("ShowQty1c").value)
+TxtshowPrice1C.Text = IIf(IsNull(rs("showPrice1C").value), "0", rs("showPrice1C").value)
+TxtshowPrice2C.Text = IIf(IsNull(rs("showPrice2C").value), "0", rs("showPrice2C").value)
+TxtSalaries1C.Text = IIf(IsNull(rs("Salaries1C").value), "0", rs("Salaries1C").value)
+ TxtSalaries2C.Text = IIf(IsNull(rs("Salaries2C").value), "0", rs("Salaries2C").value)
 
 'txtTotald.text = IIf(IsNull(rs("Totald").value), "0", rs("Totald").value)
 'txtTotalc.text = IIf(IsNull(rs("Totalc").value), "0", rs("Totalc").value)
@@ -4916,7 +4926,7 @@ TxtSalaries1C.text = IIf(IsNull(rs("Salaries1C").value), "0", rs("Salaries1C").v
         
         
         If Not IsNull(rs("OpenBalanceType").value) Then
-            Me.TxtOpenBalance.text = IIf(IsNull(rs("OpenBalance")), "", Trim(rs("OpenBalance")))
+            Me.TxtOpenBalance.Text = IIf(IsNull(rs("OpenBalance")), "", Trim(rs("OpenBalance")))
 
             If rs("OpenBalanceType").value = 0 Then
                 OptType(0).value = True
@@ -4927,7 +4937,7 @@ TxtSalaries1C.text = IIf(IsNull(rs("Salaries1C").value), "0", rs("Salaries1C").v
             End If
         
         Else
-            Me.TxtOpenBalance.text = 0
+            Me.TxtOpenBalance.Text = 0
             Me.OptType(2).value = True
             OptType_Click 2
         End If
@@ -4938,7 +4948,7 @@ TxtSalaries1C.text = IIf(IsNull(rs("Salaries1C").value), "0", rs("Salaries1C").v
        
        
         If Not IsNull(rs("OpenBalanceType1").value) Then
-        Me.TxtOpenBalance1.text = IIf(IsNull(rs("OpenBalance1")), "", Trim(rs("OpenBalance1")))
+        Me.TxtOpenBalance1.Text = IIf(IsNull(rs("OpenBalance1")), "", Trim(rs("OpenBalance1")))
 
                     If rs("OpenBalanceType1").value = 0 Then
                         OptType1(0).value = True
@@ -4949,13 +4959,13 @@ TxtSalaries1C.text = IIf(IsNull(rs("Salaries1C").value), "0", rs("Salaries1C").v
                     End If
     
     Else
-        Me.TxtOpenBalance1.text = 0
+        Me.TxtOpenBalance1.Text = 0
         Me.OptType1(2).value = True
         OptType1_Click 2
     End If
 
     If Not IsNull(rs("OpenBalanceType2").value) Then
-        Me.TxtOpenBalance2.text = IIf(IsNull(rs("OpenBalance2")), "", Trim(rs("OpenBalance2")))
+        Me.TxtOpenBalance2.Text = IIf(IsNull(rs("OpenBalance2")), "", Trim(rs("OpenBalance2")))
 
         If rs("OpenBalanceType2").value = 0 Then
             OptType2(0).value = True
@@ -4966,16 +4976,16 @@ TxtSalaries1C.text = IIf(IsNull(rs("Salaries1C").value), "0", rs("Salaries1C").v
         End If
     
     Else
-        Me.TxtOpenBalance2.text = 0
+        Me.TxtOpenBalance2.Text = 0
         Me.OptType2(2).value = True
         OptType2_Click 2
     End If
 
 
-        Me.TxtCreditlimitCredit.text = IIf(IsNull(rs("CreditlimitCredit").value), "0", rs("CreditlimitCredit").value)
-        Me.TxtFaxNumber.text = IIf(IsNull(rs("FaxNumber").value), "", rs("FaxNumber").value)
-        Me.TxtE_mail.text = IIf(IsNull(rs("E_mail").value), "", rs("E_mail").value)
-          SngCusBegainAccount = GetCustomerAccount(val(XPTxtCusID.text), True)
+        Me.TxtCreditlimitCredit.Text = IIf(IsNull(rs("CreditlimitCredit").value), "0", rs("CreditlimitCredit").value)
+        Me.TxtFaxNumber.Text = IIf(IsNull(rs("FaxNumber").value), "", rs("FaxNumber").value)
+        Me.TxtE_mail.Text = IIf(IsNull(rs("E_mail").value), "", rs("E_mail").value)
+          SngCusBegainAccount = GetCustomerAccount(val(XPTxtCusID.Text), True)
         Dim balanceString As String
 WriteCustomerBalPublic IIf(IsNull(rs("Account_Code")), "", rs("Account_Code")), , balanceString
         lbl(8).Caption = balanceString
@@ -5015,30 +5025,30 @@ WriteCustomerBalPublic IIf(IsNull(rs("Account_Code")), "", rs("Account_Code")), 
 
         If IsNull(rs("Trans_DiscountType").value) Then
             Me.CboDiscountType.ListIndex = 0
-            Me.TxtDiscountValue.text = 0
+            Me.TxtDiscountValue.Text = 0
         ElseIf rs("Trans_DiscountType").value = 0 Then
             Me.CboDiscountType.ListIndex = 0
-            Me.TxtDiscountValue.text = 0
+            Me.TxtDiscountValue.Text = 0
         ElseIf rs("Trans_DiscountType").value = 1 Then
             Me.CboDiscountType.ListIndex = 1
-            Me.TxtDiscountValue.text = IIf(IsNull(rs("Trans_Discount").value), "", rs("Trans_Discount").value)
+            Me.TxtDiscountValue.Text = IIf(IsNull(rs("Trans_Discount").value), "", rs("Trans_Discount").value)
         ElseIf rs("Trans_DiscountType").value = 2 Then
             Me.CboDiscountType.ListIndex = 2
-            Me.TxtDiscountValue.text = IIf(IsNull(rs("Trans_Discount").value), "", rs("Trans_Discount").value)
+            Me.TxtDiscountValue.Text = IIf(IsNull(rs("Trans_Discount").value), "", rs("Trans_Discount").value)
         End If
     
         If IsNull(rs("Trans_DiscountTypePur").value) Then
             Me.CboDiscountTypePur.ListIndex = 0
-            Me.TxtDiscountValuePur.text = 0
+            Me.TxtDiscountValuePur.Text = 0
         ElseIf rs("Trans_DiscountTypePur").value = 0 Then
             Me.CboDiscountTypePur.ListIndex = 0
-            Me.TxtDiscountValuePur.text = 0
+            Me.TxtDiscountValuePur.Text = 0
         ElseIf rs("Trans_DiscountTypePur").value = 1 Then
             Me.CboDiscountTypePur.ListIndex = 1
-            Me.TxtDiscountValuePur.text = IIf(IsNull(rs("Trans_DiscountPur").value), "", rs("Trans_DiscountPur").value)
+            Me.TxtDiscountValuePur.Text = IIf(IsNull(rs("Trans_DiscountPur").value), "", rs("Trans_DiscountPur").value)
         ElseIf rs("Trans_DiscountTypePur").value = 2 Then
             Me.CboDiscountTypePur.ListIndex = 2
-            Me.TxtDiscountValuePur.text = IIf(IsNull(rs("Trans_DiscountPur").value), "", rs("Trans_DiscountPur").value)
+            Me.TxtDiscountValuePur.Text = IIf(IsNull(rs("Trans_DiscountPur").value), "", rs("Trans_DiscountPur").value)
         End If
     
         Me.DcboCountryID.BoundText = IIf(IsNull(rs("CountryID")), "", rs("CountryID"))
@@ -5046,22 +5056,22 @@ WriteCustomerBalPublic IIf(IsNull(rs("Account_Code")), "", rs("Account_Code")), 
     
         Me.DcboGovernmentID.BoundText = IIf(IsNull(rs("GovernmentID")), "", rs("GovernmentID"))
         Me.DcboCityID.BoundText = IIf(IsNull(rs("CityID")), "", rs("CityID"))
-        Me.DCEmP.BoundText = IIf(IsNull(rs("EmpId")), "", rs("EmpId"))
+        Me.DcEmp.BoundText = IIf(IsNull(rs("EmpId")), "", rs("EmpId"))
         Me.DcCustomerType.BoundText = IIf(IsNull(rs("CustomerTypeID")), "", rs("CustomerTypeID"))
       
-        Me.TxtAddress.text = IIf(IsNull(rs("Address")), "", Trim(rs("Address")))
+        Me.TxtAddress.Text = IIf(IsNull(rs("Address")), "", Trim(rs("Address")))
         '19082013
         Txt_DateExpLincH.value = IIf(IsNull(rs("ExpireDateH").value), ToHijriDate(Date), rs("ExpireDateH").value)
 
-        Me.TxtCompany.text = IIf(IsNull(rs("Company")), "", Trim(rs("Company")))
-        Me.TXTJobTitle.text = IIf(IsNull(rs("JobTitle")), "", Trim(rs("JobTitle")))
-        Me.TxtSalary.text = IIf(IsNull(rs("Salary")), 0, Trim(rs("Salary")))
-        Me.TxtJobAddress.text = IIf(IsNull(rs("JobAddress")), "", Trim(rs("JobAddress")))
-        Me.TxtJobTel.text = IIf(IsNull(rs("JobTel")), "", Trim(rs("JobTel")))
-        Me.TxtJobTelConvert.text = IIf(IsNull(rs("JobTelConvert")), "", Trim(rs("JobTelConvert")))
-        Me.TxtHomeTel.text = IIf(IsNull(rs("HomeTel")), "", Trim(rs("HomeTel")))
-        Me.TxtMobile1.text = IIf(IsNull(rs("Mobile1")), "", Trim(rs("Mobile1")))
-        Me.TxtMobile2.text = IIf(IsNull(rs("Mobile2")), "", Trim(rs("Mobile2")))
+        Me.TxtCompany.Text = IIf(IsNull(rs("Company")), "", Trim(rs("Company")))
+        Me.TXTJobTitle.Text = IIf(IsNull(rs("JobTitle")), "", Trim(rs("JobTitle")))
+        Me.TxtSalary.Text = IIf(IsNull(rs("Salary")), 0, Trim(rs("Salary")))
+        Me.TxtJobAddress.Text = IIf(IsNull(rs("JobAddress")), "", Trim(rs("JobAddress")))
+        Me.TxtJobTel.Text = IIf(IsNull(rs("JobTel")), "", Trim(rs("JobTel")))
+        Me.TxtJobTelConvert.Text = IIf(IsNull(rs("JobTelConvert")), "", Trim(rs("JobTelConvert")))
+        Me.TxtHomeTel.Text = IIf(IsNull(rs("HomeTel")), "", Trim(rs("HomeTel")))
+        Me.TxtMobile1.Text = IIf(IsNull(rs("Mobile1")), "", Trim(rs("Mobile1")))
+        Me.TxtMobile2.Text = IIf(IsNull(rs("Mobile2")), "", Trim(rs("Mobile2")))
     
     End If
 
@@ -5078,10 +5088,10 @@ Private Sub Del_Member()
     Dim StrSQL As String
     On Error GoTo ErrTrap
 
-    If XPTxtCusID.text <> "" Then
+    If XPTxtCusID.Text <> "" Then
 
         Msg = "”Ì „ Õ–› »Ì«‰«  «·⁄„Ì·   " & CHR(13)
-        Msg = Msg + (XPTxtCusName.text) & CHR(13)
+        Msg = Msg + (XPTxtCusName.Text) & CHR(13)
         Msg = Msg + " Â·  —€» ›Ì Õ–› Â–Â «·»Ì«‰« ø"
         IntRes = MsgBox(Msg, vbYesNo + vbQuestion + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title)
 
@@ -5094,7 +5104,7 @@ Private Sub Del_Member()
                 ' StrSQL = "DELETE From NOTES Where NoteType=101 AND CusID=" & Val(Me.XPTxtCusID.text)
                 ' Cn.Execute StrSQL, , adExecuteNoRecords
             
-                StrSQL = "delete From DOUBLE_ENTREY_VOUCHERS1 where opening_balance_voucher_id=" & val(txtopening_balance_voucher_id.text)
+                StrSQL = "delete From DOUBLE_ENTREY_VOUCHERS1 where opening_balance_voucher_id=" & val(txtopening_balance_voucher_id.Text)
                 Cn.Execute StrSQL, , adExecuteNoRecords
              
                 '   update_account_opening_balance get_account_code_branch(19, my_branch)
@@ -5212,38 +5222,38 @@ End Sub
 Private Sub Undo()
     On Error GoTo ErrTrap
 
-    Select Case TxtModFlg.text
+    Select Case TxtModFlg.Text
 
         Case "N"
             clear_all Me
-            Me.TxtModFlg.text = "R"
+            Me.TxtModFlg.Text = "R"
             XPBtnMove_Click (1)
 
         Case "E"
-            rs.Find "CusID='" & val(XPTxtCusID.text) & "'", , adSearchForward, adBookmarkFirst
+            rs.Find "CusID='" & val(XPTxtCusID.Text) & "'", , adSearchForward, adBookmarkFirst
 
             If rs.EOF Or rs.BOF Then
-                Me.TxtModFlg.text = "R"
+                Me.TxtModFlg.Text = "R"
                 Exit Sub
             End If
 
             Retrive
-            Me.TxtModFlg.text = "R"
+            Me.TxtModFlg.Text = "R"
     End Select
 
     Exit Sub
 ErrTrap:
 End Sub
 
-Private Sub OptType1_Click(index As Integer)
+Private Sub OptType1_Click(Index As Integer)
     Me.TxtOpenBalance1.Enabled = Not OptType1(2).value
-    Me.TxtOpenBalance1.text = IIf(OptType1(2).value = True, 0, Me.TxtOpenBalance1.text)
+    Me.TxtOpenBalance1.Text = IIf(OptType1(2).value = True, 0, Me.TxtOpenBalance1.Text)
 
 End Sub
 
-Private Sub OptType2_Click(index As Integer)
+Private Sub OptType2_Click(Index As Integer)
     Me.TxtOpenBalance2.Enabled = Not OptType2(2).value
-    Me.TxtOpenBalance2.text = IIf(OptType2(2).value = True, 0, Me.TxtOpenBalance2.text)
+    Me.TxtOpenBalance2.Text = IIf(OptType2(2).value = True, 0, Me.TxtOpenBalance2.Text)
 
 End Sub
 
@@ -5260,18 +5270,18 @@ TxtbalancedC = different * -1
 Txtbalanced = 0
 End If
 
-   If val(Txtbalanced.text) > 0 Then
+   If val(Txtbalanced.Text) > 0 Then
        OptType(0).value = True
-       TxtOpenBalance.text = val(Txtbalanced.text)
+       TxtOpenBalance.Text = val(Txtbalanced.Text)
        
-    ElseIf val(TxtbalancedC.text) > 0 Then
+    ElseIf val(TxtbalancedC.Text) > 0 Then
        OptType(1).value = True
-       TxtOpenBalance.text = val(TxtbalancedC.text)
+       TxtOpenBalance.Text = val(TxtbalancedC.Text)
            
            
        Else
        OptType(2).value = True
-         TxtOpenBalance.text = 0
+         TxtOpenBalance.Text = 0
        End If
        
 End Function
@@ -5287,8 +5297,8 @@ Private Sub SaveData()
     On Error GoTo ErrTrap
  
 
-    If Me.TxtModFlg.text <> "R" Then
-        If XPTxtCusName.text = "" Then
+    If Me.TxtModFlg.Text <> "R" Then
+        If XPTxtCusName.Text = "" Then
                  If SystemOptions.UserInterface = ArabicInterface Then
                      Msg = "ÌÃ» «œŒ«· «”„ «·„” √Ã—"
                 Else
@@ -5301,7 +5311,7 @@ Private Sub SaveData()
         End If
 
         If Me.OptType(2).value = False Then
-                    If val(Me.TxtOpenBalance.text) = 0 Then
+                    If val(Me.TxtOpenBalance.Text) = 0 Then
                         
                         
                      If SystemOptions.UserInterface = ArabicInterface Then
@@ -5324,7 +5334,7 @@ Private Sub SaveData()
 
 
         If Me.OptType1(2).value = False Then
-                    If val(Me.TxtOpenBalance1.text) = 0 Then
+                    If val(Me.TxtOpenBalance1.Text) = 0 Then
                 If SystemOptions.UserInterface = ArabicInterface Then
                      Msg = "ÌÃ» ﬂ «»… ﬁÌ„… «·—’Ìœ ··‘Ìﬂ«   Õ  «· Õ’Ì· «·„” √Ã—...!!!"
                 Else
@@ -5344,7 +5354,7 @@ Private Sub SaveData()
         
         
                 If Me.OptType2(2).value = False Then
-                    If val(Me.TxtOpenBalance2.text) = 0 Then
+                    If val(Me.TxtOpenBalance2.Text) = 0 Then
                         
                         
                         
@@ -5369,26 +5379,26 @@ Private Sub SaveData()
         
         
         
-        If val(Me.TxtCreditLimit.text) > 0 Then
+        If val(Me.TxtCreditLimit.Text) > 0 Then
 
             'Â‰«ﬂ Õœ ≈∆ „«‰ ( „œÌ‰)ÊÌÃ» «· «ﬂœ „‰ «·—’Ìœ «·√›  «ÕÏ «·„œŒ·
             If Me.OptType(0).value = True Then
 
                 '«·—’Ìœ «·√›  «ÕÏ „œÌ‰
-                If val(Me.TxtOpenBalance.text) > val(Me.TxtCreditLimit.text) Then
+                If val(Me.TxtOpenBalance.Text) > val(Me.TxtCreditLimit.Text) Then
                     
                                   If SystemOptions.UserInterface = ArabicInterface Then
                    
                     Msg = "≈‰ »Â ....!!!"
-                    Msg = Msg & CHR(13) & "·ﬁœ Ê÷⁄  Õœ ≈∆ „«‰ („œÌ‰ ) «·„” √Ã— " & val(Me.TxtCreditLimit.text)
-                    Msg = Msg & CHR(13) & "·ﬂ‰ﬂ Ê÷⁄  «·—’Ìœ «·≈›  «ÕÏ «·„” √Ã— „œÌ‰ »‹  " & val(Me.TxtOpenBalance.text)
+                    Msg = Msg & CHR(13) & "·ﬁœ Ê÷⁄  Õœ ≈∆ „«‰ („œÌ‰ ) «·„” √Ã— " & val(Me.TxtCreditLimit.Text)
+                    Msg = Msg & CHR(13) & "·ﬂ‰ﬂ Ê÷⁄  «·—’Ìœ «·≈›  «ÕÏ «·„” √Ã— „œÌ‰ »‹  " & val(Me.TxtOpenBalance.Text)
                     Msg = Msg & CHR(13) & "›Â· «‰  „ «ﬂœ „‰ «·»Ì«‰«  «· Ï «œŒ· Â«...øøø"
                
                 Else
                   
                     Msg = "Hint  ....!!!"
-                    Msg = Msg & CHR(13) & "Credit  Is  " & val(Me.TxtCreditLimit.text)
-                    Msg = Msg & CHR(13) & "Depit opening balance is   " & val(Me.TxtOpenBalance.text)
+                    Msg = Msg & CHR(13) & "Credit  Is  " & val(Me.TxtCreditLimit.Text)
+                    Msg = Msg & CHR(13) & "Depit opening balance is   " & val(Me.TxtOpenBalance.Text)
                     Msg = Msg & CHR(13) & "???????"
                
                 End If
@@ -5404,27 +5414,27 @@ Private Sub SaveData()
             End If
         End If
 
-        If val(Me.TxtCreditlimitCredit.text) > 0 Then
+        If val(Me.TxtCreditlimitCredit.Text) > 0 Then
 
             'Â‰«ﬂ Õœ ≈∆ „«‰ ( „œÌ‰)ÊÌÃ» «· «ﬂœ „‰ «·—’Ìœ «·√›  «ÕÏ «·„œŒ·
             If Me.OptType(1).value = True Then
 
                 '«·—’Ìœ «·√›  «ÕÏ œ«∆‰
-                If val(Me.TxtOpenBalance.text) > val(Me.TxtCreditlimitCredit.text) Then
+                If val(Me.TxtOpenBalance.Text) > val(Me.TxtCreditlimitCredit.Text) Then
                     
                                 If SystemOptions.UserInterface = ArabicInterface Then
                    
                    Msg = "≈‰ »Â ....!!!"
-                    Msg = Msg & CHR(13) & "·ﬁœ Ê÷⁄  Õœ ≈∆ „«‰ (œ«∆‰ ) «·„” √Ã— " & val(Me.TxtCreditlimitCredit.text)
-                    Msg = Msg & CHR(13) & "·ﬂ‰ﬂ Ê÷⁄  «·—’Ìœ «·≈›  «ÕÏ «·„” √Ã— œ«∆‰ »‹  " & val(Me.TxtOpenBalance.text)
+                    Msg = Msg & CHR(13) & "·ﬁœ Ê÷⁄  Õœ ≈∆ „«‰ (œ«∆‰ ) «·„” √Ã— " & val(Me.TxtCreditlimitCredit.Text)
+                    Msg = Msg & CHR(13) & "·ﬂ‰ﬂ Ê÷⁄  «·—’Ìœ «·≈›  «ÕÏ «·„” √Ã— œ«∆‰ »‹  " & val(Me.TxtOpenBalance.Text)
                     Msg = Msg & CHR(13) & "›Â· «‰  „ «ﬂœ „‰ «·»Ì«‰«  «· Ï «œŒ· Â«...øøø"
                     IntRes = MsgBox(Msg, vbQuestion + vbYesNo + vbMsgBoxRtlReading + vbMsgBoxRight, App.Title)
  
                 Else
                   
                     Msg = "Hint  ....!!!"
-                    Msg = Msg & CHR(13) & "Credit  Is  " & val(Me.TxtCreditLimit.text)
-                    Msg = Msg & CHR(13) & "Credit opening balance is   " & val(Me.TxtOpenBalance.text)
+                    Msg = Msg & CHR(13) & "Credit  Is  " & val(Me.TxtCreditLimit.Text)
+                    Msg = Msg & CHR(13) & "Credit opening balance is   " & val(Me.TxtOpenBalance.Text)
                     Msg = Msg & CHR(13) & "???????"
                
                 End If
@@ -5438,10 +5448,10 @@ Private Sub SaveData()
         End If
 
         If Me.CboDiscountType.ListIndex = -1 Or Me.CboDiscountType.ListIndex = 0 Then
-            Me.TxtDiscountValue.text = 0
+            Me.TxtDiscountValue.Text = 0
         ElseIf Me.CboDiscountType.ListIndex = 1 Then
 
-            If val(Me.TxtDiscountValue.text) = 0 Then
+            If val(Me.TxtDiscountValue.Text) = 0 Then
              If SystemOptions.UserInterface = ArabicInterface Then
 
                 Msg = "ÌÃ» ﬂ «»… ﬁÌ„… «·Œ’„ «·Œ«’… «·„” √Ã—...!!!"
@@ -5455,7 +5465,7 @@ End If
 
         ElseIf Me.CboDiscountType.ListIndex = 2 Then
 
-            If val(Me.TxtDiscountValue.text) = 0 Then
+            If val(Me.TxtDiscountValue.Text) = 0 Then
                 
                 
                              If SystemOptions.UserInterface = ArabicInterface Then
@@ -5469,7 +5479,7 @@ End If
                 MsgBox Msg, vbOKOnly + vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                 TxtDiscountValue.SetFocus
                 Exit Sub
-            ElseIf val(Me.TxtDiscountValue.text) > 100 Then
+            ElseIf val(Me.TxtDiscountValue.Text) > 100 Then
             
                                          If SystemOptions.UserInterface = ArabicInterface Then
 
@@ -5487,10 +5497,10 @@ End If
         End If
     
         If Me.CboDiscountTypePur.ListIndex = -1 Or Me.CboDiscountTypePur.ListIndex = 0 Then
-            Me.TxtDiscountValuePur.text = 0
+            Me.TxtDiscountValuePur.Text = 0
         ElseIf Me.CboDiscountTypePur.ListIndex = 1 Then
 
-            If val(Me.TxtDiscountValuePur.text) = 0 Then
+            If val(Me.TxtDiscountValuePur.Text) = 0 Then
                                                      If SystemOptions.UserInterface = ArabicInterface Then
 
                Msg = "ÌÃ» ﬂ «»… ﬁÌ„… «·Œ’„ «·Œ«’… «·„” √Ã— ›Ï ›Ê« Ì— «·‘—«¡...!!!"
@@ -5506,7 +5516,7 @@ End If
 
         ElseIf Me.CboDiscountTypePur.ListIndex = 2 Then
 
-            If val(Me.TxtDiscountValuePur.text) = 0 Then
+            If val(Me.TxtDiscountValuePur.Text) = 0 Then
                 
                 
           If SystemOptions.UserInterface = ArabicInterface Then
@@ -5519,7 +5529,7 @@ End If
                 MsgBox Msg, vbOKOnly + vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                 TxtDiscountValuePur.SetFocus
                 Exit Sub
-            ElseIf val(Me.TxtDiscountValuePur.text) > 100 Then
+            ElseIf val(Me.TxtDiscountValuePur.Text) > 100 Then
                  
                 
       If SystemOptions.UserInterface = ArabicInterface Then
@@ -5537,12 +5547,12 @@ End If
     
     
     
-        Select Case TxtModFlg.text
+        Select Case TxtModFlg.Text
 
             Case "N"
-                XPTxtCusID.text = CStr(new_id("TblCustemers", "CusID", "", True))
+                XPTxtCusID.Text = CStr(new_id("TblCustemers", "CusID", "", True))
             
-                StrSQL = "Select * From TblCustemers where Type=56 And CusName='" & Trim(XPTxtCusName.text) & "'"
+                StrSQL = "Select * From TblCustemers where Type=56 And CusName='" & Trim(XPTxtCusName.Text) & "'"
                 RsTemp.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
 
                 If RsTemp.RecordCount > 0 Then
@@ -5559,7 +5569,7 @@ End If
                     Exit Sub
                 End If
                 Set RsTemp = New ADODB.Recordset
-                   StrSQL = "Select * From TblCustemers where Type=56 And CustGID='" & Trim(txtCustGID.text) & "'"
+                   StrSQL = "Select * From TblCustemers where Type=56 And CustGID='" & Trim(txtCustGID.Text) & "'"
                    RsTemp.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
 
                 If RsTemp.RecordCount > 0 Then
@@ -5577,12 +5587,12 @@ End If
                 End If
 
             Case "E"
-                StrSQL = "select * From TblCustemers where Type=56 And CusName='" & Trim(XPTxtCusName.text) & "'"
+                StrSQL = "select * From TblCustemers where Type=56 And CusName='" & Trim(XPTxtCusName.Text) & "'"
                 RsTemp.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
 
 
                 If RsTemp.RecordCount > 0 Then
-                                If RsTemp("CusID").value <> val(XPTxtCusID.text) Then
+                                If RsTemp("CusID").value <> val(XPTxtCusID.Text) Then
                                      
                                                       If SystemOptions.UserInterface = ArabicInterface Then
                                 
@@ -5600,11 +5610,11 @@ End If
                                 End If
                 End If
                 Set RsTemp = New ADODB.Recordset
-                  StrSQL = "Select * From TblCustemers where Type=56 And CustGID='" & Trim(txtCustGID.text) & "'"
+                  StrSQL = "Select * From TblCustemers where Type=56 And CustGID='" & Trim(txtCustGID.Text) & "'"
                    RsTemp.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
 
                 If RsTemp.RecordCount > 0 Then
-                If RsTemp("CusID").value <> val(XPTxtCusID.text) Then
+                If RsTemp("CusID").value <> val(XPTxtCusID.Text) Then
                    If SystemOptions.UserInterface = ArabicInterface Then
 
                     Msg = "ÌÊÃœ „” √Ã— „”Ã· „”»ﬁ« »Â–« »‰›” —ﬁ„ «·ÂÊÌ…/«·«ﬁ«„…" & CHR(13)
@@ -5624,28 +5634,28 @@ End If
         Cn.BeginTrans
         BeginTrans = True
 
-        If TxtModFlg.text = "N" Then
+        If TxtModFlg.Text = "N" Then
             Dim Account_Code_dynamic As String
 
             Account_Code_dynamic = Me.DboParentAccount.BoundText
             rs.AddNew
 
-            rs("CusID").value = val(XPTxtCusID.text)
+            rs("CusID").value = val(XPTxtCusID.Text)
            
-        ElseIf Me.TxtModFlg.text = "E" Then
+        ElseIf Me.TxtModFlg.Text = "E" Then
            Account_Code_dynamic = Me.DboParentAccount.BoundText
             '  StrSQL = "DELETE From NOTES Where NoteType=101 AND CusID=" & Val(Me.XPTxtCusID.text)
             '   Cn.Execute StrSQL, , adExecuteNoRecords
             
-            StrSQL = "delete From DOUBLE_ENTREY_VOUCHERS1 where opening_balance_voucher_id=" & val(txtopening_balance_voucher_id.text)
+            StrSQL = "delete From DOUBLE_ENTREY_VOUCHERS1 where opening_balance_voucher_id=" & val(txtopening_balance_voucher_id.Text)
             Cn.Execute StrSQL, , adExecuteNoRecords
             
         End If
         
     
-            If val(TxtOpenBalance.text) <> 0 Or val(TxtOpenBalance1.text) <> 0 Or val(TxtOpenBalance2.text) <> 0 Then
-                txtopening_balance_voucher_id.text = get_opening_balance_voucher_id
-                rs("opening_balance_voucher_id").value = val(txtopening_balance_voucher_id.text)
+            If val(TxtOpenBalance.Text) <> 0 Or val(TxtOpenBalance1.Text) <> 0 Or val(TxtOpenBalance2.Text) <> 0 Then
+                txtopening_balance_voucher_id.Text = get_opening_balance_voucher_id
+                rs("opening_balance_voucher_id").value = val(txtopening_balance_voucher_id.Text)
             Else
                 rs("opening_balance_voucher_id").value = Null
             End If
@@ -5669,10 +5679,10 @@ End If
             End If
 
          
-        rs("code").value = txtid.text
-        rs("Fullcode").value = IIf(DCPreFix.BoundText = "", Null, DCPreFix.text) & IIf(Trim(txtid.text) = "", Null, txtid.text)
-        rs("prifix").value = IIf(DCPreFix.text = "", Null, DCPreFix.text)
- Me.TxtFullcode = IIf(DCPreFix.BoundText = "", Null, DCPreFix.text) & IIf(Trim(txtid.text) = "", Null, txtid.text)
+        rs("code").value = txtid.Text
+        rs("Fullcode").value = IIf(DCPreFix.BoundText = "", Null, DCPreFix.Text) & IIf(Trim(txtid.Text) = "", Null, txtid.Text)
+        rs("prifix").value = IIf(DCPreFix.Text = "", Null, DCPreFix.Text)
+ Me.TxtFullcode = IIf(DCPreFix.BoundText = "", Null, DCPreFix.Text) & IIf(Trim(txtid.Text) = "", Null, txtid.Text)
      
         If chkCustomerandVendor.value = vbChecked Then
             rs("CustomerandVendor").value = 1
@@ -5681,68 +5691,68 @@ End If
             rs("CustomerandVendor").value = 0
         End If
 '
-        rs("VATNO").value = TxtVATNO.text
+        rs("VATNO").value = TxtVATNO.Text
         rs("BranchId").value = IIf(Me.dcBranch.BoundText = "", 0, val(dcBranch.BoundText))
         rs("RecordDate").value = Me.DtRecord.value
-        rs("CusName").value = Trim(XPTxtCusName.text)
-        If Trim(XPTxtCusNamee.text) = "" Then XPTxtCusNamee.text = Trim(XPTxtCusName.text)
-        rs("CusNamee").value = IIf(Trim(XPTxtCusNamee.text) = "", Trim(XPTxtCusName.text), Trim(XPTxtCusNamee.text))
-        rs("opening_balance_voucher_id").value = val(txtopening_balance_voucher_id.text)
+        rs("CusName").value = Trim(XPTxtCusName.Text)
+        If Trim(XPTxtCusNamee.Text) = "" Then XPTxtCusNamee.Text = Trim(XPTxtCusName.Text)
+        rs("CusNamee").value = IIf(Trim(XPTxtCusNamee.Text) = "", Trim(XPTxtCusName.Text), Trim(XPTxtCusNamee.Text))
+        rs("opening_balance_voucher_id").value = val(txtopening_balance_voucher_id.Text)
     
-        rs("c1").value = Trim(c1.text)
-        rs("c2").value = Trim(c2.text)
+        rs("c1").value = Trim(c1.Text)
+        rs("c2").value = Trim(c2.Text)
     
-        rs("CustGID").value = IIf(txtCustGID.text = "", Null, val(txtCustGID.text))
+        rs("CustGID").value = IIf(txtCustGID.Text = "", Null, val(txtCustGID.Text))
        
-        rs("Cus_Phone").value = IIf(XPTxtPhone.text = "", "", Trim(XPTxtPhone.text))
-        rs("Cus_mobile").value = IIf(XPTxtmobile.text = "", "", Trim(XPTxtmobile.text))
-        rs("Remark").value = IIf(XPMTxtRemarks.text = "", "", Trim(XPMTxtRemarks.text))
-        rs("Remark2").value = IIf(XPMTxtRemarks2.text = "", "", Trim(XPMTxtRemarks2.text))
+        rs("Cus_Phone").value = IIf(xptxtphone.Text = "", "", Trim(xptxtphone.Text))
+        rs("Cus_mobile").value = IIf(XPTxtmobile.Text = "", "", Trim(XPTxtmobile.Text))
+        rs("Remark").value = IIf(XPMTxtRemarks.Text = "", "", Trim(XPMTxtRemarks.Text))
+        rs("Remark2").value = IIf(XPMTxtRemarks2.Text = "", "", Trim(XPMTxtRemarks2.Text))
         rs("parent_account").value = IIf(Me.DboParentAccount.BoundText = "", Null, (Me.DboParentAccount.BoundText))
-        rs("EmpId").value = IIf(Me.DCEmP.BoundText = "", Null, (Me.DCEmP.BoundText))
-            rs("StreetName").value = txtNoOFDigitUser(2).text
-        rs("BuildingNumber").value = txtNoOFDigitUser(4).text
-         rs("CitySubdivisionName").value = DcboCityID.text
-          rs("CityName").value = DcboGovernmentID.text
-           rs("PostalZone").value = TxtZib.text
-            rs("IdentificationCode").value = txtNoOFDigitUser(10).text
-             rs("PlotIdentification").value = txtNoOFDigitUser(5).text
-              rs("AdditionalStreetName").value = txtNoOFDigitUser(3).text
-              rs("CountrySubentity").value = txtNoOFDigitUser(8).text
+        rs("EmpId").value = IIf(Me.DcEmp.BoundText = "", Null, (Me.DcEmp.BoundText))
+            rs("StreetName").value = txtNoOFDigitUser(2).Text
+        rs("BuildingNumber").value = txtNoOFDigitUser(4).Text
+         rs("CitySubdivisionName").value = DcboCityID.Text
+          rs("CityName").value = DcboGovernmentID.Text
+           rs("PostalZone").value = TxtZib.Text
+            rs("IdentificationCode").value = txtNoOFDigitUser(10).Text
+             rs("PlotIdentification").value = txtNoOFDigitUser(5).Text
+              rs("AdditionalStreetName").value = txtNoOFDigitUser(3).Text
+              rs("CountrySubentity").value = txtNoOFDigitUser(8).Text
         If locked.value = vbChecked Then
             rs("locked").value = 1
         Else
             rs("locked").value = 0
         End If
 
-        rs("CreditLimit").value = val(Me.TxtCreditLimit.text)
+        rs("CreditLimit").value = val(Me.TxtCreditLimit.Text)
         rs("Type").value = 56
         
-        rs("DepitInterval").value = val(TxtDepitInterval.text)
-        rs("CreditInterval").value = val(TxtCreditInterval.text)
+        rs("DepitInterval").value = val(TxtDepitInterval.Text)
+        rs("CreditInterval").value = val(TxtCreditInterval.Text)
         
         rs("DepitIntervalID").value = val(dcDepitIntervalID.ListIndex)
         rs("CreditIntervalID").value = val(dcCreditIntervalID.ListIndex)
     'goooooooooooold
     
-       rs("ShowQty1").value = val(Me.TxtShowQty1.text)
-       rs("showPrice1").value = val(Me.TxtshowPrice1.text)
-       rs("showPrice2").value = val(Me.TxtshowPrice2.text)
-        rs("Salaries1").value = val(Me.TxtSalaries1.text)
-        rs("Salaries2").value = val(Me.TxtSalaries2.text)
+       rs("ShowQty1").value = val(Me.TxtShowQty1.Text)
+       rs("showPrice1").value = val(Me.TxtshowPrice1.Text)
+       rs("showPrice2").value = val(Me.TxtshowPrice2.Text)
+        rs("Salaries1").value = val(Me.TxtSalaries1.Text)
+        rs("Salaries2").value = val(Me.TxtSalaries2.Text)
         
-       rs("ShowQty1c").value = val(Me.TxtShowQty1c.text)
-       rs("showPrice1c").value = val(Me.TxtshowPrice1C.text)
-       rs("showPrice2c").value = val(Me.TxtshowPrice2C.text)
-        rs("Salaries1c").value = val(Me.TxtSalaries1C.text)
-        rs("Salaries2c").value = val(Me.TxtSalaries2C.text)
-        rs("Id700").value = txtNoOFDigitUser(0).text
+       rs("ShowQty1c").value = val(Me.TxtShowQty1c.Text)
+       rs("showPrice1c").value = val(Me.TxtshowPrice1C.Text)
+       rs("showPrice2c").value = val(Me.TxtshowPrice2C.Text)
+        rs("Salaries1c").value = val(Me.TxtSalaries1C.Text)
+        rs("Salaries2c").value = val(Me.TxtSalaries2C.Text)
+        rs("Id700").value = txtNoOFDigitUser(0).Text
         
-        rs("Totald").value = val(Me.txtTotald.text)
-        rs("Totalc").value = val(Me.txtTotalc.text)
-        rs("balanced").value = val(Me.Txtbalanced.text)
-        rs("balancec").value = val(Me.TxtbalancedC.text)
-        rs("RecordNo").value = TxtRecordNo.text
+        rs("Totald").value = val(Me.txtTotald.Text)
+        rs("Totalc").value = val(Me.txtTotalc.Text)
+        rs("balanced").value = val(Me.Txtbalanced.Text)
+        rs("balancec").value = val(Me.TxtbalancedC.Text)
+        rs("RecordNo").value = TxtRecordNo.Text
     
        
         
@@ -5754,10 +5764,10 @@ End If
             rs("OpenBalance").value = 0
             rs("OpenBalanceType").value = Null
         ElseIf Me.OptType(0).value = True Then
-            rs("OpenBalance").value = val(Me.TxtOpenBalance.text)
+            rs("OpenBalance").value = val(Me.TxtOpenBalance.Text)
             rs("OpenBalanceType").value = 0
         ElseIf Me.OptType(1).value = True Then
-            rs("OpenBalance").value = val(Me.TxtOpenBalance.text)
+            rs("OpenBalance").value = val(Me.TxtOpenBalance.Text)
             rs("OpenBalanceType").value = 1
         End If
 
@@ -5767,10 +5777,10 @@ End If
             rs("OpenBalance1").value = 0
             rs("OpenBalanceType1").value = Null
         ElseIf Me.OptType1(0).value = True Then
-            rs("OpenBalance1").value = val(Me.TxtOpenBalance1.text)
+            rs("OpenBalance1").value = val(Me.TxtOpenBalance1.Text)
             rs("OpenBalanceType1").value = 0
         ElseIf Me.OptType1(1).value = True Then
-            rs("OpenBalance1").value = val(Me.TxtOpenBalance1.text)
+            rs("OpenBalance1").value = val(Me.TxtOpenBalance1.Text)
             rs("OpenBalanceType1").value = 1
         End If
         
@@ -5779,10 +5789,10 @@ End If
             rs("OpenBalance2").value = 0
             rs("OpenBalanceType2").value = Null
         ElseIf Me.OptType2(0).value = True Then
-            rs("OpenBalance2").value = val(Me.TxtOpenBalance2.text)
+            rs("OpenBalance2").value = val(Me.TxtOpenBalance2.Text)
             rs("OpenBalanceType2").value = 0
         ElseIf Me.OptType2(1).value = True Then
-            rs("OpenBalance2").value = val(Me.TxtOpenBalance2.text)
+            rs("OpenBalance2").value = val(Me.TxtOpenBalance2.Text)
             rs("OpenBalanceType2").value = 1
         End If
         
@@ -5791,9 +5801,9 @@ End If
         rs("OpenBalanceDate").value = Me.Dtp.value
     
         
-        rs("CreditlimitCredit").value = val(Me.TxtCreditlimitCredit.text)
-        rs("FaxNumber").value = IIf(Trim$(Me.TxtFaxNumber.text) = "", Null, Trim$(Me.TxtFaxNumber.text))
-        rs("E_mail").value = IIf(Trim$(Me.TxtE_mail.text) = "", Null, Trim$(Me.TxtE_mail.text))
+        rs("CreditlimitCredit").value = val(Me.TxtCreditlimitCredit.Text)
+        rs("FaxNumber").value = IIf(Trim$(Me.TxtFaxNumber.Text) = "", Null, Trim$(Me.TxtFaxNumber.Text))
+        rs("E_mail").value = IIf(Trim$(Me.TxtE_mail.Text) = "", Null, Trim$(Me.TxtE_mail.Text))
 
         If Me.CboSaleType.ListIndex = 0 Or Me.CboSaleType.ListIndex = -1 Then
             rs("SaleType").value = 0
@@ -5806,10 +5816,10 @@ End If
             rs("Trans_Discount").value = 0
         ElseIf Me.CboDiscountType.ListIndex = 1 Then
             rs("Trans_DiscountType").value = 1
-            rs("Trans_Discount").value = val(Me.TxtDiscountValue.text)
+            rs("Trans_Discount").value = val(Me.TxtDiscountValue.Text)
         ElseIf Me.CboDiscountType.ListIndex = 2 Then
             rs("Trans_DiscountType").value = 2
-            rs("Trans_Discount").value = val(Me.TxtDiscountValue.text)
+            rs("Trans_Discount").value = val(Me.TxtDiscountValue.Text)
         End If
     
         If Me.CboDiscountTypePur.ListIndex = -1 Or Me.CboDiscountTypePur.ListIndex = 0 Then
@@ -5817,26 +5827,26 @@ End If
             rs("Trans_DiscountPur").value = 0
         ElseIf Me.CboDiscountTypePur.ListIndex = 1 Then
             rs("Trans_DiscountTypePur").value = 1
-            rs("Trans_DiscountPur").value = val(Me.TxtDiscountValuePur.text)
+            rs("Trans_DiscountPur").value = val(Me.TxtDiscountValuePur.Text)
         ElseIf Me.CboDiscountTypePur.ListIndex = 2 Then
             rs("Trans_DiscountTypePur").value = 2
-            rs("Trans_DiscountPur").value = val(Me.TxtDiscountValuePur.text)
+            rs("Trans_DiscountPur").value = val(Me.TxtDiscountValuePur.Text)
         End If
     
         If SystemOptions.SysAppAccoutingType = CompeleteAccounting Then
             Dim ParentAccount As String
             
-            If Me.TxtModFlg.text = "N" Then
+            If Me.TxtModFlg.Text = "N" Then
         
        '         rs("Account_Code").value = ModAccounts.AddNewAccount(Account_Code_dynamic, Trim$(Me.XPTxtCusName.text), True, False, Trim$(Me.XPTxtCusNamee.text))
                 
           If SystemOptions.CustomerhavethreeAccounts = False Then
         
-                rs("Account_Code").value = ModAccounts.AddNewAccount(Account_Code_dynamic, Trim$(Me.XPTxtCusName.text), True, False, Trim$(Me.XPTxtCusNamee.text))
+                rs("Account_Code").value = ModAccounts.AddNewAccount(Account_Code_dynamic, Trim$(Me.XPTxtCusName.Text), True, False, Trim$(Me.XPTxtCusNamee.Text))
 
                           If SystemOptions.CreateInsuranceAccountForCustomers = True Then
                 
-                                                   rs("InsuranceAccount").value = ModAccounts.AddNewAccount(Account_Code_dynamic166, Trim$(Me.XPTxtCusName.text & "  -  √„Ì‰«  „” —œ… "), True, False, Trim$(Me.XPTxtCusNamee.text) & "    √„Ì‰«  ··€Ì— ")
+                                                   rs("InsuranceAccount").value = ModAccounts.AddNewAccount(Account_Code_dynamic166, Trim$(Me.XPTxtCusName.Text & "  -  √„Ì‰«  „” —œ… "), True, False, Trim$(Me.XPTxtCusNamee.Text) & "    √„Ì‰«  ··€Ì— ")
                     Else
                     
                      rs("InsuranceAccount").value = Null
@@ -5845,16 +5855,16 @@ End If
           Else
                 
                                         If SystemOptions.CustomerhavethreeAccounts = True Then
-                                            ParentAccount = ModAccounts.AddNewAccount(Account_Code_dynamic, XPTxtCusName.text, False, False, XPTxtCusNamee.text)
+                                            ParentAccount = ModAccounts.AddNewAccount(Account_Code_dynamic, XPTxtCusName.Text, False, False, XPTxtCusNamee.Text)
                                             rs("ParentAccount").value = ParentAccount
                                          
-                                            rs("Account_Code").value = ModAccounts.AddNewAccount(ParentAccount, Trim$(Me.XPTxtCusName.text), True, False, XPTxtCusNamee.text)
-                                            rs("Account_Code1").value = ModAccounts.AddNewAccount(ParentAccount, Trim$(Me.XPTxtCusName.text) & "   ‘Ìﬂ«    Õ  «· Õ’Ì· ", True, False, XPTxtCusNamee.text & "  Under Collection Cheque  ")
-                                            rs("Account_Code2").value = ModAccounts.AddNewAccount(ParentAccount, Trim$(Me.XPTxtCusName.text) & "   œ›⁄«  „ﬁœ„…   ", True, False, XPTxtCusNamee.text & " Advanced Payments")
+                                            rs("Account_Code").value = ModAccounts.AddNewAccount(ParentAccount, Trim$(Me.XPTxtCusName.Text), True, False, XPTxtCusNamee.Text)
+                                            rs("Account_Code1").value = ModAccounts.AddNewAccount(ParentAccount, Trim$(Me.XPTxtCusName.Text) & "   ‘Ìﬂ«    Õ  «· Õ’Ì· ", True, False, XPTxtCusNamee.Text & "  Under Collection Cheque  ")
+                                            rs("Account_Code2").value = ModAccounts.AddNewAccount(ParentAccount, Trim$(Me.XPTxtCusName.Text) & "   œ›⁄«  „ﬁœ„…   ", True, False, XPTxtCusNamee.Text & " Advanced Payments")
 
                                                      If SystemOptions.CreateInsuranceAccountForCustomers = True Then
                     
-                                                       rs("InsuranceAccount").value = ModAccounts.AddNewAccount(Account_Code_dynamic166, Trim$(Me.XPTxtCusName.text) & "  -  √„Ì‰«  „” —œ… ", True, False, Trim$(Me.XPTxtCusNamee.text) & "  -  √„Ì‰«  „” —œ… ")
+                                                       rs("InsuranceAccount").value = ModAccounts.AddNewAccount(Account_Code_dynamic166, Trim$(Me.XPTxtCusName.Text) & "  -  √„Ì‰«  „” —œ… ", True, False, Trim$(Me.XPTxtCusNamee.Text) & "  -  √„Ì‰«  „” —œ… ")
                                                        Else
                                                          rs("InsuranceAccount").value = Null
                     
@@ -5862,7 +5872,7 @@ End If
                             
 
                                         Else
-                                            rs("Account_Code").value = ModAccounts.AddNewAccount(Account_Code_dynamic, Trim$(Me.XPTxtCusName.text), True, False, XPTxtCusNamee.text)
+                                            rs("Account_Code").value = ModAccounts.AddNewAccount(Account_Code_dynamic, Trim$(Me.XPTxtCusName.Text), True, False, XPTxtCusNamee.Text)
                                             rs("ParentAccount").value = Null
                                             
                                         End If
@@ -5888,9 +5898,9 @@ End If
                         
                               If SystemOptions.CreateInsuranceAccountForCustomers = True Then
                                                If Not IsNull(rs("InsuranceAccount").value) And Not (rs("InsuranceAccount").value) = "" Then 'edit
-                                               ModAccounts.EditAccount rs("InsuranceAccount").value, Me.XPTxtCusName.text & "    √„Ì‰«  „” —œ… ", XPTxtCusNamee.text & "Insurance ", , , , , , , , , , , , , , , , , True
+                                               ModAccounts.EditAccount rs("InsuranceAccount").value, Me.XPTxtCusName.Text & "    √„Ì‰«  „” —œ… ", XPTxtCusNamee.Text & "Insurance ", , , , , , , , , , , , , , , , , True
                                                Else
-                                               rs("InsuranceAccount").value = ModAccounts.AddNewAccount(Account_Code_dynamic166, Trim$(Me.XPTxtCusName.text) & "    √„Ì‰«  „” —œ… ", True, False, Trim$(Me.XPTxtCusNamee.text) & "   insurance   ")
+                                               rs("InsuranceAccount").value = ModAccounts.AddNewAccount(Account_Code_dynamic166, Trim$(Me.XPTxtCusName.Text) & "    √„Ì‰«  „” —œ… ", True, False, Trim$(Me.XPTxtCusNamee.Text) & "   insurance   ")
                                                End If
                                             
                                                               
@@ -5902,9 +5912,9 @@ End If
                          If SystemOptions.CustomerhavethreeAccounts = False Then
                 '    If Not IsNull(rs("Account_Code").value) And (rs("Account_Code").value) = "" Then
                                      If Not IsNull(rs("Account_Code").value) And Not (rs("Account_Code").value) = "" Then
-                                            ModAccounts.EditAccount rs("Account_Code").value, Me.XPTxtCusName.text, XPTxtCusNamee.text, , , , , , , , , , , , , , , , , True
+                                            ModAccounts.EditAccount rs("Account_Code").value, Me.XPTxtCusName.Text, XPTxtCusNamee.Text, , , , , , , , , , , , , , , , , True
                                         Else
-                                              rs("Account_Code").value = ModAccounts.AddNewAccount(Account_Code_dynamic, Trim$(Me.XPTxtCusName.text), True, False, Trim$(Me.XPTxtCusNamee.text))
+                                              rs("Account_Code").value = ModAccounts.AddNewAccount(Account_Code_dynamic, Trim$(Me.XPTxtCusName.Text), True, False, Trim$(Me.XPTxtCusNamee.Text))
 
                                        '      ModAccounts.AddNewAccount rs("Account_Code").value, Me.XPTxtCusName.text, XPTxtCusNamee.text, , , , , , , , , , , , , , , , , True
                                         End If
@@ -5915,34 +5925,34 @@ End If
                 Else
           
                     If Not IsNull(rs("ParentAccount").value) And Not (rs("ParentAccount").value) = "" Then
-                        ModAccounts.EditAccount rs("ParentAccount").value, Me.XPTxtCusName.text, Trim(XPTxtCusNamee.text), , , , , , , , , , , , , , , , , False
+                        ModAccounts.EditAccount rs("ParentAccount").value, Me.XPTxtCusName.Text, Trim(XPTxtCusNamee.Text), , , , , , , , , , , , , , , , , False
                         Else
                           
-                                     ParentAccount = ModAccounts.AddNewAccount(Account_Code_dynamic, XPTxtCusName.text, False, False, XPTxtCusNamee.text)
+                                     ParentAccount = ModAccounts.AddNewAccount(Account_Code_dynamic, XPTxtCusName.Text, False, False, XPTxtCusNamee.Text)
                                             rs("ParentAccount").value = ParentAccount
                                             
                                    
                     End If
             
                     If Not IsNull(rs("Account_Code").value) And Not (rs("Account_Code").value) = "" Then
-                        ModAccounts.EditAccount rs("Account_Code").value, Me.XPTxtCusName.text, XPTxtCusNamee.text, , , , , , , , , , , , , , , , , True
+                        ModAccounts.EditAccount rs("Account_Code").value, Me.XPTxtCusName.Text, XPTxtCusNamee.Text, , , , , , , , , , , , , , , , , True
                       Else
-                          rs("Account_Code").value = ModAccounts.AddNewAccount(ParentAccount, Trim$(Me.XPTxtCusName.text), True, False, XPTxtCusNamee.text)
+                          rs("Account_Code").value = ModAccounts.AddNewAccount(ParentAccount, Trim$(Me.XPTxtCusName.Text), True, False, XPTxtCusNamee.Text)
                              
                     End If
             
                     If Not IsNull(rs("Account_Code1").value) And Not (rs("Account_Code1").value) = "" Then
-                        ModAccounts.EditAccount rs("Account_Code1").value, Me.XPTxtCusName.text & "    ‘Ìﬂ«    Õ  «· Õ’Ì·  ", XPTxtCusNamee.text & "  Cheque Box ", , , , , , , , , , , , , , , , , True
+                        ModAccounts.EditAccount rs("Account_Code1").value, Me.XPTxtCusName.Text & "    ‘Ìﬂ«    Õ  «· Õ’Ì·  ", XPTxtCusNamee.Text & "  Cheque Box ", , , , , , , , , , , , , , , , , True
                         Else
-                                               rs("Account_Code1").value = ModAccounts.AddNewAccount(ParentAccount, Trim$(Me.XPTxtCusName.text) & "   ‘Ìﬂ«    Õ  «· Õ’Ì· ", True, False, XPTxtCusNamee.text & "  Under Collection Cheque  ")
+                                               rs("Account_Code1").value = ModAccounts.AddNewAccount(ParentAccount, Trim$(Me.XPTxtCusName.Text) & "   ‘Ìﬂ«    Õ  «· Õ’Ì· ", True, False, XPTxtCusNamee.Text & "  Under Collection Cheque  ")
                                          
 
                     End If
           
                     If Not IsNull(rs("Account_Code2").value) And Not (rs("Account_Code2").value) = "" Then
-                        ModAccounts.EditAccount rs("Account_Code2").value, Me.XPTxtCusName.text & "   œ›⁄«  „ﬁœ„…   ", XPTxtCusNamee.text & "  Cheque Box ", , , , , , , , , , , , , , , , , True
+                        ModAccounts.EditAccount rs("Account_Code2").value, Me.XPTxtCusName.Text & "   œ›⁄«  „ﬁœ„…   ", XPTxtCusNamee.Text & "  Cheque Box ", , , , , , , , , , , , , , , , , True
                         Else
-                                               rs("Account_Code2").value = ModAccounts.AddNewAccount(ParentAccount, Trim$(Me.XPTxtCusName.text) & "   œ›⁄«  „ﬁœ„…   ", True, False, XPTxtCusNamee.text & " Advanced Payment  ")
+                                               rs("Account_Code2").value = ModAccounts.AddNewAccount(ParentAccount, Trim$(Me.XPTxtCusName.Text) & "   œ›⁄«  „ﬁœ„…   ", True, False, XPTxtCusNamee.Text & " Advanced Payment  ")
 
                     End If
                     
@@ -5964,29 +5974,29 @@ End If
         rs("CustomerTypeID").value = IIf(val(Me.DcCustomerType.BoundText) = 0, Null, val(Me.DcCustomerType.BoundText))
         rs("CountryID").value = IIf(val(Me.DcboCountryID.BoundText) = 0, Null, val(Me.DcboCountryID.BoundText))
         rs("CountryID2").value = IIf(val(Me.DcboCountryID2.BoundText) = 0, Null, val(Me.DcboCountryID2.BoundText))
-         rs("Boxmil").value = TxtBox.text
-      rs("ZipCode").value = Me.TxtZib.text
+         rs("Boxmil").value = TxtBox.Text
+      rs("ZipCode").value = Me.TxtZib.Text
         rs("TypeCustomer").value = val(DcbDigCustomer.ListIndex)
-       rs("Map").value = Trim$(Me.TxtMap.text)
-       rs("Entry").value = Trim$(Me.TxtEntry.text)
-       rs("JobName").value = Trim$(Me.txtJob.text)
+       rs("Map").value = Trim$(Me.TxtMap.Text)
+       rs("Entry").value = Trim$(Me.TxtEntry.Text)
+       rs("JobName").value = Trim$(Me.txtJob.Text)
        
         rs("GovernmentID").value = IIf(val(Me.DcboGovernmentID.BoundText) = 0, Null, val(Me.DcboGovernmentID.BoundText))
         rs("CityID").value = IIf(val(Me.DcboCityID.BoundText) = 0, Null, val(Me.DcboCityID.BoundText))
-        rs("ResponsibleContact").value = Trim$(Me.TxtResponsibleContact.text)
-        rs("Address").value = Trim$(Me.TxtAddress.text)
-        rs("Sex").value = Trim$(Me.CboSex.text)
+        rs("ResponsibleContact").value = Trim$(Me.TxtResponsibleContact.Text)
+        rs("Address").value = Trim$(Me.TxtAddress.Text)
+        rs("Sex").value = Trim$(Me.CboSex.Text)
         '19 08 2013
         rs("ExpireDateH").value = Txt_DateExpLincH.value
-        rs("Company").value = Trim(TxtCompany.text)
-        rs("JobTitle").value = Trim(TXTJobTitle.text)
-        rs("Salary").value = val(TxtSalary.text)
-        rs("JobAddress").value = Trim(TxtJobAddress.text)
-        rs("JobTel").value = Trim(TxtJobTel.text)
-        rs("JobTelConvert").value = Trim(TxtJobTelConvert.text)
-        rs("HomeTel").value = Trim(TxtHomeTel.text)
-        rs("Mobile1").value = Trim(TxtMobile1.text)
-        rs("Mobile2").value = Trim(TxtMobile2.text)
+        rs("Company").value = Trim(TxtCompany.Text)
+        rs("JobTitle").value = Trim(TXTJobTitle.Text)
+        rs("Salary").value = val(TxtSalary.Text)
+        rs("JobAddress").value = Trim(TxtJobAddress.Text)
+        rs("JobTel").value = Trim(TxtJobTel.Text)
+        rs("JobTelConvert").value = Trim(TxtJobTelConvert.Text)
+        rs("HomeTel").value = Trim(TxtHomeTel.Text)
+        rs("Mobile1").value = Trim(TxtMobile1.Text)
+        rs("Mobile2").value = Trim(TxtMobile2.Text)
       
         rs.update
 
@@ -6022,11 +6032,11 @@ End If
                                     End If
                     End If
             
-                    If ModAccounts.AddNewDev(LngDevID, 1, rs("Account_Code").value, Round(Me.TxtOpenBalance.text, SystemOptions.SysDefCurrencyForamt), 0, StrDes & Trim(Me.XPTxtCusName.text) & "  " & Trim$(Me.XPTxtCusNamee.text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.text), , , , val(dcBranch.BoundText), , val(TxtShowQty1) - val(TxtShowQty1c), val(TxtshowPrice1) - val(TxtshowPrice1C), val(TxtshowPrice2) - val(TxtshowPrice2C), val(TxtSalaries1) - val(TxtSalaries1C), val(TxtSalaries2) - val(TxtSalaries2C)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, 1, rs("Account_Code").value, Round(Me.TxtOpenBalance.Text, SystemOptions.SysDefCurrencyForamt), 0, StrDes & Trim(Me.XPTxtCusName.Text) & "  " & Trim$(Me.XPTxtCusNamee.Text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.Text), , , , val(dcBranch.BoundText), , val(TxtShowQty1) - val(TxtShowQty1c), val(TxtshowPrice1) - val(TxtshowPrice1C), val(TxtshowPrice2) - val(TxtshowPrice2C), val(TxtSalaries1) - val(TxtSalaries1C), val(TxtSalaries2) - val(TxtSalaries2C)) = False Then
                         GoTo ErrTrap
                     End If
 
-                    If ModAccounts.AddNewDev(LngDevID, 2, Account_Code_dynamic1, Round(Me.TxtOpenBalance.text, SystemOptions.SysDefCurrencyForamt), 1, StrDes & Trim(Me.XPTxtCusName.text) & "  " & Trim$(Me.XPTxtCusNamee.text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.text), , , , val(dcBranch.BoundText), , val(TxtShowQty1c) - val(TxtShowQty1), val(TxtshowPrice1C) - val(TxtshowPrice1), val(TxtshowPrice2C) - val(TxtshowPrice2), val(TxtSalaries1C) - val(TxtSalaries1), val(TxtSalaries2C) - val(TxtSalaries2)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, 2, Account_Code_dynamic1, Round(Me.TxtOpenBalance.Text, SystemOptions.SysDefCurrencyForamt), 1, StrDes & Trim(Me.XPTxtCusName.Text) & "  " & Trim$(Me.XPTxtCusNamee.Text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.Text), , , , val(dcBranch.BoundText), , val(TxtShowQty1c) - val(TxtShowQty1), val(TxtshowPrice1C) - val(TxtshowPrice1), val(TxtshowPrice2C) - val(TxtshowPrice2), val(TxtSalaries1C) - val(TxtSalaries1), val(TxtSalaries2C) - val(TxtSalaries2)) = False Then
                         GoTo ErrTrap
                     End If
                     
@@ -6048,7 +6058,7 @@ End If
                         End If
                     End If
                 
-                    If ModAccounts.AddNewDev(LngDevID, 1, Account_Code_dynamic1, Round(Me.TxtOpenBalance.text, SystemOptions.SysDefCurrencyForamt), 0, StrDes & Trim(Me.XPTxtCusName.text) & "  " & Trim$(Me.XPTxtCusNamee.text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.text), , , , val(dcBranch.BoundText), , val(TxtShowQty1c) - val(TxtShowQty1), val(TxtshowPrice1C) - val(TxtshowPrice1), val(TxtshowPrice2C) - val(TxtshowPrice2), val(TxtSalaries1C) - val(TxtSalaries1), val(TxtSalaries2C) - val(TxtSalaries2)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, 1, Account_Code_dynamic1, Round(Me.TxtOpenBalance.Text, SystemOptions.SysDefCurrencyForamt), 0, StrDes & Trim(Me.XPTxtCusName.Text) & "  " & Trim$(Me.XPTxtCusNamee.Text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.Text), , , , val(dcBranch.BoundText), , val(TxtShowQty1c) - val(TxtShowQty1), val(TxtshowPrice1C) - val(TxtshowPrice1), val(TxtshowPrice2C) - val(TxtshowPrice2), val(TxtSalaries1C) - val(TxtSalaries1), val(TxtSalaries2C) - val(TxtSalaries2)) = False Then
                         GoTo ErrTrap
                     End If
 
@@ -6057,7 +6067,7 @@ End If
                     
                     '       GoTo ErrTrap
                     'End If
-                    If ModAccounts.AddNewDev(LngDevID, 2, rs("Account_Code").value, Round(Me.TxtOpenBalance.text, SystemOptions.SysDefCurrencyForamt), 1, StrDes & Trim(Me.XPTxtCusName.text) & "  " & Trim$(Me.XPTxtCusNamee.text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.text), , , , val(dcBranch.BoundText), , val(TxtShowQty1) - val(TxtShowQty1c), val(TxtshowPrice1) - val(TxtshowPrice1C), val(TxtshowPrice2) - val(TxtshowPrice2C), val(TxtSalaries1) - val(TxtSalaries1C), val(TxtSalaries2) - val(TxtSalaries2C)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, 2, rs("Account_Code").value, Round(Me.TxtOpenBalance.Text, SystemOptions.SysDefCurrencyForamt), 1, StrDes & Trim(Me.XPTxtCusName.Text) & "  " & Trim$(Me.XPTxtCusNamee.Text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.Text), , , , val(dcBranch.BoundText), , val(TxtShowQty1) - val(TxtShowQty1c), val(TxtshowPrice1) - val(TxtshowPrice1C), val(TxtshowPrice2) - val(TxtshowPrice2C), val(TxtSalaries1) - val(TxtSalaries1C), val(TxtSalaries2) - val(TxtSalaries2C)) = False Then
                         GoTo ErrTrap
                     End If
                 End If
@@ -6094,11 +6104,11 @@ If SystemOptions.CustomerhavethreeAccounts = True Then
                         End If
                     End If
             
-                    If ModAccounts.AddNewDev(LngDevID, 1, rs("Account_Code1").value, Round(Me.TxtOpenBalance1.text, SystemOptions.SysDefCurrencyForamt), 0, StrDes & Trim(Me.XPTxtCusName.text) & "  " & Trim$(Me.XPTxtCusNamee.text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.text), , , , val(dcBranch.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, 1, rs("Account_Code1").value, Round(Me.TxtOpenBalance1.Text, SystemOptions.SysDefCurrencyForamt), 0, StrDes & Trim(Me.XPTxtCusName.Text) & "  " & Trim$(Me.XPTxtCusNamee.Text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.Text), , , , val(dcBranch.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
 
-                    If ModAccounts.AddNewDev(LngDevID, 2, Account_Code_dynamic1, Round(Me.TxtOpenBalance1.text, SystemOptions.SysDefCurrencyForamt), 1, StrDes & Trim(Me.XPTxtCusName.text) & "  " & Trim$(Me.XPTxtCusNamee.text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.text), , , , val(dcBranch.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, 2, Account_Code_dynamic1, Round(Me.TxtOpenBalance1.Text, SystemOptions.SysDefCurrencyForamt), 1, StrDes & Trim(Me.XPTxtCusName.Text) & "  " & Trim$(Me.XPTxtCusNamee.Text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.Text), , , , val(dcBranch.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     
@@ -6120,7 +6130,7 @@ If SystemOptions.CustomerhavethreeAccounts = True Then
                         End If
                     End If
                 
-                    If ModAccounts.AddNewDev(LngDevID, 1, Account_Code_dynamic1, Round(Me.TxtOpenBalance1.text, SystemOptions.SysDefCurrencyForamt), 0, StrDes & Trim(Me.XPTxtCusName.text) & "  " & Trim$(Me.XPTxtCusNamee.text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.text), , , , val(dcBranch.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, 1, Account_Code_dynamic1, Round(Me.TxtOpenBalance1.Text, SystemOptions.SysDefCurrencyForamt), 0, StrDes & Trim(Me.XPTxtCusName.Text) & "  " & Trim$(Me.XPTxtCusNamee.Text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.Text), , , , val(dcBranch.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
 
@@ -6129,7 +6139,7 @@ If SystemOptions.CustomerhavethreeAccounts = True Then
                     
                     '       GoTo ErrTrap
                     'End If
-                    If ModAccounts.AddNewDev(LngDevID, 2, rs("Account_Code1").value, Round(Me.TxtOpenBalance1.text, SystemOptions.SysDefCurrencyForamt), 1, StrDes & Trim(Me.XPTxtCusName.text) & "  " & Trim$(Me.XPTxtCusNamee.text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.text), , , , val(dcBranch.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, 2, rs("Account_Code1").value, Round(Me.TxtOpenBalance1.Text, SystemOptions.SysDefCurrencyForamt), 1, StrDes & Trim(Me.XPTxtCusName.Text) & "  " & Trim$(Me.XPTxtCusNamee.Text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.Text), , , , val(dcBranch.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                 End If
@@ -6161,11 +6171,11 @@ If SystemOptions.CustomerhavethreeAccounts = True Then
                         End If
                     End If
             
-                    If ModAccounts.AddNewDev(LngDevID, 1, rs("Account_Code2").value, Round(Me.TxtOpenBalance2.text, SystemOptions.SysDefCurrencyForamt), 0, StrDes & Trim(Me.XPTxtCusName.text) & "  " & Trim$(Me.XPTxtCusNamee.text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.text), , , , val(dcBranch.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, 1, rs("Account_Code2").value, Round(Me.TxtOpenBalance2.Text, SystemOptions.SysDefCurrencyForamt), 0, StrDes & Trim(Me.XPTxtCusName.Text) & "  " & Trim$(Me.XPTxtCusNamee.Text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.Text), , , , val(dcBranch.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
 
-                    If ModAccounts.AddNewDev(LngDevID, 2, Account_Code_dynamic1, Round(Me.TxtOpenBalance2.text, SystemOptions.SysDefCurrencyForamt), 1, StrDes & Trim(Me.XPTxtCusName.text) & "  " & Trim$(Me.XPTxtCusNamee.text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.text), , , , val(dcBranch.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, 2, Account_Code_dynamic1, Round(Me.TxtOpenBalance2.Text, SystemOptions.SysDefCurrencyForamt), 1, StrDes & Trim(Me.XPTxtCusName.Text) & "  " & Trim$(Me.XPTxtCusNamee.Text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.Text), , , , val(dcBranch.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                     
@@ -6187,7 +6197,7 @@ If SystemOptions.CustomerhavethreeAccounts = True Then
                         End If
                     End If
                 
-                    If ModAccounts.AddNewDev(LngDevID, 1, Account_Code_dynamic1, Round(Me.TxtOpenBalance2.text, SystemOptions.SysDefCurrencyForamt), 0, StrDes & Trim(Me.XPTxtCusName.text) & "  " & Trim$(Me.XPTxtCusNamee.text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.text), , , , val(dcBranch.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, 1, Account_Code_dynamic1, Round(Me.TxtOpenBalance2.Text, SystemOptions.SysDefCurrencyForamt), 0, StrDes & Trim(Me.XPTxtCusName.Text) & "  " & Trim$(Me.XPTxtCusNamee.Text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.Text), , , , val(dcBranch.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
 
@@ -6196,7 +6206,7 @@ If SystemOptions.CustomerhavethreeAccounts = True Then
                     
                     '       GoTo ErrTrap
                     'End If
-                    If ModAccounts.AddNewDev(LngDevID, 2, rs("Account_Code2").value, Round(Me.TxtOpenBalance2.text, SystemOptions.SysDefCurrencyForamt), 1, StrDes & Trim(Me.XPTxtCusName.text) & "  " & Trim$(Me.XPTxtCusNamee.text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.text), , , , val(dcBranch.BoundText)) = False Then
+                    If ModAccounts.AddNewDev(LngDevID, 2, rs("Account_Code2").value, Round(Me.TxtOpenBalance2.Text, SystemOptions.SysDefCurrencyForamt), 1, StrDes & Trim(Me.XPTxtCusName.Text) & "  " & Trim$(Me.XPTxtCusNamee.Text), LngOpenID, , , , Me.Dtp.value, , , , , , , , , , , , , , True, val(txtopening_balance_voucher_id.Text), , , , val(dcBranch.BoundText)) = False Then
                         GoTo ErrTrap
                     End If
                 End If
@@ -6217,14 +6227,14 @@ End If
         ' update_account_opening_balance Me.DcboCreditSide.BoundText
         CuurentLogdata
 
-        Select Case Me.TxtModFlg.text
+        Select Case Me.TxtModFlg.Text
 
             Case "N"
                 Msg = "  „ Õ›Ÿ »Ì«‰«  Â–« «·⁄„Ì· " & CHR(13)
                 Msg = Msg + "Â·  —€» ›Ì ≈÷«›… »Ì«‰«  √Œ—Ì"
- If index = 1 Then
+ If Index = 1 Then
  RSContract.ReloadCombos
-            RSContract.dcCustomer.BoundText = val(XPTxtCusID.text)
+            RSContract.dcCustomer.BoundText = val(XPTxtCusID.Text)
             End If
             
             
@@ -6247,7 +6257,7 @@ End If
 
         End Select
 
-        TxtModFlg.text = "R"
+        TxtModFlg.Text = "R"
    
         
     End If
@@ -6287,14 +6297,14 @@ Private Sub Form_KeyDown(KeyCode As Integer, _
     On Error GoTo ErrTrap
 
     If KeyCode = vbKeyReturn Then
-        If Me.TxtModFlg.text = "R" Then
+        If Me.TxtModFlg.Text = "R" Then
             Cmd_Click (0)
         Else
             Sendkeys "{TAB}"
         End If
     End If
 
-    If Me.TxtModFlg.text = "R" Then
+    If Me.TxtModFlg.Text = "R" Then
         If KeyCode = vbKeyDown Or KeyCode = vbKeyEnd Then
             XPBtnMove_Click (2)
         ElseIf KeyCode = vbKeyUp Or KeyCode = vbKeyHome Then
@@ -6708,7 +6718,7 @@ MySQL = MySQL & "                      dbo.TblBranchesData ON dbo.TblCustemers.B
 MySQL = MySQL & "                      dbo.TblCountriesGovernments ON dbo.TblCustemers.GovernmentID = dbo.TblCountriesGovernments.GovernmentID LEFT OUTER JOIN"
 MySQL = MySQL & "                      dbo.TblCountriesGovernmentsCities ON dbo.TblCustemers.CityID = dbo.TblCountriesGovernmentsCities.CityID LEFT OUTER JOIN"
 MySQL = MySQL & "                      dbo.TblCountriesData ON dbo.TblCustemers.CountryID = dbo.TblCountriesData.CountryID"
-MySQL = MySQL & " Where (dbo.TblCustemers.CusID =" & val(XPTxtCusID.text) & ")"
+MySQL = MySQL & " Where (dbo.TblCustemers.CusID =" & val(XPTxtCusID.Text) & ")"
 
 
  If SystemOptions.UserInterface = ArabicInterface Then
@@ -6798,9 +6808,9 @@ Private Sub Form_QueryUnload(Cancel As Integer, _
     Dim StrMSG As String
     On Error GoTo ErrTrap
 
-    If Me.TxtModFlg.text <> "R" Then
+    If Me.TxtModFlg.Text <> "R" Then
 
-        Select Case Me.TxtModFlg.text
+        Select Case Me.TxtModFlg.Text
 
             Case "N"
     
@@ -7027,7 +7037,7 @@ End Sub
 Private Sub ShowCusBalance()
     Dim LngCusID As Long
 
-    LngCusID = val(XPTxtCusID.text)
+    LngCusID = val(XPTxtCusID.Text)
     OpenScreen PopUpShowCustomerBalanceScreen, LngCusID, 0
 End Sub
 
@@ -7077,12 +7087,12 @@ End Sub
 
 Function CREATEADDRESS()
 If SystemOptions.IsBluee = True Then
-TxtAddress = txtNoOFDigitUser(4) & " " & txtNoOFDigitUser(2) & " " & DcboCityID.text & " " & DcboGovernmentID.text & " " & DcboCountryID.text & " " & "«·—„“ «·»—ÌœÌ" & TxtZib
+TxtAddress = txtNoOFDigitUser(4) & " " & txtNoOFDigitUser(2) & " " & DcboCityID.Text & " " & DcboGovernmentID.Text & " " & DcboCountryID.Text & " " & "«·—„“ «·»—ÌœÌ" & TxtZib
 End If
 End Function
-Private Sub txtNoOFDigitUser_KeyPress(index As Integer, KeyAscii As Integer)
-If index = 2 Or index = 10 Then Exit Sub
-   KeyAscii = KeyAscii_Num(KeyAscii, txtNoOFDigitUser(4).text, 0)
+Private Sub txtNoOFDigitUser_KeyPress(Index As Integer, KeyAscii As Integer)
+If Index = 2 Or Index = 10 Then Exit Sub
+   KeyAscii = KeyAscii_Num(KeyAscii, txtNoOFDigitUser(4).Text, 0)
 End Sub
 
 
@@ -7094,7 +7104,7 @@ Function checkEeinvoice() As Boolean
   'If creditlocked.value = Checked Then checkEeinvoice = True: Exit Function
 checkEeinvoice = False
 
-If TxtRecordNo.text = "" Then
+If TxtRecordNo.Text = "" Then
 
     
       If SystemOptions.UserInterface = ArabicInterface Then
@@ -7107,7 +7117,7 @@ If TxtRecordNo.text = "" Then
 End If
 
 If Not SystemOptions.CustVatNoMandatory Then
-    If (TxtVATNO.text = "" Or Len(TxtVATNO) < 15 Or mId(TxtVATNO, 15, 1) <> 3) And Trim(TxtRecordNo) = "" Then
+    If (TxtVATNO.Text = "" Or Len(TxtVATNO) < 15 Or mId(TxtVATNO, 15, 1) <> 3) And Trim(TxtRecordNo) = "" Then
           If SystemOptions.UserInterface = ArabicInterface Then
                         MsgBox "  «·—ﬁ„ «·÷—ÌÌ 15 Œ«‰…  «·“«„Ì ÊÌ‰ ÂÌ »«·—ﬁ„ 3", vbCritical
                     Else
@@ -7130,7 +7140,7 @@ If Not SystemOptions.CustVatNoMandatory Then
 End If
 
 
-If txtNoOFDigitUser(4).text = "" Or Len(txtNoOFDigitUser(4)) < 4 Then
+If txtNoOFDigitUser(4).Text = "" Or Len(txtNoOFDigitUser(4)) < 4 Then
       If SystemOptions.UserInterface = ArabicInterface Then
                     MsgBox "     —ﬁ„ «·„»‰Ì 4 Œ«‰…  «·“«„Ì", vbCritical
                 Else
@@ -7141,7 +7151,7 @@ If txtNoOFDigitUser(4).text = "" Or Len(txtNoOFDigitUser(4)) < 4 Then
 End If
 
 
-If TxtZib.text = "" Or Len(TxtZib) < 5 Then
+If TxtZib.Text = "" Or Len(TxtZib) < 5 Then
       If SystemOptions.UserInterface = ArabicInterface Then
                     MsgBox "     «·—„“ «·»—ÌœÌ   5 Œ«‰…  «·“«„Ì", vbCritical
                 Else
@@ -7152,7 +7162,7 @@ If TxtZib.text = "" Or Len(TxtZib) < 5 Then
 End If
 
 
-If txtNoOFDigitUser(2).text = "" Then
+If txtNoOFDigitUser(2).Text = "" Then
       If SystemOptions.UserInterface = ArabicInterface Then
                     MsgBox "    «”„ «·‘«—⁄  «·“«„Ì", vbCritical
                 Else
@@ -7162,7 +7172,7 @@ If txtNoOFDigitUser(2).text = "" Then
         Exit Function
 End If
 
-If txtNoOFDigitUser(10).text = "" Or Len(txtNoOFDigitUser(10)) < 2 Then
+If txtNoOFDigitUser(10).Text = "" Or Len(txtNoOFDigitUser(10)) < 2 Then
       If SystemOptions.UserInterface = ArabicInterface Then
                     MsgBox "   ﬂÊœ «·œÊ·…  «·“«„Ì 2 Œ«‰…", vbCritical
                 Else

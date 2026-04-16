@@ -19,6 +19,15 @@ Begin VB.Form loading_temolates
    ScaleWidth      =   20010
    ShowInTaskbar   =   0   'False
    WindowState     =   2  'Maximized
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin DBPIXLib.DBPix20 DBPix201 
       Height          =   1215
       Left            =   2760

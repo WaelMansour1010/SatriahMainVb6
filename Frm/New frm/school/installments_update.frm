@@ -14,6 +14,15 @@ Begin VB.Form installments_update
    RightToLeft     =   -1  'True
    ScaleHeight     =   6855
    ScaleWidth      =   5835
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox Text2 
       Alignment       =   2  'Center
       DataField       =   "Installments_TYPE"

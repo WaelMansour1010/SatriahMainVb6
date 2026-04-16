@@ -16,6 +16,15 @@ Begin VB.Form Term_search
    RightToLeft     =   -1  'True
    ScaleHeight     =   4425
    ScaleWidth      =   8430
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin MSDataGridLib.DataGrid DataGrid4 
       Bindings        =   "Term_search.frx":000C
       Height          =   2535

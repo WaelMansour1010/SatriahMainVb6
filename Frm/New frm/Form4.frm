@@ -17,6 +17,15 @@ Begin VB.Form Form4
    ScaleHeight     =   7875
    ScaleWidth      =   13575
    StartUpPosition =   3  'Windows Default
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Tab XPTab301 
       Height          =   6600
       Left            =   0

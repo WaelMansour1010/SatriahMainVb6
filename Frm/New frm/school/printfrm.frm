@@ -12,6 +12,15 @@ Begin VB.Form printfrm
    ScaleHeight     =   4428
    ScaleWidth      =   6204
    StartUpPosition =   3  'Windows Default
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CommandButton Command1 
       Caption         =   "ÿ»«⁄…  «·ﬂ·"
       Height          =   432

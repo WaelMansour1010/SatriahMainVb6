@@ -19,6 +19,15 @@ Begin VB.Form FrmGoldDetaiks
    ScaleHeight     =   4485
    ScaleWidth      =   13200
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CommandButton Command2 
       Caption         =   "Command1"
       Height          =   255

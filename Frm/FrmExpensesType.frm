@@ -18,6 +18,15 @@ Begin VB.Form FrmExpensesType
    RightToLeft     =   -1  'True
    ScaleHeight     =   4905
    ScaleWidth      =   7260
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CheckBox chkTransportation 
       Alignment       =   1  'Right Justify
       BackColor       =   &H00E2E9E9&

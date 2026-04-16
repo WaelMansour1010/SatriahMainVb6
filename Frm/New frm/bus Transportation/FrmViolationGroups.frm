@@ -15,6 +15,15 @@ Begin VB.Form FrmViolationGroups
    RightToLeft     =   -1  'True
    ScaleHeight     =   6585
    ScaleWidth      =   8505
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic C1Elastic1 
       Height          =   6585
       Left            =   0

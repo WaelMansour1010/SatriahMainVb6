@@ -16,6 +16,15 @@ Begin VB.Form FrmDateOpProject
    ScaleWidth      =   4875
    ShowInTaskbar   =   0   'False
    StartUpPosition =   3  'Windows Default
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin ImpulseButton.ISButton CmdOk 
       Height          =   405
       Left            =   1020

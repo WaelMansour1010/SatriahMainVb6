@@ -17,7 +17,7 @@ Begin VB.Form FrmCustomerContract
    BeginProperty Font 
       Name            =   "MS Reference Sans Serif"
       Size            =   8.25
-      Charset         =   0
+      Charset         =   178
       Weight          =   400
       Underline       =   0   'False
       Italic          =   0   'False

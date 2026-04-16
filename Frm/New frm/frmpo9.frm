@@ -22,6 +22,15 @@ Begin VB.Form FrmPO9
    ScaleHeight     =   9000
    ScaleWidth      =   13860
    WindowState     =   2  'Maximized
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic EleMain 
       Height          =   9000
       Left            =   0

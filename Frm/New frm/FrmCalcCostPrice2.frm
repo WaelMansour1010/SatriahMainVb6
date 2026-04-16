@@ -21,6 +21,15 @@ Begin VB.Form FrmCalcCostPrice2
    ScaleHeight     =   8985
    ScaleWidth      =   10290
    Visible         =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic EleMain 
       Height          =   8985
       Left            =   0

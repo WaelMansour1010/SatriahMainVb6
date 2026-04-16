@@ -23,6 +23,15 @@ Begin VB.Form FrmSearchSerial
    RightToLeft     =   -1  'True
    ScaleHeight     =   8430
    ScaleWidth      =   15285
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic Ele 
       Height          =   8430
       Index           =   0

@@ -16,6 +16,15 @@ Begin VB.Form AKSAT1
    MinButton       =   0   'False
    ScaleHeight     =   5955
    ScaleWidth      =   12990
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CommandButton Command40 
       Height          =   492
       Index           =   2

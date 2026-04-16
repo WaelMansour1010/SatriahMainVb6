@@ -22,6 +22,15 @@ Begin VB.Form FrmEmployees
    ScaleHeight     =   5745
    ScaleWidth      =   6885
    StartUpPosition =   2  'CenterScreen
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VSFlex8Ctl.VSFlexGrid Grid 
       Height          =   3495
       Left            =   60

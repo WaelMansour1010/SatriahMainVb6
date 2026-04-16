@@ -13,6 +13,15 @@ Begin VB.Form FrmViewPic
    ScaleHeight     =   8595
    ScaleWidth      =   15180
    StartUpPosition =   2  'CenterScreen
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin Dynamic_Byte.NewViewBox MainView 
       Height          =   7965
       Left            =   120

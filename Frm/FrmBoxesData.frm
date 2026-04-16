@@ -20,6 +20,15 @@ Begin VB.Form FrmBoxesData
    ScaleHeight     =   7440
    ScaleWidth      =   6240
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox TxtPriod 
       Alignment       =   2  'Center
       Height          =   315

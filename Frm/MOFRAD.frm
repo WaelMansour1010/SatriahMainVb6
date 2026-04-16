@@ -20,6 +20,15 @@ Begin VB.Form MOFRAD
    ScaleHeight     =   9795
    ScaleWidth      =   18810
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CheckBox chkshowMofradAll 
       Alignment       =   1  'Right Justify
       BackColor       =   &H00E2E9E9&

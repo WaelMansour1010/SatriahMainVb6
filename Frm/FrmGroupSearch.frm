@@ -19,6 +19,15 @@ Begin VB.Form FrmGroupSearch
    RightToLeft     =   -1  'True
    ScaleHeight     =   3945
    ScaleWidth      =   11235
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox TxtGroupCode 
       Alignment       =   1  'Right Justify
       Height          =   330

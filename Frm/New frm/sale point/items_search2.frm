@@ -15,6 +15,15 @@ Begin VB.Form items_search2
    RightToLeft     =   -1  'True
    ScaleHeight     =   5325
    ScaleWidth      =   12150
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame2 
       BorderStyle     =   0  'None
       Height          =   1935

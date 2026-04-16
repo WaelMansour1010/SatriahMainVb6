@@ -22,6 +22,15 @@ Begin VB.Form FrmPands
    RightToLeft     =   -1  'True
    ScaleHeight     =   6420
    ScaleWidth      =   7560
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic EltCont 
       Height          =   930
       Left            =   -45

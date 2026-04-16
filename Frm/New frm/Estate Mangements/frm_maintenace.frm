@@ -16,6 +16,15 @@ Begin VB.Form frm_maintenace
    MinButton       =   0   'False
    ScaleHeight     =   7770
    ScaleWidth      =   14535
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame9 
       Height          =   1215
       Left            =   5040

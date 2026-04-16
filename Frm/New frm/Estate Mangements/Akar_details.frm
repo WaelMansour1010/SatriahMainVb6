@@ -15,6 +15,15 @@ Begin VB.Form Akar_details
    MinButton       =   0   'False
    ScaleHeight     =   9180
    ScaleWidth      =   16725
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin ALLButtonS.ALLButton ALLButton4 
       Height          =   255
       Left            =   16080

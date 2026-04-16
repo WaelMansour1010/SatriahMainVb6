@@ -20,6 +20,15 @@ Begin VB.Form FrmBankPledge2
    ScaleHeight     =   8250
    ScaleWidth      =   15330
    WindowState     =   2  'Maximized
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic C1Elastic1 
       Height          =   8250
       Left            =   0

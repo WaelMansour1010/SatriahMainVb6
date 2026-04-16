@@ -14,6 +14,15 @@ Begin VB.Form iso_departement
    ScaleHeight     =   5760
    ScaleWidth      =   4200
    StartUpPosition =   2  'CenterScreen
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame1 
       Caption         =   "priviligies"
       Height          =   1215

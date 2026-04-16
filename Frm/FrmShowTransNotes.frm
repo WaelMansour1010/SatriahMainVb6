@@ -21,6 +21,15 @@ Begin VB.Form FrmShowTransNotes
    ScaleHeight     =   5325
    ScaleWidth      =   7350
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic C1Elastic1 
       Height          =   735
       Left            =   0

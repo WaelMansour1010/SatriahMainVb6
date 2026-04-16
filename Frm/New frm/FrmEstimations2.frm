@@ -4,7 +4,7 @@ Object = "{0AFE7BE0-11B7-4A3E-978D-D4501E9A57FE}#1.0#0"; "c1sizer.ocx"
 Object = "{BEEECC20-4D5F-4F8B-BFDC-5D9B6FBDE09D}#1.0#0"; "vsflex8.ocx"
 Object = "{F0D2F211-CCB0-11D0-A316-00AA00688B10}#1.0#0"; "MSDATLST.OCX"
 Object = "{FE5DCFAD-BC1D-11D2-94CF-004005455FAA}#1.4#0"; "ImpulseButton.ocx"
-Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "Comdlg32.ocx"
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
 Object = "{49003D3A-66CD-11D7-A449-E937BE2D9041}#1.0#0"; "ALLBUTTONS.ocx"
 Begin VB.Form FrmAllocationToContract 
@@ -14,6 +14,15 @@ Begin VB.Form FrmAllocationToContract
    ClientLeft      =   60
    ClientTop       =   450
    ClientWidth     =   18960
+   BeginProperty Font 
+      Name            =   "Arial"
+      Size            =   8.25
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    HelpContextID   =   580
    Icon            =   "FrmEstimations2.frx":0000
    LinkTopic       =   "Form1"
@@ -32,7 +41,7 @@ Begin VB.Form FrmAllocationToContract
       _cx             =   33443
       _cy             =   16801
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -145,7 +154,7 @@ Begin VB.Form FrmAllocationToContract
             _cx             =   33179
             _cy             =   13203
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -243,15 +252,6 @@ Begin VB.Form FrmAllocationToContract
             End
             Begin VB.Frame Frame2 
                BackColor       =   &H00E2E9E9&
-               BeginProperty Font 
-                  Name            =   "Arial"
-                  Size            =   8.25
-                  Charset         =   178
-                  Weight          =   400
-                  Underline       =   0   'False
-                  Italic          =   0   'False
-                  Strikethrough   =   0   'False
-               EndProperty
                Height          =   1290
                Left            =   20670
                RightToLeft     =   -1  'True
@@ -297,15 +297,6 @@ Begin VB.Form FrmAllocationToContract
             End
             Begin VB.TextBox TxtModFlg 
                Alignment       =   1  'Right Justify
-               BeginProperty Font 
-                  Name            =   "Arial"
-                  Size            =   8.25
-                  Charset         =   178
-                  Weight          =   400
-                  Underline       =   0   'False
-                  Italic          =   0   'False
-                  Strikethrough   =   0   'False
-               EndProperty
                Height          =   360
                Left            =   495
                RightToLeft     =   -1  'True
@@ -316,15 +307,6 @@ Begin VB.Form FrmAllocationToContract
             End
             Begin VB.TextBox txtid 
                Alignment       =   1  'Right Justify
-               BeginProperty Font 
-                  Name            =   "Arial"
-                  Size            =   8.25
-                  Charset         =   178
-                  Weight          =   400
-                  Underline       =   0   'False
-                  Italic          =   0   'False
-                  Strikethrough   =   0   'False
-               EndProperty
                Height          =   375
                Index           =   0
                Left            =   -4845
@@ -335,15 +317,6 @@ Begin VB.Form FrmAllocationToContract
             End
             Begin VB.TextBox TxtTransID 
                Alignment       =   1  'Right Justify
-               BeginProperty Font 
-                  Name            =   "Arial"
-                  Size            =   8.25
-                  Charset         =   178
-                  Weight          =   400
-                  Underline       =   0   'False
-                  Italic          =   0   'False
-                  Strikethrough   =   0   'False
-               EndProperty
                Height          =   375
                Left            =   16185
                Locked          =   -1  'True
@@ -354,15 +327,6 @@ Begin VB.Form FrmAllocationToContract
             End
             Begin VB.Frame Frame3 
                BackColor       =   &H00E2E9E9&
-               BeginProperty Font 
-                  Name            =   "Arial"
-                  Size            =   8.25
-                  Charset         =   178
-                  Weight          =   400
-                  Underline       =   0   'False
-                  Italic          =   0   'False
-                  Strikethrough   =   0   'False
-               EndProperty
                Height          =   930
                Left            =   19110
                RightToLeft     =   -1  'True
@@ -440,12 +404,12 @@ Begin VB.Form FrmAllocationToContract
                   Top             =   240
                   Width           =   3855
                   _ExtentX        =   6800
-                  _ExtentY        =   556
+                  _ExtentY        =   582
                   _Version        =   393216
                   Text            =   ""
                   RightToLeft     =   -1  'True
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -466,8 +430,9 @@ Begin VB.Form FrmAllocationToContract
                   ButtonStyle     =   1
                   ButtonPositionImage=   1
                   Caption         =   "≈÷«›…"
+                  FontName        =   "Arial"
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -490,8 +455,9 @@ Begin VB.Form FrmAllocationToContract
                   ButtonStyle     =   1
                   ButtonPositionImage=   1
                   Caption         =   "Õ–›"
+                  FontName        =   "Arial"
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -562,7 +528,7 @@ Begin VB.Form FrmAllocationToContract
                   BorderStyle     =   1
                   Enabled         =   -1  'True
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -668,7 +634,7 @@ Begin VB.Form FrmAllocationToContract
                   BorderStyle     =   1
                   Enabled         =   -1  'True
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -765,7 +731,7 @@ Begin VB.Form FrmAllocationToContract
                Width           =   1095
             End
             Begin VB.ComboBox OperatorsID 
-               Height          =   315
+               Height          =   330
                ItemData        =   "FrmEstimations2.frx":0E41
                Left            =   19215
                List            =   "FrmEstimations2.frx":0E51
@@ -857,7 +823,7 @@ Begin VB.Form FrmAllocationToContract
                   _ExtentX        =   3096
                   _ExtentY        =   582
                   _Version        =   393216
-                  Format          =   226033665
+                  Format          =   210173953
                   CurrentDate     =   41640
                End
                Begin MSComCtl2.DTPicker todate 
@@ -869,7 +835,7 @@ Begin VB.Form FrmAllocationToContract
                   _ExtentX        =   3096
                   _ExtentY        =   582
                   _Version        =   393216
-                  Format          =   226033665
+                  Format          =   210173953
                   CurrentDate     =   41640
                End
                Begin Dynamic_Byte.NourHijriCal Fromdate√H 
@@ -893,8 +859,9 @@ Begin VB.Form FrmAllocationToContract
                   ButtonStyle     =   1
                   ButtonPositionImage=   1
                   Caption         =   "≈÷«›…"
+                  FontName        =   "Arial"
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -953,7 +920,7 @@ Begin VB.Form FrmAllocationToContract
                   Alignment       =   1  'Right Justify
                   BackColor       =   &H00FFFFC0&
                   BeginProperty Font 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   700
@@ -973,7 +940,7 @@ Begin VB.Form FrmAllocationToContract
                   Alignment       =   1  'Right Justify
                   BackColor       =   &H00FFFFC0&
                   BeginProperty Font 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   700
@@ -993,7 +960,7 @@ Begin VB.Form FrmAllocationToContract
                   Alignment       =   1  'Right Justify
                   BackColor       =   &H00FFFFFF&
                   BeginProperty Font 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   700
@@ -1013,7 +980,7 @@ Begin VB.Form FrmAllocationToContract
                   Alignment       =   1  'Right Justify
                   BackColor       =   &H00FFFFFF&
                   BeginProperty Font 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   700
@@ -1033,7 +1000,7 @@ Begin VB.Form FrmAllocationToContract
                   Alignment       =   1  'Right Justify
                   BackColor       =   &H00FFFFC0&
                   BeginProperty Font 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   700
@@ -1053,7 +1020,7 @@ Begin VB.Form FrmAllocationToContract
                   Alignment       =   1  'Right Justify
                   BackColor       =   &H00FFFFFF&
                   BeginProperty Font 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   700
@@ -1073,7 +1040,7 @@ Begin VB.Form FrmAllocationToContract
                   Alignment       =   1  'Right Justify
                   BackColor       =   &H00FFFFC0&
                   BeginProperty Font 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   700
@@ -1222,18 +1189,18 @@ Begin VB.Form FrmAllocationToContract
                End
             End
             Begin MSDataListLib.DataCombo DCAccountMaster 
-               Height          =   315
+               Height          =   330
                Left            =   22875
                TabIndex        =   68
                Top             =   630
                Width           =   6405
                _ExtentX        =   11298
-               _ExtentY        =   556
+               _ExtentY        =   582
                _Version        =   393216
                Text            =   ""
                RightToLeft     =   -1  'True
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -1254,7 +1221,7 @@ Begin VB.Form FrmAllocationToContract
                BorderStyle     =   1
                Enabled         =   -1  'True
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -1348,22 +1315,22 @@ Begin VB.Form FrmAllocationToContract
                _ExtentX        =   2487
                _ExtentY        =   450
                _Version        =   393216
-               Format          =   226099201
+               Format          =   210239489
                CurrentDate     =   41640
             End
             Begin MSDataListLib.DataCombo DcBranch 
-               Height          =   315
+               Height          =   330
                Left            =   5010
                TabIndex        =   81
                Top             =   0
                Width           =   6270
                _ExtentX        =   11060
-               _ExtentY        =   556
+               _ExtentY        =   582
                _Version        =   393216
                Text            =   ""
                RightToLeft     =   -1  'True
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -1384,7 +1351,7 @@ Begin VB.Form FrmAllocationToContract
                BorderStyle     =   1
                Enabled         =   -1  'True
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -1490,8 +1457,9 @@ Begin VB.Form FrmAllocationToContract
                ButtonPositionImage=   1
                Caption         =   "ÿ»«⁄Â «·‘«‘…"
                BackColor       =   14871017
+               FontName        =   "Arial"
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -1522,8 +1490,9 @@ Begin VB.Form FrmAllocationToContract
                ButtonStyle     =   1
                ButtonPositionImage=   1
                Caption         =   ""
+               FontName        =   "Arial"
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -1546,8 +1515,9 @@ Begin VB.Form FrmAllocationToContract
                ButtonStyle     =   1
                ButtonPositionImage=   1
                Caption         =   ""
+               FontName        =   "Arial"
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -1582,15 +1552,6 @@ Begin VB.Form FrmAllocationToContract
             Begin VB.Label Label5 
                Alignment       =   1  'Right Justify
                BackStyle       =   0  'Transparent
-               BeginProperty Font 
-                  Name            =   "Arial"
-                  Size            =   8.25
-                  Charset         =   178
-                  Weight          =   400
-                  Underline       =   0   'False
-                  Italic          =   0   'False
-                  Strikethrough   =   0   'False
-               EndProperty
                Height          =   510
                Left            =   16995
                RightToLeft     =   -1  'True
@@ -1775,7 +1736,7 @@ Begin VB.Form FrmAllocationToContract
          _cx             =   33338
          _cy             =   1561
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -1856,12 +1817,11 @@ Begin VB.Form FrmAllocationToContract
          End
          Begin ImpulseButton.ISButton BtnUpdate 
             Height          =   300
-            Left            =   12045
+            Left            =   12195
             TabIndex        =   5
             TabStop         =   0   'False
             ToolTipText     =   " ÕœÌÀ ﬁ«⁄œ… «·»Ì«‰« "
-            Top             =   210
-            Visible         =   0   'False
+            Top             =   420
             Width           =   795
             _ExtentX        =   1402
             _ExtentY        =   529
@@ -1898,8 +1858,9 @@ Begin VB.Form FrmAllocationToContract
             ButtonPositionImage=   1
             Caption         =   "ÃœÌœ"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -1930,8 +1891,9 @@ Begin VB.Form FrmAllocationToContract
             ButtonPositionImage=   1
             Caption         =   " ⁄œÌ·"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -1961,8 +1923,9 @@ Begin VB.Form FrmAllocationToContract
             ButtonPositionImage=   1
             Caption         =   "Õ›Ÿ"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -1993,8 +1956,9 @@ Begin VB.Form FrmAllocationToContract
             ButtonPositionImage=   1
             Caption         =   " —«Ã⁄"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2026,8 +1990,9 @@ Begin VB.Form FrmAllocationToContract
             Caption         =   "Õ–›"
             BackColor       =   14871017
             Enabled         =   0   'False
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2058,8 +2023,9 @@ Begin VB.Form FrmAllocationToContract
             ButtonPositionImage=   1
             Caption         =   "Œ—ÊÃ"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2090,8 +2056,9 @@ Begin VB.Form FrmAllocationToContract
             ButtonPositionImage=   1
             Caption         =   "»ÕÀ"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2122,7 +2089,7 @@ Begin VB.Form FrmAllocationToContract
             TX              =   "Õ–› ”ÿ—"
             ENAB            =   0   'False
             BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2160,8 +2127,9 @@ Begin VB.Form FrmAllocationToContract
             ButtonPositionImage=   1
             Caption         =   "ÿ»«⁄Â  "
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2172,6 +2140,30 @@ Begin VB.Form FrmAllocationToContract
             ButtonImage     =   "FrmEstimations2.frx":308D
             ColorButton     =   14871017
             DrawFocusRectangle=   0   'False
+         End
+         Begin MSComCtl2.DTPicker txtFromDate 
+            Height          =   255
+            Left            =   16560
+            TabIndex        =   115
+            Top             =   510
+            Width           =   1410
+            _ExtentX        =   2487
+            _ExtentY        =   450
+            _Version        =   393216
+            Format          =   209911809
+            CurrentDate     =   41640
+         End
+         Begin MSComCtl2.DTPicker txtToDate 
+            Height          =   255
+            Left            =   15090
+            TabIndex        =   116
+            Top             =   510
+            Width           =   1410
+            _ExtentX        =   2487
+            _ExtentY        =   450
+            _Version        =   393216
+            Format          =   209911809
+            CurrentDate     =   41640
          End
          Begin VB.Label Label4 
             Alignment       =   1  'Right Justify
@@ -2200,7 +2192,7 @@ Begin VB.Form FrmAllocationToContract
             BackColor       =   &H00E2E9E9&
             Caption         =   "0"
             BeginProperty Font 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   700
@@ -2220,7 +2212,7 @@ Begin VB.Form FrmAllocationToContract
             BackColor       =   &H00E2E9E9&
             Caption         =   "0"
             BeginProperty Font 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   700
@@ -2322,11 +2314,11 @@ Begin VB.Form FrmAllocationToContract
          Begin VB.TextBox TxtNoteID 
             Alignment       =   1  'Right Justify
             Height          =   285
-            Left            =   7560
+            Left            =   6780
             RightToLeft     =   -1  'True
             TabIndex        =   98
             Text            =   "Text1"
-            Top             =   240
+            Top             =   180
             Visible         =   0   'False
             Width           =   375
          End
@@ -2342,8 +2334,9 @@ Begin VB.Form FrmAllocationToContract
             ButtonStyle     =   1
             ButtonPositionImage=   4
             Caption         =   ""
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2373,8 +2366,9 @@ Begin VB.Form FrmAllocationToContract
             ButtonStyle     =   1
             ButtonPositionImage=   4
             Caption         =   ""
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2404,8 +2398,9 @@ Begin VB.Form FrmAllocationToContract
             ButtonStyle     =   1
             ButtonPositionImage=   4
             Caption         =   ""
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2435,8 +2430,9 @@ Begin VB.Form FrmAllocationToContract
             ButtonStyle     =   1
             ButtonPositionImage=   4
             Caption         =   ""
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2476,8 +2472,9 @@ Begin VB.Form FrmAllocationToContract
       ButtonPositionImage=   1
       Caption         =   "⁄—÷"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -2498,6 +2495,7 @@ Attribute VB_Exposed = False
 Option Explicit
 Dim cSearchDCombo As clsDCboSearch
 Dim BKGrndPic As ClsBackGroundPic
+    Dim rsV As ADODB.Recordset
 Dim net_value As Double
 Dim net_value1 As Double
 Dim My_SQL  As String
@@ -2545,18 +2543,18 @@ Private Sub Del_Trans()
         Exit Sub
    End If
    rsDummy.Close
-    If TxtTransID.text <> "" Then
+    If TxtTransID.Text <> "" Then
      Msg = "”Ì „ Õ–› »Ì«‰«  «·⁄„·Ì… —ﬁ„ " & CHR(13)
-        Msg = Msg + (TxtTransID.text) & CHR(13)
+        Msg = Msg + (TxtTransID.Text) & CHR(13)
         Msg = Msg + " Â·  —€» ›Ì Õ–› Â–Â «·»Ì«‰« ø"
 
         If MsgBox(Msg, vbYesNo + vbQuestion + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title) = vbYes Then
             If Not rs.RecordCount < 1 Then
                  
-         StrSQL = "Delete From Notes Where NoteID=" & val(Me.TXTNoteID.text)
+         StrSQL = "Delete From Notes Where NoteID=" & val(Me.TxtNoteID.Text)
         Cn.Execute StrSQL, , adExecuteNoRecords
         
-                   StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(Me.TXTNoteID.text)
+                   StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(Me.TxtNoteID.Text)
         Cn.Execute StrSQL, , adExecuteNoRecords
         
      Cn.Execute " update  TblContractInstallments set  allocations=0 where id in( " & " select installid from tblContractInsAllocationsDetails where transid=" & TxtTransID & ")"
@@ -2601,11 +2599,11 @@ End Sub
 
 
 
-
 Private Sub BtnPrint_Click()
  printAnyreport printSQL, Me.Name, "«·œ›⁄«  «·„” Õﬁ… "
 End Sub
 
+'
 'Private Sub ALLButton1_Click()
 '    FrmShowCol1.show
 'End Sub
@@ -2679,29 +2677,29 @@ Private Sub SaveData()
     Cn.BeginTrans
     BeginTrans = True
 
-    If TxtModFlg.text = "N" Then
+    If TxtModFlg.Text = "N" Then
         rs.AddNew
-           Me.TxtTransID.text = CStr(new_id("tblContractInsAllocations", "transID", "", True))
-    ElseIf Me.TxtModFlg.text = "E" Then
-          Cn.Execute "delete tblContractInsAllocationsDetails where transID=" & val(Me.TxtTransID.text)
-          Cn.Execute "delete tblContractInsAllocationsDetails1 where transID=" & val(Me.TxtTransID.text)
-      StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(Me.TXTNoteID.text)
+           Me.TxtTransID.Text = CStr(new_id("tblContractInsAllocations", "transID", "", True))
+    ElseIf Me.TxtModFlg.Text = "E" Then
+          Cn.Execute "delete tblContractInsAllocationsDetails where transID=" & val(Me.TxtTransID.Text)
+          Cn.Execute "delete tblContractInsAllocationsDetails1 where transID=" & val(Me.TxtTransID.Text)
+      StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(Me.TxtNoteID.Text)
         Cn.Execute StrSQL, , adExecuteNoRecords
 
 
     End If
     
-  rs("transID").value = TxtTransID.text
+  rs("transID").value = TxtTransID.Text
     rs("recordDate").value = XPDtbTrans.value
-    rs("RecorddateH").value = RecorddateH.value
-     rs("Fromdate").value = FromDate.value
-           rs("todate").value = ToDate.value
-       rs("Fromdateh").value = ToHijriDate(FromDate.value)
-           rs("todateh").value = ToHijriDate(ToDate.value)
-        rs("BranchId").value = IIf(Me.dcBranch.BoundText = "", Null, val(Me.dcBranch.BoundText))
+    rs("RecorddateH").value = recordDateH.value
+     rs("Fromdate").value = Fromdate.value
+           rs("todate").value = todate.value
+       rs("Fromdateh").value = ToHijriDate(Fromdate.value)
+           rs("todateh").value = ToHijriDate(todate.value)
+        rs("BranchId").value = IIf(Me.Dcbranch.BoundText = "", Null, val(Me.Dcbranch.BoundText))
   
       
-    rs("Remarks").value = IIf(Me.txtRemarks.text = "", "", Me.txtRemarks.text)
+    rs("Remarks").value = IIf(Me.tXtRemarks.Text = "", "", Me.tXtRemarks.Text)
    
 
     rs.update
@@ -2726,7 +2724,7 @@ Set SerialMap = CreateObject("Scripting.Dictionary")
    
         If val(.TextMatrix(i, .ColIndex("value"))) <> 0 And .cell(flexcpChecked, i, .ColIndex("Select")) = flexChecked Then
             RsDetails1.AddNew
-            RsDetails1("transID").value = Me.TxtTransID.text
+            RsDetails1("transID").value = Me.TxtTransID.Text
             RsDetails1("VATValue").value = val(.TextMatrix(i, .ColIndex("VATValue")))
             RsDetails1("hijri").value = (.TextMatrix(i, .ColIndex("hijri")))
             RsDetails1("NoteSerial").value = (.TextMatrix(i, .ColIndex("NoteSerial1")))
@@ -2746,7 +2744,7 @@ Set SerialMap = CreateObject("Scripting.Dictionary")
 Dim dueDate As Date
 Dim SerialKey As String
 
-BranchID = val(dcBranch.BoundText)
+BranchID = val(Dcbranch.BoundText)
 dueDate = .TextMatrix(i, .ColIndex("Due_Date"))
 SerialKey = BranchID & Format(dueDate, "yyMM")  ' „À«·: 1242412
 
@@ -3250,7 +3248,7 @@ With Me.GridInstallments
             DaysPart = DateDiff("d", PeriodStart, PeriodEnd) + 1
         
             RsDetails1.AddNew
-              RsDetails1("transID").value = Me.TxtTransID.text
+              RsDetails1("transID").value = Me.TxtTransID.Text
               RsDetails1("InstallNo").value = val(.TextMatrix(i, .ColIndex("InstallNo")))
               RsDetails1("NoteSerial").value = .TextMatrix(i, .ColIndex("NoteSerial1"))
               RsDetails1("Installid").value = val(.TextMatrix(i, .ColIndex("Installid")))
@@ -3293,7 +3291,7 @@ RsDetails1.Close
   'VBA.Calendar = vbCalGreg
     
  
-    Select Case Me.TxtModFlg.text
+    Select Case Me.TxtModFlg.Text
 
         Case "N"
             Msg = "  „ Õ›Ÿ »Ì«‰«  Â–Â «·⁄„·Ì… " & CHR(13)
@@ -3310,7 +3308,7 @@ RsDetails1.Close
             '  Fg_Journal.Enabled = False
     End Select
 
-    TxtModFlg.text = "R"
+    TxtModFlg.Text = "R"
 Retrive
     'End If
 
@@ -3349,7 +3347,7 @@ SaveAlloca
 Case 7
 FillGrid2
 Case 9
-If Me.TxtModFlg.text = "E" Then
+If Me.TxtModFlg.Text = "E" Then
 X = MsgBox("”Ì „ «·€«¡ «· Œ’Ì’ «·Õ«·Ì", vbCritical + vbOKCancel)
             If X = vbOK Then
                  Cn.Execute " update  TblContractInstallments set  allocations=0 where id in( " & " select installid from tblContractInsAllocationsDetails where transid=" & TxtTransID & ")"
@@ -3365,21 +3363,21 @@ FillGrid
 
         Case 0
  
-            TxtModFlg.text = "N"
+            TxtModFlg.Text = "N"
             clear_all Me
         OperatorsID.ListIndex = 0
        OptAlarms(0).value = True
        OptActual(1).value = True
             Me.XPDtbTrans.value = Date
-            RecorddateH.value = ToHijriDate(Date)
+            recordDateH.value = ToHijriDate(Date)
             
-            Me.FromDate.value = Date
-            Me.ToDate.value = Date
+            Me.Fromdate.value = Date
+            Me.todate.value = Date
             Check17.value = vbChecked
             Me.Fromdate√H.value = ToHijriDate(Date)
 todateH.value = ToHijriDate(Date)
 
-   Me.dcBranch.BoundText = Current_branch
+   Me.Dcbranch.BoundText = Current_branch
        
             'XPDtbTrans.SetFocus
             GridInstallments.Clear flexClearScrollable, flexClearEverything
@@ -3407,7 +3405,7 @@ todateH.value = ToHijriDate(Date)
                      Exit Sub
                 End If
                 rsDummy.Close
-            TxtModFlg.text = "E"
+            TxtModFlg.Text = "E"
             '         Grid.Rows = Grid.Rows + 1
             Grid.Enabled = True
 
@@ -3434,19 +3432,19 @@ todateH.value = ToHijriDate(Date)
               End If
               Exit Sub
               End If
-       If val(Me.dcBranch.BoundText) = 0 Then
+       If val(Me.Dcbranch.BoundText) = 0 Then
             If SystemOptions.UserInterface = ArabicInterface Then
                 MsgBox "Õœœ «·›—⁄ «Ê·«", vbCritical
             Else
                 MsgBox "Select Branch Firstly    ", vbCritical
             End If
 
-            dcBranch.SetFocus
+            Dcbranch.SetFocus
             Sendkeys "{F4}"
             Exit Sub
         End If
 CheckAcconts
-If TxtNoteSerial.text = "" Then     'ÃœÌœ ›ﬁÿ
+If TxtNoteSerial.Text = "" Then     'ÃœÌœ ›ﬁÿ
                         If Notes_coding(val(my_branch), Me.XPDtbTrans.value) = "error" Then
                             MsgBox " ·« Ì„ﬂ‰ «÷«›… ﬁÌÊœ ·Â–… «·⁄„·Ì… ·«‰ﬂ  ⁄œÌ  «·Õœ «·«ﬁ’Ì ··ﬁÌÊœ ﬂ„« Õœœ  ›Ì  —ﬁÌ„ «·”‰œ«  ": Exit Sub
                         Else
@@ -3572,8 +3570,8 @@ Sub addrow()
     '    End If
     'End If
 
-    If val(Me.TxtRowNumber.text) <> 0 Then
-        LngRow = val(Me.TxtRowNumber.text)
+    If val(Me.TxtRowNumber.Text) <> 0 Then
+        LngRow = val(Me.TxtRowNumber.Text)
     Else
         Me.Grid.rows = Me.Grid.rows + 1
         LngRow = Me.Grid.rows - 1
@@ -3594,18 +3592,18 @@ Sub addrow()
   
         .TextMatrix(LngRow, .ColIndex("ACode")) = Me.DCAccountDist.BoundText
     
-        .TextMatrix(LngRow, .ColIndex("AName")) = Me.DCAccountDist.text
+        .TextMatrix(LngRow, .ColIndex("AName")) = Me.DCAccountDist.Text
     
-        .TextMatrix(LngRow, .ColIndex("Percentage")) = val(Me.TxtPercentage.text)
+        .TextMatrix(LngRow, .ColIndex("Percentage")) = val(Me.TxtPercentage.Text)
     
-        .TextMatrix(LngRow, .ColIndex("Remarks")) = (Me.TxtRemarks1.text)
+        .TextMatrix(LngRow, .ColIndex("Remarks")) = (Me.TxtRemarks1.Text)
      
         .AutoSize 0, .Cols - 1, False
     End With
 
     Me.DCAccountDist.BoundText = ""
-    Me.TxtPercentage.text = ""
-    Me.TxtRemarks1.text = ""
+    Me.TxtPercentage.Text = ""
+    Me.TxtRemarks1.Text = ""
   
     ReLineGrid
  
@@ -3614,17 +3612,17 @@ End Sub
 Private Sub Undo()
    ' On Error GoTo ErrTrap
 
-    Select Case TxtModFlg.text
+    Select Case TxtModFlg.Text
 
         Case "N"
             clear_all Me
-            Me.TxtModFlg.text = "R"
+            Me.TxtModFlg.Text = "R"
             XPBtnMove_Click (1)
 
         Case "E"
  
             Retrive
-            Me.TxtModFlg.text = "R"
+            Me.TxtModFlg.Text = "R"
     End Select
 
     Exit Sub
@@ -3637,7 +3635,7 @@ End Sub
 
 Private Sub cmdCreateENtry_Click()
 Dim StrSQL  As String
-StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(Me.TXTNoteID.text)
+StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(Me.TxtNoteID.Text)
         Cn.Execute StrSQL, , adExecuteNoRecords
  createVoucher
  MsgBox " „ «⁄«œ… «‰‘«¡ «·ﬁÌœ"
@@ -3729,7 +3727,7 @@ Me.GridInstallments.saveGrid StrFileName, flexFileCustomText, True
 End Sub
 
 Private Sub Command9_Click()
-       ShowGL_cc Me.TxtNoteSerial.text, , 200, val(Me.TXTNoteID.text)
+       ShowGL_cc Me.TxtNoteSerial.Text, , 200, val(Me.TxtNoteID.Text)
 End Sub
 
 Private Sub DCAccountDist_KeyUp(KeyCode As Integer, _
@@ -3994,7 +3992,7 @@ If 1 = 1 Then ' ÃœÌœ
                  
               
               
-                    If (val(TxtWater)) > 0 Then
+                    If (val(txtWater)) > 0 Then
                             Account_Code_dynamic83 = get_account_code_branch(83, my_branch)
                             If Account_Code_dynamic83 = "NO account" Then
                                                             If SystemOptions.UserInterface = ArabicInterface Then
@@ -4062,28 +4060,28 @@ End Function
 
 
 Function createVoucher()
-Dim NoteID As Long
+Dim noteId As Long
 Dim NoteDate As Date
 Dim NoteSerial As String
 Dim Notevalue As Double
 Dim des As String
 des = "«À»«  «” Õﬁ«ﬁ ⁄‰ «·› —… „‰  " '& Fromdate√H.value & "  Õ Ï  " & TodateH.value & Chr(13)
-des = des & " „‰ " & FromDate.value & "  Õ Ï  " & ToDate.value & CHR(13)
+des = des & " „‰ " & Fromdate.value & "  Õ Ï  " & todate.value & CHR(13)
 des = des & " «·„Ê«›ﬁ „‰ " & Fromdate√H.value & "  Õ Ï  " & todateH.value & CHR(13)
-des = des & " ··›—⁄ " & dcBranch.text & "     " & txtRemarks
+des = des & " ··›—⁄ " & Dcbranch.Text & "     " & tXtRemarks
 
 Dim tablename As String
 Dim Filedname As String
-Dim ContNo As Long
+Dim contNo As Long
 Dim sql As String
 tablename = "tblContractInsAllocations"
 Filedname = "transID"
-ContNo = TxtTransID
+contNo = TxtTransID
 Notevalue = 0
 
 'If SystemOptions.WorkWithFirstInstallOnly = False Then
 'Notevalue = val(TxtTotalContract) + val(TxtCommiValue) + val(TxtInsuranceValue) + val(TxtWater) + val(TxtElectricity) + val(TxtPhone)
-Notevalue = val(TxtTotalContract) + val(TxtCommiValue) + val(TxtWater) + val(TxtElectricity) + val(TxtPhone)
+Notevalue = val(TxtTotalContract) + val(TxtCommiValue) + val(txtWater) + val(TxtElectricity) + val(TxtPhone)
 'Else
 
 'With GridInstallments
@@ -4107,23 +4105,23 @@ Notevalue = val(TxtTotalContract) + val(TxtCommiValue) + val(TxtWater) + val(Txt
  
  
 If Me.TxtModFlg = "N" Then
-CreateNotes NoteID, (XPDtbTrans.value), val(dcBranch.BoundText), 61, Notevalue, NoteSerial, TxtTransID, tablename, Filedname, ContNo, des, RecorddateH.value
+CreateNotes noteId, (XPDtbTrans.value), val(Dcbranch.BoundText), 61, Notevalue, NoteSerial, TxtTransID, tablename, Filedname, contNo, des, recordDateH.value
  
- TXTNoteID.text = NoteID
-TxtNoteSerial.text = NoteSerial
+ TxtNoteID.Text = noteId
+TxtNoteSerial.Text = NoteSerial
 Else
-    Cn.Execute "Delete Notes where NoteId = " & val(TXTNoteID.text)
-    CreateNotes NoteID, (XPDtbTrans.value), val(dcBranch.BoundText), 61, Notevalue, NoteSerial, TxtTransID, tablename, Filedname, ContNo, des, RecorddateH.value
+    Cn.Execute "Delete Notes where NoteId = " & val(TxtNoteID.Text)
+    CreateNotes noteId, (XPDtbTrans.value), val(Dcbranch.BoundText), 61, Notevalue, NoteSerial, TxtTransID, tablename, Filedname, contNo, des, recordDateH.value
 sql = "update notes  set Note_Value=" & Notevalue & ",note_value_by_characters='" & WriteNo(val(Notevalue), 0, True) & "'"
-TXTNoteID = NoteID
+TxtNoteID = noteId
 'sql = sql & ",NoteSerial1='" & Me.TxtTransID & "'"
 sql = sql & ",NoteSerial1='" & Me.TxtTransID & "',remark='" & des & "'"
-  sql = sql & " where NoteID=" & val(TXTNoteID.text)
+  sql = sql & " where NoteID=" & val(TxtNoteID.Text)
    Cn.Execute sql
 End If
 
 
-CREATE_VOUCHER_GE val(TXTNoteID.text), val(dcBranch.BoundText), user_id, XPDtbTrans.value
+CREATE_VOUCHER_GE val(TxtNoteID.Text), val(Dcbranch.BoundText), user_id, XPDtbTrans.value
 rs.Resync adAffectCurrent
  
 
@@ -4448,7 +4446,7 @@ Dim commission As Double
 
  
  
- If val(TxtTotalContract.text) - val(TxtTotalTo.text) > 0 Then
+ If val(TxtTotalContract.Text) - val(TxtTotalTo.Text) > 0 Then
    '    StrTempAccountCode = Account_Code_dynamic80
                       
             
@@ -4466,7 +4464,7 @@ Dim commission As Double
  
 
  
- If val(TxtTotalTo.text) > 0 Then
+ If val(TxtTotalTo.Text) > 0 Then
 '       StrTempAccountCode = Account_Code_dynamic123
  
 '      Notevalue = val(TxtTotalTo.text)
@@ -4480,11 +4478,11 @@ Dim commission As Double
   End If
   
   '”⁄Ì
- If (val(TxtCommiValue.text)) > 0 Then
+ If (val(TxtCommiValue.Text)) > 0 Then
        StrTempAccountCode = Account_Code_dynamic153
        
              ' If SystemOptions.WorkWithFirstInstallOnly = False Then
-             Notevalue = (val(TxtCommiValue.text))
+             Notevalue = (val(TxtCommiValue.Text))
      'Else
      'Notevalue = val(GridInstallments.TextMatrix(1, GridInstallments.ColIndex("Commissions")))
      'End If
@@ -4497,11 +4495,11 @@ Dim commission As Double
   End If
   
   
-   If val(TxtInsuranceValue.text) > 0 Then
+   If val(TxtInsuranceValue.Text) > 0 Then
        StrTempAccountCode = Account_Code_dynamic82
        
      '         If SystemOptions.WorkWithFirstInstallOnly = False Then
-      Notevalue = val(TxtInsuranceValue.text)
+      Notevalue = val(TxtInsuranceValue.Text)
      'Else
      'Notevalue = val(GridInstallments.TextMatrix(1, GridInstallments.ColIndex("Insurance")))
      'End If
@@ -4516,7 +4514,7 @@ Dim commission As Double
   End If
   
   
-     If val(TxtWater.text) > 0 Then
+     If val(txtWater.Text) > 0 Then
        StrTempAccountCode = Account_Code_dynamic154
 '
    
@@ -4534,12 +4532,12 @@ Dim commission As Double
   End If
   
 
-       If val(TxtElectricity.text) > 0 Then
+       If val(TxtElectricity.Text) > 0 Then
        StrTempAccountCode = Account_Code_dynamic155
      '  Notevalue = val(TxtElectricity.text)
    
      '           If SystemOptions.WorkWithFirstInstallOnly = False Then
-    Notevalue = val(TxtElectricity.text)
+    Notevalue = val(TxtElectricity.Text)
      'Else
      'Notevalue = val(GridInstallments.TextMatrix(1, GridInstallments.ColIndex("Electric")))
      'End If
@@ -4551,12 +4549,12 @@ Dim commission As Double
   End If
   
   
-       If (val(TxtPhone.text)) > 0 Then
+       If (val(TxtPhone.Text)) > 0 Then
        StrTempAccountCode = Account_Code_dynamic156
 '       Notevalue = (val(TxtPhone.text) + val(TxtEnternet.text))
    
      '           If SystemOptions.WorkWithFirstInstallOnly = False Then
-    Notevalue = val(TxtPhone.text)
+    Notevalue = val(TxtPhone.Text)
      'Else
      'Notevalue = val(GridInstallments.TextMatrix(1, GridInstallments.ColIndex("TelandNet")))
      'End If
@@ -4612,7 +4610,7 @@ Private Sub Form_Load()
     Set BKGrndPic = New ClsBackGroundPic
 
  
-Dcombos.GetBranches dcBranch
+Dcombos.GetBranches Dcbranch
 
     With Me.Grid
         .rows = 1
@@ -4631,7 +4629,7 @@ Dcombos.GetBranches dcBranch
 StrSQL = "select * From tblContractInsAllocations  "
     rs.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
     XPBtnMove_Click 2
-    Me.TxtModFlg.text = "R"
+    Me.TxtModFlg.Text = "R"
 
     If OPEN_NEW_SCREEN = True Then
         Cmd_Click (0)
@@ -4784,7 +4782,7 @@ Public Sub FillNewGrid()
  
     Rs3.Close
 End Sub
-Function getnextDate(Optional newinstallNo As Double, Optional ByRef installdate, Optional ByRef installdateh, Optional ContNo As Double)
+Function getnextDate(Optional newinstallNo As Double, Optional ByRef installdate, Optional ByRef installdateh, Optional contNo As Double)
     Dim MySQL As String
     Dim RsData As New ADODB.Recordset
     Dim xApp As New CRAXDRT.Application
@@ -4804,7 +4802,7 @@ Function getnextDate(Optional newinstallNo As Double, Optional ByRef installdate
     MySQL = MySQL & "                   dbo.TblAqarDetai ON dbo.TblContract.UnitNo = dbo.TblAqarDetai.Id LEFT OUTER JOIN"
     MySQL = MySQL & "                   dbo.TblAkarUnit ON dbo.TblContract.UnitType = dbo.TblAkarUnit.id LEFT OUTER JOIN"
     MySQL = MySQL & "                   dbo.TblAqar ON dbo.TblContract.Iqar = dbo.TblAqar.Aqarid"
-    MySQL = MySQL & "        Where (dbo.TblContract.ContNo = " & ContNo & ") And (dbo.TblContractInstallments.InstallNo =" & newinstallNo & ")"
+    MySQL = MySQL & "        Where (dbo.TblContract.ContNo = " & contNo & ") And (dbo.TblContractInstallments.InstallNo =" & newinstallNo & ")"
    Set RsData = New ADODB.Recordset
     RsData.Open MySQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
 
@@ -4882,16 +4880,16 @@ My_SQL = My_SQL & " and     (dbo.TblContract.EndContract = 0 or dbo.TblContract.
 'SALIM HERE «»œ „‰ «· ⁄œÌ·
 
 End If
-My_SQL = My_SQL & "  and     dbo.TblContract.NoteSerial1 Not In (Select  VV.ContractNo from TblFiterWaiver VV where FilterDate <=" & SQLDate(ToDate, True) & ")"
+My_SQL = My_SQL & "  and     dbo.TblContract.NoteSerial1 Not In (Select  VV.ContractNo from TblFiterWaiver VV where FilterDate <=" & SQLDate(todate, True) & ")"
 
    
-        My_SQL = My_SQL + " and (Installdate >=" & SQLDate(Me.FromDate, True) & ""
+        My_SQL = My_SQL + " and (Installdate >=" & SQLDate(Me.Fromdate, True) & ""
      
 
  
-        My_SQL = My_SQL + " and Installdate <=" & SQLDate(ToDate, True) & " )"
-  If Me.dcBranch.BoundText <> "" Then
-    My_SQL = My_SQL + "   AND (dbo.TblContract.Branch_NO = " & val(Me.dcBranch.BoundText) & ")"
+        My_SQL = My_SQL + " and Installdate <=" & SQLDate(todate, True) & " )"
+  If Me.Dcbranch.BoundText <> "" Then
+    My_SQL = My_SQL + "   AND (dbo.TblContract.Branch_NO = " & val(Me.Dcbranch.BoundText) & ")"
 End If
 
 My_SQL = My_SQL + "   order by Installdate "
@@ -5050,16 +5048,16 @@ My_SQL = My_SQL & " and     (dbo.TblContract.EndContract = 0 or dbo.TblContract.
 'SALIM HERE «»œ „‰ «· ⁄œÌ·
 
 End If
-My_SQL = My_SQL & "  and     dbo.TblContract.NoteSerial1 Not In (Select  VV.ContractNo from TblFiterWaiver VV where FilterDate <=" & SQLDate(ToDate, True) & ")"
+My_SQL = My_SQL & "  and     dbo.TblContract.NoteSerial1 Not In (Select  VV.ContractNo from TblFiterWaiver VV where FilterDate <=" & SQLDate(todate, True) & ")"
 
    
-        My_SQL = My_SQL + " and (Installdate >=" & SQLDate(Me.FromDate, True) & ""
+        My_SQL = My_SQL + " and (Installdate >=" & SQLDate(Me.Fromdate, True) & ""
      
 
  
-        My_SQL = My_SQL + " and Installdate <=" & SQLDate(ToDate, True) & " )"
-  If Me.dcBranch.BoundText <> "" Then
-    My_SQL = My_SQL + "   AND (dbo.TblContract.Branch_NO = " & val(Me.dcBranch.BoundText) & ")"
+        My_SQL = My_SQL + " and Installdate <=" & SQLDate(todate, True) & " )"
+  If Me.Dcbranch.BoundText <> "" Then
+    My_SQL = My_SQL + "   AND (dbo.TblContract.Branch_NO = " & val(Me.Dcbranch.BoundText) & ")"
 End If
 
 My_SQL = My_SQL + "   order by Installdate "
@@ -5163,9 +5161,9 @@ Private Sub Form_QueryUnload(Cancel As Integer, _
     Dim StrMSG As String
     On Error GoTo ErrTrap
 
-    If Me.TxtModFlg.text <> "R" Then
+    If Me.TxtModFlg.Text <> "R" Then
 
-        Select Case Me.TxtModFlg.text
+        Select Case Me.TxtModFlg.Text
 
             Case "N"
     
@@ -5230,17 +5228,17 @@ ErrTrap:
 End Sub
 
 Private Sub FromDate_Change()
-If Me.TxtModFlg.text <> "R" Then
+If Me.TxtModFlg.Text <> "R" Then
      
-         Me.Fromdate√H.value = ToHijriDate(FromDate.value)
+         Me.Fromdate√H.value = ToHijriDate(Fromdate.value)
        
 End If
 End Sub
 
 Private Sub Fromdate√H_LostFocus()
-     If Me.TxtModFlg.text <> "R" Then
+     If Me.TxtModFlg.Text <> "R" Then
              
-            FromDate.value = ToGregorianDate(Fromdate√H.value)
+            Fromdate.value = ToGregorianDate(Fromdate√H.value)
                
         End If
 
@@ -5289,13 +5287,13 @@ Private Sub ReLineGrid()
  
  
     IntCounter = 0
-  Me.TxtTotalContract.text = 0
-  TxtTotalTo.text = 0
-  Me.TxtCommiValue.text = 0
-    Me.TxtInsuranceValue.text = 0
-      Me.TxtWater.text = 0
-      Me.TxtElectricity.text = 0
-        Me.TxtPhone.text = 0
+  Me.TxtTotalContract.Text = 0
+  TxtTotalTo.Text = 0
+  Me.TxtCommiValue.Text = 0
+    Me.TxtInsuranceValue.Text = 0
+      Me.txtWater.Text = 0
+      Me.TxtElectricity.Text = 0
+        Me.TxtPhone.Text = 0
      
     With Me.GridInstallments
 
@@ -5309,17 +5307,17 @@ Private Sub ReLineGrid()
                 
                      If .cell(flexcpChecked, i, .ColIndex("Select")) = flexChecked Then
                      If val(.TextMatrix(i, .ColIndex("commisiontype"))) = 1 Then
-  Me.TxtTotalTo.text = val(Me.TxtTotalTo.text) + .TextMatrix(i, .ColIndex("RentValue"))
+  Me.TxtTotalTo.Text = val(Me.TxtTotalTo.Text) + .TextMatrix(i, .ColIndex("RentValue"))
   Else
-  Me.TxtTotalContract.text = val(Me.TxtTotalContract.text) + .TextMatrix(i, .ColIndex("RentValue"))
+  Me.TxtTotalContract.Text = val(Me.TxtTotalContract.Text) + .TextMatrix(i, .ColIndex("RentValue"))
   End If
   
    
-  Me.TxtCommiValue.text = val(Me.TxtCommiValue.text) + .TextMatrix(i, .ColIndex("Commissions"))
-  Me.TxtInsuranceValue.text = val(Me.TxtInsuranceValue.text) + .TextMatrix(i, .ColIndex("Insurance"))
-  Me.TxtWater.text = val(Me.TxtWater.text) + .TextMatrix(i, .ColIndex("Water"))
-  Me.TxtElectricity.text = val(Me.TxtElectricity.text) + .TextMatrix(i, .ColIndex("Electric"))
-  Me.TxtPhone.text = val(Me.TxtPhone.text) + .TextMatrix(i, .ColIndex("TelandNet"))
+  Me.TxtCommiValue.Text = val(Me.TxtCommiValue.Text) + .TextMatrix(i, .ColIndex("Commissions"))
+  Me.TxtInsuranceValue.Text = val(Me.TxtInsuranceValue.Text) + .TextMatrix(i, .ColIndex("Insurance"))
+  Me.txtWater.Text = val(Me.txtWater.Text) + .TextMatrix(i, .ColIndex("Water"))
+  Me.TxtElectricity.Text = val(Me.TxtElectricity.Text) + .TextMatrix(i, .ColIndex("Electric"))
+  Me.TxtPhone.Text = val(Me.TxtPhone.Text) + .TextMatrix(i, .ColIndex("TelandNet"))
   
   End If
   
@@ -5416,20 +5414,20 @@ Public Sub Retrive(Optional Lngid As Long = 0)
 
     End If
  
-    Me.TxtTransID.text = IIf(IsNull(rs("transID").value), "", rs("transID").value)
+    Me.TxtTransID.Text = IIf(IsNull(rs("transID").value), "", rs("transID").value)
  
     XPDtbTrans.value = IIf(IsNull(rs("RecordDate").value), Date, rs("RecordDate").value)
-  RecorddateH.value = IIf(IsNull(rs("recordDateH").value), ToHijriDate(Date), rs("recordDateH").value)
-  dcBranch.BoundText = IIf(IsNull(rs("BranchId").value), "", rs("BranchId").value)
-    FromDate.value = IIf(IsNull(rs("Fromdate").value), Date, rs("Fromdate").value)
+  recordDateH.value = IIf(IsNull(rs("recordDateH").value), ToHijriDate(Date), rs("recordDateH").value)
+  Dcbranch.BoundText = IIf(IsNull(rs("BranchId").value), "", rs("BranchId").value)
+    Fromdate.value = IIf(IsNull(rs("Fromdate").value), Date, rs("Fromdate").value)
  Me.Fromdate√H.value = IIf(IsNull(rs("FromDateh").value), ToHijriDate(Date), rs("FromDateh").value)
     
-        ToDate.value = IIf(IsNull(rs("todate").value), Date, rs("todate").value)
+        todate.value = IIf(IsNull(rs("todate").value), Date, rs("todate").value)
   todateH.value = IIf(IsNull(rs("todateH").value), ToHijriDate(Date), rs("todateH").value)
     
-    Me.TXTNoteID.text = IIf(IsNull(rs("NoteID").value), "", rs("NoteID").value)
-   Me.TxtNoteSerial.text = IIf(IsNull(rs("NoteSerial").value), "", rs("NoteSerial").value)
-    txtRemarks.text = IIf(IsNull(rs("Remarks").value), 0, rs("Remarks").value)
+    Me.TxtNoteID.Text = IIf(IsNull(rs("NoteID").value), "", rs("NoteID").value)
+   Me.TxtNoteSerial.Text = IIf(IsNull(rs("NoteSerial").value), "", rs("NoteSerial").value)
+    tXtRemarks.Text = IIf(IsNull(rs("Remarks").value), 0, rs("Remarks").value)
  
  
  
@@ -5457,7 +5455,7 @@ StrSQL = StrSQL & "                                    dbo.TblAqar ON dbo.tblCon
 StrSQL = StrSQL & "                                    dbo.TblContract ON dbo.TblContractInstallments.ContNo = dbo.TblContract.ContNo INNER JOIN"
 StrSQL = StrSQL & "                                    dbo.TblAqarDetai ON dbo.TblContract.UnitNo = dbo.TblAqarDetai.Id INNER JOIN"
 StrSQL = StrSQL & "                                    dbo.TblAkarUnit ON dbo.TblContract.UnitType = dbo.TblAkarUnit.id"
- StrSQL = StrSQL & "   Where (dbo.tblContractInsAllocationsDetails.TransID = " & val(Me.TxtTransID.text) & ")"
+ StrSQL = StrSQL & "   Where (dbo.tblContractInsAllocationsDetails.TransID = " & val(Me.TxtTransID.Text) & ")"
 
 'StrSQL = StrSQL & "  WHERE     (dbo.tblContractInsAllocations.transID = " & val(Me.TxtTransID.text) & ") "
     'StrSQL = StrSQL & "  where transID=" & val(Me.TxtTransID.text)
@@ -5581,9 +5579,9 @@ On Error Resume Next
 Dim newinstallNo  As Double
 Dim nextinstalldate As Date
 Dim nextinstalldateH As String
-Dim ContNo As Long
-Dim CusID As Long
-Dim CusName As String
+Dim contNo As Long
+Dim cusId As Long
+Dim cusName As String
 Dim Due_Date As String
 Dim mValue As Double
 newinstallNo = 0
@@ -5594,16 +5592,16 @@ Dim mCusName As String
 Dim rsDummy As New ADODB.Recordset
 With GridInstallments
     newinstallNo = val(.TextMatrix(Row + 1, .ColIndex("InstallNo")))
-    CusID = val(.TextMatrix(Row, .ColIndex("CusId")))
+    cusId = val(.TextMatrix(Row, .ColIndex("CusId")))
     mValue = val(.TextMatrix(Row, .ColIndex("Value")))
     mCusName = Trim(.TextMatrix(Row, .ColIndex("CusName")))
     Due_Date = Trim(.TextMatrix(Row, .ColIndex("Due_Date")))
     
-    ContNo = val(.TextMatrix(Row + 1, .ColIndex("ContNo")))
+    contNo = val(.TextMatrix(Row + 1, .ColIndex("ContNo")))
 Select Case .ColKey(Col)
 
 Case "SMS"
-    s = "Select TblCustemers.Cus_mobile from TblCustemers  where cusid =  " & CusID
+    s = "Select TblCustemers.Cus_mobile from TblCustemers  where cusid =  " & cusId
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
     If Not rsDummy.EOF Then
         TxtPhone = CheckPhoneNumber(Trim(rsDummy!Cus_mobile & ""), Row)
@@ -5613,9 +5611,9 @@ Case "SMS"
         MsgBox " „ «·«—”«· »‰Ã«Õ"
     End If
 Case "Print"
-ContNo = val(.TextMatrix(Row, .ColIndex("ContNo")))
+contNo = val(.TextMatrix(Row, .ColIndex("ContNo")))
 getnextDate newinstallNo, nextinstalldate, nextinstalldateH
-PeintInstalMent val(.TextMatrix(Row, .ColIndex("InstallNo"))), nextinstalldate, nextinstalldateH, ContNo
+PeintInstalMent val(.TextMatrix(Row, .ColIndex("InstallNo"))), nextinstalldate, nextinstalldateH, contNo
 
 Case "PrintJE"
 ShowGL_cc .TextMatrix(Row, .ColIndex("NoteSerial")), , 200
@@ -5649,43 +5647,43 @@ Private Sub PercentagType_Click(Index As Integer)
         
         Case 0
             TxtPercentage.locked = True
-            TxtPercentage.text = ""
+            TxtPercentage.Text = ""
 
         Case 1
             TxtPercentage.locked = False
-            TxtPercentage.text = ""
+            TxtPercentage.Text = ""
 
     End Select
 
 End Sub
 
 Private Sub RecordDateH_LostFocus()
-     If Me.TxtModFlg.text <> "R" Then
+     If Me.TxtModFlg.Text <> "R" Then
              
-            XPDtbTrans.value = ToGregorianDate(RecorddateH.value)
+            XPDtbTrans.value = ToGregorianDate(recordDateH.value)
                
         End If
 End Sub
 
 Private Sub ToDate_Change()
-If Me.TxtModFlg.text <> "R" Then
+If Me.TxtModFlg.Text <> "R" Then
      
-         todateH.value = ToHijriDate(ToDate.value)
+         todateH.value = ToHijriDate(todate.value)
        
 End If
 End Sub
 
 Private Sub ToDateH_LostFocus()
-     If Me.TxtModFlg.text <> "R" Then
+     If Me.TxtModFlg.Text <> "R" Then
              
-            ToDate.value = ToGregorianDate(todateH.value)
+            todate.value = ToGregorianDate(todateH.value)
                
         End If
 End Sub
 
 Private Sub TxtModFlg_Change()
 
-    If Me.TxtModFlg.text = "N" Then
+    If Me.TxtModFlg.Text = "N" Then
         CmdRemove.Enabled = True
         Ele(1).Enabled = True
         Cmd(0).Enabled = False
@@ -5695,7 +5693,7 @@ Private Sub TxtModFlg_Change()
 
         Cmd(2).Enabled = True
         Cmd(3).Enabled = True
-    ElseIf Me.TxtModFlg.text = "E" Then
+    ElseIf Me.TxtModFlg.Text = "E" Then
         CmdRemove.Enabled = True
         Ele(1).Enabled = True
         Cmd(2).Enabled = True
@@ -5725,9 +5723,9 @@ End Sub
 
 Private Sub XPBtnMove_Click(Index As Integer)
 
-    If Me.TxtModFlg.text = "N" Then
+    If Me.TxtModFlg.Text = "N" Then
         clear_all Me
-        Me.TxtModFlg.text = "R"
+        Me.TxtModFlg.Text = "R"
         XPBtnMove_Click (1)
     End If
 
@@ -5772,15 +5770,15 @@ End Sub
 
  
 Private Sub XPDtbTrans_Change()
-If Me.TxtModFlg.text <> "R" Then
+If Me.TxtModFlg.Text <> "R" Then
      
-         RecorddateH.value = ToHijriDate(XPDtbTrans.value)
+         recordDateH.value = ToHijriDate(XPDtbTrans.value)
        
 End If
 End Sub
 
 
-Function PeintInstalMent(Optional InstallNo As Double, Optional nextinstalldate As Date, Optional nextinstalldateH As String, Optional ByVal ContNo As Long = 0, Optional ByVal IsAll As Boolean = False)
+Function PeintInstalMent(Optional InstallNo As Double, Optional nextinstalldate As Date, Optional nextinstalldateH As String, Optional ByVal contNo As Long = 0, Optional ByVal IsAll As Boolean = False)
     Dim MySQL As String
     Dim RsData As New ADODB.Recordset
     Dim xApp As New CRAXDRT.Application
@@ -5975,7 +5973,7 @@ Dim RentValue As Double
     MySQL = MySQL & "                   dbo.TblAqarDetai ON dbo.TblContract.UnitNo = dbo.TblAqarDetai.Id LEFT OUTER JOIN"
     MySQL = MySQL & "                   dbo.TblAkarUnit ON dbo.TblContract.UnitType = dbo.TblAkarUnit.id LEFT OUTER JOIN"
     MySQL = MySQL & "                   dbo.TblAqar ON dbo.TblContract.Iqar = dbo.TblAqar.Aqarid"
-    MySQL = MySQL & "        Where (dbo.TblContract.ContNo = " & val(ContNo) & ") And (dbo.TblContractInstallments.InstallNo =" & InstallNo & ")"
+    MySQL = MySQL & "        Where (dbo.TblContract.ContNo = " & val(contNo) & ") And (dbo.TblContractInstallments.InstallNo =" & InstallNo & ")"
     
     
     RsData.Open MySQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
@@ -6107,7 +6105,7 @@ End Function
 Private Sub SaveAlloca()
 Dim RsDetails1 As ADODB.Recordset
 Set RsDetails1 = New ADODB.Recordset
- Cn.Execute "delete tblContractInsAllocationsDetails1 where transID=" & val(Me.TxtTransID.text)
+ Cn.Execute "delete tblContractInsAllocationsDetails1 where transID=" & val(Me.TxtTransID.Text)
 StrSQL = "SELECT * FROM dbo.tblContractInsAllocationsDetails1 WHERE (1 = -1)"
 RsDetails1.Open StrSQL, Cn, adOpenKeyset, adLockOptimistic, adCmdText
 
@@ -6139,7 +6137,7 @@ Dim Countsofall As Long
 Dim i As Long
 Dim s As String
 Dim mTransID As Long
-s = "Select transID from tblContractInsAllocations where  Month(fromdate) =" & Month(FromDate.value) & " And year(installdate) = " & year(FromDate.value)
+s = "Select transID from tblContractInsAllocations where  Month(fromdate) =" & Month(Fromdate.value) & " And year(installdate) = " & year(Fromdate.value)
 Dim rsDummy As New ADODB.Recordset
 rsDummy.Open s, Cn, adOpenStatic, adLockReadOnly
 If Not rsDummy.EOF Then
@@ -6250,3 +6248,752 @@ RsDetails1.Close
 
 '************************
 End Sub
+
+Private Sub BtnUpdate_Click()
+    On Error GoTo ErrTrap
+
+    Dim movementIds As Collection
+    Dim i As Long
+    Dim movementCount As Long
+    Dim loadedCount As Long
+    Dim patchedMovements As Long
+    Dim patchedLinesTotal As Long
+    Dim skippedMovements As Long
+    Dim failedLoads As Long
+    Dim patchResult As Long
+    Dim reportText As String
+
+    Set movementIds = GetMovementIDsInRange(reportText)
+    If movementIds Is Nothing Then Exit Sub
+
+    If movementIds.count = 0 Then
+        MsgBox "·«  ÊÃœ Õ—ﬂ«  —∆Ì”Ì… œ«Œ· «·› —… «·„Õœœ….", vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+        Exit Sub
+    End If
+
+    movementCount = movementIds.count
+
+    For i = 1 To movementIds.count
+        If LoadMovementByID(CLng(movementIds(i)), reportText) Then
+            loadedCount = loadedCount + 1
+            DoEvents
+
+            patchResult = PatchCurrentLoadedMovementSafely(reportText)
+
+            If patchResult > 0 Then
+                patchedMovements = patchedMovements + 1
+                patchedLinesTotal = patchedLinesTotal + patchResult
+            Else
+                skippedMovements = skippedMovements + 1
+            End If
+        Else
+            failedLoads = failedLoads + 1
+        End If
+
+        DoEvents
+    Next i
+
+    MsgBox "⁄œœ «·Õ—ﬂ«  œ«Œ· «·› —…: " & movementCount & vbCrLf & _
+           "⁄œœ «·Õ—ﬂ«  «· Ì  „  Õ„Ì·Â«: " & loadedCount & vbCrLf & _
+           "⁄œœ «·Õ—ﬂ«  «· Ì  „  ⁄œÌ·Â«: " & patchedMovements & vbCrLf & _
+           "⁄œœ ”ÿÊ— «·ﬁÌœ «·„⁄œ·…: " & patchedLinesTotal & vbCrLf & _
+           "⁄œœ «·Õ—ﬂ«  «·„ Œÿ«…: " & skippedMovements & vbCrLf & _
+           "⁄œœ «·Õ—ﬂ«  «· Ì ›‘·  Õ„Ì·Â«: " & failedLoads, _
+           vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+
+    If Trim$(reportText) <> "" Then
+        Debug.Print "===== Batch Safe Patch Report ====="
+        Debug.Print reportText
+    End If
+
+    Exit Sub
+
+ErrTrap:
+    MsgBox "ÕœÀ Œÿ√ √À‰«¡  ‰›Ì– «· ÕœÌÀ «·œ›⁄Ì." & vbCrLf & Err.Description, _
+           vbCritical + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+End Sub
+
+Private Function GetMovementIDsInRange(ByRef reportText As String) As Collection
+    On Error GoTo ErrTrap
+
+    Dim rsRange As ADODB.Recordset
+    Dim sql As String
+    Dim fromDateValue As Date
+    Dim toDateValue As Date
+    Dim result As Collection
+
+    fromDateValue = CDate(txtFromDate.value)
+    toDateValue = CDate(txtToDate.value)
+
+    If DateValue(fromDateValue) > DateValue(toDateValue) Then
+        MsgBox "·« Ì„ﬂ‰ √‰ ÌﬂÊ‰  «—ÌŒ „‰ √ﬂ»— „‰  «—ÌŒ ≈·Ï.", vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+        Exit Function
+    End If
+
+    sql = "SELECT transID " & _
+          "FROM dbo.tblContractInsAllocations " & _
+          "WHERE RecordDate >= " & SQLDate(fromDateValue, True) & " " & _
+          "AND RecordDate <= " & SQLDate(toDateValue, True) & " " & _
+          "ORDER BY RecordDate, transID"
+
+    Set rsRange = New ADODB.Recordset
+    rsRange.Open sql, Cn, adOpenStatic, adLockReadOnly, adCmdText
+
+    Set result = New Collection
+
+    Do While Not rsRange.EOF
+        result.Add CLng(val("" & rsRange.Fields("transID").value))
+        rsRange.MoveNext
+    Loop
+
+    rsRange.Close
+    Set rsRange = Nothing
+
+    Set GetMovementIDsInRange = result
+    Exit Function
+
+ErrTrap:
+    MsgBox "ÕœÀ Œÿ√ √À‰«¡ Ã·» «·Õ—ﬂ«  œ«Œ· «·› —…." & vbCrLf & Err.Description, _
+           vbCritical + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
+End Function
+
+Private Function LoadMovementByID(ByVal movementId As Long, ByRef reportText As String) As Boolean
+    On Error GoTo ErrTrap
+
+    If rs Is Nothing Then
+        reportText = reportText & "Movement " & movementId & ": rs €Ì— „ÂÌ√." & vbCrLf
+        Exit Function
+    End If
+
+    If rs.RecordCount <= 0 Then
+        reportText = reportText & "Movement " & movementId & ": ·«  ÊÃœ ”Ã·«  ›Ì „’œ— »Ì«‰«  «·‘«‘…." & vbCrLf
+        Exit Function
+    End If
+
+    rs.MoveFirst
+    rs.Find "transID=" & movementId, , adSearchForward, 1
+
+    If rs.EOF Then
+        reportText = reportText & "Movement " & movementId & ": ·„ Ì „ «·⁄ÀÊ— ⁄·Ï «·Õ—ﬂ… ›Ì rs." & vbCrLf
+        Exit Function
+    End If
+
+    Retrive
+    DoEvents
+
+    If val(Me.TxtTransID.Text) <> movementId Then
+        reportText = reportText & "Movement " & movementId & ": «·‘«‘… ·„  Õ„· ‰›” —ﬁ„ «·Õ—ﬂ…." & vbCrLf
+        Exit Function
+    End If
+
+    If Trim$(Me.TxtNoteID.Text & "") = "" Then
+        reportText = reportText & "Movement " & movementId & ":  „  Õ„Ì· «·Õ—ﬂ… ·ﬂ‰ TXTNoteID ›«—€." & vbCrLf
+        Exit Function
+    End If
+
+    If Me.GridInstallments.rows <= Me.GridInstallments.FixedRows Then
+        reportText = reportText & "Movement " & movementId & ":  „  Õ„Ì· «·Õ—ﬂ… ·ﬂ‰ GridInstallments ›«—€." & vbCrLf
+        Exit Function
+    End If
+
+    LoadMovementByID = True
+    Exit Function
+
+ErrTrap:
+    reportText = reportText & "Movement " & movementId & ": Œÿ√ √À‰«¡  Õ„Ì· «·”Ã·. " & Err.Description & vbCrLf
+End Function
+
+Private Function PatchCurrentLoadedMovementSafely(ByRef reportText As String) As Long
+    On Error GoTo ErrTrap
+
+    Dim BeginTrans As Boolean
+    Dim rsV As ADODB.Recordset
+    Dim sql As String
+    Dim noteId As Long
+    Dim matchedRow As Long
+    Dim aqarId As Long
+    Dim unitTypeId As Long
+    Dim unitId As Long
+    Dim reasonText As String
+    Dim descText As String
+    Dim patchedCount As Long
+    Dim matchStage As Integer
+    Dim voucherValue As Double
+
+    noteId = val(Me.TxtNoteID.Text)
+
+    If noteId = 0 Then
+        reportText = reportText & "Movement " & Me.TxtTransID.Text & ": ·« ÌÊÃœ —ﬁ„ ﬁÌœ „— »ÿ »«·Õ—ﬂ… «·„Õ„·…." & vbCrLf
+        Exit Function
+    End If
+
+    If Me.GridInstallments.rows <= Me.GridInstallments.FixedRows Then
+        reportText = reportText & "Movement " & Me.TxtTransID.Text & ": ·«  ÊÃœ Õ—ﬂ«  ›—⁄Ì… „⁄—Ê÷… ⁄·Ï «·‘«‘…." & vbCrLf
+        Exit Function
+    End If
+
+    sql = "SELECT Double_Entry_Vouchers_ID, DEV_ID_Line_No, Account_Code, Value, " & _
+          "Double_Entry_Vouchers_Description, Aqarid, unittype, unitno, uintid " & _
+          "FROM dbo.DOUBLE_ENTREY_VOUCHERS " & _
+          "WHERE Notes_ID = " & noteId & " " & _
+          "AND (ISNULL(Aqarid,0)=0 OR ISNULL(unittype,0)=0 OR ISNULL(unitno,0)=0 OR ISNULL(uintid,0)=0) " & _
+          "ORDER BY DEV_ID_Line_No"
+
+    Set rsV = New ADODB.Recordset
+    rsV.Open sql, Cn, adOpenKeyset, adLockOptimistic, adCmdText
+
+    If rsV.EOF Then
+        rsV.Close
+        Set rsV = Nothing
+        Exit Function
+    End If
+
+    Cn.BeginTrans
+    BeginTrans = True
+
+    Do While Not rsV.EOF
+        matchedRow = 0
+        aqarId = 0
+        unitTypeId = 0
+        unitId = 0
+        reasonText = ""
+
+        descText = "" & rsV.Fields("Double_Entry_Vouchers_Description").value
+        voucherValue = GetVoucherLineValue(rsV)
+
+        matchStage = MatchVoucherLineToSingleMovement(descText, voucherValue, matchedRow, aqarId, reasonText, rsV)
+
+        If matchStage = 1 Or matchStage = 2 Then
+            If TryGetMovementIds(matchedRow, aqarId, unitTypeId, unitId, reasonText) Then
+                If ApplySafeVoucherPatch(rsV, aqarId, unitTypeId, unitId) Then
+                    patchedCount = patchedCount + 1
+                End If
+            Else
+                reportText = reportText & "Movement " & Me.TxtTransID.Text & " / Line " & val("" & rsV.Fields("DEV_ID_Line_No").value) & ": " & reasonText & vbCrLf
+            End If
+        ElseIf matchStage = 3 Or matchStage = 4 Then
+            If aqarId > 0 Then
+                If ApplyAqarOnlyPatch(rsV, aqarId) Then
+                    patchedCount = patchedCount + 1
+                End If
+            Else
+                reportText = reportText & "Movement " & Me.TxtTransID.Text & " / Line " & val("" & rsV.Fields("DEV_ID_Line_No").value) & ": " & reasonText & vbCrLf
+            End If
+        Else
+            reportText = reportText & "Movement " & Me.TxtTransID.Text & " / Line " & val("" & rsV.Fields("DEV_ID_Line_No").value) & ": " & reasonText & vbCrLf
+        End If
+
+        rsV.MoveNext
+    Loop
+
+    Cn.CommitTrans
+    BeginTrans = False
+
+    rsV.Close
+    Set rsV = Nothing
+
+    PatchCurrentLoadedMovementSafely = patchedCount
+    Exit Function
+
+ErrTrap:
+    If BeginTrans Then
+        Cn.RollbackTrans
+    End If
+
+    reportText = reportText & "Movement " & Me.TxtTransID.Text & ": Œÿ√ √À‰«¡ SAFE patch. " & Err.Description & vbCrLf
+End Function
+
+Private Function MatchVoucherLineToSingleMovement(ByVal voucherDesc As String, ByVal voucherValue As Double, ByRef matchedRow As Long, ByRef aqarId As Long, ByRef reasonText As String, ByRef rsCurrentVoucherLine As ADODB.Recordset) As Integer
+    Dim primaryRow As Long
+    Dim primaryCount As Long
+    Dim fallbackRow As Long
+    Dim fallbackCount As Long
+    Dim descNorm As String
+    Dim descSerial As String
+    Dim propertyName As String
+    Dim resolvedAqarId As Long
+    Dim i As Long
+
+    matchedRow = 0
+    aqarId = 0
+    reasonText = ""
+
+    descNorm = NormalizeArabicText(voucherDesc)
+    descSerial = ExtractDigits(descNorm)
+
+    If descSerial <> "" Then
+        With Me.GridInstallments
+            For i = .FixedRows To .rows - 1
+                If val(.TextMatrix(i, .ColIndex("Value"))) <> 0 And .cell(flexcpChecked, i, .ColIndex("Select")) = flexChecked Then
+                    If IsPrimaryMovementMatch(i, descNorm, descSerial) Then
+                        primaryCount = primaryCount + 1
+                        primaryRow = i
+                    End If
+                End If
+            Next i
+        End With
+    End If
+
+    If primaryCount = 1 Then
+        matchedRow = primaryRow
+        MatchVoucherLineToSingleMovement = 1
+        Exit Function
+    End If
+
+    If primaryCount > 1 Then
+        reasonText = " „ «·⁄ÀÊ— ⁄·Ï √ﬂÀ— „‰ Õ—ﬂ… „ÿ«»ﬁ… »«·—»ÿ «·√”«”Ì° ·–·ﬂ  „ «· ŒÿÌ Õ›«Ÿ« ⁄·Ï ”·«„… «·»Ì«‰« ."
+        Exit Function
+    End If
+
+    With Me.GridInstallments
+        For i = .FixedRows To .rows - 1
+            If val(.TextMatrix(i, .ColIndex("Value"))) <> 0 And .cell(flexcpChecked, i, .ColIndex("Select")) = flexChecked Then
+                If IsFallbackTenantValueMatch(i, descNorm, voucherValue) Then
+                    fallbackCount = fallbackCount + 1
+                    fallbackRow = i
+                End If
+            End If
+        Next i
+    End With
+
+    If fallbackCount = 1 Then
+        matchedRow = fallbackRow
+        MatchVoucherLineToSingleMovement = 2
+        Exit Function
+    End If
+
+    propertyName = ExtractAqarNameFromDescription(voucherDesc)
+    If propertyName <> "" Then
+        If ResolveAqarIDByName(propertyName, resolvedAqarId, reasonText) Then
+            aqarId = resolvedAqarId
+            MatchVoucherLineToSingleMovement = 3
+            Exit Function
+        End If
+    End If
+
+    If ResolveAqarIDFromVoucherAccount(rsCurrentVoucherLine, resolvedAqarId, reasonText) Then
+        aqarId = resolvedAqarId
+        MatchVoucherLineToSingleMovement = 4
+        Exit Function
+    End If
+
+    If reasonText = "" Then
+        reasonText = "·« ÌÊÃœ  ÿ«»ﬁ „ÊÀÊﬁ ›Ì √Ì „—Õ·… „‰ „—«Õ· «·—»ÿ."
+    End If
+End Function
+
+Private Function IsPrimaryMovementMatch(ByVal Row As Long, ByVal descNorm As String, ByVal descSerial As String) As Boolean
+    Dim rowSerial As String
+    Dim dueDateG As String
+    Dim dueDateH As String
+    Dim serialHit As Boolean
+    Dim dateHit As Boolean
+
+    With Me.GridInstallments
+        rowSerial = ExtractDigits("" & .TextMatrix(Row, .ColIndex("NoteSerial1")))
+        dueDateG = NormalizeArabicText("" & .TextMatrix(Row, .ColIndex("Due_Date")))
+        dueDateH = NormalizeArabicText("" & .TextMatrix(Row, .ColIndex("Due_DateH")))
+    End With
+
+    serialHit = (rowSerial <> "" And rowSerial = descSerial)
+
+    dateHit = False
+    If dueDateG <> "" Then dateHit = ContainsToken(descNorm, dueDateG)
+    If Not dateHit And dueDateH <> "" Then dateHit = ContainsToken(descNorm, dueDateH)
+
+    IsPrimaryMovementMatch = (serialHit And dateHit)
+End Function
+
+Private Function IsFallbackTenantValueMatch(ByVal Row As Long, ByVal descNorm As String, ByVal voucherValue As Double) As Boolean
+    Dim cusName As String
+    Dim customerHit As Boolean
+    Dim rowValue As Double
+
+    With Me.GridInstallments
+        cusName = NormalizeArabicText("" & .TextMatrix(Row, .ColIndex("CusName")))
+        rowValue = GetGridRowComparableValue(Row, descNorm)
+    End With
+
+    customerHit = (cusName <> "" And ContainsToken(descNorm, cusName))
+    IsFallbackTenantValueMatch = (customerHit And AmountsAreEqual(voucherValue, rowValue))
+End Function
+
+Private Function GetGridRowComparableValue(ByVal Row As Long, ByVal descNorm As String) As Double
+    With Me.GridInstallments
+        If ContainsToken(descNorm, "⁄„Ê·…") Or ContainsToken(descNorm, "⁄„Ê·« ") Then
+            GetGridRowComparableValue = CDbl(val("" & .TextMatrix(Row, .ColIndex("Commissions"))))
+        ElseIf ContainsToken(descNorm, " √„Ì‰") Then
+            GetGridRowComparableValue = CDbl(val("" & .TextMatrix(Row, .ColIndex("Insurance"))))
+        ElseIf ContainsToken(descNorm, "„Ì«Â") Or ContainsToken(descNorm, "„Ì«…") Then
+            GetGridRowComparableValue = CDbl(val("" & .TextMatrix(Row, .ColIndex("Water"))))
+        ElseIf ContainsToken(descNorm, "ﬂÂ—»«¡") Then
+            GetGridRowComparableValue = CDbl(val("" & .TextMatrix(Row, .ColIndex("Electric"))))
+        ElseIf ContainsToken(descNorm, "Œœ„« ") Or ContainsToken(descNorm, "Â« ›") Or ContainsToken(descNorm, "‰ ") Then
+            GetGridRowComparableValue = CDbl(val("" & .TextMatrix(Row, .ColIndex("TelandNet"))))
+        ElseIf ContainsToken(descNorm, "ﬁÌ„… „÷«›…") Or ContainsToken(descNorm, "«·ﬁÌ„Â «·„÷«›…") Or ContainsToken(descNorm, "«·ﬁÌ„… «·„÷«›…") Then
+            GetGridRowComparableValue = CDbl(val("" & .TextMatrix(Row, .ColIndex("VATValue"))))
+        Else
+            GetGridRowComparableValue = CDbl(val("" & .TextMatrix(Row, .ColIndex("RentValue"))))
+        End If
+    End With
+End Function
+
+Private Function AmountsAreEqual(ByVal value1 As Double, ByVal value2 As Double, Optional ByVal tolerance As Double = 0.01) As Boolean
+    AmountsAreEqual = (Abs(value1 - value2) <= tolerance)
+End Function
+
+Private Function GetVoucherLineValue(ByRef rsV As ADODB.Recordset) As Double
+    GetVoucherLineValue = CDbl(val("" & rsV.Fields("Value").value))
+End Function
+
+Private Function ExtractAqarNameFromDescription(ByVal voucherDesc As String) As String
+    Dim txt As String
+    Dim p As Long
+    Dim s As String
+    Dim stopPos As Long
+    Dim marker As Variant
+    Dim markers As Variant
+
+    txt = Replace(voucherDesc, vbCr, " ")
+    txt = Replace(txt, vbLf, " ")
+    txt = Replace(txt, ":", " ")
+    txt = Replace(txt, "°", " ")
+
+    Do While InStr(txt, "  ") > 0
+        txt = Replace(txt, "  ", " ")
+    Loop
+
+    p = InStr(1, txt, "«·⁄ﬁ«—", vbTextCompare)
+    If p = 0 Then Exit Function
+
+    s = Trim$(mId$(txt, p + Len("«·⁄ﬁ«—")))
+
+    markers = Array("«·ÊÕœ…", "«·„” √Ã—", "«·„«·ﬂ", "«·ﬁÌ„Â", "«·ﬁÌ„…", "«ÌÃ«—", "≈ÌÃ«—")
+
+    stopPos = 0
+    For Each marker In markers
+        p = InStr(1, s, CStr(marker), vbTextCompare)
+        If p > 0 Then
+            If stopPos = 0 Or p < stopPos Then stopPos = p
+        End If
+    Next marker
+
+    If stopPos > 0 Then
+        s = left$(s, stopPos - 1)
+    End If
+
+    s = NormalizeArabicText(s)
+    ExtractAqarNameFromDescription = Trim$(s)
+End Function
+
+Private Function ResolveAqarIDByName(ByVal aqarName As String, ByRef aqarId As Long, ByRef reasonText As String) As Boolean
+    Dim rsTmp As ADODB.Recordset
+    Dim sql As String
+    Dim matchCount As Long
+    Dim gridCount As Long
+    Dim gridAqarId As Long
+    Dim i As Long
+    Dim rowAqarName As String
+
+    aqarId = 0
+    reasonText = ""
+
+    If Trim$(aqarName) = "" Then
+        reasonText = " ⁄–— «” Œ—«Ã «”„ «·⁄ﬁ«— „‰ Ê’› «·”ÿ—."
+        Exit Function
+    End If
+
+    With Me.GridInstallments
+        For i = .FixedRows To .rows - 1
+            If val(.TextMatrix(i, .ColIndex("Value"))) <> 0 And .cell(flexcpChecked, i, .ColIndex("Select")) = flexChecked Then
+                rowAqarName = NormalizeArabicText("" & .TextMatrix(i, .ColIndex("aqarname")))
+                If rowAqarName <> "" Then
+                    If rowAqarName = NormalizeArabicText(aqarName) Or ContainsToken(rowAqarName, aqarName) Or ContainsToken(aqarName, rowAqarName) Then
+                        gridCount = gridCount + 1
+                        If gridCount = 1 Then
+                            gridAqarId = val("" & .TextMatrix(i, .ColIndex("Iqar")))
+                        End If
+                    End If
+                End If
+            End If
+        Next i
+    End With
+
+    If gridCount = 1 And gridAqarId > 0 Then
+        aqarId = gridAqarId
+        ResolveAqarIDByName = True
+        Exit Function
+    ElseIf gridCount > 1 Then
+        reasonText = "«”„ «·⁄ﬁ«— „‰ Ê’› «·”ÿ— Ìÿ«»ﬁ √ﬂÀ— „‰ ⁄ﬁ«— œ«Œ· «·Õ—ﬂ… «·Õ«·Ì…."
+        Exit Function
+    End If
+
+    sql = "SELECT Aqarid, aqarname " & _
+          "FROM dbo.TblAqar " & _
+          "WHERE LTRIM(RTRIM(ISNULL(aqarname,''))) = N'" & Replace(Trim$(aqarName), "'", "''") & "'"
+
+    Set rsTmp = New ADODB.Recordset
+    rsTmp.Open sql, Cn, adOpenStatic, adLockReadOnly, adCmdText
+
+    If rsTmp.EOF Then
+        rsTmp.Close
+        sql = "SELECT Aqarid, aqarname " & _
+              "FROM dbo.TblAqar " & _
+              "WHERE ISNULL(aqarname,'') LIKE N'%" & Replace(Trim$(aqarName), "'", "''") & "%'"
+        rsTmp.Open sql, Cn, adOpenStatic, adLockReadOnly, adCmdText
+    End If
+
+    If Not rsTmp.EOF Then
+        rsTmp.MoveFirst
+        Do While Not rsTmp.EOF
+            matchCount = matchCount + 1
+            If matchCount = 1 Then
+                aqarId = CLng(val("" & rsTmp.Fields("Aqarid").value))
+            End If
+            rsTmp.MoveNext
+        Loop
+    End If
+
+    rsTmp.Close
+    Set rsTmp = Nothing
+
+    If matchCount = 1 Then
+        ResolveAqarIDByName = True
+    ElseIf matchCount = 0 Then
+        reasonText = "·„ Ì „ «·⁄ÀÊ— ⁄·Ï ⁄ﬁ«— „ÿ«»ﬁ „‰ Ê’› «·”ÿ—."
+    Else
+        reasonText = "«”„ «·⁄ﬁ«— „‰ Ê’› «·”ÿ— Ìÿ«»ﬁ √ﬂÀ— „‰ ⁄ﬁ«—° ·–·ﬂ  „ «· ŒÿÌ."
+    End If
+End Function
+
+Private Function ResolveAqarIDFromVoucherAccount(ByRef rsCurrentVoucherLine As ADODB.Recordset, ByRef aqarId As Long, ByRef reasonText As String) As Boolean
+    Dim rsCus As ADODB.Recordset
+    Dim rsAqar As ADODB.Recordset
+    Dim sql As String
+    Dim accountCode As String
+    Dim cusId As Long
+    Dim cusCount As Long
+    Dim distinctCount As Long
+
+    aqarId = 0
+    reasonText = ""
+
+    accountCode = Trim$("" & rsCurrentVoucherLine.Fields("Account_Code").value)
+    If accountCode = "" Then
+        reasonText = "Account_Code €Ì— „ÊÃÊœ ›Ì ”ÿ— «·ﬁÌœ."
+        Exit Function
+    End If
+
+    sql = "SELECT DISTINCT CusID " & _
+          "FROM dbo.TblCustemers " & _
+          "WHERE LTRIM(RTRIM(ISNULL(Account_Code,''))) = N'" & Replace(accountCode, "'", "''") & "'"
+
+    Set rsCus = New ADODB.Recordset
+    rsCus.Open sql, Cn, adOpenStatic, adLockReadOnly, adCmdText
+
+    Do While Not rsCus.EOF
+        cusCount = cusCount + 1
+        If cusCount = 1 Then
+            cusId = CLng(val("" & rsCus.Fields("CusID").value))
+        End If
+        rsCus.MoveNext
+    Loop
+
+    rsCus.Close
+    Set rsCus = Nothing
+
+    If cusCount = 0 Then
+        reasonText = "·„ Ì „ «·⁄ÀÊ— ⁄·Ï ⁄„Ì· „ÿ«»ﬁ „‰ Account_Code."
+        Exit Function
+    End If
+
+    If cusCount > 1 Then
+        reasonText = "Account_Code Ìÿ«»ﬁ √ﬂÀ— „‰ ⁄„Ì·° ·–·ﬂ  „ «· ŒÿÌ."
+        Exit Function
+    End If
+
+    If cusId = 0 Then
+        reasonText = " ⁄–—  ÕœÌœ CusID „‰ Account_Code."
+        Exit Function
+    End If
+
+    sql = "SELECT DISTINCT Iqar " & _
+          "FROM dbo.TblContract " & _
+          "WHERE CusID = " & cusId & " " & _
+          "AND ISNULL(Iqar,0) <> 0"
+
+    Set rsAqar = New ADODB.Recordset
+    rsAqar.Open sql, Cn, adOpenStatic, adLockReadOnly, adCmdText
+
+    Do While Not rsAqar.EOF
+        distinctCount = distinctCount + 1
+        If distinctCount = 1 Then
+            aqarId = CLng(val("" & rsAqar.Fields("Iqar").value))
+        End If
+        rsAqar.MoveNext
+    Loop
+
+    rsAqar.Close
+    Set rsAqar = Nothing
+
+    If distinctCount = 1 And aqarId > 0 Then
+        ResolveAqarIDFromVoucherAccount = True
+    ElseIf distinctCount = 0 Then
+        reasonText = "«·⁄„Ì· «·„” Œ—Ã „‰ Account_Code ·Ì” ·Â ⁄ﬁ«— Ê«Õœ ’«·Õ Ì„ﬂ‰ «⁄ „«œÂ."
+    Else
+        reasonText = "«·⁄„Ì· «·„” Œ—Ã „‰ Account_Code „— »ÿ »√ﬂÀ— „‰ ⁄ﬁ«—° ·–·ﬂ  „ «· ŒÿÌ."
+    End If
+End Function
+
+Private Function TryGetMovementIds(ByVal Row As Long, ByRef aqarId As Long, ByRef unitTypeId As Long, ByRef unitId As Long, ByRef reasonText As String) As Boolean
+    Dim contNo As Long
+    Dim gridAqarId As Long
+
+    aqarId = 0
+    unitTypeId = 0
+    unitId = 0
+
+    With Me.GridInstallments
+        contNo = val("" & .TextMatrix(Row, .ColIndex("ContNo")))
+        gridAqarId = val("" & .TextMatrix(Row, .ColIndex("Iqar")))
+    End With
+
+    If contNo = 0 Then
+        reasonText = "«·Õ—ﬂ… «·„ÿ«»ﬁ… ·«  Õ ÊÌ ⁄·Ï —ﬁ„ ⁄ﬁœ."
+        Exit Function
+    End If
+
+    GetContractUnitIds contNo, aqarId, unitTypeId, unitId
+
+    If aqarId = 0 Then aqarId = gridAqarId
+
+    If aqarId = 0 Then
+        reasonText = " ⁄–—  ÕœÌœ «·⁄ﬁ«— „‰ «·Õ—ﬂ… √Ê «·⁄ﬁœ."
+        Exit Function
+    End If
+
+    If unitId = 0 Then
+        reasonText = " ⁄–—  ÕœÌœ —ﬁ„  ⁄—Ì› «·ÊÕœ… „‰ «·⁄ﬁœ."
+        Exit Function
+    End If
+
+    TryGetMovementIds = True
+End Function
+
+Private Sub GetContractUnitIds(ByVal contNo As Long, ByRef aqarId As Long, ByRef unitTypeId As Long, ByRef unitId As Long)
+    Dim rsTmp As ADODB.Recordset
+    Dim sql As String
+
+    aqarId = 0
+    unitTypeId = 0
+    unitId = 0
+
+    sql = "SELECT TOP 1 Iqar, UnitType, UnitNo " & _
+          "FROM dbo.TblContract WHERE ContNo = " & contNo
+
+    Set rsTmp = New ADODB.Recordset
+    rsTmp.Open sql, Cn, adOpenForwardOnly, adLockReadOnly, adCmdText
+
+    If Not rsTmp.EOF Then
+        aqarId = val("" & rsTmp.Fields("Iqar").value)
+        unitTypeId = val("" & rsTmp.Fields("UnitType").value)
+        unitId = val("" & rsTmp.Fields("UnitNo").value)
+    End If
+
+    rsTmp.Close
+    Set rsTmp = Nothing
+End Sub
+
+Private Function ApplySafeVoucherPatch(ByRef rsV As ADODB.Recordset, ByVal aqarId As Long, ByVal unitTypeId As Long, ByVal unitId As Long) As Boolean
+    Dim changed As Boolean
+
+    changed = False
+
+    If val("" & rsV.Fields("Aqarid").value) = 0 And aqarId > 0 Then
+        rsV.Fields("Aqarid").value = aqarId
+        changed = True
+    End If
+
+    If val("" & rsV.Fields("unittype").value) = 0 And unitTypeId > 0 Then
+        rsV.Fields("unittype").value = unitTypeId
+        changed = True
+    End If
+
+    If val("" & rsV.Fields("unitno").value) = 0 And unitId > 0 Then
+        rsV.Fields("unitno").value = unitId
+        changed = True
+    End If
+
+    If val("" & rsV.Fields("uintid").value) = 0 And unitId > 0 Then
+        rsV.Fields("uintid").value = unitId
+        changed = True
+    End If
+
+    If changed Then
+        rsV.update
+        ApplySafeVoucherPatch = True
+    End If
+End Function
+
+Private Function ApplyAqarOnlyPatch(ByRef rsV As ADODB.Recordset, ByVal aqarId As Long) As Boolean
+    Dim changed As Boolean
+
+    changed = False
+
+    If val("" & rsV.Fields("Aqarid").value) = 0 And aqarId > 0 Then
+        rsV.Fields("Aqarid").value = aqarId
+        changed = True
+    End If
+
+    If changed Then
+        rsV.update
+        ApplyAqarOnlyPatch = True
+    End If
+End Function
+
+Private Function NormalizeArabicText(ByVal txt As String) As String
+    txt = UCase$(Trim$(txt))
+    txt = Replace(txt, "⁄ﬁœ —ﬁ„", "")
+    txt = Replace(txt, "⁄ﬁœ", "")
+    txt = Replace(txt, "—ﬁ„", "")
+    txt = Replace(txt, ":", " ")
+    txt = Replace(txt, "°", " ")
+    txt = Replace(txt, vbCr, " ")
+    txt = Replace(txt, vbLf, " ")
+    txt = Replace(txt, vbTab, " ")
+
+    Do While InStr(txt, "  ") > 0
+        txt = Replace(txt, "  ", " ")
+    Loop
+
+    NormalizeArabicText = Trim$(txt)
+End Function
+
+Private Function ExtractDigits(ByVal txt As String) As String
+    Dim i As Long
+    Dim ch As String
+    Dim resultText As String
+
+    txt = NormalizeArabicText(txt)
+
+    For i = 1 To Len(txt)
+        ch = mId$(txt, i, 1)
+        If ch >= "0" And ch <= "9" Then
+            resultText = resultText & ch
+        End If
+    Next i
+
+    ExtractDigits = resultText
+End Function
+
+Private Function ContainsToken(ByVal sourceText As String, ByVal tokenText As String) As Boolean
+    sourceText = NormalizeArabicText(sourceText)
+    tokenText = NormalizeArabicText(tokenText)
+
+    If Trim$(tokenText) = "" Then Exit Function
+    ContainsToken = (InStr(1, sourceText, tokenText, vbTextCompare) > 0)
+End Function
+
+
+
+

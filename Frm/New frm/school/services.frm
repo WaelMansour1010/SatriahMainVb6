@@ -15,6 +15,15 @@ Begin VB.Form services
    ScaleHeight     =   4620
    ScaleWidth      =   7275
    StartUpPosition =   2  'CenterScreen
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CommandButton Command4 
       Caption         =   "ÇÖÇÝÉ äæÚ ÌÏíÏ"
       Height          =   255

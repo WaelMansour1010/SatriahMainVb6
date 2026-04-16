@@ -16,6 +16,15 @@ Begin VB.Form shipment
    MDIChild        =   -1  'True
    ScaleHeight     =   8700
    ScaleWidth      =   10920
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame2 
       Caption         =   "Containers Information"
       BeginProperty Font 

@@ -13,6 +13,15 @@ Begin VB.Form Exams
    RightToLeft     =   -1  'True
    ScaleHeight     =   2205
    ScaleWidth      =   5415
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CommandButton Command40 
       Height          =   492
       Index           =   1

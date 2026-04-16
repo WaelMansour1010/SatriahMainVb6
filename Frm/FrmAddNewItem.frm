@@ -18,6 +18,15 @@ Begin VB.Form FrmAddNewItem
    RightToLeft     =   -1  'True
    ScaleHeight     =   5370
    ScaleWidth      =   4425
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.ComboBox CboItemType 
       Appearance      =   0  'Flat
       Height          =   315

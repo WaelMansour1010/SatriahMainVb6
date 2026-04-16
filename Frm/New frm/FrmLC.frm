@@ -21,6 +21,15 @@ Begin VB.Form FrmLC
    ScaleHeight     =   9660
    ScaleWidth      =   20940
    Visible         =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic EleMain 
       Height          =   9660
       Left            =   0
@@ -108,7 +117,7 @@ Begin VB.Form FrmLC
          FrontTabForeColor=   -2147483630
          Caption         =   "«·»Ì«‰«  «·«”«”Ì…|„’«—Ì› «·› Õ  |«·›Ê« Ì— «·„«·Ì…|revised bond amount|ﬁ—Ê÷ «·«⁄ „«œ« |Refinance|acceptance advice"
          Align           =   0
-         CurrTab         =   0
+         CurrTab         =   1
          FirstTab        =   0
          Style           =   3
          Position        =   1
@@ -136,7 +145,7 @@ Begin VB.Form FrmLC
          Flags(4)        =   2
          Begin C1SizerLibCtl.C1Elastic C1Elastic2 
             Height          =   7785
-            Left            =   21825
+            Left            =   21525
             TabIndex        =   43
             TabStop         =   0   'False
             Top             =   45
@@ -293,7 +302,7 @@ Begin VB.Form FrmLC
          End
          Begin C1SizerLibCtl.C1Elastic C1Elastic1 
             Height          =   7785
-            Left            =   21525
+            Left            =   45
             TabIndex        =   21
             TabStop         =   0   'False
             Top             =   45
@@ -621,7 +630,7 @@ Begin VB.Form FrmLC
                   _ExtentX        =   2249
                   _ExtentY        =   767
                   _Version        =   393216
-                  Format          =   228392961
+                  Format          =   206307329
                   CurrentDate     =   38784
                End
                Begin MSComCtl2.DTPicker txtLGExpiryDate 
@@ -633,7 +642,7 @@ Begin VB.Form FrmLC
                   _ExtentX        =   2249
                   _ExtentY        =   767
                   _Version        =   393216
-                  Format          =   228392961
+                  Format          =   206307329
                   CurrentDate     =   38784
                End
                Begin VB.Label lbl 
@@ -786,7 +795,7 @@ Begin VB.Form FrmLC
                   _ExtentX        =   4736
                   _ExtentY        =   556
                   _Version        =   393216
-                  Format          =   228392961
+                  Format          =   185663489
                   CurrentDate     =   39614
                End
                Begin MSDataListLib.DataCombo DcboBankName 
@@ -896,10 +905,10 @@ Begin VB.Form FrmLC
             End
             Begin VSFlex8UCtl.VSFlexGrid GrdMargin3 
                Height          =   3600
-               Left            =   90
+               Left            =   120
                TabIndex        =   198
                ToolTipText     =   "«÷€ÿ „— Ì‰ ·› Õ «·›« Ê—…"
-               Top             =   1650
+               Top             =   1680
                Width           =   20085
                _cx             =   35428
                _cy             =   6350
@@ -1060,7 +1069,7 @@ Begin VB.Form FrmLC
          Begin C1SizerLibCtl.C1Elastic Ele 
             Height          =   7785
             Index           =   2
-            Left            =   45
+            Left            =   -21435
             TabIndex        =   2
             TabStop         =   0   'False
             Top             =   45
@@ -1282,7 +1291,7 @@ Begin VB.Form FrmLC
                      Enabled         =   0   'False
                      CalendarBackColor=   12648447
                      CustomFormat    =   "yyyy/M/d"
-                     Format          =   175308803
+                     Format          =   185663491
                      CurrentDate     =   38718
                   End
                   Begin VB.Label lbl 
@@ -2520,7 +2529,7 @@ Begin VB.Form FrmLC
                      _ExtentX        =   3387
                      _ExtentY        =   688
                      _Version        =   393216
-                     Format          =   176816129
+                     Format          =   209518593
                      CurrentDate     =   38784
                   End
                   Begin MSComCtl2.DTPicker dbFromDate 
@@ -2532,7 +2541,7 @@ Begin VB.Form FrmLC
                      _ExtentX        =   3387
                      _ExtentY        =   582
                      _Version        =   393216
-                     Format          =   230621185
+                     Format          =   209518593
                      CurrentDate     =   38784
                   End
                   Begin MSComCtl2.DTPicker DpCloseDate 
@@ -2544,7 +2553,7 @@ Begin VB.Form FrmLC
                      _ExtentX        =   3387
                      _ExtentY        =   635
                      _Version        =   393216
-                     Format          =   230621185
+                     Format          =   209518593
                      CurrentDate     =   38784
                   End
                   Begin VB.Label lbl 
@@ -2962,7 +2971,7 @@ Begin VB.Form FrmLC
          End
          Begin C1SizerLibCtl.C1Elastic C1Elastic3 
             Height          =   7785
-            Left            =   22425
+            Left            =   22125
             TabIndex        =   52
             TabStop         =   0   'False
             Top             =   45
@@ -3120,7 +3129,7 @@ Begin VB.Form FrmLC
          Begin C1SizerLibCtl.C1Elastic C1Elastic4 
             Height          =   7785
             Index           =   0
-            Left            =   22125
+            Left            =   21825
             TabIndex        =   53
             TabStop         =   0   'False
             Top             =   45
@@ -3318,7 +3327,7 @@ Begin VB.Form FrmLC
          Begin C1SizerLibCtl.C1Elastic C1Elastic4 
             Height          =   7785
             Index           =   1
-            Left            =   22725
+            Left            =   22425
             TabIndex        =   54
             TabStop         =   0   'False
             Top             =   45
@@ -3515,7 +3524,7 @@ Begin VB.Form FrmLC
          Begin C1SizerLibCtl.C1Elastic C1Elastic4 
             Height          =   7785
             Index           =   2
-            Left            =   23025
+            Left            =   22725
             TabIndex        =   61
             TabStop         =   0   'False
             Top             =   45
@@ -4282,7 +4291,7 @@ Begin VB.Form FrmLC
             _ExtentX        =   2884
             _ExtentY        =   714
             _Version        =   393216
-            Format          =   223477761
+            Format          =   199163905
             CurrentDate     =   38784
          End
          Begin VB.Label LabCurrRec 
@@ -4683,23 +4692,23 @@ Public Sub maaRetrive(Optional LCNO As String = "")
         End If
     End If
  
-    Me.TXTTblLCID.text = IIf(IsNull(maa_rs("TblLCID").value), "", maa_rs("TblLCID").value)
-    Me.TxtLcNo.text = IIf(IsNull(maa_rs("LCNO").value), "", maa_rs("LCNO").value)
-        Me.TxtName.text = IIf(IsNull(maa_rs("Name").value), "", maa_rs("Name").value)
+    Me.TXTTblLCID.Text = IIf(IsNull(maa_rs("TblLCID").value), "", maa_rs("TblLCID").value)
+    Me.TxtLcNo.Text = IIf(IsNull(maa_rs("LCNO").value), "", maa_rs("LCNO").value)
+        Me.TxtName.Text = IIf(IsNull(maa_rs("Name").value), "", maa_rs("Name").value)
         
-        Me.TxtNameE.text = IIf(IsNull(maa_rs("Namee").value), "", maa_rs("Namee").value)
+        Me.TxtNameE.Text = IIf(IsNull(maa_rs("Namee").value), "", maa_rs("Namee").value)
     DboParentAccount.BoundText = Get_Account_Parent_code(IIf(IsNull(maa_rs("Account_Code").value), "", Trim(maa_rs("Account_Code").value)))
     
-    RetriveProformaInvoices TxtLcNo.text
+    RetriveProformaInvoices TxtLcNo.Text
   
     Me.DCLC.BoundText = IIf(IsNull(maa_rs("LCTyperId").value), "", maa_rs("LCTyperId").value)
     Me.Dcbank.BoundText = IIf(IsNull(maa_rs("BankId").value), "", maa_rs("BankId").value)
-    Me.TXTBank2.text = IIf(IsNull(maa_rs("Bank2").value), "", maa_rs("Bank2").value)
-    Me.TxtValue.text = IIf(Not IsNumeric(maa_rs("Value").value), 0, maa_rs("Value").value)
-    Me.txtPercentV.text = IIf(Not IsNumeric(maa_rs("PercentV").value), 0, maa_rs("PercentV").value)
+    Me.TXTBank2.Text = IIf(IsNull(maa_rs("Bank2").value), "", maa_rs("Bank2").value)
+    Me.TxtValue.Text = IIf(Not IsNumeric(maa_rs("Value").value), 0, maa_rs("Value").value)
+    Me.txtPercentV.Text = IIf(Not IsNumeric(maa_rs("PercentV").value), 0, maa_rs("PercentV").value)
     
     Me.Dccurrency.BoundText = IIf(IsNull(maa_rs("CurrencyId").value), "", maa_rs("CurrencyId").value)
-    Me.TXtPrimaryInvoiceNo.text = IIf(IsNull(maa_rs("PrimaryInvoiceNo").value), "", maa_rs("PrimaryInvoiceNo").value)
+    Me.TXtPrimaryInvoiceNo.Text = IIf(IsNull(maa_rs("PrimaryInvoiceNo").value), "", maa_rs("PrimaryInvoiceNo").value)
     Me.DCCountry.BoundText = IIf(IsNull(maa_rs("CountryId").value), "", maa_rs("CountryId").value)
   
     dbFromDate.value = IIf(IsNull(maa_rs("FromDate").value), Date, maa_rs("FromDate").value)
@@ -4707,11 +4716,11 @@ Public Sub maaRetrive(Optional LCNO As String = "")
 
     DpCloseDate.value = IIf(IsNull(maa_rs("CloseDate").value), Date, maa_rs("CloseDate").value)
     DPLastParcilDate.value = IIf(IsNull(maa_rs("LastParcilDate").value), Date, maa_rs("LastParcilDate").value)
-    Me.TxtNoOfParcil.text = IIf(Not IsNumeric(maa_rs("NoOfParcil").value), 0, maa_rs("NoOfParcil").value)
+    Me.TxtNoOfParcil.Text = IIf(Not IsNumeric(maa_rs("NoOfParcil").value), 0, maa_rs("NoOfParcil").value)
 
     DBCboClientName.BoundText = IIf(IsNull(maa_rs("VendorId").value), "", maa_rs("VendorId").value)
 
-    TxtRemarks.text = IIf(IsNull(maa_rs("Remarks").value), 0, maa_rs("Remarks").value)
+    txtRemarks.Text = IIf(IsNull(maa_rs("Remarks").value), 0, maa_rs("Remarks").value)
 
     If IsNull(maa_rs("Locked").value) Then
         ChkLocked.value = vbUnchecked
@@ -4727,7 +4736,7 @@ Public Sub maaRetrive(Optional LCNO As String = "")
 
     '    rs("OpenBalanceDate").value = Me.Dtp.value
 
-    txtopening_balance_voucher_id.text = IIf(IsNull(rs("opening_balance_voucher_id").value), "", maa_rs("opening_balance_voucher_id").value)
+    txtopening_balance_voucher_id.Text = IIf(IsNull(rs("opening_balance_voucher_id").value), "", maa_rs("opening_balance_voucher_id").value)
     Dim FirstPeriodDateInthisYear As Date
 
     If (IsNull(rs("OpenBalanceDate").value)) Then
@@ -4743,7 +4752,7 @@ Public Sub maaRetrive(Optional LCNO As String = "")
     End If
     
     If Not IsNull(rs("OpenBalanceType").value) Then
-        Me.TxtOpenBalance.text = IIf(IsNull(maa_rs("OpenBalance")), "", Trim(maa_rs("OpenBalance")))
+        Me.TxtOpenBalance.Text = IIf(IsNull(maa_rs("OpenBalance")), "", Trim(maa_rs("OpenBalance")))
 
         If maa_rs("OpenBalanceType").value = 0 Then
             OptType(0).value = True
@@ -4754,7 +4763,7 @@ Public Sub maaRetrive(Optional LCNO As String = "")
         End If
         
     Else
-        Me.TxtOpenBalance.text = 0
+        Me.TxtOpenBalance.Text = 0
         Me.OptType(2).value = True
         OptType_Click 2
     End If
@@ -4788,8 +4797,8 @@ ElseIf CboPayMentType.ListIndex = 2 Then
     DtpChequeDueDate.Enabled = True
     cmbAccount.Enabled = True
     FraNote.Enabled = False
-    DcboBox.text = ""
-    DcboBankName.text = ""
+    DcboBox.Text = ""
+    DcboBankName.Text = ""
     TxtChequeNumber = ""
 End If
 s = "Select Account_Code from BanksData where BankId = " & val(Dcbank.BoundText)
@@ -4801,14 +4810,14 @@ End If
 
 End Sub
 
-Private Sub cmdAddLine_Click(index As Integer)
+Private Sub cmdAddLine_Click(Index As Integer)
 
 Dim mNoteId As Long
 Dim mNoteId2 As Long
 Dim mNoteId3 As Long
 Dim mmID As Long
 
-Select Case index
+Select Case Index
 Case 0
     GrdBondHistory.rows = GrdBondHistory.rows + 1
 Case 1
@@ -4844,8 +4853,8 @@ Case 3
 '            Cn.Execute s
 '
 '     End If
-    If GrdMargin4.row > 0 Then
-        GrdMargin4.RemoveItem GrdMargin4.row
+    If GrdMargin4.Row > 0 Then
+        GrdMargin4.RemoveItem GrdMargin4.Row
     End If
    ' MsgBox " „ Õ–› «·”ÿ—"
 Case 5
@@ -4868,12 +4877,12 @@ Case 5
 '            Cn.Execute s
 '
 '     End If
-    If GrdMargin2.row > 0 Then
-        GrdMargin2.RemoveItem GrdMargin2.row
+    If GrdMargin2.Row > 0 Then
+        GrdMargin2.RemoveItem GrdMargin2.Row
     End If
 Case 6
-    If GrdMargin3.row > 0 Then
-        GrdMargin3.RemoveItem GrdMargin3.row
+    If GrdMargin3.Row > 0 Then
+        GrdMargin3.RemoveItem GrdMargin3.Row
     End If
 
     
@@ -4885,7 +4894,7 @@ Private Sub cmdCloseLC_Click()
 
 
 
-If val(TxtNoteSerial2.text) = 0 Then
+If val(TxtNoteSerial2.Text) = 0 Then
         createVoucher True
        'FindRec val(TXTTblLCID.text)
       ' rs.Find "TblLCID=" & val(TXTTblLCID.text), , adSearchForward, adBookmarkFirst
@@ -4922,11 +4931,11 @@ End If
 End Sub
 
 Private Sub cmdPrintEntryClose_Click()
-ShowGL_cc Me.TxtNoteSerial2.text, , 200
+ShowGL_cc Me.TxtNoteSerial2.Text, , 200
 End Sub
 
 Private Sub Command1_Click()
-If Me.TxtModFlg.text = "R" Or Me.TxtModFlg.text = "" Then
+If Me.TxtModFlg.Text = "R" Or Me.TxtModFlg.Text = "" Then
 Dim X As Integer
 Dim Msg As String
     If SystemOptions.UserInterface = ArabicInterface Then
@@ -4937,9 +4946,9 @@ Dim Msg As String
         X = MsgBox(Msg, vbCritical + vbYesNo)
 
       If X = vbYes Then
-        StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(Me.TxtNoteID2.text)
+        StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(Me.TxtNoteID2.Text)
         Cn.Execute StrSQL, , adExecuteNoRecords
-        StrSQL = "Delete From Notes Where NoteID=" & val(Me.TxtNoteID2.text)
+        StrSQL = "Delete From Notes Where NoteID=" & val(Me.TxtNoteID2.Text)
         Cn.Execute StrSQL, , adExecuteNoRecords
         'Cn.Execute " Update TblLC set NoteID2=null ,NoteSerial2=null where TblLCID=" & val(TXTTblLCID.text)
         rs!NoteID2 = Null
@@ -4948,8 +4957,8 @@ Dim Msg As String
         TxtNoteSerial2 = ""
         TxtNoteID2 = ""
        ' rs.Requery
-         FindRec val(TXTTblLCID.text)
-         TxtModFlg.text = ""
+         FindRec val(TXTTblLCID.Text)
+         TxtModFlg.Text = ""
          TxtNoteSerial2 = ""
           If SystemOptions.UserInterface = ArabicInterface Then
             Msg = " „  Õ–› «·ﬁÌœ   "
@@ -4985,7 +4994,7 @@ Dim Notevalue As Double
 'Dim
 Dim i
 Dim des As String
-des = "    Õ”«» «·" & TxtLcNo.text
+des = "    Õ”«» «·" & TxtLcNo.Text
 Dim tablename As String
 Dim Filedname As String
 Dim NoteSerial1 As Long
@@ -4999,7 +5008,7 @@ tablename = "TBLLC"
 Dim mRowID As String
 
 Filedname = "TblLCID"
-NoteSerial1 = val(TXTTblLCID.text)
+NoteSerial1 = val(TXTTblLCID.Text)
 
 BranchID = val(dcBranch.BoundText)
 mRate = val(txt_Currency_rate)
@@ -5111,10 +5120,10 @@ End If
     
     
     If notytype = 22010 Then
-            txtNoteIDOpen.text = NoteID
-            txtNoteSerialOpen.text = NoteSerial
+            txtNoteIDOpen.Text = NoteID
+            txtNoteSerialOpen.Text = NoteSerial
             
-            CREATE_VOUCHER_GE val(txtNoteIDOpen.text), BranchID, val(DCboUserName.BoundText), NoteDate, True, notytype
+            CREATE_VOUCHER_GE val(txtNoteIDOpen.Text), BranchID, val(DCboUserName.BoundText), NoteDate, True, notytype
     '
            
             
@@ -5125,10 +5134,10 @@ End If
            
     Else
         If IsClose Then
-            TxtNoteID2.text = NoteID
-            TxtNoteSerial2.text = NoteSerial
+            TxtNoteID2.Text = NoteID
+            TxtNoteSerial2.Text = NoteSerial
             
-            CREATE_VOUCHER_GE val(TxtNoteID2.text), BranchID, val(DCboUserName.BoundText), NoteDate, True
+            CREATE_VOUCHER_GE val(TxtNoteID2.Text), BranchID, val(DCboUserName.BoundText), NoteDate, True
     '
          
             rs!locked = 1
@@ -5143,9 +5152,9 @@ End If
 '            Cn.Execute StrSQL, , adExecuteNoRecords
             
             If notytype = 22001 Then
-                TXTNoteID.text = NoteID
-                TxtNoteSerial.text = NoteSerial
-                CREATE_VOUCHER_GE val(TXTNoteID.text), BranchID, val(DCboUserName.BoundText), NoteDate, False, notytype
+                TXTNoteID.Text = NoteID
+                TxtNoteSerial.Text = NoteSerial
+                CREATE_VOUCHER_GE val(TXTNoteID.Text), BranchID, val(DCboUserName.BoundText), NoteDate, False, notytype
             End If
             
             
@@ -5203,7 +5212,7 @@ Public Function CREATE_VOUCHER_GE(general_noteid As Long, BranchID As Integer, U
     Dim rs As New ADODB.Recordset
     Dim notes_serial As String
     Dim notes_id As String
-    Msg = "    Õ”«» " & TxtLcNo.text
+    Msg = "    Õ”«» " & TxtLcNo.Text
     notes_id = general_noteid
     my_branch = val(dcBranch.BoundText)
     LngDevID = new_id("DOUBLE_ENTREY_VOUCHERS", "Double_Entry_Vouchers_ID", "")
@@ -5224,13 +5233,13 @@ Public Function CREATE_VOUCHER_GE(general_noteid As Long, BranchID As Integer, U
     
          
      
-    sqlS = " Select Account_Code,Account_code2,Account_CodeMargin,AcceptAccount_Code,LCAccount_Code,AccountExpensCode from tblLc Where  TblLCID=" & val(TXTTblLCID.text)
+    sqlS = " Select Account_Code,Account_code2,Account_CodeMargin,AcceptAccount_Code,LCAccount_Code,AccountExpensCode from tblLc Where  TblLCID=" & val(TXTTblLCID.Text)
     rsAcc.Open sqlS, Cn, adOpenStatic, adLockOptimistic, adCmdText
   
     If rsAcc.RecordCount <> 0 Then
        StrAccountCodeDebt = rsAcc!Account_code & ""
     End If
-    Notevalue = val(TxtValue.text) * mRate
+    Notevalue = val(TxtValue.Text) * mRate
 '    If Notevalue > 0 Then
 '
 '       ' StrAccountCodeDebt = Trim(DboParentAccount.BoundText)
@@ -5256,17 +5265,17 @@ Public Function CREATE_VOUCHER_GE(general_noteid As Long, BranchID As Integer, U
      ' ›Ï Õ«·… «‰ «·ﬁÌœ ÂÊ ﬁÌœ «·«€·«ﬁ «Ï «‰Â  „ «·÷€ÿ ⁄·Ï “— «€·«ﬁ «·«⁄ „«œ Ì⁄ﬂ” «·ﬁÌœ Ê«·ﬁÌ„…
         If IsClose Then
             If val(txtBondAmt) = 0 Then txtBondAmt = val(TxtValue)
-            Notevalue = val(txtBondAmt.text) * val(txtPercentV) / 100
+            Notevalue = val(txtBondAmt.Text) * val(txtPercentV) / 100
         Else
-            Notevalue = val(TxtValue.text) * val(txtPercentV) / 100
+            Notevalue = val(TxtValue.Text) * val(txtPercentV) / 100
         End If
         If notytype = 22010 Then
-            Notevalue = val(txtOPenValue.text)
+            Notevalue = val(txtOPenValue.Text)
             
                     
             StrAccountCodeDebt = Trim(rsAcc("AccountExpensCode").value & "")
             
-            Notevalue = val(txtOPenValue.text) * mRate
+            Notevalue = val(txtOPenValue.Text) * mRate
           
             PercentgValueAddedAccount_Transec dbFromDate.value, 22, 0, , mPercent
             Notevalue = Notevalue / (1 + mPercent / 100)
@@ -5284,7 +5293,7 @@ Public Function CREATE_VOUCHER_GE(general_noteid As Long, BranchID As Integer, U
             GetValueAddedAccount dbFromDate.value, StrAccountCodeCridet, 1, 21
             'StrAccountCodeCridet = get_bank_Account(Dcbank.BoundText, "Account_Code")
             
-            Notevalue2 = val(txtOPenValue.text) - Notevalue
+            Notevalue2 = val(txtOPenValue.Text) - Notevalue
             If Notevalue2 <> 0 Then
                 line_no = line_no + 1
                 If ModAccounts.AddNewDev(LngDevID, line_no, StrAccountCodeCridet, val(Notevalue2), 0, " Vat account", val(notes_id), , , , dbFromDate.value, val(DCboUserName.BoundText), , , , , , CLng(mRate), , " Vat account", setfoxy_Line, , , , , , , , , val(dcBranch.BoundText)) = False Then
@@ -5293,7 +5302,7 @@ Public Function CREATE_VOUCHER_GE(general_noteid As Long, BranchID As Integer, U
             End If
              
              StrAccountCodeCridet = get_bank_Account(Dcbank.BoundText, "Account_Code")
-            Notevalue = val(txtOPenValue.text) * mRate
+            Notevalue = val(txtOPenValue.Text) * mRate
             line_no = line_no + 1
             If ModAccounts.AddNewDev(LngDevID, line_no, StrAccountCodeCridet, val(Notevalue), 1, Msg & "    Bank account", val(notes_id), , , , dbFromDate.value, val(DCboUserName.BoundText), , , , , , CLng(mRate), , "    Bank account", setfoxy_Line, , , , , , , , , val(dcBranch.BoundText)) = False Then
                 GoTo ErrTrap
@@ -5368,7 +5377,7 @@ Public Function CREATE_VOUCHER_GE(general_noteid As Long, BranchID As Integer, U
      
      
      
-    Notevalue = val(txtOPenValue.text) * mRate
+    Notevalue = val(txtOPenValue.Text) * mRate
 
     If Notevalue > 0 Or val(txtCostLGYear) <> 0 Then
         ' «Ì‰ «Ãœ Õ”«» „’«—Ì› › Õ «·«⁄ „«œ Â· ÂÊ ›Ï „·› «·›—Ê⁄ «„ ÌÊÃœ „·› ··«⁄ „«œ« 
@@ -5479,14 +5488,14 @@ ErrTrap:
 '-----------------------
 
 
-Function createVoucher2(ByVal row As Long, ByVal mIsPay As Integer, ByVal TypeGrid As Long)
+Function createVoucher2(ByVal Row As Long, ByVal mIsPay As Integer, ByVal TypeGrid As Long)
 Dim NoteID As Long
 Dim NoteDate As Date
 Dim NoteSerial As String
 Dim Notevalue As Double
 Dim notytype As Integer
 Dim des As String
-des = "    Õ”«» «·" & TxtLcNo.text
+des = "    Õ”«» «·" & TxtLcNo.Text
 Dim tablename As String
 Dim Filedname As String
 Dim NoteIDFiled As String
@@ -5558,26 +5567,26 @@ End If
 
 If TypeGrid < 3 Or TypeGrid = 6 Then
     If mIsPay = 0 Then
-         NoteID = val(mGrid.TextMatrix(row, mGrid.ColIndex("NoteID")))
-         NoteSerial = val(mGrid.TextMatrix(row, mGrid.ColIndex("NoteSerial")))
+         NoteID = val(mGrid.TextMatrix(Row, mGrid.ColIndex("NoteID")))
+         NoteSerial = val(mGrid.TextMatrix(Row, mGrid.ColIndex("NoteSerial")))
         'mGrid.TextMatrix(row, mGrid.ColIndex("NoteSerial")) = NoteSerial
     Else
-         NoteID = val(mGrid.TextMatrix(row, mGrid.ColIndex("NoteID2")))
+         NoteID = val(mGrid.TextMatrix(Row, mGrid.ColIndex("NoteID2")))
         'mGrid.TextMatrix(row, mGrid.ColIndex("NoteSerial2")) = NoteSerial
-        NoteSerial = val(mGrid.TextMatrix(row, mGrid.ColIndex("NoteSerial2")))
+        NoteSerial = val(mGrid.TextMatrix(Row, mGrid.ColIndex("NoteSerial2")))
     
     End If
 ElseIf TypeGrid = 3 Then
-        NoteID = val(mGrid.TextMatrix(row, mGrid.ColIndex("NoteID")))
+        NoteID = val(mGrid.TextMatrix(Row, mGrid.ColIndex("NoteID")))
         'mGrid.TextMatrix(row, mGrid.ColIndex("NoteSerial")) = NoteSerial
-        NoteSerial = val(mGrid.TextMatrix(row, mGrid.ColIndex("NoteSerial")))
+        NoteSerial = val(mGrid.TextMatrix(Row, mGrid.ColIndex("NoteSerial")))
 ElseIf TypeGrid = 4 Then
-        NoteID = val(mGrid.TextMatrix(row, mGrid.ColIndex("NoteID")))
-        NoteSerial = val(mGrid.TextMatrix(row, mGrid.ColIndex("NoteSerial")))
+        NoteID = val(mGrid.TextMatrix(Row, mGrid.ColIndex("NoteID")))
+        NoteSerial = val(mGrid.TextMatrix(Row, mGrid.ColIndex("NoteSerial")))
         'mGrid.TextMatrix(row, mGrid.ColIndex("NoteSerial")) = NoteSerial
 ElseIf TypeGrid = 5 Then
-        NoteID = val(mGrid.TextMatrix(row, mGrid.ColIndex("NoteID3")))
-        NoteSerial = val(mGrid.TextMatrix(row, mGrid.ColIndex("NoteSerial3")))
+        NoteID = val(mGrid.TextMatrix(Row, mGrid.ColIndex("NoteID3")))
+        NoteSerial = val(mGrid.TextMatrix(Row, mGrid.ColIndex("NoteSerial3")))
         'mGrid.TextMatrix(row, mGrid.ColIndex("NoteSerial3")) = NoteSerial
 End If
 
@@ -5596,63 +5605,63 @@ With mGrid
     If TypeGrid < 3 Then
         If mIsPay = 1 Then
             notytype = 22003
-            Notevalue = val(.TextMatrix(row, .ColIndex("PayedAmount"))) * mRate
+            Notevalue = val(.TextMatrix(Row, .ColIndex("PayedAmount"))) * mRate
             
         Else
             notytype = 22002
-            Notevalue = val(.TextMatrix(row, .ColIndex("Amount"))) * mRate
+            Notevalue = val(.TextMatrix(Row, .ColIndex("Amount"))) * mRate
         End If
         If Notevalue = 0 Then Exit Function
         'mAccNO = val(DboParentAccount.BoundText)
         If mIsPay = 0 Then
-            If (.TextMatrix(row, .ColIndex("OrderDate"))) = "" Then
-                .TextMatrix(row, .ColIndex("OrderDate")) = Date
+            If (.TextMatrix(Row, .ColIndex("OrderDate"))) = "" Then
+                .TextMatrix(Row, .ColIndex("OrderDate")) = Date
             End If
-            NoteDate = (.TextMatrix(row, .ColIndex("OrderDate")))
+            NoteDate = (.TextMatrix(Row, .ColIndex("OrderDate")))
         Else
-            NoteDate = (.TextMatrix(row, .ColIndex("PayDate")))
+            NoteDate = (.TextMatrix(Row, .ColIndex("PayDate")))
         End If
     ElseIf TypeGrid = 3 Then
              notytype = 22004
              
-             Notevalue = (val(.TextMatrix(row, .ColIndex("AmountPlus"))) - val(.TextMatrix(row, .ColIndex("AmountMin")))) * val(txtPercentV) / 100
+             Notevalue = (val(.TextMatrix(Row, .ColIndex("AmountPlus"))) - val(.TextMatrix(Row, .ColIndex("AmountMin")))) * val(txtPercentV) / 100
              
              NoteDate = Date
     ElseIf TypeGrid = 4 Then
         notytype = 22006
         
-        If (.TextMatrix(row, .ColIndex("GuaranteeDate"))) = "" Then
-            .TextMatrix(row, .ColIndex("GuaranteeDate")) = Date
+        If (.TextMatrix(Row, .ColIndex("GuaranteeDate"))) = "" Then
+            .TextMatrix(Row, .ColIndex("GuaranteeDate")) = Date
         End If
         
          'getFirstPeriodDateInthisYear2 FirstPeriodDateInthisYear
            ' Me.DTP_Date.value = FirstPeriodDateInthisYear
             
-        NoteDate = (.TextMatrix(row, .ColIndex("GuaranteeDate")))
-        Notevalue = (val(.TextMatrix(row, .ColIndex("InsuranceAmount"))) + val(.TextMatrix(row, .ColIndex("ExpAmount"))))
+        NoteDate = (.TextMatrix(Row, .ColIndex("GuaranteeDate")))
+        Notevalue = (val(.TextMatrix(Row, .ColIndex("InsuranceAmount"))) + val(.TextMatrix(Row, .ColIndex("ExpAmount"))))
     ElseIf TypeGrid = 5 Then
         notytype = 22007
-        NoteDate = (.TextMatrix(row, .ColIndex("OrderDate")))
-        Notevalue = val(.TextMatrix(row, .ColIndex("MargenValue")))
+        NoteDate = (.TextMatrix(Row, .ColIndex("OrderDate")))
+        Notevalue = val(.TextMatrix(Row, .ColIndex("MargenValue")))
     ElseIf TypeGrid = 6 Then
         If mIsPay = 1 Then
             notytype = 22009
-            Notevalue = val(.TextMatrix(row, .ColIndex("PayedAmount"))) * mRate
+            Notevalue = val(.TextMatrix(Row, .ColIndex("PayedAmount"))) * mRate
             
         Else
             notytype = 22008
-            Notevalue = val(.TextMatrix(row, .ColIndex("Amount"))) * mRate
+            Notevalue = val(.TextMatrix(Row, .ColIndex("Amount"))) * mRate
         End If
         If Notevalue = 0 Then Exit Function
         'mAccNO = val(DboParentAccount.BoundText)
         If mIsPay = 0 Then
-            If Trim(.TextMatrix(row, .ColIndex("OrderDate"))) = "" Then
-                .TextMatrix(row, .ColIndex("OrderDate")) = Date
+            If Trim(.TextMatrix(Row, .ColIndex("OrderDate"))) = "" Then
+                .TextMatrix(Row, .ColIndex("OrderDate")) = Date
                 
             End If
-            NoteDate = (.TextMatrix(row, .ColIndex("OrderDate")))
+            NoteDate = (.TextMatrix(Row, .ColIndex("OrderDate")))
         Else
-            NoteDate = (.TextMatrix(row, .ColIndex("PayDate")))
+            NoteDate = (.TextMatrix(Row, .ColIndex("PayDate")))
         End If
 
     End If
@@ -5662,7 +5671,7 @@ End With
 If Notevalue > 0 Then
     
     If TypeGrid = 6 Then
-        If CBool(mGrid.ValueMatrix(row, mGrid.ColIndex("IsOpenBalance"))) And mIsPay = 0 Then
+        If CBool(mGrid.ValueMatrix(Row, mGrid.ColIndex("IsOpenBalance"))) And mIsPay = 0 Then
             mIsOpenBalance = True
             notytype = 101
             
@@ -5673,9 +5682,9 @@ If Notevalue > 0 Then
         End If
     End If
 
-    NoteSerial1 = val(mGrid.ValueMatrix(row, mGrid.ColIndex("ID")))
+    NoteSerial1 = val(mGrid.ValueMatrix(Row, mGrid.ColIndex("ID")))
     Filedname = "ID"
-    mRowID = Trim(mGrid.TextMatrix(row, mGrid.ColIndex("RowId")))
+    mRowID = Trim(mGrid.TextMatrix(Row, mGrid.ColIndex("RowId")))
     If InStr(mRowID, "{") Then
     Else
         mRowID = "{" & Trim(mRowID) & "}"
@@ -5696,29 +5705,29 @@ If Notevalue > 0 Then
     rs.Resync adAffectCurrent
         
     
-    CREATE_VOUCHER_GE2 val(NoteID), BranchID, val(DCboUserName.BoundText), NoteDate, row, mIsPay, Notevalue, NoteDate, TypeGrid, mIsOpenBalance
+    CREATE_VOUCHER_GE2 val(NoteID), BranchID, val(DCboUserName.BoundText), NoteDate, Row, mIsPay, Notevalue, NoteDate, TypeGrid, mIsOpenBalance
     
    ' rs.Resync adAffectCurrent
 
 
 If TypeGrid < 3 Or TypeGrid = 6 Then
     If mIsPay = 0 Then
-         mGrid.TextMatrix(row, mGrid.ColIndex("NoteID")) = NoteID
-        mGrid.TextMatrix(row, mGrid.ColIndex("NoteSerial")) = NoteSerial
+         mGrid.TextMatrix(Row, mGrid.ColIndex("NoteID")) = NoteID
+        mGrid.TextMatrix(Row, mGrid.ColIndex("NoteSerial")) = NoteSerial
     Else
-         mGrid.TextMatrix(row, mGrid.ColIndex("NoteID2")) = NoteID
-        mGrid.TextMatrix(row, mGrid.ColIndex("NoteSerial2")) = NoteSerial
+         mGrid.TextMatrix(Row, mGrid.ColIndex("NoteID2")) = NoteID
+        mGrid.TextMatrix(Row, mGrid.ColIndex("NoteSerial2")) = NoteSerial
     
     End If
 ElseIf TypeGrid = 3 Then
-        mGrid.TextMatrix(row, mGrid.ColIndex("NoteID")) = NoteID
-        mGrid.TextMatrix(row, mGrid.ColIndex("NoteSerial")) = NoteSerial
+        mGrid.TextMatrix(Row, mGrid.ColIndex("NoteID")) = NoteID
+        mGrid.TextMatrix(Row, mGrid.ColIndex("NoteSerial")) = NoteSerial
 ElseIf TypeGrid = 4 Then
-        mGrid.TextMatrix(row, mGrid.ColIndex("NoteID")) = NoteID
-        mGrid.TextMatrix(row, mGrid.ColIndex("NoteSerial")) = NoteSerial
+        mGrid.TextMatrix(Row, mGrid.ColIndex("NoteID")) = NoteID
+        mGrid.TextMatrix(Row, mGrid.ColIndex("NoteSerial")) = NoteSerial
 ElseIf TypeGrid = 5 Then
-        mGrid.TextMatrix(row, mGrid.ColIndex("NoteID3")) = NoteID
-        mGrid.TextMatrix(row, mGrid.ColIndex("NoteSerial3")) = NoteSerial
+        mGrid.TextMatrix(Row, mGrid.ColIndex("NoteID3")) = NoteID
+        mGrid.TextMatrix(Row, mGrid.ColIndex("NoteSerial3")) = NoteSerial
 End If
 
 '
@@ -5756,7 +5765,7 @@ If TypeGrid = 1 Then
 End If
 End Function
 Public Function CREATE_VOUCHER_GE2(general_noteid As Long, BranchID As Integer, UserID As Long _
-, NoteDate2 As Date, ByVal row As Long, ByVal mIsPay As Integer, ByVal Notevalue As Double, ByVal NoteDate As Date, ByVal TypeGrid As Long, Optional ByVal mIsOpenBalance As Boolean = False)
+, NoteDate2 As Date, ByVal Row As Long, ByVal mIsPay As Integer, ByVal Notevalue As Double, ByVal NoteDate As Date, ByVal TypeGrid As Long, Optional ByVal mIsOpenBalance As Boolean = False)
 
 
 Dim mGrid As Object
@@ -5797,7 +5806,7 @@ End If
     Dim rs As New ADODB.Recordset
     Dim notes_serial As String
     Dim notes_id As String
-    Msg = "    Õ”«» " & TxtLcNo.text
+    Msg = "    Õ”«» " & TxtLcNo.Text
     notes_id = general_noteid
     my_branch = val(dcBranch.BoundText)
     If mIsOpenBalance Then
@@ -5829,17 +5838,17 @@ End If
     
     
     If TypeGrid < 3 Or TypeGrid = 6 Then
-        If Trim(mGrid.TextMatrix(row, mGrid.ColIndex("MarginAccountCode"))) = "" Then
-          mGrid.TextMatrix(row, mGrid.ColIndex("BankAccountCode")) = get_bank_Account(Dcbank.BoundText, "Account_Code")
+        If Trim(mGrid.TextMatrix(Row, mGrid.ColIndex("MarginAccountCode"))) = "" Then
+          mGrid.TextMatrix(Row, mGrid.ColIndex("BankAccountCode")) = get_bank_Account(Dcbank.BoundText, "Account_Code")
         End If
         If mIsPay = 0 Then
         
             If TypeGrid <> 6 Then
-                StrAccountCodeDebt = Trim(mGrid.TextMatrix(row, mGrid.ColIndex("MarginAccountCode")))
-                StrAccountCodeCridet = Trim(mGrid.TextMatrix(row, mGrid.ColIndex("BankAccountCode")))
+                StrAccountCodeDebt = Trim(mGrid.TextMatrix(Row, mGrid.ColIndex("MarginAccountCode")))
+                StrAccountCodeCridet = Trim(mGrid.TextMatrix(Row, mGrid.ColIndex("BankAccountCode")))
             Else
-                StrAccountCodeDebt = Trim(mGrid.TextMatrix(row, mGrid.ColIndex("MarginAccountCode")))
-                StrAccountCodeCridet = Trim(mGrid.TextMatrix(row, mGrid.ColIndex("BankAccountCode")))
+                StrAccountCodeDebt = Trim(mGrid.TextMatrix(Row, mGrid.ColIndex("MarginAccountCode")))
+                StrAccountCodeCridet = Trim(mGrid.TextMatrix(Row, mGrid.ColIndex("BankAccountCode")))
             
             End If
                  
@@ -5847,24 +5856,24 @@ End If
             mDes2 = "Bank account"
         Else
             
-            StrAccountCodeDebt = Trim(mGrid.TextMatrix(row, mGrid.ColIndex("BankAccountCode"))) 'Trim(mGrid.TextMatrix(row, mGrid.ColIndex("MarginAccountCode")))
+            StrAccountCodeDebt = Trim(mGrid.TextMatrix(Row, mGrid.ColIndex("BankAccountCode"))) 'Trim(mGrid.TextMatrix(row, mGrid.ColIndex("MarginAccountCode")))
            
             
-            StrAccountCodeCridet = Trim(mGrid.TextMatrix(row, mGrid.ColIndex("MarginAccountCode"))) ' get_bank_Account(Dcbank.BoundText, "Account_Code")  'Trim(mGrid.TextMatrix(row, mGrid.ColIndex("BankAccountCode")))
+            StrAccountCodeCridet = Trim(mGrid.TextMatrix(Row, mGrid.ColIndex("MarginAccountCode"))) ' get_bank_Account(Dcbank.BoundText, "Account_Code")  'Trim(mGrid.TextMatrix(row, mGrid.ColIndex("BankAccountCode")))
             If TypeGrid = 1 Then
-                If Trim(mGrid.TextMatrix(row, mGrid.ColIndex("BankAccountCode2"))) = "" Then
-                    mGrid.TextMatrix(row, mGrid.ColIndex("BankAccountCode2")) = mGrid.TextMatrix(row, mGrid.ColIndex("MarginAccountCode"))
-                    mGrid.TextMatrix(row, mGrid.ColIndex("BankAccount2")) = mGrid.TextMatrix(row, mGrid.ColIndex("MarginAccount"))
+                If Trim(mGrid.TextMatrix(Row, mGrid.ColIndex("BankAccountCode2"))) = "" Then
+                    mGrid.TextMatrix(Row, mGrid.ColIndex("BankAccountCode2")) = mGrid.TextMatrix(Row, mGrid.ColIndex("MarginAccountCode"))
+                    mGrid.TextMatrix(Row, mGrid.ColIndex("BankAccount2")) = mGrid.TextMatrix(Row, mGrid.ColIndex("MarginAccount"))
                     
                 End If
-                StrAccountCodeCridet = mGrid.TextMatrix(row, mGrid.ColIndex("BankAccountCode2"))
+                StrAccountCodeCridet = mGrid.TextMatrix(Row, mGrid.ColIndex("BankAccountCode2"))
             End If
             If TypeGrid = 6 Then
-                   If Trim(mGrid.TextMatrix(row, mGrid.ColIndex("BankAccountCode2"))) = "" Then
-                    mGrid.TextMatrix(row, mGrid.ColIndex("BankAccountCode2")) = get_bank_Account(Dcbank.BoundText, "Account_Code")
-                    mGrid.TextMatrix(row, mGrid.ColIndex("BankAccount2")) = Dcbank.text
+                   If Trim(mGrid.TextMatrix(Row, mGrid.ColIndex("BankAccountCode2"))) = "" Then
+                    mGrid.TextMatrix(Row, mGrid.ColIndex("BankAccountCode2")) = get_bank_Account(Dcbank.BoundText, "Account_Code")
+                    mGrid.TextMatrix(Row, mGrid.ColIndex("BankAccount2")) = Dcbank.Text
                    End If
-                  StrAccountCodeCridet = Trim(mGrid.TextMatrix(row, mGrid.ColIndex("BankAccountCode2"))) ' get_bank_Account(Dcbank.BoundText, "Account_Code")
+                  StrAccountCodeCridet = Trim(mGrid.TextMatrix(Row, mGrid.ColIndex("BankAccountCode2"))) ' get_bank_Account(Dcbank.BoundText, "Account_Code")
                    ' .TextMatrix(row, .ColIndex("MarginAccount")) = Dcbank.text
             End If
             
@@ -5877,7 +5886,7 @@ End If
             
              
             
-            sqlS = " Select Account_Code,Account_code2,Account_CodeMargin,AcceptAccount_Code,LCAccount_Code,AccountExpensCode from tblLc Where TblLCID=" & val(TXTTblLCID.text) '   and  TblLCid = '" & Trim(Txt) & "'"
+            sqlS = " Select Account_Code,Account_code2,Account_CodeMargin,AcceptAccount_Code,LCAccount_Code,AccountExpensCode from tblLc Where TblLCID=" & val(TXTTblLCID.Text) '   and  TblLCid = '" & Trim(Txt) & "'"
             rsAcc.Open sqlS, Cn, adOpenStatic, adLockOptimistic, adCmdText
             
             If rsAcc.RecordCount <> 0 Then
@@ -5900,7 +5909,7 @@ End If
             Dim mAccountCode As String
              
             
-            sqlS = " Select Account_Code,Account_code2,Account_CodeMargin,AcceptAccount_Code,LCAccount_Code,AccountExpensCode from tblLc Where TblLCID=" & val(TXTTblLCID.text) '   and  TblLCid = '" & Trim(Txt) & "'"
+            sqlS = " Select Account_Code,Account_code2,Account_CodeMargin,AcceptAccount_Code,LCAccount_Code,AccountExpensCode from tblLc Where TblLCID=" & val(TXTTblLCID.Text) '   and  TblLCid = '" & Trim(Txt) & "'"
             rsAcc.Open sqlS, Cn, adOpenStatic, adLockOptimistic, adCmdText
             
             If rsAcc.RecordCount <> 0 Then
@@ -5926,11 +5935,11 @@ End If
             
              
             
-            sqlS = " Select Account_Code,Account_code2,Account_CodeMargin,AcceptAccount_Code,LCAccount_Code,AccountExpensCode from tblLc Where TblLCID=" & val(TXTTblLCID.text) '   and  TblLCid = '" & Trim(Txt) & "'"
+            sqlS = " Select Account_Code,Account_code2,Account_CodeMargin,AcceptAccount_Code,LCAccount_Code,AccountExpensCode from tblLc Where TblLCID=" & val(TXTTblLCID.Text) '   and  TblLCid = '" & Trim(Txt) & "'"
             rsAcc.Open sqlS, Cn, adOpenStatic, adLockOptimistic, adCmdText
             
             If rsAcc.RecordCount <> 0 Then
-                StrAccountCodeDebt = Trim(mGrid.TextMatrix(row, mGrid.ColIndex("AccountMargen2")))
+                StrAccountCodeDebt = Trim(mGrid.TextMatrix(Row, mGrid.ColIndex("AccountMargen2")))
                 StrAccountCodeCridet = get_bank_Account(Dcbank.BoundText, "Account_Code")
              '   mAccountCode = Trim(rsAcc("Account_Code").value & "")
             End If
@@ -5957,8 +5966,8 @@ End If
        
         
         If TypeGrid = 4 Then
-                Notevalue = val(val(mGrid.TextMatrix(row, mGrid.ColIndex("InsuranceAmount"))))
-                NoteDate = mGrid.TextMatrix(row, mGrid.ColIndex("GuaranteeDate"))
+                Notevalue = val(val(mGrid.TextMatrix(Row, mGrid.ColIndex("InsuranceAmount"))))
+                NoteDate = mGrid.TextMatrix(Row, mGrid.ColIndex("GuaranteeDate"))
                 If Notevalue <> 0 Then
               If ModAccounts.AddNewDev(LngDevID, line_no, StrAccountCodeDebt, Notevalue, 0, Msg & mDes, val(notes_id), , , , NoteDate, val(DCboUserName.BoundText), , , , , , CLng(mRate), , mDes, setfoxy_Line, , , , mIsOpenBalance, get_opening_balance_voucher_id, , , , _
                   val(dcBranch.BoundText)) = False Then
@@ -5969,7 +5978,7 @@ End If
               
              ' GetValueAddedAccount dbFromDate.value, StrAccountCodeCridet, 1, 21
               'Notevalue = val(val(mGrid.TextMatrix(row, mGrid.ColIndex("InsuranceAmount")))) + val(val(mGrid.TextMatrix(row, mGrid.ColIndex("ExpAmount"))))
-              Notevalue = val(val(mGrid.TextMatrix(row, mGrid.ColIndex("ExpAmount")))) * mRate
+              Notevalue = val(val(mGrid.TextMatrix(Row, mGrid.ColIndex("ExpAmount")))) * mRate
               
               
               
@@ -5997,7 +6006,7 @@ End If
                                 GoTo ErrTrap
                             End If
                             
-              Notevalue = val(val(mGrid.TextMatrix(row, mGrid.ColIndex("ExpAmount"))))
+              Notevalue = val(val(mGrid.TextMatrix(Row, mGrid.ColIndex("ExpAmount"))))
               
             '  StrAccountCodeCridet = get_bank_Account(DCBank.BoundText, "Account_Code")
                line_no = line_no + 1
@@ -6015,7 +6024,7 @@ End If
                         End If
               
                StrAccountCodeDebt = get_bank_Account(Dcbank.BoundText, "Account_Code")
-                Notevalue = val(val(mGrid.TextMatrix(row, mGrid.ColIndex("InsuranceAmount"))))
+                Notevalue = val(val(mGrid.TextMatrix(Row, mGrid.ColIndex("InsuranceAmount"))))
                If Notevalue2 <> 0 Then
                             line_no = line_no + 1
                             If ModAccounts.AddNewDev(LngDevID, line_no, StrAccountCodeDebt, val(Notevalue2) + Notevalue + mVatD, 1, Msg & "Bank account", val(notes_id), , , , NoteDate, val(DCboUserName.BoundText), , , , , , CLng(mRate), , "Bank account", setfoxy_Line, , , , mIsOpenBalance, get_opening_balance_voucher_id, , , , val(dcBranch.BoundText)) = False Then
@@ -6025,7 +6034,7 @@ End If
               
               
         ElseIf TypeGrid = 5 Then
-                Notevalue = val(val(mGrid.TextMatrix(row, mGrid.ColIndex("MargenValue"))))
+                Notevalue = val(val(mGrid.TextMatrix(Row, mGrid.ColIndex("MargenValue"))))
 
               If ModAccounts.AddNewDev(LngDevID, line_no, StrAccountCodeDebt, Notevalue, 0, Msg & mDes, val(notes_id), , , , NoteDate, val(DCboUserName.BoundText), , , , , , CLng(mRate), , mDes, setfoxy_Line, , , , mIsOpenBalance, get_opening_balance_voucher_id, , , , _
                   val(dcBranch.BoundText)) = False Then
@@ -6065,10 +6074,10 @@ End If
               line_no = line_no + 1
               
               If TypeGrid = 0 Then
-                Notevalue = val(val(mGrid.TextMatrix(row, mGrid.ColIndex("Amount"))))
+                Notevalue = val(val(mGrid.TextMatrix(Row, mGrid.ColIndex("Amount"))))
               Else
                 
-                    Notevalue = val(val(mGrid.TextMatrix(row, mGrid.ColIndex("MargenValue"))))
+                    Notevalue = val(val(mGrid.TextMatrix(Row, mGrid.ColIndex("MargenValue"))))
                     If (TypeGrid = 1 Or TypeGrid = 6) And mIsPay = 0 Then Notevalue = 0
                 
                 
@@ -6082,16 +6091,16 @@ End If
                       '  Notevalue2 = Notevalue * mPercent / 100
                 
                            
-                        sqlS = " Select Account_Code,Account_code2,Account_CodeMargin,AcceptAccount_Code,LCAccount_Code from tblLc Where TblLCID=" & val(TXTTblLCID.text) '   and  TblLCid = '" & Trim(Txt) & "'"
+                        sqlS = " Select Account_Code,Account_code2,Account_CodeMargin,AcceptAccount_Code,LCAccount_Code from tblLc Where TblLCID=" & val(TXTTblLCID.Text) '   and  TblLCid = '" & Trim(Txt) & "'"
                         rsAcc.Open sqlS, Cn, adOpenStatic, adLockOptimistic, adCmdText
                         
                         If rsAcc.RecordCount <> 0 Then
-                            StrAccountCodeDebt = Trim(mGrid.TextMatrix(row, mGrid.ColIndex("AccountMargen2")))
+                            StrAccountCodeDebt = Trim(mGrid.TextMatrix(Row, mGrid.ColIndex("AccountMargen2")))
                             If TypeGrid = 1 Then
-                                StrAccountCodeCridet = Trim(mGrid.TextMatrix(row, mGrid.ColIndex("MarginAccountCode"))) 'get_bank_Account(Dcbank.BoundText, "Account_Code")
-                                StrAccountCodeCridet = Trim(mGrid.TextMatrix(row, mGrid.ColIndex("BankAccountCode2")))
+                                StrAccountCodeCridet = Trim(mGrid.TextMatrix(Row, mGrid.ColIndex("MarginAccountCode"))) 'get_bank_Account(Dcbank.BoundText, "Account_Code")
+                                StrAccountCodeCridet = Trim(mGrid.TextMatrix(Row, mGrid.ColIndex("BankAccountCode2")))
                             ElseIf TypeGrid = 6 Then
-                                StrAccountCodeCridet = Trim(mGrid.TextMatrix(row, mGrid.ColIndex("BankAccountCode2"))) 'get_bank_Account(Dcbank.BoundText, "Account_Code")
+                                StrAccountCodeCridet = Trim(mGrid.TextMatrix(Row, mGrid.ColIndex("BankAccountCode2"))) 'get_bank_Account(Dcbank.BoundText, "Account_Code")
                             End If
                          '   mAccountCode = Trim(rsAcc("Account_Code").value & "")
                         End If
@@ -6100,9 +6109,9 @@ End If
                             StrAccountCodeDebt = get_bank_Account(Dcbank.BoundText, "Account_Code")
                             
                              If TypeGrid = 1 Then
-                                StrAccountCodeDebt = Trim(mGrid.TextMatrix(row, mGrid.ColIndex("MarginAccountCode"))) 'get_bank_Account(Dcbank.BoundText, "Account_Code")
+                                StrAccountCodeDebt = Trim(mGrid.TextMatrix(Row, mGrid.ColIndex("MarginAccountCode"))) 'get_bank_Account(Dcbank.BoundText, "Account_Code")
                             ElseIf TypeGrid = 6 Then
-                                StrAccountCodeDebt = Trim(mGrid.TextMatrix(row, mGrid.ColIndex("BankAccountCode2"))) 'get_bank_Account(Dcbank.BoundText, "Account_Code")
+                                StrAccountCodeDebt = Trim(mGrid.TextMatrix(Row, mGrid.ColIndex("BankAccountCode2"))) 'get_bank_Account(Dcbank.BoundText, "Account_Code")
                             End If
                             
                             StrAccountCodeCridet = Trim(rsAcc("Account_CodeMargin").value & "")
@@ -6114,7 +6123,7 @@ End If
                          
                          
                          
-                        Notevalue = val(val(mGrid.TextMatrix(row, mGrid.ColIndex("MargenValue"))))
+                        Notevalue = val(val(mGrid.TextMatrix(Row, mGrid.ColIndex("MargenValue"))))
     
                         If ModAccounts.AddNewDev(LngDevID, line_no, StrAccountCodeDebt, Notevalue, 0, Msg & mDes, val(notes_id), , , , NoteDate, val(DCboUserName.BoundText), , , , , , CLng(mRate), , mDes, setfoxy_Line, , , , mIsOpenBalance, get_opening_balance_voucher_id, , , , _
                             val(dcBranch.BoundText)) = False Then
@@ -6230,7 +6239,7 @@ Dim Notevalue As Double
 'Dim
 Dim i
 Dim des As String
-des = "    Õ”«» «·" & TxtLcNo.text
+des = "    Õ”«» «·" & TxtLcNo.Text
 Dim tablename As String
 Dim Filedname As String
 Dim NoteSerial1 As Long
@@ -6244,7 +6253,7 @@ tablename = "TBLLC"
 Dim mRowID As String
 
 Filedname = "TblLCID"
-NoteSerial1 = val(TXTTblLCID.text)
+NoteSerial1 = val(TXTTblLCID.Text)
 
 BranchID = val(dcBranch.BoundText)
 mRate = val(txt_Currency_rate)
@@ -6278,15 +6287,15 @@ Dim RowIDField As String
       
       
           
-    Dim row As Long
+    Dim Row As Long
     With GrdMargin4
         For i = 1 To .rows - 1
-            row = i
+            Row = i
 '            s = "Delete Notes where NoteId = " & val(.TextMatrix(row, .ColIndex("NoteId3")))
 '            Cn.Execute s
 '            s = "Delete Notes where NoteId = " & val(.TextMatrix(row, .ColIndex("NoteId2")))
 '            Cn.Execute s
-            If CBool(.ValueMatrix(row, .ColIndex("IsOpenBalance"))) Then
+            If CBool(.ValueMatrix(Row, .ColIndex("IsOpenBalance"))) Then
 '                s = "Delete Notes1 where NoteId = " & val(.TextMatrix(row, .ColIndex("NoteId")))
 '                Cn.Execute s
 '                s = "Delete DOUBLE_ENTREY_VOUCHERS1 where Notes_ID = " & val(.TextMatrix(row, .ColIndex("NoteId")))
@@ -6296,16 +6305,16 @@ Dim RowIDField As String
 '                s = "Delete Notes where NoteId = " & val(.TextMatrix(row, .ColIndex("NoteId")))
 '                Cn.Execute s
             End If
-            If row = 6 Then
-                row = 6
+            If Row = 6 Then
+                Row = 6
             End If
-            If val(.TextMatrix(row, .ColIndex("Amount"))) <> 0 Then
-                CreateEntry row, 6, 0
+            If val(.TextMatrix(Row, .ColIndex("Amount"))) <> 0 Then
+                CreateEntry Row, 6, 0
             End If
-            If val(.TextMatrix(row, .ColIndex("PayedAmount"))) <> 0 Then
-                CreateEntry row, 6, 1
+            If val(.TextMatrix(Row, .ColIndex("PayedAmount"))) <> 0 Then
+                CreateEntry Row, 6, 1
             Else
-                .TextMatrix(row, .ColIndex("NoteSerial2")) = ""
+                .TextMatrix(Row, .ColIndex("NoteSerial2")) = ""
             End If
 '            .TextMatrix(row, .ColIndex("NoteId")) = ""
 '            .TextMatrix(row, .ColIndex("NoteId2")) = ""
@@ -6320,21 +6329,21 @@ Dim RowIDField As String
     
     With GrdMargin2
         For i = 1 To .rows - 1
-            row = i
+            Row = i
            
             
             
  
         
             
-            If val(.TextMatrix(row, .ColIndex("Amount"))) <> 0 Then
-                CreateEntry row, 1, 0
+            If val(.TextMatrix(Row, .ColIndex("Amount"))) <> 0 Then
+                CreateEntry Row, 1, 0
             End If
-            If val(.TextMatrix(row, .ColIndex("PayedAmount"))) <> 0 Then
+            If val(.TextMatrix(Row, .ColIndex("PayedAmount"))) <> 0 Then
                 
-                CreateEntry row, 1, 1
+                CreateEntry Row, 1, 1
             Else
-                .TextMatrix(row, .ColIndex("NoteSerial2")) = ""
+                .TextMatrix(Row, .ColIndex("NoteSerial2")) = ""
             End If
 '            .TextMatrix(row, .ColIndex("NoteId")) = ""
 '            .TextMatrix(row, .ColIndex("NoteId2")) = ""
@@ -6348,7 +6357,7 @@ Dim RowIDField As String
         
      With GrdMargin3
         For i = 1 To .rows - 1
-            row = i
+            Row = i
            
            
 '            s = "Delete Notes where NoteId = " & val(.TextMatrix(row, .ColIndex("NoteId")))
@@ -6357,8 +6366,8 @@ Dim RowIDField As String
             
  
         
-            If val(.TextMatrix(row, .ColIndex("TotalAmount"))) <> 0 Then
-                CreateEntry row, 4, 0
+            If val(.TextMatrix(Row, .ColIndex("TotalAmount"))) <> 0 Then
+                CreateEntry Row, 4, 0
             End If
 '            .TextMatrix(row, .ColIndex("NoteId")) = ""
 '            .TextMatrix(row, .ColIndex("NoteId2")) = ""
@@ -6386,7 +6395,7 @@ Dim RowIDField As String
 'End If
 End Sub
 
-Private Sub CmdCreateV2_Click(index As Integer)
+Private Sub CmdCreateV2_Click(Index As Integer)
 
 Dim i As Long
 
@@ -6397,7 +6406,7 @@ Exit Sub
     
 
 Dim mGrid As Object
-If index = 1 Then
+If Index = 1 Then
     Set mGrid = GrdMargin2
 Else
     Set mGrid = GrdMargin
@@ -6413,13 +6422,13 @@ End If
 'saveGrid StrSQL, mGrid, "MarginNo", "", "TblLCID", val(Me.TXTTblLCID.text), "Type", Index
     
     
-StrSQL = "delete From TBLLCMargin where TblLCID=" & val(TXTTblLCID.text)
+StrSQL = "delete From TBLLCMargin where TblLCID=" & val(TXTTblLCID.Text)
 Cn.Execute StrSQL, , adExecuteNoRecords
         
 
 StrSQL = "sELECT * FROM TBLLCMargin Where 1 = -1"
    
-saveGrid StrSQL, mGrid, "MarginNo", "", "TblLCID", val(Me.TXTTblLCID.text)
+saveGrid StrSQL, mGrid, "MarginNo", "", "TblLCID", val(Me.TXTTblLCID.Text)
     
     
 
@@ -6427,7 +6436,7 @@ StrSQL = "sELECT TBLLCMargin.*,Acc.Account_Serial as MarginAccountSerial,Acc.Acc
 StrSQL = StrSQL & " Acc2.Account_Serial as BankAccountSerial,Acc2.Account_Name as BankAccount  "
 StrSQL = StrSQL & " from TBLLCMargin Left Outer join Accounts Acc On TBLLCMargin.MarginAccountCode = Acc.Account_Code "
 StrSQL = StrSQL & " Left Outer join Accounts Acc2 On TBLLCMargin.BankAccountCode = Acc2.Account_Code"
-StrSQL = StrSQL & " Where Type= " & index & "  and  TblLCID = " & val(Me.TXTTblLCID.text)
+StrSQL = StrSQL & " Where Type= " & Index & "  and  TblLCID = " & val(Me.TXTTblLCID.Text)
 loadgrid StrSQL, mGrid, True, False
 Dim Notevalue As Double
 
@@ -6435,16 +6444,16 @@ Dim Notevalue As Double
 
 With mGrid
     For i = 1 To .rows - 1
-        If index = 0 Then
+        If Index = 0 Then
             Notevalue = val(.TextMatrix(i, .ColIndex("Amount")))
         Else
             Notevalue = val(.TextMatrix(i, .ColIndex("PayedAmount")))
         End If
         If val(.TextMatrix(i, .ColIndex("NoteSerial"))) = 0 And Notevalue <> 0 Then
-            createVoucher2 i, index, 0
-            If index = 1 Then
+            createVoucher2 i, Index, 0
+            If Index = 1 Then
                 s = "Update TBLLCMargin Set PayedAmount = PayedAmount + " & val(.TextMatrix(i, .ColIndex("PayedAmount")))
-                s = s & " where TblLCID=" & val(TXTTblLCID.text) & "  and MarginNo = " & val(.TextMatrix(i, .ColIndex("MarginNo")))
+                s = s & " where TblLCID=" & val(TXTTblLCID.Text) & "  and MarginNo = " & val(.TextMatrix(i, .ColIndex("MarginNo")))
               '  Cn.Execute s
                 
                 
@@ -6458,7 +6467,7 @@ With mGrid
 
                 
                 s = "Update TBLLCMargin Set StillAmount =Amount - PayedAmount "
-                s = s & " where TblLCID=" & val(TXTTblLCID.text) & "   and MarginNo = " & val(.TextMatrix(i, .ColIndex("MarginNo")))
+                s = s & " where TblLCID=" & val(TXTTblLCID.Text) & "   and MarginNo = " & val(.TextMatrix(i, .ColIndex("MarginNo")))
                 Cn.Execute s
 
 
@@ -6476,7 +6485,7 @@ End With
 End Sub
 
 
-Private Sub CreateEntry(ByVal mRow As Long, ByVal TypeGrid As Long, ByVal index As Long)
+Private Sub CreateEntry(ByVal mRow As Long, ByVal TypeGrid As Long, ByVal Index As Long)
 
 Dim i As Long
 
@@ -6544,7 +6553,7 @@ With mGrid
     For i = mRow To mRow
         mNoteSerial = val(.TextMatrix(i, .ColIndex("NoteSerial")))
         If TypeGrid < 3 Or TypeGrid = 6 Then
-            If index = 0 Then
+            If Index = 0 Then
                 Notevalue = val(.TextMatrix(i, .ColIndex("Amount")))
             Else
                 Notevalue = val(.TextMatrix(i, .ColIndex("PayedAmount")))
@@ -6572,25 +6581,25 @@ With mGrid
         
         'If (mNoteSerial = 0 And Notevalue <> 0) Then
         If (Notevalue <> 0) Then
-            createVoucher2 i, index, TypeGrid
+            createVoucher2 i, Index, TypeGrid
             
             If TypeGrid < 3 Or TypeGrid = 6 Then
-                    If index = 1 Then
+                    If Index = 1 Then
                         s = "Update " & mTableName & "  Set PayedAmount = PayedAmount + " & val(.TextMatrix(i, .ColIndex("PayedAmount")))
                        ' s = s & " ,IsFullPayed = " & val(.TextMatrix(i, .ColIndex("IsFullPayed")))
-                        s = s & " where TblLCID=" & val(TXTTblLCID.text) & "  and MarginNo = " & val(.TextMatrix(i, .ColIndex("MarginNo")))
+                        s = s & " where TblLCID=" & val(TXTTblLCID.Text) & "  and MarginNo = " & val(.TextMatrix(i, .ColIndex("MarginNo")))
                       '  Cn.Execute s
                         
         '
                       
                         
                         s = "Update TBLLCMargin Set StillAmount =Amount - PayedAmount "
-                        s = s & " where TblLCID=" & val(TXTTblLCID.text) & "  and MarginNo = " & val(.TextMatrix(i, .ColIndex("MarginNo")))
+                        s = s & " where TblLCID=" & val(TXTTblLCID.Text) & "  and MarginNo = " & val(.TextMatrix(i, .ColIndex("MarginNo")))
                         Cn.Execute s
         
         
                         s = "Update TBLLCMargin2 Set StillAmount =Amount - PayedAmount "
-                        s = s & " where TblLCID=" & val(TXTTblLCID.text) & "  and MarginNo = " & val(.TextMatrix(i, .ColIndex("MarginNo")))
+                        s = s & " where TblLCID=" & val(TXTTblLCID.Text) & "  and MarginNo = " & val(.TextMatrix(i, .ColIndex("MarginNo")))
                         Cn.Execute s
         
 '
@@ -6630,11 +6639,11 @@ End With
   With mGrid
     For i = mRow To mRow
         
-        If index = 1 Then
+        If Index = 1 Then
                 If val(.TextMatrix(i, .ColIndex("IsFullPayed"))) = 1 Then
                     s = "Update " & mTableName & "  Set "
                     s = s & " IsFullPayed = " & val(.TextMatrix(i, .ColIndex("IsFullPayed")))
-                    s = s & " where TblLCID=" & val(TXTTblLCID.text) & "  and MarginNo = " & val(.TextMatrix(i, .ColIndex("MarginNo")))
+                    s = s & " where TblLCID=" & val(TXTTblLCID.Text) & "  and MarginNo = " & val(.TextMatrix(i, .ColIndex("MarginNo")))
                     
                     Cn.Execute s
                 
@@ -6656,9 +6665,9 @@ Dim Msg As String
         X = MsgBox(Msg, vbCritical + vbYesNo)
 
       If X = vbYes Then
-        StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(Me.TXTNoteID.text)
+        StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(Me.TXTNoteID.Text)
         Cn.Execute StrSQL, , adExecuteNoRecords
-        StrSQL = "Delete From Notes Where NoteID=" & val(Me.TXTNoteID.text)
+        StrSQL = "Delete From Notes Where NoteID=" & val(Me.TXTNoteID.Text)
         Cn.Execute StrSQL, , adExecuteNoRecords
        ' Cn.Execute " Update TblLC set NoteID=null ,NoteSerial=null where TblLCID=" & val(TXTTblLCID.text)
         rs!NoteID = Null
@@ -6669,8 +6678,8 @@ Dim Msg As String
         TXTNoteID = ""
         rs.Requery
          
-         FindRec val(TXTTblLCID.text)
-         TxtModFlg.text = ""
+         FindRec val(TXTTblLCID.Text)
+         TxtModFlg.Text = ""
          TxtNoteSerial = ""
           If SystemOptions.UserInterface = ArabicInterface Then
             Msg = " „  Õ–› «·ﬁÌœ   "
@@ -6699,7 +6708,7 @@ Public Function FindRec(ByVal RecId As Long)
     On Error GoTo ErrTrap
     
     'rs.Find "ID=" & RecID, , adSearchForward, 1
-    rs.Find "TblLCID=" & val(TXTTblLCID.text), , adSearchForward, adBookmarkFirst
+    rs.Find "TblLCID=" & val(TXTTblLCID.Text), , adSearchForward, adBookmarkFirst
     If Not (rs.EOF) Then
         FiLLTXT
         Retrive
@@ -6779,11 +6788,11 @@ Private Sub Command3_Click()
 End Sub
 
 Private Sub Command4_Click()
-ShowGL_cc Me.txtNoteSerialOpen.text, , 22010
+ShowGL_cc Me.txtNoteSerialOpen.Text, , 22010
 End Sub
 
 Private Sub Command6_Click()
-If Me.TxtModFlg.text = "R" Or Me.TxtModFlg.text = "" Then
+If Me.TxtModFlg.Text = "R" Or Me.TxtModFlg.Text = "" Then
 Dim X As Integer
 Dim Msg As String
     If SystemOptions.UserInterface = ArabicInterface Then
@@ -6794,9 +6803,9 @@ Dim Msg As String
         X = MsgBox(Msg, vbCritical + vbYesNo)
 
       If X = vbYes Then
-        StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(Me.txtNoteIDOpen.text)
+        StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(Me.txtNoteIDOpen.Text)
         Cn.Execute StrSQL, , adExecuteNoRecords
-        StrSQL = "Delete From Notes Where NoteID=" & val(Me.txtNoteIDOpen.text)
+        StrSQL = "Delete From Notes Where NoteID=" & val(Me.txtNoteIDOpen.Text)
         Cn.Execute StrSQL, , adExecuteNoRecords
        ' Cn.Execute " Update TblLC set NoteIDOpen=null ,NoteSerialOpen=null where TblLCID=" & val(TXTTblLCID.text)
         rs!NoteIDOpen = Null
@@ -6805,8 +6814,8 @@ Dim Msg As String
         txtNoteSerialOpen = ""
         txtNoteIDOpen = ""
         rs.Requery
-         FindRec val(TXTTblLCID.text)
-         TxtModFlg.text = ""
+         FindRec val(TXTTblLCID.Text)
+         TxtModFlg.Text = ""
          txtNoteSerialOpen = ""
           If SystemOptions.UserInterface = ArabicInterface Then
             Msg = " „  Õ–› «·ﬁÌœ   "
@@ -6841,7 +6850,7 @@ Translatefrm Me
 End Sub
 
 Private Sub Command9_Click()
-ShowGL_cc Me.TxtNoteSerial.text, , 200
+ShowGL_cc Me.TxtNoteSerial.Text, , 200
 End Sub
 
 
@@ -6856,7 +6865,7 @@ Private Sub DBCboClientName_KeyUp(KeyCode As Integer, Shift As Integer)
 End Sub
 
 Private Sub dbFromDate_Change()
-If Me.TxtModFlg.text = "" Or Me.TxtModFlg.text = "R" Then Exit Sub
+If Me.TxtModFlg.Text = "" Or Me.TxtModFlg.Text = "R" Then Exit Sub
     txtGuaranteeDate.value = dbFromDate.value
 txtGuaranteeDate_Change
 End Sub
@@ -6875,11 +6884,11 @@ End Sub
 
 Private Sub DcCurrency_Change()
 
-    If Me.TxtModFlg.text = "" Or Me.TxtModFlg.text = "R" Then Exit Sub
+    If Me.TxtModFlg.Text = "" Or Me.TxtModFlg.Text = "R" Then Exit Sub
     If Me.Dccurrency.BoundText <> "" Then
-        txt_Currency_rate.text = get_currency_rate(Me.Dccurrency.BoundText)
+        txt_Currency_rate.Text = get_currency_rate(Me.Dccurrency.BoundText)
     Else
-        txt_Currency_rate.text = 1
+        txt_Currency_rate.Text = 1
     End If
 
 End Sub
@@ -6890,7 +6899,7 @@ End Sub
 
 
 Private Sub DCLC_Change()
-If Me.TxtModFlg.text = "" Or Me.TxtModFlg.text = "R" Then Exit Sub
+If Me.TxtModFlg.Text = "" Or Me.TxtModFlg.Text = "R" Then Exit Sub
     s = "Select * from LCTypes  Where Id = " & val(DCLC.BoundText)
     Set rsDummy = New ADODB.Recordset
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
@@ -6915,20 +6924,20 @@ Private Sub DCPreFix_Click(Area As Integer)
 
     Dim Dcombos As ClsDataCombos
     Set Dcombos = New ClsDataCombos
-    Dcombos.GetLCTypesName Me.DCLC, " prifix = '" & Trim(DCPreFix.text) & "'"
+    Dcombos.GetLCTypesName Me.DCLC, " prifix = '" & Trim(DCPreFix.Text) & "'"
     
     
 End Sub
 
 Private Sub DpCloseDate_Change()
-If Me.TxtModFlg.text = "" Or Me.TxtModFlg.text = "R" Then Exit Sub
+If Me.TxtModFlg.Text = "" Or Me.TxtModFlg.Text = "R" Then Exit Sub
     txtLGExpiryDate.value = DpCloseDate.value
     txtLGExpPeriod = DateDiff("D", txtGuaranteeDate.value, txtLGExpiryDate.value)
 
 End Sub
 
 
-Private Sub GrdBondHistory_AfterEdit(ByVal row As Long, ByVal Col As Long)
+Private Sub GrdBondHistory_AfterEdit(ByVal Row As Long, ByVal Col As Long)
    Dim StrAccountCode As String
     Dim Msg As String
     Dim rs As New ADODB.Recordset
@@ -6943,15 +6952,15 @@ Private Sub GrdBondHistory_AfterEdit(ByVal row As Long, ByVal Col As Long)
          
            Case "AmountPlus"
             End Select
-            If row > 1 Then
-                .TextMatrix(row, .ColIndex("GuaranteeAmount")) = .TextMatrix(row - 1, .ColIndex("Total"))
+            If Row > 1 Then
+                .TextMatrix(Row, .ColIndex("GuaranteeAmount")) = .TextMatrix(Row - 1, .ColIndex("Total"))
             'ElseIf row > 2 Then
             
             End If
-            .TextMatrix(row, .ColIndex("Total")) = val(.TextMatrix(row, .ColIndex("GuaranteeAmount"))) + val(.TextMatrix(row, .ColIndex("AmountPlus"))) - val(.TextMatrix(row, .ColIndex("AmountMin")))
+            .TextMatrix(Row, .ColIndex("Total")) = val(.TextMatrix(Row, .ColIndex("GuaranteeAmount"))) + val(.TextMatrix(Row, .ColIndex("AmountPlus"))) - val(.TextMatrix(Row, .ColIndex("AmountMin")))
             
-            Me.txtTotalBondHistory.text = .TextMatrix(.rows - 2, .ColIndex("Total"))   '.Aggregate(flexSTSum, .FixedRows, .ColIndex("Total"), .rows - 1, .ColIndex("Total"))
-             If row = .rows - 1 Then
+            Me.txtTotalBondHistory.Text = .TextMatrix(.rows - 2, .ColIndex("Total"))   '.Aggregate(flexSTSum, .FixedRows, .ColIndex("Total"), .rows - 1, .ColIndex("Total"))
+             If Row = .rows - 1 Then
                 .rows = .rows + 1
             End If
             txtBondAmt = txtTotalBondHistory
@@ -6963,11 +6972,11 @@ Private Sub GrdBondHistory_AfterEdit(ByVal row As Long, ByVal Col As Long)
 End Sub
 
 
-Private Sub GrdBondHistory_BeforeEdit(ByVal row As Long, ByVal Col As Long, Cancel As Boolean)
+Private Sub GrdBondHistory_BeforeEdit(ByVal Row As Long, ByVal Col As Long, Cancel As Boolean)
   With GrdBondHistory
 
-        If row > .FixedRows Then
-             If val(.TextMatrix(row, .ColIndex("NoteSerial"))) <> 0 And .ColKey(Col) <> "NoteSerial" Then
+        If Row > .FixedRows Then
+             If val(.TextMatrix(Row, .ColIndex("NoteSerial"))) <> 0 And .ColKey(Col) <> "NoteSerial" Then
                   Cancel = True
                   Exit Sub
               End If
@@ -7001,26 +7010,26 @@ Private Sub GrdBondHistory_BeforeEdit(ByVal row As Long, ByVal Col As Long, Canc
 
 End Sub
 
-Private Sub GrdBondHistory_CellButtonClick(ByVal row As Long, ByVal Col As Long)
+Private Sub GrdBondHistory_CellButtonClick(ByVal Row As Long, ByVal Col As Long)
 With GrdBondHistory
 Select Case .ColKey(Col)
        Case "NoteSerial"
 '                                  LngRow = Row
-        ShowGL_cc val(.TextMatrix(row, .ColIndex("NoteSerial"))), , 22004
+        ShowGL_cc val(.TextMatrix(Row, .ColIndex("NoteSerial"))), , 22004
  
     Case "CreateNote2"
-        If val(.TextMatrix(row, .ColIndex("NoteId2"))) = 0 And val(.TextMatrix(row, .ColIndex("PayedAmount"))) <> 0 Then
-            CreateEntry row, 1, 0
+        If val(.TextMatrix(Row, .ColIndex("NoteId2"))) = 0 And val(.TextMatrix(Row, .ColIndex("PayedAmount"))) <> 0 Then
+            CreateEntry Row, 1, 0
         End If
     Case "CreateNote"
-        If val(.TextMatrix(row, .ColIndex("NoteId"))) = 0 And val(.TextMatrix(row, .ColIndex("Total"))) <> 0 Then
-            CreateEntry row, 3, 0
+        If val(.TextMatrix(Row, .ColIndex("NoteId"))) = 0 And val(.TextMatrix(Row, .ColIndex("Total"))) <> 0 Then
+            CreateEntry Row, 3, 0
         End If
     Case "DeleteEntry"
-        s = "Delete Notes where NoteId = " & val(.TextMatrix(row, .ColIndex("NoteId")))
+        s = "Delete Notes where NoteId = " & val(.TextMatrix(Row, .ColIndex("NoteId")))
         Cn.Execute s
-        .TextMatrix(row, .ColIndex("NoteId")) = ""
-        .TextMatrix(row, .ColIndex("NoteSerial")) = ""
+        .TextMatrix(Row, .ColIndex("NoteId")) = ""
+        .TextMatrix(Row, .ColIndex("NoteSerial")) = ""
         
         MsgBox " „ Õ–› «·ﬁÌœ"
  End Select
@@ -7031,11 +7040,11 @@ End Sub
 
 
 
-Private Sub GrdMargin3_BeforeEdit(ByVal row As Long, ByVal Col As Long, Cancel As Boolean)
+Private Sub GrdMargin3_BeforeEdit(ByVal Row As Long, ByVal Col As Long, Cancel As Boolean)
   With GrdMargin3
 
-        If row > .FixedRows Then
-             If val(.TextMatrix(row, .ColIndex("NoteSerial"))) <> 0 And .ColKey(Col) <> "NoteSerial" Then
+        If Row > .FixedRows Then
+             If val(.TextMatrix(Row, .ColIndex("NoteSerial"))) <> 0 And .ColKey(Col) <> "NoteSerial" Then
                   Cancel = True
                   Exit Sub
               End If
@@ -7069,34 +7078,34 @@ Private Sub GrdMargin3_BeforeEdit(ByVal row As Long, ByVal Col As Long, Cancel A
 
 End Sub
 
-Private Sub GrdMargin3_CellButtonClick(ByVal row As Long, ByVal Col As Long)
+Private Sub GrdMargin3_CellButtonClick(ByVal Row As Long, ByVal Col As Long)
 
-Dim Frm As New FrmDateOpProject, mIDD As Long, mUserID As Long, mDate As Date, mTime As Date
+Dim Frm As New FrmDateOpProject, mIDD As Long, mUserId As Long, mDate As Date, mTime As Date
 With GrdMargin3
 Select Case .ColKey(Col)
         Case "GuaranteeDate"
             
-            Frm.index = 610
-            Me.LngRow = row
+            Frm.Index = 610
+            Me.LngRow = Row
             Frm.show 1
-            GrdMargin3_AfterEdit row, Col
+            GrdMargin3_AfterEdit Row, Col
        Case "NoteSerial"
 '                                  LngRow = Row
-        ShowGL_cc val(.TextMatrix(row, .ColIndex("NoteSerial"))), , 22006
+        ShowGL_cc val(.TextMatrix(Row, .ColIndex("NoteSerial"))), , 22006
  
     Case "CreateNote2"
-        If val(.TextMatrix(row, .ColIndex("NoteId2"))) = 0 And val(.TextMatrix(row, .ColIndex("PayedAmount"))) <> 0 Then
-            CreateEntry row, 1, 0
+        If val(.TextMatrix(Row, .ColIndex("NoteId2"))) = 0 And val(.TextMatrix(Row, .ColIndex("PayedAmount"))) <> 0 Then
+            CreateEntry Row, 1, 0
         End If
     Case "CreateNote"
-        If val(.TextMatrix(row, .ColIndex("TotalAmount"))) <> 0 Then
+        If val(.TextMatrix(Row, .ColIndex("TotalAmount"))) <> 0 Then
          '   CreateEntry row, 4, 0
         End If
        Case "DeleteEntry"
-        s = "Delete Notes where NoteId = " & val(.TextMatrix(row, .ColIndex("NoteId")))
+        s = "Delete Notes where NoteId = " & val(.TextMatrix(Row, .ColIndex("NoteId")))
         Cn.Execute s
-        .TextMatrix(row, .ColIndex("NoteId")) = ""
-        .TextMatrix(row, .ColIndex("NoteSerial")) = ""
+        .TextMatrix(Row, .ColIndex("NoteId")) = ""
+        .TextMatrix(Row, .ColIndex("NoteSerial")) = ""
         
         MsgBox " „ Õ–› «·ﬁÌœ"
 
@@ -7107,7 +7116,7 @@ End Sub
 
 
 
-Private Sub GrdMargin_AfterEdit(ByVal row As Long, ByVal Col As Long)
+Private Sub GrdMargin_AfterEdit(ByVal Row As Long, ByVal Col As Long)
  
     Dim StrAccountCode As String
     Dim Msg As String
@@ -7119,19 +7128,19 @@ Private Sub GrdMargin_AfterEdit(ByVal row As Long, ByVal Col As Long)
     With GrdMargin
         
         
-        If .TextMatrix(row, .ColIndex("GuaranteeDate")) = "" Then
-            .TextMatrix(row, .ColIndex("GuaranteeDate")) = txtGuaranteeDate.value
+        If .TextMatrix(Row, .ColIndex("GuaranteeDate")) = "" Then
+            .TextMatrix(Row, .ColIndex("GuaranteeDate")) = txtGuaranteeDate.value
         End If
         
-        If .TextMatrix(row, .ColIndex("BankAccountCode")) = "" Then
-            .TextMatrix(row, .ColIndex("BankAccountCode")) = txtGuaranteeDate.value
-             .TextMatrix(row, .ColIndex("BankAccountCode")) = get_bank_Account(Dcbank.BoundText, "Account_Code")
-             s = "Select * from Accounts where Account_Code = '" & Trim(.TextMatrix(row, .ColIndex("BankAccountCode"))) & "'"
+        If .TextMatrix(Row, .ColIndex("BankAccountCode")) = "" Then
+            .TextMatrix(Row, .ColIndex("BankAccountCode")) = txtGuaranteeDate.value
+             .TextMatrix(Row, .ColIndex("BankAccountCode")) = get_bank_Account(Dcbank.BoundText, "Account_Code")
+             s = "Select * from Accounts where Account_Code = '" & Trim(.TextMatrix(Row, .ColIndex("BankAccountCode"))) & "'"
              Set rsDummy = New ADODB.Recordset
              rsDummy.Open s, Cn, adOpenForwardOnly, adLockReadOnly
              If Not rsDummy.EOF Then
-                .TextMatrix(row, .ColIndex("BankAccountSerial")) = Trim(rsDummy!account_serial & "")
-                .TextMatrix(row, .ColIndex("BankAccount")) = Trim(rsDummy!account_name & "")
+                .TextMatrix(Row, .ColIndex("BankAccountSerial")) = Trim(rsDummy!account_serial & "")
+                .TextMatrix(Row, .ColIndex("BankAccount")) = Trim(rsDummy!account_name & "")
              End If
              
 
@@ -7144,20 +7153,20 @@ Private Sub GrdMargin_AfterEdit(ByVal row As Long, ByVal Col As Long)
         
          
           Case "MarginAccountSerial"
-                s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Serial = N'" & Trim(GrdMargin.TextMatrix(row, Col)) & "'"
+                s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Serial = N'" & Trim(GrdMargin.TextMatrix(Row, Col)) & "'"
                 Set rsDummy = New ADODB.Recordset
                 rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
                 If Not rsDummy.EOF Then
 
 
-                    GrdMargin.TextMatrix(row, GrdMargin.ColIndex("MarginAccount")) = Trim(rsDummy!account_name & "")
-                    GrdMargin.TextMatrix(row, GrdMargin.ColIndex("MarginAccountCode")) = Trim(rsDummy!Account_code & "")
+                    GrdMargin.TextMatrix(Row, GrdMargin.ColIndex("MarginAccount")) = Trim(rsDummy!account_name & "")
+                    GrdMargin.TextMatrix(Row, GrdMargin.ColIndex("MarginAccountCode")) = Trim(rsDummy!Account_code & "")
                 End If
                 
            Case "MarginAccount"
                 StrAccountCode = .ComboData
                 LngRow = .FindRow(StrAccountCode, .FixedRows, .ColIndex("MarginAccountCode"), False, True)
-                .TextMatrix(row, .ColIndex("MarginAccountCode")) = StrAccountCode
+                .TextMatrix(Row, .ColIndex("MarginAccountCode")) = StrAccountCode
  
                 s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Code = N'" & Trim(StrAccountCode) & "'"
                 Set rsDummy = New ADODB.Recordset
@@ -7166,23 +7175,23 @@ Private Sub GrdMargin_AfterEdit(ByVal row As Long, ByVal Col As Long)
 
 
                     'GrdMargin2.TextMatrix(row, GrdMargin2.ColIndex("MarginAccount")) = Trim(rsDummy!account_name & "")
-                    GrdMargin.TextMatrix(row, GrdMargin.ColIndex("MarginAccountSerial")) = Trim(rsDummy!account_serial & "")
+                    GrdMargin.TextMatrix(Row, GrdMargin.ColIndex("MarginAccountSerial")) = Trim(rsDummy!account_serial & "")
                 End If
  
             Case "BankAccountSerial"
-                s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Serial = N'" & Trim(GrdMargin.TextMatrix(row, Col)) & "'"
+                s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Serial = N'" & Trim(GrdMargin.TextMatrix(Row, Col)) & "'"
                 Set rsDummy = New ADODB.Recordset
                 rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
                 If Not rsDummy.EOF Then
 
 
-                    GrdMargin.TextMatrix(row, GrdMargin.ColIndex("BankAccount")) = Trim(rsDummy!account_name & "")
-                    GrdMargin.TextMatrix(row, GrdMargin.ColIndex("BankAccountCode")) = Trim(rsDummy!Account_code & "")
+                    GrdMargin.TextMatrix(Row, GrdMargin.ColIndex("BankAccount")) = Trim(rsDummy!account_name & "")
+                    GrdMargin.TextMatrix(Row, GrdMargin.ColIndex("BankAccountCode")) = Trim(rsDummy!Account_code & "")
                 End If
            Case "BankAccount"
                 StrAccountCode = .ComboData
                 LngRow = .FindRow(StrAccountCode, .FixedRows, .ColIndex("BankAccountCode"), False, True)
-                .TextMatrix(row, .ColIndex("BankAccountCode")) = StrAccountCode
+                .TextMatrix(Row, .ColIndex("BankAccountCode")) = StrAccountCode
                 s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Code = N'" & Trim(StrAccountCode) & "'"
                 Set rsDummy = New ADODB.Recordset
                 rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
@@ -7190,16 +7199,16 @@ Private Sub GrdMargin_AfterEdit(ByVal row As Long, ByVal Col As Long)
 
 
                     'GrdMargin2.TextMatrix(row, GrdMargin2.ColIndex("MarginAccount")) = Trim(rsDummy!account_name & "")
-                    GrdMargin.TextMatrix(row, GrdMargin.ColIndex("BankAccountSerial")) = Trim(rsDummy!account_serial & "")
+                    GrdMargin.TextMatrix(Row, GrdMargin.ColIndex("BankAccountSerial")) = Trim(rsDummy!account_serial & "")
                 End If
             Case "AccountName"
                 '  .TextMatrix(Row, .ColIndex("userid")) = user_id
                         
                 StrAccountCode = .ComboData
                 LngRow = .FindRow(StrAccountCode, .FixedRows, .ColIndex("AccountCode"), False, True)
-                .TextMatrix(row, .ColIndex("AccountCode")) = StrAccountCode
-                .TextMatrix(row, .ColIndex("ExpensesID")) = get_Expenses_id(StrAccountCode)
-                .TextMatrix(row, .ColIndex("LineNo1")) = setfoxy_Line
+                .TextMatrix(Row, .ColIndex("AccountCode")) = StrAccountCode
+                .TextMatrix(Row, .ColIndex("ExpensesID")) = get_Expenses_id(StrAccountCode)
+                .TextMatrix(Row, .ColIndex("LineNo1")) = setfoxy_Line
 
                 If SystemOptions.UserInterface = ArabicInterface Then
                     StrSQL = "select * from Expenses_accounts where Account_Code='" & StrAccountCode & "'"
@@ -7233,22 +7242,22 @@ Private Sub GrdMargin_AfterEdit(ByVal row As Long, ByVal Col As Long)
 
         ' Me.XPTxtVal.text = Format(Me.XPTxtVal.text, SystemOptions.SysDefCurrencyForamt)
         'to Add new row if needed
-        If row = .rows - 1 Then
+        If Row = .rows - 1 Then
             .rows = .rows + 1
         End If
           
         ' ReLineGrid
     End With
-    Me.txtMarginTotal.text = GrdMargin.Aggregate(flexSTSum, GrdMargin.FixedRows, GrdMargin.ColIndex("Amount"), GrdMargin.rows - 1, GrdMargin.ColIndex("Amount"))
+    Me.txtMarginTotal.Text = GrdMargin.Aggregate(flexSTSum, GrdMargin.FixedRows, GrdMargin.ColIndex("Amount"), GrdMargin.rows - 1, GrdMargin.ColIndex("Amount"))
     'ReLineGrid
 
 
 End Sub
 
-Private Sub GrdMargin_BeforeEdit(ByVal row As Long, ByVal Col As Long, Cancel As Boolean)
+Private Sub GrdMargin_BeforeEdit(ByVal Row As Long, ByVal Col As Long, Cancel As Boolean)
   With GrdMargin
 
-        If row > .FixedRows Then
+        If Row > .FixedRows Then
             '  If .TextMatrix(Row - 1, .ColIndex("AccountCode")) = "" Then
             '      Cancel = True
             '  End If
@@ -7279,25 +7288,25 @@ Private Sub GrdMargin_BeforeEdit(ByVal row As Long, ByVal Col As Long, Cancel As
     End With
 End Sub
 
-Private Sub GrdMargin_CellButtonClick(ByVal row As Long, ByVal Col As Long)
+Private Sub GrdMargin_CellButtonClick(ByVal Row As Long, ByVal Col As Long)
 
-Dim Frm As New FrmDateOpProject, mIDD As Long, mUserID As Long, mDate As Date, mTime As Date
+Dim Frm As New FrmDateOpProject, mIDD As Long, mUserId As Long, mDate As Date, mTime As Date
 
 With GrdMargin
 Select Case .ColKey(Col)
        
         Case "GuaranteeDate"
             
-            Frm.index = 611
-            Me.LngRow = row
+            Frm.Index = 611
+            Me.LngRow = Row
             Frm.show 1
        
        Case "NoteSerial"
                                  ' LngRow = Row
-        ShowGL_cc val(.TextMatrix(row, .ColIndex("NoteSerial"))), , 22002
+        ShowGL_cc val(.TextMatrix(Row, .ColIndex("NoteSerial"))), , 22002
      Case "CreateNote"
-        If val(.TextMatrix(row, .ColIndex("NoteId"))) = 0 And val(.TextMatrix(row, .ColIndex("Amount"))) <> 0 Then
-            CreateEntry row, 0, 0
+        If val(.TextMatrix(Row, .ColIndex("NoteId"))) = 0 And val(.TextMatrix(Row, .ColIndex("Amount"))) <> 0 Then
+            CreateEntry Row, 0, 0
         End If
  End Select
 End With
@@ -7335,7 +7344,7 @@ Private Sub GrdMargin_KeyUp(KeyCode As Integer, Shift As Integer)
 
 End Sub
 
-Private Sub GrdMargin_StartEdit(ByVal row As Long, ByVal Col As Long, Cancel As Boolean)
+Private Sub GrdMargin_StartEdit(ByVal Row As Long, ByVal Col As Long, Cancel As Boolean)
     Dim rs As New ADODB.Recordset
     Dim Rs1 As New ADODB.Recordset
 
@@ -7467,7 +7476,7 @@ End Sub
  '------------------------
  
  
-Private Sub GrdMargin2_AfterEdit(ByVal row As Long, ByVal Col As Long)
+Private Sub GrdMargin2_AfterEdit(ByVal Row As Long, ByVal Col As Long)
  
     Dim StrAccountCode As String
     Dim Msg As String
@@ -7486,16 +7495,16 @@ Private Sub GrdMargin2_AfterEdit(ByVal row As Long, ByVal Col As Long)
         
     End If
     With GrdMargin2
-        If .TextMatrix(row, .ColIndex("GuaranteeDate")) = "" Then
-            .TextMatrix(row, .ColIndex("GuaranteeDate")) = txtGuaranteeDate.value
+        If .TextMatrix(Row, .ColIndex("GuaranteeDate")) = "" Then
+            .TextMatrix(Row, .ColIndex("GuaranteeDate")) = txtGuaranteeDate.value
         End If
         
             
             
        
-        If .TextMatrix(row, .ColIndex("BankAccountCode")) = "" Then
-            .TextMatrix(row, .ColIndex("BankAccountCode")) = txtGuaranteeDate.value
-             s = "SELECT AcceptAccount_Code,accounts.Account_Name,accounts.Account_Serial, * FROM TblLC tl Inner join accounts On tl.AcceptAccount_Code = accounts.Account_Code WHERE tl.TblLCID = " & val(TXTTblLCID.text)
+        If .TextMatrix(Row, .ColIndex("BankAccountCode")) = "" Then
+            .TextMatrix(Row, .ColIndex("BankAccountCode")) = txtGuaranteeDate.value
+             s = "SELECT AcceptAccount_Code,accounts.Account_Name,accounts.Account_Serial, * FROM TblLC tl Inner join accounts On tl.AcceptAccount_Code = accounts.Account_Code WHERE tl.TblLCID = " & val(TXTTblLCID.Text)
             Set rsDummy = New ADODB.Recordset
             rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
             If Not rsDummy.EOF Then
@@ -7521,8 +7530,8 @@ Private Sub GrdMargin2_AfterEdit(ByVal row As Long, ByVal Col As Long)
 
         Select Case .ColKey(Col)
             Case "OrderDate"
-                If IsDate(.TextMatrix(row, .ColIndex("OrderDate"))) Then
-                    .TextMatrix(row, .ColIndex("GuaranteeDate")) = DateAdd("D", val(txtAcceptianPeriod), .TextMatrix(row, .ColIndex("OrderDate")))
+                If IsDate(.TextMatrix(Row, .ColIndex("OrderDate"))) Then
+                    .TextMatrix(Row, .ColIndex("GuaranteeDate")) = DateAdd("D", val(txtAcceptianPeriod), .TextMatrix(Row, .ColIndex("OrderDate")))
                 End If
             Case "MarginNo"
             
@@ -7536,13 +7545,13 @@ Private Sub GrdMargin2_AfterEdit(ByVal row As Long, ByVal Col As Long)
                 StrSQL = StrSQL & "   left outer join accounts CC4 On CC4.Account_Code = TBLLCMargin.BankAccountCode2"
 
                 'StrSQL = StrSQL & "   Where MarginNo = " & val(.TextMatrix(row, .ColIndex("MarginNo"))) & " and IsNull(TBLLCMargin.Amount,0) - IsNull(TBLLCMargin.PayedAmount,0) > 0  and TblLCID=" & val(TXTTblLCID.text)
-                StrSQL = StrSQL & "   Where MarginNo = " & val(.TextMatrix(row, .ColIndex("MarginNo"))) & " and IsNull(TBLLCMargin.IsFullPayed,0) = 1  and TBLLCMargin.TblLCID=" & val(TXTTblLCID.text)
+                StrSQL = StrSQL & "   Where MarginNo = " & val(.TextMatrix(Row, .ColIndex("MarginNo"))) & " and IsNull(TBLLCMargin.IsFullPayed,0) = 1  and TBLLCMargin.TblLCID=" & val(TXTTblLCID.Text)
                 StrSQL = StrSQL & "   Order by TBLLCMargin.ID desc"
                 Set rsDummy = New ADODB.Recordset
                 rsDummy.Open StrSQL, Cn, adOpenStatic, adLockReadOnly
                 If Not rsDummy.EOF Then
-                    MsgBox "«·›« Ê—… —ﬁ„ " & val(.TextMatrix(row, .ColIndex("MarginNo"))) & " ·Â–« «·«⁄ „«œ  „ ”œ«œÂ« »«·ﬂ«„·"
-                     .TextMatrix(row, .ColIndex("MarginNo")) = ""
+                    MsgBox "«·›« Ê—… —ﬁ„ " & val(.TextMatrix(Row, .ColIndex("MarginNo"))) & " ·Â–« «·«⁄ „«œ  „ ”œ«œÂ« »«·ﬂ«„·"
+                     .TextMatrix(Row, .ColIndex("MarginNo")) = ""
                      Exit Sub
                 End If
                 rsDummy.Close
@@ -7555,71 +7564,71 @@ Private Sub GrdMargin2_AfterEdit(ByVal row As Long, ByVal Col As Long)
                 StrSQL = StrSQL & "   left outer join accounts CC4 On CC4.Account_Code = TBLLCMargin.BankAccountCode2"
 
                 'StrSQL = StrSQL & "   Where MarginNo = " & val(.TextMatrix(row, .ColIndex("MarginNo"))) & " and IsNull(TBLLCMargin.Amount,0) - IsNull(TBLLCMargin.PayedAmount,0) > 0  and TblLCID=" & val(TXTTblLCID.text)
-                StrSQL = StrSQL & "   Where MarginNo = " & val(.TextMatrix(row, .ColIndex("MarginNo"))) & " and IsNull(TBLLCMargin.IsFullPayed,0) = 0  and TBLLCMargin.TblLCID=" & val(TXTTblLCID.text)
+                StrSQL = StrSQL & "   Where MarginNo = " & val(.TextMatrix(Row, .ColIndex("MarginNo"))) & " and IsNull(TBLLCMargin.IsFullPayed,0) = 0  and TBLLCMargin.TblLCID=" & val(TXTTblLCID.Text)
                 StrSQL = StrSQL & "   Order by TBLLCMargin.ID desc"
                 Set rsDummy = New ADODB.Recordset
                 rsDummy.Open StrSQL, Cn, adOpenStatic, adLockReadOnly
                 If rsDummy.EOF Then
                  '   MsgBox "Â–« «·ﬁ—÷ €Ì— „”Ã· „‰ ﬁ»·"
-                    .TextMatrix(row, .ColIndex("MarginAccountCode")) = get_bank_Account(Dcbank.BoundText, "Account_Code")
-                    .TextMatrix(row, .ColIndex("MarginAccount")) = Dcbank.text
+                    .TextMatrix(Row, .ColIndex("MarginAccountCode")) = get_bank_Account(Dcbank.BoundText, "Account_Code")
+                    .TextMatrix(Row, .ColIndex("MarginAccount")) = Dcbank.Text
                     
                     
                      
-                    .TextMatrix(row, .ColIndex("BankAccountCode2")) = .TextMatrix(row, .ColIndex("MarginAccountCode"))
-                    .TextMatrix(row, .ColIndex("BankAccount2")) = .TextMatrix(row, .ColIndex("MarginAccount"))
+                    .TextMatrix(Row, .ColIndex("BankAccountCode2")) = .TextMatrix(Row, .ColIndex("MarginAccountCode"))
+                    .TextMatrix(Row, .ColIndex("BankAccount2")) = .TextMatrix(Row, .ColIndex("MarginAccount"))
                     
                 'End If
                     
        
                 Else
 
-                    .TextMatrix(row, .ColIndex("BankAccount")) = rsDummy!BankAccount & ""
-                    .TextMatrix(row, .ColIndex("BankAccountSerial")) = rsDummy!BankAccountSerial & ""
-                    .TextMatrix(row, .ColIndex("BankAccountCode")) = rsDummy!BankAccountCode & ""
+                    .TextMatrix(Row, .ColIndex("BankAccount")) = rsDummy!BankAccount & ""
+                    .TextMatrix(Row, .ColIndex("BankAccountSerial")) = rsDummy!BankAccountSerial & ""
+                    .TextMatrix(Row, .ColIndex("BankAccountCode")) = rsDummy!BankAccountCode & ""
 
-                    .TextMatrix(row, .ColIndex("BankAccount2")) = rsDummy!BankAccount2 & ""
-                    .TextMatrix(row, .ColIndex("BankAccountSerial2")) = rsDummy!BankAccountSerial2 & ""
-                    .TextMatrix(row, .ColIndex("BankAccountCode2")) = rsDummy!BankAccountCode2 & ""
+                    .TextMatrix(Row, .ColIndex("BankAccount2")) = rsDummy!BankAccount2 & ""
+                    .TextMatrix(Row, .ColIndex("BankAccountSerial2")) = rsDummy!BankAccountSerial2 & ""
+                    .TextMatrix(Row, .ColIndex("BankAccountCode2")) = rsDummy!BankAccountCode2 & ""
 
 
 
-                    .TextMatrix(row, .ColIndex("MarginAccountCode")) = rsDummy!MarginAccountCode & ""
-                    .TextMatrix(row, .ColIndex("MarginAccountSerial")) = rsDummy!MarginAccountSerial & ""
-                    .TextMatrix(row, .ColIndex("MarginAccount")) = rsDummy!MarginAccount & ""
-                    .TextMatrix(row, .ColIndex("OrderDate")) = rsDummy!OrderDate & ""
-                    .TextMatrix(row, .ColIndex("GuaranteeDate")) = rsDummy!GuaranteeDate & ""
-                    .TextMatrix(row, .ColIndex("Amount")) = rsDummy!StillAmount & "" 'rsDummy!Amount & ""
-                    .TextMatrix(row, .ColIndex("PayedAmount")) = 0 'val(rsDummy!Amount & "") - val(rsDummy!StillAmount & "")
-                    .TextMatrix(row, .ColIndex("StillAmount")) = rsDummy!StillAmount & ""
+                    .TextMatrix(Row, .ColIndex("MarginAccountCode")) = rsDummy!MarginAccountCode & ""
+                    .TextMatrix(Row, .ColIndex("MarginAccountSerial")) = rsDummy!MarginAccountSerial & ""
+                    .TextMatrix(Row, .ColIndex("MarginAccount")) = rsDummy!MarginAccount & ""
+                    .TextMatrix(Row, .ColIndex("OrderDate")) = rsDummy!OrderDate & ""
+                    .TextMatrix(Row, .ColIndex("GuaranteeDate")) = rsDummy!GuaranteeDate & ""
+                    .TextMatrix(Row, .ColIndex("Amount")) = rsDummy!StillAmount & "" 'rsDummy!Amount & ""
+                    .TextMatrix(Row, .ColIndex("PayedAmount")) = 0 'val(rsDummy!Amount & "") - val(rsDummy!StillAmount & "")
+                    .TextMatrix(Row, .ColIndex("StillAmount")) = rsDummy!StillAmount & ""
                    ' .TextMatrix(row, .ColIndex("NoteID")) = rsDummy!NoteID & ""
                    ' .TextMatrix(row, .ColIndex("NoteSerial")) = rsDummy!NoteSerial & ""
                     
-                    .TextMatrix(row, .ColIndex("IsFullPayed")) = val(rsDummy!IsFullPayed & "")
+                    .TextMatrix(Row, .ColIndex("IsFullPayed")) = val(rsDummy!IsFullPayed & "")
                     
                     '.TextMatrix(Row, .ColIndex("StillAmount")) = rsDummy!StillAmount & ""
                 End If
 '
 
           Case "AccountMargen2Serial"
-                s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Serial = N'" & Trim(GrdMargin2.TextMatrix(row, Col)) & "'"
+                s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Serial = N'" & Trim(GrdMargin2.TextMatrix(Row, Col)) & "'"
                 Set rsDummy = New ADODB.Recordset
                 rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
                 If Not rsDummy.EOF Then
 
 
-                    GrdMargin2.TextMatrix(row, GrdMargin2.ColIndex("AccountMargen2Name")) = Trim(rsDummy!account_name & "")
-                    GrdMargin2.TextMatrix(row, GrdMargin2.ColIndex("AccountMargen2")) = Trim(rsDummy!Account_code & "")
+                    GrdMargin2.TextMatrix(Row, GrdMargin2.ColIndex("AccountMargen2Name")) = Trim(rsDummy!account_name & "")
+                    GrdMargin2.TextMatrix(Row, GrdMargin2.ColIndex("AccountMargen2")) = Trim(rsDummy!Account_code & "")
                 End If
            Case "MarginAccountSerial"
-                s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Serial = N'" & Trim(GrdMargin2.TextMatrix(row, Col)) & "'"
+                s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Serial = N'" & Trim(GrdMargin2.TextMatrix(Row, Col)) & "'"
                 Set rsDummy = New ADODB.Recordset
                 rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
                 If Not rsDummy.EOF Then
 
 
-                    GrdMargin2.TextMatrix(row, GrdMargin2.ColIndex("MarginAccount")) = Trim(rsDummy!account_name & "")
-                    GrdMargin2.TextMatrix(row, GrdMargin2.ColIndex("MarginAccountCode")) = Trim(rsDummy!Account_code & "")
+                    GrdMargin2.TextMatrix(Row, GrdMargin2.ColIndex("MarginAccount")) = Trim(rsDummy!account_name & "")
+                    GrdMargin2.TextMatrix(Row, GrdMargin2.ColIndex("MarginAccountCode")) = Trim(rsDummy!Account_code & "")
                 End If
                 
 '                StrAccountCode = .ComboData
@@ -7629,7 +7638,7 @@ Private Sub GrdMargin2_AfterEdit(ByVal row As Long, ByVal Col As Long)
            Case "MarginAccount"
                 StrAccountCode = .ComboData
                 LngRow = .FindRow(StrAccountCode, .FixedRows, .ColIndex("MarginAccountCode"), False, True)
-                .TextMatrix(row, .ColIndex("MarginAccountCode")) = StrAccountCode
+                .TextMatrix(Row, .ColIndex("MarginAccountCode")) = StrAccountCode
                 
                   s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Code = N'" & Trim(StrAccountCode) & "'"
                 Set rsDummy = New ADODB.Recordset
@@ -7638,13 +7647,13 @@ Private Sub GrdMargin2_AfterEdit(ByVal row As Long, ByVal Col As Long)
 
 
                     'GrdMargin2.TextMatrix(row, GrdMargin2.ColIndex("MarginAccount")) = Trim(rsDummy!account_name & "")
-                    GrdMargin2.TextMatrix(row, GrdMargin2.ColIndex("MarginAccountSerial")) = Trim(rsDummy!account_serial & "")
+                    GrdMargin2.TextMatrix(Row, GrdMargin2.ColIndex("MarginAccountSerial")) = Trim(rsDummy!account_serial & "")
                 End If
                 
            Case "AccountMargen2Name"
                 StrAccountCode = .ComboData
                 LngRow = .FindRow(StrAccountCode, .FixedRows, .ColIndex("AccountMargen2"), False, True)
-                .TextMatrix(row, .ColIndex("AccountMargen2")) = StrAccountCode
+                .TextMatrix(Row, .ColIndex("AccountMargen2")) = StrAccountCode
                 
                 
                     s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Code = N'" & Trim(StrAccountCode) & "'"
@@ -7654,13 +7663,13 @@ Private Sub GrdMargin2_AfterEdit(ByVal row As Long, ByVal Col As Long)
 
 
                     'GrdMargin2.TextMatrix(row, GrdMargin2.ColIndex("MarginAccount")) = Trim(rsDummy!account_name & "")
-                    GrdMargin2.TextMatrix(row, GrdMargin2.ColIndex("AccountMargen2Serial")) = Trim(rsDummy!account_serial & "")
+                    GrdMargin2.TextMatrix(Row, GrdMargin2.ColIndex("AccountMargen2Serial")) = Trim(rsDummy!account_serial & "")
                 End If
  
            Case "BankAccount"
                 StrAccountCode = .ComboData
                 LngRow = .FindRow(StrAccountCode, .FixedRows, .ColIndex("BankAccountCode"), False, True)
-                .TextMatrix(row, .ColIndex("BankAccountCode")) = StrAccountCode
+                .TextMatrix(Row, .ColIndex("BankAccountCode")) = StrAccountCode
                 
                    s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Code = N'" & Trim(StrAccountCode) & "'"
                 Set rsDummy = New ADODB.Recordset
@@ -7669,23 +7678,23 @@ Private Sub GrdMargin2_AfterEdit(ByVal row As Long, ByVal Col As Long)
 
 
                     'GrdMargin2.TextMatrix(row, GrdMargin2.ColIndex("MarginAccount")) = Trim(rsDummy!account_name & "")
-                    GrdMargin2.TextMatrix(row, GrdMargin2.ColIndex("BankAccountSerial")) = Trim(rsDummy!account_serial & "")
+                    GrdMargin2.TextMatrix(Row, GrdMargin2.ColIndex("BankAccountSerial")) = Trim(rsDummy!account_serial & "")
                 End If
             Case "BankAccountSerial"
-                s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Serial = N'" & Trim(GrdMargin2.TextMatrix(row, Col)) & "'"
+                s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Serial = N'" & Trim(GrdMargin2.TextMatrix(Row, Col)) & "'"
                 Set rsDummy = New ADODB.Recordset
                 rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
                 If Not rsDummy.EOF Then
 
 
-                    GrdMargin2.TextMatrix(row, GrdMargin2.ColIndex("BankAccount")) = Trim(rsDummy!account_name & "")
-                    GrdMargin2.TextMatrix(row, GrdMargin2.ColIndex("BankAccountCode")) = Trim(rsDummy!Account_code & "")
+                    GrdMargin2.TextMatrix(Row, GrdMargin2.ColIndex("BankAccount")) = Trim(rsDummy!account_name & "")
+                    GrdMargin2.TextMatrix(Row, GrdMargin2.ColIndex("BankAccountCode")) = Trim(rsDummy!Account_code & "")
                 End If
                 
             Case "BankAccount2"
                 StrAccountCode = .ComboData
                 LngRow = .FindRow(StrAccountCode, .FixedRows, .ColIndex("BankAccountCode2"), False, True)
-                .TextMatrix(row, .ColIndex("BankAccountCode")) = StrAccountCode
+                .TextMatrix(Row, .ColIndex("BankAccountCode")) = StrAccountCode
                 
                    s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Code = N'" & Trim(StrAccountCode) & "'"
                 Set rsDummy = New ADODB.Recordset
@@ -7694,17 +7703,17 @@ Private Sub GrdMargin2_AfterEdit(ByVal row As Long, ByVal Col As Long)
 
 
                     'GrdMargin2.TextMatrix(row, GrdMargin2.ColIndex("MarginAccount")) = Trim(rsDummy!account_name & "")
-                    GrdMargin2.TextMatrix(row, GrdMargin2.ColIndex("BankAccountSerial2")) = Trim(rsDummy!account_serial & "")
+                    GrdMargin2.TextMatrix(Row, GrdMargin2.ColIndex("BankAccountSerial2")) = Trim(rsDummy!account_serial & "")
                 End If
             Case "BankAccountSerial2"
-                s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Serial = N'" & Trim(GrdMargin2.TextMatrix(row, Col)) & "'"
+                s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Serial = N'" & Trim(GrdMargin2.TextMatrix(Row, Col)) & "'"
                 Set rsDummy = New ADODB.Recordset
                 rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
                 If Not rsDummy.EOF Then
 
 
-                    GrdMargin2.TextMatrix(row, GrdMargin2.ColIndex("BankAccount2")) = Trim(rsDummy!account_name & "")
-                    GrdMargin2.TextMatrix(row, GrdMargin2.ColIndex("BankAccountCode2")) = Trim(rsDummy!Account_code & "")
+                    GrdMargin2.TextMatrix(Row, GrdMargin2.ColIndex("BankAccount2")) = Trim(rsDummy!account_name & "")
+                    GrdMargin2.TextMatrix(Row, GrdMargin2.ColIndex("BankAccountCode2")) = Trim(rsDummy!Account_code & "")
                 End If
                 
 '                StrAccountCode = .ComboData
@@ -7714,9 +7723,9 @@ Private Sub GrdMargin2_AfterEdit(ByVal row As Long, ByVal Col As Long)
                         
                 StrAccountCode = .ComboData
                 LngRow = .FindRow(StrAccountCode, .FixedRows, .ColIndex("AccountCode"), False, True)
-                .TextMatrix(row, .ColIndex("AccountCode")) = StrAccountCode
-                .TextMatrix(row, .ColIndex("ExpensesID")) = get_Expenses_id(StrAccountCode)
-                .TextMatrix(row, .ColIndex("LineNo1")) = setfoxy_Line
+                .TextMatrix(Row, .ColIndex("AccountCode")) = StrAccountCode
+                .TextMatrix(Row, .ColIndex("ExpensesID")) = get_Expenses_id(StrAccountCode)
+                .TextMatrix(Row, .ColIndex("LineNo1")) = setfoxy_Line
 
                 If SystemOptions.UserInterface = ArabicInterface Then
                     StrSQL = "select * from Expenses_accounts where Account_Code='" & StrAccountCode & "'"
@@ -7736,24 +7745,24 @@ Private Sub GrdMargin2_AfterEdit(ByVal row As Long, ByVal Col As Long)
 
             Case "Amount"
                 
-                .TextMatrix(row, .ColIndex("StillAmount")) = val(.TextMatrix(row, .ColIndex("Amount"))) - val(.TextMatrix(row, .ColIndex("PayedAmount")))
-                If val(.TextMatrix(row, .ColIndex("StillAmount"))) = 0 Then
-                    .TextMatrix(row, .ColIndex("IsFullPayed")) = 1
+                .TextMatrix(Row, .ColIndex("StillAmount")) = val(.TextMatrix(Row, .ColIndex("Amount"))) - val(.TextMatrix(Row, .ColIndex("PayedAmount")))
+                If val(.TextMatrix(Row, .ColIndex("StillAmount"))) = 0 Then
+                    .TextMatrix(Row, .ColIndex("IsFullPayed")) = 1
                     .cell(flexcpBackColor, .rows - 1, 1, .rows - 1, .Cols - 1) = vbGreen
                 Else
-                    .TextMatrix(row, .ColIndex("IsFullPayed")) = 0
+                    .TextMatrix(Row, .ColIndex("IsFullPayed")) = 0
                 End If
             Case "PayedAmount"
-                If .TextMatrix(row, .ColIndex("PayDate")) = "" Then
-                    .TextMatrix(row, .ColIndex("PayDate")) = Date
+                If .TextMatrix(Row, .ColIndex("PayDate")) = "" Then
+                    .TextMatrix(Row, .ColIndex("PayDate")) = Date
                 End If
-                .TextMatrix(row, .ColIndex("StillAmount")) = val(.TextMatrix(row, .ColIndex("Amount"))) - val(.TextMatrix(row, .ColIndex("PayedAmount")))
+                .TextMatrix(Row, .ColIndex("StillAmount")) = val(.TextMatrix(Row, .ColIndex("Amount"))) - val(.TextMatrix(Row, .ColIndex("PayedAmount")))
         
-                If val(.TextMatrix(row, .ColIndex("StillAmount"))) = 0 Then
-                    .TextMatrix(row, .ColIndex("IsFullPayed")) = 1
-                    .cell(flexcpBackColor, row, 1, row, .Cols - 1) = vbGreen
+                If val(.TextMatrix(Row, .ColIndex("StillAmount"))) = 0 Then
+                    .TextMatrix(Row, .ColIndex("IsFullPayed")) = 1
+                    .cell(flexcpBackColor, Row, 1, Row, .Cols - 1) = vbGreen
                 Else
-                    .TextMatrix(row, .ColIndex("IsFullPayed")) = 0
+                    .TextMatrix(Row, .ColIndex("IsFullPayed")) = 0
                 End If
             
             Case "Amount", "Price", "ChSameCurrncy"
@@ -7774,23 +7783,23 @@ Private Sub GrdMargin2_AfterEdit(ByVal row As Long, ByVal Col As Long)
 
         ' Me.XPTxtVal.text = Format(Me.XPTxtVal.text, SystemOptions.SysDefCurrencyForamt)
         'to Add new row if needed
-        If row = .rows - 1 Then
+        If Row = .rows - 1 Then
             .rows = .rows + 1
         End If
           
         ' ReLineGrid
     End With
-    Me.txtMarginTotal2.text = GrdMargin2.Aggregate(flexSTSum, GrdMargin2.FixedRows, GrdMargin2.ColIndex("StillAmount"), GrdMargin2.rows - 1, GrdMargin2.ColIndex("StillAmount"))
+    Me.txtMarginTotal2.Text = GrdMargin2.Aggregate(flexSTSum, GrdMargin2.FixedRows, GrdMargin2.ColIndex("StillAmount"), GrdMargin2.rows - 1, GrdMargin2.ColIndex("StillAmount"))
     'ReLineGrid
 
 
 End Sub
 
-Private Sub GrdMargin2_BeforeEdit(ByVal row As Long, ByVal Col As Long, Cancel As Boolean)
+Private Sub GrdMargin2_BeforeEdit(ByVal Row As Long, ByVal Col As Long, Cancel As Boolean)
   With GrdMargin2
 
-        If row > .FixedRows Then
-             If val(.TextMatrix(row, .ColIndex("NoteSerial"))) <> 0 And .ColKey(Col) <> "NoteSerial" And val(.TextMatrix(row, .ColIndex("NoteSerial2"))) <> 0 And .ColKey(Col) <> "NoteSerial2" And .ColKey(Col) <> "NoteSerial3" Then
+        If Row > .FixedRows Then
+             If val(.TextMatrix(Row, .ColIndex("NoteSerial"))) <> 0 And .ColKey(Col) <> "NoteSerial" And val(.TextMatrix(Row, .ColIndex("NoteSerial2"))) <> 0 And .ColKey(Col) <> "NoteSerial2" And .ColKey(Col) <> "NoteSerial3" Then
 '                  Cancel = True
 '                  Exit Sub
               End If
@@ -7823,9 +7832,9 @@ Private Sub GrdMargin2_BeforeEdit(ByVal row As Long, ByVal Col As Long, Cancel A
     End With
 End Sub
 
-Private Sub GrdMargin2_CellButtonClick(ByVal row As Long, ByVal Col As Long)
+Private Sub GrdMargin2_CellButtonClick(ByVal Row As Long, ByVal Col As Long)
 
-Dim Frm As New FrmDateOpProject, mIDD As Long, mUserID As Long, mDate As Date, mTime As Date
+Dim Frm As New FrmDateOpProject, mIDD As Long, mUserId As Long, mDate As Date, mTime As Date
 
 
 
@@ -7834,60 +7843,60 @@ Select Case .ColKey(Col)
        
         Case "OrderDate"
             
-            Frm.index = 612
-            Me.LngRow = row
+            Frm.Index = 612
+            Me.LngRow = Row
             Frm.show 1
-            GrdMargin2_AfterEdit row, Col
+            GrdMargin2_AfterEdit Row, Col
         
        Case "GuaranteeDate"
             
-            Frm.index = 613
-            Me.LngRow = row
+            Frm.Index = 613
+            Me.LngRow = Row
             Frm.show 1
            
        Case "PayDate"
             
-            Frm.index = 617
-            Me.LngRow = row
+            Frm.Index = 617
+            Me.LngRow = Row
             Frm.show 1
        
        
        Case "NoteSerial"
 '                                  LngRow = Row
-        ShowGL_cc val(.TextMatrix(row, .ColIndex("NoteSerial"))), , 22002
+        ShowGL_cc val(.TextMatrix(Row, .ColIndex("NoteSerial"))), , 22002
      Case "NoteSerial2"
 '                                  LngRow = Row
-        ShowGL_cc val(.TextMatrix(row, .ColIndex("NoteSerial2"))), , 22003
+        ShowGL_cc val(.TextMatrix(Row, .ColIndex("NoteSerial2"))), , 22003
      Case "NoteSerial3"
 '                                  LngRow = Row
-        ShowGL_cc val(.TextMatrix(row, .ColIndex("NoteSerial3"))), , 22007
+        ShowGL_cc val(.TextMatrix(Row, .ColIndex("NoteSerial3"))), , 22007
         
     Case "CreateNote2"
         'If val(.TextMatrix(row, .ColIndex("NoteId2"))) = 0 And val(.TextMatrix(row, .ColIndex("PayedAmount"))) <> 0 Then
-        If val(.TextMatrix(row, .ColIndex("PayedAmount"))) <> 0 Then
+        If val(.TextMatrix(Row, .ColIndex("PayedAmount"))) <> 0 Then
           '  CreateEntry row, 1, 1
         End If
     Case "CreateNote"
         'If val(.TextMatrix(row, .ColIndex("NoteId"))) = 0 And val(.TextMatrix(row, .ColIndex("Amount"))) <> 0 Then
-        If val(.TextMatrix(row, .ColIndex("Amount"))) <> 0 Then
+        If val(.TextMatrix(Row, .ColIndex("Amount"))) <> 0 Then
         '    CreateEntry row, 1, 0
         End If
     Case "CreateNote3"
-        If val(.TextMatrix(row, .ColIndex("NoteId3"))) = 0 And val(.TextMatrix(row, .ColIndex("MargenValue"))) <> 0 Then
-            CreateEntry row, 5, 0
+        If val(.TextMatrix(Row, .ColIndex("NoteId3"))) = 0 And val(.TextMatrix(Row, .ColIndex("MargenValue"))) <> 0 Then
+            CreateEntry Row, 5, 0
         End If
     Case "DeleteEntry"
-        s = "Delete Notes where NoteId = " & val(.TextMatrix(row, .ColIndex("NoteId")))
+        s = "Delete Notes where NoteId = " & val(.TextMatrix(Row, .ColIndex("NoteId")))
         Cn.Execute s
-        s = "Delete Notes where NoteId = " & val(.TextMatrix(row, .ColIndex("NoteId3")))
+        s = "Delete Notes where NoteId = " & val(.TextMatrix(Row, .ColIndex("NoteId3")))
         Cn.Execute s
-        s = "Delete Notes where NoteId = " & val(.TextMatrix(row, .ColIndex("NoteId2")))
+        s = "Delete Notes where NoteId = " & val(.TextMatrix(Row, .ColIndex("NoteId2")))
         Cn.Execute s
         
-        .TextMatrix(row, .ColIndex("NoteId")) = ""
-        .TextMatrix(row, .ColIndex("NoteId2")) = ""
-        .TextMatrix(row, .ColIndex("NoteId3")) = ""
-        .TextMatrix(row, .ColIndex("NoteSerial")) = ""
+        .TextMatrix(Row, .ColIndex("NoteId")) = ""
+        .TextMatrix(Row, .ColIndex("NoteId2")) = ""
+        .TextMatrix(Row, .ColIndex("NoteId3")) = ""
+        .TextMatrix(Row, .ColIndex("NoteSerial")) = ""
        ' .TextMatrix(row, .ColIndex("NoteSeria2")) = ""
         '.TextMatrix(row, .ColIndex("NoteSeria3")) = ""
         
@@ -7948,7 +7957,7 @@ Private Sub GrdMargin2_KeyUp(KeyCode As Integer, Shift As Integer)
 
 End Sub
 
-Private Sub GrdMargin2_StartEdit(ByVal row As Long, ByVal Col As Long, Cancel As Boolean)
+Private Sub GrdMargin2_StartEdit(ByVal Row As Long, ByVal Col As Long, Cancel As Boolean)
     Dim rs As New ADODB.Recordset
     Dim Rs1 As New ADODB.Recordset
 
@@ -8184,7 +8193,7 @@ End Sub
 
 
  
-Private Sub GrdMargin3_AfterEdit(ByVal row As Long, ByVal Col As Long)
+Private Sub GrdMargin3_AfterEdit(ByVal Row As Long, ByVal Col As Long)
   
    Dim StrAccountCode As String
     Dim Msg As String
@@ -8200,18 +8209,18 @@ Private Sub GrdMargin3_AfterEdit(ByVal row As Long, ByVal Col As Long)
          
            Case "AmountP"
             End Select
-            If row > 1 Then
-                .TextMatrix(row, .ColIndex("Amount")) = .TextMatrix(row - 1, .ColIndex("TotalAmount"))
+            If Row > 1 Then
+                .TextMatrix(Row, .ColIndex("Amount")) = .TextMatrix(Row - 1, .ColIndex("TotalAmount"))
             'ElseIf row > 2 Then
             
             End If
-            .TextMatrix(row, .ColIndex("TotalAmount")) = val(.TextMatrix(row, .ColIndex("Amount"))) + val(.TextMatrix(row, .ColIndex("AmountP")))
-            .TextMatrix(row, .ColIndex("PercentA")) = txtPercentV
-            .TextMatrix(row, .ColIndex("InsuranceAmount")) = val(.TextMatrix(row, .ColIndex("AmountP"))) * val(txtPercentV) / 100
+            .TextMatrix(Row, .ColIndex("TotalAmount")) = val(.TextMatrix(Row, .ColIndex("Amount"))) + val(.TextMatrix(Row, .ColIndex("AmountP")))
+            .TextMatrix(Row, .ColIndex("PercentA")) = txtPercentV
+            .TextMatrix(Row, .ColIndex("InsuranceAmount")) = val(.TextMatrix(Row, .ColIndex("AmountP"))) * val(txtPercentV) / 100
             
            ' Me.txtMarginTotal3.text = .TextMatrix(.rows - 1, .ColIndex("TotalAmount"))  '.Aggregate(flexSTSum, .FixedRows, .ColIndex("Total"), .rows - 1, .ColIndex("Total"))
-            Me.txtMarginTotal3.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("TotalAmount"), .rows - 1, .ColIndex("TotalAmount"))
-             If row = .rows - 1 Then
+            Me.txtMarginTotal3.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("TotalAmount"), .rows - 1, .ColIndex("TotalAmount"))
+             If Row = .rows - 1 Then
                 .rows = .rows + 1
             End If
             'txtBondAmt = txtTotalBondHistory
@@ -8220,17 +8229,17 @@ Private Sub GrdMargin3_AfterEdit(ByVal row As Long, ByVal Col As Long)
     
 End Sub
 
-Private Sub optTypeLCLG_Click(index As Integer)
-If Me.TxtModFlg.text = "" Or Me.TxtModFlg.text = "R" Then Exit Sub
+Private Sub optTypeLCLG_Click(Index As Integer)
+If Me.TxtModFlg.Text = "" Or Me.TxtModFlg.Text = "R" Then Exit Sub
 
-If index = 0 Then
-    If optTypeLCLG(index).value = True Then
+If Index = 0 Then
+    If optTypeLCLG(Index).value = True Then
         cmbAccountAcceptanceParent.Enabled = True
     Else
         cmbAccountAcceptanceParent.Enabled = False
     End If
-ElseIf index = 1 Then
-    If optTypeLCLG(index).value = True Then
+ElseIf Index = 1 Then
+    If optTypeLCLG(Index).value = True Then
         cmbAccountAcceptanceParent.Enabled = False
     Else
         cmbAccountAcceptanceParent.Enabled = True
@@ -8292,7 +8301,7 @@ Private Sub ChkDetails_Click()
 End Sub
       
 Function CuurentLogdata(Optional Currentmode As String)
-    LogTextA = "    ‘«‘… " & ScreenNameArabic & CHR(13) & " —ﬁ„ «·«⁄ „«œ     " & TxtLcNo.text & CHR(13) & "   ‰Ê⁄ «·«⁄ „«œ    " & DCLC & CHR(13) & "      «·»‰ﬂ " & Dcbank & CHR(13) & "     ﬁÌ„… «·«⁄ „«œ  " & TxtValue & CHR(13) & "      «·⁄„·… " & Dccurrency & CHR(13) & "       › Õ «·«⁄ „«œ  " & dbFromDate & CHR(13) & "    €·ﬁ «·«⁄ „«œ " & dbTodate & CHR(13) & "      «‰ Â«¡ «·«⁄ „«œ   " & DpCloseDate & CHR(13) & "    «·œÊ·…   " & DCCountry & CHR(13) & "     «·„Ê—œ  " & DBCboClientName & CHR(13) & "    »‰ﬂ «·„Ê—œ   " & TXTBank2 & CHR(13) & "     ⁄œœ «·‘Õ‰«   " & TxtNoOfParcil & CHR(13) & "       «Œ— ‘Õ‰…  " & DPLastParcilDate & CHR(13) & "   ‘—Êÿ «· ”·Ì„    " & TxtRemarks
+    LogTextA = "    ‘«‘… " & ScreenNameArabic & CHR(13) & " —ﬁ„ «·«⁄ „«œ     " & TxtLcNo.Text & CHR(13) & "   ‰Ê⁄ «·«⁄ „«œ    " & DCLC & CHR(13) & "      «·»‰ﬂ " & Dcbank & CHR(13) & "     ﬁÌ„… «·«⁄ „«œ  " & TxtValue & CHR(13) & "      «·⁄„·… " & Dccurrency & CHR(13) & "       › Õ «·«⁄ „«œ  " & dbFromDate & CHR(13) & "    €·ﬁ «·«⁄ „«œ " & dbTodate & CHR(13) & "      «‰ Â«¡ «·«⁄ „«œ   " & DpCloseDate & CHR(13) & "    «·œÊ·…   " & DCCountry & CHR(13) & "     «·„Ê—œ  " & DBCboClientName & CHR(13) & "    »‰ﬂ «·„Ê—œ   " & TXTBank2 & CHR(13) & "     ⁄œœ «·‘Õ‰«   " & TxtNoOfParcil & CHR(13) & "       «Œ— ‘Õ‰…  " & DPLastParcilDate & CHR(13) & "   ‘—Êÿ «· ”·Ì„    " & txtRemarks
                     
     If ChkLocked.value = vbChecked Then
         LogTextA = LogTextA & CHR(13) & "  „ «Ìﬁ«› «·«⁄ „«œ "
@@ -8310,7 +8319,7 @@ Function CuurentLogdata(Optional Currentmode As String)
 
     LogTextA = LogTextA & CHR(13) & " ﬁÌ„… «·—’Ìœ «·«›  «ÕÌ  " & TxtOpenBalance
                      
-    LogTexte = "    Screen  " & ScreenNameEnglish & CHR(13) & "Lc NO" & TxtLcNo.text & CHR(13) & "LC Type" & DCLC & CHR(13) & "Bank" & Dcbank & CHR(13) & "LC Value" & TxtValue & CHR(13) & "Currency" & Dccurrency & CHR(13) & "Open Date" & dbFromDate & CHR(13) & "Close Date " & dbTodate & CHR(13) & " End Date " & DpCloseDate & CHR(13) & " Country" & DCCountry & CHR(13) & "     Supplier  " & DBCboClientName & CHR(13) & "  Supplier Bank" & TXTBank2 & CHR(13) & " No Of Shipments" & TxtNoOfParcil & CHR(13) & "  Last Shipment Data" & DPLastParcilDate & CHR(13) & " Terms of delivery  " & TxtRemarks
+    LogTexte = "    Screen  " & ScreenNameEnglish & CHR(13) & "Lc NO" & TxtLcNo.Text & CHR(13) & "LC Type" & DCLC & CHR(13) & "Bank" & Dcbank & CHR(13) & "LC Value" & TxtValue & CHR(13) & "Currency" & Dccurrency & CHR(13) & "Open Date" & dbFromDate & CHR(13) & "Close Date " & dbTodate & CHR(13) & " End Date " & DpCloseDate & CHR(13) & " Country" & DCCountry & CHR(13) & "     Supplier  " & DBCboClientName & CHR(13) & "  Supplier Bank" & TXTBank2 & CHR(13) & " No Of Shipments" & TxtNoOfParcil & CHR(13) & "  Last Shipment Data" & DPLastParcilDate & CHR(13) & " Terms of delivery  " & txtRemarks
                     
     If ChkLocked.value = vbChecked Then
         LogTexte = LogTexte & CHR(13) & "LC Locked "
@@ -8542,7 +8551,7 @@ End Function
 Private Sub ALLButton2_Click()
     'Dcemp.text = ""
 
-    DCproject.text = ""
+    dcproject.Text = ""
     FillGridWithData
 
     DoEvents
@@ -8691,7 +8700,7 @@ Private Sub SaveData()
 Dim AccountExpensParent As String
     On Error GoTo ErrTrap
 
-    If Me.TxtModFlg.text <> "R" Then
+    If Me.TxtModFlg.Text <> "R" Then
  
         Account_Code_dynamic1 = get_account_code_branch(62, my_branch)
                 
@@ -8733,7 +8742,7 @@ Dim AccountExpensParent As String
             Exit Sub
         End If
         
-        If Trim(Me.TxtLcNo.text) = "" Then
+        If Trim(Me.TxtLcNo.Text) = "" Then
             Msg = "ÌÃ» ﬂ «»… —ﬁ„ «·«⁄ „«œ   ..!!"
             MsgBox Msg, vbOKOnly + vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
             TxtLcNo.SetFocus
@@ -8912,7 +8921,7 @@ End If
 '    End If
     
     
-    If TxtModFlg.text = "N" Then
+    If TxtModFlg.Text = "N" Then
 '        Account_Code_dynamic = get_account_code_branch(51, my_branch)
 '
 '        If Account_Code_dynamic = "NO branch" Then
@@ -8931,10 +8940,10 @@ End If
     rs.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
     
         rs.AddNew
-        rs!TblLCID = val(TXTTblLCID.text)
+        rs!TblLCID = val(TXTTblLCID.Text)
         Account_Code_dynamic = DboParentAccount.BoundText
         
-        rs("parent_account").value = IIf(DboParentAccount.BoundText = "", Null, (DboParentAccount.text))
+        rs("parent_account").value = IIf(DboParentAccount.BoundText = "", Null, (DboParentAccount.Text))
                 
                 
                 
@@ -8948,19 +8957,19 @@ End If
     
         PAcceptAccount_Code = cmbAccountAcceptanceParent.BoundText
         If PAcceptAccount_Code <> "" Then
-             rs("AcceptAccount_Code").value = ModAccounts.AddNewAccount(PAcceptAccount_Code, DCPreFix.text & " Accepted" & "  " & Trim(rsDummy!BankName & " ") & TxtName.text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.text), True, False, DCPreFix.text & "  Accepted: " & TxtNameE.text & "  NO :" & Trim$(Me.TxtLcNo.text), , , , , , , , , , , , , , , , , , , , , , , , , , , val(TXTTblLCID.text))
+             rs("AcceptAccount_Code").value = ModAccounts.AddNewAccount(PAcceptAccount_Code, DCPreFix.Text & " Accepted" & "  " & Trim(rsDummy!BankName & " ") & TxtName.Text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.Text), True, False, DCPreFix.Text & "  Accepted: " & TxtNameE.Text & "  NO :" & Trim$(Me.TxtLcNo.Text), , , , , , , , , , , , , , , , , , , , , , , , , , , val(TXTTblLCID.Text))
          End If
     End If
     
     Account_Code_dynamicMargin = cmbAccountMarginParent.BoundText
     If Account_Code_dynamicMargin <> "" Then
-        rs("Account_CodeMargin").value = ModAccounts.AddNewAccount(Account_Code_dynamicMargin, DCPreFix.text & " Margin" & "  " & Trim(rsDummy!BankName & " ") & TxtName.text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.text), True, False, DCPreFix.text & "  Margin : " & TxtNameE.text & "  NO :" & Trim$(Me.TxtLcNo.text), , , , , , , , , , , , , , , , , , , , , , , , , , , val(TXTTblLCID.text))
+        rs("Account_CodeMargin").value = ModAccounts.AddNewAccount(Account_Code_dynamicMargin, DCPreFix.Text & " Margin" & "  " & Trim(rsDummy!BankName & " ") & TxtName.Text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.Text), True, False, DCPreFix.Text & "  Margin : " & TxtNameE.Text & "  NO :" & Trim$(Me.TxtLcNo.Text), , , , , , , , , , , , , , , , , , , , , , , , , , , val(TXTTblLCID.Text))
     End If
     
     
      PLCAccount_Code = cmbAccountLGParent.BoundText
    If PLCAccount_Code <> "" Then
-        rs("LCAccount_Code").value = ModAccounts.AddNewAccount(PLCAccount_Code, DCPreFix.text & "  " & Trim(rsDummy!BankName & " ") & TxtName.text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.text), True, False, DCPreFix.text & "   : " & TxtNameE.text & "  NO :" & Trim$(Me.TxtLcNo.text), , , , , , , , , , , , , , , , , , , , , , , , , , , val(TXTTblLCID.text))
+        rs("LCAccount_Code").value = ModAccounts.AddNewAccount(PLCAccount_Code, DCPreFix.Text & "  " & Trim(rsDummy!BankName & " ") & TxtName.Text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.Text), True, False, DCPreFix.Text & "   : " & TxtNameE.Text & "  NO :" & Trim$(Me.TxtLcNo.Text), , , , , , , , , , , , , , , , , , , , , , , , , , , val(TXTTblLCID.Text))
    
     End If
     
@@ -8968,14 +8977,14 @@ End If
     
      AccountExpensParent = cmbAccountExpensParent.BoundText
    If AccountExpensParent <> "" Then
-        rs("AccountExpensCode").value = ModAccounts.AddNewAccount(AccountExpensParent, DCPreFix.text & "  " & Trim(rsDummy!BankName & " ") & TxtName.text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.text), True, False, DCPreFix.text & "   : " & TxtNameE.text & "  NO :" & Trim$(Me.TxtLcNo.text), , , , , , , , , , , , , , , , , , , , , , , , , , , val(TXTTblLCID.text))
+        rs("AccountExpensCode").value = ModAccounts.AddNewAccount(AccountExpensParent, DCPreFix.Text & "  " & Trim(rsDummy!BankName & " ") & TxtName.Text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.Text), True, False, DCPreFix.Text & "   : " & TxtNameE.Text & "  NO :" & Trim$(Me.TxtLcNo.Text), , , , , , , , , , , , , , , , , , , , , , , , , , , val(TXTTblLCID.Text))
         rs("Account_Code").value = rs("AccountExpensCode")
     End If
      
      
     rs("Account_Code").value = rs("LCAccount_Code").value
     
-    ElseIf Me.TxtModFlg.text = "E" Then
+    ElseIf Me.TxtModFlg.Text = "E" Then
 
         
         If Trim(rs("AccountExpensCode") & "") <> "" Then
@@ -8986,13 +8995,13 @@ End If
             If Trim(rs("Account_Code").value & "") = "" Then
                 rs("Account_Code").value = rs("AccountExpensCode").value
             End If
-            ModAccounts.EditAccount rs("Account_Code").value, DCPreFix.text & "  " & Trim(rsDummy!BankName & " ") & TxtName.text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.text), DCPreFix.text & ":  " & TxtNameE.text & "  No :" & Trim$(Me.TxtLcNo.text), , , , , , , , , , , , , , , , , True, val(TXTTblLCID.text)
-            ModAccounts.EditAccount rs("LCAccount_Code").value, DCPreFix.text & "  " & Trim(rsDummy!BankName & " ") & TxtName.text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.text), DCPreFix.text & " :  " & TxtNameE.text & "  No :" & Trim$(Me.TxtLcNo.text), , , , , , , , , , , , , , , , , True, val(TXTTblLCID.text)
-            ModAccounts.EditAccount rs("AccountExpensCode").value, DCPreFix.text & "  " & "   " & Trim(rsDummy!BankName & " ") & TxtName.text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.text), DCPreFix.text & "  :  " & TxtNameE.text & "  No :" & Trim$(Me.TxtLcNo.text), , , , , , , , , , , , , , , , , True, val(TXTTblLCID.text)
+            ModAccounts.EditAccount rs("Account_Code").value, DCPreFix.Text & "  " & Trim(rsDummy!BankName & " ") & TxtName.Text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.Text), DCPreFix.Text & ":  " & TxtNameE.Text & "  No :" & Trim$(Me.TxtLcNo.Text), , , , , , , , , , , , , , , , , True, val(TXTTblLCID.Text)
+            ModAccounts.EditAccount rs("LCAccount_Code").value, DCPreFix.Text & "  " & Trim(rsDummy!BankName & " ") & TxtName.Text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.Text), DCPreFix.Text & " :  " & TxtNameE.Text & "  No :" & Trim$(Me.TxtLcNo.Text), , , , , , , , , , , , , , , , , True, val(TXTTblLCID.Text)
+            ModAccounts.EditAccount rs("AccountExpensCode").value, DCPreFix.Text & "  " & "   " & Trim(rsDummy!BankName & " ") & TxtName.Text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.Text), DCPreFix.Text & "  :  " & TxtNameE.Text & "  No :" & Trim$(Me.TxtLcNo.Text), , , , , , , , , , , , , , , , , True, val(TXTTblLCID.Text)
         Else
         
             AccountExpensParent = cmbAccountExpensParent.BoundText
-            rs("AccountExpensCode").value = ModAccounts.AddNewAccount(AccountExpensParent, DCPreFix.text & "  " & "   " & Trim(rsDummy!BankName & " ") & TxtName.text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.text), True, False, DCPreFix.text & "  : " & TxtNameE.text & "  NO :" & Trim$(Me.TxtLcNo.text), , , , , , , , , , , , , , , , , , , , , , , , , , , val(TXTTblLCID.text))
+            rs("AccountExpensCode").value = ModAccounts.AddNewAccount(AccountExpensParent, DCPreFix.Text & "  " & "   " & Trim(rsDummy!BankName & " ") & TxtName.Text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.Text), True, False, DCPreFix.Text & "  : " & TxtNameE.Text & "  NO :" & Trim$(Me.TxtLcNo.Text), , , , , , , , , , , , , , , , , , , , , , , , , , , val(TXTTblLCID.Text))
             rs("LCAccount_Code").value = rs("AccountExpensCode").value
             rs("Account_Code").value = rs("LCAccount_Code").value
             
@@ -9002,9 +9011,9 @@ End If
                  
     
         If Not IsNull(rs("Account_CodeMargin").value) Then
-            ModAccounts.EditAccount rs("Account_CodeMargin").value, DCPreFix.text & "  Margin" & "   " & Trim(rsDummy!BankName & " ") & TxtName.text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.text), DCPreFix.text & " Margin: " & TxtNameE.text & "  No :" & Trim$(Me.TxtLcNo.text), , , , , , , , , , , , , , , , , True, val(TXTTblLCID.text)
+            ModAccounts.EditAccount rs("Account_CodeMargin").value, DCPreFix.Text & "  Margin" & "   " & Trim(rsDummy!BankName & " ") & TxtName.Text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.Text), DCPreFix.Text & " Margin: " & TxtNameE.Text & "  No :" & Trim$(Me.TxtLcNo.Text), , , , , , , , , , , , , , , , , True, val(TXTTblLCID.Text)
         Else
-            rs("Account_CodeMargin").value = ModAccounts.AddNewAccount(Account_Code_dynamicMargin, DCPreFix.text & "  Margin" & "   " & Trim(rsDummy!BankName & " ") & TxtName.text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.text), True, False, DCPreFix.text & "   Margin : " & TxtNameE.text & "  NO :" & Trim$(Me.TxtLcNo.text), , , , , , , , , , , , , , , , , , , , , , , , , , , val(TXTTblLCID.text))
+            rs("Account_CodeMargin").value = ModAccounts.AddNewAccount(Account_Code_dynamicMargin, DCPreFix.Text & "  Margin" & "   " & Trim(rsDummy!BankName & " ") & TxtName.Text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.Text), True, False, DCPreFix.Text & "   Margin : " & TxtNameE.Text & "  NO :" & Trim$(Me.TxtLcNo.Text), , , , , , , , , , , , , , , , , , , , , , , , , , , val(TXTTblLCID.Text))
         End If
     
         
@@ -9013,9 +9022,9 @@ End If
         If cmbAccountAcceptanceParent.Enabled Then
         PAcceptAccount_Code = cmbAccountAcceptanceParent.BoundText
         If Not IsNull(rs("AcceptAccount_Code").value) Then
-            ModAccounts.EditAccount rs("AcceptAccount_Code").value, DCPreFix.text & "  Accepted" & "   " & Trim(rsDummy!BankName & " ") & TxtName.text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.text), DCPreFix.text & "  Accepted:  " & TxtNameE.text & "  No :" & Trim$(Me.TxtLcNo.text), , , , , , , , , , , , , , , , , True, val(TXTTblLCID.text)
+            ModAccounts.EditAccount rs("AcceptAccount_Code").value, DCPreFix.Text & "  Accepted" & "   " & Trim(rsDummy!BankName & " ") & TxtName.Text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.Text), DCPreFix.Text & "  Accepted:  " & TxtNameE.Text & "  No :" & Trim$(Me.TxtLcNo.Text), , , , , , , , , , , , , , , , , True, val(TXTTblLCID.Text)
         Else
-            rs("AcceptAccount_Code").value = ModAccounts.AddNewAccount(PAcceptAccount_Code, DCPreFix.text & "  Accepted" & "   " & Trim(rsDummy!BankName & " ") & TxtName.text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.text), True, False, DCPreFix.text & "   Accepted : " & TxtNameE.text & "  NO :" & Trim$(Me.TxtLcNo.text), , , , , , , , , , , , , , , , , , , , , , , , , , , val(TXTTblLCID.text))
+            rs("AcceptAccount_Code").value = ModAccounts.AddNewAccount(PAcceptAccount_Code, DCPreFix.Text & "  Accepted" & "   " & Trim(rsDummy!BankName & " ") & TxtName.Text & "  »—ﬁ„ :" & Trim$(Me.TxtLcNo.Text), True, False, DCPreFix.Text & "   Accepted : " & TxtNameE.Text & "  NO :" & Trim$(Me.TxtLcNo.Text), , , , , , , , , , , , , , , , , , , , , , , , , , , val(TXTTblLCID.Text))
         End If
         End If
         
@@ -9047,32 +9056,32 @@ End If
 '        Cn.Execute StrSQL, , adExecuteNoRecords
 '
         
-       StrSQL = "delete From Notes  where IsNull(TblLCID,0)=" & val(TXTTblLCID.text)
+       StrSQL = "delete From Notes  where IsNull(TblLCID,0)=" & val(TXTTblLCID.Text)
         Cn.Execute StrSQL, , adExecuteNoRecords
         
          
-       StrSQL = "delete from DOUBLE_ENTREY_VOUCHERS1 where Notes_ID In (Select  Noteid from Notes1  where IsNull(TblLCID,0)= " & val(TXTTblLCID.text) & " )"
+       StrSQL = "delete from DOUBLE_ENTREY_VOUCHERS1 where Notes_ID In (Select  Noteid from Notes1  where IsNull(TblLCID,0)= " & val(TXTTblLCID.Text) & " )"
        Cn.Execute StrSQL, , adExecuteNoRecords
        
        
-       StrSQL = "delete From Notes1  where IsNull(TblLCID,0)=" & val(TXTTblLCID.text)
+       StrSQL = "delete From Notes1  where IsNull(TblLCID,0)=" & val(TXTTblLCID.Text)
         Cn.Execute StrSQL, , adExecuteNoRecords
         
        
         
-        StrSQL = "delete From TBLLCHistory where TblLCID=" & val(TXTTblLCID.text)
+        StrSQL = "delete From TBLLCHistory where TblLCID=" & val(TXTTblLCID.Text)
         Cn.Execute StrSQL, , adExecuteNoRecords
         
         
-        StrSQL = "delete From TBLLCMargin where TblLCID=" & val(TXTTblLCID.text)
+        StrSQL = "delete From TBLLCMargin where TblLCID=" & val(TXTTblLCID.Text)
         Cn.Execute StrSQL, , adExecuteNoRecords
         
         
-        StrSQL = "delete From TBLLCMargin2 where TblLCID=" & val(TXTTblLCID.text)
+        StrSQL = "delete From TBLLCMargin2 where TblLCID=" & val(TXTTblLCID.Text)
         Cn.Execute StrSQL, , adExecuteNoRecords
         
                 
-        StrSQL = "delete From tblLCOpenB where TblLCID=" & val(TXTTblLCID.text)
+        StrSQL = "delete From tblLCOpenB where TblLCID=" & val(TXTTblLCID.Text)
         Cn.Execute StrSQL, , adExecuteNoRecords
        
     End If
@@ -9080,11 +9089,11 @@ End If
     '////////////////////////////////////////
     cmbAccountExpProject.BoundText = Trim(rs("AccountExpensCode").value & "")
     
-    rs("OpenValue").value = val(txtOPenValue.text)
+    rs("OpenValue").value = val(txtOPenValue.Text)
     rs("PaymentTypeID").value = val(CboPayMentType.ListIndex)
     rs("BoxID").value = val(DcboBox.BoundText)
     rs("BankID2").value = val(DcboBankName.BoundText)
-    rs("ChequeNumber").value = val(TxtChequeNumber.text)
+    rs("ChequeNumber").value = val(TxtChequeNumber.Text)
     rs("ChequeDueDate").value = DtpChequeDueDate.value
     rs("LGExpiryDate").value = txtLGExpiryDate.value
     
@@ -9103,36 +9112,36 @@ End If
     End If
     
     
-    rs("prifix").value = IIf(DCPreFix.text = "", Null, DCPreFix.text)
+    rs("prifix").value = IIf(DCPreFix.Text = "", Null, DCPreFix.Text)
     rs("project_id").value = val(DataCombo2.BoundText)
-    rs("TblLCID").value = val(TXTTblLCID.text)
-    rs("LCNO").value = IIf(Me.TxtLcNo.text = "", "", Me.TxtLcNo.text)
-    rs("name").value = IIf(Me.TxtName.text = "", "", Me.TxtName.text)
-    rs("namee").value = IIf(Me.TxtNameE.text = "", "", Me.TxtNameE.text)
+    rs("TblLCID").value = val(TXTTblLCID.Text)
+    rs("LCNO").value = IIf(Me.TxtLcNo.Text = "", "", Me.TxtLcNo.Text)
+    rs("name").value = IIf(Me.TxtName.Text = "", "", Me.TxtName.Text)
+    rs("namee").value = IIf(Me.TxtNameE.Text = "", "", Me.TxtNameE.Text)
     
-     rs("TotalBondHistory").value = val(Me.txtTotalBondHistory.text)
-     rs("MarginTotal").value = val(Me.txtMarginTotal.text)
+     rs("TotalBondHistory").value = val(Me.txtTotalBondHistory.Text)
+     rs("MarginTotal").value = val(Me.txtMarginTotal.Text)
      
-     rs("AcceptianPeriod").value = val(Me.txtAcceptianPeriod.text)
-      rs("LGExpPeriod").value = val(Me.txtLGExpPeriod.text)
+     rs("AcceptianPeriod").value = val(Me.txtAcceptianPeriod.Text)
+      rs("LGExpPeriod").value = val(Me.txtLGExpPeriod.Text)
     
     
     rs("UserID").value = val(DCboUserName.BoundText)
     rs("LCTyperId").value = IIf(Me.DCLC.BoundText = "", Null, Me.DCLC.BoundText)
     rs("BankId").value = IIf(Me.Dcbank.BoundText = "", Null, Me.Dcbank.BoundText)
-    rs("Bank2").value = IIf(Me.TXTBank2.text = "", "", Me.TXTBank2.text)
-    rs("Value").value = IIf(Not IsNumeric(Me.TxtValue.text), 0, Me.TxtValue.text)
-    rs("PercentV").value = IIf(Not IsNumeric(Me.txtPercentV.text), 0, Me.txtPercentV.text)
-    rs("BondAmt").value = IIf(Not IsNumeric(Me.txtBondAmt.text), 0, Me.txtBondAmt.text)
+    rs("Bank2").value = IIf(Me.TXTBank2.Text = "", "", Me.TXTBank2.Text)
+    rs("Value").value = IIf(Not IsNumeric(Me.TxtValue.Text), 0, Me.TxtValue.Text)
+    rs("PercentV").value = IIf(Not IsNumeric(Me.txtPercentV.Text), 0, Me.txtPercentV.Text)
+    rs("BondAmt").value = IIf(Not IsNumeric(Me.txtBondAmt.Text), 0, Me.txtBondAmt.Text)
    
-    rs("GuaranteeNo").value = IIf(Me.txtGuaranteeNo.text = "", "", Me.txtGuaranteeNo.text)
+    rs("GuaranteeNo").value = IIf(Me.txtGuaranteeNo.Text = "", "", Me.txtGuaranteeNo.Text)
     
      rs("Account_CodeExp").value = IIf(cmbAccount.BoundText = "", "", cmbAccount.BoundText)
      rs("AccountExpProject").value = IIf(cmbAccountExpProject.BoundText = "", "", cmbAccountExpProject.BoundText)
-    rs("PrimaryInvoiceNo").value = IIf(Me.TXtPrimaryInvoiceNo.text = "", "", Me.TXtPrimaryInvoiceNo.text)
+    rs("PrimaryInvoiceNo").value = IIf(Me.TXtPrimaryInvoiceNo.Text = "", "", Me.TXtPrimaryInvoiceNo.Text)
     rs("CountryId").value = IIf(Me.DCCountry.BoundText = "", Null, Me.DCCountry.BoundText)
     rs("CurrencyId").value = IIf(Me.Dccurrency.BoundText = "", Null, Me.Dccurrency.BoundText)
-    rs("Currency_rate").value = IIf(Not IsNumeric(txt_Currency_rate.text), 1, txt_Currency_rate.text)
+    rs("Currency_rate").value = IIf(Not IsNumeric(txt_Currency_rate.Text), 1, txt_Currency_rate.Text)
     rs("VendorId").value = IIf(Me.DBCboClientName.BoundText = "", Null, Me.DBCboClientName.BoundText)
     rs("FromDate").value = dbFromDate.value
     rs("Todate").value = dbTodate.value
@@ -9150,7 +9159,9 @@ Else
 
   rs!NoteIDRowId = Trim(txtNoteIDRowId)
 End If
-
+If Trim(txtNoteID2RowId) = "{}" Then
+    txtNoteID2RowId = "{" & GenerateGUID & "}"
+End If
     
 If Trim(rs!NoteID2RowId & "") = "" Then
   rs!NoteID2RowId = "{" & GenerateGUID & "}"
@@ -9162,6 +9173,10 @@ Else
   rs!NoteID2RowId = Trim(txtNoteID2RowId)
 End If
 
+
+If Trim(txtNoteIDOpenRowId) = "{}" Then
+    txtNoteIDOpenRowId = "{" & GenerateGUID & "}"
+End If
 
 If Trim(rs!NoteIDOpenRowId & "") = "" Then
   rs!NoteIDOpenRowId = "{" & GenerateGUID & "}"
@@ -9179,8 +9194,8 @@ End If
 
 
 
-    rs("projectName").value = IIf(Me.txtprojectname.text = "", "", Me.txtprojectname.text)
-    rs("Remarks").value = IIf(Me.TxtRemarks.text = "", "", Me.TxtRemarks.text)
+    rs("projectName").value = IIf(Me.txtprojectname.Text = "", "", Me.txtprojectname.Text)
+    rs("Remarks").value = IIf(Me.txtRemarks.Text = "", "", Me.txtRemarks.Text)
  
     If ChkLocked.value = vbChecked Then
         rs("Locked").value = 1
@@ -9190,33 +9205,33 @@ End If
  
     rs("CloseDate").value = DpCloseDate.value
     rs("LastParcilDate").value = DPLastParcilDate.value
-    rs("NoOfParcil").value = IIf(Not IsNumeric(Me.TxtNoOfParcil.text), 0, Me.TxtNoOfParcil.text)
-    rs!MarginTotal3 = val(txtMarginTotal3.text)
+    rs("NoOfParcil").value = IIf(Not IsNumeric(Me.TxtNoOfParcil.Text), 0, Me.TxtNoOfParcil.Text)
+    rs!MarginTotal3 = val(txtMarginTotal3.Text)
     
     rs!NoteSerial = val(TxtNoteSerial)
     
-    If val(TxtOpenBalance.text) = 0 Then
+    If val(TxtOpenBalance.Text) = 0 Then
         txtopening_balance_voucher_id = 0
     End If
        
     If Me.OptType(0).value = True Or Me.OptType(1).value = True Then
        
-        If val(Me.txtopening_balance_voucher_id.text) = 0 Then
-            txtopening_balance_voucher_id.text = get_opening_balance_voucher_id
+        If val(Me.txtopening_balance_voucher_id.Text) = 0 Then
+            txtopening_balance_voucher_id.Text = get_opening_balance_voucher_id
             
         End If '
     End If '
 '    txtopening_balance_voucher_id.text = get_opening_balance_voucher_id
-    rs("opening_balance_voucher_id").value = val(txtopening_balance_voucher_id.text)
+    rs("opening_balance_voucher_id").value = val(txtopening_balance_voucher_id.Text)
 
     If Me.OptType(2).value = True Then
         rs("OpenBalance").value = 0
         rs("OpenBalanceType").value = Null
     ElseIf Me.OptType(0).value = True Then
-        rs("OpenBalance").value = val(Me.TxtOpenBalance.text)
+        rs("OpenBalance").value = val(Me.TxtOpenBalance.Text)
         rs("OpenBalanceType").value = 0
     ElseIf Me.OptType(1).value = True Then
-        rs("OpenBalance").value = val(Me.TxtOpenBalance.text)
+        rs("OpenBalance").value = val(Me.TxtOpenBalance.Text)
         rs("OpenBalanceType").value = 1
     End If
     rs!OpenValue = val(txtOPenValue)
@@ -9239,7 +9254,7 @@ End If
     
      StrSQL = "sELECT * FROM TBLLCHistory Where 1 = -1"
    
-    saveGrid StrSQL, GrdBondHistory, "MarginNo", "", "TblLCID", val(Me.TXTTblLCID.text)
+    saveGrid StrSQL, GrdBondHistory, "MarginNo", "", "TblLCID", val(Me.TXTTblLCID.Text)
     
     
  
@@ -9247,19 +9262,19 @@ End If
     
          StrSQL = "sELECT * FROM TBLLCMargin2 Where 1 = -1"
 'IncrementID
-    saveGrid StrSQL, GrdMargin4, "MarginNo", "IncrementID", "TblLCID", val(Me.TXTTblLCID.text), "Type", 0
+    saveGrid StrSQL, GrdMargin4, "MarginNo", "IncrementID", "TblLCID", val(Me.TXTTblLCID.Text), "Type", 0
 
 
 
 
     StrSQL = "SELECT * FROM TBLLCMargin Where 1 = -1"
    'IncrementID
-    saveGrid StrSQL, GrdMargin2, "MarginNo", "IncrementID", "TblLCID", val(Me.TXTTblLCID.text)
+    saveGrid StrSQL, GrdMargin2, "MarginNo", "IncrementID", "TblLCID", val(Me.TXTTblLCID.Text)
     
     
         StrSQL = "SELECT * FROM tblLCOpenB Where 1 = -1"
    
-    saveGrid StrSQL, GrdMargin3, "MarginNo", "IncrementID", "TblLCID", val(Me.TXTTblLCID.text)
+    saveGrid StrSQL, GrdMargin3, "MarginNo", "IncrementID", "TblLCID", val(Me.TXTTblLCID.Text)
     
   
     Cn.CommitTrans
@@ -9267,23 +9282,23 @@ End If
     CuurentLogdata
     
     
-Dim row As Long
+Dim Row As Long
 StrSQL = "sELECT TBLLCMargin.*,Acc.Account_Serial as MarginAccountSerial,Acc.Account_Name as MarginAccount  ,"
 StrSQL = StrSQL & " Acc2.Account_Serial as BankAccountSerial,Acc2.Account_Name as BankAccount  "
 StrSQL = StrSQL & " from TBLLCMargin Left Outer join Accounts Acc On TBLLCMargin.MarginAccountCode = Acc.Account_Code "
 StrSQL = StrSQL & " Left Outer join Accounts Acc2 On TBLLCMargin.BankAccountCode = Acc2.Account_Code"
-StrSQL = StrSQL & " Where Type= 0 and  TBLLCMargin.TblLCID = " & val(Me.TXTTblLCID.text)
+StrSQL = StrSQL & " Where Type= 0 and  TBLLCMargin.TblLCID = " & val(Me.TXTTblLCID.Text)
 
 loadgrid StrSQL, GrdMargin, True, False
     With GrdMargin
     
-    For row = 1 To .rows - 1
+    For Row = 1 To .rows - 1
 
-        If val(.TextMatrix(row, .ColIndex("StillAmount"))) = 0 Then
-            .TextMatrix(row, .ColIndex("IsFullPayed")) = 1
-            .cell(flexcpBackColor, row, 1, row, .Cols - 1) = vbGreen
+        If val(.TextMatrix(Row, .ColIndex("StillAmount"))) = 0 Then
+            .TextMatrix(Row, .ColIndex("IsFullPayed")) = 1
+            .cell(flexcpBackColor, Row, 1, Row, .Cols - 1) = vbGreen
         Else
-            .TextMatrix(row, .ColIndex("IsFullPayed")) = 0
+            .TextMatrix(Row, .ColIndex("IsFullPayed")) = 0
         End If
     Next
     End With
@@ -9295,26 +9310,26 @@ StrSQL = StrSQL & " from TBLLCMargin Left Outer join Accounts Acc On TBLLCMargin
 StrSQL = StrSQL & " Left Outer join Accounts Acc2 On TBLLCMargin.BankAccountCode = Acc2.Account_Code"
 StrSQL = StrSQL & " Left Outer join Accounts Acc3 On TBLLCMargin.AccountMargen2 = Acc3.Account_Code"
 StrSQL = StrSQL & " Left Outer join Accounts Acc4 On TBLLCMargin.BankAccountCode2 = Acc4.Account_Code"
-StrSQL = StrSQL & " Where   TBLLCMargin.TblLCID = " & val(Me.TXTTblLCID.text)
+StrSQL = StrSQL & " Where   TBLLCMargin.TblLCID = " & val(Me.TXTTblLCID.Text)
 loadgrid StrSQL, GrdMargin2, True, False
 
         If GrdMargin.rows - 1 > 1 Then
-            Me.txtMarginTotal.text = GrdMargin.Aggregate(flexSTSum, GrdMargin.FixedRows, GrdMargin.ColIndex("Amount"), GrdMargin.rows - 1, GrdMargin.ColIndex("Amount"))
+            Me.txtMarginTotal.Text = GrdMargin.Aggregate(flexSTSum, GrdMargin.FixedRows, GrdMargin.ColIndex("Amount"), GrdMargin.rows - 1, GrdMargin.ColIndex("Amount"))
         End If
         
         If GrdMargin2.rows - 1 > 1 Then
-            Me.txtMarginTotal2.text = GrdMargin2.Aggregate(flexSTSum, GrdMargin2.FixedRows, GrdMargin2.ColIndex("StillAmount"), GrdMargin2.rows - 1, GrdMargin2.ColIndex("StillAmount"))
+            Me.txtMarginTotal2.Text = GrdMargin2.Aggregate(flexSTSum, GrdMargin2.FixedRows, GrdMargin2.ColIndex("StillAmount"), GrdMargin2.rows - 1, GrdMargin2.ColIndex("StillAmount"))
         End If
     
     With GrdMargin2
     
-    For row = 1 To .rows - 1
+    For Row = 1 To .rows - 1
 
-        If val(.TextMatrix(row, .ColIndex("StillAmount"))) = 0 Then
-            .TextMatrix(row, .ColIndex("IsFullPayed")) = 1
-            .cell(flexcpBackColor, row, 1, row, .Cols - 1) = vbGreen
+        If val(.TextMatrix(Row, .ColIndex("StillAmount"))) = 0 Then
+            .TextMatrix(Row, .ColIndex("IsFullPayed")) = 1
+            .cell(flexcpBackColor, Row, 1, Row, .Cols - 1) = vbGreen
         Else
-            .TextMatrix(row, .ColIndex("IsFullPayed")) = 0
+            .TextMatrix(Row, .ColIndex("IsFullPayed")) = 0
         End If
     Next
     End With
@@ -9324,23 +9339,23 @@ StrSQL = StrSQL & " Acc2.Account_Serial as BankAccountSerial,Acc2.Account_Name a
 StrSQL = StrSQL & " from TBLLCMargin2 Left Outer join Accounts Acc On TBLLCMargin2.MarginAccountCode = Acc.Account_Code "
 StrSQL = StrSQL & " Left Outer join Accounts Acc2 On TBLLCMargin2.BankAccountCode = Acc2.Account_Code"
 StrSQL = StrSQL & " Left Outer join Accounts Acc3 On TBLLCMargin2.AccountMargen2 = Acc3.Account_Code"
-StrSQL = StrSQL & " Where   TBLLCMargin2.TblLCID = " & val(Me.TXTTblLCID.text)
+StrSQL = StrSQL & " Where   TBLLCMargin2.TblLCID = " & val(Me.TXTTblLCID.Text)
 loadgrid StrSQL, GrdMargin4, True, False
 
         If GrdMargin4.rows - 1 > 1 Then
-            Me.txtMarginTotal4.text = GrdMargin4.Aggregate(flexSTSum, GrdMargin4.FixedRows, GrdMargin4.ColIndex("Amount"), GrdMargin4.rows - 1, GrdMargin4.ColIndex("Amount"))
+            Me.txtMarginTotal4.Text = GrdMargin4.Aggregate(flexSTSum, GrdMargin4.FixedRows, GrdMargin4.ColIndex("Amount"), GrdMargin4.rows - 1, GrdMargin4.ColIndex("Amount"))
         End If
         
 
     With GrdMargin4
     
-    For row = 1 To .rows - 1
+    For Row = 1 To .rows - 1
 
-        If val(.TextMatrix(row, .ColIndex("StillAmount"))) = 0 Then
-            .TextMatrix(row, .ColIndex("IsFullPayed")) = 1
-            .cell(flexcpBackColor, row, 1, row, .Cols - 1) = vbGreen
+        If val(.TextMatrix(Row, .ColIndex("StillAmount"))) = 0 Then
+            .TextMatrix(Row, .ColIndex("IsFullPayed")) = 1
+            .cell(flexcpBackColor, Row, 1, Row, .Cols - 1) = vbGreen
         Else
-            .TextMatrix(row, .ColIndex("IsFullPayed")) = 0
+            .TextMatrix(Row, .ColIndex("IsFullPayed")) = 0
         End If
     Next
     End With
@@ -9356,7 +9371,7 @@ loadgrid StrSQL, GrdMargin4, True, False
     BeginTrans = False
 '    rs.Resync adAffectCurrent
 '       rs.Requery
-    Select Case Me.TxtModFlg.text
+    Select Case Me.TxtModFlg.Text
 
         Case "N"
             Msg = "  „ Õ›Ÿ »Ì«‰«  Â–Â «·⁄„·Ì… " & CHR(13)
@@ -9373,7 +9388,7 @@ loadgrid StrSQL, GrdMargin4, True, False
             '  GrdMargin.Enabled = False
     End Select
 
-    TxtModFlg.text = "R"
+    TxtModFlg.Text = "R"
     'End If
 
     Exit Sub
@@ -9396,11 +9411,11 @@ ErrTrap:
     MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
 End Sub
 
-Private Sub Cmd_Click(index As Integer)
+Private Sub Cmd_Click(Index As Integer)
     On Error GoTo ErrTrap
     Dim FirstPeriodDateInthisYear As Date
     Me.DCboUserName.BoundText = user_id
-    Select Case index
+    Select Case Index
 
         Case 0
      
@@ -9408,9 +9423,9 @@ Private Sub Cmd_Click(index As Integer)
                 Exit Sub
             End If
             clear_all Me
-            TxtModFlg.text = "N"
+            TxtModFlg.Text = "N"
             clear_all Me
-            Me.TXTTblLCID.text = CStr(new_id("TblLC", "TblLCiD", "", True))
+            Me.TXTTblLCID.Text = CStr(new_id("TblLC", "TblLCiD", "", True))
        
             Me.dbFromDate.value = Date
             Me.dbTodate.value = Date
@@ -9474,7 +9489,7 @@ Private Sub Cmd_Click(index As Integer)
             CboPayMentType.ListIndex = 2
                Case 11
                     On Error Resume Next
-                    ShowAttachments "LC" & TxtLcNo.text, "0901201401"
+                    ShowAttachments "LC" & TxtLcNo.Text, "0901201401"
 
         Case 1
 Ele(3).Enabled = True
@@ -9502,7 +9517,7 @@ Ele(3).Enabled = True
           GrdMargin4.rows = GrdMargin4.rows + 1
             Me.Dtp.value = FirstPeriodDateInthisYear
  
-            TxtModFlg.text = "E"
+            TxtModFlg.Text = "E"
             '         Grid.Rows = Grid.Rows + 1
             Grid.Enabled = True
          
@@ -9622,7 +9637,7 @@ MySQL = "  SELECT BanksData_1.BankName, dbo.currency.name AS CurrencyName, dbo.L
 
   
   
-  MySQL = MySQL & "  Where LCNO = " & val(TxtLcNo.text)
+  MySQL = MySQL & "  Where LCNO = N'" & Trim(TxtLcNo.Text) & "'"
     
     If SystemOptions.UserInterface = ArabicInterface Then
             StrFileName = App.path & "\REPORTS\REPORTS NEW\rpt_LC_Details2.rpt"
@@ -9695,9 +9710,9 @@ Function Del_Trans()
 
     On Error GoTo ErrTrap
 
-    If TxtLcNo.text <> "" Then
+    If TxtLcNo.Text <> "" Then
         Msg = "”Ì „ Õ–› »Ì«‰«  «·«⁄ „«œ  —ﬁ„ " & CHR(13)
-        Msg = Msg + (TxtLcNo.text) & CHR(13)
+        Msg = Msg + (TxtLcNo.Text) & CHR(13)
         Msg = Msg + " Â·  —€» ›Ì Õ–› Â–Â «·»Ì«‰« ø"
         IntRes = MsgBox(Msg, vbYesNo + vbQuestion + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title)
     
@@ -9712,38 +9727,38 @@ Function Del_Trans()
                 
                         
                         
-                StrSQL = "delete From Notes where TblLCID=" & val(TXTTblLCID.text)
+                StrSQL = "delete From Notes where TblLCID=" & val(TXTTblLCID.Text)
                 Cn.Execute StrSQL, , adExecuteNoRecords
                         
                         
-                Cn.Execute "delete DOUBLE_ENTREY_VOUCHERS1 where Notes_ID In (Select NoteID from Notes1  where TblLCID=" & val(TXTTblLCID.text) & ")"
+                Cn.Execute "delete DOUBLE_ENTREY_VOUCHERS1 where Notes_ID In (Select NoteID from Notes1  where TblLCID=" & val(TXTTblLCID.Text) & ")"
                         
-                StrSQL = "delete From Notes1 where TblLCID=" & val(TXTTblLCID.text)
+                StrSQL = "delete From Notes1 where TblLCID=" & val(TXTTblLCID.Text)
                 
                 Cn.Execute StrSQL, , adExecuteNoRecords
                 
                 
                 
-                StrSQL = "delete From Accounts where TblLCID=" & val(TXTTblLCID.text)
+                StrSQL = "delete From Accounts where TblLCID=" & val(TXTTblLCID.Text)
                 Cn.Execute StrSQL, , adExecuteNoRecords
 
                         
         
-                StrSQL = "delete From TBLLCHistory where TblLCID=" & val(TXTTblLCID.text)
+                StrSQL = "delete From TBLLCHistory where TblLCID=" & val(TXTTblLCID.Text)
                 Cn.Execute StrSQL, , adExecuteNoRecords
         
                 
-                StrSQL = "delete From TBLLCMargin where   TblLCID=" & val(TXTTblLCID.text)
+                StrSQL = "delete From TBLLCMargin where   TblLCID=" & val(TXTTblLCID.Text)
                 Cn.Execute StrSQL, , adExecuteNoRecords
                 
                 
                 
                
-                StrSQL = "delete From TBLLCMargin2 where   TblLCID=" & val(TXTTblLCID.text)
+                StrSQL = "delete From TBLLCMargin2 where   TblLCID=" & val(TXTTblLCID.Text)
                 Cn.Execute StrSQL, , adExecuteNoRecords
                  
                  
-                StrSQL = "delete From tblLCOpenB where   TblLCID=" & val(TXTTblLCID.text)
+                StrSQL = "delete From tblLCOpenB where   TblLCID=" & val(TXTTblLCID.Text)
                 Cn.Execute StrSQL, , adExecuteNoRecords
                 
         
@@ -9799,7 +9814,7 @@ End Function
 Function DeleteOpeningBalance()
     Cmd_Click (1)
     OptType(2).value = True
-    TxtOpenBalance.text = 0
+    TxtOpenBalance.Text = 0
     Cmd_Click (2)
 
 End Function
@@ -9808,8 +9823,8 @@ Private Sub RemoveGridRow()
 
     With Me.Grid
 
-        If .row <= 0 Then Exit Sub
-        .RemoveItem .row
+        If .Row <= 0 Then Exit Sub
+        .RemoveItem .Row
     End With
 
     ReLineGrid
@@ -9908,17 +9923,17 @@ End Function
 Private Sub Undo()
     On Error GoTo ErrTrap
 
-    Select Case TxtModFlg.text
+    Select Case TxtModFlg.Text
 
         Case "N"
             clear_all Me
-            Me.TxtModFlg.text = "R"
+            Me.TxtModFlg.Text = "R"
             XPBtnMove_Click (1)
 
         Case "E"
  
             Retrive
-            Me.TxtModFlg.text = "R"
+            Me.TxtModFlg.Text = "R"
     End Select
 
     Exit Sub
@@ -10077,8 +10092,8 @@ Private Sub CmdRemove_Click()
         Else
 
             If Me.Grid.rows > 1 Then
-                If Me.Grid.row <> Me.Grid.FixedRows - 1 Then
-                    Me.Grid.RemoveItem (Me.Grid.row)
+                If Me.Grid.Row <> Me.Grid.FixedRows - 1 Then
+                    Me.Grid.RemoveItem (Me.Grid.Row)
                 End If
             End If
         End If
@@ -10099,8 +10114,8 @@ End Sub
 
 Private Sub dcproject_Click(Area As Integer)
 
-    If DCproject.BoundText = "" Then Exit Sub
-    My_SQL = " select  fullcode,des from projects_des where project_id=" & val(DCproject.BoundText)
+    If dcproject.BoundText = "" Then Exit Sub
+    My_SQL = " select  fullcode,des from projects_des where project_id=" & val(dcproject.BoundText)
     fill_combo Dcterm, My_SQL
 
 End Sub
@@ -10124,9 +10139,9 @@ Private Sub fg_Click()
 
     On Error GoTo ErrTrap
  
-    If Not FG.TextMatrix(FG.row, 1) = "" Then
+    If Not FG.TextMatrix(FG.Row, 1) = "" Then
         FrmShowPrice.show
-        FrmShowPrice.Retrive val(FG.TextMatrix(FG.row, 1))
+        FrmShowPrice.Retrive val(FG.TextMatrix(FG.Row, 1))
      
     End If
 
@@ -10230,7 +10245,7 @@ End If
     StrSQL = "select * From TBLLC  "
     rs.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
     XPBtnMove_Click 2
-    Me.TxtModFlg.text = "R"
+    Me.TxtModFlg.Text = "R"
 
     If OPEN_NEW_SCREEN = True Then
         Cmd_Click (0)
@@ -10515,9 +10530,9 @@ Private Sub Form_QueryUnload(Cancel As Integer, _
     Dim StrMSG As String
     On Error GoTo ErrTrap
 
-    If Me.TxtModFlg.text <> "R" Then
+    If Me.TxtModFlg.Text <> "R" Then
 
-        Select Case Me.TxtModFlg.text
+        Select Case Me.TxtModFlg.Text
 
             Case "N"
     
@@ -10585,7 +10600,7 @@ Private Sub Form_Unload(Cancel As Integer)
     RegisterLogInOut Me.Name, ScreenNameArabic, ScreenNameEnglish
 End Sub
 
-Private Sub Grid_AfterEdit(ByVal row As Long, _
+Private Sub Grid_AfterEdit(ByVal Row As Long, _
                            ByVal Col As Long)
     On Error Resume Next
     Dim StrAccountCode As String
@@ -10604,12 +10619,12 @@ Private Sub Grid_AfterEdit(ByVal row As Long, _
                 code = .ComboData
            
                 '   LngRow = .FindRow(Code, .FixedRows, .ColIndex("UnitID"), False, True)
-                .TextMatrix(row, .ColIndex("UnitID")) = code
-                .TextMatrix(row, .ColIndex("UnitName")) = .ComboItem
+                .TextMatrix(Row, .ColIndex("UnitID")) = code
+                .TextMatrix(Row, .ColIndex("UnitName")) = .ComboItem
  
         End Select
    
-        If row = .rows - 1 Then
+        If Row = .rows - 1 Then
     
             '.Rows = .Rows + 1
         End If
@@ -10640,7 +10655,7 @@ Private Sub ReLineGrid()
 
 End Sub
 
-Private Sub Grid_BeforeEdit(ByVal row As Long, _
+Private Sub Grid_BeforeEdit(ByVal Row As Long, _
                             ByVal Col As Long, _
                             Cancel As Boolean)
 
@@ -10655,7 +10670,7 @@ Private Sub Grid_BeforeEdit(ByVal row As Long, _
 
 End Sub
 
-Private Sub Grid_StartEdit(ByVal row As Long, _
+Private Sub Grid_StartEdit(ByVal Row As Long, _
                            ByVal Col As Long, _
                            Cancel As Boolean)
     Dim rs As New ADODB.Recordset
@@ -10672,7 +10687,7 @@ Private Sub Grid_StartEdit(ByVal row As Long, _
 
             Case "UnitName"
 
-                LngItemID = val(.TextMatrix(.row, .ColIndex("ItemId")))
+                LngItemID = val(.TextMatrix(.Row, .ColIndex("ItemId")))
 
                 'LngItemID = 1
                 If LngItemID = 0 Then
@@ -10737,12 +10752,12 @@ Public Sub Retrive(Optional LCNO As String = "")
  
 '///////////////////////////////////
 
-txtOPenValue.text = IIf(IsNull(rs("OpenValue").value), "", rs("OpenValue").value)
+txtOPenValue.Text = IIf(IsNull(rs("OpenValue").value), "", rs("OpenValue").value)
 CboPayMentType.ListIndex = IIf(IsNull(rs("PaymentTypeID").value), 0, rs("PaymentTypeID").value)
 DcboBox.BoundText = IIf(IsNull(rs("BoxID").value), "", rs("BoxID").value)
 DcboBankName.BoundText = IIf(IsNull(rs("BankID2").value), "", rs("BankID2").value)
-TxtChequeNumber.text = IIf(IsNull(rs("ChequeNumber").value), "", rs("ChequeNumber").value)
-txtBondAmt.text = IIf(IsNull(rs("BondAmt").value), "", rs("BondAmt").value)
+TxtChequeNumber.Text = IIf(IsNull(rs("ChequeNumber").value), "", rs("ChequeNumber").value)
+txtBondAmt.Text = IIf(IsNull(rs("BondAmt").value), "", rs("BondAmt").value)
 DtpChequeDueDate.value = IIf(IsNull(rs("ChequeDueDate").value), Date, rs("ChequeDueDate").value)
 
 
@@ -10763,12 +10778,12 @@ txtopening_balance_voucher_id = rs("opening_balance_voucher_id").value & ""
 
     If optTypeLCLG(1).value = True Then cmbAccountAcceptanceParent.Enabled = False Else cmbAccountAcceptanceParent.Enabled = True
     
-txtprojectname.text = IIf(IsNull(rs("projectName").value), "", rs("projectName").value)
+txtprojectname.Text = IIf(IsNull(rs("projectName").value), "", rs("projectName").value)
 dcBranch.BoundText = IIf(IsNull(rs("BranchID").value), "", rs("BranchID").value)
 cmbAccount.BoundText = IIf(IsNull(rs("Account_CodeExp").value), "", rs("Account_CodeExp").value)
 cmbAccountExpProject.BoundText = IIf(IsNull(rs("AccountExpProject").value), "", rs("AccountExpProject").value)
 
-DCPreFix.text = IIf(IsNull(rs("prifix").value), "", rs("prifix").value)
+DCPreFix.Text = IIf(IsNull(rs("prifix").value), "", rs("prifix").value)
     
     
 If Trim(rs!NoteIDRowId & "") = "" Then
@@ -10795,23 +10810,23 @@ End If
     DataCombo2.BoundText = IIf(IsNull(rs("project_id").value), "", rs("project_id").value)
 Dim s As String
 
-    Me.TXTTblLCID.text = IIf(IsNull(rs("TblLCID").value), "", rs("TblLCID").value)
-    txtGuaranteeNo.text = IIf(IsNull(rs("GuaranteeNo").value), "", rs("GuaranteeNo").value)
-    Me.TxtLcNo.text = IIf(IsNull(rs("LCNO").value), "", rs("LCNO").value)
-        Me.TxtName.text = IIf(IsNull(rs("Name").value), "", rs("Name").value)
+    Me.TXTTblLCID.Text = IIf(IsNull(rs("TblLCID").value), "", rs("TblLCID").value)
+    txtGuaranteeNo.Text = IIf(IsNull(rs("GuaranteeNo").value), "", rs("GuaranteeNo").value)
+    Me.TxtLcNo.Text = IIf(IsNull(rs("LCNO").value), "", rs("LCNO").value)
+        Me.TxtName.Text = IIf(IsNull(rs("Name").value), "", rs("Name").value)
         
         
-        Me.TxtNameE.text = IIf(IsNull(rs("Namee").value), "", rs("Namee").value)
+        Me.TxtNameE.Text = IIf(IsNull(rs("Namee").value), "", rs("Namee").value)
     DboParentAccount.BoundText = Get_Account_Parent_code(IIf(IsNull(rs("Account_Code").value), "", Trim(rs("Account_Code").value)))
     
-    RetriveProformaInvoices TxtLcNo.text
+    RetriveProformaInvoices TxtLcNo.Text
   
     Me.DCLC.BoundText = IIf(IsNull(rs("LCTyperId").value), "", rs("LCTyperId").value)
     Me.Dcbank.BoundText = IIf(IsNull(rs("BankId").value), "", rs("BankId").value)
-    Me.TXTBank2.text = IIf(IsNull(rs("Bank2").value), "", rs("Bank2").value)
-    Me.TxtValue.text = IIf(Not IsNumeric(rs("Value").value), 0, rs("Value").value)
-    Me.txtPercentV.text = IIf(Not IsNumeric(rs("PercentV").value), 0, rs("PercentV").value)
-    Me.txtAcceptianPeriod.text = IIf(Not IsNumeric(rs("AcceptianPeriod").value), 0, rs("AcceptianPeriod").value)
+    Me.TXTBank2.Text = IIf(IsNull(rs("Bank2").value), "", rs("Bank2").value)
+    Me.TxtValue.Text = IIf(Not IsNumeric(rs("Value").value), 0, rs("Value").value)
+    Me.txtPercentV.Text = IIf(Not IsNumeric(rs("PercentV").value), 0, rs("PercentV").value)
+    Me.txtAcceptianPeriod.Text = IIf(Not IsNumeric(rs("AcceptianPeriod").value), 0, rs("AcceptianPeriod").value)
     
     Me.DCCountry.BoundText = IIf(IsNull(rs("CountryId").value), "", rs("CountryId").value)
     
@@ -10833,10 +10848,10 @@ Dim s As String
     End If
 
     
-    txt_Currency_rate.text = IIf(IsNull(rs("Currency_rate").value), mRate, (rs("Currency_rate").value))
+    txt_Currency_rate.Text = IIf(IsNull(rs("Currency_rate").value), mRate, (rs("Currency_rate").value))
             
     
-    Me.TXtPrimaryInvoiceNo.text = IIf(IsNull(rs("PrimaryInvoiceNo").value), "", rs("PrimaryInvoiceNo").value)
+    Me.TXtPrimaryInvoiceNo.Text = IIf(IsNull(rs("PrimaryInvoiceNo").value), "", rs("PrimaryInvoiceNo").value)
     Me.DCCountry.BoundText = IIf(IsNull(rs("CountryId").value), "", rs("CountryId").value)
     Me.DCboUserName.BoundText = IIf(IsNull(rs("UserID").value), user_id, rs("UserID").value)
     
@@ -10865,21 +10880,21 @@ Dim s As String
 
     DpCloseDate.value = IIf(IsNull(rs("CloseDate").value), Date, rs("CloseDate").value)
     DPLastParcilDate.value = IIf(IsNull(rs("LastParcilDate").value), Date, rs("LastParcilDate").value)
-    Me.TxtNoOfParcil.text = IIf(Not IsNumeric(rs("NoOfParcil").value), 0, rs("NoOfParcil").value)
+    Me.TxtNoOfParcil.Text = IIf(Not IsNumeric(rs("NoOfParcil").value), 0, rs("NoOfParcil").value)
     
-    Me.txtTotalBondHistory.text = IIf(Not IsNumeric(rs("TotalBondHistory").value), 0, rs("TotalBondHistory").value)
-    Me.txtMarginTotal.text = IIf(Not IsNumeric(rs("MarginTotal").value), 0, rs("MarginTotal").value)
-    Me.txtMarginTotal2.text = IIf(Not IsNumeric(rs("MarginTotal2").value), 0, rs("MarginTotal2").value)
-    Me.txtMarginTotal3.text = IIf(Not IsNumeric(rs("MarginTotal3").value), 0, rs("MarginTotal3").value)
+    Me.txtTotalBondHistory.Text = IIf(Not IsNumeric(rs("TotalBondHistory").value), 0, rs("TotalBondHistory").value)
+    Me.txtMarginTotal.Text = IIf(Not IsNumeric(rs("MarginTotal").value), 0, rs("MarginTotal").value)
+    Me.txtMarginTotal2.Text = IIf(Not IsNumeric(rs("MarginTotal2").value), 0, rs("MarginTotal2").value)
+    Me.txtMarginTotal3.Text = IIf(Not IsNumeric(rs("MarginTotal3").value), 0, rs("MarginTotal3").value)
 
     DBCboClientName.BoundText = IIf(IsNull(rs("VendorId").value), "", rs("VendorId").value)
 
-    TxtRemarks.text = IIf(IsNull(rs("Remarks").value), 0, rs("Remarks").value)
+    txtRemarks.Text = IIf(IsNull(rs("Remarks").value), 0, rs("Remarks").value)
 
 txtGuaranteeDate.value = IIf(IsNull(rs("GuaranteeDate").value), Date, rs("GuaranteeDate").value)
 
     txtLGExpiryDate.value = IIf(IsNull(rs("LGExpiryDate").value), Date, rs("LGExpiryDate").value)
-txtLGExpPeriod.text = IIf(IsNull(rs("LGExpPeriod").value), "", rs("LGExpPeriod").value)
+txtLGExpPeriod.Text = IIf(IsNull(rs("LGExpPeriod").value), "", rs("LGExpPeriod").value)
 
     If IsNull(rs("Locked").value) Then
         ChkLocked.value = vbUnchecked
@@ -10893,27 +10908,27 @@ txtLGExpPeriod.text = IIf(IsNull(rs("LGExpPeriod").value), "", rs("LGExpPeriod")
 
     End If
     
-StrSQL = "sELECT * from TBLLCHistory  where TblLCID=" & val(Me.TXTTblLCID.text)
+StrSQL = "sELECT * from TBLLCHistory  where TblLCID=" & val(Me.TXTTblLCID.Text)
 loadgrid StrSQL, GrdBondHistory, True, False
 '
 '
-Dim row As Long
+Dim Row As Long
 StrSQL = "sELECT TBLLCMargin.*,Acc.Account_Serial as MarginAccountSerial,Acc.Account_Name as MarginAccount  ,"
 StrSQL = StrSQL & " Acc2.Account_Serial as BankAccountSerial,Acc2.Account_Name as BankAccount  "
 StrSQL = StrSQL & " from TBLLCMargin Left Outer join Accounts Acc On TBLLCMargin.MarginAccountCode = Acc.Account_Code "
 StrSQL = StrSQL & " Left Outer join Accounts Acc2 On TBLLCMargin.BankAccountCode = Acc2.Account_Code"
-StrSQL = StrSQL & " Where Type= 0 and  TBLLCMargin.TblLCID = " & val(Me.TXTTblLCID.text)
+StrSQL = StrSQL & " Where Type= 0 and  TBLLCMargin.TblLCID = " & val(Me.TXTTblLCID.Text)
 
 loadgrid StrSQL, GrdMargin, True, False
     With GrdMargin
     
-    For row = 1 To .rows - 1
+    For Row = 1 To .rows - 1
 
-        If val(.TextMatrix(row, .ColIndex("StillAmount"))) = 0 Then
-            .TextMatrix(row, .ColIndex("IsFullPayed")) = 1
-            .cell(flexcpBackColor, row, 1, row, .Cols - 1) = vbGreen
+        If val(.TextMatrix(Row, .ColIndex("StillAmount"))) = 0 Then
+            .TextMatrix(Row, .ColIndex("IsFullPayed")) = 1
+            .cell(flexcpBackColor, Row, 1, Row, .Cols - 1) = vbGreen
         Else
-            .TextMatrix(row, .ColIndex("IsFullPayed")) = 0
+            .TextMatrix(Row, .ColIndex("IsFullPayed")) = 0
         End If
     Next
     End With
@@ -10925,26 +10940,26 @@ StrSQL = StrSQL & " from TBLLCMargin Left Outer join Accounts Acc On TBLLCMargin
 StrSQL = StrSQL & " Left Outer join Accounts Acc2 On TBLLCMargin.BankAccountCode = Acc2.Account_Code"
 StrSQL = StrSQL & " Left Outer join Accounts Acc3 On TBLLCMargin.AccountMargen2 = Acc3.Account_Code"
 StrSQL = StrSQL & " Left Outer join Accounts Acc4 On TBLLCMargin.BankAccountCode2 = Acc4.Account_Code"
-StrSQL = StrSQL & " Where   TBLLCMargin.TblLCID = " & val(Me.TXTTblLCID.text)
+StrSQL = StrSQL & " Where   TBLLCMargin.TblLCID = " & val(Me.TXTTblLCID.Text)
 loadgrid StrSQL, GrdMargin2, True, False
 
         If GrdMargin.rows - 1 > 1 Then
-            Me.txtMarginTotal.text = GrdMargin.Aggregate(flexSTSum, GrdMargin.FixedRows, GrdMargin.ColIndex("Amount"), GrdMargin.rows - 1, GrdMargin.ColIndex("Amount"))
+            Me.txtMarginTotal.Text = GrdMargin.Aggregate(flexSTSum, GrdMargin.FixedRows, GrdMargin.ColIndex("Amount"), GrdMargin.rows - 1, GrdMargin.ColIndex("Amount"))
         End If
         
         If GrdMargin2.rows - 1 > 1 Then
-            Me.txtMarginTotal2.text = GrdMargin2.Aggregate(flexSTSum, GrdMargin2.FixedRows, GrdMargin2.ColIndex("StillAmount"), GrdMargin2.rows - 1, GrdMargin2.ColIndex("StillAmount"))
+            Me.txtMarginTotal2.Text = GrdMargin2.Aggregate(flexSTSum, GrdMargin2.FixedRows, GrdMargin2.ColIndex("StillAmount"), GrdMargin2.rows - 1, GrdMargin2.ColIndex("StillAmount"))
         End If
     
     With GrdMargin2
     
-    For row = 1 To .rows - 1
+    For Row = 1 To .rows - 1
 
-        If val(.TextMatrix(row, .ColIndex("StillAmount"))) = 0 Then
-            .TextMatrix(row, .ColIndex("IsFullPayed")) = 1
-            .cell(flexcpBackColor, row, 1, row, .Cols - 1) = vbGreen
+        If val(.TextMatrix(Row, .ColIndex("StillAmount"))) = 0 Then
+            .TextMatrix(Row, .ColIndex("IsFullPayed")) = 1
+            .cell(flexcpBackColor, Row, 1, Row, .Cols - 1) = vbGreen
         Else
-            .TextMatrix(row, .ColIndex("IsFullPayed")) = 0
+            .TextMatrix(Row, .ColIndex("IsFullPayed")) = 0
         End If
     Next
     End With
@@ -10954,23 +10969,23 @@ StrSQL = StrSQL & " Acc2.Account_Serial as BankAccountSerial,Acc2.Account_Name a
 StrSQL = StrSQL & " from TBLLCMargin2 Left Outer join Accounts Acc On TBLLCMargin2.MarginAccountCode = Acc.Account_Code "
 StrSQL = StrSQL & " Left Outer join Accounts Acc2 On TBLLCMargin2.BankAccountCode = Acc2.Account_Code"
 StrSQL = StrSQL & " Left Outer join Accounts Acc3 On TBLLCMargin2.AccountMargen2 = Acc3.Account_Code"
-StrSQL = StrSQL & " Where   TBLLCMargin2.TblLCID = " & val(Me.TXTTblLCID.text)
+StrSQL = StrSQL & " Where   TBLLCMargin2.TblLCID = " & val(Me.TXTTblLCID.Text)
 loadgrid StrSQL, GrdMargin4, True, False
 
         If GrdMargin4.rows - 1 > 1 Then
-            Me.txtMarginTotal4.text = GrdMargin4.Aggregate(flexSTSum, GrdMargin4.FixedRows, GrdMargin4.ColIndex("Amount"), GrdMargin4.rows - 1, GrdMargin4.ColIndex("Amount"))
+            Me.txtMarginTotal4.Text = GrdMargin4.Aggregate(flexSTSum, GrdMargin4.FixedRows, GrdMargin4.ColIndex("Amount"), GrdMargin4.rows - 1, GrdMargin4.ColIndex("Amount"))
         End If
         
 
     With GrdMargin4
     
-    For row = 1 To .rows - 1
+    For Row = 1 To .rows - 1
 
-        If val(.TextMatrix(row, .ColIndex("StillAmount"))) = 0 Then
-            .TextMatrix(row, .ColIndex("IsFullPayed")) = 1
-            .cell(flexcpBackColor, row, 1, row, .Cols - 1) = vbGreen
+        If val(.TextMatrix(Row, .ColIndex("StillAmount"))) = 0 Then
+            .TextMatrix(Row, .ColIndex("IsFullPayed")) = 1
+            .cell(flexcpBackColor, Row, 1, Row, .Cols - 1) = vbGreen
         Else
-            .TextMatrix(row, .ColIndex("IsFullPayed")) = 0
+            .TextMatrix(Row, .ColIndex("IsFullPayed")) = 0
         End If
     Next
     End With
@@ -10996,7 +11011,7 @@ StrSQL = "sELECT tblLCOpenB.*,Acc.Account_Serial as MarginAccountSerial,Acc.Acco
 StrSQL = StrSQL & " Acc2.Account_Serial as BankAccountSerial,Acc2.Account_Name as BankAccount  "
 StrSQL = StrSQL & " from tblLCOpenB Left Outer join Accounts Acc On tblLCOpenB.MarginAccountCode = Acc.Account_Code "
 StrSQL = StrSQL & " Left Outer join Accounts Acc2 On tblLCOpenB.BankAccountCode = Acc2.Account_Code"
-StrSQL = StrSQL & " Where   tblLCOpenB.TblLCID = " & val(Me.TXTTblLCID.text)
+StrSQL = StrSQL & " Where   tblLCOpenB.TblLCID = " & val(Me.TXTTblLCID.Text)
 loadgrid StrSQL, GrdMargin3, True, False
 
 '        If GrdMargin.rows - 1 > 1 Then
@@ -11012,9 +11027,9 @@ loadgrid StrSQL, GrdMargin3, True, False
 
     '    rs("OpenBalanceDate").value = Me.Dtp.value
 
-    txtopening_balance_voucher_id.text = IIf(IsNull(rs("opening_balance_voucher_id").value), get_opening_balance_voucher_id, rs("opening_balance_voucher_id").value)
-    If val(txtopening_balance_voucher_id.text) = 0 Then
-        txtopening_balance_voucher_id.text = get_opening_balance_voucher_id
+    txtopening_balance_voucher_id.Text = IIf(IsNull(rs("opening_balance_voucher_id").value), get_opening_balance_voucher_id, rs("opening_balance_voucher_id").value)
+    If val(txtopening_balance_voucher_id.Text) = 0 Then
+        txtopening_balance_voucher_id.Text = get_opening_balance_voucher_id
     End If
     Dim FirstPeriodDateInthisYear As Date
 
@@ -11031,7 +11046,7 @@ loadgrid StrSQL, GrdMargin3, True, False
     End If
     
     If Not IsNull(rs("OpenBalanceType").value) Then
-        Me.TxtOpenBalance.text = IIf(IsNull(rs("OpenBalance")), "", Trim(rs("OpenBalance")))
+        Me.TxtOpenBalance.Text = IIf(IsNull(rs("OpenBalance")), "", Trim(rs("OpenBalance")))
 
         If rs("OpenBalanceType").value = 0 Then
             OptType(0).value = True
@@ -11042,7 +11057,7 @@ loadgrid StrSQL, GrdMargin3, True, False
         End If
         
     Else
-        Me.TxtOpenBalance.text = 0
+        Me.TxtOpenBalance.Text = 0
         Me.OptType(2).value = True
         OptType_Click 2
     End If
@@ -11070,15 +11085,15 @@ Private Sub Text4_Change()
 
 End Sub
 
-Private Sub OptType_Click(index As Integer)
+Private Sub OptType_Click(Index As Integer)
     Me.TxtOpenBalance.Enabled = Not OptType(2).value
-    Me.TxtOpenBalance.text = IIf(OptType(2).value = True, 0, Me.TxtOpenBalance.text)
+    Me.TxtOpenBalance.Text = IIf(OptType(2).value = True, 0, Me.TxtOpenBalance.Text)
 
 End Sub
 
 Private Sub TxtModFlg_Change()
 
-    If Me.TxtModFlg.text = "N" Then
+    If Me.TxtModFlg.Text = "N" Then
         CmdRemove.Enabled = True
         Ele(1).Enabled = True
         Cmd(0).Enabled = False
@@ -11091,7 +11106,7 @@ Private Sub TxtModFlg_Change()
     DboParentAccount.Enabled = True
    
     
-    ElseIf Me.TxtModFlg.text = "E" Then
+    ElseIf Me.TxtModFlg.Text = "E" Then
         CmdRemove.Enabled = True
         Ele(1).Enabled = True
         Cmd(2).Enabled = True
@@ -11131,12 +11146,12 @@ DboParentAccount.Enabled = False
 End Sub
 
 Private Sub TxtNoOfParcil_KeyPress(KeyAscii As Integer)
-    KeyAscii = KeyAscii_Num(KeyAscii, Me.TxtNoOfParcil.text, 0)
+    KeyAscii = KeyAscii_Num(KeyAscii, Me.TxtNoOfParcil.Text, 0)
 
 End Sub
 
 Private Sub TxtOpenBalance_KeyPress(KeyAscii As Integer)
-    KeyAscii = KeyAscii_Num(KeyAscii, Me.TxtOpenBalance.text, 0)
+    KeyAscii = KeyAscii_Num(KeyAscii, Me.TxtOpenBalance.Text, 0)
 End Sub
 
 Private Sub txtOPenValue_Change()
@@ -11145,7 +11160,7 @@ Private Sub txtOPenValue_Change()
 End Sub
 
 Private Sub txtOPenValue2_Change()
-If Me.TxtModFlg.text = "" Or Me.TxtModFlg.text = "R" Then Exit Sub
+If Me.TxtModFlg.Text = "" Or Me.TxtModFlg.Text = "R" Then Exit Sub
     'txtOPenValue = txtOPenValue2
     txtLGExpPeriod = DateDiff("D", txtGuaranteeDate.value, txtLGExpiryDate.value)
     txtLGExpPeriod_Change
@@ -11156,20 +11171,20 @@ txtBondAmt = txtTotalBondHistory
 End Sub
 
 Private Sub TxtValue_KeyPress(KeyAscii As Integer)
-    KeyAscii = KeyAscii_Num(KeyAscii, Me.TxtValue.text, 0)
+    KeyAscii = KeyAscii_Num(KeyAscii, Me.TxtValue.Text, 0)
 End Sub
 
-Private Sub XPBtnMove_Click(index As Integer)
+Private Sub XPBtnMove_Click(Index As Integer)
 
-    If Me.TxtModFlg.text = "N" Then
+    If Me.TxtModFlg.Text = "N" Then
         clear_all Me
-        Me.TxtModFlg.text = "R"
+        Me.TxtModFlg.Text = "R"
         XPBtnMove_Click (1)
     End If
 
     On Error GoTo ErrTrap
 
-    Select Case index
+    Select Case Index
 
         Case 0
 
@@ -11238,7 +11253,7 @@ End Sub
 '--------------------------------------
 
 
-Private Sub GrdMargin4_AfterEdit(ByVal row As Long, ByVal Col As Long)
+Private Sub GrdMargin4_AfterEdit(ByVal Row As Long, ByVal Col As Long)
  
     Dim StrAccountCode As String
     Dim Msg As String
@@ -11252,32 +11267,32 @@ Private Sub GrdMargin4_AfterEdit(ByVal row As Long, ByVal Col As Long)
     Set rsDummy = New ADODB.Recordset
     rsDummy.Open s, Cn, adOpenStatic, adLockReadOnly
     If Not rsDummy.EOF Then
-        GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("MarginAccount")) = DBCboClientName.text ' Trim(rsDummy!Account_code & "")
-        GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("MarginAccountCode")) = Trim(rsDummy!Account_code & "")
+        GrdMargin4.TextMatrix(Row, GrdMargin4.ColIndex("MarginAccount")) = DBCboClientName.Text ' Trim(rsDummy!Account_code & "")
+        GrdMargin4.TextMatrix(Row, GrdMargin4.ColIndex("MarginAccountCode")) = Trim(rsDummy!Account_code & "")
         
     End If
     With GrdMargin4
-        If .TextMatrix(row, .ColIndex("GuaranteeDate")) = "" Then
-            .TextMatrix(row, .ColIndex("GuaranteeDate")) = txtGuaranteeDate.value
+        If .TextMatrix(Row, .ColIndex("GuaranteeDate")) = "" Then
+            .TextMatrix(Row, .ColIndex("GuaranteeDate")) = txtGuaranteeDate.value
         End If
         
-        If CBool(.ValueMatrix(row, .ColIndex("IsOpenBalance"))) Then
+        If CBool(.ValueMatrix(Row, .ColIndex("IsOpenBalance"))) Then
              getFirstPeriodDateInthisYear2 FirstPeriodDateInthisYear
-            .TextMatrix(row, .ColIndex("GuaranteeDate")) = FirstPeriodDateInthisYear
-            .TextMatrix(row, .ColIndex("OrderDate")) = FirstPeriodDateInthisYear
+            .TextMatrix(Row, .ColIndex("GuaranteeDate")) = FirstPeriodDateInthisYear
+            .TextMatrix(Row, .ColIndex("OrderDate")) = FirstPeriodDateInthisYear
         End If
             
        
-        If .TextMatrix(row, .ColIndex("BankAccountCode")) = "" Then
-            .TextMatrix(row, .ColIndex("BankAccountCode")) = txtGuaranteeDate.value
-             s = "SELECT AcceptAccount_Code,accounts.Account_Name,accounts.Account_Serial, * FROM TblLC tl Inner join accounts On tl.AcceptAccount_Code = accounts.Account_Code WHERE tl.TblLCID = " & val(TXTTblLCID.text)
+        If .TextMatrix(Row, .ColIndex("BankAccountCode")) = "" Then
+            .TextMatrix(Row, .ColIndex("BankAccountCode")) = txtGuaranteeDate.value
+             s = "SELECT AcceptAccount_Code,accounts.Account_Name,accounts.Account_Serial, * FROM TblLC tl Inner join accounts On tl.AcceptAccount_Code = accounts.Account_Code WHERE tl.TblLCID = " & val(TXTTblLCID.Text)
             Set rsDummy = New ADODB.Recordset
             rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
             If Not rsDummy.EOF Then
                 
-                GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("BankAccountSerial")) = Trim(rsDummy!account_serial & "")
-                GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("BankAccount")) = Trim(rsDummy!account_name & "")
-                GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("BankAccountCode")) = Trim(rsDummy!AcceptAccount_Code & "")
+                GrdMargin4.TextMatrix(Row, GrdMargin4.ColIndex("BankAccountSerial")) = Trim(rsDummy!account_serial & "")
+                GrdMargin4.TextMatrix(Row, GrdMargin4.ColIndex("BankAccount")) = Trim(rsDummy!account_name & "")
+                GrdMargin4.TextMatrix(Row, GrdMargin4.ColIndex("BankAccountCode")) = Trim(rsDummy!AcceptAccount_Code & "")
             End If
              
 '             s = "Select * from Accounts where Account_Code = '" & Trim(GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("BankAccountCode"))) & "'"
@@ -11296,33 +11311,33 @@ Private Sub GrdMargin4_AfterEdit(ByVal row As Long, ByVal Col As Long)
 
         Select Case .ColKey(Col)
             Case "OrderDate"
-                If IsDate(.TextMatrix(row, .ColIndex("OrderDate"))) Then
-                    .TextMatrix(row, .ColIndex("GuaranteeDate")) = DateAdd("D", val(txtAcceptianPeriod), .TextMatrix(row, .ColIndex("OrderDate")))
+                If IsDate(.TextMatrix(Row, .ColIndex("OrderDate"))) Then
+                    .TextMatrix(Row, .ColIndex("GuaranteeDate")) = DateAdd("D", val(txtAcceptianPeriod), .TextMatrix(Row, .ColIndex("OrderDate")))
                 End If
-                If CBool(.ValueMatrix(row, .ColIndex("IsOpenBalance"))) Then
+                If CBool(.ValueMatrix(Row, .ColIndex("IsOpenBalance"))) Then
                     getFirstPeriodDateInthisYear2 FirstPeriodDateInthisYear
-                    .TextMatrix(row, .ColIndex("GuaranteeDate")) = FirstPeriodDateInthisYear
+                    .TextMatrix(Row, .ColIndex("GuaranteeDate")) = FirstPeriodDateInthisYear
                 End If
 
-                If CBool(.ValueMatrix(row, .ColIndex("IsOpenBalance"))) Then
+                If CBool(.ValueMatrix(Row, .ColIndex("IsOpenBalance"))) Then
                     getFirstPeriodDateInthisYear2 FirstPeriodDateInthisYear
-                    .TextMatrix(row, .ColIndex("OrderDate")) = FirstPeriodDateInthisYear
+                    .TextMatrix(Row, .ColIndex("OrderDate")) = FirstPeriodDateInthisYear
                 End If
             Case "MarginNo"
-                If CBool(.ValueMatrix(row, .ColIndex("IsOpenBalance"))) Then Exit Sub
+                If CBool(.ValueMatrix(Row, .ColIndex("IsOpenBalance"))) Then Exit Sub
                            StrSQL = "sELECT TBLLCMargin2.*,BankAccountCode,CC.Account_Name BankAccount2,CC.Account_Serial BankAccountSerial2, "
                 StrSQL = StrSQL & "   accounts.Account_Name MarginAccount ,accounts.Account_Serial  MarginAccountSerial, MarginAccountCode"
                 StrSQL = StrSQL & "   FROM TBLLCMargin2 Inner join accounts On accounts.Account_Code = TBLLCMargin2.MarginAccountCode"
                 StrSQL = StrSQL & "   Inner join accounts CC On CC.Account_Code = TBLLCMargin2.BankAccountCode"
 
                 'StrSQL = StrSQL & "   Where MarginNo = " & val(.TextMatrix(row, .ColIndex("MarginNo"))) & " and IsNull(TBLLCMargin2.Amount,0) - IsNull(TBLLCMargin2.PayedAmount,0) > 0  and TblLCID=" & val(TXTTblLCID.text)
-                StrSQL = StrSQL & "   Where MarginNo = " & val(.TextMatrix(row, .ColIndex("MarginNo"))) & " and IsNull(TBLLCMargin2.IsFullPayed,0) = 1  and TBLLCMargin2.TblLCID=" & val(TXTTblLCID.text)
+                StrSQL = StrSQL & "   Where MarginNo = " & val(.TextMatrix(Row, .ColIndex("MarginNo"))) & " and IsNull(TBLLCMargin2.IsFullPayed,0) = 1  and TBLLCMargin2.TblLCID=" & val(TXTTblLCID.Text)
                 StrSQL = StrSQL & "   Order by TBLLCMargin2.ID desc"
                 Set rsDummy = New ADODB.Recordset
                 rsDummy.Open StrSQL, Cn, adOpenStatic, adLockReadOnly
                 If Not rsDummy.EOF Then
-                    MsgBox "«·›« Ê—… —ﬁ„ " & val(.TextMatrix(row, .ColIndex("MarginNo"))) & " ·Â–« «·«⁄ „«œ  „ ”œ«œÂ« »«·ﬂ«„·"
-                     .TextMatrix(row, .ColIndex("MarginNo")) = ""
+                    MsgBox "«·›« Ê—… —ﬁ„ " & val(.TextMatrix(Row, .ColIndex("MarginNo"))) & " ·Â–« «·«⁄ „«œ  „ ”œ«œÂ« »«·ﬂ«„·"
+                     .TextMatrix(Row, .ColIndex("MarginNo")) = ""
                      Exit Sub
                 End If
                 rsDummy.Close
@@ -11333,58 +11348,58 @@ Private Sub GrdMargin4_AfterEdit(ByVal row As Long, ByVal Col As Long)
                 StrSQL = StrSQL & "   Inner join accounts CC On CC.Account_Code = TBLLCMargin2.BankAccountCode"
 
                 'StrSQL = StrSQL & "   Where MarginNo = " & val(.TextMatrix(row, .ColIndex("MarginNo"))) & " and IsNull(TBLLCMargin2.Amount,0) - IsNull(TBLLCMargin2.PayedAmount,0) > 0  and TblLCID=" & val(TXTTblLCID.text)
-                StrSQL = StrSQL & "   Where MarginNo = " & val(.TextMatrix(row, .ColIndex("MarginNo"))) & " and IsNull(TBLLCMargin2.IsFullPayed,0) = 0  and TBLLCMargin2.TblLCID=" & val(TXTTblLCID.text)
+                StrSQL = StrSQL & "   Where MarginNo = " & val(.TextMatrix(Row, .ColIndex("MarginNo"))) & " and IsNull(TBLLCMargin2.IsFullPayed,0) = 0  and TBLLCMargin2.TblLCID=" & val(TXTTblLCID.Text)
                 StrSQL = StrSQL & "   Order by TBLLCMargin2.ID desc"
                 Set rsDummy = New ADODB.Recordset
                 rsDummy.Open StrSQL, Cn, adOpenStatic, adLockReadOnly
                 If rsDummy.EOF Then
                  
-                    .TextMatrix(row, .ColIndex("MarginAccountCode")) = get_bank_Account(Dcbank.BoundText, "Account_Code")
-                    .TextMatrix(row, .ColIndex("MarginAccount")) = Dcbank.text
+                    .TextMatrix(Row, .ColIndex("MarginAccountCode")) = get_bank_Account(Dcbank.BoundText, "Account_Code")
+                    .TextMatrix(Row, .ColIndex("MarginAccount")) = Dcbank.Text
                  
                  '   MsgBox "Â–« «·ﬁ—÷ €Ì— „”Ã· „‰ ﬁ»·"
                 Else
 
-                    .TextMatrix(row, .ColIndex("BankAccount")) = rsDummy!BankAccount2 & ""
-                    .TextMatrix(row, .ColIndex("BankAccountSerial")) = rsDummy!BankAccountSerial2 & ""
-                    .TextMatrix(row, .ColIndex("BankAccountCode")) = rsDummy!BankAccountCode & ""
+                    .TextMatrix(Row, .ColIndex("BankAccount")) = rsDummy!BankAccount2 & ""
+                    .TextMatrix(Row, .ColIndex("BankAccountSerial")) = rsDummy!BankAccountSerial2 & ""
+                    .TextMatrix(Row, .ColIndex("BankAccountCode")) = rsDummy!BankAccountCode & ""
 
-                    .TextMatrix(row, .ColIndex("MarginAccountCode")) = rsDummy!MarginAccountCode & ""
-                    .TextMatrix(row, .ColIndex("MarginAccountSerial")) = rsDummy!MarginAccountSerial & ""
-                    .TextMatrix(row, .ColIndex("MarginAccount")) = rsDummy!MarginAccount & ""
-                    .TextMatrix(row, .ColIndex("OrderDate")) = rsDummy!OrderDate & ""
-                    .TextMatrix(row, .ColIndex("GuaranteeDate")) = rsDummy!GuaranteeDate & ""
-                    .TextMatrix(row, .ColIndex("Amount")) = rsDummy!StillAmount & "" 'rsDummy!Amount & ""
-                    .TextMatrix(row, .ColIndex("PayedAmount")) = 0 'val(rsDummy!Amount & "") - val(rsDummy!StillAmount & "")
-                    .TextMatrix(row, .ColIndex("StillAmount")) = rsDummy!StillAmount & ""
+                    .TextMatrix(Row, .ColIndex("MarginAccountCode")) = rsDummy!MarginAccountCode & ""
+                    .TextMatrix(Row, .ColIndex("MarginAccountSerial")) = rsDummy!MarginAccountSerial & ""
+                    .TextMatrix(Row, .ColIndex("MarginAccount")) = rsDummy!MarginAccount & ""
+                    .TextMatrix(Row, .ColIndex("OrderDate")) = rsDummy!OrderDate & ""
+                    .TextMatrix(Row, .ColIndex("GuaranteeDate")) = rsDummy!GuaranteeDate & ""
+                    .TextMatrix(Row, .ColIndex("Amount")) = rsDummy!StillAmount & "" 'rsDummy!Amount & ""
+                    .TextMatrix(Row, .ColIndex("PayedAmount")) = 0 'val(rsDummy!Amount & "") - val(rsDummy!StillAmount & "")
+                    .TextMatrix(Row, .ColIndex("StillAmount")) = rsDummy!StillAmount & ""
               '      .TextMatrix(row, .ColIndex("NoteID")) = rsDummy!NoteID & ""
               '      .TextMatrix(row, .ColIndex("NoteSerial")) = rsDummy!NoteSerial & ""
                     
-                    .TextMatrix(row, .ColIndex("IsFullPayed")) = val(rsDummy!IsFullPayed & "")
+                    .TextMatrix(Row, .ColIndex("IsFullPayed")) = val(rsDummy!IsFullPayed & "")
                     
                     '.TextMatrix(Row, .ColIndex("StillAmount")) = rsDummy!StillAmount & ""
                 End If
 '
 
           Case "AccountMargen2Serial"
-                s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Serial = N'" & Trim(GrdMargin4.TextMatrix(row, Col)) & "'"
+                s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Serial = N'" & Trim(GrdMargin4.TextMatrix(Row, Col)) & "'"
                 Set rsDummy = New ADODB.Recordset
                 rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
                 If Not rsDummy.EOF Then
 
 
-                    GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("AccountMargen2Name")) = Trim(rsDummy!account_name & "")
-                    GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("AccountMargen2")) = Trim(rsDummy!Account_code & "")
+                    GrdMargin4.TextMatrix(Row, GrdMargin4.ColIndex("AccountMargen2Name")) = Trim(rsDummy!account_name & "")
+                    GrdMargin4.TextMatrix(Row, GrdMargin4.ColIndex("AccountMargen2")) = Trim(rsDummy!Account_code & "")
                 End If
            Case "MarginAccountSerial"
-                s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Serial = N'" & Trim(GrdMargin4.TextMatrix(row, Col)) & "'"
+                s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Serial = N'" & Trim(GrdMargin4.TextMatrix(Row, Col)) & "'"
                 Set rsDummy = New ADODB.Recordset
                 rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
                 If Not rsDummy.EOF Then
 
 
-                    GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("MarginAccount")) = Trim(rsDummy!account_name & "")
-                    GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("MarginAccountCode")) = Trim(rsDummy!Account_code & "")
+                    GrdMargin4.TextMatrix(Row, GrdMargin4.ColIndex("MarginAccount")) = Trim(rsDummy!account_name & "")
+                    GrdMargin4.TextMatrix(Row, GrdMargin4.ColIndex("MarginAccountCode")) = Trim(rsDummy!Account_code & "")
                 End If
                 
 '                StrAccountCode = .ComboData
@@ -11394,7 +11409,7 @@ Private Sub GrdMargin4_AfterEdit(ByVal row As Long, ByVal Col As Long)
            Case "MarginAccount"
                 StrAccountCode = .ComboData
                 LngRow = .FindRow(StrAccountCode, .FixedRows, .ColIndex("MarginAccountCode"), False, True)
-                .TextMatrix(row, .ColIndex("MarginAccountCode")) = StrAccountCode
+                .TextMatrix(Row, .ColIndex("MarginAccountCode")) = StrAccountCode
                 
                   s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Code = N'" & Trim(StrAccountCode) & "'"
                 Set rsDummy = New ADODB.Recordset
@@ -11403,13 +11418,13 @@ Private Sub GrdMargin4_AfterEdit(ByVal row As Long, ByVal Col As Long)
 
 
                     'GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("MarginAccount")) = Trim(rsDummy!account_name & "")
-                    GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("MarginAccountSerial")) = Trim(rsDummy!account_serial & "")
+                    GrdMargin4.TextMatrix(Row, GrdMargin4.ColIndex("MarginAccountSerial")) = Trim(rsDummy!account_serial & "")
                 End If
                 
            Case "AccountMargen2Name"
                 StrAccountCode = .ComboData
                 LngRow = .FindRow(StrAccountCode, .FixedRows, .ColIndex("AccountMargen2"), False, True)
-                .TextMatrix(row, .ColIndex("AccountMargen2")) = StrAccountCode
+                .TextMatrix(Row, .ColIndex("AccountMargen2")) = StrAccountCode
                 
                 
                     s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Code = N'" & Trim(StrAccountCode) & "'"
@@ -11419,13 +11434,13 @@ Private Sub GrdMargin4_AfterEdit(ByVal row As Long, ByVal Col As Long)
 
 
                     'GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("MarginAccount")) = Trim(rsDummy!account_name & "")
-                    GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("AccountMargen2Serial")) = Trim(rsDummy!account_serial & "")
+                    GrdMargin4.TextMatrix(Row, GrdMargin4.ColIndex("AccountMargen2Serial")) = Trim(rsDummy!account_serial & "")
                 End If
  
            Case "BankAccount"
                 StrAccountCode = .ComboData
                 LngRow = .FindRow(StrAccountCode, .FixedRows, .ColIndex("BankAccountCode"), False, True)
-                .TextMatrix(row, .ColIndex("BankAccountCode")) = StrAccountCode
+                .TextMatrix(Row, .ColIndex("BankAccountCode")) = StrAccountCode
                 
                    s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Code = N'" & Trim(StrAccountCode) & "'"
                 Set rsDummy = New ADODB.Recordset
@@ -11434,17 +11449,17 @@ Private Sub GrdMargin4_AfterEdit(ByVal row As Long, ByVal Col As Long)
 
 
                     'GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("MarginAccount")) = Trim(rsDummy!account_name & "")
-                    GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("BankAccountSerial")) = Trim(rsDummy!account_serial & "")
+                    GrdMargin4.TextMatrix(Row, GrdMargin4.ColIndex("BankAccountSerial")) = Trim(rsDummy!account_serial & "")
                 End If
             Case "BankAccountSerial"
-                s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Serial = N'" & Trim(GrdMargin4.TextMatrix(row, Col)) & "'"
+                s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Serial = N'" & Trim(GrdMargin4.TextMatrix(Row, Col)) & "'"
                 Set rsDummy = New ADODB.Recordset
                 rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
                 If Not rsDummy.EOF Then
 
 
-                    GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("BankAccount")) = Trim(rsDummy!account_name & "")
-                    GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("BankAccountCode")) = Trim(rsDummy!Account_code & "")
+                    GrdMargin4.TextMatrix(Row, GrdMargin4.ColIndex("BankAccount")) = Trim(rsDummy!account_name & "")
+                    GrdMargin4.TextMatrix(Row, GrdMargin4.ColIndex("BankAccountCode")) = Trim(rsDummy!Account_code & "")
                 End If
                 
                 
@@ -11452,7 +11467,7 @@ Private Sub GrdMargin4_AfterEdit(ByVal row As Long, ByVal Col As Long)
             Case "BankAccount2"
                 StrAccountCode = .ComboData
                 LngRow = .FindRow(StrAccountCode, .FixedRows, .ColIndex("BankAccountCode"), False, True)
-                .TextMatrix(row, .ColIndex("BankAccountCode2")) = StrAccountCode
+                .TextMatrix(Row, .ColIndex("BankAccountCode2")) = StrAccountCode
                 
                    s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Code = N'" & Trim(StrAccountCode) & "'"
                 Set rsDummy = New ADODB.Recordset
@@ -11461,18 +11476,18 @@ Private Sub GrdMargin4_AfterEdit(ByVal row As Long, ByVal Col As Long)
 
 
                     'GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("MarginAccount")) = Trim(rsDummy!account_name & "")
-                    GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("BankAccountSerial2")) = Trim(rsDummy!account_serial & "")
+                    GrdMargin4.TextMatrix(Row, GrdMargin4.ColIndex("BankAccountSerial2")) = Trim(rsDummy!account_serial & "")
                     'GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("BankAccountCode2")) = Trim(rsDummy!Account_code & "")
                 End If
             Case "BankAccountSerial2"
-                s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Serial = N'" & Trim(GrdMargin4.TextMatrix(row, Col)) & "'"
+                s = "SELECT accounts.Account_Name,accounts.Account_Code,Account_Serial  FROM accounts  WHERE Account_Serial = N'" & Trim(GrdMargin4.TextMatrix(Row, Col)) & "'"
                 Set rsDummy = New ADODB.Recordset
                 rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
                 If Not rsDummy.EOF Then
 
 
-                    GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("BankAccount2")) = Trim(rsDummy!account_name & "")
-                    GrdMargin4.TextMatrix(row, GrdMargin4.ColIndex("BankAccountCode2")) = Trim(rsDummy!Account_code & "")
+                    GrdMargin4.TextMatrix(Row, GrdMargin4.ColIndex("BankAccount2")) = Trim(rsDummy!account_name & "")
+                    GrdMargin4.TextMatrix(Row, GrdMargin4.ColIndex("BankAccountCode2")) = Trim(rsDummy!Account_code & "")
                 End If
                 
 '                StrAccountCode = .ComboData
@@ -11482,9 +11497,9 @@ Private Sub GrdMargin4_AfterEdit(ByVal row As Long, ByVal Col As Long)
                         
                 StrAccountCode = .ComboData
                 LngRow = .FindRow(StrAccountCode, .FixedRows, .ColIndex("AccountCode"), False, True)
-                .TextMatrix(row, .ColIndex("AccountCode")) = StrAccountCode
-                .TextMatrix(row, .ColIndex("ExpensesID")) = get_Expenses_id(StrAccountCode)
-                .TextMatrix(row, .ColIndex("LineNo1")) = setfoxy_Line
+                .TextMatrix(Row, .ColIndex("AccountCode")) = StrAccountCode
+                .TextMatrix(Row, .ColIndex("ExpensesID")) = get_Expenses_id(StrAccountCode)
+                .TextMatrix(Row, .ColIndex("LineNo1")) = setfoxy_Line
 
                 If SystemOptions.UserInterface = ArabicInterface Then
                     StrSQL = "select * from Expenses_accounts where Account_Code='" & StrAccountCode & "'"
@@ -11504,22 +11519,22 @@ Private Sub GrdMargin4_AfterEdit(ByVal row As Long, ByVal Col As Long)
 
             Case "Amount"
                 
-                .TextMatrix(row, .ColIndex("StillAmount")) = val(.TextMatrix(row, .ColIndex("Amount"))) - val(.TextMatrix(row, .ColIndex("PayedAmount")))
-                If val(.TextMatrix(row, .ColIndex("StillAmount"))) = 0 Then
-                    .TextMatrix(row, .ColIndex("IsFullPayed")) = 1
+                .TextMatrix(Row, .ColIndex("StillAmount")) = val(.TextMatrix(Row, .ColIndex("Amount"))) - val(.TextMatrix(Row, .ColIndex("PayedAmount")))
+                If val(.TextMatrix(Row, .ColIndex("StillAmount"))) = 0 Then
+                    .TextMatrix(Row, .ColIndex("IsFullPayed")) = 1
                 Else
-                    .TextMatrix(row, .ColIndex("IsFullPayed")) = 0
+                    .TextMatrix(Row, .ColIndex("IsFullPayed")) = 0
                 End If
             Case "PayedAmount"
-                If .TextMatrix(row, .ColIndex("PayDate")) = "" Then
-                    .TextMatrix(row, .ColIndex("PayDate")) = Date
+                If .TextMatrix(Row, .ColIndex("PayDate")) = "" Then
+                    .TextMatrix(Row, .ColIndex("PayDate")) = Date
                 End If
-                .TextMatrix(row, .ColIndex("StillAmount")) = val(.TextMatrix(row, .ColIndex("Amount"))) - val(.TextMatrix(row, .ColIndex("PayedAmount")))
+                .TextMatrix(Row, .ColIndex("StillAmount")) = val(.TextMatrix(Row, .ColIndex("Amount"))) - val(.TextMatrix(Row, .ColIndex("PayedAmount")))
         
-                If val(.TextMatrix(row, .ColIndex("StillAmount"))) = 0 Then
-                    .TextMatrix(row, .ColIndex("IsFullPayed")) = 1
+                If val(.TextMatrix(Row, .ColIndex("StillAmount"))) = 0 Then
+                    .TextMatrix(Row, .ColIndex("IsFullPayed")) = 1
                 Else
-                    .TextMatrix(row, .ColIndex("IsFullPayed")) = 0
+                    .TextMatrix(Row, .ColIndex("IsFullPayed")) = 0
                 End If
             
             Case "Amount", "Price", "ChSameCurrncy"
@@ -11540,23 +11555,23 @@ Private Sub GrdMargin4_AfterEdit(ByVal row As Long, ByVal Col As Long)
 
         ' Me.XPTxtVal.text = Format(Me.XPTxtVal.text, SystemOptions.SysDefCurrencyForamt)
         'to Add new row if needed
-        If row = .rows - 1 Then
+        If Row = .rows - 1 Then
             .rows = .rows + 1
         End If
           
         ' ReLineGrid
     End With
-    Me.txtMarginTotal2.text = GrdMargin4.Aggregate(flexSTSum, GrdMargin4.FixedRows, GrdMargin4.ColIndex("StillAmount"), GrdMargin4.rows - 1, GrdMargin4.ColIndex("StillAmount"))
+    Me.txtMarginTotal2.Text = GrdMargin4.Aggregate(flexSTSum, GrdMargin4.FixedRows, GrdMargin4.ColIndex("StillAmount"), GrdMargin4.rows - 1, GrdMargin4.ColIndex("StillAmount"))
     'ReLineGrid
 
 
 End Sub
 
-Private Sub GrdMargin4_BeforeEdit(ByVal row As Long, ByVal Col As Long, Cancel As Boolean)
+Private Sub GrdMargin4_BeforeEdit(ByVal Row As Long, ByVal Col As Long, Cancel As Boolean)
   With GrdMargin4
 
-        If row > .FixedRows Then
-             If val(.TextMatrix(row, .ColIndex("NoteSerial"))) <> 0 And .ColKey(Col) <> "NoteSerial" And val(.TextMatrix(row, .ColIndex("NoteSerial2"))) <> 0 And .ColKey(Col) <> "NoteSerial2" And .ColKey(Col) <> "NoteSerial3" Then
+        If Row > .FixedRows Then
+             If val(.TextMatrix(Row, .ColIndex("NoteSerial"))) <> 0 And .ColKey(Col) <> "NoteSerial" And val(.TextMatrix(Row, .ColIndex("NoteSerial2"))) <> 0 And .ColKey(Col) <> "NoteSerial2" And .ColKey(Col) <> "NoteSerial3" Then
                 '  Cancel = True
                 '  Exit Sub
               End If
@@ -11564,7 +11579,7 @@ Private Sub GrdMargin4_BeforeEdit(ByVal row As Long, ByVal Col As Long, Cancel A
 
         Select Case .ColKey(Col)
             Case "IsOpenBalance"
-                If val(.TextMatrix(row, .ColIndex("NoteSerial"))) <> 0 Or val(.TextMatrix(row, .ColIndex("NoteSerial2"))) <> 0 Then
+                If val(.TextMatrix(Row, .ColIndex("NoteSerial"))) <> 0 Or val(.TextMatrix(Row, .ColIndex("NoteSerial2"))) <> 0 Then
                     Cancel = True
                 End If
             Case "Vat", "StillAmount"
@@ -11593,9 +11608,9 @@ Private Sub GrdMargin4_BeforeEdit(ByVal row As Long, ByVal Col As Long, Cancel A
     End With
 End Sub
 
-Private Sub GrdMargin4_CellButtonClick(ByVal row As Long, ByVal Col As Long)
+Private Sub GrdMargin4_CellButtonClick(ByVal Row As Long, ByVal Col As Long)
 
-Dim Frm As New FrmDateOpProject, mIDD As Long, mUserID As Long, mDate As Date, mTime As Date
+Dim Frm As New FrmDateOpProject, mIDD As Long, mUserId As Long, mDate As Date, mTime As Date
 
 
 
@@ -11604,47 +11619,47 @@ Select Case .ColKey(Col)
 
         Case "GuaranteeDate"
             
-            Frm.index = 614
-            Me.LngRow = row
+            Frm.Index = 614
+            Me.LngRow = Row
             Frm.show 1
         Case "OrderDate"
             
-            Frm.index = 615
-            Me.LngRow = row
+            Frm.Index = 615
+            Me.LngRow = Row
             Frm.show 1
-            GrdMargin4_AfterEdit row, Col
+            GrdMargin4_AfterEdit Row, Col
        Case "PayDate"
             
-            Frm.index = 616
-            Me.LngRow = row
+            Frm.Index = 616
+            Me.LngRow = Row
             Frm.show 1
        Case "NoteSerial"
 '                                  LngRow = Row
-        If CBool(.ValueMatrix(row, .ColIndex("IsOpenBalance"))) Then
-            ShowGL_ccOpening val(.TextMatrix(row, .ColIndex("NoteSerial"))), , 101, val(.TextMatrix(row, .ColIndex("NoteID")))
+        If CBool(.ValueMatrix(Row, .ColIndex("IsOpenBalance"))) Then
+            ShowGL_ccOpening val(.TextMatrix(Row, .ColIndex("NoteSerial"))), , 101, val(.TextMatrix(Row, .ColIndex("NoteID")))
         Else
         
-            ShowGL_cc val(.TextMatrix(row, .ColIndex("NoteSerial"))), , 22008
+            ShowGL_cc val(.TextMatrix(Row, .ColIndex("NoteSerial"))), , 22008
         End If
      Case "NoteSerial2"
 '                                  LngRow = Row
         
-        ShowGL_cc val(.TextMatrix(row, .ColIndex("NoteSerial2"))), , 22009
+        ShowGL_cc val(.TextMatrix(Row, .ColIndex("NoteSerial2"))), , 22009
      Case "NoteSerial3"
 '                                  LngRow = Row
-        ShowGL_cc val(.TextMatrix(row, .ColIndex("NoteSerial3"))), , 22007
+        ShowGL_cc val(.TextMatrix(Row, .ColIndex("NoteSerial3"))), , 22007
         
     Case "CreateNote2"
-        If val(.TextMatrix(row, .ColIndex("PayedAmount"))) <> 0 Then
-            CreateEntry row, 6, 1
+        If val(.TextMatrix(Row, .ColIndex("PayedAmount"))) <> 0 Then
+            CreateEntry Row, 6, 1
         End If
     Case "CreateNote"
-        If val(.TextMatrix(row, .ColIndex("Amount"))) <> 0 Then
-            CreateEntry row, 6, 0
+        If val(.TextMatrix(Row, .ColIndex("Amount"))) <> 0 Then
+            CreateEntry Row, 6, 0
         End If
     Case "CreateNote3"
-        If val(.TextMatrix(row, .ColIndex("NoteId3"))) = 0 And val(.TextMatrix(row, .ColIndex("MargenValue"))) <> 0 Then
-            CreateEntry row, 5, 0
+        If val(.TextMatrix(Row, .ColIndex("NoteId3"))) = 0 And val(.TextMatrix(Row, .ColIndex("MargenValue"))) <> 0 Then
+            CreateEntry Row, 5, 0
         End If
     Case "DeleteEntry"
         
@@ -11663,11 +11678,11 @@ Select Case .ColKey(Col)
 '            s = "Delete Notes where NoteId = " & val(.TextMatrix(row, .ColIndex("NoteId")))
 '            Cn.Execute s
  '       End If
-        .TextMatrix(row, .ColIndex("NoteId")) = ""
-        .TextMatrix(row, .ColIndex("NoteId2")) = ""
-        .TextMatrix(row, .ColIndex("NoteId3")) = ""
-        .TextMatrix(row, .ColIndex("NoteSerial")) = ""
-        .TextMatrix(row, .ColIndex("NoteSerial2")) = ""
+        .TextMatrix(Row, .ColIndex("NoteId")) = ""
+        .TextMatrix(Row, .ColIndex("NoteId2")) = ""
+        .TextMatrix(Row, .ColIndex("NoteId3")) = ""
+        .TextMatrix(Row, .ColIndex("NoteSerial")) = ""
+        .TextMatrix(Row, .ColIndex("NoteSerial2")) = ""
         '.TextMatrix(row, .ColIndex("NoteSeria3")) = ""
         
         MsgBox " „ Õ–› «·ﬁÌÊœ"
@@ -11717,7 +11732,7 @@ Private Sub GrdMargin4_KeyUp(KeyCode As Integer, Shift As Integer)
 
 End Sub
 
-Private Sub GrdMargin4_StartEdit(ByVal row As Long, ByVal Col As Long, Cancel As Boolean)
+Private Sub GrdMargin4_StartEdit(ByVal Row As Long, ByVal Col As Long, Cancel As Boolean)
     Dim rs As New ADODB.Recordset
     Dim Rs1 As New ADODB.Recordset
 

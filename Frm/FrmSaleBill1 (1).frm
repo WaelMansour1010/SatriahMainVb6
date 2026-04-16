@@ -20,6 +20,15 @@ Begin VB.Form FrmSaleBill
    RightToLeft     =   -1  'True
    ScaleHeight     =   7470
    ScaleWidth      =   9885
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic EleMain 
       Height          =   7470
       Left            =   0

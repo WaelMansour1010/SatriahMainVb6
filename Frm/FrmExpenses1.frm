@@ -24,6 +24,15 @@ Begin VB.Form FrmExpenses1
    RightToLeft     =   -1  'True
    ScaleHeight     =   7680
    ScaleWidth      =   10650
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox txtto 
       Alignment       =   1  'Right Justify
       Height          =   645

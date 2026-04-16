@@ -16,6 +16,15 @@ Begin VB.Form CONTRACT
    MinButton       =   0   'False
    ScaleHeight     =   9660
    ScaleWidth      =   14535
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox Text25 
       Alignment       =   1  'Right Justify
       BackColor       =   &H00C0C0C0&

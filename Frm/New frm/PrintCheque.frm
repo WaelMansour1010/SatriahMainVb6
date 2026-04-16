@@ -19,6 +19,15 @@ Begin VB.Form PrintCheque
    RightToLeft     =   -1  'True
    ScaleHeight     =   7020
    ScaleWidth      =   14775
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame FraHeader 
       BackColor       =   &H00FFFFFF&
       BorderStyle     =   0  'None

@@ -22,6 +22,15 @@ Begin VB.Form FrmInpout
    ScaleHeight     =   7935
    ScaleWidth      =   14790
    WindowState     =   2  'Maximized
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic C1ElasticMain 
       Height          =   7935
       Left            =   0

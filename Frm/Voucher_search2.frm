@@ -16,6 +16,15 @@ Begin VB.Form Voucher_search2
    RightToLeft     =   -1  'True
    ScaleHeight     =   7770
    ScaleWidth      =   13830
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame5 
       Height          =   4215
       Left            =   0

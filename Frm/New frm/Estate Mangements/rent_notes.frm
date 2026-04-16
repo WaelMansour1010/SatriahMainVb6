@@ -16,6 +16,15 @@ Begin VB.Form rent_notes
    MinButton       =   0   'False
    ScaleHeight     =   7770
    ScaleWidth      =   10815
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame5 
       Height          =   4935
       Left            =   120

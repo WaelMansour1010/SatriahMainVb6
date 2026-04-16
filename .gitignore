@@ -56,7 +56,12 @@ dlldata.c
 
 # Benchmark Results
 BenchmarkDotNet.Artifacts/
-
+# ========================
+# FOLDERS IGNORE
+# ========================
+_backup/
+Backup/
+Temp/
 # .NET Core
 project.lock.json
 project.fragment.lock.json
@@ -260,7 +265,57 @@ UpgradeLog*.XML
 UpgradeLog*.htm
 ServiceFabricBackup/
 *.rptproj.bak
+# ========================
+# VB6 TEMP FILES
+# ========================
+*.vbw
+*.tmp
+*.log
 
+# ========================
+# BUILD OUTPUTS (ممنوع تترفع)
+# ========================
+*.exe
+*.dll
+*.ocx
+
+# ========================
+# DATABASES (مهم جدًا)
+# ========================
+*.mdf
+*.ldf
+*.bak
+*.db
+
+# ========================
+# EXCEL / WORD (اختياري)
+# ========================
+~$*.xls
+~$*.xlsx
+~$*.doc
+~$*.docx
+
+# ========================
+# IMAGES (مؤقت فقط)
+# ========================
+*.psd
+*.ai
+
+# ========================
+# WINDOWS FILES
+# ========================
+Thumbs.db
+.DS_Store
+
+# ========================
+# FOLDERS IGNORE
+# ========================
+bin/
+obj/
+Debug/
+Release/
+Backup/
+Temp/
 # SQL Server files
 *.mdf
 *.ldf

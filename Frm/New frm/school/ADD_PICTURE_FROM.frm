@@ -10,6 +10,15 @@ Begin VB.Form ADD_PICTURE_FROM
    ScaleHeight     =   6675
    ScaleWidth      =   8685
    StartUpPosition =   3  'Windows Default
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CommandButton Command3 
       Caption         =   "«Œ Ì«— «·’Ê—…"
       Height          =   1095

@@ -15,6 +15,15 @@ Begin VB.Form READY_TO_PRINT
    ScaleHeight     =   7650
    ScaleWidth      =   15285
    StartUpPosition =   2  'CenterScreen
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CommandButton Command9 
       Caption         =   " "
       Height          =   735

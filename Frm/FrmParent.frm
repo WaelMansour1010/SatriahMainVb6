@@ -15,6 +15,15 @@ Begin VB.Form FrmParent
    ScaleHeight     =   5970
    ScaleWidth      =   9030
    StartUpPosition =   2  'CenterScreen
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    WindowState     =   2  'Maximized
    Begin C1SizerLibCtl.C1Elastic C1Elastic1 
       Height          =   5640

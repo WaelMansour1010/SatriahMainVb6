@@ -20,6 +20,15 @@ Begin VB.Form frmdriveassestMove
    RightToLeft     =   -1  'True
    ScaleHeight     =   7965
    ScaleWidth      =   11280
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame gimage 
       BackColor       =   &H80000005&
       Height          =   6615

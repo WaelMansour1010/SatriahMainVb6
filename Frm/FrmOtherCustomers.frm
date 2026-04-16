@@ -21,6 +21,15 @@ Begin VB.Form FrmOtherCustomers
    RightToLeft     =   -1  'True
    ScaleHeight     =   7995
    ScaleWidth      =   12990
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CheckBox chkCustomerandVendor 
       Alignment       =   1  'Right Justify
       BackColor       =   &H00E2E9E9&

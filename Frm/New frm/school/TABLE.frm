@@ -13,6 +13,15 @@ Begin VB.Form TABLE
    MinButton       =   0   'False
    ScaleHeight     =   8910
    ScaleWidth      =   12690
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   375
       Left            =   600

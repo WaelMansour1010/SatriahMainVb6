@@ -19,6 +19,15 @@ Begin VB.Form FrmPassover
    RightToLeft     =   -1  'True
    ScaleHeight     =   4500
    ScaleWidth      =   12810
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame3 
       Height          =   1215
       Left            =   9240

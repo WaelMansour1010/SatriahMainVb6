@@ -18,6 +18,15 @@ Begin VB.Form FrmExpensesAdvanced
    MinButton       =   0   'False
    ScaleHeight     =   7620
    ScaleWidth      =   12720
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox TxtModFlg 
       Alignment       =   1  'Right Justify
       Appearance      =   0  'Flat

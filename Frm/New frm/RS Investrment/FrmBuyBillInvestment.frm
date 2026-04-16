@@ -19,6 +19,15 @@ Begin VB.Form FrmBuyBillInvestment
    RightToLeft     =   -1  'True
    ScaleHeight     =   10410
    ScaleWidth      =   14235
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Tab C1Tab1 
       Height          =   7575
       Left            =   0

@@ -15,6 +15,15 @@ Begin VB.Form masrouf
    ScaleHeight     =   4665
    ScaleWidth      =   7200
    StartUpPosition =   2  'CenterScreen
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CommandButton Command3 
       Caption         =   "ÇÖÇÝÉ äæÚ ÌÏíÏ"
       Height          =   255

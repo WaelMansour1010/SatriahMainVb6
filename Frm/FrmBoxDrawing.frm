@@ -3,7 +3,7 @@ Object = "{C115893A-A3BF-43AF-B28D-69DB846077F3}#1.0#0"; "vsflex8u.ocx"
 Object = "{0AFE7BE0-11B7-4A3E-978D-D4501E9A57FE}#1.0#0"; "c1sizer.ocx"
 Object = "{F0D2F211-CCB0-11D0-A316-00AA00688B10}#1.0#0"; "MSDATLST.OCX"
 Object = "{FE5DCFAD-BC1D-11D2-94CF-004005455FAA}#1.4#0"; "ImpulseButton.ocx"
-Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "mscomct2.ocx"
+Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
 Object = "{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}#12.0#0"; "SuiteCtrls.ocx"
 Begin VB.Form FrmBoxDrawing 
    BackColor       =   &H00E2E9E9&
@@ -22,6 +22,15 @@ Begin VB.Form FrmBoxDrawing
    ScaleHeight     =   8340
    ScaleWidth      =   14745
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Tab C1Tab1 
       Height          =   5175
       Left            =   0
@@ -179,7 +188,7 @@ Begin VB.Form FrmBoxDrawing
                   _ExtentX        =   4736
                   _ExtentY        =   556
                   _Version        =   393216
-                  Format          =   241631233
+                  Format          =   240254977
                   CurrentDate     =   39614
                End
                Begin MSDataListLib.DataCombo Dcbank1 
@@ -1050,7 +1059,7 @@ Begin VB.Form FrmBoxDrawing
                _ExtentX        =   2619
                _ExtentY        =   556
                _Version        =   393216
-               Format          =   238944257
+               Format          =   242876417
                CurrentDate     =   39614
             End
             Begin VB.Label LblValue 
@@ -1405,7 +1414,7 @@ Begin VB.Form FrmBoxDrawing
             CalendarTrailingForeColor=   0
             CheckBox        =   -1  'True
             DateIsNull      =   -1  'True
-            Format          =   242024449
+            Format          =   242876417
             CurrentDate     =   38845
          End
          Begin MSComCtl2.DTPicker DtpBoxTo 
@@ -1420,7 +1429,7 @@ Begin VB.Form FrmBoxDrawing
             CalendarTitleBackColor=   14737632
             CheckBox        =   -1  'True
             DateIsNull      =   -1  'True
-            Format          =   242024449
+            Format          =   242876417
             CurrentDate     =   38845
          End
          Begin ImpulseButton.ISButton CmdShowReport 
@@ -1988,7 +1997,7 @@ Begin VB.Form FrmBoxDrawing
       _ExtentX        =   2355
       _ExtentY        =   609
       _Version        =   393216
-      Format          =   242024449
+      Format          =   242810881
       CurrentDate     =   38784
    End
    Begin ImpulseButton.ISButton Cmd 
@@ -2472,9 +2481,9 @@ My_SQL = My_SQL & " and type < 2 order by id"
  Set rs2 = New ADODB.Recordset
     rs2.Open My_SQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
     If rs2.RecordCount > 0 Then
-    XPMTxtRemarks1.text = IIf(IsNull(rs2("Des").value), "", rs2("Des").value)
-    TxtPerson2.text = IIf(IsNull(rs2("ToPerson").value), "", rs2("ToPerson").value)
-    XPTxtVal.text = IIf(IsNull(rs2("Price").value), 0, rs2("Price").value)
+    XPMTxtRemarks1.Text = IIf(IsNull(rs2("Des").value), "", rs2("Des").value)
+    TxtPerson2.Text = IIf(IsNull(rs2("ToPerson").value), "", rs2("ToPerson").value)
+    XPTxtVal.Text = IIf(IsNull(rs2("Price").value), 0, rs2("Price").value)
     CboPayMentType.ListIndex = IIf(IsNull(rs2("Type").value), -1, rs2("Type").value)
     If val(CboPaymentType1.ListIndex) >= 2 Then
     CboPaymentType1.ListIndex = -1
@@ -2538,8 +2547,8 @@ Public Function print_report(Optional NoteID As Double)
     If SystemOptions.UserInterface = ArabicInterface Then
         xReport.ParameterFields(1).AddCurrentValue cCompanyInfo.ArabCompanyName 'RPTCompany_Name_Arabic
         ' xReport.ParameterFields(2).AddCurrentValue RPTComment_Arabic
-        xReport.ParameterFields(5).AddCurrentValue DcboDebitSide.text
-        xReport.ParameterFields(7).AddCurrentValue DcboCreditSide.text
+        xReport.ParameterFields(5).AddCurrentValue DcboDebitSide.Text
+        xReport.ParameterFields(7).AddCurrentValue DcboCreditSide.Text
         StrReportTitle = "" '& StrAccountName
         'If Me.DTPickerAccFrom.value <> Empty Or Me.DTPickerAccFrom.value <> Null Then
         '    StrReportTitle = StrReportTitle + " »œ«Ì… „‰ " & Format(Me.DTPickerAccFrom.value, "yyyy/M/d") & ""
@@ -2552,8 +2561,8 @@ Public Function print_report(Optional NoteID As Double)
         xReport.ParameterFields(1).AddCurrentValue cCompanyInfo.ArabCompanyName ' RPTCompany_Name_Eng
         'xReport.ParameterFields(2).AddCurrentValue RPTComment_Eng
         xReport.ParameterFields(4).AddCurrentValue get_branch_name(val(my_branch))
-        xReport.ParameterFields(5).AddCurrentValue DcboDebitSide.text
-        xReport.ParameterFields(7).AddCurrentValue DcboCreditSide.text
+        xReport.ParameterFields(5).AddCurrentValue DcboDebitSide.Text
+        xReport.ParameterFields(7).AddCurrentValue DcboCreditSide.Text
           
         StrReportTitle = ""
         'If Me.DTPickerAccFrom.value <> Empty Or Me.DTPickerAccFrom.value <> Null Then
@@ -2580,7 +2589,7 @@ End Function
 
 Private Sub Accredit_Click()
     Dim BeginTrans As Boolean
-If val(XPTxtID.text) = 0 Then
+If val(XPTxtID.Text) = 0 Then
      If SystemOptions.UserInterface = ArabicInterface Then
      MsgBox "«Õ›Ÿ «·”‰œ «Ê·«", vbCritical
      Else
@@ -2590,7 +2599,7 @@ If val(XPTxtID.text) = 0 Then
       Exit Sub
       End If
  
-    SendTopost Me.Name, "Notes", "NoteID", 0, val(dcBranch.BoundText), val(XPTxtID.text), TxtNoteSerial1.text
+    SendTopost Me.Name, "Notes", "NoteID", 0, val(dcBranch.BoundText), val(XPTxtID.Text), TxtNoteSerial1.Text
   '' RsNetes.Resync
  If SystemOptions.UserInterface = ArabicInterface Then
     Accredit.Caption = " „ «·«—”«· ··«⁄ „«œ"
@@ -2607,7 +2616,7 @@ Private Sub CboDrawingType_Change()
  '           .AddItem " ÕÊÌ· „‰  ›—⁄ «·Ï ›—⁄ «Œ— "
       
     If Me.CboDrawingType.ListIndex = 0 Then '”Õ» ⁄«œÏ „‰ «·Œ“‰…
-      If Me.TxtModFlg <> "R" Then txtTransferExpenses.text = 0
+      If Me.TxtModFlg <> "R" Then txtTransferExpenses.Text = 0
         Me.lbl(10).Visible = False
         Me.DcboBoxTo.Visible = False
         Frame1.Visible = True
@@ -2615,7 +2624,7 @@ Private Sub CboDrawingType_Change()
         Frm2.Visible = False
         Frame3.Visible = False
     ElseIf Me.CboDrawingType.ListIndex = 1 Then ' ÕÊÌ· „‰ Œ“‰… ≈·Ï ≈Œ—Ï
-    If Me.TxtModFlg <> "R" Then txtTransferExpenses.text = 0
+    If Me.TxtModFlg <> "R" Then txtTransferExpenses.Text = 0
         Me.lbl(10).Visible = True
         Me.DcboBoxTo.Visible = True
         Frame1.Visible = True
@@ -2636,7 +2645,7 @@ Private Sub CboDrawingType_Change()
         'If Me.TxtModFlg <> "R" Then txtTransferExpenses.Text = 0
     End If
 
-    If TxtModFlg.text <> "R" Then
+    If TxtModFlg.Text <> "R" Then
         WriteDev
     End If
 
@@ -2648,11 +2657,11 @@ End Sub
 
 Private Sub CboPayMentType_Change()
 
-    If Me.TxtModFlg.text = "E" Then
-        Dcbank1.text = ""
-        TxtChequeNumber1.text = ""
-        Me.DcboBox1.text = ""
-        DCAccounts1.text = ""
+    If Me.TxtModFlg.Text = "E" Then
+        Dcbank1.Text = ""
+        TxtChequeNumber1.Text = ""
+        Me.DcboBox1.Text = ""
+        DCAccounts1.Text = ""
 
     End If
  
@@ -2668,11 +2677,11 @@ Private Sub CboPayMentType_Change()
         Me.TxtChequeNumber1.Enabled = False
         Me.DtpChequeDueDate1.Enabled = False
  
-        TxtChequeNumber1.text = ""
-        Dcbank1.text = ""
+        TxtChequeNumber1.Text = ""
+        Dcbank1.Text = ""
  
         DCAccounts1.Enabled = False
-        DCAccounts1.text = ""
+        DCAccounts1.Text = ""
     
     ElseIf Me.CboPayMentType.ListIndex = 1 Then
         Me.lbl(22).Enabled = True
@@ -2685,9 +2694,9 @@ Private Sub CboPayMentType_Change()
         Me.lbl(21).Enabled = False
     
         Me.DcboBox1.Enabled = False
-        DcboBox1.text = ""
+        DcboBox1.Text = ""
         DCAccounts1.Enabled = False
-        DCAccounts1.text = ""
+        DCAccounts1.Text = ""
     
     ElseIf Me.CboPayMentType.ListIndex = 2 Then
         Me.lbl(17).Enabled = True
@@ -2701,12 +2710,12 @@ Private Sub CboPayMentType_Change()
         Me.TxtChequeNumber1.Enabled = False
         Me.DtpChequeDueDate1.Enabled = False
  
-        TxtChequeNumber1.text = ""
+        TxtChequeNumber1.Text = ""
     
         Me.DcboBox1.Enabled = False
-        DcboBox1.text = ""
+        DcboBox1.Text = ""
  
-        Dcbank1.text = ""
+        Dcbank1.Text = ""
     
     Else
         
@@ -2719,14 +2728,14 @@ Private Sub CboPayMentType_Change()
         Me.TxtChequeNumber1.Enabled = False
         Me.DtpChequeDueDate1.Enabled = False
  
-        TxtChequeNumber1.text = ""
+        TxtChequeNumber1.Text = ""
     
         Me.DcboBox1.Enabled = False
-        DcboBox1.text = ""
+        DcboBox1.Text = ""
         DCAccounts1.Enabled = False
-        DCAccounts1.text = ""
+        DCAccounts1.Text = ""
     End If
-If Me.TxtModFlg.text <> "R" Then
+If Me.TxtModFlg.Text <> "R" Then
 If val(CboPayMentType.ListIndex) <> -1 Then
 CboPaymentType1.ListIndex = CboPayMentType.ListIndex
 End If
@@ -2739,11 +2748,11 @@ End Sub
 
 Private Sub CboPaymentType1_Change()
 
-    If Me.TxtModFlg.text = "E" Then
-        Dcbank2.text = ""
+    If Me.TxtModFlg.Text = "E" Then
+        Dcbank2.Text = ""
    
-        Me.DcboBox2.text = ""
-        DCAccounts2.text = ""
+        Me.DcboBox2.Text = ""
+        DCAccounts2.Text = ""
 
     End If
  
@@ -2755,10 +2764,10 @@ Private Sub CboPaymentType1_Change()
         ' Me.lbl(15).Enabled = False
     
         Me.Dcbank2.Enabled = False
-        Dcbank2.text = ""
+        Dcbank2.Text = ""
  
         DCAccounts2.Enabled = False
-        DCAccounts2.text = ""
+        DCAccounts2.Text = ""
     
     ElseIf Me.CboPaymentType1.ListIndex = 1 Then
         Me.lbl(35).Enabled = True
@@ -2769,9 +2778,9 @@ Private Sub CboPaymentType1_Change()
         Me.lbl(36).Enabled = False
     
         Me.DcboBox2.Enabled = False
-        DcboBox2.text = ""
+        DcboBox2.Text = ""
         DCAccounts2.Enabled = False
-        DCAccounts2.text = ""
+        DCAccounts2.Text = ""
     
     ElseIf Me.CboPaymentType1.ListIndex = 2 Then
         Me.lbl(18).Enabled = True
@@ -2781,9 +2790,9 @@ Private Sub CboPaymentType1_Change()
         Me.lbl(36).Enabled = False
     
         Me.DcboBox2.Enabled = False
-        DcboBox2.text = ""
+        DcboBox2.Text = ""
  
-        Dcbank2.text = ""
+        Dcbank2.Text = ""
         Dcbank2.Enabled = False
     
     Else
@@ -2793,10 +2802,10 @@ Private Sub CboPaymentType1_Change()
         Me.lbl(36).Enabled = False
     
         Me.DcboBox2.Enabled = False
-        DcboBox2.text = ""
+        DcboBox2.Text = ""
         DCAccounts2.Enabled = False
-        DCAccounts2.text = ""
-        Dcbank2.text = ""
+        DCAccounts2.Text = ""
+        Dcbank2.Text = ""
         Dcbank2.Enabled = False
    
     End If
@@ -2807,10 +2816,10 @@ Private Sub CboPaymentType1_Click()
     CboPaymentType1_Change
 End Sub
 
-Private Sub Cmd_Click(index As Integer)
+Private Sub Cmd_Click(Index As Integer)
 '   On Error GoTo ErrTrap
 
-    Select Case index
+    Select Case Index
 
         Case 0
 
@@ -2818,7 +2827,7 @@ Private Sub Cmd_Click(index As Integer)
                 Exit Sub
             End If
 
-            TxtModFlg.text = "N"
+            TxtModFlg.Text = "N"
             clear_all Me
             Grid2.Clear flexClearScrollable, flexClearEverything
             Grid2.rows = 1
@@ -2829,12 +2838,12 @@ Private Sub Cmd_Click(index As Integer)
             Accredit.Caption = ""
             XPDtbTrans.SetFocus
             Me.dcBranch.BoundText = Current_branch
-Me.dcBranch1.BoundText = Current_branch
+Me.DcBranch1.BoundText = Current_branch
 
         Case 1
         rs.Resync adAffectCurrent
         
-                     If ScreenAproved(val(XPTxtID.text), Me.Name) = True Then
+                     If ScreenAproved(val(XPTxtID.Text), Me.Name) = True Then
          If SystemOptions.UserInterface = ArabicInterface Then
          MsgBox "·«Ì„ﬂ‰ «· ⁄œÌ·.Â–Â «·Õ—ﬂ… „— »ÿ… »«·«⁄ „«œ« "
          Else
@@ -2859,7 +2868,7 @@ Me.dcBranch1.BoundText = Current_branch
                 Exit Sub
             End If
 'rs.Resync adAffectCurrent
-            TxtModFlg.text = "E"
+            TxtModFlg.Text = "E"
             Me.DCboUserName.BoundText = user_id
             CuurentLogdata
 CboDrawingType_Change
@@ -2891,7 +2900,7 @@ CboDrawingType_Change
             End If
  
             my_branch = val(Me.dcBranch.BoundText)
-If val(txtTransferExpensesBranch.text) + val(txtTransferExpenses.text) > 0 And IncludVAT.value = vbChecked Then
+If val(txtTransferExpensesBranch.Text) + val(txtTransferExpenses.Text) > 0 And IncludVAT.value = vbChecked Then
 If GetValueAddedAccount(XPDtbTrans.value, , , 1, 23) = False Then
 If SystemOptions.UserInterface = ArabicInterface Then
 MsgBox "·„ Ì „  ÕœÌœ Õ”«» «·ﬁÌ„… «·„÷«›… ··„⁄«„·«  «·„«·Ì…"
@@ -2908,7 +2917,7 @@ End If
             Undo
 
         Case 4
-                     If ScreenAproved(val(XPTxtID.text), Me.Name) = True Then
+                     If ScreenAproved(val(XPTxtID.Text), Me.Name) = True Then
          If SystemOptions.UserInterface = ArabicInterface Then
          MsgBox "·«Ì„ﬂ‰ «· ⁄œÌ·.Â–Â «·Õ—ﬂ… „— »ÿ… »«·«⁄ „«œ« "
          Else
@@ -2954,9 +2963,9 @@ End If
                 Exit Sub
             End If
 If SystemOptions.JLCodeBasedOnBranch = True Then
-            ShowGL_cc Me.TxtNoteSerial.text, , 200, val(XPTxtID.text)
+            ShowGL_cc Me.TxtNoteSerial.Text, , 200, val(XPTxtID.Text)
 Else
-    ShowGL_cc Me.TxtNoteSerial.text, , 200
+    ShowGL_cc Me.TxtNoteSerial.Text, , 200
 End If
 
         Case 8
@@ -2965,7 +2974,7 @@ End If
                 Exit Sub
             End If
 
-            print_Cheque TxtChequeNumber.text, get_Cheque_report_no(val(DCBankTo.BoundText)), TxtNoteSerial.text
+            print_Cheque TxtChequeNumber.Text, get_Cheque_report_no(val(DCBankTo.BoundText)), TxtNoteSerial.Text
 
         Case 9
 
@@ -2973,7 +2982,7 @@ End If
                 Exit Sub
             End If
 
-            print_Cheque TxtChequeNumber1.text, get_Cheque_report_no(val(Dcbank1.BoundText)), TxtNoteSerial.text
+            print_Cheque TxtChequeNumber1.Text, get_Cheque_report_no(val(Dcbank1.BoundText)), TxtNoteSerial.Text
 
         Case 10
 
@@ -2981,8 +2990,8 @@ End If
                 Exit Sub
             End If
 
-            If val(Me.XPTxtID.text) <> 0 Then
-                print_report val(Me.XPTxtID.text)
+            If val(Me.XPTxtID.Text) <> 0 Then
+                print_report val(Me.XPTxtID.Text)
     
             End If
 Case 11
@@ -2990,10 +2999,10 @@ Case 11
                 Exit Sub
             End If
 If SystemOptions.JLCodeBasedOnBranch = True Then
-ShowGL_cc Me.TxtNoteSerial2.text, , 200, val(Me.TxtNoteID2.text)
+ShowGL_cc Me.TxtNoteSerial2.Text, , 200, val(Me.TxtNoteID2.Text)
  
 Else
-ShowGL_cc Me.TxtNoteSerial2.text, , 200
+ShowGL_cc Me.TxtNoteSerial2.Text, , 200
   End If
             'print_Cheque TxtChequeNumber1.text, get_Cheque_report_no(Val(Dcbank1.BoundText)), TxtNoteSerial.text
     End Select
@@ -3053,9 +3062,9 @@ Function print_Cheque(Optional ChqueNum As String = "", Optional report_no As St
     xReport.ParameterFields(8).AddCurrentValue mId(Format$(DtpChequeDueDate.value, "dd/mm/yyyy"), 1, 2)
     xReport.ParameterFields(9).AddCurrentValue mId(Format$(DtpChequeDueDate.value, "dd/mm/yyyy"), 4, 2)
     xReport.ParameterFields(10).AddCurrentValue mId(Format$(DtpChequeDueDate.value, "dd/mm/yyyy"), 9, 2)
-    xReport.ParameterFields(11).AddCurrentValue CStr(XPMTxtRemarks.text)
-    xReport.ParameterFields(12).AddCurrentValue CStr(XPTxtVal.text)
-    xReport.ParameterFields(13).AddCurrentValue CStr(Me.txtperson.text)
+    xReport.ParameterFields(11).AddCurrentValue CStr(XPMTxtRemarks.Text)
+    xReport.ParameterFields(12).AddCurrentValue CStr(XPTxtVal.Text)
+    xReport.ParameterFields(13).AddCurrentValue CStr(Me.txtperson.Text)
     xReport.ParameterFields(14).AddCurrentValue CStr(LblValue.Caption)
     xReport.ParameterFields(15).AddCurrentValue Format$(DtpChequeDueDate.value, "dd/mm/yyyy")
  
@@ -3142,7 +3151,7 @@ Private Sub Dcbank1_Change()
     Dim RsSavRec As ADODB.Recordset
     Dim My_SQL As String
 
-    If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+    If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
         My_SQL = "  select Account_Code from BanksData WHERE BankID=" & val(Dcbank1.BoundText)
 
         Set RsSavRec = New ADODB.Recordset
@@ -3170,7 +3179,7 @@ Private Sub Dcbank2_Change()
     Dim RsSavRec As ADODB.Recordset
     Dim My_SQL As String
 
-    If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+    If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
         My_SQL = "  select Account_Code from BanksData WHERE BankID=" & val(Dcbank2.BoundText)
 
         Set RsSavRec = New ADODB.Recordset
@@ -3205,7 +3214,7 @@ Private Sub DcboBox1_Change()
 
     If DcboBox1.BoundText = "" Then Exit Sub
 
-    If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+    If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
         DCAccounts1.BoundText = ModAccounts.GetMyAccountCode("TblBoxesData", "BoxID", val(Me.DcboBox1.BoundText))
     End If
 
@@ -3219,7 +3228,7 @@ Private Sub DcboBox2_Change()
 
     If DcboBox2.BoundText = "" Then Exit Sub
 
-    If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+    If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
         DCAccounts2.BoundText = ModAccounts.GetMyAccountCode("TblBoxesData", "BoxID", val(Me.DcboBox2.BoundText))
     End If
 
@@ -3266,7 +3275,7 @@ Label3.Caption = "Value"
     lbl(1).Caption = "Based ON"
     lbl(9).Caption = "OPR Type"
  Label8.Caption = "General Cent Cost"
-    Fra(2).Caption = "GL"
+    fra(2).Caption = "GL"
     lbl(30).Caption = "GL#"
     lbl(34).Caption = "GL#"
     lbl(29).Caption = "Interval"
@@ -3312,10 +3321,10 @@ Label1(5).Caption = "Recipient Name"
     lbl(6).Caption = "By"
     lbl(2).Caption = "Curr. rec."
     lbl(4).Caption = "Rec. count."
-    Fra(0).Caption = "Information"
+    fra(0).Caption = "Information"
     lbl(8).Caption = "Box Balance"
 
-    Fra(1).Caption = "Box Report"
+    fra(1).Caption = "Box Report"
     Lab(4).Caption = "From"
     Lab(3).Caption = "To"
 
@@ -3343,9 +3352,9 @@ Label1(5).Caption = "Recipient Name"
 End Sub
 
 Private Sub Dcbranch_Click(Area As Integer)
-    TxtNoteSerial.text = ""
-    TxtNoteSerial1.text = ""
-    dcBranch1.BoundText = dcBranch.BoundText
+    TxtNoteSerial.Text = ""
+    TxtNoteSerial1.Text = ""
+    DcBranch1.BoundText = dcBranch.BoundText
 End Sub
 
 Private Sub Dcbranch_GotFocus()
@@ -3354,7 +3363,7 @@ End Sub
 
 Private Sub Dcbranch1_Change()
 LoadBranchData
-If Me.TxtModFlg = "E" Or Me.TxtModFlg = "N" Then TxtNoteSerial.text = ""
+If Me.TxtModFlg = "E" Or Me.TxtModFlg = "N" Then TxtNoteSerial.Text = ""
 
     WriteDev
 End Sub
@@ -3365,7 +3374,7 @@ End Sub
 
 Private Sub DcBranch2_Change()
 LoadBranchData2
-If Me.TxtModFlg = "E" Or Me.TxtModFlg = "N" Then TxtNoteSerial2.text = ""
+If Me.TxtModFlg = "E" Or Me.TxtModFlg = "N" Then TxtNoteSerial2.Text = ""
 
     WriteDev
 End Sub
@@ -3476,7 +3485,7 @@ Dcombos.GetCostCenter DcCostCenter
     Set cSearchDcbo(3).Client = Me.DCBankTo
 
     Dcombos.GetBranches Me.dcBranch
-    Dcombos.GetBranches Me.dcBranch1
+    Dcombos.GetBranches Me.DcBranch1
     
 
     Set cSearchDcbo(4) = New clsDCboSearch
@@ -3507,7 +3516,7 @@ Dcombos.GetCostCenter DcCostCenter
     
     rs.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
     XPBtnMove_Click 2
-    Me.TxtModFlg.text = "R"
+    Me.TxtModFlg.Text = "R"
 
     If OPEN_NEW_SCREEN = True Then
         Cmd_Click (0)
@@ -3556,7 +3565,7 @@ Dim StrSQL As String
         StrSQL = "SELECT branch_id,branch_namee From TblBranchesData"
     End If
  If Me.TxtModFlg <> "R" Then
-    StrSQL = StrSQL & " Where branch_id <>" & val(Me.dcBranch1.BoundText) & " or branch_id=0 or branch_id is null"
+    StrSQL = StrSQL & " Where branch_id <>" & val(Me.DcBranch1.BoundText) & " or branch_id=0 or branch_id is null"
  End If
      fill_combo Dcbranch2, StrSQL
      
@@ -3567,7 +3576,7 @@ Dim StrSQL As String
         StrSQL = "Select BankID,BankNameE From BanksData   "
    End If
    If Me.TxtModFlg <> "R" Then
-   StrSQL = StrSQL & " where BranchID =" & val(Me.dcBranch1.BoundText) & " or BranchID=0 or BranchID is null"
+   StrSQL = StrSQL & " where BranchID =" & val(Me.DcBranch1.BoundText) & " or BranchID=0 or BranchID is null"
    End If
    fill_combo Me.Dcbank1, StrSQL
    
@@ -3578,7 +3587,7 @@ Dim StrSQL As String
         StrSQL = "Select BoxID,BoxNamee From tblBoxesData "
    End If
    If Me.TxtModFlg <> "R" Then
-    StrSQL = StrSQL & " where BranchId =" & val(Me.dcBranch1.BoundText) & ""
+    StrSQL = StrSQL & " where BranchId =" & val(Me.DcBranch1.BoundText) & ""
    End If
    fill_combo Me.DcboBox1, StrSQL
  End Sub
@@ -3608,13 +3617,13 @@ Dim StrSQL As String
  
 
 Private Sub ISButton1_Click()
-            TxtModFlg.text = "N"
-            Me.XPTxtID.text = ""
+            TxtModFlg.Text = "N"
+            Me.XPTxtID.Text = ""
  
             Me.DCboUserName.BoundText = user_id
               'Me.DcBranch.BoundText = Current_branch
-     TxtNoteSerial.text = ""
-     TxtNoteSerial1.text = ""
+     TxtNoteSerial.Text = ""
+     TxtNoteSerial1.Text = ""
      
 
 
@@ -3624,7 +3633,7 @@ End Sub
 Private Sub TxtModFlg_Change()
     On Error GoTo ErrTrap
 
-    Select Case Me.TxtModFlg.text
+    Select Case Me.TxtModFlg.Text
 
         Case "R"
             '        Me.Caption = "”Õ» „‰ «·Œ“‰…"
@@ -3715,8 +3724,8 @@ ErrTrap:
 End Sub
 
 Private Sub TxtOderSerial_Change()
-If Me.TxtOderSerial.text <> "" Then
-RetriveOrder , (Me.TxtOderSerial.text)
+If Me.TxtOderSerial.Text <> "" Then
+RetriveOrder , (Me.TxtOderSerial.Text)
 End If
 End Sub
 
@@ -3725,7 +3734,7 @@ Private Sub TxtOderSerial_KeyUp(KeyCode As Integer, Shift As Integer)
   If KeyCode = vbKeyF3 Then
 
                     
-            TxtOderSerial.text = ""
+            TxtOderSerial.Text = ""
             FrmReqExchangeSearch.show
             FrmReqExchangeSearch.lbltype = 4
         
@@ -3735,25 +3744,25 @@ Private Sub TxtOderSerial_KeyUp(KeyCode As Integer, Shift As Integer)
 End Sub
 
 Private Sub TxtOrder_Change()
-If Me.TxtOrder.text <> "" Then
-RetriveOrder val(Me.TxtOrder.text)
+If Me.Txtorder.Text <> "" Then
+RetriveOrder val(Me.Txtorder.Text)
 End If
 End Sub
 
 Private Sub TxtPerson2_Change()
-    txtperson.text = TxtPerson2.text
+    txtperson.Text = TxtPerson2.Text
 End Sub
 
-Private Sub XPBtnMove_Click(index As Integer)
+Private Sub XPBtnMove_Click(Index As Integer)
     On Error GoTo ErrTrap
 
-    If Me.TxtModFlg.text = "N" Then
+    If Me.TxtModFlg.Text = "N" Then
         clear_all Me
-        Me.TxtModFlg.text = "R"
+        Me.TxtModFlg.Text = "R"
         XPBtnMove_Click (1)
     End If
 
-    Select Case index
+    Select Case Index
 
         Case 0
 
@@ -3832,17 +3841,17 @@ Public Sub Retrive(Optional Lngid As Long = 0, Optional NoteSerial1 As String)
         Me.DcCostCenter.BoundText = IIf(rs("general_cost_center").value = "", "", rs("general_cost_center").value)
     End If
     dcBranch.BoundText = IIf(IsNull(rs("branch_no").value), "", rs("branch_no").value)
-        Me.dcBranch1.BoundText = IIf(IsNull(rs("branch_no1").value), "", rs("branch_no1").value)
+        Me.DcBranch1.BoundText = IIf(IsNull(rs("branch_no1").value), "", rs("branch_no1").value)
     Me.Dcbranch2.BoundText = IIf(IsNull(rs("branch_no2").value), "", rs("branch_no2").value)
 
 
-    XPTxtID.text = IIf(IsNull(rs("NoteID").value), "", val(rs("NoteID").value))
-    Me.TxtNoteSerial.text = IIf(IsNull(rs("NoteSerial").value), "", rs("NoteSerial").value)
-    Me.TxtNoteSerial1.text = IIf(IsNull(rs("NoteSerial1").value), "", rs("NoteSerial1").value)
-TxtNoteID2.text = IIf(IsNull(rs("NoteID2").value), "", (rs("NoteID2").value))
+    XPTxtID.Text = IIf(IsNull(rs("NoteID").value), "", val(rs("NoteID").value))
+    Me.TxtNoteSerial.Text = IIf(IsNull(rs("NoteSerial").value), "", rs("NoteSerial").value)
+    Me.TxtNoteSerial1.Text = IIf(IsNull(rs("NoteSerial1").value), "", rs("NoteSerial1").value)
+TxtNoteID2.Text = IIf(IsNull(rs("NoteID2").value), "", (rs("NoteID2").value))
 ''//
-Me.TxtOderSerial.text = IIf(IsNull(rs("OrderSerial").value), "", rs("OrderSerial").value)
-Me.TxtOrder.text = IIf(IsNull(rs("OrderID").value), "", rs("OrderID").value)
+Me.TxtOderSerial.Text = IIf(IsNull(rs("OrderSerial").value), "", rs("OrderSerial").value)
+Me.Txtorder.Text = IIf(IsNull(rs("OrderID").value), "", rs("OrderID").value)
 ''//
 If Not IsNull(rs("IncludVAT").value) Then
 If (rs("IncludVAT").value) = 1 Then
@@ -3853,9 +3862,9 @@ End If
 Else
 IncludVAT.value = vbUnchecked
 End If
-Me.TxtNoteSerial2.text = IIf(IsNull(rs("NoteSerial2").value), "", rs("NoteSerial2").value)
+Me.TxtNoteSerial2.Text = IIf(IsNull(rs("NoteSerial2").value), "", rs("NoteSerial2").value)
 
-    Me.oldtxtNoteSerial1.text = IIf(IsNull(rs("OldNoteSerial1").value), IIf(IsNull(rs("NoteSerial1").value), "", rs("NoteSerial1").value), rs("OldNoteSerial1").value)
+    Me.oldtxtNoteSerial1.Text = IIf(IsNull(rs("OldNoteSerial1").value), IIf(IsNull(rs("NoteSerial1").value), "", rs("NoteSerial1").value), rs("OldNoteSerial1").value)
    If rs("ToCommision").value = vbTrue Then
         Me.ChkToCommision.value = vbChecked
     Else
@@ -3864,15 +3873,15 @@ Me.TxtNoteSerial2.text = IIf(IsNull(rs("NoteSerial2").value), "", rs("NoteSerial
     
     lbl(27).Caption = showLabel(TxtNoteSerial1, oldtxtNoteSerial1)
 
-    XPTxtVal.text = IIf(IsNull(rs("Note_Value").value), "", Trim(rs("Note_Value").value))
-    XPMTxtRemarks.text = IIf(IsNull(rs("Remark").value), "", Trim(rs("Remark").value))
-    XPMTxtRemarks1.text = IIf(IsNull(rs("Remark").value), "", Trim(rs("Remark").value))
+    XPTxtVal.Text = IIf(IsNull(rs("Note_Value").value), "", Trim(rs("Note_Value").value))
+    XPMTxtRemarks.Text = IIf(IsNull(rs("Remark").value), "", Trim(rs("Remark").value))
+    XPMTxtRemarks1.Text = IIf(IsNull(rs("Remark").value), "", Trim(rs("Remark").value))
 
     XPDtbTrans.value = IIf(IsNull(rs("NoteDate").value), Date, rs("NoteDate").value)
     Me.DcboBox.BoundText = IIf(IsNull(rs("BoxID").value), "", rs("BoxID").value)
     Me.Dcbank.BoundText = IIf(IsNull(rs("BankID").value), "", rs("BankID").value)
-    txtTransferExpenses.text = IIf(IsNull(rs("TransferExpenses").value), "", (rs("TransferExpenses").value))
-    txtTransferExpensesBranch.text = IIf(IsNull(rs("TransferExpensesBranch").value), "", (rs("TransferExpensesBranch").value))
+    txtTransferExpenses.Text = IIf(IsNull(rs("TransferExpenses").value), "", (rs("TransferExpenses").value))
+    txtTransferExpensesBranch.Text = IIf(IsNull(rs("TransferExpensesBranch").value), "", (rs("TransferExpensesBranch").value))
     
     
     
@@ -3882,9 +3891,9 @@ Me.TxtNoteSerial2.text = IIf(IsNull(rs("NoteSerial2").value), "", rs("NoteSerial
     Me.Dcbank2.BoundText = IIf(IsNull(rs("BankID2").value), "", rs("BankID2").value)
     Me.DcboBox1.BoundText = IIf(IsNull(rs("BoxID1").value), "", rs("BoxID1").value)
     Me.DcboBox2.BoundText = IIf(IsNull(rs("BoxID2").value), "", rs("BoxID2").value)
-    Me.TxtChequeNumber1.text = IIf(IsNull(rs("TxtChequeNumber1").value), "", rs("TxtChequeNumber1").value)
+    Me.TxtChequeNumber1.Text = IIf(IsNull(rs("TxtChequeNumber1").value), "", rs("TxtChequeNumber1").value)
     Me.DtpChequeDueDate1.value = IIf(IsNull(rs("DtpChequeDueDate1").value), Date, rs("DtpChequeDueDate1").value)
-    TxtPerson2.text = IIf(IsNull(rs("person").value), "", rs("person").value)
+    TxtPerson2.Text = IIf(IsNull(rs("person").value), "", rs("person").value)
 
     '88888888888888888888888888888888888
 
@@ -3897,15 +3906,15 @@ Me.TxtNoteSerial2.text = IIf(IsNull(rs("NoteSerial2").value), "", rs("NoteSerial
 
     Me.DCboUserName.BoundText = IIf(IsNull(rs("UserID").value), "", rs("UserID").value)
 
-    Me.TxtChequeNumber.text = IIf(IsNull(rs("ChqueNum").value), "", rs("ChqueNum").value)
+    Me.TxtChequeNumber.Text = IIf(IsNull(rs("ChqueNum").value), "", rs("ChqueNum").value)
     Me.DtpChequeDueDate.value = IIf(IsNull(rs("DueDate").value), Date, rs("DueDate").value)
-    txtperson.text = IIf(IsNull(rs("person").value), "", rs("person").value)
+    txtperson.Text = IIf(IsNull(rs("person").value), "", rs("person").value)
 
     Me.DCAccounts1.BoundText = IIf(IsNull(rs("Account_Code1").value), "", rs("Account_Code1").value)
     Me.DCAccounts2.BoundText = IIf(IsNull(rs("Account_Code2").value), "", rs("Account_Code2").value)
  
     Me.DcboDebitSide1.BoundText = getBranchCurrentAccount(val(Dcbranch2.BoundText))
-    Me.DcboCreditSide1.BoundText = getBranchCurrentAccount(val(dcBranch1.BoundText))
+    Me.DcboCreditSide1.BoundText = getBranchCurrentAccount(val(DcBranch1.BoundText))
      
     Me.DcboDebitSide.BoundText = DCAccounts2.BoundText
     Me.DcboCreditSide.BoundText = DCAccounts1.BoundText
@@ -3929,7 +3938,7 @@ Me.TxtNoteSerial2.text = IIf(IsNull(rs("NoteSerial2").value), "", rs("NoteSerial
     'End If
 
     If SystemOptions.SysAppAccoutingType = CompeleteAccounting Then
-        StrSQL = "Select * From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(Me.XPTxtID.text)
+        StrSQL = "Select * From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(Me.XPTxtID.Text)
         StrSQL = StrSQL + " Order By DEV_ID_Line_No "
         Set RsDev = New ADODB.Recordset
         RsDev.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
@@ -3962,7 +3971,7 @@ ErrTrap:
 End Sub
 
 Private Sub TxtTransferExpenses_KeyPress(KeyAscii As Integer)
-    KeyAscii = KeyAscii_Num(KeyAscii, txtTransferExpenses.text, 0)
+    KeyAscii = KeyAscii_Num(KeyAscii, txtTransferExpenses.Text, 0)
 End Sub
 
 Private Sub SaveData()
@@ -3984,7 +3993,7 @@ Dim Percetage As Double
             Posted = 0
             End If
   '  On Error GoTo ErrTrap
-       If (CboDrawingType.ListIndex = 2) And val(Me.txtTransferExpenses.text) > 0 Or ((CboDrawingType.ListIndex = 3) And val(Me.txtTransferExpensesBranch.text) > 0) Then
+       If (CboDrawingType.ListIndex = 2) And val(Me.txtTransferExpenses.Text) > 0 Or ((CboDrawingType.ListIndex = 3) And val(Me.txtTransferExpensesBranch.Text) > 0) Then
             Account_Code_dynamic = get_account_code_branch(52, my_branch)
         
             If Account_Code_dynamic = "NO branch" Then
@@ -4011,7 +4020,7 @@ Dim Percetage As Double
         
         End If
         
-    If Me.TxtModFlg.text <> "R" Then
+    If Me.TxtModFlg.Text <> "R" Then
         If Me.CboDrawingType.ListIndex = -1 Then
             Msg = "ÌÃ» ≈Œ Ì«— ‰Ê⁄ «·⁄„·Ì…  ...!!! "
             MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
@@ -4039,7 +4048,7 @@ Dim Percetage As Double
             End If
         End If
     
-        If val(XPTxtVal.text) = 0 Then
+        If val(XPTxtVal.Text) = 0 Then
             Msg = "ÌÃ» «œŒ«· «·ﬁÌ„Â       "
             MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
             XPTxtVal.SetFocus
@@ -4081,7 +4090,7 @@ Dim Percetage As Double
             
             
             
-                If Trim$(Me.TxtChequeNumber.text) = "" Then
+                If Trim$(Me.TxtChequeNumber.Text) = "" Then
                     If SystemOptions.UserInterface = ArabicInterface Then
                         Msg = "ÌÃ» ﬂ «»… —ﬁ„ «·‘Ìﬂ./«·ÕÊ«·Â..!!"
                     Else
@@ -4099,12 +4108,12 @@ Dim Percetage As Double
     
         If Me.CboDrawingType.ListIndex = 3 Then
                         
-            If val(Me.dcBranch1.BoundText) = 0 Then
+            If val(Me.DcBranch1.BoundText) = 0 Then
                 Msg = "ÌÃ»  ÕœÌœ «·›—⁄  «·„ÕÊ· „‰…...!!!"
                 MsgBox Msg, vbOKOnly + vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
 
-                If Me.dcBranch1.Visible = True Then
-                    dcBranch1.SetFocus
+                If Me.DcBranch1.Visible = True Then
+                    DcBranch1.SetFocus
                     Sendkeys "{F4}"
                 End If
 
@@ -4168,7 +4177,7 @@ Dim Percetage As Double
                     Exit Sub
                 End If
         
-                If Trim$(Me.TxtChequeNumber1.text) = "" Then
+                If Trim$(Me.TxtChequeNumber1.Text) = "" Then
                     If SystemOptions.UserInterface = ArabicInterface Then
                         Msg = "ÌÃ» ﬂ «»… —ﬁ„ «·‘Ìﬂ...!!"
                     Else
@@ -4272,16 +4281,16 @@ Dim Percetage As Double
                     
         End If
     
-        If Me.TxtModFlg.text = "N" Then
+        If Me.TxtModFlg.Text = "N" Then
             '«· «ﬂœ „‰ «‰ —’Ìœ «·Œ“‰… Ì”„Õ »Œ—ÊÃ Â–« «·„»·€
             '   If CheckBoxAccount(Me.DcboBox.BoundText, Val(Me.XPTxtVal.text), XPDtbTrans.value, True) = False Then
             '       Exit Sub
             '   End If
-        ElseIf Me.TxtModFlg.text = "E" Then
+        ElseIf Me.TxtModFlg.Text = "E" Then
             '«· «ﬂœ „‰ «‰ —’Ìœ «·Œ“‰… Ì”„Õ »Œ—ÊÃ Â–« «·„»·€
          End If
     my_branch = val(dcBranch.BoundText)
-        If TxtNoteSerial.text = "" Then
+        If TxtNoteSerial.Text = "" Then
         
             If Notes_coding(val(my_branch), XPDtbTrans.value) = "error" Then
                 MsgBox " ·« Ì„ﬂ‰ «÷«›… ﬁÌÊœ ·Â–… «·⁄„·Ì… ·«‰ﬂ  ⁄œÌ  «·Õœ «·«ﬁ’Ì ··ﬁÌÊœ ﬂ„« Õœœ  ›Ì  —ﬁÌ„ «·”‰œ«  ": Exit Sub
@@ -4290,7 +4299,7 @@ Dim Percetage As Double
                     If Notes_coding(val(my_branch), XPDtbTrans.value) = "" Then
                         MsgBox " ·«Ì„ﬂ‰ «‰‘«¡ «·ﬁÌœ ·Â–« «·„” ‰œ ·«‰ﬂ Õœœ   —ﬁÌ„ ﬁÌÊœ ÌœÊÌ  ": Exit Sub
                     Else
-                        TxtNoteSerial.text = Notes_coding(val(my_branch), XPDtbTrans.value)
+                        TxtNoteSerial.Text = Notes_coding(val(my_branch), XPDtbTrans.value)
                     End If
             End If
             
@@ -4305,7 +4314,7 @@ Dim Percetage As Double
 'End If
 
         
-        If TxtNoteSerial1.text = "" Then
+        If TxtNoteSerial1.Text = "" Then
             If Voucher_coding(val(my_branch), XPDtbTrans.value, 16, 14) = "error" Then
                 MsgBox " ·« Ì„ﬂ‰ «÷«›… ”‰œ œ›⁄ ÃœÌœ ·«‰ﬂ  ⁄œÌ  «·Õœ «·–Ì ﬁ„  » ÕœÌœ… „‰ «·”‰œ«   ": Exit Sub
             Else
@@ -4313,7 +4322,7 @@ Dim Percetage As Double
                 If Voucher_coding(val(my_branch), XPDtbTrans.value, 16, 14) = "" Then
                     MsgBox " ·«»œ „‰ ﬂ «»… —ﬁ„ «·”‰œ ÌœÊÌ« ﬂ„« Õœœ   ": Exit Sub
                 Else
-                    TxtNoteSerial1.text = Voucher_coding(val(my_branch), XPDtbTrans.value, 16, 14)
+                    TxtNoteSerial1.Text = Voucher_coding(val(my_branch), XPDtbTrans.value, 16, 14)
                 End If
             End If
         End If
@@ -4321,21 +4330,21 @@ Dim Percetage As Double
         Cn.BeginTrans
         BeginTrans = True
     
-        If TxtModFlg.text = "N" Then
-            Me.XPTxtID.text = new_id("NOTES", "NoteID", "")
+        If TxtModFlg.Text = "N" Then
+            Me.XPTxtID.Text = new_id("NOTES", "NoteID", "")
             rs.AddNew
-            rs("NoteID").value = val(XPTxtID.text)
-            Me.oldtxtNoteSerial1.text = Trim$(Me.TxtNoteSerial1.text)
+            rs("NoteID").value = val(XPTxtID.Text)
+            Me.oldtxtNoteSerial1.Text = Trim$(Me.TxtNoteSerial1.Text)
          
-        ElseIf Me.TxtModFlg.text = "E" Then
-            StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(XPTxtID.text)
+        ElseIf Me.TxtModFlg.Text = "E" Then
+            StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(XPTxtID.Text)
             Cn.Execute StrSQL, , adExecuteNoRecords
     
-         StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(TxtNoteID2.text)
+         StrSQL = "Delete From DOUBLE_ENTREY_VOUCHERS Where Notes_ID=" & val(TxtNoteID2.Text)
             Cn.Execute StrSQL, , adExecuteNoRecords
             
-            If val(TxtNoteID2.text) <> val(Me.XPTxtID.text) Then
-         StrSQL = "Delete From notes  Where  NoteType=14 and NoteID=" & val(TxtNoteID2.text)
+            If val(TxtNoteID2.Text) <> val(Me.XPTxtID.Text) Then
+         StrSQL = "Delete From notes  Where  NoteType=14 and NoteID=" & val(TxtNoteID2.Text)
             Cn.Execute StrSQL, , adExecuteNoRecords
             End If
            
@@ -4346,8 +4355,8 @@ Dim Percetage As Double
           Dim resultstr As String
           Dim des As String
           
-               des = "  »‰«¡ ⁄·Ì ”‰œ  ÕÊÌ·  »—ﬁ„  " & TxtNoteSerial1 & " „‰ «·›—⁄  " & dcBranch1.text
-               If TxtNoteSerial2.text = "" Then
+               des = "  »‰«¡ ⁄·Ì ”‰œ  ÕÊÌ·  »—ﬁ„  " & TxtNoteSerial1 & " „‰ «·›—⁄  " & DcBranch1.Text
+               If TxtNoteSerial2.Text = "" Then
                   resultstr = Notes_coding(val(Dcbranch2.BoundText), XPDtbTrans.value)
             If resultstr = "error" Then
                 MsgBox " ·« Ì„ﬂ‰ «÷«›… ﬁÌÊœ ·Â–… «·⁄„·Ì… ·«‰ﬂ  ⁄œÌ  «·Õœ «·«ﬁ’Ì ··ﬁÌÊœ ﬂ„« Õœœ  ›Ì  —ﬁÌ„ «·”‰œ«   ··›—⁄ «·„ÕÊ· «·Ì…": Exit Sub
@@ -4356,34 +4365,34 @@ Dim Percetage As Double
                 If resultstr = "" Then
                     MsgBox " ·«Ì„ﬂ‰ «‰‘«¡ «·ﬁÌœ ·Â–« «·„” ‰œ ·«‰ﬂ Õœœ   —ﬁÌ„ ﬁÌÊœ ÌœÊÌ ··›—⁄ «·„ÕÊ· «·Ì… ": Exit Sub
                 Else
-                    TxtNoteSerial2.text = resultstr
+                    TxtNoteSerial2.Text = resultstr
                 End If
             End If
         End If
       rs.update
         Dim NoteID As Long
         If SystemOptions.JLCodeBasedOnBranch = True Then
-        CreateNotes NoteID, (XPDtbTrans.value), val(Dcbranch2.BoundText), 14, val(XPTxtVal.text), TxtNoteSerial2, TxtNoteSerial1, , , , des, ToHijriDate(XPDtbTrans.value)
+        CreateNotes NoteID, (XPDtbTrans.value), val(Dcbranch2.BoundText), 14, val(XPTxtVal.Text), TxtNoteSerial2, TxtNoteSerial1, , , , des, ToHijriDate(XPDtbTrans.value)
         Else
         'TxtNoteSerial2 = TxtNoteSerial
-       CreateNotes NoteID, (XPDtbTrans.value), val(dcBranch.BoundText), 14, val(XPTxtVal.text), TxtNoteSerial, TxtNoteSerial1, , , , des, ToHijriDate(XPDtbTrans.value)
+       CreateNotes NoteID, (XPDtbTrans.value), val(dcBranch.BoundText), 14, val(XPTxtVal.Text), TxtNoteSerial, TxtNoteSerial1, , , , des, ToHijriDate(XPDtbTrans.value)
           End If
-           Me.TxtNoteID2.text = NoteID
+           Me.TxtNoteID2.Text = NoteID
           End If
           
          If val(CboDrawingType.ListIndex) = 3 Then
-         rs("NoteID2").value = IIf(Me.TxtNoteID2.text = "", Null, val(TxtNoteID2.text))
-         rs("NoteSerial2").value = IIf(Me.TxtNoteSerial2.text = "", Null, Me.TxtNoteSerial2.text)
+         rs("NoteID2").value = IIf(Me.TxtNoteID2.Text = "", Null, val(TxtNoteID2.Text))
+         rs("NoteSerial2").value = IIf(Me.TxtNoteSerial2.Text = "", Null, Me.TxtNoteSerial2.Text)
          Else
           rs("NoteID2").value = Null
          rs("NoteSerial2").value = Null
          End If
          '''/
-            rs("OrderSerial").value = IIf(Me.TxtOderSerial.text = "", Null, Me.TxtOderSerial.text)
-    rs("OrderID").value = IIf(Me.TxtOrder.text = "", Null, Me.TxtOrder.text)
+            rs("OrderSerial").value = IIf(Me.TxtOderSerial.Text = "", Null, Me.TxtOderSerial.Text)
+    rs("OrderID").value = IIf(Me.Txtorder.Text = "", Null, Me.Txtorder.Text)
          ''//
-       rs("TransferExpenses").value = val(txtTransferExpenses.text)
-       rs("TransferExpensesBranch").value = val(txtTransferExpensesBranch.text)
+       rs("TransferExpenses").value = val(txtTransferExpenses.Text)
+       rs("TransferExpensesBranch").value = val(txtTransferExpensesBranch.Text)
        
        'ChkToCommision
           If Me.ChkToCommision.value = vbChecked Then
@@ -4402,13 +4411,13 @@ Dim Percetage As Double
         rs("PaymentType").value = IIf(Me.CboPayMentType.ListIndex = -1, Null, CboPayMentType.ListIndex)
         rs("PaymentType1").value = IIf(Me.CboPaymentType1.ListIndex = -1, Null, CboPaymentType1.ListIndex)
 
-        rs("NoteSerial").value = IIf(Me.TxtNoteSerial.text = "", Null, Me.TxtNoteSerial.text)
+        rs("NoteSerial").value = IIf(Me.TxtNoteSerial.Text = "", Null, Me.TxtNoteSerial.Text)
     
-        rs("Note_Value").value = val(Me.XPTxtVal.text)
-        Me.Lb_note_value_by_characters.Caption = WriteNo(Format(Me.XPTxtVal.text + val(Me.txtTransferExpenses.text), "0.00"), 0, True, ".")
+        rs("Note_Value").value = val(Me.XPTxtVal.Text)
+        Me.Lb_note_value_by_characters.Caption = WriteNo(Format(Me.XPTxtVal.Text + val(Me.txtTransferExpenses.Text), "0.00"), 0, True, ".")
         rs("note_value_by_characters").value = Trim$(Me.Lb_note_value_by_characters.Caption)
 
-        rs("Remark").value = IIf(XPMTxtRemarks.text = "", "", Trim(XPMTxtRemarks.text))
+        rs("Remark").value = IIf(XPMTxtRemarks.Text = "", "", Trim(XPMTxtRemarks.Text))
              'rs("Remark").value = "    ÕÊÌ·«  „«·ÌÂ " & " »—ﬁ„  " & Me.TxtNoteSerial1.text & "   " & IIf(XPMTxtRemarks.text = "", "", Trim(XPMTxtRemarks.text))
              
         rs("CusID").value = Null
@@ -4453,9 +4462,9 @@ Dim Percetage As Double
             rs("BankIDTo").value = IIf(Me.DCBankTo.BoundText = "", Null, Me.DCBankTo.BoundText)
             rs("BoxID").value = Null
             rs("BoxIDto").value = Null
-            rs("ChqueNum").value = Trim$(Me.TxtChequeNumber.text)
+            rs("ChqueNum").value = Trim$(Me.TxtChequeNumber.Text)
             rs("DueDate").value = Me.DtpChequeDueDate.value
-            rs("person").value = IIf(Me.txtperson.text = "", "", Me.txtperson.text)
+            rs("person").value = IIf(Me.txtperson.Text = "", "", Me.txtperson.Text)
         
             rs("branch_no1").value = Null
             rs("branch_no2").value = Null
@@ -4468,11 +4477,11 @@ Dim Percetage As Double
             rs("BankID").value = Null
             rs("BankIDTo").value = Null
         
-            rs("ChqueNum").value = Trim$(Me.TxtChequeNumber.text)
+            rs("ChqueNum").value = Trim$(Me.TxtChequeNumber.Text)
             rs("DueDate").value = Me.DtpChequeDueDate.value
-            rs("person").value = IIf(Me.txtperson.text = "", "", Me.txtperson.text)
+            rs("person").value = IIf(Me.txtperson.Text = "", "", Me.txtperson.Text)
       
-            rs("branch_no1").value = IIf(Me.dcBranch1.BoundText = "", Null, Me.dcBranch1.BoundText)
+            rs("branch_no1").value = IIf(Me.DcBranch1.BoundText = "", Null, Me.DcBranch1.BoundText)
             rs("branch_no2").value = IIf(Me.Dcbranch2.BoundText = "", Null, Me.Dcbranch2.BoundText)
             rs("Account_Code1").value = IIf(Me.DCAccounts1.BoundText = "", Null, Me.DCAccounts1.BoundText)
             rs("Account_Code2").value = IIf(Me.DCAccounts2.BoundText = "", Null, Me.DCAccounts2.BoundText)
@@ -4486,22 +4495,22 @@ Dim Percetage As Double
                 rs("person").value = Null
       
       '****************************
-                rs("TxtChequeNumber1").value = Trim$(Me.TxtChequeNumber1.text)
+                rs("TxtChequeNumber1").value = Trim$(Me.TxtChequeNumber1.Text)
                 rs("DueDate").value = Me.DtpChequeDueDate.value
-                rs("person").value = IIf(Me.TxtPerson2.text = "", "", Me.TxtPerson2.text)
+                rs("person").value = IIf(Me.TxtPerson2.Text = "", "", Me.TxtPerson2.Text)
      '****************************
      
             ElseIf CboPayMentType.ListIndex = 1 Then
                 rs("BankID1").value = IIf(Me.Dcbank1.BoundText = "", Null, Me.Dcbank1.BoundText)
  
-                rs("TxtChequeNumber1").value = Trim$(Me.TxtChequeNumber1.text)
+                rs("TxtChequeNumber1").value = Trim$(Me.TxtChequeNumber1.Text)
                 rs("DueDate").value = Me.DtpChequeDueDate.value
-                rs("person").value = IIf(Me.TxtPerson2.text = "", "", Me.TxtPerson2.text)
+                rs("person").value = IIf(Me.TxtPerson2.Text = "", "", Me.TxtPerson2.Text)
                 rs("BoxID").value = Null
               '****************************
-                rs("TxtChequeNumber1").value = Trim$(Me.TxtChequeNumber1.text)
+                rs("TxtChequeNumber1").value = Trim$(Me.TxtChequeNumber1.Text)
                 rs("DueDate").value = Me.DtpChequeDueDate.value
-                rs("person").value = IIf(Me.TxtPerson2.text = "", "", Me.TxtPerson2.text)
+                rs("person").value = IIf(Me.TxtPerson2.Text = "", "", Me.TxtPerson2.Text)
      '****************************
      
             ElseIf CboPayMentType.ListIndex = 2 Then
@@ -4511,9 +4520,9 @@ Dim Percetage As Double
                 rs("DueDate").value = Null
                 rs("person").value = Null
           '****************************
-                rs("TxtChequeNumber1").value = Trim$(Me.TxtChequeNumber1.text)
+                rs("TxtChequeNumber1").value = Trim$(Me.TxtChequeNumber1.Text)
                 rs("DueDate").value = Me.DtpChequeDueDate.value
-                rs("person").value = IIf(Me.TxtPerson2.text = "", "", Me.TxtPerson2.text)
+                rs("person").value = IIf(Me.TxtPerson2.Text = "", "", Me.TxtPerson2.Text)
      '****************************
        
        
@@ -4542,11 +4551,11 @@ Dim Percetage As Double
         rs("sanad_year").value = year(XPDtbTrans.value)
         rs("sanad_month").value = Month(XPDtbTrans.value)
      
-        rs("NoteSerial1").value = IIf(Trim(Me.TxtNoteSerial1.text) = "", Null, Trim(Me.TxtNoteSerial1.text))
-        rs("OldNoteSerial1").value = Trim$(Me.oldtxtNoteSerial1.text) '
+        rs("NoteSerial1").value = IIf(Trim(Me.TxtNoteSerial1.Text) = "", Null, Trim(Me.TxtNoteSerial1.Text))
+        rs("OldNoteSerial1").value = Trim$(Me.oldtxtNoteSerial1.Text) '
  
         rs("branch_no").value = val(Me.dcBranch.BoundText)
-        rs("Note_Value").value = IIf(XPTxtVal.text = "", Null, val(XPTxtVal.text))
+        rs("Note_Value").value = IIf(XPTxtVal.Text = "", Null, val(XPTxtVal.Text))
         rs("note_value_by_characters").value = IIf(Lb_note_value_by_characters = "", Null, Lb_note_value_by_characters)
     
         rs.update
@@ -4562,7 +4571,7 @@ Dim Percetage As Double
             Dim StrDes As String
             Dim lineno As Integer
              lineno = 1
-            StrDes = "    ÕÊÌ·«  „«·ÌÂ " & " »—ﬁ„  " & Me.TxtNoteSerial1.text & "   "
+            StrDes = "    ÕÊÌ·«  „«·ÌÂ " & " »—ﬁ„  " & Me.TxtNoteSerial1.Text & "   "
             
             RsDev.AddNew
         
@@ -4588,15 +4597,15 @@ Dim Percetage As Double
                   
              RsDev("DEV_ID_Line_No1").value = Line2
             RsDev("Account_Code").value = Me.DcboDebitSide.BoundText
-            RsDev("Value").value = val(Me.XPTxtVal.text)
+            RsDev("Value").value = val(Me.XPTxtVal.Text)
             RsDev("Credit_Or_Debit").value = 0
-            RsDev("Double_Entry_Vouchers_Description").value = StrDes & CHR(13) & XPMTxtRemarks.text
+            RsDev("Double_Entry_Vouchers_Description").value = StrDes & CHR(13) & XPMTxtRemarks.Text
             
              If CboDrawingType.ListIndex = 3 Then
-            RsDev("Notes_ID").value = val(Me.TxtNoteID2.text)
+            RsDev("Notes_ID").value = val(Me.TxtNoteID2.Text)
             
             Else
-             RsDev("Notes_ID").value = val(XPTxtID.text)
+             RsDev("Notes_ID").value = val(XPTxtID.Text)
             End If
             
             RsDev("RecordDate").value = Me.XPDtbTrans.value
@@ -4606,10 +4615,10 @@ Dim Percetage As Double
         
             If CboDrawingType.ListIndex = 3 Then
                 lineno = lineno + 1
-                StrDes = "    ÕÊÌ·«  „«·ÌÂ " & " »—ﬁ„  " & Me.TxtNoteSerial1.text & "   "
+                StrDes = "    ÕÊÌ·«  „«·ÌÂ " & " »—ﬁ„  " & Me.TxtNoteSerial1.Text & "   "
                 RsDev.AddNew
   
-                RsDev("branch_id").value = val(dcBranch1.BoundText)
+                RsDev("branch_id").value = val(DcBranch1.BoundText)
                   If Posted = 1 Then
                   RsDev("Posted").value = 1
                   Else
@@ -4623,10 +4632,10 @@ Dim Percetage As Double
 
                 RsDev("Account_Code").value = Me.DcboDebitSide1.BoundText
                 RsDev("NextAccount_Code").value = Me.DcboCreditSide1.BoundText
-                RsDev("Value").value = val(Me.XPTxtVal.text)
+                RsDev("Value").value = val(Me.XPTxtVal.Text)
                 RsDev("Credit_Or_Debit").value = 0
-                RsDev("Double_Entry_Vouchers_Description").value = StrDes & CHR(13) & XPMTxtRemarks.text
-                RsDev("Notes_ID").value = val(XPTxtID.text)
+                RsDev("Double_Entry_Vouchers_Description").value = StrDes & CHR(13) & XPMTxtRemarks.Text
+                RsDev("Notes_ID").value = val(XPTxtID.Text)
                 RsDev("RecordDate").value = Me.XPDtbTrans.value
                 RsDev("UserID").value = Me.DCboUserName.BoundText
                 RsDev("Account_Interval_ID").value = SystemOptions.SysCurrentAccountIntervalID
@@ -4640,7 +4649,7 @@ Dim Percetage As Double
             
  '«·ÿ—› «·„œÌ‰
             ' ›Ì Õ«·… «·ÕÊ«·«  «·»‰ﬂÌ… ÊÊÃÊœ „’—Ê›«  »‰ﬂÌ… ⁄·Ì⁄«
-            If (CboDrawingType.ListIndex = 2) And val(Me.txtTransferExpenses.text) > 0 Then
+            If (CboDrawingType.ListIndex = 2) And val(Me.txtTransferExpenses.Text) > 0 Then
                 RsDev.AddNew
                 If Posted = 1 Then
                   RsDev("Posted").value = 1
@@ -4655,9 +4664,9 @@ Dim Percetage As Double
                            Percetage = 1
                         End If
                          Percetage = Percetage / 100 + 1
-                         SngTemp3 = val(Me.txtTransferExpenses.text) / Percetage
+                         SngTemp3 = val(Me.txtTransferExpenses.Text) / Percetage
                       Else
-                         SngTemp3 = val(Me.txtTransferExpenses.text)
+                         SngTemp3 = val(Me.txtTransferExpenses.Text)
                      End If
                      
                 RsDev("branch_id").value = val(Me.dcBranch.BoundText)
@@ -4667,8 +4676,8 @@ Dim Percetage As Double
                 RsDev("Account_Code").value = Account_Code_dynamic
                 RsDev("Value").value = SngTemp3
                 RsDev("Credit_Or_Debit").value = 0
-                RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text
-                RsDev("Notes_ID").value = val(XPTxtID.text)
+                RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text
+                RsDev("Notes_ID").value = val(XPTxtID.Text)
                 RsDev("RecordDate").value = Me.XPDtbTrans.value
                 RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
                 RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -4696,8 +4705,8 @@ Dim Percetage As Double
                 RsDev("Account_Code").value = AccountVATCreit
                 RsDev("Value").value = SngTemp3
                 RsDev("Credit_Or_Debit").value = 0
-                RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & "Õ”«» «·ﬁÌ„… «·„÷«›… ··„⁄«„·«  «·„«·Ì…"
-                RsDev("Notes_ID").value = val(XPTxtID.text)
+                RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & "Õ”«» «·ﬁÌ„… «·„÷«›… ··„⁄«„·«  «·„«·Ì…"
+                RsDev("Notes_ID").value = val(XPTxtID.Text)
                 RsDev("RecordDate").value = Me.XPDtbTrans.value
                 RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
                 RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -4723,7 +4732,7 @@ Dim Percetage As Double
                 RsDev("branch_id").value = val(Me.dcBranch.BoundText) 'GeBranchInfo("BanksData", "bankid", val(Me.DCBankTo.BoundText))
         
             ElseIf CboDrawingType.ListIndex = 3 Then
-                RsDev("branch_id").value = val(Me.dcBranch1.BoundText)
+                RsDev("branch_id").value = val(Me.DcBranch1.BoundText)
          
             End If
         
@@ -4731,10 +4740,10 @@ Dim Percetage As Double
             RsDev("DEV_ID_Line_No").value = lineno
             RsDev("Account_Code").value = Me.DcboCreditSide.BoundText
             RsDev("NextAccount_Code").value = Me.DcboDebitSide.BoundText
-            RsDev("Value").value = val(Me.XPTxtVal.text) + val(txtTransferExpenses.text)
+            RsDev("Value").value = val(Me.XPTxtVal.Text) + val(txtTransferExpenses.Text)
             RsDev("Credit_Or_Debit").value = 1
-            RsDev("Double_Entry_Vouchers_Description").value = StrDes & CHR(13) & XPMTxtRemarks.text
-            RsDev("Notes_ID").value = val(XPTxtID.text)
+            RsDev("Double_Entry_Vouchers_Description").value = StrDes & CHR(13) & XPMTxtRemarks.Text
+            RsDev("Notes_ID").value = val(XPTxtID.Text)
             RsDev("RecordDate").value = Me.XPDtbTrans.value
             RsDev("UserID").value = Me.DCboUserName.BoundText
             RsDev("Account_Interval_ID").value = SystemOptions.SysCurrentAccountIntervalID
@@ -4756,10 +4765,10 @@ Dim Percetage As Double
                 RsDev("DEV_ID_Line_No").value = lineno
                 RsDev("Account_Code").value = Me.DcboCreditSide1.BoundText
                 RsDev("NextAccount_Code").value = Me.DcboDebitSide1.BoundText
-                RsDev("Value").value = val(Me.XPTxtVal.text) + val(txtTransferExpenses.text)
+                RsDev("Value").value = val(Me.XPTxtVal.Text) + val(txtTransferExpenses.Text)
                 RsDev("Credit_Or_Debit").value = 1
-                RsDev("Double_Entry_Vouchers_Description").value = StrDes & CHR(13) & XPMTxtRemarks.text
-                RsDev("Notes_ID").value = val(TxtNoteID2.text)
+                RsDev("Double_Entry_Vouchers_Description").value = StrDes & CHR(13) & XPMTxtRemarks.Text
+                RsDev("Notes_ID").value = val(TxtNoteID2.Text)
                 RsDev("RecordDate").value = Me.XPDtbTrans.value
                 RsDev("UserID").value = Me.DCboUserName.BoundText
                 RsDev("Account_Interval_ID").value = SystemOptions.SysCurrentAccountIntervalID
@@ -4771,7 +4780,7 @@ Dim Percetage As Double
             
  '«·ÿ—› «·„œÌ‰
             '  ··›—Ê⁄ ›Ì Õ«·… «·ÕÊ«·«  «·»‰ﬂÌ… ÊÊÃÊœ „’—Ê›«  »‰ﬂÌ… ⁄·Ì⁄«
-            If (CboDrawingType.ListIndex = 3) And val(Me.txtTransferExpensesBranch.text) > 0 Then
+            If (CboDrawingType.ListIndex = 3) And val(Me.txtTransferExpensesBranch.Text) > 0 Then
               
                    
                 
@@ -4789,12 +4798,12 @@ Dim Percetage As Double
                            Percetage = 1
                         End If
                          Percetage = Percetage / 100 + 1
-                         SngTemp3 = val(Me.txtTransferExpensesBranch.text) / Percetage
+                         SngTemp3 = val(Me.txtTransferExpensesBranch.Text) / Percetage
                       Else
-                         SngTemp3 = val(Me.txtTransferExpensesBranch.text)
+                         SngTemp3 = val(Me.txtTransferExpensesBranch.Text)
                      End If
                     '    RsDev("Posted").value = Posted
-                        RsDev("branch_id").value = val(Me.dcBranch1.BoundText)
+                        RsDev("branch_id").value = val(Me.DcBranch1.BoundText)
                         RsDev("Double_Entry_Vouchers_ID").value = LngDevID
                         RsDev("DEV_ID_Line_No").value = lineno
                         RsDev("DEV_ID_Line_No1").value = lineno
@@ -4802,8 +4811,8 @@ Dim Percetage As Double
                         RsDev("Account_Code").value = Account_Code_dynamic
                         RsDev("Value").value = SngTemp3
                         RsDev("Credit_Or_Debit").value = 0
-                        RsDev("Double_Entry_Vouchers_Description").value = StrDes & CHR(13) & XPMTxtRemarks.text & " „’«—Ì› ÕÊ«·… »‰ﬂÌ… "
-                        RsDev("Notes_ID").value = val(XPTxtID.text)
+                        RsDev("Double_Entry_Vouchers_Description").value = StrDes & CHR(13) & XPMTxtRemarks.Text & " „’«—Ì› ÕÊ«·… »‰ﬂÌ… "
+                        RsDev("Notes_ID").value = val(XPTxtID.Text)
                         RsDev("RecordDate").value = Me.XPDtbTrans.value
                         RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
                         RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -4823,7 +4832,7 @@ Dim Percetage As Double
                   RsDev("Posted").value = Null
                   End If
                     '    RsDev("Posted").value = Posted
-                        RsDev("branch_id").value = val(Me.dcBranch1.BoundText)
+                        RsDev("branch_id").value = val(Me.DcBranch1.BoundText)
                         RsDev("Double_Entry_Vouchers_ID").value = LngDevID
                         RsDev("DEV_ID_Line_No").value = lineno
                         RsDev("DEV_ID_Line_No1").value = lineno
@@ -4831,8 +4840,8 @@ Dim Percetage As Double
                         RsDev("Account_Code").value = AccountVATCreit
                         RsDev("Value").value = SngTemp3
                         RsDev("Credit_Or_Debit").value = 0
-                        RsDev("Double_Entry_Vouchers_Description").value = StrDes & CHR(13) & XPMTxtRemarks.text & "Õ”«» «·ﬁÌ„… «·„÷«›… ··„⁄«„·«  «·„«·Ì…"
-                        RsDev("Notes_ID").value = val(XPTxtID.text)
+                        RsDev("Double_Entry_Vouchers_Description").value = StrDes & CHR(13) & XPMTxtRemarks.Text & "Õ”«» «·ﬁÌ„… «·„÷«›… ··„⁄«„·«  «·„«·Ì…"
+                        RsDev("Notes_ID").value = val(XPTxtID.Text)
                         RsDev("RecordDate").value = Me.XPDtbTrans.value
                         RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
                         RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -4849,15 +4858,15 @@ Dim Percetage As Double
                   RsDev("Posted").value = Null
                   End If
                       ' RsDev("Posted").value = Posted
-                        RsDev("branch_id").value = val(Me.dcBranch1.BoundText)
+                        RsDev("branch_id").value = val(Me.DcBranch1.BoundText)
                         RsDev("Double_Entry_Vouchers_ID").value = LngDevID
                         RsDev("DEV_ID_Line_No").value = lineno
                         RsDev("DEV_ID_Line_No1").value = lineno
                         RsDev("Account_Code").value = Me.DCAccounts1.BoundText
-                        RsDev("Value").value = val(Me.txtTransferExpensesBranch.text)
+                        RsDev("Value").value = val(Me.txtTransferExpensesBranch.Text)
                         RsDev("Credit_Or_Debit").value = 1
-                        RsDev("Double_Entry_Vouchers_Description").value = StrDes & CHR(13) & XPMTxtRemarks.text & " „’«—Ì› ÕÊ«·… »‰ﬂÌ… "
-                        RsDev("Notes_ID").value = val(XPTxtID.text)
+                        RsDev("Double_Entry_Vouchers_Description").value = StrDes & CHR(13) & XPMTxtRemarks.Text & " „’«—Ì› ÕÊ«·… »‰ﬂÌ… "
+                        RsDev("Notes_ID").value = val(XPTxtID.Text)
                         RsDev("RecordDate").value = Me.XPDtbTrans.value
                         RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
                         RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -4875,9 +4884,9 @@ Dim Percetage As Double
                            Percetage = 1
                         End If
                          Percetage = Percetage / 100 + 1
-                         SngTemp3 = val(Me.txtTransferExpensesBranch.text) / Percetage
+                         SngTemp3 = val(Me.txtTransferExpensesBranch.Text) / Percetage
                       Else
-                         SngTemp3 = val(Me.txtTransferExpensesBranch.text)
+                         SngTemp3 = val(Me.txtTransferExpensesBranch.Text)
                      End If
                 
             RsDev.AddNew
@@ -4888,8 +4897,8 @@ Dim Percetage As Double
                         RsDev("Account_Code").value = Account_Code_dynamic
                         RsDev("Value").value = SngTemp3
                         RsDev("Credit_Or_Debit").value = 0
-                        RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text & "Õ”«» «·ﬁÌ„… «·„÷«›… ··„⁄«„·«  «·„«·Ì…"
-                        RsDev("Notes_ID").value = val(XPTxtID.text)
+                        RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text & "Õ”«» «·ﬁÌ„… «·„÷«›… ··„⁄«„·«  «·„«·Ì…"
+                        RsDev("Notes_ID").value = val(XPTxtID.Text)
                         RsDev("RecordDate").value = Me.XPDtbTrans.value
                         RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
                         RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -4916,8 +4925,8 @@ Dim Percetage As Double
                         RsDev("Account_Code").value = AccountVATCreit
                         RsDev("Value").value = SngTemp3
                         RsDev("Credit_Or_Debit").value = 0
-                        RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text
-                        RsDev("Notes_ID").value = val(XPTxtID.text)
+                        RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text
+                        RsDev("Notes_ID").value = val(XPTxtID.Text)
                         RsDev("RecordDate").value = Me.XPDtbTrans.value
                         RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
                         RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -4934,15 +4943,15 @@ Dim Percetage As Double
                                 lineno = lineno + 1
                         
                        RsDev.AddNew
-                        RsDev("branch_id").value = val(Me.dcBranch1.BoundText)
+                        RsDev("branch_id").value = val(Me.DcBranch1.BoundText)
                         RsDev("Double_Entry_Vouchers_ID").value = LngDevID
                         RsDev("DEV_ID_Line_No").value = lineno
                         RsDev("DEV_ID_Line_No1").value = lineno
                         RsDev("Account_Code").value = Me.DCAccounts1.BoundText
-                        RsDev("Value").value = val(Me.txtTransferExpensesBranch.text)
+                        RsDev("Value").value = val(Me.txtTransferExpensesBranch.Text)
                         RsDev("Credit_Or_Debit").value = 1
-                        RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text
-                        RsDev("Notes_ID").value = val(XPTxtID.text)
+                        RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text
+                        RsDev("Notes_ID").value = val(XPTxtID.Text)
                         RsDev("RecordDate").value = Me.XPDtbTrans.value
                         RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
                         RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -4957,16 +4966,16 @@ Dim Percetage As Double
                         
                            lineno = lineno + 1
                             RsDev.AddNew
-                        RsDev("branch_id").value = val(Me.dcBranch1.BoundText)
+                        RsDev("branch_id").value = val(Me.DcBranch1.BoundText)
                         RsDev("Double_Entry_Vouchers_ID").value = LngDevID
                         RsDev("DEV_ID_Line_No").value = lineno
                         RsDev("DEV_ID_Line_No1").value = lineno
                         RsDev("Account_Code").value = DcboDebitSide1.BoundText
                         RsDev("NextAccount_Code").value = DcboCreditSide1.BoundText
-                        RsDev("Value").value = val(Me.txtTransferExpensesBranch.text)
+                        RsDev("Value").value = val(Me.txtTransferExpensesBranch.Text)
                         RsDev("Credit_Or_Debit").value = 0
-                        RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text
-                        RsDev("Notes_ID").value = val(XPTxtID.text)
+                        RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text
+                        RsDev("Notes_ID").value = val(XPTxtID.Text)
                         RsDev("RecordDate").value = Me.XPDtbTrans.value
                         RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
                         RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -4988,10 +4997,10 @@ Dim Percetage As Double
                         RsDev("DEV_ID_Line_No1").value = lineno
                         RsDev("Account_Code").value = Me.DcboCreditSide1.BoundText
                         RsDev("NextAccount_Code").value = Me.DcboDebitSide1.BoundText
-                        RsDev("Value").value = val(Me.txtTransferExpensesBranch.text)
+                        RsDev("Value").value = val(Me.txtTransferExpensesBranch.Text)
                         RsDev("Credit_Or_Debit").value = 1
-                        RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.text
-                        RsDev("Notes_ID").value = val(XPTxtID.text)
+                        RsDev("Double_Entry_Vouchers_Description").value = XPMTxtRemarks.Text
+                        RsDev("Notes_ID").value = val(XPTxtID.Text)
                         RsDev("RecordDate").value = Me.XPDtbTrans.value
                         RsDev("RecordDateH").value = ToHijriDate(XPDtbTrans.value)
                         RsDev("UserID").value = Me.DCboUserName.BoundText
@@ -5024,7 +5033,7 @@ Dim Percetage As Double
         XPTxtCount.Caption = rs.RecordCount
         CuurentLogdata
 
-        Select Case Me.TxtModFlg.text
+        Select Case Me.TxtModFlg.Text
 
             Case "N"
                 Msg = "  „ Õ›Ÿ »Ì«‰«  Â–Â «·⁄„·Ì… " & CHR(13)
@@ -5042,16 +5051,16 @@ Dim Percetage As Double
         
         End Select
 
-        TxtModFlg.text = "R"
+        TxtModFlg.Text = "R"
         Retrive
-        save_General_cost_center Me.DcCostCenter.BoundText, Me.DcCostCenter.text, " ÕÊÌ·«  „«·ÌÂ", Me.XPDtbTrans.value, DcboDebitSide.BoundText, DcboDebitSide.text
+        save_General_cost_center Me.DcCostCenter.BoundText, Me.DcCostCenter.Text, " ÕÊÌ·«  „«·ÌÂ", Me.XPDtbTrans.value, DcboDebitSide.BoundText, DcboDebitSide.Text
        
      '  If val(CboDrawingType.ListIndex) = 3 Then
      '     save_General_cost_center Me.DcCostCenter.BoundText, Me.DcCostCenter.text, " ÕÊÌ·«  „«·ÌÂ", Me.XPDtbTrans.value, DcboDebitSide1.BoundText, DcboDebitSide1.text
      '     End If
 fillapprovData
- updateNotesValueAndNobytext val(TxtNoteID2.text)
- updateNotesValueAndNobytext val(XPTxtID.text)
+ updateNotesValueAndNobytext val(TxtNoteID2.Text)
+ updateNotesValueAndNobytext val(XPTxtID.Text)
     End If
 
     Exit Sub
@@ -5091,7 +5100,7 @@ Public Function save_General_cost_center(cost_center_id As String, _
  
     Dim StrSQL As String
 
-    StrSQL = "Delete  marakes_taklefa_temp  where general_des=1 AND (  kedno =" & val(XPTxtID.text) & " or  kedno =" & val(Me.TxtNoteID2.text) & ")"
+    StrSQL = "Delete  marakes_taklefa_temp  where general_des=1 AND (  kedno =" & val(XPTxtID.Text) & " or  kedno =" & val(Me.TxtNoteID2.Text) & ")"
     Cn.Execute StrSQL, , adExecuteNoRecords
  
     If Me.DcCostCenter.BoundText = "" Then
@@ -5107,10 +5116,10 @@ Public Function save_General_cost_center(cost_center_id As String, _
     rs("general_des").value = 1
     rs("cost_center_id").value = cost_center_id
     rs("cost_center").value = cost_center
-    rs("value").value = val(XPTxtVal.text)
+    rs("value").value = val(XPTxtVal.Text)
     rs("depit_or_credit").value = "„œÌ‰"
-    rs("opr_id").value = val(XPTxtID.text)
-    rs("kedno").value = val(XPTxtID.text)
+    rs("opr_id").value = val(XPTxtID.Text)
+    rs("kedno").value = val(XPTxtID.Text)
         
     rs("opr_type").value = opr_type
     rs("account_name").value = DebitSide
@@ -5120,7 +5129,7 @@ Public Function save_General_cost_center(cost_center_id As String, _
      
           rs("ok").value = 1
         rs("NoteDate").value = XPDtbTrans.value
-        rs("NoteSerial").value = TxtNoteSerial.text
+        rs("NoteSerial").value = TxtNoteSerial.Text
         rs("Remark").value = " ÕÊÌ·«  „«·Ì… »—ﬁ„ " & TxtNoteSerial1 & "    " & Me.XPMTxtRemarks1
  
  
@@ -5136,20 +5145,20 @@ Public Function save_General_cost_center(cost_center_id As String, _
     rs("general_des").value = 1
     rs("cost_center_id").value = cost_center_id
     rs("cost_center").value = cost_center
-    rs("value").value = val(XPTxtVal.text)
+    rs("value").value = val(XPTxtVal.Text)
     rs("depit_or_credit").value = "„œÌ‰"
-    rs("opr_id").value = val(XPTxtID.text)
-    rs("kedno").value = val(XPTxtID.text)
+    rs("opr_id").value = val(XPTxtID.Text)
+    rs("kedno").value = val(XPTxtID.Text)
         
     rs("opr_type").value = opr_type
-    rs("account_name").value = DcboDebitSide1.text
+    rs("account_name").value = DcboDebitSide1.Text
     rs("account_no").value = DcboDebitSide1.BoundText
   '  rs("line_no").value = 1
      rs("line_no").value = Line3
      
           rs("ok").value = 1
         rs("NoteDate").value = XPDtbTrans.value
-        rs("NoteSerial").value = TxtNoteSerial1.text
+        rs("NoteSerial").value = TxtNoteSerial1.Text
         rs("Remark").value = " ÕÊÌ·«  „«·Ì… »—ﬁ„ " & TxtNoteSerial1 & "    " & Me.XPMTxtRemarks1
  
  
@@ -5167,23 +5176,23 @@ End Function
 Private Sub Undo()
     On Error GoTo ErrTrap
 
-    Select Case TxtModFlg.text
+    Select Case TxtModFlg.Text
 
         Case "N"
             clear_all Me
-            Me.TxtModFlg.text = "R"
+            Me.TxtModFlg.Text = "R"
             XPBtnMove_Click (1)
 
         Case "E"
-            rs.Find "NoteID='" & val(XPTxtID.text) & "'", , adSearchForward, adBookmarkFirst
+            rs.Find "NoteID='" & val(XPTxtID.Text) & "'", , adSearchForward, adBookmarkFirst
 
             If rs.EOF Or rs.BOF Then
-                Me.TxtModFlg.text = "R"
+                Me.TxtModFlg.Text = "R"
                 Exit Sub
             End If
 
             Retrive
-            Me.TxtModFlg.text = "R"
+            Me.TxtModFlg.Text = "R"
     End Select
 
     Exit Sub
@@ -5196,7 +5205,7 @@ Private Sub Del_Trans()
     Dim DblDif As Double
     On Error GoTo ErrTrap
 
-    If XPTxtID.text <> "" Then
+    If XPTxtID.Text <> "" Then
 
         '--------------------------------------------------------------------------------
         If Me.CboDrawingType.ListIndex = 1 Then
@@ -5204,7 +5213,7 @@ Private Sub Del_Trans()
             'ÌÃ» „·«ÕŸ… «‰ «·„” Œœ„ „„ﬂ‰ «‰ ÌﬁÊ„ » ⁄œÌ· «·ﬁÌ„…
             '«· Ï  „  ÕÊÌ·Â« ≈·Ï «·Œ“‰… ÊÌ÷⁄ ﬁÌ„… «ﬁ·
             ' ÊÂ‰« ÌÃ» «· «ﬂœ „‰ «‰ —’Ìœ «·Œ“‰… Ì”„Õ
-            DblDif = val(XPTxtVal.text)
+            DblDif = val(XPTxtVal.Text)
 
             If DblDif > 0 Then
                 If CheckBoxAccount(val(Me.DcboBoxTo.BoundText), DblDif, Me.XPDtbTrans.value, False) = False Then
@@ -5222,18 +5231,18 @@ Private Sub Del_Trans()
 
         '--------------------------------------------------------------------------------
         Msg = "”Ì „ Õ–› »Ì«‰«  «·⁄„·Ì… —ﬁ„ " & CHR(13)
-        Msg = Msg + (Me.TxtNoteSerial.text) & CHR(13)
+        Msg = Msg + (Me.TxtNoteSerial.Text) & CHR(13)
         Msg = Msg + " Â·  —€» ›Ì Õ–› Â–Â «·»Ì«‰« ø"
 
          If MsgBox(Msg, vbYesNo + vbQuestion + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title) = vbYes Then
             If Not rs.RecordCount < 1 Then
-   Deletepost Me.Name, "Notes", "NoteID", 0, val(dcBranch.BoundText), val(XPTxtID.text), TxtNoteSerial1.text
+   Deletepost Me.Name, "Notes", "NoteID", 0, val(dcBranch.BoundText), val(XPTxtID.Text), TxtNoteSerial1.Text
     
                 CuurentLogdata ("D")
-                   StrSQL = "Delete  marakes_taklefa_temp  where general_des=1 AND (  kedno =" & val(XPTxtID.text) & " or  kedno =" & val(Me.TxtNoteID2.text) & ")"
+                   StrSQL = "Delete  marakes_taklefa_temp  where general_des=1 AND (  kedno =" & val(XPTxtID.Text) & " or  kedno =" & val(Me.TxtNoteID2.Text) & ")"
     Cn.Execute StrSQL, , adExecuteNoRecords
     
-                StrSQL = "Delete From NOTES Where NoteId=" & val(TxtNoteID2.text)
+                StrSQL = "Delete From NOTES Where NoteId=" & val(TxtNoteID2.Text)
                  Cn.Execute StrSQL, , adExecuteNoRecords
                 '----------------------------------------------------------------------
                 rs.delete
@@ -5270,8 +5279,8 @@ ErrTrap:
 End Sub
  
 Function CuurentLogdata(Optional Currentmode As String)
-     LogTextA = "    ‘«‘… " & ScreenNameArabic & CHR(13) & "ﬂÊœ  «·”‰œ " & TxtNoteSerial1.text & CHR(13) & "   «· «—ÌŒ  " & XPDtbTrans & CHR(13) & "   ‰Ê⁄ «·”Õ»   " & CboDrawingType & CHR(13) & "  «·›—⁄    " & dcBranch & CHR(13) & "   «·„»·€   " & XPTxtVal & CHR(13) & "    «·»‰ﬂ «·„ÕÊ· „‰…   " & DCBankTo & CHR(13) & "  «·»‰ﬂ «·„ÕÊ· «·Ì…    " & Dcbank & CHR(13) & "    —ﬁ„ «·‘Ìﬂ   " & TxtChequeNumber & CHR(13) & "  «·„” ›Ìœ    " & txtperson & CHR(13) & "      «·«” Õﬁ«ﬁ  " & DtpChequeDueDate & CHR(13) & "   »‰«¡ ⁄·Ï    " & XPMTxtRemarks
-        LogTexte = "    Screen  " & ScreenNameEnglish & CHR(13) & " Serial ¬No " & TxtNoteSerial1.text & CHR(13) & "   Date  " & XPDtbTrans & CHR(13) & "  Type  " & CboDrawingType & CHR(13) & "  Branch    " & dcBranch & CHR(13) & "   Value   " & XPTxtVal & CHR(13) & "   From Bank " & DCBankTo & CHR(13) & "  To Bank   " & Dcbank & CHR(13) & "  Cheque Numbe  " & TxtChequeNumber & CHR(13) & "  To person     " & txtperson & CHR(13) & "  Cheque Due Date  " & DtpChequeDueDate & CHR(13) & "  Based On   " & XPMTxtRemarks
+     LogTextA = "    ‘«‘… " & ScreenNameArabic & CHR(13) & "ﬂÊœ  «·”‰œ " & TxtNoteSerial1.Text & CHR(13) & "   «· «—ÌŒ  " & XPDtbTrans & CHR(13) & "   ‰Ê⁄ «·”Õ»   " & CboDrawingType & CHR(13) & "  «·›—⁄    " & dcBranch & CHR(13) & "   «·„»·€   " & XPTxtVal & CHR(13) & "    «·»‰ﬂ «·„ÕÊ· „‰…   " & DCBankTo & CHR(13) & "  «·»‰ﬂ «·„ÕÊ· «·Ì…    " & Dcbank & CHR(13) & "    —ﬁ„ «·‘Ìﬂ   " & TxtChequeNumber & CHR(13) & "  «·„” ›Ìœ    " & txtperson & CHR(13) & "      «·«” Õﬁ«ﬁ  " & DtpChequeDueDate & CHR(13) & "   »‰«¡ ⁄·Ï    " & XPMTxtRemarks
+        LogTexte = "    Screen  " & ScreenNameEnglish & CHR(13) & " Serial ¬No " & TxtNoteSerial1.Text & CHR(13) & "   Date  " & XPDtbTrans & CHR(13) & "  Type  " & CboDrawingType & CHR(13) & "  Branch    " & dcBranch & CHR(13) & "   Value   " & XPTxtVal & CHR(13) & "   From Bank " & DCBankTo & CHR(13) & "  To Bank   " & Dcbank & CHR(13) & "  Cheque Numbe  " & TxtChequeNumber & CHR(13) & "  To person     " & txtperson & CHR(13) & "  Cheque Due Date  " & DtpChequeDueDate & CHR(13) & "  Based On   " & XPMTxtRemarks
        If Currentmode <> "D" Then
         AddToLogFile CInt(user_id), 14, Date, Time, LogTextA, LogTexte, Me.Name, Me.TxtModFlg, , , TxtNoteSerial, TxtNoteSerial1
     Else
@@ -5289,7 +5298,7 @@ StrSQL = StrSQL + " dbo.TbLLevels.name , dbo.TbLLevels.namee, dbo.TblUsers.UserI
 StrSQL = StrSQL + " FROM         dbo.ApprovalData left JOIN"
 StrSQL = StrSQL + " dbo.TbLLevels ON dbo.ApprovalData.levelo = dbo.TbLLevels.LevelID INNER JOIN"
 StrSQL = StrSQL + " dbo.TblUsers ON dbo.ApprovalData.EmpID = dbo.TblUsers.UserID"
-StrSQL = StrSQL + " WHERE     (dbo.ApprovalData.Transaction_ID = " & val(Me.XPTxtID.text) & ") AND (dbo.ApprovalData.ScreenName = N'" & Me.Name & "')"
+StrSQL = StrSQL + " WHERE     (dbo.ApprovalData.Transaction_ID = " & val(Me.XPTxtID.Text) & ") AND (dbo.ApprovalData.ScreenName = N'" & Me.Name & "')"
 StrSQL = StrSQL + " ORDER BY dbo.ApprovalData.levelorder"
 
     RsDetails.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
@@ -5316,9 +5325,9 @@ End If
         
        Grid2.TextMatrix(Num, Grid2.ColIndex("Currcursor")) = IIf(IsNull(RsDetails("Currcursor")), "", RsDetails("Currcursor"))
     If Grid2.TextMatrix(Num, Grid2.ColIndex("Currcursor")) = "1" Then
-   Grid2.Cell(flexcpBackColor, Num, 1, Num, 7) = &HFFFFC0
+   Grid2.cell(flexcpBackColor, Num, 1, Num, 7) = &HFFFFC0
    Else
-    Grid2.Cell(flexcpBackColor, Num, 1, Num, 7) = vbWhite
+    Grid2.cell(flexcpBackColor, Num, 1, Num, 7) = vbWhite
     End If
     
         Grid2.TextMatrix(Num, Grid2.ColIndex("Approved")) = IIf(IsNull(RsDetails("ApprovDate")), "", flexChecked)
@@ -5369,14 +5378,14 @@ Private Sub Form_KeyDown(KeyCode As Integer, _
     On Error GoTo ErrTrap
 
     If KeyCode = vbKeyReturn Then
-        If Me.TxtModFlg.text = "R" Then
+        If Me.TxtModFlg.Text = "R" Then
             Cmd_Click (0)
         Else
             Sendkeys "{TAB}"
         End If
     End If
 
-    If Me.TxtModFlg.text = "R" Then
+    If Me.TxtModFlg.Text = "R" Then
         If KeyCode = vbKeyDown Or KeyCode = vbKeyEnd Then
             XPBtnMove_Click (2)
         ElseIf KeyCode = vbKeyUp Or KeyCode = vbKeyHome Then
@@ -5529,9 +5538,9 @@ Private Sub Form_QueryUnload(Cancel As Integer, _
     Dim StrMSG As String
     On Error GoTo ErrTrap
 
-    If Me.TxtModFlg.text <> "R" Then
+    If Me.TxtModFlg.Text <> "R" Then
 
-        Select Case Me.TxtModFlg.text
+        Select Case Me.TxtModFlg.Text
 
             Case "N"
     
@@ -5597,35 +5606,35 @@ End Sub
 
 Private Sub XPDtbTrans_Change()
 
-    If Trim(TxtNoteSerial1.text) <> "" Then
-        oldtxtNoteSerial1.text = TxtNoteSerial1.text
+    If Trim(TxtNoteSerial1.Text) <> "" Then
+        oldtxtNoteSerial1.Text = TxtNoteSerial1.Text
     End If
 
-    TxtNoteSerial.text = ""
-    TxtNoteSerial1.text = ""
+    TxtNoteSerial.Text = ""
+    TxtNoteSerial1.Text = ""
     
-        TxtNoteSerial2.text = ""
+        TxtNoteSerial2.Text = ""
      
     
 End Sub
 
 Private Sub XPMTxtRemarks1_Change()
 
-    XPMTxtRemarks.text = XPMTxtRemarks1.text
+    XPMTxtRemarks.Text = XPMTxtRemarks1.Text
 End Sub
 
 Private Sub XPTxtVal_Change()
-    Me.Lb_note_value_by_characters.Caption = WriteNo(Format(Me.XPTxtVal.text, "0.00"), 0, True, ".")
-    Me.LblValue.Caption = WriteNo(Format(Me.XPTxtVal.text, "0.00"), 0, True, ".")
+    Me.Lb_note_value_by_characters.Caption = WriteNo(Format(Me.XPTxtVal.Text, "0.00"), 0, True, ".")
+    Me.LblValue.Caption = WriteNo(Format(Me.XPTxtVal.Text, "0.00"), 0, True, ".")
 End Sub
 
 Private Sub XPTxtVal_KeyPress(KeyAscii As Integer)
-    KeyAscii = KeyAscii_Num(KeyAscii, XPTxtVal.text)
+    KeyAscii = KeyAscii_Num(KeyAscii, XPTxtVal.Text)
 End Sub
 
 Private Sub GetBoxData()
 
-    Me.LblBoxName = Me.DcboBox.text
+    Me.LblBoxName = Me.DcboBox.Text
     Me.LblBoxAccount.Caption = get_balanceFromGl(ModAccounts.GetMyAccountCode("TblBoxesData", "BoxID", val(Me.DcboBox.BoundText)))
 
     'Me.LblBoxName = Me.DcboBox.text
@@ -5635,7 +5644,7 @@ End Sub
 Private Sub WriteDev()
 
     '
-    If Me.TxtModFlg.text = "N" Or Me.TxtModFlg.text = "E" Then
+    If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
         If Me.CboDrawingType.ListIndex = 0 Then
             '”Õ» „‰ «·Œ“‰…
  
@@ -5658,7 +5667,7 @@ Private Sub WriteDev()
             Me.DcboDebitSide.BoundText = DCAccounts2.BoundText
             Me.DcboCreditSide.BoundText = DCAccounts1.BoundText
             Me.DcboDebitSide1.BoundText = getBranchCurrentAccount(val(Dcbranch2.BoundText))
-            Me.DcboCreditSide1.BoundText = getBranchCurrentAccount(val(dcBranch1.BoundText))
+            Me.DcboCreditSide1.BoundText = getBranchCurrentAccount(val(DcBranch1.BoundText))
          
             Me.DcboBox.BoundText = ""
             Me.DcboBoxTo.BoundText = ""

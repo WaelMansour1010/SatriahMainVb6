@@ -16,6 +16,15 @@ Begin VB.Form FrmAssbliedInterval
    RightToLeft     =   -1  'True
    ScaleHeight     =   8160
    ScaleWidth      =   9855
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic EleMain 
       Height          =   8160
       Left            =   0

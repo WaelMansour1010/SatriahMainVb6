@@ -13,6 +13,15 @@ Begin VB.Form CARD_VALUE
    ScaleHeight     =   1335
    ScaleWidth      =   3240
    StartUpPosition =   2  'CenterScreen
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CommandButton Command1 
       Caption         =   "ÍÝÙ"
       Height          =   375

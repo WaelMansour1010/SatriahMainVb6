@@ -3,7 +3,7 @@ Object = "{0AFE7BE0-11B7-4A3E-978D-D4501E9A57FE}#1.0#0"; "c1sizer.ocx"
 Object = "{BEEECC20-4D5F-4F8B-BFDC-5D9B6FBDE09D}#1.0#0"; "vsflex8.ocx"
 Object = "{F0D2F211-CCB0-11D0-A316-00AA00688B10}#1.0#0"; "MSDATLST.OCX"
 Object = "{FE5DCFAD-BC1D-11D2-94CF-004005455FAA}#1.4#0"; "ImpulseButton.ocx"
-Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "Comdlg32.ocx"
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
 Object = "{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}#12.0#0"; "SuiteCtrls.ocx"
 Object = "{49003D3A-66CD-11D7-A449-E937BE2D9041}#1.0#0"; "ALLBUTTONS.ocx"
@@ -14,6 +14,15 @@ Begin VB.Form FrmAnalysItems
    ClientLeft      =   60
    ClientTop       =   450
    ClientWidth     =   21765
+   BeginProperty Font 
+      Name            =   "Arial"
+      Size            =   8.25
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Icon            =   "FrmAnalysItems.frx":0000
    LinkTopic       =   "Form2"
    MDIChild        =   -1  'True
@@ -239,7 +248,7 @@ Begin VB.Form FrmAnalysItems
             _ExtentY        =   609
             _Version        =   393216
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -251,7 +260,7 @@ Begin VB.Form FrmAnalysItems
             CalendarTitleBackColor=   10383715
             CheckBox        =   -1  'True
             CustomFormat    =   "yyyy/M/d"
-            Format          =   223084547
+            Format          =   212729859
             CurrentDate     =   37140
          End
          Begin MSComCtl2.DTPicker FromDate 
@@ -265,7 +274,7 @@ Begin VB.Form FrmAnalysItems
             _ExtentY        =   609
             _Version        =   393216
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -277,7 +286,7 @@ Begin VB.Form FrmAnalysItems
             CalendarTitleBackColor=   10383715
             CheckBox        =   -1  'True
             CustomFormat    =   "yyyy/M/d"
-            Format          =   223084547
+            Format          =   212729859
             CurrentDate     =   37140
          End
          Begin VSFlex8Ctl.VSFlexGrid grd 
@@ -293,7 +302,7 @@ Begin VB.Form FrmAnalysItems
             BorderStyle     =   1
             Enabled         =   -1  'True
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -391,7 +400,7 @@ Begin VB.Form FrmAnalysItems
             BorderStyle     =   1
             Enabled         =   -1  'True
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -487,7 +496,7 @@ Begin VB.Form FrmAnalysItems
             _ExtentY        =   609
             _Version        =   393216
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -499,7 +508,7 @@ Begin VB.Form FrmAnalysItems
             CalendarTitleBackColor=   10383715
             CheckBox        =   -1  'True
             CustomFormat    =   "yyyy/M/d"
-            Format          =   223084547
+            Format          =   212729859
             CurrentDate     =   37140
          End
          Begin MSComCtl2.DTPicker FromDate10 
@@ -513,7 +522,7 @@ Begin VB.Form FrmAnalysItems
             _ExtentY        =   609
             _Version        =   393216
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -525,7 +534,7 @@ Begin VB.Form FrmAnalysItems
             CalendarTitleBackColor=   10383715
             CheckBox        =   -1  'True
             CustomFormat    =   "yyyy/M/d"
-            Format          =   223084547
+            Format          =   212729859
             CurrentDate     =   37140
          End
          Begin ALLButtonS.ALLButton btnNew 
@@ -541,7 +550,7 @@ Begin VB.Form FrmAnalysItems
             TX              =   "Excel"
             ENAB            =   -1  'True
             BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -581,7 +590,7 @@ Begin VB.Form FrmAnalysItems
             BorderStyle     =   1
             Enabled         =   -1  'True
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -676,7 +685,7 @@ Begin VB.Form FrmAnalysItems
             _cx             =   1931
             _cy             =   873
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -733,7 +742,7 @@ Begin VB.Form FrmAnalysItems
             Top             =   780
             Width           =   2625
             _ExtentX        =   4630
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             Text            =   ""
          End
@@ -745,7 +754,7 @@ Begin VB.Form FrmAnalysItems
             Top             =   750
             Width           =   2115
             _ExtentX        =   3731
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             Text            =   ""
          End
@@ -985,7 +994,7 @@ Begin VB.Form FrmAnalysItems
                _ExtentY        =   582
                _Version        =   393216
                CheckBox        =   -1  'True
-               Format          =   223084547
+               Format          =   164298755
                CurrentDate     =   41640
             End
             Begin MSComCtl2.DTPicker DTPicker2 
@@ -998,7 +1007,7 @@ Begin VB.Form FrmAnalysItems
                _ExtentY        =   582
                _Version        =   393216
                CheckBox        =   -1  'True
-               Format          =   223084547
+               Format          =   164298755
                CurrentDate     =   41640
             End
             Begin VB.Label lbl 
@@ -1064,8 +1073,9 @@ Begin VB.Form FrmAnalysItems
             ButtonPositionImage=   1
             Caption         =   "Œ—ÊÃ"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -1096,8 +1106,9 @@ Begin VB.Form FrmAnalysItems
             ButtonPositionImage=   1
             Caption         =   "⁄—÷ «· ﬁ—Ì—"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -1124,7 +1135,7 @@ Begin VB.Form FrmAnalysItems
             Top             =   1440
             Width           =   4560
             _ExtentX        =   8043
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             ListField       =   "7"
             Text            =   ""
@@ -1137,7 +1148,7 @@ Begin VB.Form FrmAnalysItems
             Top             =   1080
             Width           =   4560
             _ExtentX        =   8043
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             ListField       =   "7"
             Text            =   ""
@@ -1151,7 +1162,7 @@ Begin VB.Form FrmAnalysItems
             Top             =   720
             Width           =   4560
             _ExtentX        =   8043
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             BackColor       =   16777215
             ListField       =   "account_name"
@@ -1159,7 +1170,7 @@ Begin VB.Form FrmAnalysItems
             Text            =   ""
             RightToLeft     =   -1  'True
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -1476,7 +1487,7 @@ Begin VB.Form FrmAnalysItems
                _ExtentY        =   582
                _Version        =   393216
                CheckBox        =   -1  'True
-               Format          =   223150083
+               Format          =   164364291
                CurrentDate     =   41640
             End
             Begin MSComCtl2.DTPicker DtpDateTo2 
@@ -1489,7 +1500,7 @@ Begin VB.Form FrmAnalysItems
                _ExtentY        =   582
                _Version        =   393216
                CheckBox        =   -1  'True
-               Format          =   220266499
+               Format          =   164364291
                CurrentDate     =   41640
             End
             Begin MSComCtl2.DTPicker XPDtbTransTimeFrom 
@@ -1502,7 +1513,7 @@ Begin VB.Form FrmAnalysItems
                _ExtentY        =   503
                _Version        =   393216
                CheckBox        =   -1  'True
-               Format          =   220266498
+               Format          =   164364290
                CurrentDate     =   38784
             End
             Begin MSComCtl2.DTPicker XPDtbTransTimeTo 
@@ -1515,7 +1526,7 @@ Begin VB.Form FrmAnalysItems
                _ExtentY        =   503
                _Version        =   393216
                CheckBox        =   -1  'True
-               Format          =   220266498
+               Format          =   164364290
                CurrentDate     =   38784
             End
             Begin VB.Label lbl 
@@ -1618,7 +1629,7 @@ Begin VB.Form FrmAnalysItems
             Top             =   2520
             Width           =   4560
             _ExtentX        =   8043
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             ListField       =   "7"
             Text            =   ""
@@ -1636,8 +1647,9 @@ Begin VB.Form FrmAnalysItems
             ButtonPositionImage=   1
             Caption         =   "Œ—ÊÃ"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -1668,8 +1680,9 @@ Begin VB.Form FrmAnalysItems
             ButtonPositionImage=   1
             Caption         =   "⁄—÷ «· ﬁ—Ì—"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -1696,7 +1709,7 @@ Begin VB.Form FrmAnalysItems
             Top             =   2160
             Width           =   4560
             _ExtentX        =   8043
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             ListField       =   "7"
             Text            =   ""
@@ -1709,7 +1722,7 @@ Begin VB.Form FrmAnalysItems
             Top             =   2880
             Width           =   3525
             _ExtentX        =   6218
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             ListField       =   "6"
             BoundColumn     =   ""
@@ -1723,7 +1736,7 @@ Begin VB.Form FrmAnalysItems
             Top             =   1800
             Width           =   4560
             _ExtentX        =   8043
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             ListField       =   "7"
             Text            =   ""
@@ -1737,7 +1750,7 @@ Begin VB.Form FrmAnalysItems
             Top             =   1440
             Width           =   4560
             _ExtentX        =   8043
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             BackColor       =   16777215
             ListField       =   "account_name"
@@ -1745,7 +1758,7 @@ Begin VB.Form FrmAnalysItems
             Text            =   ""
             RightToLeft     =   -1  'True
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -1940,7 +1953,7 @@ Begin VB.Form FrmAnalysItems
                _ExtentY        =   582
                _Version        =   393216
                CheckBox        =   -1  'True
-               Format          =   220200963
+               Format          =   168099843
                CurrentDate     =   41640
             End
             Begin MSComCtl2.DTPicker DtpDateTo 
@@ -1953,7 +1966,7 @@ Begin VB.Form FrmAnalysItems
                _ExtentY        =   582
                _Version        =   393216
                CheckBox        =   -1  'True
-               Format          =   220200963
+               Format          =   168099843
                CurrentDate     =   41640
             End
             Begin VB.Label lbl 
@@ -2288,7 +2301,7 @@ Begin VB.Form FrmAnalysItems
             Top             =   2580
             Width           =   3000
             _ExtentX        =   5292
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             Text            =   ""
             RightToLeft     =   -1  'True
@@ -2300,7 +2313,7 @@ Begin VB.Form FrmAnalysItems
             Top             =   1800
             Width           =   4560
             _ExtentX        =   8043
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             ListField       =   "7"
             Text            =   ""
@@ -2313,7 +2326,7 @@ Begin VB.Form FrmAnalysItems
             Top             =   3720
             Width           =   4560
             _ExtentX        =   8043
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             Text            =   ""
             RightToLeft     =   -1  'True
@@ -2325,7 +2338,7 @@ Begin VB.Form FrmAnalysItems
             Top             =   4080
             Width           =   4560
             _ExtentX        =   8043
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             Text            =   ""
             RightToLeft     =   -1  'True
@@ -2337,7 +2350,7 @@ Begin VB.Form FrmAnalysItems
             Top             =   2160
             Width           =   4560
             _ExtentX        =   8043
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             ListField       =   "7"
             Text            =   ""
@@ -2350,7 +2363,7 @@ Begin VB.Form FrmAnalysItems
             Top             =   4440
             Width           =   3525
             _ExtentX        =   6218
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             ListField       =   "6"
             BoundColumn     =   ""
@@ -2369,8 +2382,9 @@ Begin VB.Form FrmAnalysItems
             ButtonPositionImage=   1
             Caption         =   "Œ—ÊÃ"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2401,8 +2415,9 @@ Begin VB.Form FrmAnalysItems
             ButtonPositionImage=   1
             Caption         =   "⁄—÷ «· ﬁ—Ì—"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2591,7 +2606,7 @@ Begin VB.Form FrmAnalysItems
          _cx             =   38232
          _cy             =   21431
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -2706,15 +2721,6 @@ Begin VB.Form FrmAnalysItems
          End
          Begin VB.TextBox StrCusID 
             Alignment       =   1  'Right Justify
-            BeginProperty Font 
-               Name            =   "Arial"
-               Size            =   8.25
-               Charset         =   178
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
             Height          =   315
             Left            =   4440
             RightToLeft     =   -1  'True
@@ -2725,15 +2731,6 @@ Begin VB.Form FrmAnalysItems
          End
          Begin VB.TextBox CurrenrEmployeeIDs 
             Alignment       =   1  'Right Justify
-            BeginProperty Font 
-               Name            =   "Arial"
-               Size            =   8.25
-               Charset         =   178
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
             Height          =   315
             Left            =   4440
             RightToLeft     =   -1  'True
@@ -2745,15 +2742,6 @@ Begin VB.Form FrmAnalysItems
          Begin VB.Frame Frame12 
             BackColor       =   &H00FFFFFF&
             BorderStyle     =   0  'None
-            BeginProperty Font 
-               Name            =   "Arial"
-               Size            =   8.25
-               Charset         =   178
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
             Height          =   660
             Left            =   30
             RightToLeft     =   -1  'True
@@ -2823,7 +2811,7 @@ Begin VB.Form FrmAnalysItems
             _ExtentY        =   609
             _Version        =   393216
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2834,7 +2822,7 @@ Begin VB.Form FrmAnalysItems
             CalendarBackColor=   12648447
             CalendarTitleBackColor=   10383715
             CustomFormat    =   "yyyy/M/d"
-            Format          =   220135427
+            Format          =   211943427
             CurrentDate     =   37140
          End
          Begin ImpulseButton.ISButton CmdPrint 
@@ -2849,8 +2837,9 @@ Begin VB.Form FrmAnalysItems
             ButtonPositionImage=   1
             Caption         =   "ÿ»«⁄…"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2871,13 +2860,13 @@ Begin VB.Form FrmAnalysItems
             Visible         =   0   'False
             Width           =   7545
             _ExtentX        =   13309
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             BackColor       =   16777215
             Text            =   ""
             RightToLeft     =   -1  'True
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2893,13 +2882,13 @@ Begin VB.Form FrmAnalysItems
             Top             =   2370
             Width           =   5655
             _ExtentX        =   9975
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             BackColor       =   16777215
             Text            =   ""
             RightToLeft     =   -1  'True
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2920,8 +2909,9 @@ Begin VB.Form FrmAnalysItems
             ButtonPositionImage=   1
             Caption         =   "ÿ»«⁄…  Õ·Ì·Ì"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2945,8 +2935,9 @@ Begin VB.Form FrmAnalysItems
             ButtonPositionImage=   1
             Caption         =   "ÿ»«⁄… «Ã„«·Ì"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -3016,7 +3007,7 @@ Begin VB.Form FrmAnalysItems
             _ExtentY        =   609
             _Version        =   393216
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -3028,7 +3019,7 @@ Begin VB.Form FrmAnalysItems
             CalendarTitleBackColor=   10383715
             CheckBox        =   -1  'True
             CustomFormat    =   "yyyy/M/d"
-            Format          =   220135427
+            Format          =   211943427
             CurrentDate     =   37140
          End
          Begin MSComCtl2.DTPicker DTPickerAccFrom 
@@ -3043,7 +3034,7 @@ Begin VB.Form FrmAnalysItems
             _ExtentY        =   609
             _Version        =   393216
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -3055,7 +3046,7 @@ Begin VB.Form FrmAnalysItems
             CalendarTitleBackColor=   10383715
             CheckBox        =   -1  'True
             CustomFormat    =   "yyyy/M/d"
-            Format          =   220069891
+            Format          =   211943427
             CurrentDate     =   37140
          End
          Begin VSFlex8Ctl.VSFlexGrid grdAging 
@@ -3071,7 +3062,7 @@ Begin VB.Form FrmAnalysItems
             BorderStyle     =   1
             Enabled         =   -1  'True
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -3169,7 +3160,7 @@ Begin VB.Form FrmAnalysItems
             BorderStyle     =   1
             Enabled         =   -1  'True
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -3267,8 +3258,9 @@ Begin VB.Form FrmAnalysItems
             ButtonPositionImage=   1
             Caption         =   "Œ—ÊÃ"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -3285,7 +3277,7 @@ Begin VB.Form FrmAnalysItems
             Alignment       =   1  'Right Justify
             BackStyle       =   0  'Transparent
             BeginProperty Font 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   24
                Charset         =   178
                Weight          =   700
@@ -5019,9 +5011,9 @@ If val(DCboItemsName2.BoundText) <> 0 Then
 End If
         
     If CheckAllCustomer.value = vbChecked Then
-         If StrCusID.text <> "" Then
+         If StrCusID.Text <> "" Then
            ' MySQL = MySQL & " and TblCustemers.CusID in (" & (StrCusID.Text) & ")"
-            MySQL = MySQL & " and Account_Code  In ( Select tblitems.ItemID from tblitems Where  tblitems.ItemID  in (" & (StrCusID.text) & ") )"
+            MySQL = MySQL & " and Account_Code  In ( Select tblitems.ItemID from tblitems Where  tblitems.ItemID  in (" & (StrCusID.Text) & ") )"
         End If
     End If
         
@@ -5161,9 +5153,9 @@ If val(DCboItemsName2.BoundText) <> 0 Then
 End If
 
     If CheckAllCustomer.value = vbChecked Then
-         If StrCusID.text <> "" Then
+         If StrCusID.Text <> "" Then
            ' MySQL = MySQL & " and TblCustemers.CusID in (" & (StrCusID.Text) & ")"
-            MySQL = MySQL & " and Account_Code  In ( Select tblitems.ItemID from tblitems Where  tblitems.ItemID  in (" & (StrCusID.text) & ") )"
+            MySQL = MySQL & " and Account_Code  In ( Select tblitems.ItemID from tblitems Where  tblitems.ItemID  in (" & (StrCusID.Text) & ") )"
         End If
     End If
 
@@ -5589,13 +5581,13 @@ End If
     End If
     
        
-    If Trim(DcBranches(2).text) <> "" Then
+    If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     Transactions.BranchId In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & val(DcBranches(2).BoundText) & "))"
   End If
   
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and     Transactions.BranchId = " & val(DcBranches(3).BoundText)
         
         
@@ -5633,7 +5625,7 @@ End If
     End If
     
     
-        If Trim(DcBranches(2).text) <> "" Then
+        If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     notes.branch_no In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -5641,7 +5633,7 @@ End If
        
     
             
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and       notes.branch_no= " & val(DcBranches(3).BoundText)
         
         
@@ -5681,7 +5673,7 @@ End If
        s = s & " and dbo.notes_all.NoteDate  <=" & SQLDate(ToDate, True) & " "
     End If
     
-                If Trim(DcBranches(2).text) <> "" Then
+                If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     notes_all.branch_no In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -5689,7 +5681,7 @@ End If
        
     
             
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and       notes_all.branch_no= " & val(DcBranches(3).BoundText)
         
         
@@ -5722,13 +5714,13 @@ End If
     If Not IsNull(ToDate.value) Then
        s = s & " and dbo.project_billl.bill_date <=" & SQLDate(ToDate, True) & " "
     End If
-       If Trim(DcBranches(2).text) <> "" Then
+       If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     project_billl.branch_no In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
   End If
         
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and     project_billl.branch_no = " & val(DcBranches(3).BoundText)
         
         
@@ -5764,7 +5756,7 @@ End If
        s = s & " and dbo.tblEInvoice.IssueDate <=" & SQLDate(ToDate, True) & " "
     End If
     
-      If Trim(DcBranches(2).text) <> "" Then
+      If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     tblEInvoice.branch_id In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -5773,7 +5765,7 @@ End If
   
   
         
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and       tblEInvoice.branch_id = " & val(DcBranches(3).BoundText)
         
         
@@ -5849,14 +5841,14 @@ If SystemOptions.CanUploadZakatOpt Then
        s = s & " and dbo.Transactions.Transaction_Date <=" & SQLDate(ToDate, True) & " "
     End If
        
-    If Trim(DcBranches(2).text) <> "" Then
+    If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     Transactions.BranchId In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
   End If
   
          
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and     Transactions.BranchId = " & val(DcBranches(3).BoundText)
         
         
@@ -5890,14 +5882,14 @@ If SystemOptions.CanUploadZakatOpt Then
     If Not IsNull(ToDate.value) Then
        s = s & " and dbo.project_billl.bill_date <=" & SQLDate(ToDate, True) & " "
     End If
-       If Trim(DcBranches(2).text) <> "" Then
+       If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     project_billl.branch_no In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
   End If
   
   
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and     project_billl.branch_no= " & val(DcBranches(3).BoundText)
         
         
@@ -5935,7 +5927,7 @@ s = s & "   and isnull( notes_all.zatcaStatus,0)=1   "
     End If
     s = s & "   and isnull( notes_all.zatcaStatus,0)=1   "
     
-If Trim(DcBranches(2).text) <> "" Then
+If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     notes_all.branch_no In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -5943,7 +5935,7 @@ If Trim(DcBranches(2).text) <> "" Then
        
     
             
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and       notes_all.branch_no= " & val(DcBranches(3).BoundText)
         
         
@@ -5980,7 +5972,7 @@ s = s & "   and isnull( Notes.zatcaStatus,0)=1   "
     End If
     s = s & "   and isnull( Notes.zatcaStatus,0)=1   "
     
-                If Trim(DcBranches(2).text) <> "" Then
+                If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     notes.branch_no In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -5988,7 +5980,7 @@ s = s & "   and isnull( Notes.zatcaStatus,0)=1   "
        
     
             
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and       notes.branch_no= " & val(DcBranches(3).BoundText)
         
         
@@ -6024,7 +6016,7 @@ s = s & "   and isnull( tblEInvoice.zatcaStatus,0)=1   "
        s = s & " and dbo.tblEInvoice.IssueDate  <=" & SQLDate(ToDate, True) & " "
     End If
     
-      If Trim(DcBranches(2).text) <> "" Then
+      If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     tblEInvoice.branch_id In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -6033,7 +6025,7 @@ s = s & "   and isnull( tblEInvoice.zatcaStatus,0)=1   "
   
   
         
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and       tblEInvoice.branch_id = " & val(DcBranches(3).BoundText)
         
         
@@ -6178,7 +6170,7 @@ Label20.Caption = mCount3 + mCount4 + mCount6 + mCount7 + mCount8 + mCount9 + mC
        s = s & " and dbo.Transactions.Transaction_Date <=" & SQLDate(ToDate, True) & " "
     End If
        
-    If Trim(DcBranches(2).text) <> "" Then
+    If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     Transactions.BranchId In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -6186,7 +6178,7 @@ Label20.Caption = mCount3 + mCount4 + mCount6 + mCount7 + mCount8 + mCount9 + mC
   
     
   
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and     Transactions.BranchId = " & val(DcBranches(3).BoundText)
         
         
@@ -6221,7 +6213,7 @@ Label20.Caption = mCount3 + mCount4 + mCount6 + mCount7 + mCount8 + mCount9 + mC
        s = s & " and dbo.project_billl.bill_date <=" & SQLDate(ToDate, True) & " "
     End If
     
-       If Trim(DcBranches(2).text) <> "" Then
+       If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     project_billl.branch_no In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -6229,7 +6221,7 @@ Label20.Caption = mCount3 + mCount4 + mCount6 + mCount7 + mCount8 + mCount9 + mC
   
         
      
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and     project_billl.branch_no= " & val(DcBranches(3).BoundText)
         
         
@@ -6265,7 +6257,7 @@ s = s & "   and isnull( notes_all.zatcaStatus,0)=0   "
        s = s & " and dbo.notes_all.NoteDate  <=" & SQLDate(ToDate, True) & " "
     End If
     
-                If Trim(DcBranches(2).text) <> "" Then
+                If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     notes_all.branch_no In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -6273,7 +6265,7 @@ s = s & "   and isnull( notes_all.zatcaStatus,0)=0   "
        
     
             
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and       notes_all.branch_no= " & val(DcBranches(3).BoundText)
         
         
@@ -6308,7 +6300,7 @@ s = s & "   and isnull( Notes.zatcaStatus,0)=0   "
        s = s & " and dbo.Notes.NoteDate  <=" & SQLDate(ToDate, True) & " "
     End If
     
-                If Trim(DcBranches(2).text) <> "" Then
+                If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     notes.branch_no In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -6316,7 +6308,7 @@ s = s & "   and isnull( Notes.zatcaStatus,0)=0   "
        
     
             
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and       notes.branch_no= " & val(DcBranches(3).BoundText)
         
         
@@ -6340,7 +6332,7 @@ s = s & "   and isnull( Notes.zatcaStatus,0)=0   "
  
   s = s & "  Where 1 = 1"
 s = s & "   and isnull( tblEInvoice.zatcaStatus,0)=0   "
-  If Trim(DcBranches(2).text) <> "" Then
+  If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     tblEInvoice.branch_id In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -6349,7 +6341,7 @@ s = s & "   and isnull( tblEInvoice.zatcaStatus,0)=0   "
   
   
         
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and       tblEInvoice.branch_id = " & val(DcBranches(3).BoundText)
         
         
@@ -6497,7 +6489,7 @@ Dim mCount12 As Integer
        s = s & " and dbo.Transactions.Transaction_Date <=" & SQLDate(ToDate, True) & " "
     End If
        
-    If Trim(DcBranches(2).text) <> "" Then
+    If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     Transactions.BranchId In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -6505,7 +6497,7 @@ Dim mCount12 As Integer
   
   
        
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and      Transactions.BranchId= " & val(DcBranches(3).BoundText)
         
         
@@ -6539,14 +6531,14 @@ Dim mCount12 As Integer
     If Not IsNull(ToDate.value) Then
        s = s & " and dbo.project_billl.bill_date <=" & SQLDate(ToDate, True) & " "
     End If
-       If Trim(DcBranches(2).text) <> "" Then
+       If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     project_billl.branch_no In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
   End If
   
         
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and      project_billl.branch_no= " & val(DcBranches(3).BoundText)
         
         
@@ -6583,7 +6575,7 @@ s = s & "   and isnull( Notes.zatcaStatus,0)=1   and warrningmessage<>''   "
        s = s & " and dbo.Notes.NoteDate  <=" & SQLDate(ToDate, True) & " "
     End If
     
-                If Trim(DcBranches(2).text) <> "" Then
+                If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     notes.branch_no In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -6591,7 +6583,7 @@ s = s & "   and isnull( Notes.zatcaStatus,0)=1   and warrningmessage<>''   "
        
     
             
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and       notes.branch_no= " & val(DcBranches(3).BoundText)
         
         
@@ -6625,7 +6617,7 @@ s = s & "   and isnull( notes_all.zatcaStatus,0)=1   and warrningmessage<>''   "
     If Not IsNull(ToDate.value) Then
        s = s & " and dbo.notes_all.NoteDate  <=" & SQLDate(ToDate, True) & " "
     End If
-                If Trim(DcBranches(2).text) <> "" Then
+                If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     notes_all.branch_no In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -6633,7 +6625,7 @@ s = s & "   and isnull( notes_all.zatcaStatus,0)=1   and warrningmessage<>''   "
        
     
             
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and       notes_all.branch_no= " & val(DcBranches(3).BoundText)
         
         
@@ -6667,7 +6659,7 @@ s = s & "   and isnull( tblEInvoice.zatcaStatus,0)=1   and warrningmessage<>''  
     If Not IsNull(ToDate.value) Then
        s = s & " and dbo.tblEInvoice.IssueDate  <=" & SQLDate(ToDate, True) & " "
     End If
-      If Trim(DcBranches(2).text) <> "" Then
+      If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     tblEInvoice.branch_id In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -6676,7 +6668,7 @@ s = s & "   and isnull( tblEInvoice.zatcaStatus,0)=1   and warrningmessage<>''  
   
   
         
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and       tblEInvoice.branch_id = " & val(DcBranches(3).BoundText)
         
         
@@ -6785,10 +6777,10 @@ Public Function GetResults() As Boolean
     If Not IsNull(FromDate.value) Then s = s & " AND Transactions.Transaction_Date >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND Transactions.Transaction_Date <= " & SQLDate(ToDate, True)
 
-    If Trim(DcBranches(2).text) <> "" Then
+    If Trim(DcBranches(2).Text) <> "" Then
         s = s & " AND Transactions.BranchId IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
     End If
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
         s = s & " AND Transactions.BranchId = " & val(DcBranches(3).BoundText)
     End If
 
@@ -6800,10 +6792,10 @@ Public Function GetResults() As Boolean
     s = "SELECT COUNT(NoteID) AS noofinvoices FROM dbo.Notes WHERE (NoteType = 9083 OR NoteType = 9082)"
     If Not IsNull(FromDate.value) Then s = s & " AND NoteDate >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND NoteDate <= " & SQLDate(ToDate, True)
-    If Trim(DcBranches(2).text) <> "" Then
+    If Trim(DcBranches(2).Text) <> "" Then
         s = s & " AND Notes.branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
     End If
-    If Trim(DcBranches(3).text) <> "" Then s = s & " AND Notes.branch_no = " & val(DcBranches(3).BoundText)
+    If Trim(DcBranches(3).Text) <> "" Then s = s & " AND Notes.branch_no = " & val(DcBranches(3).BoundText)
 
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
     If rsDummy.RecordCount > 0 Then mCount5 = val(IIf(IsNull(rsDummy("noofinvoices").value), 0, rsDummy("noofinvoices").value))
@@ -6813,10 +6805,10 @@ Public Function GetResults() As Boolean
     s = "SELECT COUNT(NoteID) AS noofinvoices FROM dbo.notes_all WHERE (NoteType = 85)"
     If Not IsNull(FromDate.value) Then s = s & " AND NoteDate >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND NoteDate <= " & SQLDate(ToDate, True)
-    If Trim(DcBranches(2).text) <> "" Then
+    If Trim(DcBranches(2).Text) <> "" Then
         s = s & " AND notes_all.branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
     End If
-    If Trim(DcBranches(3).text) <> "" Then s = s & " AND notes_all.branch_no = " & val(DcBranches(3).BoundText)
+    If Trim(DcBranches(3).Text) <> "" Then s = s & " AND notes_all.branch_no = " & val(DcBranches(3).BoundText)
 
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
     If rsDummy.RecordCount > 0 Then mCount7 = val(IIf(IsNull(rsDummy("noofinvoices").value), 0, rsDummy("noofinvoices").value))
@@ -6826,10 +6818,10 @@ Public Function GetResults() As Boolean
     s = "SELECT COUNT(ID) AS noofinvoices FROM dbo.project_billl WHERE bill_type = 0"
     If Not IsNull(FromDate.value) Then s = s & " AND bill_date >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND bill_date <= " & SQLDate(ToDate, True)
-    If Trim(DcBranches(2).text) <> "" Then
+    If Trim(DcBranches(2).Text) <> "" Then
         s = s & " AND project_billl.branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
     End If
-    If Trim(DcBranches(3).text) <> "" Then s = s & " AND project_billl.branch_no = " & val(DcBranches(3).BoundText)
+    If Trim(DcBranches(3).Text) <> "" Then s = s & " AND project_billl.branch_no = " & val(DcBranches(3).BoundText)
 
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
     If rsDummy.RecordCount > 0 Then mCount2 = val(IIf(IsNull(rsDummy("noofinvoices").value), 0, rsDummy("noofinvoices").value))
@@ -6839,10 +6831,10 @@ Public Function GetResults() As Boolean
     s = "SELECT COUNT(InvoiceID) AS noofinvoices FROM dbo.tblEInvoice WHERE 1=1"
     If Not IsNull(FromDate.value) Then s = s & " AND IssueDate >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND IssueDate <= " & SQLDate(ToDate, True)
-    If Trim(DcBranches(2).text) <> "" Then
+    If Trim(DcBranches(2).Text) <> "" Then
         s = s & " AND tblEInvoice.branch_id IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
     End If
-    If Trim(DcBranches(3).text) <> "" Then s = s & " AND tblEInvoice.branch_id = " & val(DcBranches(3).BoundText)
+    If Trim(DcBranches(3).Text) <> "" Then s = s & " AND tblEInvoice.branch_id = " & val(DcBranches(3).BoundText)
 
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
     If rsDummy.RecordCount > 0 Then mCount8 = val(IIf(IsNull(rsDummy("noofinvoices").value), 0, rsDummy("noofinvoices").value))
@@ -6874,11 +6866,11 @@ Public Function GetResults() As Boolean
         If Not IsNull(ToDate.value) Then s = s & " AND d.[Date] <= " & SQLDate(ToDate, True)
         
         ' ›· — «·‰‘«ÿ (ActivityTypeId) ⁄·Ï ÃœÊ· Department
-        If Trim(DcBranches(2).text) <> "" Then
+        If Trim(DcBranches(2).Text) <> "" Then
             s = s & " AND d.DepartmentId IN (SELECT Id FROM dbo.Department WHERE ActivityId = " & val(DcBranches(2).BoundText) & ")"
         End If
         ' ›· — «·›—⁄ «·„»«‘—
-        If Trim(DcBranches(3).text) <> "" Then
+        If Trim(DcBranches(3).Text) <> "" Then
             s = s & " AND d.DepartmentId = " & val(DcBranches(3).BoundText)
         End If
         
@@ -6902,40 +6894,40 @@ Public Function GetResults() As Boolean
     If SystemOptions.ZacatHandW Then s = s & " AND Transactions.Transaction_Type = 854798"
     If Not IsNull(FromDate.value) Then s = s & " AND Transaction_Date >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND Transaction_Date <= " & SQLDate(ToDate, True)
-    If Trim(DcBranches(2).text) <> "" Then s = s & " AND BranchId IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
-    If Trim(DcBranches(3).text) <> "" Then s = s & " AND BranchId = " & val(DcBranches(3).BoundText)
+    If Trim(DcBranches(2).Text) <> "" Then s = s & " AND BranchId IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
+    If Trim(DcBranches(3).Text) <> "" Then s = s & " AND BranchId = " & val(DcBranches(3).BoundText)
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly: If rsDummy.RecordCount > 0 Then mCount3 = val(IIf(IsNull(rsDummy("noofinvoices").value), 0, rsDummy("noofinvoices").value)): rsDummy.Close
 
     ' project_billl
     s = "SELECT COUNT(ID) AS noofinvoices FROM dbo.project_billl WHERE bill_type = 0 AND ISNULL(zatcaStatus,0)=1"
     If Not IsNull(FromDate.value) Then s = s & " AND bill_date >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND bill_date <= " & SQLDate(ToDate, True)
-    If Trim(DcBranches(2).text) <> "" Then s = s & " AND branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
-    If Trim(DcBranches(3).text) <> "" Then s = s & " AND branch_no = " & val(DcBranches(3).BoundText)
+    If Trim(DcBranches(2).Text) <> "" Then s = s & " AND branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
+    If Trim(DcBranches(3).Text) <> "" Then s = s & " AND branch_no = " & val(DcBranches(3).BoundText)
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly: If rsDummy.RecordCount > 0 Then mCount4 = val(IIf(IsNull(rsDummy("noofinvoices").value), 0, rsDummy("noofinvoices").value)): rsDummy.Close
 
     ' Notes (9082/9083)
     s = "SELECT COUNT(NoteID) AS noofinvoices FROM dbo.Notes WHERE (NoteType IN (9082,9083)) AND ISNULL(zatcaStatus,0)=1"
     If Not IsNull(FromDate.value) Then s = s & " AND NoteDate >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND NoteDate <= " & SQLDate(ToDate, True)
-    If Trim(DcBranches(2).text) <> "" Then s = s & " AND branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
-    If Trim(DcBranches(3).text) <> "" Then s = s & " AND branch_no = " & val(DcBranches(3).BoundText)
+    If Trim(DcBranches(2).Text) <> "" Then s = s & " AND branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
+    If Trim(DcBranches(3).Text) <> "" Then s = s & " AND branch_no = " & val(DcBranches(3).BoundText)
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly: If rsDummy.RecordCount > 0 Then mCount6 = val(IIf(IsNull(rsDummy("noofinvoices").value), 0, rsDummy("noofinvoices").value)): rsDummy.Close
 
     ' notes_all (85)
     s = "SELECT COUNT(NoteID) AS noofinvoices FROM dbo.notes_all WHERE NoteType = 85 AND ISNULL(zatcaStatus,0)=1"
     If Not IsNull(FromDate.value) Then s = s & " AND NoteDate >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND NoteDate <= " & SQLDate(ToDate, True)
-    If Trim(DcBranches(2).text) <> "" Then s = s & " AND branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
-    If Trim(DcBranches(3).text) <> "" Then s = s & " AND branch_no = " & val(DcBranches(3).BoundText)
+    If Trim(DcBranches(2).Text) <> "" Then s = s & " AND branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
+    If Trim(DcBranches(3).Text) <> "" Then s = s & " AND branch_no = " & val(DcBranches(3).BoundText)
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly: If rsDummy.RecordCount > 0 Then mCount7 = val(IIf(IsNull(rsDummy("noofinvoices").value), 0, rsDummy("noofinvoices").value)): rsDummy.Close
 
     ' tblEInvoice
     s = "SELECT COUNT(InvoiceID) AS noofinvoices FROM dbo.tblEInvoice WHERE ISNULL(zatcaStatus,0)=1"
     If Not IsNull(FromDate.value) Then s = s & " AND IssueDate >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND IssueDate <= " & SQLDate(ToDate, True)
-    If Trim(DcBranches(2).text) <> "" Then s = s & " AND branch_id IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
-    If Trim(DcBranches(3).text) <> "" Then s = s & " AND branch_id = " & val(DcBranches(3).BoundText)
+    If Trim(DcBranches(2).Text) <> "" Then s = s & " AND branch_id IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
+    If Trim(DcBranches(3).Text) <> "" Then s = s & " AND branch_id = " & val(DcBranches(3).BoundText)
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly: If rsDummy.RecordCount > 0 Then mCount8 = val(IIf(IsNull(rsDummy("noofinvoices").value), 0, rsDummy("noofinvoices").value)): rsDummy.Close
 
     ' TblHandWages
@@ -6971,10 +6963,10 @@ Public Function GetResults() As Boolean
         s = "SELECT COUNT(d.Id) AS noofinvoices FROM dbo.DebitAndCreditNotification d WHERE ISNULL(d.zatcaStatus,0)=1"
         If Not IsNull(FromDate.value) Then s = s & " AND d.[Date] >= " & SQLDate(FromDate, True)
         If Not IsNull(ToDate.value) Then s = s & " AND d.[Date] <= " & SQLDate(ToDate, True)
-        If Trim(DcBranches(2).text) <> "" Then
+        If Trim(DcBranches(2).Text) <> "" Then
             s = s & " AND d.DepartmentId IN (SELECT Id FROM dbo.Department WHERE ActivityId = " & val(DcBranches(2).BoundText) & ")"
         End If
-        If Trim(DcBranches(3).text) <> "" Then
+        If Trim(DcBranches(3).Text) <> "" Then
             s = s & " AND d.DepartmentId = " & val(DcBranches(3).BoundText)
         End If
         rsDummy.Open s, POSConnection, adOpenKeyset, adLockReadOnly
@@ -6993,38 +6985,38 @@ Public Function GetResults() As Boolean
     If SystemOptions.ZacatHandW Then s = s & " AND Transactions.Transaction_Type = 854798"
     If Not IsNull(FromDate.value) Then s = s & " AND Transaction_Date >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND Transaction_Date <= " & SQLDate(ToDate, True)
-    If Trim(DcBranches(2).text) <> "" Then s = s & " AND BranchId IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
-    If Trim(DcBranches(3).text) <> "" Then s = s & " AND BranchId = " & val(DcBranches(3).BoundText)
+    If Trim(DcBranches(2).Text) <> "" Then s = s & " AND BranchId IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
+    If Trim(DcBranches(3).Text) <> "" Then s = s & " AND BranchId = " & val(DcBranches(3).BoundText)
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly: If rsDummy.RecordCount > 0 Then mCount3 = val(IIf(IsNull(rsDummy("noofinvoices").value), 0, rsDummy("noofinvoices").value)): rsDummy.Close
 
     ' project_billl
     s = "SELECT COUNT(ID) AS noofinvoices FROM dbo.project_billl WHERE bill_type = 0 AND ISNULL(zatcaStatus,0)=0"
     If Not IsNull(FromDate.value) Then s = s & " AND bill_date >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND bill_date <= " & SQLDate(ToDate, True)
-    If Trim(DcBranches(2).text) <> "" Then s = s & " AND branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
-    If Trim(DcBranches(3).text) <> "" Then s = s & " AND branch_no = " & val(DcBranches(3).BoundText)
+    If Trim(DcBranches(2).Text) <> "" Then s = s & " AND branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
+    If Trim(DcBranches(3).Text) <> "" Then s = s & " AND branch_no = " & val(DcBranches(3).BoundText)
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly: If rsDummy.RecordCount > 0 Then mCount4 = val(IIf(IsNull(rsDummy("noofinvoices").value), 0, rsDummy("noofinvoices").value)): rsDummy.Close
 
     ' Notes
     s = "SELECT COUNT(NoteID) AS noofinvoices FROM dbo.Notes WHERE (NoteType IN (9082,9083)) AND ISNULL(zatcaStatus,0)=0"
     If Not IsNull(FromDate.value) Then s = s & " AND NoteDate >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND NoteDate <= " & SQLDate(ToDate, True)
-    If Trim(DcBranches(2).text) <> "" Then s = s & " AND branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
-    If Trim(DcBranches(3).text) <> "" Then s = s & " AND branch_no = " & val(DcBranches(3).BoundText)
+    If Trim(DcBranches(2).Text) <> "" Then s = s & " AND branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
+    If Trim(DcBranches(3).Text) <> "" Then s = s & " AND branch_no = " & val(DcBranches(3).BoundText)
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly: If rsDummy.RecordCount > 0 Then mCount6 = val(IIf(IsNull(rsDummy("noofinvoices").value), 0, rsDummy("noofinvoices").value)): rsDummy.Close
 
     ' notes_all
     s = "SELECT COUNT(NoteID) AS noofinvoices FROM dbo.notes_all WHERE NoteType = 85 AND ISNULL(zatcaStatus,0)=0"
     If Not IsNull(FromDate.value) Then s = s & " AND NoteDate >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND NoteDate <= " & SQLDate(ToDate, True)
-    If Trim(DcBranches(2).text) <> "" Then s = s & " AND branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
-    If Trim(DcBranches(3).text) <> "" Then s = s & " AND branch_no = " & val(DcBranches(3).BoundText)
+    If Trim(DcBranches(2).Text) <> "" Then s = s & " AND branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
+    If Trim(DcBranches(3).Text) <> "" Then s = s & " AND branch_no = " & val(DcBranches(3).BoundText)
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly: If rsDummy.RecordCount > 0 Then mCount8 = val(IIf(IsNull(rsDummy("noofinvoices").value), 0, rsDummy("noofinvoices").value)): rsDummy.Close
 
     ' tblEInvoice
     s = "SELECT COUNT(InvoiceID) AS noofinvoices FROM dbo.tblEInvoice WHERE ISNULL(zatcaStatus,0)=0"
-    If Trim(DcBranches(2).text) <> "" Then s = s & " AND branch_id IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
-    If Trim(DcBranches(3).text) <> "" Then s = s & " AND branch_id = " & val(DcBranches(3).BoundText)
+    If Trim(DcBranches(2).Text) <> "" Then s = s & " AND branch_id IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
+    If Trim(DcBranches(3).Text) <> "" Then s = s & " AND branch_id = " & val(DcBranches(3).BoundText)
     If Not IsNull(FromDate.value) Then s = s & " AND IssueDate >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND IssueDate <= " & SQLDate(ToDate, True)
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly: If rsDummy.RecordCount > 0 Then mCount7 = val(IIf(IsNull(rsDummy("noofinvoices").value), 0, rsDummy("noofinvoices").value)): rsDummy.Close
@@ -7063,10 +7055,10 @@ Public Function GetResults() As Boolean
         s = "SELECT COUNT(d.Id) AS noofinvoices FROM dbo.DebitAndCreditNotification d WHERE ISNULL(d.zatcaStatus,0)=0"
         If Not IsNull(FromDate.value) Then s = s & " AND d.[Date] >= " & SQLDate(FromDate, True)
         If Not IsNull(ToDate.value) Then s = s & " AND d.[Date] <= " & SQLDate(ToDate, True)
-        If Trim(DcBranches(2).text) <> "" Then
+        If Trim(DcBranches(2).Text) <> "" Then
             s = s & " AND d.DepartmentId IN (SELECT Id FROM dbo.Department WHERE ActivityId = " & val(DcBranches(2).BoundText) & ")"
         End If
-        If Trim(DcBranches(3).text) <> "" Then
+        If Trim(DcBranches(3).Text) <> "" Then
             s = s & " AND d.DepartmentId = " & val(DcBranches(3).BoundText)
         End If
         rsDummy.Open s, POSConnection, adOpenKeyset, adLockReadOnly
@@ -7084,40 +7076,40 @@ Public Function GetResults() As Boolean
     s = "SELECT COUNT(Transaction_ID) AS noofinvoices FROM dbo.Transactions WHERE (Transaction_Type IN (21,9)) AND ISNULL(zatcaStatus,0)=1 AND ISNULL(warrningmessage,'')<>''"
     If Not IsNull(FromDate.value) Then s = s & " AND Transaction_Date >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND Transaction_Date <= " & SQLDate(ToDate, True)
-    If Trim(DcBranches(2).text) <> "" Then s = s & " AND BranchId IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
-    If Trim(DcBranches(3).text) <> "" Then s = s & " AND BranchId = " & val(DcBranches(3).BoundText)
+    If Trim(DcBranches(2).Text) <> "" Then s = s & " AND BranchId IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
+    If Trim(DcBranches(3).Text) <> "" Then s = s & " AND BranchId = " & val(DcBranches(3).BoundText)
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly: If rsDummy.RecordCount > 0 Then mCount3 = val(IIf(IsNull(rsDummy("noofinvoices").value), 0, rsDummy("noofinvoices").value)): rsDummy.Close
 
     ' project_billl
     s = "SELECT COUNT(ID) AS noofinvoices FROM dbo.project_billl WHERE bill_type = 0 AND ISNULL(zatcaStatus,0)=1 AND ISNULL(warrningmessage,'')<>''"
     If Not IsNull(FromDate.value) Then s = s & " AND bill_date >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND bill_date <= " & SQLDate(ToDate, True)
-    If Trim(DcBranches(2).text) <> "" Then s = s & " AND branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
-    If Trim(DcBranches(3).text) <> "" Then s = s & " AND branch_no = " & val(DcBranches(3).BoundText)
+    If Trim(DcBranches(2).Text) <> "" Then s = s & " AND branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
+    If Trim(DcBranches(3).Text) <> "" Then s = s & " AND branch_no = " & val(DcBranches(3).BoundText)
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly: If rsDummy.RecordCount > 0 Then mCount4 = val(IIf(IsNull(rsDummy("noofinvoices").value), 0, rsDummy("noofinvoices").value)): rsDummy.Close
 
     ' Notes
     s = "SELECT COUNT(NoteID) AS noofinvoices FROM dbo.Notes WHERE (NoteType IN (9082,9083)) AND ISNULL(zatcaStatus,0)=1 AND ISNULL(warrningmessage,'')<>''"
     If Not IsNull(FromDate.value) Then s = s & " AND NoteDate >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND NoteDate <= " & SQLDate(ToDate, True)
-    If Trim(DcBranches(2).text) <> "" Then s = s & " AND branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
-    If Trim(DcBranches(3).text) <> "" Then s = s & " AND branch_no = " & val(DcBranches(3).BoundText)
+    If Trim(DcBranches(2).Text) <> "" Then s = s & " AND branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
+    If Trim(DcBranches(3).Text) <> "" Then s = s & " AND branch_no = " & val(DcBranches(3).BoundText)
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly: If rsDummy.RecordCount > 0 Then mCount6 = val(IIf(IsNull(rsDummy("noofinvoices").value), 0, rsDummy("noofinvoices").value)): rsDummy.Close
 
     ' notes_all
     s = "SELECT COUNT(NoteID) AS noofinvoices FROM dbo.notes_all WHERE NoteType = 85 AND ISNULL(zatcaStatus,0)=1 AND ISNULL(warrningmessage,'')<>''"
     If Not IsNull(FromDate.value) Then s = s & " AND NoteDate >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND NoteDate <= " & SQLDate(ToDate, True)
-    If Trim(DcBranches(2).text) <> "" Then s = s & " AND branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
-    If Trim(DcBranches(3).text) <> "" Then s = s & " AND branch_no = " & val(DcBranches(3).BoundText)
+    If Trim(DcBranches(2).Text) <> "" Then s = s & " AND branch_no IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
+    If Trim(DcBranches(3).Text) <> "" Then s = s & " AND branch_no = " & val(DcBranches(3).BoundText)
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly: If rsDummy.RecordCount > 0 Then mCount7 = val(IIf(IsNull(rsDummy("noofinvoices").value), 0, rsDummy("noofinvoices").value)): rsDummy.Close
 
     ' tblEInvoice
     s = "SELECT COUNT(InvoiceID) AS noofinvoices FROM dbo.tblEInvoice WHERE ISNULL(zatcaStatus,0)=1 AND ISNULL(warrningmessage,'')<>''"
     If Not IsNull(FromDate.value) Then s = s & " AND IssueDate >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND IssueDate <= " & SQLDate(ToDate, True)
-    If Trim(DcBranches(2).text) <> "" Then s = s & " AND branch_id IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
-    If Trim(DcBranches(3).text) <> "" Then s = s & " AND branch_id = " & val(DcBranches(3).BoundText)
+    If Trim(DcBranches(2).Text) <> "" Then s = s & " AND branch_id IN (SELECT branch_id FROM dbo.TblBranchesData WHERE ActivityTypeId = " & val(DcBranches(2).BoundText) & ")"
+    If Trim(DcBranches(3).Text) <> "" Then s = s & " AND branch_id = " & val(DcBranches(3).BoundText)
     rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly: If rsDummy.RecordCount > 0 Then mCount8 = val(IIf(IsNull(rsDummy("noofinvoices").value), 0, rsDummy("noofinvoices").value)): rsDummy.Close
 
     ' TblHandWages
@@ -7160,11 +7152,11 @@ If SystemOptions.CanUploadZakatOpt Then
     End If
 
     ' ›· — «·‰‘«ÿ (ActivityId) „‰ Department
-    If Trim(DcBranches(2).text) <> "" Then
+    If Trim(DcBranches(2).Text) <> "" Then
         s = s & " AND dp.ActivityId = " & val(DcBranches(2).BoundText)
     End If
     ' ›· — «·›—⁄ (DepartmentId)
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
         s = s & " AND dp.Id = " & val(DcBranches(3).BoundText)
     End If
 
@@ -7181,10 +7173,10 @@ If SystemOptions.CanUploadZakatOpt Then
     s = "SELECT COUNT(d.Id) AS noofinvoices FROM dbo.DebitAndCreditNotification d WHERE ISNULL(d.zatcaStatus,0)=1 AND ISNULL(d.warrningmessage,'')<>''"
     If Not IsNull(FromDate.value) Then s = s & " AND d.[Date] >= " & SQLDate(FromDate, True)
     If Not IsNull(ToDate.value) Then s = s & " AND d.[Date] <= " & SQLDate(ToDate, True)
-    If Trim(DcBranches(2).text) <> "" Then
+    If Trim(DcBranches(2).Text) <> "" Then
         s = s & " AND d.DepartmentId IN (SELECT Id FROM dbo.Department WHERE ActivityId = " & val(DcBranches(2).BoundText) & ")"
     End If
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
         s = s & " AND d.DepartmentId = " & val(DcBranches(3).BoundText)
     End If
     rsDummy.Open s, POSConnection, adOpenKeyset, adLockReadOnly
@@ -7295,7 +7287,7 @@ Dim rsDummy As New ADODB.Recordset
        s = s & " and dbo.Transactions.Transaction_Date <=" & SQLDate(ToDate, True) & " "
     End If
     
-    If Trim(DcBranches(2).text) <> "" Then
+    If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     Transactions.BranchId In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -7304,7 +7296,7 @@ Dim rsDummy As New ADODB.Recordset
   
   
         
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and       Transactions.BranchId = " & val(DcBranches(3).BoundText)
         
         
@@ -7406,7 +7398,7 @@ s = s & " AND Notes.NoteType IN (9083, 9082)"
     
     
         
-    If Trim(DcBranches(2).text) <> "" Then
+    If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     Notes.branch_no In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -7415,7 +7407,7 @@ s = s & " AND Notes.NoteType IN (9083, 9082)"
       
   
         
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and       Notes.branch_no= " & val(DcBranches(3).BoundText)
     End If
         
@@ -7519,7 +7511,7 @@ s = s & " Where 1 = 1"
     
     s = s & " and ISNULL(tblEInvoice.zatcaStatus, 0) <> 1"
        
-      If Trim(DcBranches(2).text) <> "" Then
+      If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     tblEInvoice.branch_id In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -7528,7 +7520,7 @@ s = s & " Where 1 = 1"
   
   
         
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and       tblEInvoice.branch_id = " & val(DcBranches(3).BoundText)
         
         
@@ -7626,7 +7618,7 @@ s = s & " AND notes_all.NoteType IN (85)"
     
     
           
-    If Trim(DcBranches(2).text) <> "" Then
+    If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     notes_all.branch_no In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -7634,7 +7626,7 @@ s = s & " AND notes_all.NoteType IN (85)"
        
     
             
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and       notes_all.branch_no= " & val(DcBranches(3).BoundText)
         
         
@@ -7730,14 +7722,14 @@ s = s & " AND notes_all.NoteType IN (85)"
        s = s & " and dbo.project_billl.bill_date <=" & SQLDate(ToDate, True) & " "
     End If
     
-   If Trim(DcBranches(2).text) <> "" Then
+   If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     project_billl.branch_no In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
   End If
         
             
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and      project_billl.branch_no = " & val(DcBranches(3).BoundText)
         
         
@@ -7863,7 +7855,7 @@ s = s & " Where 1 = 1"
     
     
         
-    If Trim(DcBranches(2).text) <> "" Then
+    If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     TblHandWages.BranchId In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -7872,7 +7864,7 @@ s = s & " Where 1 = 1"
       
   
         
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and       TblHandWages.BranchId= " & val(DcBranches(3).BoundText)
     End If
     
@@ -7967,11 +7959,11 @@ End If
 
 s = s & " AND ISNULL(tblContractInsAllocationsDetails.zatcaStatus, 0) <> 1 "
 
-If Trim(DcBranches(2).text) <> "" Then
+If Trim(DcBranches(2).Text) <> "" Then
     s = s & " AND TblBranchesData.branch_id IN (SELECT branch_id FROM TblBranchesData WHERE ActivityTypeId = " & DcBranches(2).BoundText & ") "
 End If
 
-If Trim(DcBranches(3).text) <> "" Then
+If Trim(DcBranches(3).Text) <> "" Then
     s = s & " AND TblBranchesData.branch_id = " & val(DcBranches(3).BoundText) & " "
 End If
 
@@ -8771,7 +8763,8 @@ Private Sub Command1_Click()
      End If
    'e.generateInvoice val(e.docType2), mTableName, mFieldIDName, val(e.ActivityTypeIdInvoice), val(e.branch_idInvoice)
    If mTableName = "Transactions" Then
-        e.GenerateInvoice_ZatcaV3 val(e.docType2), mTableName, mFieldIDName, val(e.ActivityTypeIdInvoice), val(e.branch_idInvoice)
+       ' e.GenerateInvoice_ZatcaV3 val(e.docType2), mTableName, mFieldIDName, val(e.ActivityTypeIdInvoice), val(e.branch_idInvoice)
+        e.GenerateInvoice_ZatcaV4_1_Final val(e.docType2), mTableName, mFieldIDName, val(e.ActivityTypeIdInvoice), val(e.branch_idInvoice)
     Else
         e.generateInvoice val(e.docType2), mTableName, mFieldIDName, val(e.ActivityTypeIdInvoice), val(e.branch_idInvoice)
     End If
@@ -8882,7 +8875,7 @@ Dim rsDummy As New ADODB.Recordset
   '  s = s & "                      ORDER by Transaction_Date, NoteSerial1"
     
        
-    If Trim(DcBranches(2).text) <> "" Then
+    If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     Transactions.BranchId In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -8891,7 +8884,7 @@ Dim rsDummy As New ADODB.Recordset
   
   
         
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and       Transactions.BranchId = " & val(DcBranches(3).BoundText)
     End If
         
@@ -8993,7 +8986,7 @@ s = s & " AND Notes.NoteType IN (9083, 9082)"
     s = s & " and ISNULL(Notes.zatcaStatus, 0) = 1"
     
     
-    If Trim(DcBranches(2).text) <> "" Then
+    If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     Notes.branch_no In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -9001,7 +8994,7 @@ s = s & " AND Notes.NoteType IN (9083, 9082)"
 
     
                 
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and     Notes.branch_no = " & val(DcBranches(3).BoundText)
         
         
@@ -9099,7 +9092,7 @@ s = s & " where 1 = 1"
     End If
     
     
-      If Trim(DcBranches(2).text) <> "" Then
+      If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     tblEInvoice.branch_id In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -9108,7 +9101,7 @@ s = s & " where 1 = 1"
   
   
         
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and       tblEInvoice.branch_id = " & val(DcBranches(3).BoundText)
         
         
@@ -9207,7 +9200,7 @@ s = s & " AND notes_all.NoteType IN (85)"
        s = s & " and dbo.notes_all.NoteDate <=" & SQLDate(ToDate10, True) & " "
     End If
     
-        If Trim(DcBranches(2).text) <> "" Then
+        If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     notes_all.branch_no In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
@@ -9215,7 +9208,7 @@ s = s & " AND notes_all.NoteType IN (85)"
 
 
                 
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and     notes_all.branch_no = " & val(DcBranches(3).BoundText)
         
         
@@ -9321,14 +9314,14 @@ s = s & " LEFT OUTER JOIN dbo.transactionsVatDetails"
     End If
     
     
-       If Trim(DcBranches(2).text) <> "" Then
+       If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     project_billl.branch_no In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
   End If
         
                 
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and     project_billl.branch_no = " & val(DcBranches(3).BoundText)
         
         
@@ -9505,14 +9498,14 @@ s = s & "     ON tblActivitesType.id = TblBranchesData.ActivityTypeId"
     End If
     
     
-       If Trim(DcBranches(2).text) <> "" Then
+       If Trim(DcBranches(2).Text) <> "" Then
          s = s & "  and     TblHandWages.BranchID In "
         s = s & " (Select TblBranchesData.branch_id From dbo.TblBranchesData"
         s = s & " Where (ActivityTypeId = " & DcBranches(2).BoundText & "))"
   End If
         
                 
-    If Trim(DcBranches(3).text) <> "" Then
+    If Trim(DcBranches(3).Text) <> "" Then
          s = s & "  and     TblHandWages.BranchID = " & val(DcBranches(3).BoundText)
         
         
@@ -9600,11 +9593,11 @@ Else
     s = s & " AND ISNULL(tblContractInsAllocationsDetails.zatcaStatus, 0) = 1 "
 End If
 
-If Trim(DcBranches(2).text) <> "" Then
+If Trim(DcBranches(2).Text) <> "" Then
     s = s & " AND TblBranchesData.branch_id IN (SELECT branch_id FROM TblBranchesData WHERE ActivityTypeId = " & DcBranches(2).BoundText & ") "
 End If
 
-If Trim(DcBranches(3).text) <> "" Then
+If Trim(DcBranches(3).Text) <> "" Then
     s = s & " AND TblBranchesData.branch_id = " & val(DcBranches(3).BoundText) & " "
 End If
        
@@ -10300,7 +10293,7 @@ Private Sub DBCboClientName_Click(Area As Integer)
 Dim fullcode As String
 
  GetCustomersDetail val(DBCboClientName.BoundText), , fullcode, 1
-    TxtSearchCode.text = fullcode
+    TxtSearchCode.Text = fullcode
     
 End Sub
 
@@ -10437,6 +10430,7 @@ Private Sub ConectionFirst()
     End If
     Dim SysSQLServerUserpassword2 As String
 SysSQLServerUserpassword2 = "Admin.com"
+'SysSQLServerUserpassword2 = "Admin@123"
 
     Set POSConnection = New ADODB.Connection
     With POSConnection
@@ -10470,7 +10464,7 @@ End Sub
 
 Private Sub Text3_KeyPress(KeyAscii As Integer)
 
-If Text3.text = "01271316739" Then
+If Text3.Text = "01271316739" Then
     Dim s As String
     ' «· √ﬂœ „‰ √‰ «·ﬁÌ„ «·√’·Ì… €Ì— ›«—€… ﬁ»· «” —Ã«⁄Â«
     s = "UPDATE TblOptions SET Privatekey = Privatekey2, PublickeycertPem = PublickeycertPem2, SecretKey = SecretKey2 " & _
@@ -10492,7 +10486,7 @@ If Text3.text = "01271316739" Then
     MsgBox "Password error"
 End If
 
-If Text3.text = SystemOptions.BigUserPw2 Then
+If Text3.Text = SystemOptions.BigUserPw2 Then
 Command1.Visible = True
 Else
 Command1.Visible = False
@@ -10505,8 +10499,8 @@ Private Sub TxtItemCode_KeyUp(Index As Integer, KeyCode As Integer, Shift As Int
     Dim rs As ADODB.Recordset
 
             If KeyCode = vbKeyReturn Then
-                If Trim(Me.TxtItemCode(Index).text) = "" Then Exit Sub
-                StrSQL = "Select ItemID From TblItems Where ItemCode='" & Trim(Me.TxtItemCode(Index).text) & "'"
+                If Trim(Me.TxtItemCode(Index).Text) = "" Then Exit Sub
+                StrSQL = "Select ItemID From TblItems Where ItemCode='" & Trim(Me.TxtItemCode(Index).Text) & "'"
                 Set rs = New ADODB.Recordset
                 rs.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
 
@@ -10534,7 +10528,7 @@ Private Sub TxtSearchCode_KeyPress(KeyAscii As Integer)
   Dim CUSTID As Integer
 
     If KeyAscii = vbKeyReturn Then
-        GetCustomersDetail CUSTID, , TxtSearchCode.text, 1
+        GetCustomersDetail CUSTID, , TxtSearchCode.Text, 1
         DBCboClientName.BoundText = CUSTID
     End If
 
@@ -10899,37 +10893,37 @@ StrSQL = StrSQL & "  Where (1 = 1)  "
  End If
  '''''''''''''''''''
  
-  If ItemDetailedCode.text <> "" Then
-     StrSQL = StrSQL & " AND dbo.ItemsDetails.ItemDetailedCode like '%" & Me.ItemDetailedCode.text & "%'"
+  If ItemDetailedCode.Text <> "" Then
+     StrSQL = StrSQL & " AND dbo.ItemsDetails.ItemDetailedCode like '%" & Me.ItemDetailedCode.Text & "%'"
     End If
     
-     If ParrtNoCode.text <> "" Then
-     StrSQL = StrSQL & " AND dbo.ItemsDetails.ParrtNoCode like '%" & Me.ParrtNoCode.text & "%'"
+     If ParrtNoCode.Text <> "" Then
+     StrSQL = StrSQL & " AND dbo.ItemsDetails.ParrtNoCode like '%" & Me.ParrtNoCode.Text & "%'"
     End If
     
     
     
     
     
-If Me.DCboStoreName.text <> "" And val(DCboStoreName.BoundText) <> 0 Then
+If Me.DCboStoreName.Text <> "" And val(DCboStoreName.BoundText) <> 0 Then
     StrSQL = StrSQL & " AND   dbo.Transactions.StoreID = " & val(Me.DCboStoreName.BoundText)
 
 End If
 
-If Me.DCboItemsName.text <> "" And val(DCboItemsName.BoundText) <> 0 Then
+If Me.DCboItemsName.Text <> "" And val(DCboItemsName.BoundText) <> 0 Then
     StrSQL = StrSQL & " AND   dbo.ItemsDetails.ItemId = " & val(Me.DCboItemsName.BoundText)
 
 End If
-If Me.DcbColor.text <> "" And val(DcbColor.BoundText) <> 0 Then
+If Me.DcbColor.Text <> "" And val(DcbColor.BoundText) <> 0 Then
     StrSQL = StrSQL & " AND   dbo.ItemsDetails.ColorID = " & val(Me.DcbColor.BoundText)
 
 End If
-If Me.DcbSize.text <> "" And val(DcbSize.BoundText) <> 0 Then
+If Me.DcbSize.Text <> "" And val(DcbSize.BoundText) <> 0 Then
     StrSQL = StrSQL & " AND   dbo.ItemsDetails.SizeID = " & val(Me.DcbSize.BoundText)
 
 End If
 
-If Me.DCboGroup1.text <> "" And val(DCboGroup1.BoundText) <> 0 Then
+If Me.DCboGroup1.Text <> "" And val(DCboGroup1.BoundText) <> 0 Then
     StrSQL = StrSQL & " AND    dbo.TblItems.GroupID= " & val(Me.DCboGroup1.BoundText)
 
 End If
@@ -10964,7 +10958,7 @@ End If
 
 
 
- If DBCboClientName.BoundText <> "" And DBCboClientName.text <> "" Then
+ If DBCboClientName.BoundText <> "" And DBCboClientName.Text <> "" Then
                    StrSQL = StrSQL & " AND dbo.Transactions.CusID =" & val(DBCboClientName.BoundText)
       End If
  If Not IsNull(Me.DtpDateFrom.value) Then
@@ -11021,43 +11015,43 @@ StrSQL = StrSQL & "  WHERE     (1 = 1)   "
 'StrSQL = StrSQL & "    And                    (dbo.Transactions.Transaction_Date <= '01-Oct-2016') "
 StrSQL = StrSQL & "   AND (dbo.Transactions.Transaction_Type = 21)"
 
-  If ItemDetailedCode.text <> "" Then
-     StrSQL = StrSQL & " AND dbo.ItemsDetails.ItemDetailedCode like '%" & Me.ItemDetailedCode.text & "%'"
+  If ItemDetailedCode.Text <> "" Then
+     StrSQL = StrSQL & " AND dbo.ItemsDetails.ItemDetailedCode like '%" & Me.ItemDetailedCode.Text & "%'"
     End If
     
-     If ParrtNoCode.text <> "" Then
-     StrSQL = StrSQL & " AND dbo.ItemsDetails.ParrtNoCode like '%" & Me.ParrtNoCode.text & "%'"
+     If ParrtNoCode.Text <> "" Then
+     StrSQL = StrSQL & " AND dbo.ItemsDetails.ParrtNoCode like '%" & Me.ParrtNoCode.Text & "%'"
     End If
     
     
     
     
     
-If Me.DCboStoreName.text <> "" And val(DCboStoreName.BoundText) <> 0 Then
+If Me.DCboStoreName.Text <> "" And val(DCboStoreName.BoundText) <> 0 Then
     StrSQL = StrSQL & " AND   dbo.Transactions.StoreID = " & val(Me.DCboStoreName.BoundText)
 
 End If
 
-If Me.DCboItemsName.text <> "" And val(DCboItemsName.BoundText) <> 0 Then
+If Me.DCboItemsName.Text <> "" And val(DCboItemsName.BoundText) <> 0 Then
     StrSQL = StrSQL & " AND   dbo.ItemsDetails.ItemId = " & val(Me.DCboItemsName.BoundText)
 
 End If
-If Me.DcbColor.text <> "" And val(DcbColor.BoundText) <> 0 Then
+If Me.DcbColor.Text <> "" And val(DcbColor.BoundText) <> 0 Then
     StrSQL = StrSQL & " AND   dbo.ItemsDetails.ColorID = " & val(Me.DcbColor.BoundText)
 
 End If
-If Me.DcbSize.text <> "" And val(DcbSize.BoundText) <> 0 Then
+If Me.DcbSize.Text <> "" And val(DcbSize.BoundText) <> 0 Then
     StrSQL = StrSQL & " AND   dbo.ItemsDetails.SizeID = " & val(Me.DcbSize.BoundText)
 
 End If
 
-If Me.DCboGroup1.text <> "" And val(DCboGroup1.BoundText) <> 0 Then
+If Me.DCboGroup1.Text <> "" And val(DCboGroup1.BoundText) <> 0 Then
     StrSQL = StrSQL & " AND    dbo.TblItems.GroupID= " & val(Me.DCboGroup1.BoundText)
 
 End If
 
 
- If DBCboClientName.BoundText <> "" And DBCboClientName.text <> "" Then
+ If DBCboClientName.BoundText <> "" And DBCboClientName.Text <> "" Then
                    StrSQL = StrSQL & " AND dbo.Transactions.CusID =" & val(DBCboClientName.BoundText)
       End If
  If Not IsNull(Me.DtpDateFrom.value) Then
@@ -11130,11 +11124,11 @@ StrSQL = "SELECT     CAST(last_changed AS TIME) Time2,dbo.Transactions.last_chan
      StrSQL = StrSQL & "                               dbo.TblBranchesData ON dbo.Transactions.BranchId = dbo.TblBranchesData.branch_id"
      StrSQL = StrSQL & "         WHERE     (dbo.Transactions.Transaction_Type = 21) "
                             
-    If Me.DcbEmp.text <> "" And val(DcbEmp.BoundText) <> 0 Then
+    If Me.DcbEmp.Text <> "" And val(DcbEmp.BoundText) <> 0 Then
         StrSQL = StrSQL & " AND    Emp_ID= " & val(Me.DcbEmp.BoundText)
     End If
     
-                            If Me.DCboStoreName2.text <> "" And val(DCboStoreName2.BoundText) <> 0 Then
+                            If Me.DCboStoreName2.Text <> "" And val(DCboStoreName2.BoundText) <> 0 Then
         StrSQL = StrSQL & " AND   Transactions.StoreID = " & val(Me.DCboStoreName2.BoundText)
     End If
      If BrnchesReg <> "-1" Then
@@ -11143,7 +11137,7 @@ StrSQL = "SELECT     CAST(last_changed AS TIME) Time2,dbo.Transactions.last_chan
       If BrnchAct <> "-1" Then
         StrSQL = StrSQL & " AND Transactions.BranchId in( " & BrnchAct & " )"
        End If
-    If Me.DcbBranch.text <> "" And val(DcbBranch.BoundText) <> 0 Then
+    If Me.DcbBranch.Text <> "" And val(DcbBranch.BoundText) <> 0 Then
         StrSQL = StrSQL & " AND   Transactions.BranchId = " & val(Me.DcbBranch.BoundText)
     End If
     
@@ -11235,7 +11229,7 @@ StrSQL = StrSQL & "  )"
 StrSQL = StrSQL & "  ) as x where (Transaction_Type = 9 OR Transaction_Type = 21) and  isnull(t.PaymentType,0) <> 1"
 ' StrSQL = StrSQL & " AND  not( Transaction_ID  is null)"
   
-    If Me.DCboStoreName2.text <> "" And val(DCboStoreName2.BoundText) <> 0 Then
+    If Me.DCboStoreName2.Text <> "" And val(DCboStoreName2.BoundText) <> 0 Then
         StrSQL = StrSQL & " AND   StoreID = " & val(Me.DCboStoreName2.BoundText)
     End If
      If BrnchesReg <> "-1" Then
@@ -11244,13 +11238,13 @@ StrSQL = StrSQL & "  ) as x where (Transaction_Type = 9 OR Transaction_Type = 21
       If BrnchAct <> "-1" Then
         StrSQL = StrSQL & " AND BranchId in( " & BrnchAct & " )"
        End If
-    If Me.DcbBranch.text <> "" And val(DcbBranch.BoundText) <> 0 Then
+    If Me.DcbBranch.Text <> "" And val(DcbBranch.BoundText) <> 0 Then
         StrSQL = StrSQL & " AND   BranchId = " & val(Me.DcbBranch.BoundText)
     End If
-    If Me.CboPayMentType.text <> "" And val(CboPayMentType.ListIndex) <> -1 Then
+    If Me.CboPayMentType.Text <> "" And val(CboPayMentType.ListIndex) <> -1 Then
         StrSQL = StrSQL & " AND    PaymentID= " & val(Me.CboPayMentType.ListIndex)
     End If
-    If Me.DcbEmp.text <> "" And val(DcbEmp.BoundText) <> 0 Then
+    If Me.DcbEmp.Text <> "" And val(DcbEmp.BoundText) <> 0 Then
         StrSQL = StrSQL & " AND    Emp_ID= " & val(Me.DcbEmp.BoundText)
     End If
 
@@ -11364,7 +11358,7 @@ StrSQL = StrSQL & " ) SELECT * FROM AllPayments WHERE 1=1 "
 
 
 '--- √ﬂ„· «·›·« — ﬂ„« ÂÌ ---
-If Me.DCboStoreName2.text <> "" And val(DCboStoreName2.BoundText) <> 0 Then
+If Me.DCboStoreName2.Text <> "" And val(DCboStoreName2.BoundText) <> 0 Then
     StrSQL = StrSQL & " AND   StoreID = " & val(Me.DCboStoreName2.BoundText)
 End If
 If BrnchesReg <> "-1" Then
@@ -11373,13 +11367,13 @@ End If
 If BrnchAct <> "-1" Then
     StrSQL = StrSQL & " AND BranchId in( " & BrnchAct & " )"
 End If
-If Me.DcbBranch.text <> "" And val(DcbBranch.BoundText) <> 0 Then
+If Me.DcbBranch.Text <> "" And val(DcbBranch.BoundText) <> 0 Then
     StrSQL = StrSQL & " AND   BranchId = " & val(Me.DcbBranch.BoundText)
 End If
-If Me.CboPayMentType.text <> "" And val(CboPayMentType.ListIndex) <> -1 Then
+If Me.CboPayMentType.Text <> "" And val(CboPayMentType.ListIndex) <> -1 Then
     StrSQL = StrSQL & " AND    PaymentID= " & val(Me.CboPayMentType.ListIndex)
 End If
-If Me.DcbEmp.text <> "" And val(Me.DcbEmp.BoundText) <> 0 Then
+If Me.DcbEmp.Text <> "" And val(Me.DcbEmp.BoundText) <> 0 Then
     StrSQL = StrSQL & " AND    Emp_ID= " & val(Me.DcbEmp.BoundText)
 End If
 
@@ -11464,7 +11458,7 @@ StrSQL = StrSQL & " AND NOT EXISTS (SELECT 1 FROM dbo.TblTransactionPayments tp 
 StrSQL = StrSQL & " ) SELECT * FROM AllPayments WHERE 1=1 "
 ' --- Â‰« «·›·« — “Ì „« » Õ» »⁄œ WHERE 1=1 ---
 
-If Me.DCboStoreName2.text <> "" And val(Me.DCboStoreName2.BoundText) <> 0 Then
+If Me.DCboStoreName2.Text <> "" And val(Me.DCboStoreName2.BoundText) <> 0 Then
     StrSQL = StrSQL & " AND   StoreID = " & val(Me.DCboStoreName2.BoundText)
 End If
 If BrnchesReg <> "-1" Then
@@ -11473,13 +11467,13 @@ End If
 If BrnchAct <> "-1" Then
     StrSQL = StrSQL & " AND BranchId in( " & BrnchAct & " )"
 End If
-If Me.DcbBranch.text <> "" And val(Me.DcbBranch.BoundText) <> 0 Then
+If Me.DcbBranch.Text <> "" And val(Me.DcbBranch.BoundText) <> 0 Then
     StrSQL = StrSQL & " AND   BranchId = " & val(Me.DcbBranch.BoundText)
 End If
-If Me.CboPayMentType.text <> "" And val(Me.CboPayMentType.ListIndex) <> -1 Then
+If Me.CboPayMentType.Text <> "" And val(Me.CboPayMentType.ListIndex) <> -1 Then
     StrSQL = StrSQL & " AND    PaymentID= " & val(Me.CboPayMentType.ListIndex)
 End If
-If Me.DcbEmp.text <> "" And val(Me.DcbEmp.BoundText) <> 0 Then
+If Me.DcbEmp.Text <> "" And val(Me.DcbEmp.BoundText) <> 0 Then
     StrSQL = StrSQL & " AND    Emp_ID= " & val(Me.DcbEmp.BoundText)
 End If
 
@@ -11565,7 +11559,7 @@ StrSQL = StrSQL & " AND NOT EXISTS (SELECT 1 FROM dbo.TblTransactionPayments tp 
 '--- SELECT «·‰Â«∆Ì „⁄ ≈÷«›… creditTotal ---
 StrSQL = StrSQL & " ) SELECT *, CASE WHEN PaymentType = 1 THEN Value ELSE 0 END AS creditTotal FROM AllPayments WHERE 1=1 "
 
-If Me.DCboStoreName2.text <> "" And val(Me.DCboStoreName2.BoundText) <> 0 Then
+If Me.DCboStoreName2.Text <> "" And val(Me.DCboStoreName2.BoundText) <> 0 Then
     StrSQL = StrSQL & " AND   StoreID = " & val(Me.DCboStoreName2.BoundText)
 End If
 If BrnchesReg <> "-1" Then
@@ -11574,13 +11568,13 @@ End If
 If BrnchAct <> "-1" Then
     StrSQL = StrSQL & " AND BranchId in( " & BrnchAct & " )"
 End If
-If Me.DcbBranch.text <> "" And val(Me.DcbBranch.BoundText) <> 0 Then
+If Me.DcbBranch.Text <> "" And val(Me.DcbBranch.BoundText) <> 0 Then
     StrSQL = StrSQL & " AND   BranchId = " & val(Me.DcbBranch.BoundText)
 End If
-If Me.CboPayMentType.text <> "" And val(Me.CboPayMentType.ListIndex) <> -1 Then
+If Me.CboPayMentType.Text <> "" And val(Me.CboPayMentType.ListIndex) <> -1 Then
     StrSQL = StrSQL & " AND    PaymentID= " & val(Me.CboPayMentType.ListIndex)
 End If
-If Me.DcbEmp.text <> "" And val(Me.DcbEmp.BoundText) <> 0 Then
+If Me.DcbEmp.Text <> "" And val(Me.DcbEmp.BoundText) <> 0 Then
     StrSQL = StrSQL & " AND    Emp_ID= " & val(Me.DcbEmp.BoundText)
 End If
 
@@ -11956,34 +11950,34 @@ For i = 0 To 14
  If opt(i).value = True Then
  StrReportTitle = opt(i).Caption
  
- If DBCboClientName.text <> "" Then
- StrReportTitle = StrReportTitle & CHR(13) & "  ··⁄„Ì· : " & DBCboClientName.text
+ If DBCboClientName.Text <> "" Then
+ StrReportTitle = StrReportTitle & CHR(13) & "  ··⁄„Ì· : " & DBCboClientName.Text
  End If
  
  
- If DCboStoreName.text <> "" Then
- StrReportTitle = StrReportTitle & CHR(13) & "  ··„Œ“‰ : " & DCboStoreName.text
+ If DCboStoreName.Text <> "" Then
+ StrReportTitle = StrReportTitle & CHR(13) & "  ··„Œ“‰ : " & DCboStoreName.Text
  End If
  
-  If DCboGroup1.text <> "" Then
-StrReportTitle = StrReportTitle & CHR(13) & "  ··„Ã„Ê⁄Â : " & DCboGroup1.text
+  If DCboGroup1.Text <> "" Then
+StrReportTitle = StrReportTitle & CHR(13) & "  ··„Ã„Ê⁄Â : " & DCboGroup1.Text
  End If
  
- If ItemDetailedCode.text <> "" Then
- StrReportTitle = StrReportTitle & CHR(13) & "  ··ﬂÊœ : " & ItemDetailedCode.text
+ If ItemDetailedCode.Text <> "" Then
+ StrReportTitle = StrReportTitle & CHR(13) & "  ··ﬂÊœ : " & ItemDetailedCode.Text
  End If
  
-  If ParrtNoCode.text <> "" Then
- StrReportTitle = StrReportTitle & CHR(13) & "  ··»«—ﬂÊœ : " & ParrtNoCode.text
+  If ParrtNoCode.Text <> "" Then
+ StrReportTitle = StrReportTitle & CHR(13) & "  ··»«—ﬂÊœ : " & ParrtNoCode.Text
  End If
  
-   If DcbColor.text <> "" Then
- StrReportTitle = StrReportTitle & CHR(13) & "  ··Ê‰ : " & DcbColor.text
+   If DcbColor.Text <> "" Then
+ StrReportTitle = StrReportTitle & CHR(13) & "  ··Ê‰ : " & DcbColor.Text
  End If
  
  
-   If DcbSize.text <> "" Then
- StrReportTitle = StrReportTitle & CHR(13) & "  ··„ﬁ«” : " & DcbSize.text
+   If DcbSize.Text <> "" Then
+ StrReportTitle = StrReportTitle & CHR(13) & "  ··„ﬁ«” : " & DcbSize.Text
  End If
  
  
@@ -12000,8 +11994,8 @@ Next i
     If SystemOptions.UserInterface = ArabicInterface Then
         xReport.ParameterFields(1).AddCurrentValue cCompanyInfo.ArabCompanyName 'RPTCompany_Name_Arabic
         If reportid = 15 Then
-        xReport.ParameterFields(12).AddCurrentValue val(percent1.text)
-        xReport.ParameterFields(13).AddCurrentValue val(percent2.text)
+        xReport.ParameterFields(12).AddCurrentValue val(percent1.Text)
+        xReport.ParameterFields(13).AddCurrentValue val(percent2.Text)
         
         End If
 

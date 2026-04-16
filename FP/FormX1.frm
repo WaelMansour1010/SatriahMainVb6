@@ -11,7 +11,7 @@ Begin VB.Form FPFRM
    BeginProperty Font 
       Name            =   "Arial"
       Size            =   9
-      Charset         =   0
+      Charset         =   178
       Weight          =   400
       Underline       =   0   'False
       Italic          =   0   'False

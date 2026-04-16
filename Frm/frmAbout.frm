@@ -21,6 +21,15 @@ Begin VB.Form frmabout
    ScaleMode       =   0  'User
    ScaleWidth      =   6070.969
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.PictureBox Picture3 
       BorderStyle     =   0  'None
       Height          =   2055

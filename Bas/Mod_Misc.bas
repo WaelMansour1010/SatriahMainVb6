@@ -2,6 +2,30 @@ Attribute VB_Name = "Mod_Misc"
 Option Explicit
 #Const ProgVersion = "Demo"
 
+Private Declare Function GetTickCount Lib "kernel32" () As Long
+
+Private gDirectPrintActive As Boolean
+Private gDirectPrintToken As String
+Private gDirectPrintKey As String
+Private gDirectPrintLastKey As String
+Private gDirectPrintLastTick As Long
+Public Cn As New ADODB.Connection
+
+Public user_id As Long
+
+Public user_name As String
+
+Public User_Password As String
+
+Public bigUser As Boolean
+
+Public StrCurName As String
+
+Public VersionTest As Boolean
+
+Public StrAppRegPath As String
+
+Public SerialType As String
 Public Declare Function InitCommonControls _
                Lib "comctl32.dll" () As Long
 
@@ -27,7 +51,12 @@ Public Enum PrintTarget
     PrinterTarget
 End Enum
 
- 
+
+
+Public Enum ReportDirection
+    ToWindow
+    ToPrinter
+End Enum
  Public Enum GridTransType
     InvoiceTransaction        '«·„»Ì⁄« 
     PurchaseTransaction        '«·‘—«¡
@@ -71,34 +100,87 @@ InvoiceTransactionCompose   '”‰œ ›« Ê—… „»Ì⁄«   Ã„Ì⁄Ï
 End Enum
 
 
-Public Cn As New ADODB.Connection
+Public Function BeginDirectPrintGuard(ByVal PrintKey As String, _
+                                      ByRef GuardToken As String, _
+                                      Optional ByVal DuplicateWindowMs As Long = 2500) As Boolean
+    Dim nowTick As Long
+    Dim ageMs As Long
 
-Public user_id As Long
+    nowTick = GetTickCount()
+    ageMs = nowTick - gDirectPrintLastTick
+    If ageMs < 0 Then ageMs = 0
 
-Public user_name As String
+    If gDirectPrintActive Then
+        Debug.Print "DirectPrintGuard: blocked because another direct print is still active."
+        Exit Function
+    End If
 
-Public User_Password As String
+    If LenB(gDirectPrintLastKey) > 0 Then
+        If StrComp(gDirectPrintLastKey, PrintKey, vbTextCompare) = 0 Then
+            If ageMs <= DuplicateWindowMs Then
+                Debug.Print "DirectPrintGuard: blocked duplicate direct print. Age(ms)=" & CStr(ageMs)
+                Exit Function
+            End If
+        End If
+    End If
 
-Public bigUser As Boolean
+    GuardToken = "PRINT_" & Format$(Now, "yyyymmddhhnnss") & "_" & CStr(nowTick)
 
-Public StrCurName As String
+    gDirectPrintActive = True
+    gDirectPrintToken = GuardToken
+    gDirectPrintKey = PrintKey
 
-Public VersionTest As Boolean
+    BeginDirectPrintGuard = True
+End Function
 
-Public StrAppRegPath As String
+Public Sub EndDirectPrintGuard(ByVal GuardToken As String)
+    Dim nowTick As Long
 
-Public SerialType As String
+    If LenB(GuardToken) = 0 Then Exit Sub
+    If StrComp(gDirectPrintToken, GuardToken, vbBinaryCompare) <> 0 Then Exit Sub
 
-Public Enum ReportDirection
-    ToWindow
-    ToPrinter
-End Enum
+    nowTick = GetTickCount()
+
+    gDirectPrintLastKey = gDirectPrintKey
+    gDirectPrintLastTick = nowTick
+
+    gDirectPrintActive = False
+    gDirectPrintToken = ""
+    gDirectPrintKey = ""
+End Sub
+
+Public Function NormalizePrintCopies(ByVal RequestedCopies As Long, _
+                                     Optional ByVal MaxCopies As Long = 10) As Long
+    NormalizePrintCopies = RequestedCopies
+
+    If NormalizePrintCopies <= 0 Then
+        NormalizePrintCopies = 1
+    ElseIf NormalizePrintCopies > MaxCopies Then
+        NormalizePrintCopies = MaxCopies
+    End If
+End Function
+
+Public Function IsRemoteRedirectedPrinterName(ByVal printername As String) As Boolean
+    Dim s As String
+
+    s = UCase$(Trim$(printername))
+    If LenB(s) = 0 Then Exit Function
+
+    If InStr(s, "TSPLUS") > 0 Then IsRemoteRedirectedPrinterName = True: Exit Function
+    If InStr(s, "REDIRECT") > 0 Then IsRemoteRedirectedPrinterName = True: Exit Function
+    If InStr(s, "REMOTE DESKTOP") > 0 Then IsRemoteRedirectedPrinterName = True: Exit Function
+    If InStr(s, "EASY PRINT") > 0 Then IsRemoteRedirectedPrinterName = True: Exit Function
+    If InStr(s, "RDP") > 0 Then IsRemoteRedirectedPrinterName = True: Exit Function
+    If InStr(s, "(FROM ") > 0 Then IsRemoteRedirectedPrinterName = True: Exit Function
+End Function
+
+ 
 
 Public Sub SelectText(SelText As TextBox)
     On Error Resume Next
     SelText.SetFocus
     SelText.SelStart = 0
-    SelText.SelLength = Len(SelText.text)
+    SelText.SelLength = Len(SelText.Text)
 End Sub
  
 Public Sub clear_all(Frm As Form)
@@ -115,7 +197,7 @@ Public Sub clear_all(Frm As Form)
         If TypeOf ctl Is DataCombo Then If ctl.Tag <> "not" Then ctl.BoundText = ""
         
         If TypeOf ctl Is TextBox And ctl.Name <> "TxtModFlg" And ctl.Name <> "TxtModFlg1" And ctl.Name <> "TxtModFlg2" And ctl.Name <> "TxtModFlg3" And ctl.Name <> "TxtModFlg4" And ctl.Name <> "TxtModFlg5" And ctl.Name <> "TxtModFlg6" And ctl.Name <> "TxtModFlg7" And ctl.Name <> "TxtModFlg8" Then
-            ctl.text = ""
+            ctl.Text = ""
         Else
       '  X = 5
         End If
@@ -199,10 +281,10 @@ Public Function KeyAscii_Num(KeyAsc As Integer, _
     End If
 
     If IntFilterType = 0 Then
-        If CBool(InStr(1, ".", CHR(KeyAsc))) And CBool(InStr(1, Txt, CHR(KeyAsc))) Then
+        If CBool(InStr(1, ".", Chr(KeyAsc))) And CBool(InStr(1, Txt, Chr(KeyAsc))) Then
             KeyAscii_Num = 0
             Exit Function
-        ElseIf InStr(1, "0123456789.", CHR(KeyAsc)) = 0 Then
+        ElseIf InStr(1, "0123456789.", Chr(KeyAsc)) = 0 Then
             KeyAscii_Num = 0
         Else
             KeyAscii_Num = KeyAsc
@@ -210,7 +292,7 @@ Public Function KeyAscii_Num(KeyAsc As Integer, _
 
     ElseIf IntFilterType = 1 Then
 
-        If InStr(1, "0123456789", CHR(KeyAsc)) = 0 Then
+        If InStr(1, "0123456789", Chr(KeyAsc)) = 0 Then
             KeyAscii_Num = 0
         Else
             KeyAscii_Num = KeyAsc
@@ -270,8 +352,8 @@ Public Sub Get_RetrunDate(Qty_Hour As Single, _
         RetrunTime = Out_Time
     End If
 
-    txtdate.text = Format(RetrunDate, "yyyy/M/d")
-    TxtTime.text = FormatDateTime(RetrunTime, vbLongTime)
+    txtdate.Text = Format(RetrunDate, "yyyy/M/d")
+    TxtTime.Text = FormatDateTime(RetrunTime, vbLongTime)
 End Sub
 
 Public Function WriteDate(Optional D_Date) As String
@@ -312,7 +394,7 @@ Public Function WriteDate(Optional D_Date) As String
     End Select
 
     StrMSG = StrMSG & Format(M_Date, "yyyy/M/d", vbUseSystemDayOfWeek) & " „Ì·«œÌ… "
-    StrMSG = StrMSG & "  " & CHR(13)
+    StrMSG = StrMSG & "  " & Chr(13)
     VBA.Calendar = vbCalHijri
     StrHijriDate = " «·„Ê«›ﬁ "
 
@@ -449,13 +531,13 @@ Exit Sub
 End Sub
 
 Public Function Write_Qast(IntNo As Integer) As String
-    Dim temp As String
+    Dim Temp As String
 
     If IntNo > 100 Then
         Exit Function
     End If
 
-    temp = Choose(IntNo, "«·√Ê·", "«·À«‰Ï", "«·À«·À", "«·—«»⁄", "«·Œ«„”", _
+    Temp = Choose(IntNo, "«·√Ê·", "«·À«‰Ï", "«·À«·À", "«·—«»⁄", "«·Œ«„”", _
        "«·”«œ”", "«·”«»⁄", "«·À«„‰", "«· «”⁄", "«·⁄«‘—", "«·Õ«œÏ ⁄‘—", _
        "«·À«‰Ï ⁄‘—", "«·À«·À ⁄‘—", "«·—«»⁄ ⁄‘—", "«·Œ«„” ⁄‘—", "«·”«œ” ⁄‘—", _
        "«·”«»⁄ ⁄‘—", "«·À«„‰ ⁄‘—", "«· «”⁄ ⁄‘—", "«·⁄‘—Ì‰", "«·Õ«œÏ Ê«·⁄‘—Ì‰", _
@@ -475,7 +557,7 @@ Public Function Write_Qast(IntNo As Integer) As String
        "«·Œ«„” Ê«·À„«‰Ì‰", "«·”«œ” Ê«·À„«‰Ì‰", "«·”«»⁄ Ê«·À„«‰Ì‰", "«·À«„‰ Ê«·À„«‰Ì‰", "«· «”⁄ Ê«·À„«‰Ì‰", _
        "«· ”⁄Ì‰", "«·Õ«œÏ Ê«· ”⁄Ì‰", "«·À«‰Ï Ê«· ”⁄Ì‰", "«·À«·À Ê«· ”⁄Ì‰", "«·—«»⁄ Ê«· ”⁄Ì‰", _
        "«·Œ«„” Ê«· ”⁄Ì‰", "«·”«œ” Ê«· ”⁄Ì‰", "«·”«»⁄ Ê«· ”⁄Ì‰", "«·À«„‰ Ê«· ”⁄Ì‰", "«· «”⁄ Ê«· ”⁄Ì‰", "«·„«∆…")
-    Write_Qast = temp
+    Write_Qast = Temp
 End Function
 
 Public Sub MyPlaySound(MySnd As MySounds)
@@ -493,7 +575,7 @@ End Sub
 
 Public Function GetHijriDate(Optional ByVal G_Date, _
                              Optional ByName As Boolean = False) As String
-    Dim temp As String
+    Dim Temp As String
     Dim IntXX As Integer
 
     If IsMissing(G_Date) Then
@@ -504,11 +586,11 @@ Public Function GetHijriDate(Optional ByVal G_Date, _
     Calendar = vbCalHijri
 
     If ByName = True Then
-        temp = ""
-        temp = day(G_Date)
-        temp = temp & "" & MonthName(Month(G_Date))
-        temp = temp & "" & year(G_Date)
-        GetHijriDate = temp
+        Temp = ""
+        Temp = day(G_Date)
+        Temp = Temp & "" & MonthName(Month(G_Date))
+        Temp = Temp & "" & year(G_Date)
+        GetHijriDate = Temp
     Else
         GetHijriDate = CStr(G_Date)
     End If
@@ -639,3 +721,4 @@ End Function
 Public Function DisplayCurrency(DblValue As Double) As Currency
     DisplayCurrency = Format(DblValue, SystemOptions.SysDefCurrencyForamt)
 End Function
+

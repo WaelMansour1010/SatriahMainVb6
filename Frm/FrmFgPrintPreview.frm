@@ -11,6 +11,15 @@ Begin VB.Form FrmFgPrintPreview
    ScaleHeight     =   7050
    ScaleWidth      =   9465
    StartUpPosition =   3  'Windows Default
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VSPrinter8LibCtl.VSPrinter VSPrinter1 
       Height          =   2295
       Left            =   3480

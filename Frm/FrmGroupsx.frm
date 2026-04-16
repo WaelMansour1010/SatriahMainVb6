@@ -22,6 +22,15 @@ Begin VB.Form FrmGroupsx
    RightToLeft     =   -1  'True
    ScaleHeight     =   7650
    ScaleWidth      =   9255
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CheckBox ISMaterial 
       Alignment       =   1  'Right Justify
       BackColor       =   &H00E2E9E9&

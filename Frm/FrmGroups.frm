@@ -23,6 +23,15 @@ Begin VB.Form FrmGroups
    RightToLeft     =   -1  'True
    ScaleHeight     =   9420
    ScaleWidth      =   10950
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic C1Elastic3 
       Height          =   9435
       Left            =   0

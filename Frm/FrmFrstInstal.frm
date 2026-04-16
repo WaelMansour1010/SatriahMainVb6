@@ -20,6 +20,15 @@ Begin VB.Form FrmFrstInstal
    ScaleHeight     =   4905
    ScaleWidth      =   6405
    StartUpPosition =   3  'Windows Default
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Fram 
       BackColor       =   &H00E2E9E9&
       BorderStyle     =   0  'None

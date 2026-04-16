@@ -12,6 +12,15 @@ Begin VB.Form FrmAccountingReport
    ClientLeft      =   120
    ClientTop       =   510
    ClientWidth     =   21465
+   BeginProperty Font 
+      Name            =   "Arial"
+      Size            =   8.25
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    HelpContextID   =   470
    Icon            =   "FrmAccountReport.frx":0000
    LinkTopic       =   "Form1"
@@ -31,7 +40,7 @@ Begin VB.Form FrmAccountingReport
       _cx             =   37862
       _cy             =   19315
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -108,8 +117,9 @@ Begin VB.Form FrmAccountingReport
          _ExtentY        =   1217
          Caption         =   "Œ—ÊÃ"
          BackColor       =   14871017
+         FontName        =   "Arial"
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -129,7 +139,7 @@ Begin VB.Form FrmAccountingReport
          _cx             =   37756
          _cy             =   17965
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -264,7 +274,7 @@ Begin VB.Form FrmAccountingReport
             _cx             =   20055
             _cy             =   18124
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -309,7 +319,7 @@ Begin VB.Form FrmAccountingReport
             AccessibleValue =   ""
             AccessibleRole  =   37
             Begin C1SizerLibCtl.C1Elastic ElcContainer 
-               Height          =   9900
+               Height          =   9885
                Index           =   0
                Left            =   45
                TabIndex        =   3
@@ -317,9 +327,9 @@ Begin VB.Form FrmAccountingReport
                Top             =   45
                Width           =   11280
                _cx             =   19897
-               _cy             =   17463
+               _cy             =   17436
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -379,7 +389,7 @@ Begin VB.Form FrmAccountingReport
                   _cx             =   6033
                   _cy             =   1535
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -460,7 +470,7 @@ Begin VB.Form FrmAccountingReport
                   End
                End
                Begin C1SizerLibCtl.C1Elastic Ele 
-                  Height          =   9780
+                  Height          =   9765
                   Index           =   2
                   Left            =   75
                   TabIndex        =   7
@@ -468,9 +478,9 @@ Begin VB.Form FrmAccountingReport
                   Top             =   60
                   Width           =   11130
                   _cx             =   19632
-                  _cy             =   17251
+                  _cy             =   17224
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -685,7 +695,7 @@ Begin VB.Form FrmAccountingReport
                      Left            =   9810
                      RightToLeft     =   -1  'True
                      TabIndex        =   122
-                     Top             =   9150
+                     Top             =   9135
                      Width           =   855
                   End
                   Begin VB.OptionButton OptAccount 
@@ -925,7 +935,7 @@ Begin VB.Form FrmAccountingReport
                      BackColor       =   &H00E2E9E9&
                      Caption         =   "„Õœœ«  «· ﬁ—Ì—"
                      ForeColor       =   &H00FF0000&
-                     Height          =   5535
+                     Height          =   5520
                      Left            =   0
                      RightToLeft     =   -1  'True
                      TabIndex        =   61
@@ -990,7 +1000,7 @@ Begin VB.Form FrmAccountingReport
                         _cx             =   9790
                         _cy             =   1191
                         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                           Name            =   "MS Sans Serif"
+                           Name            =   "Arial"
                            Size            =   8.25
                            Charset         =   178
                            Weight          =   400
@@ -1061,7 +1071,7 @@ Begin VB.Form FrmAccountingReport
                            CalendarTitleBackColor=   10383715
                            CheckBox        =   -1  'True
                            CustomFormat    =   "yyyy/M/d"
-                           Format          =   245104643
+                           Format          =   203554819
                            CurrentDate     =   37357
                         End
                         Begin MSComCtl2.DTPicker DTPickerAccTo 
@@ -1087,7 +1097,7 @@ Begin VB.Form FrmAccountingReport
                            CalendarTitleBackColor=   10383715
                            CheckBox        =   -1  'True
                            CustomFormat    =   "yyyy/M/d"
-                           Format          =   245104643
+                           Format          =   203554819
                            CurrentDate     =   37357
                         End
                         Begin VB.Label lbl 
@@ -1193,7 +1203,7 @@ Begin VB.Form FrmAccountingReport
                         Top             =   150
                         Width           =   4605
                         _ExtentX        =   8123
-                        _ExtentY        =   556
+                        _ExtentY        =   582
                         _Version        =   393216
                         BackColor       =   16777215
                         ListField       =   "account_name"
@@ -1201,7 +1211,7 @@ Begin VB.Form FrmAccountingReport
                         Text            =   ""
                         RightToLeft     =   -1  'True
                         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                           Name            =   "MS Sans Serif"
+                           Name            =   "Arial"
                            Size            =   8.25
                            Charset         =   178
                            Weight          =   400
@@ -1218,7 +1228,7 @@ Begin VB.Form FrmAccountingReport
                         Top             =   480
                         Width           =   4605
                         _ExtentX        =   8123
-                        _ExtentY        =   556
+                        _ExtentY        =   582
                         _Version        =   393216
                         BackColor       =   16777215
                         ListField       =   "account_name"
@@ -1226,7 +1236,7 @@ Begin VB.Form FrmAccountingReport
                         Text            =   ""
                         RightToLeft     =   -1  'True
                         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                           Name            =   "MS Sans Serif"
+                           Name            =   "Arial"
                            Size            =   8.25
                            Charset         =   178
                            Weight          =   400
@@ -1242,7 +1252,7 @@ Begin VB.Form FrmAccountingReport
                         Top             =   1170
                         Width           =   4605
                         _ExtentX        =   8123
-                        _ExtentY        =   556
+                        _ExtentY        =   582
                         _Version        =   393216
                         Enabled         =   0   'False
                         Text            =   ""
@@ -1255,7 +1265,7 @@ Begin VB.Form FrmAccountingReport
                         Top             =   1530
                         Width           =   4605
                         _ExtentX        =   8123
-                        _ExtentY        =   556
+                        _ExtentY        =   582
                         _Version        =   393216
                         Enabled         =   0   'False
                         Text            =   ""
@@ -1269,7 +1279,7 @@ Begin VB.Form FrmAccountingReport
                         Top             =   1860
                         Width           =   7485
                         _ExtentX        =   13203
-                        _ExtentY        =   556
+                        _ExtentY        =   582
                         _Version        =   393216
                         BackColor       =   16777215
                         ListField       =   "account_name"
@@ -1277,7 +1287,7 @@ Begin VB.Form FrmAccountingReport
                         Text            =   ""
                         RightToLeft     =   -1  'True
                         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                           Name            =   "MS Sans Serif"
+                           Name            =   "Arial"
                            Size            =   8.25
                            Charset         =   178
                            Weight          =   400
@@ -1294,7 +1304,7 @@ Begin VB.Form FrmAccountingReport
                         Top             =   2220
                         Width           =   6645
                         _ExtentX        =   11721
-                        _ExtentY        =   556
+                        _ExtentY        =   582
                         _Version        =   393216
                         BackColor       =   16777215
                         ListField       =   "account_name"
@@ -1302,7 +1312,7 @@ Begin VB.Form FrmAccountingReport
                         Text            =   ""
                         RightToLeft     =   -1  'True
                         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                           Name            =   "MS Sans Serif"
+                           Name            =   "Arial"
                            Size            =   8.25
                            Charset         =   178
                            Weight          =   400
@@ -1319,7 +1329,7 @@ Begin VB.Form FrmAccountingReport
                         Top             =   2550
                         Width           =   7485
                         _ExtentX        =   13203
-                        _ExtentY        =   556
+                        _ExtentY        =   582
                         _Version        =   393216
                         BackColor       =   16777215
                         ListField       =   ""
@@ -1327,7 +1337,7 @@ Begin VB.Form FrmAccountingReport
                         Text            =   ""
                         RightToLeft     =   -1  'True
                         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                           Name            =   "MS Sans Serif"
+                           Name            =   "Arial"
                            Size            =   8.25
                            Charset         =   178
                            Weight          =   400
@@ -1343,12 +1353,12 @@ Begin VB.Form FrmAccountingReport
                         Top             =   3930
                         Width           =   5730
                         _ExtentX        =   10107
-                        _ExtentY        =   556
+                        _ExtentY        =   582
                         _Version        =   393216
                         Text            =   ""
                         RightToLeft     =   -1  'True
                         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                           Name            =   "MS Sans Serif"
+                           Name            =   "Arial"
                            Size            =   8.25
                            Charset         =   178
                            Weight          =   400
@@ -1364,7 +1374,7 @@ Begin VB.Form FrmAccountingReport
                         Top             =   4260
                         Width           =   3405
                         _ExtentX        =   6006
-                        _ExtentY        =   556
+                        _ExtentY        =   582
                         _Version        =   393216
                         Text            =   ""
                         RightToLeft     =   -1  'True
@@ -1376,7 +1386,7 @@ Begin VB.Form FrmAccountingReport
                         Top             =   4230
                         Width           =   3045
                         _ExtentX        =   5371
-                        _ExtentY        =   556
+                        _ExtentY        =   582
                         _Version        =   393216
                         BackColor       =   16777215
                         Text            =   ""
@@ -1391,7 +1401,7 @@ Begin VB.Form FrmAccountingReport
                         Visible         =   0   'False
                         Width           =   6225
                         _ExtentX        =   10980
-                        _ExtentY        =   556
+                        _ExtentY        =   582
                         _Version        =   393216
                         BackColor       =   16777215
                         ListField       =   "account_name"
@@ -1399,7 +1409,7 @@ Begin VB.Form FrmAccountingReport
                         Text            =   ""
                         RightToLeft     =   -1  'True
                         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                           Name            =   "MS Sans Serif"
+                           Name            =   "Arial"
                            Size            =   8.25
                            Charset         =   178
                            Weight          =   400
@@ -1420,8 +1430,9 @@ Begin VB.Form FrmAccountingReport
                         ButtonPositionImage=   1
                         Caption         =   "ÿ»«⁄…"
                         BackColor       =   14871017
+                        FontName        =   "Arial"
                         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                           Name            =   "MS Sans Serif"
+                           Name            =   "Arial"
                            Size            =   8.25
                            Charset         =   178
                            Weight          =   400
@@ -1443,7 +1454,7 @@ Begin VB.Form FrmAccountingReport
                         Top             =   3600
                         Width           =   7485
                         _ExtentX        =   13203
-                        _ExtentY        =   556
+                        _ExtentY        =   582
                         _Version        =   393216
                         BackColor       =   16777215
                         ListField       =   ""
@@ -1451,7 +1462,7 @@ Begin VB.Form FrmAccountingReport
                         Text            =   ""
                         RightToLeft     =   -1  'True
                         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                           Name            =   "MS Sans Serif"
+                           Name            =   "Arial"
                            Size            =   8.25
                            Charset         =   178
                            Weight          =   400
@@ -1468,7 +1479,7 @@ Begin VB.Form FrmAccountingReport
                         Top             =   150
                         Width           =   1845
                         _ExtentX        =   3254
-                        _ExtentY        =   556
+                        _ExtentY        =   582
                         _Version        =   393216
                         BackColor       =   16777215
                         ListField       =   "account_name"
@@ -1476,7 +1487,7 @@ Begin VB.Form FrmAccountingReport
                         Text            =   ""
                         RightToLeft     =   -1  'True
                         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                           Name            =   "MS Sans Serif"
+                           Name            =   "Arial"
                            Size            =   8.25
                            Charset         =   178
                            Weight          =   400
@@ -1492,7 +1503,7 @@ Begin VB.Form FrmAccountingReport
                         Top             =   840
                         Width           =   4605
                         _ExtentX        =   8123
-                        _ExtentY        =   556
+                        _ExtentY        =   582
                         _Version        =   393216
                         BackColor       =   16777215
                         Text            =   ""
@@ -1505,7 +1516,7 @@ Begin VB.Form FrmAccountingReport
                         Top             =   3240
                         Width           =   7470
                         _ExtentX        =   13176
-                        _ExtentY        =   556
+                        _ExtentY        =   582
                         _Version        =   393216
                         Style           =   2
                         BackColor       =   -2147483624
@@ -1520,7 +1531,7 @@ Begin VB.Form FrmAccountingReport
                         Top             =   2880
                         Width           =   7485
                         _ExtentX        =   13203
-                        _ExtentY        =   556
+                        _ExtentY        =   582
                         _Version        =   393216
                         BackColor       =   16777215
                         ListField       =   ""
@@ -1528,7 +1539,7 @@ Begin VB.Form FrmAccountingReport
                         Text            =   ""
                         RightToLeft     =   -1  'True
                         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                           Name            =   "MS Sans Serif"
+                           Name            =   "Arial"
                            Size            =   8.25
                            Charset         =   178
                            Weight          =   400
@@ -1545,7 +1556,7 @@ Begin VB.Form FrmAccountingReport
                         Top             =   1470
                         Width           =   2385
                         _ExtentX        =   4207
-                        _ExtentY        =   556
+                        _ExtentY        =   582
                         _Version        =   393216
                         BackColor       =   16777215
                         ListField       =   "account_name"
@@ -1553,7 +1564,7 @@ Begin VB.Form FrmAccountingReport
                         Text            =   ""
                         RightToLeft     =   -1  'True
                         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                           Name            =   "MS Sans Serif"
+                           Name            =   "Arial"
                            Size            =   8.25
                            Charset         =   178
                            Weight          =   400
@@ -1852,7 +1863,7 @@ Begin VB.Form FrmAccountingReport
                   Begin VB.Frame Frame9 
                      BackColor       =   &H00E2E9E9&
                      Caption         =   "·„⁄œ… „Õœœ…"
-                     Height          =   1335
+                     Height          =   1320
                      Left            =   18720
                      RightToLeft     =   -1  'True
                      TabIndex        =   46
@@ -1950,7 +1961,7 @@ Begin VB.Form FrmAccountingReport
                      Left            =   11295
                      RightToLeft     =   -1  'True
                      TabIndex        =   36
-                     Top             =   5580
+                     Top             =   5565
                      Visible         =   0   'False
                      Width           =   5970
                      Begin MSDataListLib.DataCombo DCCar 
@@ -1961,7 +1972,7 @@ Begin VB.Form FrmAccountingReport
                         Top             =   240
                         Width           =   3015
                         _ExtentX        =   5318
-                        _ExtentY        =   556
+                        _ExtentY        =   582
                         _Version        =   393216
                         BackColor       =   16777215
                         ListField       =   "account_name"
@@ -1969,7 +1980,7 @@ Begin VB.Form FrmAccountingReport
                         Text            =   ""
                         RightToLeft     =   -1  'True
                         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                           Name            =   "MS Sans Serif"
+                           Name            =   "Arial"
                            Size            =   8.25
                            Charset         =   178
                            Weight          =   400
@@ -2092,7 +2103,7 @@ Begin VB.Form FrmAccountingReport
                      RightToLeft     =   -1  'True
                      ScrollBars      =   2  'Vertical
                      TabIndex        =   25
-                     Top             =   6375
+                     Top             =   6360
                      Visible         =   0   'False
                      Width           =   9510
                   End
@@ -2180,7 +2191,7 @@ Begin VB.Form FrmAccountingReport
                      Left            =   -2490
                      RightToLeft     =   -1  'True
                      TabIndex        =   11
-                     Top             =   5910
+                     Top             =   5895
                      Visible         =   0   'False
                      Width           =   2190
                   End
@@ -2226,10 +2237,10 @@ Begin VB.Form FrmAccountingReport
                      Height          =   315
                      Left            =   -4590
                      TabIndex        =   56
-                     Top             =   6510
+                     Top             =   6495
                      Width           =   2505
                      _ExtentX        =   4419
-                     _ExtentY        =   556
+                     _ExtentY        =   582
                      _Version        =   393216
                      BackColor       =   16777215
                      ListField       =   ""
@@ -2237,7 +2248,7 @@ Begin VB.Form FrmAccountingReport
                      Text            =   ""
                      RightToLeft     =   -1  'True
                      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                        Name            =   "MS Sans Serif"
+                        Name            =   "Arial"
                         Size            =   8.25
                         Charset         =   178
                         Weight          =   400
@@ -2280,7 +2291,7 @@ Begin VB.Form FrmAccountingReport
                      Left            =   -2640
                      RightToLeft     =   -1  'True
                      TabIndex        =   57
-                     Top             =   6510
+                     Top             =   6495
                      Width           =   690
                   End
                   Begin VB.Label Label3 
@@ -2291,7 +2302,7 @@ Begin VB.Form FrmAccountingReport
                      Left            =   13185
                      RightToLeft     =   -1  'True
                      TabIndex        =   54
-                     Top             =   6510
+                     Top             =   6495
                      Width           =   840
                   End
                   Begin VB.Label lbl 
@@ -2316,7 +2327,7 @@ Begin VB.Form FrmAccountingReport
                      Left            =   10620
                      RightToLeft     =   -1  'True
                      TabIndex        =   26
-                     Top             =   6705
+                     Top             =   6690
                      Visible         =   0   'False
                      Width           =   885
                   End
@@ -2324,7 +2335,7 @@ Begin VB.Form FrmAccountingReport
                      Alignment       =   2  'Center
                      BackColor       =   &H00C0C8C0&
                      BeginProperty Font 
-                        Name            =   "MS Sans Serif"
+                        Name            =   "Arial"
                         Size            =   8.25
                         Charset         =   178
                         Weight          =   700
@@ -2345,7 +2356,7 @@ Begin VB.Form FrmAccountingReport
                   Height          =   345
                   Left            =   2730
                   TabIndex        =   15
-                  Top             =   6705
+                  Top             =   6690
                   Visible         =   0   'False
                   Width           =   1560
                   _ExtentX        =   2752
@@ -2354,7 +2365,7 @@ Begin VB.Form FrmAccountingReport
                   CalendarBackColor=   -2147483624
                   CalendarTitleBackColor=   10383715
                   CustomFormat    =   "yyyy/M/d"
-                  Format          =   198574083
+                  Format          =   202571779
                   CurrentDate     =   37958
                End
                Begin MSComctlLib.ImageList ImgLstChartTree 
@@ -2400,7 +2411,7 @@ Begin VB.Form FrmAccountingReport
                   Left            =   6255
                   RightToLeft     =   -1  'True
                   TabIndex        =   16
-                  Top             =   6225
+                  Top             =   6210
                   Visible         =   0   'False
                   Width           =   300
                End
@@ -2437,7 +2448,7 @@ Begin VB.Form FrmAccountingReport
             BorderStyle     =   1
             Enabled         =   -1  'True
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2533,8 +2544,9 @@ Begin VB.Form FrmAccountingReport
          _ExtentY        =   1217
          Caption         =   "»ÕÀ"
          BackColor       =   14871017
+         FontName        =   "Arial"
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -4248,11 +4260,11 @@ Function CuurentLogdata(Optional Currentmode As String)
     If i = 0 Then
         LogTextA = LogTextA & CHR(13) & "?????? " & LblAccountName.Caption
     ElseIf i = 9 Then
-        LogTextA = LogTextA & CHR(13) & " ??????" & DcCostCenter.text
+        LogTextA = LogTextA & CHR(13) & " ??????" & DcCostCenter.Text
     ElseIf i = 10 Then
-        LogTextA = LogTextA & CHR(13) & " ??????  " & dcprojects.text
+        LogTextA = LogTextA & CHR(13) & " ??????  " & dcprojects.Text
     ElseIf i = 13 Then
-        LogTextA = LogTextA & CHR(13) & " ??????  " & DCEmployee.text
+        LogTextA = LogTextA & CHR(13) & " ??????  " & DCEmployee.Text
 
     End If
 
@@ -4561,10 +4573,10 @@ Screen.MousePointer = vbDefault
             '   getOpeningBalancedate DTPickerAccFrom.value, DTPickerAccTo.value, returnedfromdate, returnedTOdate
             '    update_account_opening_balance StrAccountCode, True, DTPickerAccFrom.value, DTPickerAccTo.value, Val(dcBranch.BoundText), openingbalacedate
                  
-            If txt_mod_flag.text = "N" Then
+            If txt_mod_flag.Text = "N" Then
                 '??? ????
             
-                If Me.TrvAccounts.SelectedItem Is Nothing Or Me.TxtAccountCode.text = "" Then
+                If Me.TrvAccounts.SelectedItem Is Nothing Or Me.TxtAccountCode.Text = "" Then
                     Msg = "??? ?????? ??? ?????? ??????" & CHR(13) & "?????? ??? ??????? ?? ?? ???? ?????? ????????"
                     MsgBox Msg, vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                     Screen.MousePointer = vbDefault
@@ -4576,12 +4588,12 @@ Screen.MousePointer = vbDefault
                     Exit Sub
                 End If
 
-                If Me.TxtAccountCode.text <> "" Then
+                If Me.TxtAccountCode.Text <> "" Then
         
                 Else
                     StrAccountCode = Me.TrvAccounts.SelectedItem.key
                     
-                    StrAccountName = Me.TrvAccounts.SelectedItem.text
+                    StrAccountName = Me.TrvAccounts.SelectedItem.Text
                     If StrAccountName = "" Then
                         StrAccountName = LblAccountName
                     End If
@@ -4683,7 +4695,7 @@ lblNext:
 
             End If
             If i = 0 Then
-                If Text1.text = "" Then
+                If Text1.Text = "" Then
                     Set cAccountReport = New ClsAccReports
                     cAccountReport.BegineDate = Me.DTPickerAccFrom.value
                     cAccountReport.EndDate = Me.DTPickerAccTo.value
@@ -4710,9 +4722,9 @@ lblNext:
   
             If AccColl.count > 0 Then
                     StrAccountCode = Join(collectionToArray(AccColl), ",")
-                    cAccountReport.ShowLedger1 StrAccountCode, StrAccountName, Text1.text, True
+                    cAccountReport.ShowLedger1 StrAccountCode, StrAccountName, Text1.Text, True
                 Else
-                    cAccountReport.ShowLedger1 StrAccountCode, StrAccountName, Text1.text
+                    cAccountReport.ShowLedger1 StrAccountCode, StrAccountName, Text1.Text
             End If
             
             Set cAccountReport = Nothing
@@ -4732,7 +4744,7 @@ lblNext:
             End If
         Case 36
           
-            If txt_mod_flag.text = "N" Then
+            If txt_mod_flag.Text = "N" Then
                 '??? ????
             
                 If Me.TrvAccounts.SelectedItem Is Nothing Then
@@ -4747,11 +4759,11 @@ lblNext:
                     Exit Sub
                 End If
 
-                If Me.TxtAccountCode.text <> "" Then
+                If Me.TxtAccountCode.Text <> "" Then
         
                 Else
                     StrAccountCode = Me.TrvAccounts.SelectedItem.key
-                    StrAccountName = Me.TrvAccounts.SelectedItem.text
+                    StrAccountName = Me.TrvAccounts.SelectedItem.Text
                 End If
             End If
     
@@ -4802,7 +4814,7 @@ lblNext:
 
             End If
  
-            If Text1.text = "" Then
+            If Text1.Text = "" Then
                 Set cAccountReport = New ClsAccReports
                 cAccountReport.BegineDate = Me.DTPickerAccFrom.value
                 cAccountReport.EndDate = Me.DTPickerAccTo.value
@@ -4817,16 +4829,16 @@ lblNext:
                 cAccountReport.EndDate = Me.DTPickerAccTo.value
                 updateprofitAccount val(Me.DCActivity.BoundText), val(Me.dcBranch.BoundText), Me.DTPickerAccTo.value
   
-                cAccountReport.ShowLedger1 StrAccountCode, StrAccountName, Text1.text, , 1
+                cAccountReport.ShowLedger1 StrAccountCode, StrAccountName, Text1.Text, , 1
                 Set cAccountReport = Nothing
             
             End If
 
         Case 32 '?????? ??????
        
-            If txt_mod_flag.text = "N" Then
+            If txt_mod_flag.Text = "N" Then
       
-                If Me.TxtAccountCode.text <> "" Then
+                If Me.TxtAccountCode.Text <> "" Then
         
                 Else
                     StrAccountCode = Me.TrvAccounts.SelectedItem.key
@@ -4834,7 +4846,7 @@ lblNext:
                         StrAccountCode = mId(StrAccountCode, 1, Len(StrAccountCode) - 1)
                     
                     End If
-                    StrAccountName = Me.TrvAccounts.SelectedItem.text
+                    StrAccountName = Me.TrvAccounts.SelectedItem.Text
                 End If
             End If
     
@@ -4858,7 +4870,7 @@ lblNext:
             '           updateprofitAccount val(Me.DCActivity.BoundText), val(Me.dcBranch.BoundText), Me.DTPickerAccTo.value
             ' updateprofitAccount val(Me.DCActivity.BoundText), val(Me.dcBranch.BoundText), Me.DTEnddate.value
             
-            cAccountReport.ShowLedgers GetAlLastAccounts(StrAccountCode), "", Text1.text, True
+            cAccountReport.ShowLedgers GetAlLastAccounts(StrAccountCode), "", Text1.Text, True
             Set cAccountReport = Nothing
 
         Case 27
@@ -4868,7 +4880,7 @@ lblNext:
             '   getOpeningBalancedate DTPickerAccFrom.value, DTPickerAccTo.value, returnedfromdate, returnedTOdate
             '    update_account_opening_balance StrAccountCode, True, DTPickerAccFrom.value, DTPickerAccTo.value, Val(dcBranch.BoundText), openingbalacedate
                  
-            If txt_mod_flag.text = "N" Then
+            If txt_mod_flag.Text = "N" Then
                 '??? ????
             
                 If Me.TrvAccounts.SelectedItem Is Nothing Then
@@ -4883,11 +4895,11 @@ lblNext:
                     Exit Sub
                 End If
 
-                If Me.TxtAccountCode.text <> "" Then
+                If Me.TxtAccountCode.Text <> "" Then
         
                 Else
                     StrAccountCode = Me.TrvAccounts.SelectedItem.key
-                    StrAccountName = Me.TrvAccounts.SelectedItem.text
+                    StrAccountName = Me.TrvAccounts.SelectedItem.Text
                 End If
             End If
     
@@ -4985,7 +4997,7 @@ lblNext:
             cAccountReport.EndDate = Me.DTPickerAccTo.value
             updateprofitAccount val(Me.DCActivity.BoundText), val(Me.dcBranch.BoundText), Me.DTPickerAccTo.value
   
-            cAccountReport.ShowLedger StrAccountCode, StrAccountName, , , , val(FrmAccountingReport.DCActivity.BoundText), val(FrmAccountingReport.dcBranch.BoundText), CustomerAgeingData, salesPersonName, ShowAgingReport, TxtAccountCode, val(Me.dcprojects.BoundText), dcprojects.text
+            cAccountReport.ShowLedger StrAccountCode, StrAccountName, , , , val(FrmAccountingReport.DCActivity.BoundText), val(FrmAccountingReport.dcBranch.BoundText), CustomerAgeingData, salesPersonName, ShowAgingReport, TxtAccountCode, val(Me.dcprojects.BoundText), dcprojects.Text
             Set cAccountReport = Nothing
             
         Case 34
@@ -5341,7 +5353,7 @@ lblNext2:
                 updateopeningbalanceNewFromsqlTrialBalance DTPickerAccFrom.value, DTPickerAccTo.value, True, val(Me.DCActivity.BoundText), val(Me.dcBranch.BoundText), , 5, , ShowLastAccount, val(DCRegionID.BoundText)
             End If
  
-            If val(Me.Txtyear.text) > 0 Then
+            If val(Me.Txtyear.Text) > 0 Then
                 updateAccountsmanully val(Me.Txtyear)
             End If
             
@@ -5459,7 +5471,7 @@ lblNext2:
        
         Case 42
      
-            If txt_mod_flag.text = "N" Then
+            If txt_mod_flag.Text = "N" Then
                 '??? ????
             
                 If Me.TrvAccounts.SelectedItem Is Nothing Then
@@ -5474,12 +5486,12 @@ lblNext2:
                     Exit Sub
                 End If
 
-                If Me.TxtAccountCode.text <> "" Then
+                If Me.TxtAccountCode.Text <> "" Then
         
                 Else
                     StrAccountCode = Me.TrvAccounts.SelectedItem.key
                     
-                    StrAccountName = Me.TrvAccounts.SelectedItem.text
+                    StrAccountName = Me.TrvAccounts.SelectedItem.Text
                     If StrAccountName = "" Then
                         StrAccountName = LblAccountName
                     End If
@@ -5681,7 +5693,7 @@ lblNext2:
             cAccountReport.EndDate = Me.DTPickerAccTo.value
             updateprofitAccount val(Me.DCActivity.BoundText), val(Me.dcBranch.BoundText), Me.DTPickerAccTo.value
   
-            cAccountReport.ShowLedgerComposite StrAccountCode, DCCompositeAccount.text, True, , , val(FrmAccountingReport.DCActivity.BoundText), val(FrmAccountingReport.dcBranch.BoundText), CustomerAgeingData, salesPersonName, ShowAgingReport, TxtAccountCode
+            cAccountReport.ShowLedgerComposite StrAccountCode, DCCompositeAccount.Text, True, , , val(FrmAccountingReport.DCActivity.BoundText), val(FrmAccountingReport.dcBranch.BoundText), CustomerAgeingData, salesPersonName, ShowAgingReport, TxtAccountCode
             Set cAccountReport = Nothing
         
         Case 31
@@ -5708,7 +5720,7 @@ lblNext2:
             cAccountReport.EndDate = Me.DTPickerAccTo.value
             updateprofitAccount val(Me.DCActivity.BoundText), val(Me.dcBranch.BoundText), Me.DTPickerAccTo.value
   
-            cAccountReport.ShowLedgerComposite StrAccountCode, DCEmployee.text, True, , , val(FrmAccountingReport.DCActivity.BoundText), val(FrmAccountingReport.dcBranch.BoundText), CustomerAgeingData, salesPersonName, ShowAgingReport, TxtAccountCode
+            cAccountReport.ShowLedgerComposite StrAccountCode, DCEmployee.Text, True, , , val(FrmAccountingReport.DCActivity.BoundText), val(FrmAccountingReport.dcBranch.BoundText), CustomerAgeingData, salesPersonName, ShowAgingReport, TxtAccountCode
             Set cAccountReport = Nothing
             
         Case 13
@@ -5785,7 +5797,7 @@ lblNext2:
             cAccountReport.EndDate = Me.DTPickerAccTo.value
           
             ' cAccountReport.ShowTrialBalance Val(Me.dcBranch.BoundText), Val(Me.DCActivity.BoundText)
-            cAccountReport.ShowTrialBalanceNew3 val(Me.dcBranch.BoundText), val(Me.DCActivity.BoundText), , account_level, HideZeroBalance, , StrAccountCode, Me.dcprojects.text
+            cAccountReport.ShowTrialBalanceNew3 val(Me.dcBranch.BoundText), val(Me.DCActivity.BoundText), , account_level, HideZeroBalance, , StrAccountCode, Me.dcprojects.Text
        
             Set cAccountReport = Nothing
     End Select
@@ -5928,7 +5940,7 @@ MySQL = MySQL & "  Where (     dbo.marakes_taklefa_temp.line_no<>0 and dbo.marak
         MySQL = MySQL + " and NoteDate <=" & SQLDate(Me.DTPickerAccTo.value, True) & ""
     End If
     
-       If Trim(cmbAccount.BoundText) <> "" And Trim(cmbAccount.text) <> "" Then
+       If Trim(cmbAccount.BoundText) <> "" And Trim(cmbAccount.Text) <> "" Then
             MySQL = MySQL & "   and  ACCOUNTS.Account_Code IN (SELECT Code"
             MySQL = MySQL & "                     FROM   [FN_MAIN_ACCOUNT_SUB_CODES]('" & Trim(cmbAccount.BoundText) & "', '" & Trim(cmbAccount.BoundText) & "', 1))"
             MySQL = MySQL & "  OR (ACCOUNTS.Account_Code = '" & Trim(cmbAccount.BoundText) & "')"
@@ -7276,9 +7288,9 @@ End If
 
         If fullcode <> "" Then
             If SystemOptions.Items_or_operation = 0 Then
-                StrReportTitle = "????? ????? " + dcprojects + " ??? ?????? " + Me.Dcdetails.text
+                StrReportTitle = "????? ????? " + dcprojects + " ??? ?????? " + Me.Dcdetails.Text
             ElseIf SystemOptions.Items_or_operation = 1 Then
-                StrReportTitle = "????? ????? " + dcprojects + " ??? ???????? " + Me.Dcdetails.text
+                StrReportTitle = "????? ????? " + dcprojects + " ??? ???????? " + Me.Dcdetails.Text
             End If
         End If
 
@@ -7358,7 +7370,7 @@ Function ShowGLto_project(project_id As Integer, Optional Pand As Double, Option
             
             MySQL = MySQL & " Where RptLedger_sub_projects.project_id = " & project_id
             MySQL = MySQL & " and ACCOUNTS.AccountTypes = 2 and ACCOUNTS.AccountTab = 3"
-            If Dcdetails.text <> "" And val(Dcdetails.BoundText) <> 0 Then
+            If Dcdetails.Text <> "" And val(Dcdetails.BoundText) <> 0 Then
                 MySQL = MySQL & " and projects_des.oprid= " & val(Dcdetails.BoundText)
             End If
         ElseIf chk(1).value = vbChecked Then
@@ -7372,7 +7384,7 @@ Function ShowGLto_project(project_id As Integer, Optional Pand As Double, Option
         MySQL = MySQL & "                          projects_des"
        MySQL = MySQL & "                          On RptLedger_sub_projects.project_id = projects_des.project_id"
             MySQL = MySQL & " Where RptLedger_sub_projects.project_id = " & project_id
-            If Dcdetails.text <> "" And val(Dcdetails.BoundText) <> 0 Then
+            If Dcdetails.Text <> "" And val(Dcdetails.BoundText) <> 0 Then
                 MySQL = MySQL & " and projects_des.oprid= " & val(Dcdetails.BoundText)
             End If
             
@@ -7380,7 +7392,7 @@ Function ShowGLto_project(project_id As Integer, Optional Pand As Double, Option
         End If
         
         'DCAccounts
-        If Trim(cmbAccount.BoundText) <> "" And Trim(cmbAccount.text) <> "" Then
+        If Trim(cmbAccount.BoundText) <> "" And Trim(cmbAccount.Text) <> "" Then
             MySQL = MySQL & "   and  ACCOUNTS.Account_Code IN (SELECT Code"
             MySQL = MySQL & "                     FROM   [FN_MAIN_ACCOUNT_SUB_CODES]('" & Trim(cmbAccount.BoundText) & "', '" & Trim(cmbAccount.BoundText) & "', 1))"
             MySQL = MySQL & "  OR (ACCOUNTS.Account_Code = '" & Trim(cmbAccount.BoundText) & "')"
@@ -7389,7 +7401,7 @@ Function ShowGLto_project(project_id As Integer, Optional Pand As Double, Option
                 MySQL = MySQL & "  and  ACCOUNTS.Account_Code = '" & Account_code & "'"
             End If
         End If
-        If DCAccounts.text <> "" And DCAccounts.BoundText <> "" Then
+        If DCAccounts.Text <> "" And DCAccounts.BoundText <> "" Then
             MySQL = MySQL & "   and ACCOUNTS.Account_Code = '" & Trim(DCAccounts.BoundText) & "'"
         End If
         Account_code = get_project_customer_account(project_id, "Account_Code")
@@ -7445,12 +7457,12 @@ Function ShowGLto_project(project_id As Integer, Optional Pand As Double, Option
     
     
          'DCAccounts
-        If Trim(cmbAccount.BoundText) <> "" And Trim(cmbAccount.text) <> "" Then
+        If Trim(cmbAccount.BoundText) <> "" And Trim(cmbAccount.Text) <> "" Then
             MySQL = MySQL & "   and  ACCOUNTS.Account_Code IN (SELECT Code"
             MySQL = MySQL & "                     FROM   [FN_MAIN_ACCOUNT_SUB_CODES]('" & Trim(cmbAccount.BoundText) & "', '" & Trim(cmbAccount.BoundText) & "', 1))"
             MySQL = MySQL & "  OR (ACCOUNTS.Account_Code = '" & Trim(cmbAccount.BoundText) & "')"
         End If
-    If Trim(cmbDataTypeExchange.text) <> "" And val(cmbDataTypeExchange.BoundText) <> 0 Then
+    If Trim(cmbDataTypeExchange.Text) <> "" And val(cmbDataTypeExchange.BoundText) <> 0 Then
         MySQL = MySQL & "  and ExpensesType.DataTypeExchangeCode=" & val(cmbDataTypeExchange.BoundText)
     
     End If
@@ -7572,17 +7584,17 @@ End If
  
 
    StrReportTitle = "Projects " + dcprojects + CHR(13)
-        If Dcdetails.text <> "" Then
+        If Dcdetails.Text <> "" Then
            
-                StrReportTitle = StrReportTitle + " Projects " + Me.Dcdetails.text + CHR(13)
+                StrReportTitle = StrReportTitle + " Projects " + Me.Dcdetails.Text + CHR(13)
         
         End If
         
         
         
-        If DcbProcess1.text <> "" Then
+        If DcbProcess1.Text <> "" Then
            
-                StrReportTitle = StrReportTitle + " Projects  " + Me.DcbProcess1.text + CHR(13)
+                StrReportTitle = StrReportTitle + " Projects  " + Me.DcbProcess1.Text + CHR(13)
         
         End If
         
@@ -7760,9 +7772,9 @@ End Sub
 
 Private Sub CmdLoadTree_Click()
     ModTree.LoadTreeAccount Me.TrvAccounts
-    Me.TrvAccounts.Nodes("r").EnsureVisible
-    Me.TrvAccounts.Nodes("r").Expanded = True
-    Me.TrvAccounts.Nodes("r").Selected = True
+    Me.TrvAccounts.nodes("r").EnsureVisible
+    Me.TrvAccounts.nodes("r").Expanded = True
+    Me.TrvAccounts.nodes("r").Selected = True
 
 End Sub
 
@@ -7793,7 +7805,7 @@ End Sub
 
 Private Sub Command2_Click()
 LblAccountName.Caption = ""
-TxtAccountCode.text = ""
+TxtAccountCode.Text = ""
 StrAccountCode = ""
  StrAccountName = ""
  
@@ -7852,11 +7864,11 @@ Private Sub TxtAccountCode2_KeyUp(KeyCode As Integer, Shift As Integer)
 
    
             If KeyCode = vbKeyReturn Then
-                If Trim(Me.TxtAccountCode2.text) = "" Then Exit Sub
+                If Trim(Me.TxtAccountCode2.Text) = "" Then Exit Sub
                 If chk(0).value = vbChecked Then
-                    StrSQL = "Select Account_Code From ACCOUNTS Where Account_Serial='" & Trim(Me.TxtAccountCode2.text) & "' and AccountTab = 3 and last_account = 0 AND [Level] >=3"
+                    StrSQL = "Select Account_Code From ACCOUNTS Where Account_Serial='" & Trim(Me.TxtAccountCode2.Text) & "' and AccountTab = 3 and last_account = 0 AND [Level] >=3"
                 ElseIf chk(1).value = vbChecked Then
-                    StrSQL = " Select Account_Code From ACCOUNTS Where Account_Serial='" & Trim(Me.TxtAccountCode2.text) & "' and AccountTab = 2 and last_account = 0 AND [Level] >=3"
+                    StrSQL = " Select Account_Code From ACCOUNTS Where Account_Serial='" & Trim(Me.TxtAccountCode2.Text) & "' and AccountTab = 2 and last_account = 0 AND [Level] >=3"
                 End If
                 Set rs = New ADODB.Recordset
                 rs.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
@@ -7874,7 +7886,7 @@ Private Sub TxtSearchCode_KeyPress(KeyAscii As Integer)
     Dim EmpID As Integer
 
     If KeyAscii = vbKeyReturn Then
-        GetEmployeeIDFromCode TxtSearchCode.text, EmpID
+        GetEmployeeIDFromCode TxtSearchCode.Text, EmpID
         DCEmployee.BoundText = EmpID
     End If
 
@@ -7887,7 +7899,7 @@ Private Sub DcEmployee_Click(Area As Integer)
     Dim EmpCode  As String
  
     GetEmployeeIDFromCode , , DCEmployee.BoundText, EmpCode
-    TxtSearchCode.text = EmpCode
+    TxtSearchCode.Text = EmpCode
  
 End Sub
 
@@ -7919,7 +7931,7 @@ Private Sub dcprojects_Click(Area As Integer)
    Dim fullcode As String
     If dcprojects.BoundText <> "" Then
    GetProjectsDetail val(dcprojects.BoundText), , fullcode
-       Text2.text = fullcode
+       Text2.Text = fullcode
            fillterms1 (val(dcprojects.BoundText))
     End If
     
@@ -7952,13 +7964,13 @@ sql = sql & "                      Emp_Namee3, Emp_Namee4, Fullcode, dbo.GetBala
 sql = sql & "                       dbo.GetSalEmployee(Emp_ID, '" & SQLDate(DTPickerAccFrom.value) & "', '" & SQLDate(DTPickerAccTo.value) & "') AS Pay"
 sql = sql & "  From dbo.TblEmployee"
 sql = sql & "  Where 1=1"
-If val(DCEmployee.BoundText) <> 0 And DCEmployee.text <> "" Then
+If val(DCEmployee.BoundText) <> 0 And DCEmployee.Text <> "" Then
 sql = sql & " and Emp_id =" & val(DCEmployee.BoundText) & " "
 End If
-If val(DcboEmpDepartments.BoundText) <> 0 And DcboEmpDepartments.text <> "" Then
+If val(DcboEmpDepartments.BoundText) <> 0 And DcboEmpDepartments.Text <> "" Then
 sql = sql & " and DepartmentID =" & val(DcboEmpDepartments.BoundText) & " "
 End If
-If val(dcBranch.BoundText) <> 0 And dcBranch.text <> "" Then
+If val(dcBranch.BoundText) <> 0 And dcBranch.Text <> "" Then
 sql = sql & " and BranchID =" & val(dcBranch.BoundText) & " "
 End If
 print_report sql
@@ -8018,22 +8030,22 @@ MySQL = NoteSerial
     Dim str As String
     str = ""
     If SystemOptions.UserInterface = ArabicInterface Then
-    If val(dcBranch.BoundText) <> 0 And dcBranch.text <> "" Then
-     str = str & "  " & dcBranch.text
+    If val(dcBranch.BoundText) <> 0 And dcBranch.Text <> "" Then
+     str = str & "  " & dcBranch.Text
     End If
-    If val(DcboEmpDepartments.BoundText) <> 0 And DcboEmpDepartments.text <> "" Then
+    If val(DcboEmpDepartments.BoundText) <> 0 And DcboEmpDepartments.Text <> "" Then
     str = str & "  "
-    str = str & "  " & DcboEmpDepartments.text
+    str = str & "  " & DcboEmpDepartments.Text
     End If
     Else
-      If val(dcBranch.BoundText) <> 0 And dcBranch.text <> "" Then
+      If val(dcBranch.BoundText) <> 0 And dcBranch.Text <> "" Then
    
-    str = str & "  " & dcBranch.text
+    str = str & "  " & dcBranch.Text
     End If
-    If val(DcboEmpDepartments.BoundText) <> 0 And DcboEmpDepartments.text <> "" Then
+    If val(DcboEmpDepartments.BoundText) <> 0 And DcboEmpDepartments.Text <> "" Then
     str = str & "  "
     
-    str = str & "  " & DcboEmpDepartments.text
+    str = str & "  " & DcboEmpDepartments.Text
     End If
     End If
     xReport.ParameterFields(4).AddCurrentValue str
@@ -8288,7 +8300,7 @@ Private Sub Form_Unload(Cancel As Integer)
 End Sub
 
 Private Sub ISButton1_Click()
-    txt_mod_flag.text = "S"
+    txt_mod_flag.Text = "S"
  
     Account_search.show
     Account_search.case_id = 1
@@ -8301,7 +8313,7 @@ Public Function Set_account_code(code As String, _
     StrAccountCode = code
     StrAccountName = Name
     Me.LblAccountName.Caption = Name
-    TxtAccountCode.text = account_serial
+    TxtAccountCode.Text = account_serial
 
 End Function
 Function print_report3(Optional NoteSerial As String)
@@ -8333,7 +8345,7 @@ On Error GoTo ErrTrap
    Dim StartCurrentDate As Date
    Dim BrcnActivety As String
  
-
+Dim AqarFilter_d As String, AqarFilter_d1 As String, AqarFilter_do As String, AqarFilterExistsV As String
    FromdateMinus1 = DateAdd("d", -1, DTPickerAccFrom.value)
     getFirstPeriodDateInthisYear2 openingBalanceDate
     getFirstPeriodDateInthisYear StartCurrentDate
@@ -8464,7 +8476,7 @@ End If
   If val(DCRegionID.BoundText) <> 0 Then
   sql = sql & " and do.branch_id in (" & BranshesReg & ")"
   End If
- ' sql = sql & AqarFilter_do
+  sql = sql & AqarFilter_do
 
   If val(dcBranch.BoundText) <> 0 Then
  sql = sql & " and do.branch_id =" & val(dcBranch.BoundText) & ""
@@ -8485,7 +8497,7 @@ sql = sql & "  )) x),"
   If val(dcBranch.BoundText) <> 0 Then
   sql = sql & " and do.branch_id =" & val(dcBranch.BoundText) & ""
   End If
-'  sql = sql & AqarFilter_do
+  sql = sql & AqarFilter_do
 '
   sql = sql & " ) x),"
   sql = sql & "                    OpeningBalancebeformStartCurrentyearTOFromDAteminus1 ="
@@ -8596,7 +8608,7 @@ sql = sql & "  )) x),"
     sql = sql & "order by Account_Serial "
     
     
-    Dim AqarFilter_d As String, AqarFilter_d1 As String, AqarFilter_do As String, AqarFilterExistsV As String
+    
 
 AqarFilter_d = "": AqarFilter_d1 = "": AqarFilter_do = "": AqarFilterExistsV = ""
 
@@ -8731,27 +8743,52 @@ sCredit = sCredit & AqarFilter_d1 & " ) x ), "
 'If val(dcBranch.BoundText) <> 0 Then sOpen = sOpen & " AND v1.branch_id=" & val(dcBranch.BoundText)
 '
 'sOpen = sOpen & " ) x ), "
-If val(DcbAqar.BoundText) = 0 Then
-    ' OpeningBalance „‰ vouchers1 (⁄«œÌ)
-    sOpen = " OpeningBalance=(" & _
-            " SELECT SUM(DEV_Value1)+SUM(DEV_Value2) FROM (" & _
-            "  SELECT Account_Code," & _
-            "   DEV_Value1=CASE WHEN Credit_Or_Debit=0 THEN Value ELSE 0 END," & _
-            "   DEV_Value2=CASE WHEN Credit_Or_Debit=1 THEN Value*-1 ELSE 0 END" & _
-            "  FROM dbo.DOUBLE_ENTREY_VOUCHERS1 v1" & _
-            "  WHERE v1.Account_Code=A.Account_Code" & _
-            "   AND v1.Posted IS NULL "
+'If val(DcbAqar.BoundText) = 0 Then
+'    ' OpeningBalance „‰ vouchers1 (⁄«œÌ)
+'    sOpen = " OpeningBalance=(" & _
+'            " SELECT SUM(DEV_Value1)+SUM(DEV_Value2) FROM (" & _
+'            "  SELECT Account_Code," & _
+'            "   DEV_Value1=CASE WHEN Credit_Or_Debit=0 THEN Value ELSE 0 END," & _
+'            "   DEV_Value2=CASE WHEN Credit_Or_Debit=1 THEN Value*-1 ELSE 0 END" & _
+'            "  FROM dbo.DOUBLE_ENTREY_VOUCHERS1 v1" & _
+'            "  WHERE v1.Account_Code=A.Account_Code" & _
+'            "   AND v1.Posted IS NULL "
+'
+'    If val(DCActivity.BoundText) <> 0 Then sOpen = sOpen & " AND v1.branch_id IN (" & BrcnActivety & ")"
+'    If val(DCRegionID.BoundText) <> 0 Then sOpen = sOpen & " AND v1.branch_id IN (" & BranshesReg & ")"
+'    If val(dcBranch.BoundText) <> 0 Then sOpen = sOpen & " AND v1.branch_id=" & val(dcBranch.BoundText)
+'
+'    sOpen = sOpen & " ) x ), "
+'Else
+'    ' ·„« ÌﬂÊ‰ ›ÌÂ ⁄ﬁ«—: „›Ì‘ OpeningBalance „‰ vouchers1
+'    sOpen = " OpeningBalance=0, "
+'End If
+sOpen = " OpeningBalance=(" & _
+        " SELECT SUM(DEV_Value1)+SUM(DEV_Value2) FROM (" & _
+        "  SELECT Account_Code," & _
+        "   DEV_Value1=CASE WHEN Credit_Or_Debit=0 THEN Value ELSE 0 END," & _
+        "   DEV_Value2=CASE WHEN Credit_Or_Debit=1 THEN Value*-1 ELSE 0 END" & _
+        "  FROM dbo.DOUBLE_ENTREY_VOUCHERS1 v1" & _
+        "  WHERE v1.Account_Code=A.Account_Code" & _
+        "   AND v1.Posted IS NULL "
 
-    If val(DCActivity.BoundText) <> 0 Then sOpen = sOpen & " AND v1.branch_id IN (" & BrcnActivety & ")"
-    If val(DCRegionID.BoundText) <> 0 Then sOpen = sOpen & " AND v1.branch_id IN (" & BranshesReg & ")"
-    If val(dcBranch.BoundText) <> 0 Then sOpen = sOpen & " AND v1.branch_id=" & val(dcBranch.BoundText)
+If val(DCActivity.BoundText) <> 0 Then sOpen = sOpen & " AND v1.branch_id IN (" & BrcnActivety & ")"
+If val(DCRegionID.BoundText) <> 0 Then sOpen = sOpen & " AND v1.branch_id IN (" & BranshesReg & ")"
+If val(dcBranch.BoundText) <> 0 Then sOpen = sOpen & " AND v1.branch_id=" & val(dcBranch.BoundText)
 
-    sOpen = sOpen & " ) x ), "
-Else
-    ' ·„« ÌﬂÊ‰ ›ÌÂ ⁄ﬁ«—: „›Ì‘ OpeningBalance „‰ vouchers1
-    sOpen = " OpeningBalance=0, "
+If val(DcbAqar.BoundText) <> 0 Then
+    sOpen = sOpen & _
+            " AND EXISTS ( " & _
+            "   SELECT 1 " & _
+            "   FROM dbo.TblCustemers cu " & _
+            "   INNER JOIN dbo.TblContract c ON cu.CusID = c.CusID " & _
+            "   INNER JOIN dbo.TblAqarDetai ad ON c.UnitNo = ad.Id " & _
+            "   WHERE cu.Account_code = v1.Account_Code " & _
+            "     AND ad.Aqarid = " & val(DcbAqar.BoundText) & _
+            " ) "
 End If
 
+sOpen = sOpen & " ) x ), "
 sOB1 = " OpeningBalancebeformdateMinus1=(" & _
        " SELECT SUM(DEV_Value1)+SUM(DEV_Value2) FROM (" & _
        "  SELECT Account_Code," & _
@@ -8892,33 +8929,33 @@ sql = sHead & sDebit & sCredit & sOpen & sOB1 & sOB2 & sFrom & sExists & " ORDER
    
     If val(DCActivity.BoundText) <> 0 Then
    If SystemOptions.UserInterface = ArabicInterface Then
-   desc = desc & "Region" & ": " & DCActivity.text & CHR(13)
+   desc = desc & "Region" & ": " & DCActivity.Text & CHR(13)
    Else
-   desc = desc & "Region" & ": " & DCActivity.text & CHR(13)
+   desc = desc & "Region" & ": " & DCActivity.Text & CHR(13)
    End If
    End If
    
    If val(DCRegionID.BoundText) <> 0 Then
    If SystemOptions.UserInterface = ArabicInterface Then
-   desc = desc & "Activity" & ": " & DCRegionID.text & CHR(13)
+   desc = desc & "Activity" & ": " & DCRegionID.Text & CHR(13)
    Else
-   desc = desc & "Activity" & ": " & DCRegionID.text & CHR(13)
+   desc = desc & "Activity" & ": " & DCRegionID.Text & CHR(13)
    End If
    End If
   If val(dcBranch.BoundText) <> 0 Then
    If SystemOptions.UserInterface = ArabicInterface Then
-   desc = desc & "Branch" & ": " & dcBranch.text & CHR(13)
+   desc = desc & "Branch" & ": " & dcBranch.Text & CHR(13)
    Else
-   desc = desc & "Branch" & ": " & dcBranch.text & CHR(13)
+   desc = desc & "Branch" & ": " & dcBranch.Text & CHR(13)
    End If
    End If
    
    
      If val(DcbAqar.BoundText) <> 0 Then
    If SystemOptions.UserInterface = ArabicInterface Then
-   desc = desc & " ⁄ﬁ«—" & ": " & DcbAqar.text & CHR(13)
+   desc = desc & " ⁄ﬁ«—" & ": " & DcbAqar.Text & CHR(13)
    Else
-   desc = desc & " Akar" & ": " & DcbAqar.text & CHR(13)
+   desc = desc & " Akar" & ": " & DcbAqar.Text & CHR(13)
    End If
    End If
    
@@ -9108,8 +9145,8 @@ If HideLastAccount = vbYes Then
     sql = sql & "        AND A.last_account = 0" & vbCrLf
 End If
 
-If (TxtAccountCode.text) <> "" Then
-    sql = sql & "        AND A.Account_Serial = '" & Replace(TxtAccountCode.text, "'", "''") & "'" & vbCrLf
+If (TxtAccountCode.Text) <> "" Then
+    sql = sql & "        AND A.Account_Serial = '" & Replace(TxtAccountCode.Text, "'", "''") & "'" & vbCrLf
 End If
 
 ' ›· — «·„” ÊÏ
@@ -9295,24 +9332,24 @@ sql = sql & "ORDER BY a.Account_Serial;" & vbCrLf
     desc = ""
     If val(DCActivity.BoundText) <> 0 Then
    If SystemOptions.UserInterface = ArabicInterface Then
-   desc = desc & "Region" & ": " & DCActivity.text & CHR(13)
+   desc = desc & "Region" & ": " & DCActivity.Text & CHR(13)
    Else
-   desc = desc & "Region" & ": " & DCActivity.text & CHR(13)
+   desc = desc & "Region" & ": " & DCActivity.Text & CHR(13)
    End If
    End If
    
    If val(DCRegionID.BoundText) <> 0 Then
    If SystemOptions.UserInterface = ArabicInterface Then
-   desc = desc & "Activity" & ": " & DCRegionID.text & CHR(13)
+   desc = desc & "Activity" & ": " & DCRegionID.Text & CHR(13)
    Else
-   desc = desc & "Activity" & ": " & DCRegionID.text & CHR(13)
+   desc = desc & "Activity" & ": " & DCRegionID.Text & CHR(13)
    End If
    End If
   If val(dcBranch.BoundText) <> 0 Then
    If SystemOptions.UserInterface = ArabicInterface Then
-   desc = desc & "Branch" & ": " & dcBranch.text & CHR(13)
+   desc = desc & "Branch" & ": " & dcBranch.Text & CHR(13)
    Else
-   desc = desc & "Branch" & ": " & dcBranch.text & CHR(13)
+   desc = desc & "Branch" & ": " & dcBranch.Text & CHR(13)
    End If
    End If
     xReport.ParameterFields(3).AddCurrentValue user_name
@@ -9545,8 +9582,8 @@ sql = sql & "  and      ( ( last_account= 0 and   do.Account_Code   like  A.Acco
   sql = sql & " WHERE  1=1   "
   End If
   
-  If (TxtAccountCode.text) <> "" Then
-  sql = sql & " and A.Account_Serial ='" & TxtAccountCode.text & "'"
+  If (TxtAccountCode.Text) <> "" Then
+  sql = sql & " and A.Account_Serial ='" & TxtAccountCode.Text & "'"
   End If
   '*****************************************************
   
@@ -9637,24 +9674,24 @@ sql = sql & " and AccountTypes=2"
     desc = ""
     If val(DCActivity.BoundText) <> 0 Then
    If SystemOptions.UserInterface = ArabicInterface Then
-   desc = desc & "Region" & ": " & DCActivity.text & CHR(13)
+   desc = desc & "Region" & ": " & DCActivity.Text & CHR(13)
    Else
-   desc = desc & "Region" & ": " & DCActivity.text & CHR(13)
+   desc = desc & "Region" & ": " & DCActivity.Text & CHR(13)
    End If
    End If
    
    If val(DCRegionID.BoundText) <> 0 Then
    If SystemOptions.UserInterface = ArabicInterface Then
-   desc = desc & "Activity" & ": " & DCRegionID.text & CHR(13)
+   desc = desc & "Activity" & ": " & DCRegionID.Text & CHR(13)
    Else
-   desc = desc & "Activity" & ": " & DCRegionID.text & CHR(13)
+   desc = desc & "Activity" & ": " & DCRegionID.Text & CHR(13)
    End If
    End If
   If val(dcBranch.BoundText) <> 0 Then
    If SystemOptions.UserInterface = ArabicInterface Then
-   desc = desc & "Branch" & ": " & dcBranch.text & CHR(13)
+   desc = desc & "Branch" & ": " & dcBranch.Text & CHR(13)
    Else
-   desc = desc & "Branch" & ": " & dcBranch.text & CHR(13)
+   desc = desc & "Branch" & ": " & dcBranch.Text & CHR(13)
    End If
    End If
     xReport.ParameterFields(3).AddCurrentValue user_name
@@ -9840,8 +9877,8 @@ If account_level <> 0 Then
         AddSQL sql, "  AND H.ParentDepth <= " & CStr(account_level)
     End If
 End If
-If (TxtAccountCode.text) <> "" Then
-    AddSQL sql, "  AND H.Account_Serial = '" & Replace(TxtAccountCode.text, "'", "''") & "'"
+If (TxtAccountCode.Text) <> "" Then
+    AddSQL sql, "  AND H.Account_Serial = '" & Replace(TxtAccountCode.Text, "'", "''") & "'"
 End If
 AddSQL sql, ";"
 AddSQL sql, "CREATE UNIQUE CLUSTERED INDEX IX_H_AccountID ON #H(Account_ID);"
@@ -9913,7 +9950,7 @@ AddSQL sql, ") F ON F.Account_ID = H.Account_ID"
 AddSQL sql, "WHERE 1=1"
 
 If HideLastAccount = 6 Then AddSQL sql, "  AND H.last_account = 0"
-If (TxtAccountCode.text) <> "" Then AddSQL sql, "  AND H.Account_Serial = '" & Replace(TxtAccountCode.text, "'", "''") & "'"
+If (TxtAccountCode.Text) <> "" Then AddSQL sql, "  AND H.Account_Serial = '" & Replace(TxtAccountCode.Text, "'", "''") & "'"
 If HideZeroBalance = 6 Then _
     AddSQL sql, "  AND (F.debitBalance <> 0 OR F.CreditBalance <> 0 OR F.OpeningBalance <> 0 OR F.OpeningBalancebeformdateMinus1 <> 0 OR F.OpeningBalancebeformStartCurrentyearTOFromDAteminus1 <> 0 OR H.last_account = 0)"
 
@@ -9980,23 +10017,23 @@ End With
     desc = ""
     If val(DCActivity.BoundText) <> 0 Then
         If SystemOptions.UserInterface = ArabicInterface Then
-            desc = desc & "«·‰‘«ÿ: " & DCActivity.text & CHR(13)
+            desc = desc & "«·‰‘«ÿ: " & DCActivity.Text & CHR(13)
         Else
-            desc = desc & "Activity: " & DCActivity.text & CHR(13)
+            desc = desc & "Activity: " & DCActivity.Text & CHR(13)
         End If
     End If
     If val(DCRegionID.BoundText) <> 0 Then
         If SystemOptions.UserInterface = ArabicInterface Then
-            desc = desc & "«·≈ﬁ·Ì„: " & DCRegionID.text & CHR(13)
+            desc = desc & "«·≈ﬁ·Ì„: " & DCRegionID.Text & CHR(13)
         Else
-            desc = desc & "Region: " & DCRegionID.text & CHR(13)
+            desc = desc & "Region: " & DCRegionID.Text & CHR(13)
         End If
     End If
     If val(dcBranch.BoundText) <> 0 Then
         If SystemOptions.UserInterface = ArabicInterface Then
-            desc = desc & "«·›—⁄: " & dcBranch.text & CHR(13)
+            desc = desc & "«·›—⁄: " & dcBranch.Text & CHR(13)
         Else
-            desc = desc & "Branch: " & dcBranch.text & CHR(13)
+            desc = desc & "Branch: " & dcBranch.Text & CHR(13)
         End If
     End If
 
@@ -10239,8 +10276,8 @@ sql = sql & "  and      ( ( last_account= 0 and   do.Account_Code   like  A.Acco
   sql = sql & " WHERE  1=1   "
   End If
   
-  If (TxtAccountCode.text) <> "" Then
-  sql = sql & " and A.Account_Serial ='" & TxtAccountCode.text & "'"
+  If (TxtAccountCode.Text) <> "" Then
+  sql = sql & " and A.Account_Serial ='" & TxtAccountCode.Text & "'"
   End If
   '*****************************************************
   
@@ -10362,7 +10399,7 @@ sql = sql & " LEFT JOIN dbo.DOUBLE_ENTREY_VOUCHERS1 AS do1 WITH (NOLOCK)"
 sql = sql & "   ON do1.Posted IS NULL AND do1.Account_Code = A.Account_Code" & flt_do1
 sql = sql & " WHERE A.last_account = 1"
 If HideLastAccount = True Then sql = sql & " AND 1=0"
-If (TxtAccountCode.text) <> "" Then sql = sql & " AND A.Account_Serial = '" & TxtAccountCode.text & "'"
+If (TxtAccountCode.Text) <> "" Then sql = sql & " AND A.Account_Serial = '" & TxtAccountCode.Text & "'"
 sql = sql & lvlClause
 sql = sql & " AND ( EXISTS (SELECT 1 FROM dbo.DOUBLE_ENTREY_VOUCHERS  AS e  WITH (NOLOCK) WHERE e.Account_Code = A.Account_Code" & flt_e & ")"
 sql = sql & "   OR EXISTS (SELECT 1 FROM dbo.DOUBLE_ENTREY_VOUCHERS1 AS e1 WITH (NOLOCK) WHERE e1.Account_Code = A.Account_Code" & flt_e1 & ")"
@@ -10385,7 +10422,7 @@ sql = sql & " LEFT JOIN dbo.DOUBLE_ENTREY_VOUCHERS1 AS do1 WITH (NOLOCK)"
 sql = sql & "   ON do1.Posted IS NULL AND do1.Account_Code >= A.Account_Code + 'a' AND do1.Account_Code < A.Account_Code + 'b'" & flt_do1
 sql = sql & " WHERE A.last_account = 0"
 If HideLastAccount = True Then sql = sql & " AND A.last_account = 0"
-If (TxtAccountCode.text) <> "" Then sql = sql & " AND A.Account_Serial = '" & TxtAccountCode.text & "'"
+If (TxtAccountCode.Text) <> "" Then sql = sql & " AND A.Account_Serial = '" & TxtAccountCode.Text & "'"
 sql = sql & lvlClause
 ' ‰›” „‰ÿﬁ  ÷„Ì‰ «·Õ”«»«  (ÊÃÊœ Õ—ﬂ…/«›  «ÕÌ/”‰Ê«  √Ê ·√‰Â √»)
 sql = sql & " AND ( EXISTS (SELECT 1 FROM dbo.DOUBLE_ENTREY_VOUCHERS  AS e  WITH (NOLOCK) WHERE e.Account_Code >= A.Account_Code + 'a' AND e.Account_Code < A.Account_Code + 'b'" & flt_e & ")"
@@ -10506,8 +10543,8 @@ sql = sql & " WHERE 1=1 "
 If HideLastAccount = True Then
     sql = sql & " AND A.last_account = 0"
 End If
-If (TxtAccountCode.text) <> "" Then
-    sql = sql & " AND A.Account_Serial = '" & TxtAccountCode.text & "'"
+If (TxtAccountCode.Text) <> "" Then
+    sql = sql & " AND A.Account_Serial = '" & TxtAccountCode.Text & "'"
 End If
 'If account_level <> 0 Then
 '    If ShowOnlyLevelAcc = vbYes Then
@@ -10600,24 +10637,24 @@ xReport.Database.SetDataSource RsData
     desc = ""
     If val(DCActivity.BoundText) <> 0 Then
    If SystemOptions.UserInterface = ArabicInterface Then
-   desc = desc & "?????? " & ": " & DCActivity.text & CHR(13)
+   desc = desc & "?????? " & ": " & DCActivity.Text & CHR(13)
    Else
-   desc = desc & "Region" & ": " & DCActivity.text & CHR(13)
+   desc = desc & "Region" & ": " & DCActivity.Text & CHR(13)
    End If
    End If
    
    If val(DCRegionID.BoundText) <> 0 Then
    If SystemOptions.UserInterface = ArabicInterface Then
-   desc = desc & "???????" & ": " & DCRegionID.text & CHR(13)
+   desc = desc & "???????" & ": " & DCRegionID.Text & CHR(13)
    Else
-   desc = desc & "Activity" & ": " & DCRegionID.text & CHR(13)
+   desc = desc & "Activity" & ": " & DCRegionID.Text & CHR(13)
    End If
    End If
   If val(dcBranch.BoundText) <> 0 Then
    If SystemOptions.UserInterface = ArabicInterface Then
-   desc = desc & "?????" & ": " & dcBranch.text & CHR(13)
+   desc = desc & "?????" & ": " & dcBranch.Text & CHR(13)
    Else
-   desc = desc & "Branch" & ": " & dcBranch.text & CHR(13)
+   desc = desc & "Branch" & ": " & dcBranch.Text & CHR(13)
    End If
    End If
     xReport.ParameterFields(3).AddCurrentValue user_name
@@ -10740,8 +10777,8 @@ On Error GoTo ErrTrap
     End If
 
     ' Account Serial filter
-    If Trim$(TxtAccountCode.text) <> "" Then
-        sql = sql & ",@AccountSerial=N'" & Replace(TxtAccountCode.text, "'", "''") & "'"
+    If Trim$(TxtAccountCode.Text) <> "" Then
+        sql = sql & ",@AccountSerial=N'" & Replace(TxtAccountCode.Text, "'", "''") & "'"
     Else
         sql = sql & ",@AccountSerial=NULL"
     End If
@@ -10809,23 +10846,23 @@ On Error GoTo ErrTrap
     desc = ""
     If val(DCActivity.BoundText) <> 0 Then
         If SystemOptions.UserInterface = ArabicInterface Then
-            desc = desc & "«·‰‘«ÿ: " & DCActivity.text & CHR(13)
+            desc = desc & "«·‰‘«ÿ: " & DCActivity.Text & CHR(13)
         Else
-            desc = desc & "Activity: " & DCActivity.text & CHR(13)
+            desc = desc & "Activity: " & DCActivity.Text & CHR(13)
         End If
     End If
     If val(DCRegionID.BoundText) <> 0 Then
         If SystemOptions.UserInterface = ArabicInterface Then
-            desc = desc & "«·„‰ÿﬁ…: " & DCRegionID.text & CHR(13)
+            desc = desc & "«·„‰ÿﬁ…: " & DCRegionID.Text & CHR(13)
         Else
-            desc = desc & "Region: " & DCRegionID.text & CHR(13)
+            desc = desc & "Region: " & DCRegionID.Text & CHR(13)
         End If
     End If
     If val(dcBranch.BoundText) <> 0 Then
         If SystemOptions.UserInterface = ArabicInterface Then
-            desc = desc & "«·›—⁄: " & dcBranch.text & CHR(13)
+            desc = desc & "«·›—⁄: " & dcBranch.Text & CHR(13)
         Else
-            desc = desc & "Branch: " & dcBranch.text & CHR(13)
+            desc = desc & "Branch: " & dcBranch.Text & CHR(13)
         End If
     End If
 
@@ -11083,8 +11120,8 @@ sql = sql & "SELECT A.Account_Code, A.Account_Name, A.Account_NameEng, A.Account
       "LEFT OUTER JOIN OpeningBalanceBeforeDateMinus1 AS OBMD1 ON A.Account_Code = OBMD1.Account_Code " & _
       "LEFT OUTER JOIN OpeningBalanceBeforeStartCurrentYear AS OBSCY ON A.Account_Code = OBSCY.Account_Code " & _
       "WHERE (A.last_account = 1) "
-    If (TxtAccountCode.text) <> "" Then
-        sql = sql & " and A.Account_Serial ='" & TxtAccountCode.text & "'"
+    If (TxtAccountCode.Text) <> "" Then
+        sql = sql & " and A.Account_Serial ='" & TxtAccountCode.Text & "'"
     End If
   
     sql = sql & " and (A.Account_Code in(select Account_Code from  DOUBLE_ENTREY_VOUCHERS"
@@ -11404,8 +11441,8 @@ employeeJoin = " LEFT OUTER JOIN (" & _
 ' «· Ã„Ì⁄ «·‰Â«∆Ì
 sql = part1 & Part2 & part3 & part4 & part5 & employeeJoin & _
       " WHERE (A.last_account = 1) "
-   If (TxtAccountCode.text) <> "" Then
-        sql = sql & " and A.Account_Serial ='" & TxtAccountCode.text & "'"
+   If (TxtAccountCode.Text) <> "" Then
+        sql = sql & " and A.Account_Serial ='" & TxtAccountCode.Text & "'"
     End If
   
     sql = sql & " and (A.Account_Code in(select Account_Code from  DOUBLE_ENTREY_VOUCHERS"
@@ -11657,8 +11694,8 @@ employeeJoin = " LEFT OUTER JOIN (" & _
 ' «· Ã„Ì⁄ «·‰Â«∆Ì (»œÊ‰  €ÌÌ—)
 sql = part1 & Part2 & part3 & part4 & part5 & employeeJoin & _
       " WHERE (A.last_account = 1) "
-    If (TxtAccountCode.text) <> "" Then
-        sql = sql & " and A.Account_Serial ='" & TxtAccountCode.text & "'"
+    If (TxtAccountCode.Text) <> "" Then
+        sql = sql & " and A.Account_Serial ='" & TxtAccountCode.Text & "'"
     End If
    
     sql = sql & " and (A.Account_Code in(select Account_Code from  DOUBLE_ENTREY_VOUCHERS"
@@ -11752,24 +11789,24 @@ sql = part1 & Part2 & part3 & part4 & part5 & employeeJoin & _
     desc = ""
     If val(DCActivity.BoundText) <> 0 Then
    If SystemOptions.UserInterface = ArabicInterface Then
-   desc = desc & "Region" & ": " & DCActivity.text & CHR(13)
+   desc = desc & "Region" & ": " & DCActivity.Text & CHR(13)
    Else
-   desc = desc & "Region" & ": " & DCActivity.text & CHR(13)
+   desc = desc & "Region" & ": " & DCActivity.Text & CHR(13)
    End If
    End If
    
    If val(DCRegionID.BoundText) <> 0 Then
    If SystemOptions.UserInterface = ArabicInterface Then
-   desc = desc & "???????" & ": " & DCRegionID.text & CHR(13)
+   desc = desc & "???????" & ": " & DCRegionID.Text & CHR(13)
    Else
-   desc = desc & "Activity" & ": " & DCRegionID.text & CHR(13)
+   desc = desc & "Activity" & ": " & DCRegionID.Text & CHR(13)
    End If
    End If
   If val(dcBranch.BoundText) <> 0 Then
    If SystemOptions.UserInterface = ArabicInterface Then
-   desc = desc & "?????" & ": " & dcBranch.text & CHR(13)
+   desc = desc & "?????" & ": " & dcBranch.Text & CHR(13)
    Else
-   desc = desc & "Branch" & ": " & dcBranch.text & CHR(13)
+   desc = desc & "Branch" & ": " & dcBranch.Text & CHR(13)
    End If
    End If
     xReport.ParameterFields(3).AddCurrentValue user_name
@@ -11986,8 +12023,8 @@ sql = sql & "  )) x),"
     sql = sql & " ON a.Account_Code in (TblEmployee.Account_code1,TblEmployee.Account_code,TblEmployee.Account_code3,TblEmployee.Account_Code4,TblEmployee.Account_code5, TblEmployee.Account_Code2)"
     sql = sql & " LEFT OUTER JOIN                      dbo.EmpGroupDep ON dbo.TblEmployee.GroupID = dbo.EmpGroupDep.GroupID"
   sql = sql & " WHERE     A.last_account = 1   "
-  If (TxtAccountCode.text) <> "" Then
-  sql = sql & " and A.Account_Serial ='" & TxtAccountCode.text & "'"
+  If (TxtAccountCode.Text) <> "" Then
+  sql = sql & " and A.Account_Serial ='" & TxtAccountCode.Text & "'"
   End If
   
  ' sql = sql & " and  A.Account_Code not in ( Select tt.account_code from accounts tt where tt.Parent_Account_Code in(Select accountcode from AccountSetting))"
@@ -12066,24 +12103,24 @@ sql = sql & "  )) x),"
     desc = ""
     If val(DCActivity.BoundText) <> 0 Then
    If SystemOptions.UserInterface = ArabicInterface Then
-   desc = desc & "Region" & ": " & DCActivity.text & CHR(13)
+   desc = desc & "Region" & ": " & DCActivity.Text & CHR(13)
    Else
-   desc = desc & "Region" & ": " & DCActivity.text & CHR(13)
+   desc = desc & "Region" & ": " & DCActivity.Text & CHR(13)
    End If
    End If
    
    If val(DCRegionID.BoundText) <> 0 Then
    If SystemOptions.UserInterface = ArabicInterface Then
-   desc = desc & "???????" & ": " & DCRegionID.text & CHR(13)
+   desc = desc & "???????" & ": " & DCRegionID.Text & CHR(13)
    Else
-   desc = desc & "Activity" & ": " & DCRegionID.text & CHR(13)
+   desc = desc & "Activity" & ": " & DCRegionID.Text & CHR(13)
    End If
    End If
   If val(dcBranch.BoundText) <> 0 Then
    If SystemOptions.UserInterface = ArabicInterface Then
-   desc = desc & "?????" & ": " & dcBranch.text & CHR(13)
+   desc = desc & "?????" & ": " & dcBranch.Text & CHR(13)
    Else
-   desc = desc & "Branch" & ": " & dcBranch.text & CHR(13)
+   desc = desc & "Branch" & ": " & dcBranch.Text & CHR(13)
    End If
    End If
     xReport.ParameterFields(3).AddCurrentValue user_name
@@ -12199,7 +12236,7 @@ Me.Ele(1).Visible = True
             DCCompositeAccount.Enabled = True
  
             StrAccountCode = ""
-            TxtAccountCode.text = ""
+            TxtAccountCode.Text = ""
             StrAccountName = ""
      
     End Select
@@ -12234,11 +12271,11 @@ End Sub
 
 Private Sub TrvAccounts_NodeClick(ByVal Node As MSComctlLib.Node)
     On Error Resume Next
-    Me.LblAccountName.Caption = Me.TrvAccounts.SelectedItem.text
-    txt_mod_flag.text = "N"
+    Me.LblAccountName.Caption = Me.TrvAccounts.SelectedItem.Text
+    txt_mod_flag.Text = "N"
     StrAccountCode = Me.TrvAccounts.SelectedItem.key
-    TxtAccountCode.text = Get_Account_Serial(StrAccountCode)
-    StrAccountName = Me.TrvAccounts.SelectedItem.text
+    TxtAccountCode.Text = Get_Account_Serial(StrAccountCode)
+    StrAccountName = Me.TrvAccounts.SelectedItem.Text
     
     If Grid3.rows > 1 Then
         If Grid3.TextMatrix(Grid3.rows - 1, Grid3.ColIndex("Account_Code")) <> "" Then
@@ -12268,7 +12305,7 @@ Private Sub TxtAccountCode_KeyUp(KeyCode As Integer, _
  
     If KeyCode = vbKeyF3 Then
 
-        txt_mod_flag.text = "S"
+        txt_mod_flag.Text = "S"
  
         Account_search.show
         Account_search.case_id = 1
@@ -12278,7 +12315,7 @@ Private Sub TxtAccountCode_KeyUp(KeyCode As Integer, _
     If KeyCode = vbKeyReturn Then
         '        CmdAccount_Click
 
-        StrAccountCode = Get_Account_code(TxtAccountCode.text)
+        StrAccountCode = Get_Account_code(TxtAccountCode.Text)
         LblAccountName.Caption = Get_Account_Name(, StrAccountCode)
     End If
 

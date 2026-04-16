@@ -17,6 +17,15 @@ Begin VB.MDIForm mdifrmmain22
    ScrollBars      =   0   'False
    Visible         =   0   'False
    WindowState     =   2  'Maximized
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Timer TimerAlret 
       Interval        =   60000
       Left            =   0

@@ -12,6 +12,15 @@ Begin VB.Form FrmViewListPrint
    MDIChild        =   -1  'True
    ScaleHeight     =   7155
    ScaleWidth      =   8610
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VSPrinter8LibCtl.VSPrinter VSPrinter1 
       Height          =   3675
       Left            =   2760

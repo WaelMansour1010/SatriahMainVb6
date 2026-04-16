@@ -18,6 +18,15 @@ Begin VB.Form FrmAqarSearch
    RightToLeft     =   -1  'True
    ScaleHeight     =   6615
    ScaleWidth      =   19020
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame5 
       Caption         =   "»Ì«‰«  «·„·ﬂÌÂ"
       Height          =   1215

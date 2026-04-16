@@ -10,6 +10,15 @@ Begin VB.Form FrmAmolatReports
    ClientLeft      =   45
    ClientTop       =   435
    ClientWidth     =   10425
+   BeginProperty Font 
+      Name            =   "Arial"
+      Size            =   8.25
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Icon            =   "FrmAmolatReports.frx":0000
    LinkTopic       =   "Form2"
    MaxButton       =   0   'False
@@ -46,7 +55,7 @@ Begin VB.Form FrmAmolatReports
          _ExtentY        =   609
          _Version        =   393216
          CheckBox        =   -1  'True
-         Format          =   250085377
+         Format          =   209453057
          CurrentDate     =   38784
       End
       Begin MSComCtl2.DTPicker XPDtpTo 
@@ -59,7 +68,7 @@ Begin VB.Form FrmAmolatReports
          _ExtentY        =   609
          _Version        =   393216
          CheckBox        =   -1  'True
-         Format          =   250085377
+         Format          =   209453057
          CurrentDate     =   38784
       End
       Begin VB.Label lbl 
@@ -108,7 +117,7 @@ Begin VB.Form FrmAmolatReports
          Alignment       =   1  'Right Justify
          BackColor       =   &H00FFFFFF&
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   700
@@ -152,7 +161,7 @@ Begin VB.Form FrmAmolatReports
             _ExtentY        =   582
             _Version        =   393216
             CheckBox        =   -1  'True
-            Format          =   250085377
+            Format          =   209453057
             CurrentDate     =   41640
          End
          Begin Dynamic_Byte.NourHijriCal Fromdateh 
@@ -183,7 +192,7 @@ Begin VB.Form FrmAmolatReports
             _ExtentY        =   582
             _Version        =   393216
             CheckBox        =   -1  'True
-            Format          =   250085377
+            Format          =   209453057
             CurrentDate     =   41640
          End
          Begin VB.Label lbl 
@@ -270,7 +279,7 @@ Begin VB.Form FrmAmolatReports
          Top             =   480
          Width           =   4935
          _ExtentX        =   8705
-         _ExtentY        =   556
+         _ExtentY        =   582
          _Version        =   393216
          BackColor       =   16777215
          Text            =   ""
@@ -284,7 +293,7 @@ Begin VB.Form FrmAmolatReports
          Visible         =   0   'False
          Width           =   4095
          _ExtentX        =   7223
-         _ExtentY        =   556
+         _ExtentY        =   582
          _Version        =   393216
          BackColor       =   16777215
          Text            =   ""
@@ -299,7 +308,7 @@ Begin VB.Form FrmAmolatReports
          Visible         =   0   'False
          Width           =   4935
          _ExtentX        =   8705
-         _ExtentY        =   556
+         _ExtentY        =   582
          _Version        =   393216
          Text            =   ""
          RightToLeft     =   -1  'True
@@ -313,7 +322,7 @@ Begin VB.Form FrmAmolatReports
          Visible         =   0   'False
          Width           =   4935
          _ExtentX        =   8705
-         _ExtentY        =   556
+         _ExtentY        =   582
          _Version        =   393216
          Text            =   ""
          RightToLeft     =   -1  'True
@@ -326,7 +335,7 @@ Begin VB.Form FrmAmolatReports
          Top             =   1200
          Width           =   4095
          _ExtentX        =   7223
-         _ExtentY        =   556
+         _ExtentY        =   582
          _Version        =   393216
          Text            =   ""
          RightToLeft     =   -1  'True
@@ -339,7 +348,7 @@ Begin VB.Form FrmAmolatReports
          Top             =   840
          Width           =   4935
          _ExtentX        =   8705
-         _ExtentY        =   556
+         _ExtentY        =   582
          _Version        =   393216
          Text            =   ""
          RightToLeft     =   -1  'True
@@ -483,8 +492,9 @@ Begin VB.Form FrmAmolatReports
       ButtonPositionImage=   1
       Caption         =   "ÚÑÖ ÇáÊÞÑíÑ"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -516,8 +526,9 @@ Begin VB.Form FrmAmolatReports
       ButtonPositionImage=   1
       Caption         =   "ÎÑæÌ"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -603,15 +614,16 @@ Private Sub Cmd_Click(Index As Integer)
         Case 0
        
 
- GetData
+        GetData
             
         Case 1
    
             clear_all Me
-         
-         FromDate.value = ""
-    ToDate.value = ""
-    ReloadCombos
+        
+            FromDate.value = ""
+            ToDate.value = ""
+            ReloadCombos
+
             If SystemOptions.UserInterface = ArabicInterface Then
                ' Me.lbl(0).Caption = "äÊíÌÉ ÇáÈÍË"
             Else
@@ -632,17 +644,17 @@ End Sub
 
 
 Private Sub dcbAqarType_Change()
-dcbAqarType_Click (0)
+        dcbAqarType_Click (0)
 End Sub
 
 Private Sub dcbAqarType_Click(Area As Integer)
-      If val(dcbAqarType.BoundText) = 0 Then: Exit Sub
-Dim str As String
+     If val(dcbAqarType.BoundText) = 0 Then: Exit Sub
+    Dim str As String
     Dim EmpCode  As String
- Dim ownerid As Double
+    Dim ownerid As Double
     GetIqarCode , , dcbAqarType.BoundText, EmpCode, ownerid
     
-    Me.TxtSearch.text = EmpCode
+    Me.TxtSearch.Text = EmpCode
 End Sub
 Function ReloadCombos()
 Dim Dcombos As ClsDataCombos
@@ -651,25 +663,26 @@ Dim Dcombos As ClsDataCombos
  Dcombos.GetSalesRepData Me.DcboEmp
  End Function
 Private Sub DcbGroup_Change()
-Dim Dcombos As ClsDataCombos
-Dim idd As Integer
 
-   Set Dcombos = New ClsDataCombos
-
-If val(DcbGroup.BoundText) > 0 Then
-idd = val(DcbGroup.BoundText)
-  Dcombos.GetSalesRepData Me.DcboEmp, , idd
-End If
+        Dim Dcombos As ClsDataCombos
+        Dim idd As Integer
+        
+        Set Dcombos = New ClsDataCombos
+        
+        If val(DcbGroup.BoundText) > 0 Then
+                idd = val(DcbGroup.BoundText)
+                Dcombos.GetSalesRepData Me.DcboEmp, , idd
+        End If
 
 End Sub
 
 Private Sub DcboEmp_Change()
- If val(Me.DcboEmp.BoundText) = 0 Then Exit Sub
-           Me.TxtEmployeeID.text = get_EMPLOYEE_Data(val(Me.DcboEmp.BoundText), "Fullcode")
+            If val(Me.DcboEmp.BoundText) = 0 Then Exit Sub
+           Me.TxtEmployeeID.Text = get_EMPLOYEE_Data(val(Me.DcboEmp.BoundText), "Fullcode")
 End Sub
 
 Private Sub Form_Activate()
-   PutFormOnTop Me.hWnd
+        PutFormOnTop Me.hWnd
 End Sub
 
 Private Sub Form_Load()
@@ -742,30 +755,30 @@ Public Sub GetData()
     'Order = 9
 
 StrSQL = " SELECT     dbo.TblAqarCommissions.ID, dbo.TblAqarCommissions.PymentNo, dbo.TblAqarCommissions.TypeOper, dbo.TblAqarCommissions.FilterNo, "
-         StrSQL = StrSQL & "             dbo.TblAqarCommissions.NoteID, dbo.TblAqarCommissions.TypeAmount, dbo.TblAqarCommissions.Remarks, dbo.TblAqarCommissions.ReVal,"
-        StrSQL = StrSQL & "              dbo.TblAqarCommissions.Canceel, dbo.TblAqarCommissions.Amount, dbo.TblAqarCommissions.Crosses, dbo.TblAqarCommissions.ContNo,"
-        StrSQL = StrSQL & "              dbo.TblAqarCommissions.Flage, dbo.TblAqarCommissions.IqarID, dbo.TblAqarCommissions.EmpID, dbo.TblAqarDetai.unitno, dbo.TblAkarUnit.name,"
-       StrSQL = StrSQL & "               dbo.TblAkarUnit.namee, dbo.TblAqarDetai.Aqarid, dbo.TblAqar.aqarname, dbo.TblEmployee.Emp_Name, dbo.TblEmployee.Emp_Code, dbo.TblEmployee.Emp_Name1,"
-       StrSQL = StrSQL & "               dbo.TblEmployee.Emp_Name2, dbo.TblEmployee.Emp_Name3, dbo.TblEmployee.Emp_Name4, dbo.TblEmployee.Fullcode, dbo.TblEmployee.Emp_Namee4,"
-       StrSQL = StrSQL & "               dbo.TblEmployee.Emp_Namee3, dbo.TblEmployee.Emp_Namee2, dbo.TblEmployee.Emp_Namee1, dbo.TblEmployee.Emp_Namee, dbo.Notes.NoteDate,"
-       StrSQL = StrSQL & "               dbo.Notes.NoteSerial, dbo.Notes.NoteSerial1, dbo.Notes.NoteDateH, dbo.Notes.branch_no, dbo.TblBranchesData.branch_name, dbo.TblBranchesData.branch_namee,"
-     StrSQL = StrSQL & "                 dbo.Notes.CusID, dbo.TblCustemers.CusName, dbo.TblCustemers.CusNamee, dbo.TblAqrEarnest.CoustomerName, dbo.TBLSalesRepData.GroupID,"
-     StrSQL = StrSQL & "                 dbo.TBLSalesRepGroups.name AS Expr1, dbo.TBLSalesRepGroups.namee AS Expr2, dbo.TBLSalesRepGroups.Rent, dbo.TBLSalesRepGroups.InternalComm,"
-    StrSQL = StrSQL & "                  dbo.TBLSalesRepGroups.ExternalComm, dbo.TBLSalesRepGroups.Revenue, dbo.TBLSalesRepGroups.TypeiD, dbo.TBLSalesRepGroups.Rent1,Notes.Note_Value2,Notes.Note_Value, "
-  StrSQL = StrSQL & "                    dbo.TBLSalesRepGroups.InternalComm1, dbo.TBLSalesRepGroups.ExternalComm1, dbo.TBLSalesRepGroups.[Count], dbo.TBLSalesRepGroups.DMY,"
- StrSQL = StrSQL & "                     dbo.TBLSalesRepGroups.Revenuee ,Notes.ManulaNO, dbo.TBLSalesRepGroups.Revenuee1, dbo.TBLSalesRepGroups.GCom"
-StrSQL = StrSQL & " FROM         dbo.TblEmployee RIGHT OUTER JOIN"
-    StrSQL = StrSQL & "                  dbo.TBLSalesRepGroups RIGHT OUTER JOIN"
-    StrSQL = StrSQL & "                  dbo.Notes LEFT OUTER JOIN"
-    StrSQL = StrSQL & "                  dbo.TblAqrEarnest ON dbo.Notes.NoteID = dbo.TblAqrEarnest.NoteID LEFT OUTER JOIN"
-    StrSQL = StrSQL & "                  dbo.TblCustemers ON dbo.Notes.CusID = dbo.TblCustemers.CusID LEFT OUTER JOIN"
-    StrSQL = StrSQL & "                  dbo.TblBranchesData ON dbo.Notes.branch_no = dbo.TblBranchesData.branch_id RIGHT OUTER JOIN"
-    StrSQL = StrSQL & "                  dbo.TBLSalesRepData RIGHT OUTER JOIN"
-   StrSQL = StrSQL & "                   dbo.TblAqarCommissions ON dbo.TBLSalesRepData.EmpID = dbo.TblAqarCommissions.EmpID ON dbo.Notes.NoteID = dbo.TblAqarCommissions.NoteID LEFT OUTER JOIN"
-  StrSQL = StrSQL & "                    dbo.TblAqar RIGHT OUTER JOIN"
-  StrSQL = StrSQL & "                    dbo.TblAqarDetai ON dbo.TblAqar.Aqarid = dbo.TblAqarDetai.Aqarid LEFT OUTER JOIN"
-  StrSQL = StrSQL & "                    dbo.TblAkarUnit ON dbo.TblAqarDetai.unittype = dbo.TblAkarUnit.id ON dbo.TblAqarCommissions.IqarID = dbo.TblAqarDetai.Id ON"
-  StrSQL = StrSQL & "                    dbo.TBLSalesRepGroups.id = dbo.TBLSalesRepData.GroupID ON dbo.TblEmployee.Emp_ID = dbo.TBLSalesRepData.EmpID"
+StrSQL = StrSQL & "                 dbo.TblAqarCommissions.NoteID, dbo.TblAqarCommissions.TypeAmount, dbo.TblAqarCommissions.Remarks, dbo.TblAqarCommissions.ReVal,"
+StrSQL = StrSQL & "                 dbo.TblAqarCommissions.Canceel, dbo.TblAqarCommissions.Amount, dbo.TblAqarCommissions.Crosses, dbo.TblAqarCommissions.ContNo,"
+StrSQL = StrSQL & "                 dbo.TblAqarCommissions.Flage, dbo.TblAqarCommissions.IqarID, dbo.TblAqarCommissions.EmpID, dbo.TblAqarDetai.unitno, dbo.TblAkarUnit.name,"
+StrSQL = StrSQL & "                 dbo.TblAkarUnit.namee, dbo.TblAqarDetai.Aqarid, dbo.TblAqar.aqarname, dbo.TblEmployee.Emp_Name, dbo.TblEmployee.Emp_Code, dbo.TblEmployee.Emp_Name1,"
+StrSQL = StrSQL & "                 dbo.TblEmployee.Emp_Name2, dbo.TblEmployee.Emp_Name3, dbo.TblEmployee.Emp_Name4, dbo.TblEmployee.Fullcode, dbo.TblEmployee.Emp_Namee4,"
+StrSQL = StrSQL & "                 dbo.TblEmployee.Emp_Namee3, dbo.TblEmployee.Emp_Namee2, dbo.TblEmployee.Emp_Namee1, dbo.TblEmployee.Emp_Namee, dbo.Notes.NoteDate,"
+StrSQL = StrSQL & "                 dbo.Notes.NoteSerial, dbo.Notes.NoteSerial1, dbo.Notes.NoteDateH, dbo.Notes.branch_no, dbo.TblBranchesData.branch_name, dbo.TblBranchesData.branch_namee,"
+StrSQL = StrSQL & "                 dbo.Notes.CusID, dbo.TblCustemers.CusName, dbo.TblCustemers.CusNamee, dbo.TblAqrEarnest.CoustomerName, dbo.TBLSalesRepData.GroupID,"
+StrSQL = StrSQL & "                 dbo.TBLSalesRepGroups.name AS Expr1, dbo.TBLSalesRepGroups.namee AS Expr2, dbo.TBLSalesRepGroups.Rent, dbo.TBLSalesRepGroups.InternalComm,"
+StrSQL = StrSQL & "                 dbo.TBLSalesRepGroups.ExternalComm, dbo.TBLSalesRepGroups.Revenue, dbo.TBLSalesRepGroups.TypeiD, dbo.TBLSalesRepGroups.Rent1,Notes.Note_Value2,Notes.Note_Value, "
+StrSQL = StrSQL & "                  dbo.TBLSalesRepGroups.InternalComm1, dbo.TBLSalesRepGroups.ExternalComm1, dbo.TBLSalesRepGroups.[Count], dbo.TBLSalesRepGroups.DMY,"
+StrSQL = StrSQL & "                   dbo.TBLSalesRepGroups.Revenuee ,Notes.ManulaNO, dbo.TBLSalesRepGroups.Revenuee1, dbo.TBLSalesRepGroups.GCom,Notes.ChqueNum,Notes.DueDate,Notes.Remark "
+StrSQL = StrSQL & " FROM        dbo.TblEmployee RIGHT OUTER JOIN"
+StrSQL = StrSQL & "                  dbo.TBLSalesRepGroups RIGHT OUTER JOIN"
+StrSQL = StrSQL & "                  dbo.Notes LEFT OUTER JOIN"
+StrSQL = StrSQL & "                  dbo.TblAqrEarnest ON dbo.Notes.NoteID = dbo.TblAqrEarnest.NoteID LEFT OUTER JOIN"
+StrSQL = StrSQL & "                  dbo.TblCustemers ON dbo.Notes.CusID = dbo.TblCustemers.CusID LEFT OUTER JOIN"
+StrSQL = StrSQL & "                  dbo.TblBranchesData ON dbo.Notes.branch_no = dbo.TblBranchesData.branch_id RIGHT OUTER JOIN"
+StrSQL = StrSQL & "                  dbo.TBLSalesRepData RIGHT OUTER JOIN"
+StrSQL = StrSQL & "                   dbo.TblAqarCommissions ON dbo.TBLSalesRepData.EmpID = dbo.TblAqarCommissions.EmpID ON dbo.Notes.NoteID = dbo.TblAqarCommissions.NoteID LEFT OUTER JOIN"
+StrSQL = StrSQL & "                    dbo.TblAqar RIGHT OUTER JOIN"
+StrSQL = StrSQL & "                    dbo.TblAqarDetai ON dbo.TblAqar.Aqarid = dbo.TblAqarDetai.Aqarid LEFT OUTER JOIN"
+StrSQL = StrSQL & "                    dbo.TblAkarUnit ON dbo.TblAqarDetai.unittype = dbo.TblAkarUnit.id ON dbo.TblAqarCommissions.IqarID = dbo.TblAqarDetai.Id ON"
+StrSQL = StrSQL & "                    dbo.TBLSalesRepGroups.id = dbo.TBLSalesRepData.GroupID ON dbo.TblEmployee.Emp_ID = dbo.TBLSalesRepData.EmpID"
 
 
 StrSQL = StrSQL & " WHERE  (1=1)  "
@@ -773,37 +786,37 @@ StrSQL = StrSQL & " WHERE  (1=1)  "
     BolBegine = False
     StrWhere = ""
     
- If val(Me.DcbGroup.BoundText) <> 0 Or Me.DcbGroup.text <> "" Then
+ If val(Me.DcbGroup.BoundText) <> 0 Or Me.DcbGroup.Text <> "" Then
 StrWhere = StrWhere & " AND  dbo.TBLSalesRepData.GroupID = " & val(Me.DcbGroup.BoundText)
 
 End If
-If val(Me.DcbBranch.BoundText) <> 0 Or Me.DcbBranch.text <> "" Then
+If val(Me.DcbBranch.BoundText) <> 0 Or Me.DcbBranch.Text <> "" Then
 StrWhere = StrWhere & " AND dbo.Notes.branch_no = " & val(Me.DcbBranch.BoundText)
 
 End If
 
 
-If val(Me.dcbAqarType.BoundText) <> 0 Or Me.dcbAqarType.text <> "" Then
+If val(Me.dcbAqarType.BoundText) <> 0 Or Me.dcbAqarType.Text <> "" Then
 
 StrWhere = StrWhere & " AND  dbo.TblAqarCommissions.IqarID  = " & val(Me.dcbAqarType.BoundText)
 
 End If
 
 
-If val(Me.DcboEmp.BoundText) <> 0 Or Me.DcboEmp.text <> "" Then
+If val(Me.DcboEmp.BoundText) <> 0 Or Me.DcboEmp.Text <> "" Then
 StrWhere = StrWhere & " AND dbo.TBLSalesRepData.EmpID  = " & val(DcboEmp.BoundText)
 
 End If
 
-If val(Me.DcbUnitType.BoundText) <> 0 Or Me.DcbUnitType.text <> "" Then
+If val(Me.DcbUnitType.BoundText) <> 0 Or Me.DcbUnitType.Text <> "" Then
 StrWhere = StrWhere & " AND dbo.TblAqarDetai.unittype  = " & val(DcbUnitType.BoundText)
 
 End If
-If val(Me.DcbUnitNo.BoundText) <> 0 Or Me.DcbUnitNo.text <> "" Then
+If val(Me.DcbUnitNo.BoundText) <> 0 Or Me.DcbUnitNo.Text <> "" Then
 StrWhere = StrWhere & " AND dbo.TblAqarDetai.Id  = " & val(DcbUnitNo.BoundText)
 
 End If
-If val(Me.DcbCommission.ListIndex) <> -1 Or Me.DcbCommission.text <> "" Then
+If val(Me.DcbCommission.ListIndex) <> -1 Or Me.DcbCommission.Text <> "" Then
 If val(DcbCommission.ListIndex) = 0 Then
 StrWhere = StrWhere & " AND   dbo.TblAqarCommissions.TypeAmount  = 1"
 End If
@@ -1050,14 +1063,14 @@ End Sub
 
 
 Private Sub TxtEmployeeID_Change()
-DcboEmp.BoundText = GeTEmpIDByEmpCode(TxtEmployeeID.text, True)
+DcboEmp.BoundText = GeTEmpIDByEmpCode(TxtEmployeeID.Text, True)
 End Sub
 
 Private Sub TxtSearch_KeyPress(KeyAscii As Integer)
   Dim EmpID As Double
 'GetTblCustemersCode
     If KeyAscii = vbKeyReturn Then
-        GetIqarCode TxtSearch.text, EmpID
+        GetIqarCode TxtSearch.Text, EmpID
         dcbAqarType.BoundText = EmpID
         dcbAqarType_Click (0)
     End If

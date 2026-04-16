@@ -17,6 +17,15 @@ Begin VB.Form AdminLogin
    ScaleHeight     =   655.824
    ScaleMode       =   0  'User
    ScaleWidth      =   7619.545
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox txtfuncid 
       Height          =   375
       Left            =   2280

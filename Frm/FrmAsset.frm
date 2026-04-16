@@ -19,6 +19,15 @@ Begin VB.Form FrmAsset
    ScaleHeight     =   3630
    ScaleWidth      =   5340
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox XPTxtBoxID 
       Alignment       =   1  'Right Justify
       Height          =   315

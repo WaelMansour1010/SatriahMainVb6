@@ -27,6 +27,15 @@ Begin VB.Form FrmExpenses30
    RightToLeft     =   -1  'True
    ScaleHeight     =   9330
    ScaleWidth      =   18390
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox txtManulaVat 
       Alignment       =   2  'Center
       BackColor       =   &H00C0FFFF&
@@ -3227,6 +3236,502 @@ Dim error_string As String
 Dim Rs3 As ADODB.Recordset
 Dim ACCStrComboList As String
 
+' Excel import column order:
+' 1 = code, 2 = name, 3 = value, 4 = notes, 5 = project code, 6 = band/item name.
+Private Const IMPORT_EXCEL_COL_COUNT As Long = 6
+Private Const IMPORT_DIALOG_CANCEL As Long = 32755
+
+' Reads and validates Excel rows from the first worksheet without touching the UI.
+' The function trims values, skips empty rows, and collects row-level issues instead of raising errors.
+Private Function ReadExcelImportRows(ByVal FileName As String, ByRef ParsedRows As Collection, ByRef RowIssues As Collection, ByRef StatusMessage As String) As Boolean
+    Dim ExcelObj As Object
+    Dim ExcelBook As Object
+    Dim ExcelSheet As Object
+    Dim MaxRow As Long
+    Dim StartRow As Long
+    Dim CurrentRow As Long
+    Dim CurrentValue As Double
+    Dim CodeText As String
+    Dim NameText As String
+    Dim ValueText As String
+    Dim NotesText As String
+    Dim ProjectCodeText As String
+    Dim BandText As String
+    Dim RowData As Object
+
+    On Error GoTo ReadError
+
+    Set ParsedRows = New Collection
+    Set RowIssues = New Collection
+    StatusMessage = ""
+
+    If Trim$(FileName) = "" Then
+        StatusMessage = "No file selected."
+        Exit Function
+    End If
+
+    If Dir$(FileName) = "" Then
+        StatusMessage = "The selected file was not found."
+        Exit Function
+    End If
+
+    Set ExcelObj = CreateObject("Excel.Application")
+    Set ExcelBook = ExcelObj.Workbooks.Open(FileName, False, True)
+    Set ExcelSheet = ExcelBook.Worksheets(1)
+
+    MaxRow = GetExcelLastDataRow(ExcelSheet, IMPORT_EXCEL_COL_COUNT)
+    If MaxRow = 0 Then
+        StatusMessage = "The selected sheet has no data."
+        GoTo SafeExit
+    End If
+
+    StartRow = IIf(IsLikelyImportHeader(ExcelSheet), 2, 1)
+    If StartRow > MaxRow Then
+        StatusMessage = "The selected sheet has no import rows."
+        GoTo SafeExit
+    End If
+
+    For CurrentRow = StartRow To MaxRow
+        CodeText = NormalizeImportText(ExcelSheet.Cells(CurrentRow, 1).Value)
+        NameText = NormalizeImportText(ExcelSheet.Cells(CurrentRow, 2).Value)
+        ValueText = NormalizeImportText(ExcelSheet.Cells(CurrentRow, 3).Value)
+        NotesText = NormalizeImportText(ExcelSheet.Cells(CurrentRow, 4).Value)
+        ProjectCodeText = NormalizeImportText(ExcelSheet.Cells(CurrentRow, 5).Value)
+        BandText = NormalizeImportText(ExcelSheet.Cells(CurrentRow, 6).Value)
+
+        If IsImportRowEmpty(CodeText, NameText, ValueText, NotesText, ProjectCodeText, BandText) Then
+            GoTo ContinueLoop
+        End If
+
+        If CodeText = "" Then
+            RowIssues.Add "Row " & CurrentRow & ": code is required."
+            GoTo ContinueLoop
+        End If
+
+        If TryParseImportNumber(ExcelSheet.Cells(CurrentRow, 3).Value, CurrentValue) = False Then
+            RowIssues.Add "Row " & CurrentRow & ": value is missing or invalid."
+            GoTo ContinueLoop
+        End If
+
+        Set RowData = CreateObject("Scripting.Dictionary")
+        RowData.Add "RowNumber", CurrentRow
+        RowData.Add "Code", CodeText
+        RowData.Add "Name", NameText
+        RowData.Add "Value", CurrentValue
+        RowData.Add "Notes", NotesText
+        RowData.Add "ProjectCode", ProjectCodeText
+        RowData.Add "BandName", BandText
+        ParsedRows.Add RowData
+
+ContinueLoop:
+    Next CurrentRow
+
+    ReadExcelImportRows = True
+    If ParsedRows.Count = 0 Then
+        If RowIssues.Count > 0 Then
+            StatusMessage = "Required data is missing or invalid in the selected sheet."
+        Else
+            StatusMessage = "The selected sheet has no data."
+        End If
+    End If
+
+SafeExit:
+    On Error Resume Next
+    If Not ExcelBook Is Nothing Then ExcelBook.Close False
+    If Not ExcelObj Is Nothing Then ExcelObj.Quit
+    Set ExcelSheet = Nothing
+    Set ExcelBook = Nothing
+    Set ExcelObj = Nothing
+    On Error GoTo 0
+    Exit Function
+
+ReadError:
+    StatusMessage = "The selected file could not be opened."
+    Resume SafeExit
+End Function
+
+' Imports parsed Excel rows into the currently active grid and reuses the same AfterEdit logic
+' that manual entry uses so account, project, and totals keep the existing business behavior.
+Private Function ImportParsedExcelRows(ByVal ParsedRows As Collection, ByRef ImportedCount As Long, ByRef RowIssues As Collection, ByRef StatusMessage As String) As Boolean
+    Dim ImportToExpenses As Boolean
+    Dim ImportToAccounts As Boolean
+    Dim ItemIndex As Long
+    Dim RowData As Object
+    Dim RowIssue As String
+
+    Set RowIssues = New Collection
+    ImportedCount = 0
+    StatusMessage = ""
+
+    If ParsedRows Is Nothing Then
+        StatusMessage = "There is no data to import."
+        Exit Function
+    End If
+
+    ImportToExpenses = (Me.CboPaymentType1.ListIndex = 0)
+    ImportToAccounts = (Me.CboPaymentType1.ListIndex = 1)
+
+    If ImportToExpenses = False And ImportToAccounts = False Then
+        StatusMessage = "There is no active grid available for Excel import."
+        Exit Function
+    End If
+
+    On Error GoTo ImportError
+
+    isFromExcel = True
+
+    For ItemIndex = 1 To ParsedRows.Count
+        Set RowData = ParsedRows(ItemIndex)
+        RowIssue = ""
+
+        If ImportToExpenses Then
+            If ImportExcelRowToFgJournal(RowData, RowIssue) Then
+                ImportedCount = ImportedCount + 1
+            Else
+                RowIssues.Add "Row " & RowData("RowNumber") & ": " & RowIssue
+            End If
+        ElseIf ImportToAccounts Then
+            If ImportExcelRowToVSFlexGrid(RowData, RowIssue) Then
+                ImportedCount = ImportedCount + 1
+            Else
+                RowIssues.Add "Row " & RowData("RowNumber") & ": " & RowIssue
+            End If
+        End If
+    Next ItemIndex
+
+    If ImportToExpenses Then
+        EnsureTrailingBlankRow Me.Fg_Journal
+    ElseIf ImportToAccounts Then
+        EnsureTrailingBlankRow Me.VSFlexGrid1
+    End If
+
+    isFromExcel = False
+    ImportParsedExcelRows = True
+    Exit Function
+
+ImportError:
+    isFromExcel = False
+    StatusMessage = "An unexpected error happened while importing the Excel rows."
+End Function
+
+Private Function GetExcelLastDataRow(ByVal ExcelSheet As Object, ByVal ColumnCount As Long) As Long
+    Const XL_UP As Long = -4162
+    Dim ColumnIndex As Long
+    Dim LastRow As Long
+
+    On Error Resume Next
+    For ColumnIndex = 1 To ColumnCount
+        LastRow = ExcelSheet.Cells(ExcelSheet.Rows.Count, ColumnIndex).End(XL_UP).Row
+        If LastRow > GetExcelLastDataRow Then
+            GetExcelLastDataRow = LastRow
+        End If
+    Next ColumnIndex
+    On Error GoTo 0
+End Function
+
+Private Function NormalizeImportText(ByVal CellValue As Variant) As String
+    If IsNull(CellValue) Then
+        NormalizeImportText = ""
+    Else
+        NormalizeImportText = Trim$(CStr(CellValue))
+    End If
+End Function
+
+Private Function TryParseImportNumber(ByVal CellValue As Variant, ByRef ParsedValue As Double) As Boolean
+    Dim RawValue As String
+
+    RawValue = NormalizeImportText(CellValue)
+    RawValue = Replace(RawValue, ",", "")
+
+    If RawValue = "" Then
+        Exit Function
+    End If
+
+    If IsNumeric(RawValue) = False Then
+        Exit Function
+    End If
+
+    ParsedValue = CDbl(RawValue)
+    TryParseImportNumber = True
+End Function
+
+Private Function IsImportRowEmpty(ByVal CodeText As String, ByVal NameText As String, ByVal ValueText As String, ByVal NotesText As String, ByVal ProjectCodeText As String, ByVal BandText As String) As Boolean
+    IsImportRowEmpty = (CodeText = "" And NameText = "" And Trim$(ValueText) = "" And NotesText = "" And ProjectCodeText = "" And BandText = "")
+End Function
+
+Private Function IsLikelyImportHeader(ByVal ExcelSheet As Object) As Boolean
+    Dim Col1Text As String
+    Dim Col2Text As String
+    Dim Col3Text As String
+    Dim Col4Text As String
+    Dim Col5Text As String
+    Dim Col6Text As String
+
+    Col1Text = LCase$(NormalizeImportText(ExcelSheet.Cells(1, 1).Value))
+    Col2Text = LCase$(NormalizeImportText(ExcelSheet.Cells(1, 2).Value))
+    Col3Text = LCase$(NormalizeImportText(ExcelSheet.Cells(1, 3).Value))
+    Col4Text = LCase$(NormalizeImportText(ExcelSheet.Cells(1, 4).Value))
+    Col5Text = LCase$(NormalizeImportText(ExcelSheet.Cells(1, 5).Value))
+    Col6Text = LCase$(NormalizeImportText(ExcelSheet.Cells(1, 6).Value))
+
+    If InStr(Col1Text, "code") > 0 Or InStr(Col1Text, "serial") > 0 Or InStr(Col1Text, "account") > 0 Or InStr(Col1Text, "expense") > 0 Then
+        IsLikelyImportHeader = True
+    ElseIf InStr(Col2Text, "name") > 0 Or InStr(Col3Text, "value") > 0 Or InStr(Col3Text, "amount") > 0 Then
+        IsLikelyImportHeader = True
+    ElseIf InStr(Col4Text, "note") > 0 Or InStr(Col4Text, "des") > 0 Or InStr(Col5Text, "project") > 0 Or InStr(Col6Text, "band") > 0 Then
+        IsLikelyImportHeader = True
+    ElseIf NormalizeImportText(ExcelSheet.Cells(2, 1).Value) <> "" And IsNumeric(Replace(Col3Text, ",", "")) = False Then
+        IsLikelyImportHeader = True
+    End If
+End Function
+
+Private Function ImportExcelRowToVSFlexGrid(ByVal RowData As Object, ByRef RowIssue As String) As Boolean
+    Dim RowIndex As Long
+
+    With Me.VSFlexGrid1
+        RowIndex = GetNextImportRow(VSFlexGrid1)
+        If RowIndex = .rows Then
+            .rows = .rows + 1
+        End If
+
+        .TextMatrix(RowIndex, .ColIndex("Account_Serial")) = RowData("Code")
+        VSFlexGrid1_AfterEdit RowIndex, .ColIndex("Account_Serial")
+
+        If Trim$(.TextMatrix(RowIndex, .ColIndex("AccountCode"))) = "" Then
+            ClearImportedVSFlexRow RowIndex
+            RowIssue = "account code was not found."
+            Exit Function
+        End If
+
+        .TextMatrix(RowIndex, .ColIndex("Value")) = RowData("Value")
+        VSFlexGrid1_AfterEdit RowIndex, .ColIndex("Value")
+        .TextMatrix(RowIndex, .ColIndex("des")) = RowData("Notes")
+
+        If Trim$(RowData("ProjectCode")) <> "" Then
+            .TextMatrix(RowIndex, .ColIndex("ProjectCode")) = RowData("ProjectCode")
+            VSFlexGrid1_AfterEdit RowIndex, .ColIndex("ProjectCode")
+
+            If Trim$(.TextMatrix(RowIndex, .ColIndex("projectid"))) = "" Then
+                ClearImportedVSFlexRow RowIndex
+                RowIssue = "project code was not found."
+                Exit Function
+            End If
+        End If
+
+        If Trim$(RowData("BandName")) <> "" Then
+            If ResolveVSFlexBand(RowIndex, RowData("BandName")) = False Then
+                ClearImportedVSFlexRow RowIndex
+                RowIssue = "band/item name was not found for the selected project."
+                Exit Function
+            End If
+        End If
+
+        If Trim$(.TextMatrix(RowIndex, .ColIndex("AccountName"))) = "" And Trim$(RowData("Name")) <> "" Then
+            .TextMatrix(RowIndex, .ColIndex("AccountName")) = RowData("Name")
+        End If
+    End With
+
+    ImportExcelRowToVSFlexGrid = True
+End Function
+
+Private Function ImportExcelRowToFgJournal(ByVal RowData As Object, ByRef RowIssue As String) As Boolean
+    Dim RowIndex As Long
+
+    With Me.Fg_Journal
+        RowIndex = GetNextImportRow(Fg_Journal)
+        If RowIndex = .rows Then
+            .rows = .rows + 1
+        End If
+
+        .TextMatrix(RowIndex, .ColIndex("Account_Serial")) = RowData("Code")
+        Fg_Journal_AfterEdit RowIndex, .ColIndex("Account_Serial")
+
+        If Trim$(.TextMatrix(RowIndex, .ColIndex("AccountCode"))) = "" Then
+            ClearImportedFgRow RowIndex
+            RowIssue = "expense code was not found."
+            Exit Function
+        End If
+
+        .TextMatrix(RowIndex, .ColIndex("Value")) = RowData("Value")
+        Fg_Journal_AfterEdit RowIndex, .ColIndex("Value")
+        .TextMatrix(RowIndex, .ColIndex("des")) = RowData("Notes")
+
+        If Trim$(RowData("ProjectCode")) <> "" Then
+            .TextMatrix(RowIndex, .ColIndex("ProjectCode")) = RowData("ProjectCode")
+            Fg_Journal_AfterEdit RowIndex, .ColIndex("ProjectCode")
+
+            If Trim$(.TextMatrix(RowIndex, .ColIndex("projectid2"))) = "" Then
+                ClearImportedFgRow RowIndex
+                RowIssue = "project code was not found."
+                Exit Function
+            End If
+        End If
+
+        If Trim$(RowData("BandName")) <> "" Then
+            If ResolveFgBand(RowIndex, RowData("BandName")) = False Then
+                ClearImportedFgRow RowIndex
+                RowIssue = "band/item name was not found for the selected project."
+                Exit Function
+            End If
+        End If
+
+        If Trim$(.TextMatrix(RowIndex, .ColIndex("AccountName"))) = "" And Trim$(RowData("Name")) <> "" Then
+            .TextMatrix(RowIndex, .ColIndex("AccountName")) = RowData("Name")
+        End If
+    End With
+
+    ImportExcelRowToFgJournal = True
+End Function
+
+Private Function ResolveVSFlexBand(ByVal RowIndex As Long, ByVal BandName As String) As Boolean
+    Dim RsBand As ADODB.Recordset
+    Dim StrSQL As String
+
+    If Trim$(BandName) = "" Then
+        ResolveVSFlexBand = True
+        Exit Function
+    End If
+
+    If val(Me.VSFlexGrid1.TextMatrix(RowIndex, Me.VSFlexGrid1.ColIndex("projectid"))) = 0 Then
+        Exit Function
+    End If
+
+    Set RsBand = New ADODB.Recordset
+    StrSQL = "SELECT TOP 1 oprid, des FROM projects_des WHERE project_id = " & val(Me.VSFlexGrid1.TextMatrix(RowIndex, Me.VSFlexGrid1.ColIndex("projectid")))
+    StrSQL = StrSQL & " AND (des = N'" & Replace(Trim$(BandName), "'", "''") & "' OR fullcode = '" & Replace(Trim$(BandName), "'", "''") & "')"
+    RsBand.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
+
+    If RsBand.RecordCount > 0 Then
+        Me.VSFlexGrid1.TextMatrix(RowIndex, Me.VSFlexGrid1.ColIndex("pand")) = IIf(IsNull(RsBand("des").value), "", RsBand("des").value)
+        Me.VSFlexGrid1.TextMatrix(RowIndex, Me.VSFlexGrid1.ColIndex("pandid")) = IIf(IsNull(RsBand("oprid").value), "", RsBand("oprid").value)
+        ResolveVSFlexBand = True
+    End If
+End Function
+
+Private Function ResolveFgBand(ByVal RowIndex As Long, ByVal BandName As String) As Boolean
+    Dim RsBand As ADODB.Recordset
+    Dim StrSQL As String
+
+    If Trim$(BandName) = "" Then
+        ResolveFgBand = True
+        Exit Function
+    End If
+
+    If val(Me.Fg_Journal.TextMatrix(RowIndex, Me.Fg_Journal.ColIndex("projectid2"))) = 0 Then
+        Exit Function
+    End If
+
+    Set RsBand = New ADODB.Recordset
+    StrSQL = "SELECT TOP 1 oprid, des FROM projects_des WHERE project_id = " & val(Me.Fg_Journal.TextMatrix(RowIndex, Me.Fg_Journal.ColIndex("projectid2")))
+    StrSQL = StrSQL & " AND (des = N'" & Replace(Trim$(BandName), "'", "''") & "' OR fullcode = '" & Replace(Trim$(BandName), "'", "''") & "')"
+    RsBand.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
+
+    If RsBand.RecordCount > 0 Then
+        Me.Fg_Journal.TextMatrix(RowIndex, Me.Fg_Journal.ColIndex("pand")) = IIf(IsNull(RsBand("des").value), "", RsBand("des").value)
+        Me.Fg_Journal.TextMatrix(RowIndex, Me.Fg_Journal.ColIndex("pandid2")) = IIf(IsNull(RsBand("oprid").value), "", RsBand("oprid").value)
+        ResolveFgBand = True
+    End If
+End Function
+
+Private Function GetNextImportRow(ByVal Grid As VSFlex8Ctl.VSFlexGrid) As Long
+    Dim RowIndex As Long
+
+    For RowIndex = Grid.FixedRows To Grid.rows - 1
+        If Trim$(Grid.TextMatrix(RowIndex, Grid.ColIndex("Account_Serial"))) = "" _
+        And Trim$(Grid.TextMatrix(RowIndex, Grid.ColIndex("AccountName"))) = "" _
+        And val(Grid.TextMatrix(RowIndex, Grid.ColIndex("Value"))) = 0 _
+        And Trim$(Grid.TextMatrix(RowIndex, Grid.ColIndex("des"))) = "" Then
+            GetNextImportRow = RowIndex
+            Exit Function
+        End If
+    Next RowIndex
+
+    GetNextImportRow = Grid.rows
+End Function
+
+Private Sub EnsureTrailingBlankRow(ByVal Grid As VSFlex8Ctl.VSFlexGrid)
+    If Grid.rows = 0 Then Exit Sub
+
+    If Trim$(Grid.TextMatrix(Grid.rows - 1, Grid.ColIndex("Account_Serial"))) <> "" _
+    Or Trim$(Grid.TextMatrix(Grid.rows - 1, Grid.ColIndex("AccountName"))) <> "" _
+    Or val(Grid.TextMatrix(Grid.rows - 1, Grid.ColIndex("Value"))) <> 0 _
+    Or Trim$(Grid.TextMatrix(Grid.rows - 1, Grid.ColIndex("des"))) <> "" Then
+        Grid.rows = Grid.rows + 1
+    End If
+End Sub
+
+Private Sub ClearImportedVSFlexRow(ByVal RowIndex As Long)
+    With Me.VSFlexGrid1
+        .TextMatrix(RowIndex, .ColIndex("Account_Serial")) = ""
+        .TextMatrix(RowIndex, .ColIndex("AccountCode")) = ""
+        .TextMatrix(RowIndex, .ColIndex("AccountName")) = ""
+        .TextMatrix(RowIndex, .ColIndex("Value")) = 0
+        .TextMatrix(RowIndex, .ColIndex("des")) = ""
+        .TextMatrix(RowIndex, .ColIndex("ProjectCode")) = ""
+        .TextMatrix(RowIndex, .ColIndex("project")) = ""
+        .TextMatrix(RowIndex, .ColIndex("projectid")) = ""
+        .TextMatrix(RowIndex, .ColIndex("pand")) = ""
+        .TextMatrix(RowIndex, .ColIndex("pandid")) = ""
+    End With
+End Sub
+
+Private Sub ClearImportedFgRow(ByVal RowIndex As Long)
+    With Me.Fg_Journal
+        .TextMatrix(RowIndex, .ColIndex("Account_Serial")) = ""
+        .TextMatrix(RowIndex, .ColIndex("AccountCode")) = ""
+        .TextMatrix(RowIndex, .ColIndex("AccountName")) = ""
+        .TextMatrix(RowIndex, .ColIndex("Value")) = 0
+        .TextMatrix(RowIndex, .ColIndex("des")) = ""
+        .TextMatrix(RowIndex, .ColIndex("ProjectCode")) = ""
+        .TextMatrix(RowIndex, .ColIndex("project")) = ""
+        .TextMatrix(RowIndex, .ColIndex("projectid2")) = ""
+        .TextMatrix(RowIndex, .ColIndex("pand")) = ""
+        .TextMatrix(RowIndex, .ColIndex("pandid2")) = ""
+    End With
+End Sub
+
+Private Function BuildImportIssuesText(ByVal RowIssues As Collection, Optional ByVal MaxLines As Long = 10) As String
+    Dim ItemIndex As Long
+    Dim LimitValue As Long
+
+    If RowIssues Is Nothing Then Exit Function
+    If RowIssues.Count = 0 Then Exit Function
+
+    LimitValue = RowIssues.Count
+    If MaxLines > 0 And LimitValue > MaxLines Then
+        LimitValue = MaxLines
+    End If
+
+    For ItemIndex = 1 To LimitValue
+        BuildImportIssuesText = BuildImportIssuesText & RowIssues(ItemIndex) & vbCrLf
+    Next ItemIndex
+
+    If RowIssues.Count > LimitValue Then
+        BuildImportIssuesText = BuildImportIssuesText & "..."
+    ElseIf Len(BuildImportIssuesText) > 0 Then
+        BuildImportIssuesText = Left$(BuildImportIssuesText, Len(BuildImportIssuesText) - Len(vbCrLf))
+    End If
+End Function
+
+Private Function MergeImportIssueCollections(ByVal FirstIssues As Collection, ByVal SecondIssues As Collection) As Collection
+    Dim ItemIndex As Long
+    Dim ResultIssues As New Collection
+
+    If Not FirstIssues Is Nothing Then
+        For ItemIndex = 1 To FirstIssues.Count
+            ResultIssues.Add FirstIssues(ItemIndex)
+        Next ItemIndex
+    End If
+
+    If Not SecondIssues Is Nothing Then
+        For ItemIndex = 1 To SecondIssues.Count
+            ResultIssues.Add SecondIssues(ItemIndex)
+        Next ItemIndex
+    End If
+
+    Set MergeImportIssueCollections = ResultIssues
+End Function
+
 Private Sub Command1_Click()
 '        If DCboStoreName.BoundText = "" Then
 '            Msg = "ÌÃ» «Œ Ì«— «”„ «·„Œ“‰"
@@ -3236,9 +3741,22 @@ Private Sub Command1_Click()
 '            Screen.MousePointer = vbDefault
 '            Exit Sub
 '        End If
-        
-CD1.ShowOpen
-txtFile.Text = CD1.FileName
+    On Error GoTo OpenCancelled
+
+    CD1.CancelError = True
+    CD1.Filter = "Excel Files (*.xls;*.xlsx;*.xlsm)|*.xls;*.xlsx;*.xlsm|All Files (*.*)|*.*"
+    CD1.ShowOpen
+
+    If Trim$(CD1.FileName) <> "" Then
+        txtFile.Text = CD1.FileName
+    End If
+
+    Exit Sub
+
+OpenCancelled:
+    If Err.Number <> IMPORT_DIALOG_CANCEL Then
+        MsgBox "The file selection dialog could not be opened.", vbExclamation, App.Title
+    End If
 End Sub
 
 Private Sub Command2_Click()
@@ -3249,63 +3767,45 @@ End Sub
 
 
 Sub FillItem()
-Dim error_string  As String
-  error_string = ""
-If txtFile.Text = "" Then MsgBox "Õœœ «·„·› «Ê·«": Exit Sub
-    Dim ExcelObj As Object
-    Dim ExcelBook As Object
-    Dim ExcelSheet As Object
-    Dim i As Integer
-    Dim currentvalue As String, mDesc As String
-    Dim Name As String
-    Dim itemcode As String
-    Dim itemqty As Double
-    Dim mEqu As String
-    Dim des As String
-    Dim DebitValue As String
-    Dim CreditValue As String
-   VSFlexGrid1.rows = 1
-    Set ExcelObj = CreateObject("Excel.Application")
-'        Set ExcelSheet = Nothing
-'    Set ExcelBook = Nothing
-'    Set ExcelObj = Nothing
-'
-    Set ExcelSheet = CreateObject("Excel.Sheet")
-    ExcelObj.Workbooks.Open txtFile.Text   ' App.Path & "\TrialBalance.xls"
-DoEvents
-    Set ExcelBook = ExcelObj.Workbooks(1)
-    Set ExcelSheet = ExcelBook.Worksheets(1)
-    isFromExcel = True
-    With ExcelSheet
-    i = 2
-    
-    Do Until .cells(i, 1) & "" = ""
-    itemcode = .cells(i, 1)
-    itemqty = .cells(i, 2)
-    Name = .cells(i, 3)
-    mEqu = .cells(i, 4)
-    'mDesc = .cells(i, 5)
-    If val(mEqu) = 0 Then
-        mEqu = 0
+    Dim ParsedRows As Collection
+    Dim ParseIssues As Collection
+    Dim ImportIssues As Collection
+    Dim AllIssues As Collection
+    Dim ImportedCount As Long
+    Dim StatusMessage As String
+    Dim DetailsMessage As String
+
+    If Trim$(txtFile.Text) = "" Then
+        MsgBox "No file selected.", vbExclamation, App.Title
+        Exit Sub
     End If
- addrow2 itemcode, itemqty, Name, mEqu, Name
-       i = i + 1
-     '  NewGrid.CountItems
-    Loop
-        End With
-    ExcelObj.Workbooks.Close
 
-    Set ExcelSheet = Nothing
-    Set ExcelBook = Nothing
-    Set ExcelObj = Nothing
+    If ReadExcelImportRows(txtFile.Text, ParsedRows, ParseIssues, StatusMessage) = False Then
+        MsgBox StatusMessage, vbExclamation, App.Title
+        Exit Sub
+    End If
 
-        If error_string <> "" Then
-            CreatLog_File_for_error (error_string)
-       End If
-       isFromExcel = False
-       Me.VSFlexGrid1.rows = Me.VSFlexGrid1.rows + 1
-'GetNotinGard
-'Coloring
+    If ParsedRows Is Nothing Or ParsedRows.Count = 0 Then
+        DetailsMessage = BuildImportIssuesText(ParseIssues)
+        If DetailsMessage <> "" Then
+            MsgBox StatusMessage & vbCrLf & vbCrLf & DetailsMessage, vbExclamation, App.Title
+        Else
+            MsgBox StatusMessage, vbExclamation, App.Title
+        End If
+        Exit Sub
+    End If
+
+    If ImportParsedExcelRows(ParsedRows, ImportedCount, ImportIssues, StatusMessage) = False Then
+        MsgBox StatusMessage, vbExclamation, App.Title
+        Exit Sub
+    End If
+
+    Set AllIssues = MergeImportIssueCollections(ParseIssues, ImportIssues)
+    If AllIssues.Count > 0 Then
+        MsgBox "Some rows were skipped during import." & vbCrLf & vbCrLf & BuildImportIssuesText(AllIssues), vbInformation, App.Title
+    End If
+
+    MsgBox "Import completed successfully." & vbCrLf & "Imported rows: " & ImportedCount & vbCrLf & "Skipped rows: " & AllIssues.Count, vbInformation, App.Title
 End Sub
 Public Sub CreatLog_File_for_error(str As String)
     Dim StrLogFileName As String

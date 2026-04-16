@@ -17,6 +17,15 @@ Begin VB.Form FrmTransacRegAlarm
    MinButton       =   0   'False
    ScaleHeight     =   8865
    ScaleWidth      =   17580
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic C1Elastic1 
       Height          =   8865
       Left            =   0

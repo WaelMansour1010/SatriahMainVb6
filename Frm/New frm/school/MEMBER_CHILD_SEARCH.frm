@@ -13,6 +13,15 @@ Begin VB.Form MEMBER_CHILD_SEARCH
    MDIChild        =   -1  'True
    ScaleHeight     =   6495
    ScaleWidth      =   6960
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox Text3 
       Alignment       =   2  'Center
       Height          =   495

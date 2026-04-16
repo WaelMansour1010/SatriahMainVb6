@@ -20,6 +20,15 @@ Begin VB.Form FrmEmployeeMofrad
    ScaleHeight     =   6795
    ScaleWidth      =   10575
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox txtempID 
       Alignment       =   1  'Right Justify
       BackColor       =   &H00FFFFFF&

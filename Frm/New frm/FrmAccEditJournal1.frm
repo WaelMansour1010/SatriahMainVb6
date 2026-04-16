@@ -5,8 +5,8 @@ Object = "{BEEECC20-4D5F-4F8B-BFDC-5D9B6FBDE09D}#1.0#0"; "vsflex8.ocx"
 Object = "{CFC0A331-9521-11D5-B9E6-5A06F6000000}#1.0#0"; "VDSCombo.DLL"
 Object = "{F0D2F211-CCB0-11D0-A316-00AA00688B10}#1.0#0"; "MSDATLST.OCX"
 Object = "{FE5DCFAD-BC1D-11D2-94CF-004005455FAA}#1.4#0"; "ImpulseButton.ocx"
-Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
-Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "MSCOMCTL.OCX"
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
+Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
 Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
 Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Object = "{D155F1AE-D9A4-458C-8CEE-498CB717DB7B}#1.0#0"; "DBPix20.ocx"
@@ -18,6 +18,15 @@ Begin VB.Form FrmAccEditJournal1
    ClientLeft      =   -15
    ClientTop       =   375
    ClientWidth     =   11520
+   BeginProperty Font 
+      Name            =   "Arial"
+      Size            =   8.25
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    HelpContextID   =   450
    Icon            =   "FrmAccEditJournal1.frx":0000
    LinkTopic       =   "Form1"
@@ -36,7 +45,7 @@ Begin VB.Form FrmAccEditJournal1
       _cx             =   20320
       _cy             =   15849
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -166,8 +175,9 @@ Begin VB.Form FrmAccEditJournal1
             ButtonPositionImage=   4
             Caption         =   ""
             BackColor       =   12648447
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -199,8 +209,9 @@ Begin VB.Form FrmAccEditJournal1
             ButtonPositionImage=   4
             Caption         =   ""
             BackColor       =   12648447
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -232,8 +243,9 @@ Begin VB.Form FrmAccEditJournal1
             ButtonPositionImage=   4
             Caption         =   ""
             BackColor       =   12648447
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -265,8 +277,9 @@ Begin VB.Form FrmAccEditJournal1
             ButtonPositionImage=   4
             Caption         =   ""
             BackColor       =   12648447
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -322,7 +335,7 @@ Begin VB.Form FrmAccEditJournal1
             RecordSource    =   ""
             Caption         =   " Õ—Ìﬂ"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -369,7 +382,7 @@ Begin VB.Form FrmAccEditJournal1
             RecordSource    =   ""
             Caption         =   " Õ—Ìﬂ"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -397,7 +410,7 @@ Begin VB.Form FrmAccEditJournal1
          _cx             =   20267
          _cy             =   10874
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -448,11 +461,11 @@ Begin VB.Form FrmAccEditJournal1
             TabIndex        =   4
             TabStop         =   0   'False
             Top             =   45
-            Width           =   10470
-            _cx             =   18468
+            Width           =   10620
+            _cx             =   18733
             _cy             =   10716
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -505,14 +518,14 @@ Begin VB.Form FrmAccEditJournal1
                Left            =   30
                TabIndex        =   2
                Top             =   30
-               Width           =   10410
-               _cx             =   18362
+               Width           =   10560
+               _cx             =   18627
                _cy             =   8890
                Appearance      =   1
                BorderStyle     =   1
                Enabled         =   -1  'True
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -544,7 +557,7 @@ Begin VB.Form FrmAccEditJournal1
                GridLinesFixed  =   2
                GridLineWidth   =   10
                Rows            =   10
-               Cols            =   30
+               Cols            =   38
                FixedRows       =   2
                FixedCols       =   0
                RowHeightMin    =   300
@@ -762,7 +775,7 @@ Begin VB.Form FrmAccEditJournal1
                         BackStyle       =   0  'Transparent
                         Caption         =   "X"
                         BeginProperty Font 
-                           Name            =   "MS Sans Serif"
+                           Name            =   "Arial"
                            Size            =   12
                            Charset         =   178
                            Weight          =   700
@@ -842,7 +855,7 @@ Begin VB.Form FrmAccEditJournal1
                   CaptionAlignment=   4
                   CaptionBackColor=   -2147483633
                   BeginProperty CaptionFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -864,7 +877,7 @@ Begin VB.Form FrmAccEditJournal1
                   BrowsePictureStretchV=   0
                   Enabled         =   -1  'True
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -880,7 +893,7 @@ Begin VB.Form FrmAccEditJournal1
                   MultiLine       =   0
                   OnFocus         =   3
                   PasswordChar    =   ""
-                  Picture         =   "FrmAccEditJournal1.frx":5384
+                  Picture         =   "FrmAccEditJournal1.frx":5496
                   PictureAlignment=   5
                   PictureBackColor=   -2147483624
                   PictureStretchH =   0
@@ -949,16 +962,16 @@ Begin VB.Form FrmAccEditJournal1
             End
             Begin C1SizerLibCtl.C1Elastic EleOpt 
                Height          =   945
-               Left            =   7860
+               Left            =   7980
                TabIndex        =   6
                TabStop         =   0   'False
                Top             =   5100
                Visible         =   0   'False
-               Width           =   2580
-               _cx             =   4551
+               Width           =   2610
+               _cx             =   4604
                _cy             =   1667
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -1012,7 +1025,7 @@ Begin VB.Form FrmAccEditJournal1
                   RightToLeft     =   -1  'True
                   TabIndex        =   25
                   Top             =   -30
-                  Width           =   17175
+                  Width           =   17385
                   Begin VB.CommandButton Command6 
                      Caption         =   "Command6"
                      Height          =   375
@@ -1062,15 +1075,15 @@ Begin VB.Form FrmAccEditJournal1
                End
                Begin C1SizerLibCtl.C1Elastic EleSortOpt 
                   Height          =   540
-                  Left            =   14730
+                  Left            =   14895
                   TabIndex        =   11
                   TabStop         =   0   'False
                   Top             =   285
-                  Width           =   38235
-                  _cx             =   67442
+                  Width           =   38685
+                  _cx             =   68236
                   _cy             =   953
                   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   400
@@ -1135,7 +1148,7 @@ Begin VB.Form FrmAccEditJournal1
                Begin VB.Image ImgNote 
                   Height          =   240
                   Left            =   135
-                  Picture         =   "FrmAccEditJournal1.frx":591E
+                  Picture         =   "FrmAccEditJournal1.frx":5A30
                   Top             =   135
                   Visible         =   0   'False
                   Width           =   240
@@ -1147,8 +1160,8 @@ Begin VB.Form FrmAccEditJournal1
                TabIndex        =   19
                TabStop         =   0   'False
                Top             =   5130
-               Width           =   10470
-               _cx             =   18468
+               Width           =   10620
+               _cx             =   18733
                _cy             =   1667
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                   Name            =   "Arial (Arabic)"
@@ -1203,7 +1216,7 @@ Begin VB.Form FrmAccEditJournal1
                   Alignment       =   1  'Right Justify
                   Height          =   285
                   Index           =   6
-                  Left            =   4200
+                  Left            =   4260
                   RightToLeft     =   -1  'True
                   TabIndex        =   135
                   Top             =   600
@@ -1213,17 +1226,17 @@ Begin VB.Form FrmAccEditJournal1
                   Alignment       =   1  'Right Justify
                   Height          =   285
                   Index           =   5
-                  Left            =   4680
+                  Left            =   4740
                   RightToLeft     =   -1  'True
                   TabIndex        =   134
                   Top             =   600
-                  Width           =   465
+                  Width           =   480
                End
                Begin VB.TextBox txtRowNumber 
                   Alignment       =   1  'Right Justify
                   Height          =   285
                   Index           =   4
-                  Left            =   5160
+                  Left            =   5235
                   RightToLeft     =   -1  'True
                   TabIndex        =   133
                   Top             =   600
@@ -1233,17 +1246,17 @@ Begin VB.Form FrmAccEditJournal1
                   Alignment       =   1  'Right Justify
                   Height          =   285
                   Index           =   3
-                  Left            =   5640
+                  Left            =   5715
                   RightToLeft     =   -1  'True
                   TabIndex        =   132
                   Top             =   600
-                  Width           =   465
+                  Width           =   480
                End
                Begin VB.TextBox txtRowNumber 
                   Alignment       =   1  'Right Justify
                   Height          =   285
                   Index           =   2
-                  Left            =   6120
+                  Left            =   6210
                   RightToLeft     =   -1  'True
                   TabIndex        =   131
                   Top             =   600
@@ -1253,17 +1266,17 @@ Begin VB.Form FrmAccEditJournal1
                   Alignment       =   1  'Right Justify
                   Height          =   285
                   Index           =   1
-                  Left            =   6600
+                  Left            =   6690
                   RightToLeft     =   -1  'True
                   TabIndex        =   130
                   Top             =   600
-                  Width           =   465
+                  Width           =   480
                End
                Begin VB.TextBox txtRowNumber 
                   Alignment       =   1  'Right Justify
                   Height          =   285
                   Index           =   0
-                  Left            =   7050
+                  Left            =   7155
                   RightToLeft     =   -1  'True
                   TabIndex        =   129
                   Top             =   600
@@ -1272,20 +1285,20 @@ Begin VB.Form FrmAccEditJournal1
                Begin VB.CommandButton btnSearch 
                   Caption         =   "»ÕÀ"
                   Height          =   255
-                  Left            =   2010
+                  Left            =   2040
                   RightToLeft     =   -1  'True
                   TabIndex        =   121
                   Top             =   75
-                  Width           =   780
+                  Width           =   795
                End
                Begin VB.TextBox txtGridSearch 
                   Alignment       =   1  'Right Justify
                   Height          =   285
-                  Left            =   2850
+                  Left            =   2895
                   RightToLeft     =   -1  'True
                   TabIndex        =   119
                   Top             =   60
-                  Width           =   3885
+                  Width           =   3930
                End
                Begin VB.Frame Frame2 
                   Height          =   855
@@ -1293,7 +1306,7 @@ Begin VB.Form FrmAccEditJournal1
                   RightToLeft     =   -1  'True
                   TabIndex        =   22
                   Top             =   90
-                  Width           =   750
+                  Width           =   765
                   Begin VB.OptionButton OptSort 
                      Alignment       =   1  'Right Justify
                      BackColor       =   &H00E2E9E9&
@@ -1331,7 +1344,7 @@ Begin VB.Form FrmAccEditJournal1
                      TX              =   "Õ–› ”ÿ—"
                      ENAB            =   -1  'True
                      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                        Name            =   "MS Sans Serif"
+                        Name            =   "Arial"
                         Size            =   8.25
                         Charset         =   178
                         Weight          =   400
@@ -1347,7 +1360,7 @@ Begin VB.Form FrmAccEditJournal1
                      FCOLO           =   255
                      MCOL            =   12632256
                      MPTR            =   1
-                     MICON           =   "FrmAccEditJournal1.frx":5EA8
+                     MICON           =   "FrmAccEditJournal1.frx":5FBA
                      UMCOL           =   -1  'True
                      SOFT            =   0   'False
                      PICPOS          =   0
@@ -1360,17 +1373,17 @@ Begin VB.Form FrmAccEditJournal1
                End
                Begin DBPIXLib.DBPix20 DBPix202 
                   Height          =   30
-                  Left            =   525
+                  Left            =   540
                   TabIndex        =   20
                   Top             =   0
                   Visible         =   0   'False
-                  Width           =   1215
+                  Width           =   1230
                   _Version        =   131072
-                  _ExtentX        =   2143
+                  _ExtentX        =   2170
                   _ExtentY        =   53
                   _StockProps     =   1
                   BackColor       =   16777215
-                  _Image          =   "FrmAccEditJournal1.frx":5EC4
+                  _Image          =   "FrmAccEditJournal1.frx":5FD6
                   ImageResampleWidth=   100
                   ImageResampleHeight=   100
                   ImageResampleMode=   1
@@ -1401,7 +1414,7 @@ Begin VB.Form FrmAccEditJournal1
                   Caption         =   "S"
                   Height          =   225
                   Index           =   5
-                  Left            =   7170
+                  Left            =   7275
                   RightToLeft     =   -1  'True
                   TabIndex        =   141
                   Top             =   360
@@ -1412,7 +1425,7 @@ Begin VB.Form FrmAccEditJournal1
                   Caption         =   "Name"
                   Height          =   225
                   Index           =   4
-                  Left            =   4230
+                  Left            =   4290
                   RightToLeft     =   -1  'True
                   TabIndex        =   140
                   Top             =   360
@@ -1423,7 +1436,7 @@ Begin VB.Form FrmAccEditJournal1
                   Caption         =   "Serial"
                   Height          =   225
                   Index           =   3
-                  Left            =   4740
+                  Left            =   4815
                   RightToLeft     =   -1  'True
                   TabIndex        =   139
                   Top             =   360
@@ -1434,22 +1447,22 @@ Begin VB.Form FrmAccEditJournal1
                   Caption         =   "Last"
                   Height          =   225
                   Index           =   2
-                  Left            =   5670
+                  Left            =   5745
                   RightToLeft     =   -1  'True
                   TabIndex        =   138
                   Top             =   360
-                  Width           =   375
+                  Width           =   390
                End
                Begin VB.Label Label13 
                   Alignment       =   1  'Right Justify
                   Caption         =   "Open"
                   Height          =   225
                   Index           =   0
-                  Left            =   6720
+                  Left            =   6810
                   RightToLeft     =   -1  'True
                   TabIndex        =   137
                   Top             =   390
-                  Width           =   375
+                  Width           =   390
                End
                Begin VB.Label Label13 
                   Alignment       =   1  'Right Justify
@@ -1466,16 +1479,16 @@ Begin VB.Form FrmAccEditJournal1
                   Alignment       =   1  'Right Justify
                   Caption         =   "»ÕÀ"
                   Height          =   255
-                  Left            =   6750
+                  Left            =   6840
                   RightToLeft     =   -1  'True
                   TabIndex        =   120
                   Top             =   60
-                  Width           =   795
+                  Width           =   810
                End
                Begin VB.Label lblAccountBalance 
                   Alignment       =   1  'Right Justify
                   BeginProperty Font 
-                     Name            =   "MS Sans Serif"
+                     Name            =   "Arial"
                      Size            =   8.25
                      Charset         =   178
                      Weight          =   700
@@ -1485,11 +1498,11 @@ Begin VB.Form FrmAccEditJournal1
                   EndProperty
                   ForeColor       =   &H000000FF&
                   Height          =   525
-                  Left            =   1470
+                  Left            =   1485
                   RightToLeft     =   -1  'True
                   TabIndex        =   50
                   Top             =   375
-                  Width           =   1470
+                  Width           =   1500
                End
                Begin VB.Label lbl 
                   Alignment       =   1  'Right Justify
@@ -1498,7 +1511,7 @@ Begin VB.Form FrmAccEditJournal1
                   Caption         =   "«· ÊﬁÌ⁄"
                   Height          =   240
                   Index           =   5
-                  Left            =   930
+                  Left            =   945
                   RightToLeft     =   -1  'True
                   TabIndex        =   21
                   Tag             =   "51"
@@ -1514,11 +1527,11 @@ Begin VB.Form FrmAccEditJournal1
             TabIndex        =   5
             TabStop         =   0   'False
             Top             =   45
-            Width           =   10470
-            _cx             =   18468
+            Width           =   10620
+            _cx             =   18733
             _cy             =   10716
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -1569,29 +1582,29 @@ Begin VB.Form FrmAccEditJournal1
             Begin VB.TextBox Txtcode 
                Alignment       =   1  'Right Justify
                Height          =   1755
-               Left            =   93795
+               Left            =   95145
                RightToLeft     =   -1  'True
                TabIndex        =   31
                Top             =   19560
-               Width           =   10935
+               Width           =   11085
             End
             Begin VB.CommandButton Command2 
                Caption         =   "«” œ⁄«¡ ﬁ«·» ‘—Õ"
                Height          =   2340
-               Left            =   54450
+               Left            =   55230
                RightToLeft     =   -1  'True
                TabIndex        =   18
                Top             =   23355
-               Width           =   22305
+               Width           =   22620
             End
             Begin VB.CommandButton Command1 
                Caption         =   "«÷«›… ﬁ«·» ‘—Õ"
                Height          =   2340
-               Left            =   80280
+               Left            =   81435
                RightToLeft     =   -1  'True
                TabIndex        =   17
                Top             =   23355
-               Width           =   22695
+               Width           =   23010
             End
             Begin VB.TextBox Txt 
                Alignment       =   1  'Right Justify
@@ -1604,26 +1617,26 @@ Begin VB.Form FrmAccEditJournal1
                ScrollBars      =   2  'Vertical
                TabIndex        =   8
                Top             =   2160
-               Width           =   36300
+               Width           =   36825
             End
             Begin VB.Label Lb_note_value_by_characters 
                Alignment       =   1  'Right Justify
                Height          =   2040
-               Left            =   48210
+               Left            =   48900
                RightToLeft     =   -1  'True
                TabIndex        =   46
                Top             =   27795
-               Width           =   58125
+               Width           =   58965
             End
             Begin VB.Label Label3 
                Alignment       =   1  'Right Justify
                Caption         =   "Code"
                Height          =   2430
-               Left            =   69060
+               Left            =   70050
                RightToLeft     =   -1  'True
                TabIndex        =   30
                Top             =   19560
-               Width           =   9660
+               Width           =   9795
             End
             Begin VB.Label lbl 
                Alignment       =   1  'Right Justify
@@ -1631,12 +1644,12 @@ Begin VB.Form FrmAccEditJournal1
                Caption         =   " ⁄·Ìﬁ:"
                Height          =   810
                Index           =   6
-               Left            =   69060
+               Left            =   70050
                RightToLeft     =   -1  'True
                TabIndex        =   7
                Tag             =   "22"
                Top             =   2160
-               Width           =   22365
+               Width           =   22680
             End
          End
          Begin C1SizerLibCtl.C1Elastic C1Elastic6 
@@ -1645,11 +1658,11 @@ Begin VB.Form FrmAccEditJournal1
             TabIndex        =   79
             TabStop         =   0   'False
             Top             =   45
-            Width           =   10470
-            _cx             =   18468
+            Width           =   10620
+            _cx             =   18733
             _cy             =   10716
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -1703,14 +1716,14 @@ Begin VB.Form FrmAccEditJournal1
                TabIndex        =   80
                Tag             =   "1"
                Top             =   60
-               Width           =   10035
-               _cx             =   17701
+               Width           =   10185
+               _cx             =   17965
                _cy             =   8731
                Appearance      =   1
                BorderStyle     =   1
                Enabled         =   -1  'True
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -1750,7 +1763,7 @@ Begin VB.Form FrmAccEditJournal1
                ColWidthMin     =   0
                ColWidthMax     =   0
                ExtendLastCol   =   -1  'True
-               FormatString    =   $"FrmAccEditJournal1.frx":5EDC
+               FormatString    =   $"FrmAccEditJournal1.frx":5FEE
                ScrollTrack     =   0   'False
                ScrollBars      =   3
                ScrollTips      =   0   'False
@@ -1800,14 +1813,15 @@ Begin VB.Form FrmAccEditJournal1
                Left            =   0
                TabIndex        =   126
                Top             =   5100
-               Width           =   3945
-               _ExtentX        =   6959
+               Width           =   4005
+               _ExtentX        =   7064
                _ExtentY        =   1138
                ButtonPositionImage=   1
                Caption         =   "«—”«· ··«⁄ „«œ"
                BackColor       =   -2147483635
+               FontName        =   "Arial"
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
+                  Name            =   "Arial"
                   Size            =   8.25
                   Charset         =   178
                   Weight          =   400
@@ -1829,22 +1843,22 @@ Begin VB.Form FrmAccEditJournal1
                BackColor       =   &H00FFFFC0&
                Caption         =   "„ÿ·Ê» «⁄ „«œ… Õ«·Ì«"
                Height          =   765
-               Left            =   23115
+               Left            =   23445
                RightToLeft     =   -1  'True
                TabIndex        =   82
                Top             =   14025
-               Width           =   11910
+               Width           =   12075
             End
             Begin VB.Label Label1100 
                Alignment       =   2  'Center
                BackColor       =   &H00FFFFC0&
                Caption         =   "„ÿ·Ê» «⁄ „«œ… Õ«·Ì«"
                Height          =   810
-               Left            =   25680
+               Left            =   26055
                RightToLeft     =   -1  'True
                TabIndex        =   81
                Top             =   18525
-               Width           =   11895
+               Width           =   12060
             End
          End
       End
@@ -1858,7 +1872,7 @@ Begin VB.Form FrmAccEditJournal1
          _cx             =   20267
          _cy             =   2037
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -1946,7 +1960,7 @@ Begin VB.Form FrmAccEditJournal1
             Top             =   135
             Width           =   1905
             _ExtentX        =   3360
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             Enabled         =   0   'False
             Locked          =   -1  'True
@@ -1967,8 +1981,9 @@ Begin VB.Form FrmAccEditJournal1
             ButtonPositionImage=   1
             Caption         =   "ÃœÌœ"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2000,8 +2015,9 @@ Begin VB.Form FrmAccEditJournal1
             ButtonPositionImage=   1
             Caption         =   " ⁄œÌ·"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2031,8 +2047,9 @@ Begin VB.Form FrmAccEditJournal1
             ButtonPositionImage=   1
             Caption         =   "Õ›Ÿ"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2062,8 +2079,9 @@ Begin VB.Form FrmAccEditJournal1
             ButtonPositionImage=   1
             Caption         =   " —«Ã⁄"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2093,8 +2111,9 @@ Begin VB.Form FrmAccEditJournal1
             ButtonPositionImage=   1
             Caption         =   "«÷«›…"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2124,8 +2143,9 @@ Begin VB.Form FrmAccEditJournal1
             ButtonPositionImage=   1
             Caption         =   "»ÕÀ"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2156,8 +2176,9 @@ Begin VB.Form FrmAccEditJournal1
             ButtonPositionImage=   1
             Caption         =   "Œ—ÊÃ"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2187,8 +2208,9 @@ Begin VB.Form FrmAccEditJournal1
             ButtonPositionImage=   1
             Caption         =   "ÿ»«⁄…"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2218,8 +2240,9 @@ Begin VB.Form FrmAccEditJournal1
             ButtonPositionImage=   1
             Caption         =   "„”«⁄œ…"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2249,8 +2272,9 @@ Begin VB.Form FrmAccEditJournal1
             ButtonPositionImage=   1
             Caption         =   "Õ–›"
             BackColor       =   14871017
+            FontName        =   "Arial"
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2280,7 +2304,7 @@ Begin VB.Form FrmAccEditJournal1
             TX              =   "«⁄ „«œ"
             ENAB            =   -1  'True
             BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2296,7 +2320,7 @@ Begin VB.Form FrmAccEditJournal1
             FCOLO           =   0
             MCOL            =   192
             MPTR            =   1
-            MICON           =   "FrmAccEditJournal1.frx":601F
+            MICON           =   "FrmAccEditJournal1.frx":6131
             UMCOL           =   -1  'True
             SOFT            =   0   'False
             PICPOS          =   0
@@ -2319,7 +2343,7 @@ Begin VB.Form FrmAccEditJournal1
             TX              =   " ÕÊÌ· «·Ï ﬁ«·»"
             ENAB            =   -1  'True
             BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2335,7 +2359,7 @@ Begin VB.Form FrmAccEditJournal1
             FCOLO           =   0
             MCOL            =   12632256
             MPTR            =   1
-            MICON           =   "FrmAccEditJournal1.frx":603B
+            MICON           =   "FrmAccEditJournal1.frx":614D
             UMCOL           =   -1  'True
             SOFT            =   0   'False
             PICPOS          =   0
@@ -2358,7 +2382,7 @@ Begin VB.Form FrmAccEditJournal1
             TX              =   "«·€«¡ «· √ÀÌ—"
             ENAB            =   -1  'True
             BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2374,7 +2398,7 @@ Begin VB.Form FrmAccEditJournal1
             FCOLO           =   0
             MCOL            =   12632256
             MPTR            =   1
-            MICON           =   "FrmAccEditJournal1.frx":6057
+            MICON           =   "FrmAccEditJournal1.frx":6169
             UMCOL           =   -1  'True
             SOFT            =   0   'False
             PICPOS          =   0
@@ -2397,7 +2421,7 @@ Begin VB.Form FrmAccEditJournal1
             TX              =   "«‰‘«¡ ﬁÌœ ⁄ﬂ”Ì"
             ENAB            =   -1  'True
             BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2413,7 +2437,7 @@ Begin VB.Form FrmAccEditJournal1
             FCOLO           =   0
             MCOL            =   192
             MPTR            =   1
-            MICON           =   "FrmAccEditJournal1.frx":6073
+            MICON           =   "FrmAccEditJournal1.frx":6185
             UMCOL           =   -1  'True
             SOFT            =   0   'False
             PICPOS          =   0
@@ -2436,7 +2460,7 @@ Begin VB.Form FrmAccEditJournal1
             TX              =   "«” œ⁄«¡ ﬁ«·»"
             ENAB            =   -1  'True
             BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2452,7 +2476,7 @@ Begin VB.Form FrmAccEditJournal1
             FCOLO           =   0
             MCOL            =   12632256
             MPTR            =   1
-            MICON           =   "FrmAccEditJournal1.frx":608F
+            MICON           =   "FrmAccEditJournal1.frx":61A1
             UMCOL           =   -1  'True
             SOFT            =   0   'False
             PICPOS          =   0
@@ -2475,7 +2499,7 @@ Begin VB.Form FrmAccEditJournal1
             TX              =   "„—«ﬂ“ «· ﬂ·›…"
             ENAB            =   -1  'True
             BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2491,7 +2515,7 @@ Begin VB.Form FrmAccEditJournal1
             FCOLO           =   0
             MCOL            =   192
             MPTR            =   1
-            MICON           =   "FrmAccEditJournal1.frx":60AB
+            MICON           =   "FrmAccEditJournal1.frx":61BD
             UMCOL           =   -1  'True
             SOFT            =   0   'False
             PICPOS          =   0
@@ -2514,7 +2538,7 @@ Begin VB.Form FrmAccEditJournal1
             TX              =   "«·„—›ﬁ« "
             ENAB            =   -1  'True
             BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2530,7 +2554,7 @@ Begin VB.Form FrmAccEditJournal1
             FCOLO           =   0
             MCOL            =   12632256
             MPTR            =   1
-            MICON           =   "FrmAccEditJournal1.frx":60C7
+            MICON           =   "FrmAccEditJournal1.frx":61D9
             UMCOL           =   -1  'True
             SOFT            =   0   'False
             PICPOS          =   0
@@ -2553,7 +2577,7 @@ Begin VB.Form FrmAccEditJournal1
             TX              =   "«” œ⁄«¡ ﬁÌœ œÊ—Ï"
             ENAB            =   -1  'True
             BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -2569,7 +2593,7 @@ Begin VB.Form FrmAccEditJournal1
             FCOLO           =   0
             MCOL            =   12632256
             MPTR            =   1
-            MICON           =   "FrmAccEditJournal1.frx":60E3
+            MICON           =   "FrmAccEditJournal1.frx":61F5
             UMCOL           =   -1  'True
             SOFT            =   0   'False
             PICPOS          =   0
@@ -2657,7 +2681,7 @@ Begin VB.Form FrmAccEditJournal1
          _cx             =   20267
          _cy             =   1640
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
+            Name            =   "Arial"
             Size            =   8.25
             Charset         =   178
             Weight          =   400
@@ -2985,7 +3009,7 @@ Begin VB.Form FrmAccEditJournal1
             _cx             =   4630
             _cy             =   794
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -3072,7 +3096,7 @@ Begin VB.Form FrmAccEditJournal1
             CalendarBackColor=   12648447
             CalendarTitleBackColor=   10383715
             CustomFormat    =   "yyyy/M/d"
-            Format          =   174718977
+            Format          =   155910145
             CurrentDate     =   37140
          End
          Begin MSDataListLib.DataCombo dcBranch 
@@ -3082,21 +3106,21 @@ Begin VB.Form FrmAccEditJournal1
             Top             =   0
             Width           =   2070
             _ExtentX        =   3651
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             BackColor       =   16777215
             Text            =   ""
             RightToLeft     =   -1  'True
          End
          Begin MSDataListLib.DataCombo DcCostCenter 
-            Bindings        =   "FrmAccEditJournal1.frx":60FF
+            Bindings        =   "FrmAccEditJournal1.frx":6211
             Height          =   315
             Left            =   4845
             TabIndex        =   106
             Top             =   360
             Width           =   2070
             _ExtentX        =   3651
-            _ExtentY        =   556
+            _ExtentY        =   582
             _Version        =   393216
             BackColor       =   16777215
             ListField       =   "account_name"
@@ -3104,7 +3128,7 @@ Begin VB.Form FrmAccEditJournal1
             Text            =   ""
             RightToLeft     =   -1  'True
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -3119,8 +3143,8 @@ Begin VB.Form FrmAccEditJournal1
             TabIndex        =   107
             Top             =   360
             Width           =   1470
-            _extentx        =   2593
-            _extenty        =   450
+            _ExtentX        =   2593
+            _ExtentY        =   450
          End
          Begin MSComCtl2.DTPicker txtDueDate 
             Height          =   300
@@ -3135,7 +3159,7 @@ Begin VB.Form FrmAccEditJournal1
             CalendarBackColor=   12648447
             CalendarTitleBackColor=   10383715
             CustomFormat    =   "yyyy/M/d"
-            Format          =   174718977
+            Format          =   155910145
             CurrentDate     =   37140
          End
          Begin MSComDlg.CommonDialog CD1 
@@ -3158,7 +3182,7 @@ Begin VB.Form FrmAccEditJournal1
             TX              =   "«‰‘«¡ ﬁÌœ œÊ—Ì"
             ENAB            =   -1  'True
             BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   8.25
                Charset         =   178
                Weight          =   400
@@ -3174,7 +3198,7 @@ Begin VB.Form FrmAccEditJournal1
             FCOLO           =   0
             MCOL            =   12632256
             MPTR            =   1
-            MICON           =   "FrmAccEditJournal1.frx":6114
+            MICON           =   "FrmAccEditJournal1.frx":6226
             UMCOL           =   -1  'True
             SOFT            =   0   'False
             PICPOS          =   0
@@ -3268,7 +3292,7 @@ Begin VB.Form FrmAccEditJournal1
             BackStyle       =   0  'Transparent
             Caption         =   "ﬁÌœ «·Ì"
             BeginProperty Font 
-               Name            =   "MS Sans Serif"
+               Name            =   "Arial"
                Size            =   18
                Charset         =   178
                Weight          =   700
@@ -3327,10 +3351,10 @@ Dim FirstPeriodDateInthisYear  As Date
 Dim firstSerachRow As Integer
 
 Function CuurentLogdata(Optional Currentmode As String)
-     LogTextA = "    ‘«‘… " & ScreenNameArabic & CHR(13) & "—ﬁ„ «·ﬁÌœ  " & TxtSerial1.text & CHR(13) & "   «· «—ÌŒ  " & DTP_Date & CHR(13) & "   «·›—⁄ «·⁄«„   " & dcBranch & CHR(13) & "     «·«Ã„«·Ì    " & TxtTotalDebit
+     LogTextA = "    ‘«‘… " & ScreenNameArabic & CHR(13) & "—ﬁ„ «·ﬁÌœ  " & TxtSerial1.Text & CHR(13) & "   «· «—ÌŒ  " & DTP_Date & CHR(13) & "   «·›—⁄ «·⁄«„   " & Dcbranch & CHR(13) & "     «·«Ã„«·Ì    " & TxtTotalDebit
        '
                      
-        LogTexte = "    Screen  " & ScreenNameEnglish & CHR(13) & "Vchr No     " & TxtSerial1.text & CHR(13) & "   Date  " & DTP_Date & CHR(13) & "   General Branch  " & dcBranch & CHR(13) & "     Total    " & TxtTotalDebit
+        LogTexte = "    Screen  " & ScreenNameEnglish & CHR(13) & "Vchr No     " & TxtSerial1.Text & CHR(13) & "   Date  " & DTP_Date & CHR(13) & "   General Branch  " & Dcbranch & CHR(13) & "     Total    " & TxtTotalDebit
        If Currentmode <> "D" Then
         AddToLogFile CInt(user_id), 0, Date, Time, LogTextA, LogTexte, Me.Name, Me.TxtModFlg, , , val(TxtSerial)
     Else
@@ -3364,7 +3388,7 @@ End Sub
 Private Sub Accredit_Click()
     Dim BeginTrans As Boolean
  
-If val(TXTNoteID.text) = 0 Then
+If val(TxtNoteID.Text) = 0 Then
      If SystemOptions.UserInterface = ArabicInterface Then
      MsgBox "«Õ›Ÿ «·”‰œ «Ê·«", vbCritical
      Else
@@ -3374,7 +3398,7 @@ If val(TXTNoteID.text) = 0 Then
       Exit Sub
       End If
      
-    SendTopost Me.Name, "Notes", "NoteID", 0, val(dcBranch.BoundText), val(TXTNoteID.text), TxtSerial.text
+    SendTopost Me.Name, "Notes", "NoteID", 0, val(Dcbranch.BoundText), val(TxtNoteID.Text), TxtSerial.Text
   '' RsNetes.Resync
  If SystemOptions.UserInterface = ArabicInterface Then
     Accredit.Caption = " „ «·«—”«· ··«⁄ „«œ"
@@ -3395,7 +3419,7 @@ StrSQL = StrSQL + " dbo.TbLLevels.name , dbo.TbLLevels.namee, dbo.TblUsers.UserI
 StrSQL = StrSQL + " FROM         dbo.ApprovalData left JOIN"
 StrSQL = StrSQL + " dbo.TbLLevels ON dbo.ApprovalData.levelo = dbo.TbLLevels.LevelID INNER JOIN"
 StrSQL = StrSQL + " dbo.TblUsers ON dbo.ApprovalData.EmpID = dbo.TblUsers.UserID"
-StrSQL = StrSQL + " WHERE     (dbo.ApprovalData.Transaction_ID = " & val(Me.TXTNoteID.text) & ") AND (dbo.ApprovalData.ScreenName = N'" & Me.Name & "')"
+StrSQL = StrSQL + " WHERE     (dbo.ApprovalData.Transaction_ID = " & val(Me.TxtNoteID.Text) & ") AND (dbo.ApprovalData.ScreenName = N'" & Me.Name & "')"
 StrSQL = StrSQL + " ORDER BY dbo.ApprovalData.levelorder"
 
     RsDetails.Open StrSQL, Cn, adOpenStatic, adLockOptimistic, adCmdText
@@ -3415,37 +3439,37 @@ Accredit.Caption = "Sent To approval "
 End If
 End If
  If Not (RsDetails.EOF Or RsDetails.BOF) Then
-        Grid2.rows = RsDetails.RecordCount + 1
+        GRID2.rows = RsDetails.RecordCount + 1
  
 
         For Num = 1 To RsDetails.RecordCount
         
-       Grid2.TextMatrix(Num, Grid2.ColIndex("Currcursor")) = IIf(IsNull(RsDetails("Currcursor")), "", RsDetails("Currcursor"))
-    If Grid2.TextMatrix(Num, Grid2.ColIndex("Currcursor")) = "1" Then
-   Grid2.cell(flexcpBackColor, Num, 1, Num, 7) = &HFFFFC0
+       GRID2.TextMatrix(Num, GRID2.ColIndex("Currcursor")) = IIf(IsNull(RsDetails("Currcursor")), "", RsDetails("Currcursor"))
+    If GRID2.TextMatrix(Num, GRID2.ColIndex("Currcursor")) = "1" Then
+   GRID2.cell(flexcpBackColor, Num, 1, Num, 7) = &HFFFFC0
    Else
-    Grid2.cell(flexcpBackColor, Num, 1, Num, 7) = vbWhite
+    GRID2.cell(flexcpBackColor, Num, 1, Num, 7) = vbWhite
     End If
     
-        Grid2.TextMatrix(Num, Grid2.ColIndex("Approved")) = IIf(IsNull(RsDetails("ApprovDate")), "", flexChecked)
+        GRID2.TextMatrix(Num, GRID2.ColIndex("Approved")) = IIf(IsNull(RsDetails("ApprovDate")), "", flexChecked)
            If SystemOptions.UserInterface = ArabicInterface Then
-            Grid2.TextMatrix(Num, Grid2.ColIndex("levelName")) = IIf(IsNull(RsDetails("Name")), "", Trim(RsDetails("Name").value))
+            GRID2.TextMatrix(Num, GRID2.ColIndex("levelName")) = IIf(IsNull(RsDetails("Name")), "", Trim(RsDetails("Name").value))
           Else
-             Grid2.TextMatrix(Num, Grid2.ColIndex("levelName")) = IIf(IsNull(RsDetails("Namee")), "", Trim(RsDetails("Namee").value))
+             GRID2.TextMatrix(Num, GRID2.ColIndex("levelName")) = IIf(IsNull(RsDetails("Namee")), "", Trim(RsDetails("Namee").value))
           End If
             If SystemOptions.UserInterface = ArabicInterface Then
-            Grid2.TextMatrix(Num, Grid2.ColIndex("EmpName")) = IIf(IsNull(RsDetails("UserName")), "", (RsDetails("UserName").value))
+            GRID2.TextMatrix(Num, GRID2.ColIndex("EmpName")) = IIf(IsNull(RsDetails("UserName")), "", (RsDetails("UserName").value))
             Else
-            Grid2.TextMatrix(Num, Grid2.ColIndex("EmpName")) = IIf(IsNull(RsDetails("UserName")), "", (RsDetails("UserName").value))
+            GRID2.TextMatrix(Num, GRID2.ColIndex("EmpName")) = IIf(IsNull(RsDetails("UserName")), "", (RsDetails("UserName").value))
             End If
-            Grid2.TextMatrix(Num, Grid2.ColIndex("ApprovDate")) = IIf(IsNull(RsDetails("ApprovDate")), "", (RsDetails("ApprovDate").value))
-          Grid2.TextMatrix(Num, Grid2.ColIndex("REMARKS")) = IIf(IsNull(RsDetails("REMARKS")), "", (RsDetails("REMARKS").value))
+            GRID2.TextMatrix(Num, GRID2.ColIndex("ApprovDate")) = IIf(IsNull(RsDetails("ApprovDate")), "", (RsDetails("ApprovDate").value))
+          GRID2.TextMatrix(Num, GRID2.ColIndex("REMARKS")) = IIf(IsNull(RsDetails("REMARKS")), "", (RsDetails("REMARKS").value))
  
  
 RsDetails.MoveNext
 If Num = RsDetails.RecordCount Then
 
-        If Grid2.TextMatrix(Num, Grid2.ColIndex("Approved")) <> "" Then
+        If GRID2.TextMatrix(Num, GRID2.ColIndex("Approved")) <> "" Then
                                 If SystemOptions.UserInterface = ArabicInterface Then
                                       Label24.Caption = " „ «·«⁄ „«œ ··„” ‰œ »«·ﬂ«„·"
                                  Else
@@ -3465,7 +3489,7 @@ End If
 
         Next Num
 Else
- Grid2.rows = 1
+ GRID2.rows = 1
     End If
 RsDetails.Close
 
@@ -3482,9 +3506,9 @@ Private Sub ALLButton1_Click()
 
     Dim opr_id As Double
 
-    If Not IsNumeric(Text1.text) Then Exit Sub
+    If Not IsNumeric(Text1.Text) Then Exit Sub
     'If Me.TxtModFlg.text = "N" Then
-    opr_id = Text1.text
+    opr_id = Text1.Text
     'Else
     'opr_id = TxtDEV_NO.text
     'End If
@@ -3537,7 +3561,7 @@ End Sub
 
 Private Sub ALLButton10_Click()
 
-    If Me.TxtModFlg.text <> "N" Then MsgBox "·«»œ „‰ «·÷€ÿ ⁄·Ï ÃœÌœ «Ê·« ·«” œ⁄«¡ «·ﬁ«·» ": Exit Sub
+    If Me.TxtModFlg.Text <> "N" Then MsgBox "·«»œ „‰ «·÷€ÿ ⁄·Ï ÃœÌœ «Ê·« ·«” œ⁄«¡ «·ﬁ«·» ": Exit Sub
   
     'If Fg_Journal.Rows > 4 Then MsgBox "ÌÊÃœ «”ÿ— ›Ì Â–« «·ﬁÌœ ·–·ﬂ ·«Ì„ﬂ‰ «” œ⁄«¡ ﬁ«·» «·ﬁÌœ": Exit Sub
 
@@ -3557,7 +3581,7 @@ Exit Sub
  
 
             
-    If TxtSerial.text = "" Then MsgBox "·«»œ „‰ «Õ Ì«— ﬁÌœ «Ê·«": Exit Sub
+    If TxtSerial.Text = "" Then MsgBox "·«»œ „‰ «Õ Ì«— ﬁÌœ «Ê·«": Exit Sub
 
     imaged.show
 
@@ -3566,20 +3590,20 @@ Exit Sub
         imaged.Label9.Caption = "Voucher #"
         imaged.Caption = "Voucher Attachment"
         imaged.txtopeation_type = "„—›ﬁ«  «·ﬁÌœ"
-        imaged.SUBJECT_NO = TxtSerial.text
+        imaged.SUBJECT_NO = TxtSerial.Text
         imaged.Label6.Caption = "Voucher #"
     Else
 
         imaged.Label9.Caption = "„—›ﬁ«  ”‰œ ﬁÌœ  —ﬁ„"
         imaged.Caption = "„—›ﬁ«  «·ﬁÌœ  "
         imaged.txtopeation_type = "„—›ﬁ«  «·ﬁÌœ"
-        imaged.SUBJECT_NO = TxtSerial.text
+        imaged.SUBJECT_NO = TxtSerial.Text
         imaged.Label6.Caption = "—ﬁ„  «·ﬁÌœ"
 
     End If
 
     imaged.Adodc1.CommandType = adCmdText
-    imaged.Adodc1.RecordSource = "SELECT * FROM subjects_images WHERE operation_type = '„—›ﬁ«  «·ﬁÌœ' and subject_no='" & TxtSerial.text & "'"
+    imaged.Adodc1.RecordSource = "SELECT * FROM subjects_images WHERE operation_type = '„—›ﬁ«  «·ﬁÌœ' and subject_no='" & TxtSerial.Text & "'"
     imaged.Adodc1.Refresh
 
     If imaged.Adodc1.Recordset.RecordCount > 0 Then
@@ -3606,7 +3630,7 @@ End Sub
 
 Private Sub ALLButton3_Click()
 
-    If Me.TxtModFlg.text <> "N" Then MsgBox "·«»œ „‰ «·÷€ÿ ⁄·Ï ÃœÌœ «Ê·« ·«’œ«— «·ﬁÌœ «·œÊ—Ì": Exit Sub
+    If Me.TxtModFlg.Text <> "N" Then MsgBox "·«»œ „‰ «·÷€ÿ ⁄·Ï ÃœÌœ «Ê·« ·«’œ«— «·ﬁÌœ «·œÊ—Ì": Exit Sub
     keddawrym.show
 
 End Sub
@@ -3614,17 +3638,17 @@ End Sub
 Private Sub ALLButton6_Click()
 
     'If Me.TxtModFlg.text <> "E" And Me.TxtModFlg.text <> "N" Then MsgBox "«÷€ÿ  ⁄œÌ·  «Ê ÃœÌœ «Ê·«", vbCritical: Exit Sub
-    If TxtDEV_NO.text = "" Then MsgBox "«Œ — ﬁÌœ «Ê·«", vbCritical: Exit Sub
+    If TxtDEV_NO.Text = "" Then MsgBox "«Œ — ﬁÌœ «Ê·«", vbCritical: Exit Sub
     ked_dawry.show
-    ked_dawry.ID = TxtDEV_NO.text
-    ked_dawry.desc = Txt.text
+    ked_dawry.ID = TxtDEV_NO.Text
+    ked_dawry.desc = Txt.Text
     ked_dawry.TxtSerial = Me.TxtSerial
     Check4.value = vbChecked
 End Sub
 
 Private Sub ALLButton7_Click()
 
-    If Me.TxtModFlg.text <> "E" And Me.TxtModFlg.text <> "N" Then MsgBox "«÷€ÿ  ⁄œÌ·  «Ê ÃœÌœ «Ê·«", vbCritical: Exit Sub
+    If Me.TxtModFlg.Text <> "E" And Me.TxtModFlg.Text <> "N" Then MsgBox "«÷€ÿ  ⁄œÌ·  «Ê ÃœÌœ «Ê·«", vbCritical: Exit Sub
     X = MsgBox(" √ﬂÌœ «· ÕÊÌ· «·Ï ﬁ«·»", vbInformation + vbYesNo)
 
     If X = vbYes Then
@@ -3635,7 +3659,7 @@ End Sub
 
 Private Sub ALLButton8_Click()
 
-    If Me.TxtModFlg.text <> "E" And Me.TxtModFlg.text <> "N" Then MsgBox "«÷€ÿ  ⁄œÌ·  «Ê ÃœÌœ «Ê·«", vbCritical: Exit Sub
+    If Me.TxtModFlg.Text <> "E" And Me.TxtModFlg.Text <> "N" Then MsgBox "«÷€ÿ  ⁄œÌ·  «Ê ÃœÌœ «Ê·«", vbCritical: Exit Sub
     If Check1.value = vbChecked Then
         Check1.value = 1
         Check1.value = Unchecked
@@ -3698,11 +3722,11 @@ Private Sub CboDes_ButtonClick(ByVal ButtonID As VDSCOMBOLibCtl.vdsButtonID, _
             '  Debug.Print PicHeight
             '  Debug.Print PicWidth
             TxtDes.Visible = True
-            TxtDes.text = Fg_Journal.cell(flexcpData, Fg_Journal.Row, Fg_Journal.ColIndex("Des"))
+            TxtDes.Text = Fg_Journal.cell(flexcpData, Fg_Journal.Row, Fg_Journal.ColIndex("Des"))
             TxtDese.Visible = True
-            TxtDese.text = Fg_Journal.TextMatrix(Fg_Journal.Row, Fg_Journal.ColIndex("dese")) ' Fg_Journal.Cell(flexcpData, Fg_Journal.Row, Fg_Journal.ColIndex("Dese"))
-            TxtDes.text = Fg_Journal.TextMatrix(Fg_Journal.Row, Fg_Journal.ColIndex("des"))
-            TxtDese.text = Fg_Journal.TextMatrix(Fg_Journal.Row, Fg_Journal.ColIndex("dese"))
+            TxtDese.Text = Fg_Journal.TextMatrix(Fg_Journal.Row, Fg_Journal.ColIndex("dese")) ' Fg_Journal.Cell(flexcpData, Fg_Journal.Row, Fg_Journal.ColIndex("Dese"))
+            TxtDes.Text = Fg_Journal.TextMatrix(Fg_Journal.Row, Fg_Journal.ColIndex("des"))
+            TxtDese.Text = Fg_Journal.TextMatrix(Fg_Journal.Row, Fg_Journal.ColIndex("dese"))
     
             CboDes.DropDown PicDes.hWnd, vdsRightToLeft, vdsBottomToDown, vdsDownArrow, True, vdsSoftResize
             '  Debug.Print PicDes.Height & "Pic H " & "-----" & PicDes.Width & "Pic W"
@@ -3752,13 +3776,13 @@ Function setfoxy_Line() As Double
 End Function
 
 Function setfoxy()
-    Text1.text = CStr(new_id("foxy", "id", "", True))
+    Text1.Text = CStr(new_id("foxy", "id", "", True))
     'last_line_id = CStr(new_id("foxy", "id1", "", True))
     Dim rs As ADODB.Recordset
     Set rs = New ADODB.Recordset
     rs.Open "foxy", Cn, adOpenStatic, adLockOptimistic, adCmdTable
  
-    rs("id").value = Text1.text
+    rs("id").value = Text1.Text
  
     rs.update
     
@@ -3776,14 +3800,14 @@ Private Sub Cmd_Click(Index As Integer)
 
             SetForNew
             Label9.Visible = False
-            Me.TxtModFlg.text = "N"
+            Me.TxtModFlg.Text = "N"
             setfoxy
-            DcCostCenter.text = ""
+            DcCostCenter.Text = ""
             Accredit.Caption = ""
-            Me.dcBranch.BoundText = branch_id
-             Grid2.Clear flexClearScrollable, flexClearEverything
-            Grid2.rows = 1
-            If Trim(dcBranch.BoundText) = "" Then
+            Me.Dcbranch.BoundText = branch_id
+             GRID2.Clear flexClearScrollable, flexClearEverything
+            GRID2.rows = 1
+            If Trim(Dcbranch.BoundText) = "" Then
                 If SystemOptions.UserInterface = EnglishInterface Then
                     Msg = "Specify Branch"
                 Else
@@ -3804,7 +3828,7 @@ Private Sub Cmd_Click(Index As Integer)
 
         Case 1
          
-             If ScreenAproved(val(TXTNoteID.text), Me.Name) = True Then
+             If ScreenAproved(val(TxtNoteID.Text), Me.Name) = True Then
          If SystemOptions.UserInterface = ArabicInterface Then
          MsgBox "·«Ì„ﬂ‰ «· ⁄œÌ·.Â–Â «·Õ—ﬂ… „— »ÿ… »«·«⁄ „«œ« "
          Else
@@ -3829,7 +3853,7 @@ Private Sub Cmd_Click(Index As Integer)
                 Exit Sub
             End If
 If DuDateAutoSave = False Then
-            If val(Me.TXTNoteID.text) = 1 Then
+            If val(Me.TxtNoteID.Text) = 1 Then
                 If SystemOptions.UserInterface = ArabicInterface Then
                     MsgBox "·« Ì„ﬂ‰  ⁄œÌ· ﬁÌœ «·Ì «»œ«", vbCritical
                 Else
@@ -3842,7 +3866,7 @@ If DuDateAutoSave = False Then
             getFirstPeriodDateInthisYear2 FirstPeriodDateInthisYear
             Me.DTP_Date.value = FirstPeriodDateInthisYear
     
-            Me.TxtModFlg.text = "E"
+            Me.TxtModFlg.Text = "E"
   
             Fg_Journal.rows = Fg_Journal.rows + 1
  
@@ -3860,7 +3884,7 @@ If DuDateAutoSave = False Then
               End If
               Exit Sub
               End If
-            If val(TxtTotalDebit.text) = 0 And val(TxtTotalCredit.text) = 0 Then
+            If val(TxtTotalDebit.Text) = 0 And val(TxtTotalCredit.Text) = 0 Then
                 If SystemOptions.UserInterface = EnglishInterface Then
                     Msg = " There is no iAccounts in vouchers"
                 Else
@@ -3872,10 +3896,10 @@ If DuDateAutoSave = False Then
             End If
 
             '  Me.DcboUsers.BoundText = user_id
-            If Me.TxtModFlg.text = "N" Then
-                my_branch = val(Me.dcBranch.BoundText)
+            If Me.TxtModFlg.Text = "N" Then
+                my_branch = val(Me.Dcbranch.BoundText)
         
-                If TxtSerial1.text = "" Then
+                If TxtSerial1.Text = "" Then
                     If OpeningVoucher_coding(val(my_branch), DTP_Date.value, 3, 101) = "error" Then
                     If SystemOptions.UserInterface = ArabicInterface Then
                         MsgBox " ·« Ì„ﬂ‰ «÷«›… ”‰œ ﬁÌœ «›  «ÕÌ ÃœÌœ ·«‰ﬂ  ⁄œÌ  «·Õœ «·–Ì ﬁ„  » ÕœÌœ… „‰ «·”‰œ«   ": Exit Sub
@@ -3891,8 +3915,8 @@ If DuDateAutoSave = False Then
                           MsgBox "Enter Voucher Code Manually ": Exit Sub
                           End If
                         Else
-                            TxtSerial1.text = OpeningVoucher_coding(val(my_branch), DTP_Date.value, 3, 101)
-                            TxtSerial.text = TxtSerial1.text
+                            TxtSerial1.Text = OpeningVoucher_coding(val(my_branch), DTP_Date.value, 3, 101)
+                            TxtSerial.Text = TxtSerial1.Text
                         End If
                     End If
                 End If
@@ -3927,11 +3951,11 @@ If DuDateAutoSave = False Then
                 Exit Sub
             End If
         
-            ShowGL_ccOpening TxtSerial.text, , 200, val(Me.TXTNoteID.text)
+            ShowGL_ccOpening TxtSerial.Text, , 200, val(Me.TxtNoteID.Text)
 
         Case 8
         
-      If ScreenAproved(val(TXTNoteID.text), Me.Name) = True Then
+      If ScreenAproved(val(TxtNoteID.Text), Me.Name) = True Then
          If SystemOptions.UserInterface = ArabicInterface Then
          MsgBox "·«Ì„ﬂ‰ «·Õ–›.Â–Â «·Õ—ﬂ… „— »ÿ… »«·«⁄ „«œ« "
          Else
@@ -3955,7 +3979,7 @@ If DuDateAutoSave = False Then
                 Exit Sub
             End If
         
-            If Me.TXTNoteID.text = 1 Then
+            If Me.TxtNoteID.Text = 1 Then
                 If SystemOptions.UserInterface = ArabicInterface Then
                     MsgBox "·« Ì„ﬂ‰ Õ–›  ﬁÌœ «·Ì «»œ«", vbCritical
                 Else
@@ -3975,10 +3999,10 @@ Private Sub Del_Trans()
     Dim StrSQL As String
     On Error GoTo ErrTrap
 
-    If TXTNoteID.text <> "" Then
+    If TxtNoteID.Text <> "" Then
                             If SystemOptions.UserInterface = ArabicInterface Then
         Msg = "”Ì „ Õ–› »Ì«‰«  «·ﬁÌœ —ﬁ„ " & CHR(13)
-        Msg = Msg + (Me.TxtSerial.text) & CHR(13)
+        Msg = Msg + (Me.TxtSerial.Text) & CHR(13)
         Msg = Msg + " Â·  —€» ›Ì Õ–› Â–Â «·»Ì«‰« ø"
 
 Else
@@ -3986,13 +4010,16 @@ Msg = Msg + " Confirm Deletion?"
 End If
         If MsgBox(Msg, vbYesNo + vbQuestion + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title) = vbYes Then
             CuurentLogdata ("D")
-                Deletepost Me.Name, "Notes", "NoteID", 0, val(dcBranch.BoundText), val(TXTNoteID.text), TxtSerial.text
+                Deletepost Me.Name, "Notes", "NoteID", 0, val(Dcbranch.BoundText), val(TxtNoteID.Text), TxtSerial.Text
                 
    
-            StrSQL = "Delete  Notes1  where NoteID =" & val(TXTNoteID.text)
+            StrSQL = "Delete  Notes1  where NoteID =" & val(TxtNoteID.Text)
             Cn.Execute StrSQL, , adExecuteNoRecords
   
-            StrSQL = "Delete  marakes_taklefa_temp  where kedno =" & val(Text1.text)
+          Cn.Execute " Delete from TblExpUnitNoVouch1 where  ExpID =" & val(TxtNoteID.Text)
+            
+  
+            StrSQL = "Delete  marakes_taklefa_temp  where kedno =" & val(Text1.Text)
             Cn.Execute StrSQL, , adExecuteNoRecords
  
             Dim rs As New ADODB.Recordset
@@ -4008,9 +4035,9 @@ End If
                 TxtModFlg_Change
                
                 Fg_Journal.Clear flexClearScrollable, flexClearEverything
-                Me.TxtTotalCredit.text = 0
-                Me.TxtTotalDebit.text = 0
-                Me.TXTResults.text = 0
+                Me.TxtTotalCredit.Text = 0
+                Me.TxtTotalDebit.Text = 0
+                Me.TXTResults.Text = 0
             Else
 
                 If Not (IsNull(rs("NoteID").value)) Then
@@ -4051,17 +4078,17 @@ Private Sub Undo()
     On Error GoTo ErrTrap
     Dim sgl As String
 
-    Select Case TxtModFlg.text
+    Select Case TxtModFlg.Text
 
         Case "N"
-            sgl = "delete  marakes_taklefa_temp  where kedno =" & val(Text1.text)
+            sgl = "delete  marakes_taklefa_temp  where kedno =" & val(Text1.Text)
             Cn.Execute sgl, , adExecuteNoRecords
             clear_all Me
-            Me.TxtModFlg.text = "R"
+            Me.TxtModFlg.Text = "R"
             XPBtnMove_Click (2)
         SetForNew
         Case "E"
-            sgl = "delete  marakes_taklefa_temp  where ok is null and  kedno =" & val(Text1.text)
+            sgl = "delete  marakes_taklefa_temp  where ok is null and  kedno =" & val(Text1.Text)
             Cn.Execute sgl, , adExecuteNoRecords
         
             '   Rs.find "id='" & Val(Me.TXTid.text) & "'", , adSearchForward, adBookmarkFirst
@@ -4069,8 +4096,8 @@ Private Sub Undo()
             '            Me.TxtModFlg.text = "R"
             '            Exit Sub
             '         End If
-            Retrive (val(TxtDEV_NO.text))
-            Me.TxtModFlg.text = "R"
+            Retrive (val(TxtDEV_NO.Text))
+            Me.TxtModFlg.Text = "R"
     End Select
 
     Exit Sub
@@ -4172,7 +4199,7 @@ End Sub
 Private Sub CmdImport2_Click()
     On Error GoTo ErrorHandler
     
-    If txtFile.text = "" Then MsgBox "Õœœ „·› «·≈ﬂ”Ì· √Ê·«", vbCritical: Exit Sub
+    If txtFile.Text = "" Then MsgBox "Õœœ „·› «·≈ﬂ”Ì· √Ê·«", vbCritical: Exit Sub
 
     Dim ExcelObj   As Object
     Dim ExcelBook  As Object
@@ -4190,7 +4217,7 @@ Private Sub CmdImport2_Click()
 
     ' 1. › Õ «·≈ﬂ”Ì·
     Set ExcelObj = CreateObject("Excel.Application")
-    Set ExcelBook = ExcelObj.Workbooks.Open(txtFile.text, , True)
+    Set ExcelBook = ExcelObj.Workbooks.Open(txtFile.Text, , True)
     Set ExcelSheet = ExcelBook.Worksheets(1)
 
     With ExcelSheet
@@ -4204,10 +4231,10 @@ Private Sub CmdImport2_Click()
     ' 3. ”Õ» «·»Ì«‰«  „‰ ≈ﬂ”Ì· ··Ã—Ìœ… ( —„Ì «·√ﬂÊ«œ »”)
     Dim mRowNumber As Long
     Dim mIsOpenBalnce As Boolean
-    If val(TxtRowNumber(0)) = 0 Then
+    If val(txtRowNumber(0)) = 0 Then
         mRowNumber = 15
     Else
-         mRowNumber = val(TxtRowNumber(0))
+         mRowNumber = val(txtRowNumber(0))
     End If
     
     Dim mRowNumberOpenDebit As Long
@@ -4218,44 +4245,44 @@ Private Sub CmdImport2_Click()
     Dim mRowNumberAccountSerial As Long
     Dim mRowNumberAccountName As Long
     
-     If val(TxtRowNumber(1)) = 0 Then
+     If val(txtRowNumber(1)) = 0 Then
         mRowNumberOpenDebit = 15
     Else
-         mRowNumberOpenDebit = val(TxtRowNumber(1))
+         mRowNumberOpenDebit = val(txtRowNumber(1))
     End If
     
     
-    If val(TxtRowNumber(2)) = 0 Then
+    If val(txtRowNumber(2)) = 0 Then
         mRowNumberOpenCredit = 13
     Else
-         mRowNumberOpenCredit = val(TxtRowNumber(2))
+         mRowNumberOpenCredit = val(txtRowNumber(2))
     End If
     
     
-    If val(TxtRowNumber(3)) = 0 Then
+    If val(txtRowNumber(3)) = 0 Then
         mRowNumberLastDebit = 4
     Else
-         mRowNumberLastDebit = val(TxtRowNumber(3))
+         mRowNumberLastDebit = val(txtRowNumber(3))
     End If
     
         
-    If val(TxtRowNumber(4)) = 0 Then
+    If val(txtRowNumber(4)) = 0 Then
         mRowNumberLastCredit = 1
     Else
-         mRowNumberLastCredit = val(TxtRowNumber(4))
+         mRowNumberLastCredit = val(txtRowNumber(4))
     End If
     
             
-    If val(TxtRowNumber(5)) = 0 Then
+    If val(txtRowNumber(5)) = 0 Then
         mRowNumberAccountSerial = 22
     Else
-         mRowNumberAccountSerial = val(TxtRowNumber(5))
+         mRowNumberAccountSerial = val(txtRowNumber(5))
     End If
     
-    If val(TxtRowNumber(6)) = 0 Then
+    If val(txtRowNumber(6)) = 0 Then
         mRowNumberAccountName = 17
     Else
-         mRowNumberAccountName = val(TxtRowNumber(6))
+         mRowNumberAccountName = val(txtRowNumber(6))
     End If
     
     
@@ -4292,8 +4319,8 @@ Private Sub CmdImport2_Click()
                     If CreditVal <> 0 Then .TextMatrix(GridRow, .ColIndex("CreditValue")) = Abs(CreditVal)
                     
                     ' »Ì«‰«  «·›—⁄ Ê«·„” Œœ„ «·«› —«÷Ì…
-                    .TextMatrix(GridRow, .ColIndex("BranchId")) = val(Me.dcBranch.BoundText)
-                    .TextMatrix(GridRow, .ColIndex("BranchName")) = Me.dcBranch.text
+                    .TextMatrix(GridRow, .ColIndex("BranchId")) = val(Me.Dcbranch.BoundText)
+                    .TextMatrix(GridRow, .ColIndex("BranchName")) = Me.Dcbranch.Text
                     .TextMatrix(GridRow, .ColIndex("userid")) = user_id
                 End With
             End If
@@ -4364,15 +4391,15 @@ Private Sub UpdateGridTotals()
     With Fg_Journal
         If .rows > .FixedRows Then
             ' «” Œœ«„ „Ì“… Aggregate ·Õ”«» «·„Ã„Ê⁄ ›Ì À«‰Ì… Ê«Õœ…
-            Me.TxtTotalDebit.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("DebitValue"), .rows - 1, .ColIndex("DebitValue"))
-            Me.TxtTotalCredit.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("CreditValue"), .rows - 1, .ColIndex("CreditValue"))
+            Me.TxtTotalDebit.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("DebitValue"), .rows - 1, .ColIndex("DebitValue"))
+            Me.TxtTotalCredit.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("CreditValue"), .rows - 1, .ColIndex("CreditValue"))
             
             '  ‰”Ìﬁ «·√—ﬁ«„
-            Me.TxtTotalDebit.text = Format(Me.TxtTotalDebit.text, "#,##0.00")
-            Me.TxtTotalCredit.text = Format(Me.TxtTotalCredit.text, "#,##0.00")
+            Me.TxtTotalDebit.Text = Format(Me.TxtTotalDebit.Text, "#,##0.00")
+            Me.TxtTotalCredit.Text = Format(Me.TxtTotalCredit.Text, "#,##0.00")
             
             ' Õ”«» «·›—ﬁ
-            Me.TXTResults.text = val(Me.TxtTotalDebit.text) - val(Me.TxtTotalCredit.text)
+            Me.TXTResults.Text = val(Me.TxtTotalDebit.Text) - val(Me.TxtTotalCredit.Text)
         End If
     End With
 End Sub
@@ -4389,7 +4416,7 @@ Private Sub CmdRemove_Click()
     If X = vbNo Then Exit Sub
     Dim sql As String
 
-    sgl = "Delete  marakes_taklefa_temp  where kedno =" & val(Text1.text) & " and account_no='" & Fg_Journal.TextMatrix(Fg_Journal.Row, Fg_Journal.ColIndex("AccountCode")) & "' and  line_no=" & val(Fg_Journal.TextMatrix(Fg_Journal.Row, Fg_Journal.ColIndex("LineNo1")))
+    sgl = "Delete  marakes_taklefa_temp  where kedno =" & val(Text1.Text) & " and account_no='" & Fg_Journal.TextMatrix(Fg_Journal.Row, Fg_Journal.ColIndex("AccountCode")) & "' and  line_no=" & val(Fg_Journal.TextMatrix(Fg_Journal.Row, Fg_Journal.ColIndex("LineNo1")))
     Cn.Execute sgl, , adExecuteNoRecords
     
     If Fg_Journal.rows > 1 Then
@@ -4408,12 +4435,12 @@ Private Sub CmdRemove_Click()
     ReLineGrid
 
     With Fg_Journal
-        Me.TxtTotalDebit.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("DebitValue"), .rows - 1, .ColIndex("DebitValue"))
-        Me.TxtTotalCredit.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("CreditValue"), .rows - 1, .ColIndex("CreditValue"))
-        Me.TXTResults.text = val(Me.TxtTotalDebit.text) - val(Me.TxtTotalCredit.text)
+        Me.TxtTotalDebit.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("DebitValue"), .rows - 1, .ColIndex("DebitValue"))
+        Me.TxtTotalCredit.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("CreditValue"), .rows - 1, .ColIndex("CreditValue"))
+        Me.TXTResults.Text = val(Me.TxtTotalDebit.Text) - val(Me.TxtTotalCredit.Text)
                  
-        Me.TxtTotalDebit.text = Round(Me.TxtTotalDebit.text, SystemOptions.SysDefCurrencyForamt)
-        Me.TxtTotalCredit.text = Round(Me.TxtTotalCredit.text, SystemOptions.SysDefCurrencyForamt)
+        Me.TxtTotalDebit.Text = Round(Me.TxtTotalDebit.Text, SystemOptions.SysDefCurrencyForamt)
+        Me.TxtTotalCredit.Text = Round(Me.TxtTotalCredit.Text, SystemOptions.SysDefCurrencyForamt)
                        
     End With
             
@@ -4421,7 +4448,7 @@ End Sub
 Private Sub CmdImportOpenBalanceFormat_Click()
     On Error GoTo ErrorHandler
 
-    If Trim(txtFile.text) = "" Then
+    If Trim(txtFile.Text) = "" Then
         MsgBox "Õœœ „·› «·≈ﬂ”Ì· √Ê·«", vbCritical
         Exit Sub
     End If
@@ -4432,7 +4459,7 @@ Private Sub CmdImportOpenBalanceFormat_Click()
 
     Dim lastrow As Long
     Dim i As Long
-    Dim startRow As Long
+    Dim StartRow As Long
     Dim GridRow As Long
 
     Dim AccCode As String
@@ -4443,12 +4470,12 @@ Private Sub CmdImportOpenBalanceFormat_Click()
     Screen.MousePointer = vbHourglass
 
     Set ExcelObj = CreateObject("Excel.Application")
-    Set ExcelBook = ExcelObj.Workbooks.Open(txtFile.text, , True)
+    Set ExcelBook = ExcelObj.Workbooks.Open(txtFile.Text, , True)
     Set ExcelSheet = ExcelBook.Worksheets(1)
 
     '1)  ÕœÌœ ”ÿ— «·»œ«Ì… (»⁄œ «·ÂÌœ—)  ·ﬁ«∆Ì
-    startRow = FindHeaderThenDataRow(ExcelSheet) ' Ì—Ã¯⁄ √Ê· ”ÿ— »Ì«‰« 
-    If startRow <= 0 Then startRow = 2 ' fallback
+    StartRow = FindHeaderThenDataRow(ExcelSheet) ' Ì—Ã¯⁄ √Ê· ”ÿ— »Ì«‰« 
+    If StartRow <= 0 Then StartRow = 2 ' fallback
 
     '2)  ÕœÌœ ¬Œ— ”ÿ— »Ì«‰«  »‰«¡ ⁄·Ï ⁄„Êœ —ﬁ„ «·Õ”«» (A)
     With ExcelSheet
@@ -4458,7 +4485,7 @@ Private Sub CmdImportOpenBalanceFormat_Click()
     '3)  ÃÂÌ“ «·Ã—Ìœ »œÊ‰ „”Õ «·„ÊÃÊœ (Â‰÷Ì› ⁄·Ï «·„ÊÃÊœ)
     Fg_Journal.Redraw = flexRDNone
 
-    For i = startRow To lastrow
+    For i = StartRow To lastrow
 
         AccCode = Trim(CStr(ExcelSheet.cells(i, 1).value & "")) ' A —ﬁ„ «·Õ”«»
         If AccCode <> "" Then
@@ -4486,8 +4513,8 @@ Private Sub CmdImportOpenBalanceFormat_Click()
                     If DebitVal <> 0 Then .TextMatrix(GridRow, .ColIndex("DebitValue")) = DebitVal
                     If CreditVal <> 0 Then .TextMatrix(GridRow, .ColIndex("CreditValue")) = CreditVal
 
-                    .TextMatrix(GridRow, .ColIndex("BranchId")) = val(Me.dcBranch.BoundText)
-                    .TextMatrix(GridRow, .ColIndex("BranchName")) = Me.dcBranch.text
+                    .TextMatrix(GridRow, .ColIndex("BranchId")) = val(Me.Dcbranch.BoundText)
+                    .TextMatrix(GridRow, .ColIndex("BranchName")) = Me.Dcbranch.Text
                     .TextMatrix(GridRow, .ColIndex("userid")) = user_id
 
                     ' ·Ê „Õ «Ã  ‘€¯· «··ÊÃÌﬂ » «⁄ﬂ («Œ Ì«—Ì)
@@ -4590,7 +4617,7 @@ End Function
 
 Private Sub CMDSelectFile_Click()
 CD1.ShowOpen
-txtFile.text = CD1.FileName
+txtFile.Text = CD1.FileName
 End Sub
 
 Private Sub Command1_Click()
@@ -4603,8 +4630,8 @@ Private Sub Command1_Click()
    rs.Open StrSQL, Cn, adOpenKeyset, adLockOptimistic, adCmdText
  
     rs.AddNew
-    rs("ked").value = Txt.text
-    rs("code").value = TxtCode.text
+    rs("ked").value = Txt.Text
+    rs("code").value = Txtcode.Text
         
     rs.update
     '    Cn.CommitTrans
@@ -4627,7 +4654,7 @@ End Sub
 
 Private Sub Command4_Click()
 
-    If Len(TxtDes.text) = 0 Then Exit Sub
+    If Len(TxtDes.Text) = 0 Then Exit Sub
     Dim rs As ADODB.Recordset
     Set rs = New ADODB.Recordset
   '  rs.Open "[ked_desc]", Cn, adOpenStatic, adLockOptimistic, adCmdTable
@@ -4635,8 +4662,8 @@ Private Sub Command4_Click()
    rs.Open StrSQL, Cn, adOpenKeyset, adLockOptimistic, adCmdText
     
     rs.AddNew
-    rs("ked").value = TxtDes.text
-    rs("code").value = txtcodesub.text
+    rs("ked").value = TxtDes.Text
+    rs("code").value = txtcodesub.Text
         
     rs.update
     '    Cn.CommitTrans
@@ -4647,15 +4674,15 @@ Private Sub Command5_Click()
     On Error Resume Next
     Dim X As Long
 
-    If Len(Text4.text) = 0 Then Exit Sub
-    X = get_Notes_id(Text4.text)
+    If Len(Text4.Text) = 0 Then Exit Sub
+    X = get_Notes_id(Text4.Text)
 
     If X <> 0 Then
         Me.Retrive2 (X)
         Frame3.Visible = False
         ReLineGrid
         Fg_Journal.rows = Fg_Journal.rows + 1
-        Text4.text = ""
+        Text4.Text = ""
     End If
 
 End Sub
@@ -4683,7 +4710,7 @@ End Sub
 
 Private Sub Dcbranch_Click(Area As Integer)
 
-TxtSerial.text = ""
+TxtSerial.Text = ""
 
 
 End Sub
@@ -4698,7 +4725,25 @@ Private Sub Fg_Journal_CellButtonClick(ByVal Row As Long, _
     With Me.Fg_Journal
 
         Select Case .ColKey(Col)
-
+ Case "unitno"
+    
+       If val(.TextMatrix(Row, .ColIndex("type"))) <> 0 And val(.TextMatrix(Row, .ColIndex("iqarid"))) <> 0 Then
+           LngRow = Row
+           LngCol = Col
+           FrmIqarUnitNo.TypIndex = 3
+           Load FrmIqarUnitNo
+           FrmIqarUnitNo.TypIndex = 3
+           
+           FrmIqarUnitNo.show vbModal
+           
+        Else
+       If SystemOptions.UserInterface = ArabicInterface Then
+       MsgBox "Ì—ÃÏ «Œ Ì«— «·⁄ﬁ«— Ê«·‰Ê⁄"
+       Else
+        MsgBox "Please Select Real Estate"
+       End If
+       Exit Sub
+        End If
             Case "CC"
                 ALLButton1_Click
             Case "DueDate"
@@ -4713,6 +4758,86 @@ Private Sub Fg_Journal_CellButtonClick(ByVal Row As Long, _
 
 End Sub
 
+
+
+Sub SaveUnitNo(Optional ID As Long, Optional i As Long)
+   Dim RsDetails As ADODB.Recordset
+   Dim astrSplit2tems2() As String
+   Dim astrSplitItems() As String
+   Dim sql As String
+   Dim j As Integer
+    Dim st As String
+    Dim nElements As Integer
+    
+      If Fg_Journal.TextMatrix(i, Fg_Journal.ColIndex("StrUnit")) <> "" Then
+          st = Fg_Journal.TextMatrix(i, Fg_Journal.ColIndex("StrUnit"))
+          st = Trim(st)
+          astrSplitItems = Split(st, "@")
+         nElements = UBound(astrSplitItems) - LBound(astrSplitItems)
+         sql = "Select * from TblExpUnitNoVouch where 1=-1"
+         Set RsDetails = New ADODB.Recordset
+         RsDetails.Open sql, Cn, adOpenStatic, adLockOptimistic, adCmdText
+         For j = 0 To nElements - 1
+          RsDetails.AddNew
+         astrSplit2tems2 = Split(astrSplitItems(j), "#")
+         RsDetails("ExpID").value = val(TxtNoteID.Text)
+         RsDetails("ExpDetails").value = ID
+         RsDetails("UnitID").value = val(astrSplit2tems2(1))
+         RsDetails("Valu").value = val(astrSplit2tems2(2))
+         RsDetails.update
+         Next j
+          End If
+End Sub
+
+ Public Sub FillData(Optional ByVal mRow As Long = 0)
+ Dim IarType As Integer
+ Dim Account_Code_dynamic As String
+If Me.TxtModFlg.Text = "N" Or Me.TxtModFlg.Text = "E" Then
+'IarType = AqarCommisionType(val(DcbIqara2.BoundText))
+'If IarType <> 1 And SystemOptions.OpenAccountAqar = True Then
+'           Account_Code_dynamic = get_account_code_branch(163, my_branch)
+'        If Account_Code_dynamic = "NO branch" Then
+'          MsgBox "·„ Ì „ «‰‘«¡ «·›—⁄", vbCritical
+'
+'            Else
+'           If Account_Code_dynamic = "NO account" Then
+'              MsgBox "·„ Ì „  ÕœÌœ Õ”«»     «Ì—«œ«  «·”⁄Ì Ê«·⁄„Ê·« ", vbCritical
+'             Exit Sub
+'
+'           End If
+'        End If
+' End If
+With Me.Fg_Journal
+
+If mRow = 0 And .rows >= 2 And .TextMatrix(.rows - 1, .ColIndex("AccountCode")) <> "" Then .rows = .rows + 1
+Dim mRow2 As Long
+If mRow = 0 Then mRow2 = .rows - 1 Else mRow2 = mRow
+
+'.TextMatrix(mRow2, .ColIndex("iqarid")) = val(Me.DcbIqara2.BoundText)
+'.TextMatrix(mRow2, .ColIndex("iqar")) = Me.DcbIqara2.text
+'.TextMatrix(mRow2, .ColIndex("value")) = val(TxtValue.text)
+'.TextMatrix(mRow2, .ColIndex("des")) = TxtRemarks.text
+
+'         If SystemOptions.OpenAccountAqar = False Then
+'          .TextMatrix(mRow2, .ColIndex("AccountCode")) = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(dcsupplier.BoundText))
+'         Else
+'
+'
+'            If IarType <> 0 Then
+'              .TextMatrix(mRow2, .ColIndex("AccountCode")) = GetAqarAcountCode(val(DcbIqara2.BoundText))
+'              Else
+'              .TextMatrix(mRow2, .ColIndex("AccountCode")) = get_account_code_branch(163, my_branch)
+'              End If
+    '     End If
+         
+'.TextMatrix(.Rows - 1, .ColIndex("AccountCode")) = ModAccounts.GetMyAccountCode("TblCustemers", "CusID", val(dcsupplier.BoundText))
+'Fg_Journal_AfterEdit mRow2, .ColIndex("AccountCode")
+If mRow = 0 Then
+   ' Fg_Journal_AfterEdit .Rows - 1, .ColIndex("iqar")
+End If
+End With
+End If
+End Sub
 Public Sub Fg_Journal_AfterEdit(ByVal Row As Long, _
                                 ByVal Col As Long)
     check_cost_center
@@ -4727,6 +4852,35 @@ Public Sub Fg_Journal_AfterEdit(ByVal Row As Long, _
     With Fg_Journal
 
         Select Case .ColKey(Col)
+            
+        Case "iqar"
+        ' If val(.TextMatrix(Row, .ColIndex("iqarid"))) <> 0 Then
+'                  If val(.TextMatrix(Row, .ColIndex("iqarid"))) <> 0 Then
+                
+                StrAccountCode = .ComboData
+                .TextMatrix(Row, .ColIndex("iqarid")) = StrAccountCode
+                 'DcbIqara2.BoundText = val(Fg_Journal.TextMatrix(Row, Fg_Journal.ColIndex("iqarid")))
+                 'TxtValue.text = Fg_Journal.TextMatrix(Row, Fg_Journal.ColIndex("value"))
+                'TxtRemarks.text = Fg_Journal.TextMatrix(Row, .ColIndex("des"))
+        '        End If
+               If SystemOptions.NoCreatJLInRentContract Then
+                    FillData Row
+                End If
+              '  StrAccountCode = .ComboData
+              '   LngRow = .FindRow(StrAccountCode, .FixedRows, .ColIndex("iqarid"), False, True)
+               ' .TextMatrix(Row, .ColIndex("iqarid")) = StrAccountCode
+          '      AddVATExp Row
+         Case "unittype"
+                    
+                StrAccountCode = .ComboData
+                 LngRow = .FindRow(StrAccountCode, .FixedRows, .ColIndex("type"), False, True)
+                .TextMatrix(Row, .ColIndex("type")) = StrAccountCode
+            '    AddVATExp Row
+            Case "unitno"
+                    
+                StrAccountCode = .ComboData
+                 LngRow = .FindRow(StrAccountCode, .FixedRows, .ColIndex("uintid"), False, True)
+                .TextMatrix(Row, .ColIndex("uintid")) = StrAccountCode
   Case "project"
                 StrAccountCode = .ComboData
                 .TextMatrix(Row, .ColIndex("projectid")) = StrAccountCode
@@ -4769,7 +4923,7 @@ Public Sub Fg_Journal_AfterEdit(ByVal Row As Long, _
 
                 'remove destribution
      
-                sgl = "update  marakes_taklefa_temp  set value=0 where kedno =" & val(Text1.text) & " and account_no='" & Fg_Journal.TextMatrix(Fg_Journal.Row, Fg_Journal.ColIndex("AccountCode")) & "' and  line_no=" & val(Fg_Journal.TextMatrix(Fg_Journal.Row, Fg_Journal.ColIndex("LineNo1")))
+                sgl = "update  marakes_taklefa_temp  set value=0 where kedno =" & val(Text1.Text) & " and account_no='" & Fg_Journal.TextMatrix(Fg_Journal.Row, Fg_Journal.ColIndex("AccountCode")) & "' and  line_no=" & val(Fg_Journal.TextMatrix(Fg_Journal.Row, Fg_Journal.ColIndex("LineNo1")))
                 Cn.Execute sgl, , adExecuteNoRecords
     
                 .TextMatrix(Row, Col) = val(.TextMatrix(Row, Col))
@@ -4777,20 +4931,20 @@ Public Sub Fg_Journal_AfterEdit(ByVal Row As Long, _
                 If .ColKey(Col) = "DebitValue" Then
                     .cell(flexcpAlignment, Row, .ColIndex("AccountName")) = flexAlignRightCenter
                     .TextMatrix(Row, .ColIndex("CreditValue")) = 0
-                    Me.TxtTotalDebit.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("DebitValue"), .rows - 1, .ColIndex("DebitValue"))
-                    Me.TxtTotalCredit.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("CreditValue"), .rows - 1, .ColIndex("CreditValue"))
-                    Me.TXTResults.text = val(Me.TxtTotalDebit.text) - val(Me.TxtTotalCredit.text)
-                    Me.TxtTotalDebit.text = Round(Me.TxtTotalDebit.text, SystemOptions.SysDefCurrencyForamt)
-                    Me.TxtTotalCredit.text = Round(Me.TxtTotalCredit.text, SystemOptions.SysDefCurrencyForamt)
+                    Me.TxtTotalDebit.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("DebitValue"), .rows - 1, .ColIndex("DebitValue"))
+                    Me.TxtTotalCredit.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("CreditValue"), .rows - 1, .ColIndex("CreditValue"))
+                    Me.TXTResults.Text = val(Me.TxtTotalDebit.Text) - val(Me.TxtTotalCredit.Text)
+                    Me.TxtTotalDebit.Text = Round(Me.TxtTotalDebit.Text, SystemOptions.SysDefCurrencyForamt)
+                    Me.TxtTotalCredit.Text = Round(Me.TxtTotalCredit.Text, SystemOptions.SysDefCurrencyForamt)
                        
                 ElseIf .ColKey(Col) = "CreditValue" Then
                     .cell(flexcpAlignment, Row, .ColIndex("AccountName")) = flexAlignLeftCenter
                     .TextMatrix(Row, .ColIndex("DebitValue")) = 0
-                    Me.TxtTotalDebit.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("DebitValue"), .rows - 1, .ColIndex("DebitValue"))
-                    Me.TxtTotalCredit.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("CreditValue"), .rows - 1, .ColIndex("CreditValue"))
-                    Me.TXTResults.text = val(Me.TxtTotalDebit.text) - val(Me.TxtTotalCredit.text)
-                    Me.TxtTotalDebit.text = Round(Me.TxtTotalDebit.text, SystemOptions.SysDefCurrencyForamt)
-                    Me.TxtTotalCredit.text = Round(Me.TxtTotalCredit.text, SystemOptions.SysDefCurrencyForamt)
+                    Me.TxtTotalDebit.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("DebitValue"), .rows - 1, .ColIndex("DebitValue"))
+                    Me.TxtTotalCredit.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("CreditValue"), .rows - 1, .ColIndex("CreditValue"))
+                    Me.TXTResults.Text = val(Me.TxtTotalDebit.Text) - val(Me.TxtTotalCredit.Text)
+                    Me.TxtTotalDebit.Text = Round(Me.TxtTotalDebit.Text, SystemOptions.SysDefCurrencyForamt)
+                    Me.TxtTotalCredit.Text = Round(Me.TxtTotalCredit.Text, SystemOptions.SysDefCurrencyForamt)
                        
                 End If
 
@@ -4811,11 +4965,11 @@ Public Sub Fg_Journal_AfterEdit(ByVal Row As Long, _
                         .TextMatrix(Row, .ColIndex("DebitValue")) = .TextMatrix(Row, .ColIndex("DebitValueE"))
                     End If
                 
-                    Me.TxtTotalDebit.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("DebitValue"), .rows - 1, .ColIndex("DebitValue"))
-                    Me.TxtTotalCredit.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("CreditValue"), .rows - 1, .ColIndex("CreditValue"))
-                    Me.TXTResults.text = val(Me.TxtTotalDebit.text) - val(Me.TxtTotalCredit.text)
-                    Me.TxtTotalDebit.text = Round(Me.TxtTotalDebit.text, SystemOptions.SysDefCurrencyForamt)
-                    Me.TxtTotalCredit.text = Round(Me.TxtTotalCredit.text, SystemOptions.SysDefCurrencyForamt)
+                    Me.TxtTotalDebit.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("DebitValue"), .rows - 1, .ColIndex("DebitValue"))
+                    Me.TxtTotalCredit.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("CreditValue"), .rows - 1, .ColIndex("CreditValue"))
+                    Me.TXTResults.Text = val(Me.TxtTotalDebit.Text) - val(Me.TxtTotalCredit.Text)
+                    Me.TxtTotalDebit.Text = Round(Me.TxtTotalDebit.Text, SystemOptions.SysDefCurrencyForamt)
+                    Me.TxtTotalCredit.Text = Round(Me.TxtTotalCredit.Text, SystemOptions.SysDefCurrencyForamt)
                        
                 ElseIf .ColKey(Col) = "CreditValueE" Then
                     .cell(flexcpAlignment, Row, .ColIndex("AccountName")) = flexAlignLeftCenter
@@ -4828,17 +4982,17 @@ Public Sub Fg_Journal_AfterEdit(ByVal Row As Long, _
                         .TextMatrix(Row, .ColIndex("CreditValue")) = .TextMatrix(Row, .ColIndex("CreditValueE"))
                     End If
                  
-                    Me.TxtTotalDebit.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("DebitValue"), .rows - 1, .ColIndex("DebitValue"))
-                    Me.TxtTotalCredit.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("CreditValue"), .rows - 1, .ColIndex("CreditValue"))
-                    Me.TXTResults.text = val(Me.TxtTotalDebit.text) - val(Me.TxtTotalCredit.text)
-                    Me.TxtTotalDebit.text = Round(Me.TxtTotalDebit.text, SystemOptions.SysDefCurrencyForamt)
-                    Me.TxtTotalCredit.text = Round(Me.TxtTotalCredit.text, SystemOptions.SysDefCurrencyForamt)
+                    Me.TxtTotalDebit.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("DebitValue"), .rows - 1, .ColIndex("DebitValue"))
+                    Me.TxtTotalCredit.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("CreditValue"), .rows - 1, .ColIndex("CreditValue"))
+                    Me.TXTResults.Text = val(Me.TxtTotalDebit.Text) - val(Me.TxtTotalCredit.Text)
+                    Me.TxtTotalDebit.Text = Round(Me.TxtTotalDebit.Text, SystemOptions.SysDefCurrencyForamt)
+                    Me.TxtTotalCredit.Text = Round(Me.TxtTotalCredit.Text, SystemOptions.SysDefCurrencyForamt)
                        
                 End If
             
             Case "Account_Serial"
-                .TextMatrix(Row, .ColIndex("BranchId")) = IIf(val(Me.dcBranch.BoundText) = 0, 1, val(Me.dcBranch.BoundText))
-                .TextMatrix(Row, .ColIndex("BranchName")) = Me.dcBranch.text
+                .TextMatrix(Row, .ColIndex("BranchId")) = IIf(val(Me.Dcbranch.BoundText) = 0, 1, val(Me.Dcbranch.BoundText))
+                .TextMatrix(Row, .ColIndex("BranchName")) = Me.Dcbranch.Text
 
                 .TextMatrix(Row, .ColIndex("userid")) = user_id
                 .TextMatrix(Row, Col) = Trim(.TextMatrix(Row, Col))
@@ -4926,11 +5080,11 @@ xx:
 
             Case "AccountName"
         
-                sgl = "Delete  marakes_taklefa_temp  where kedno =" & val(Text1.text) & " and account_no='" & Fg_Journal.TextMatrix(Fg_Journal.Row, Fg_Journal.ColIndex("AccountCode")) & "' and  line_no=" & val(Fg_Journal.TextMatrix(Fg_Journal.Row, Fg_Journal.ColIndex("LineNo1")))
+                sgl = "Delete  marakes_taklefa_temp  where kedno =" & val(Text1.Text) & " and account_no='" & Fg_Journal.TextMatrix(Fg_Journal.Row, Fg_Journal.ColIndex("AccountCode")) & "' and  line_no=" & val(Fg_Journal.TextMatrix(Fg_Journal.Row, Fg_Journal.ColIndex("LineNo1")))
                 Cn.Execute sgl, , adExecuteNoRecords
     
-                .TextMatrix(Row, .ColIndex("BranchId")) = val(Me.dcBranch.BoundText)
-                .TextMatrix(Row, .ColIndex("BranchName")) = Me.dcBranch.text
+                .TextMatrix(Row, .ColIndex("BranchId")) = val(Me.Dcbranch.BoundText)
+                .TextMatrix(Row, .ColIndex("BranchName")) = Me.Dcbranch.Text
 
                 .TextMatrix(Row, .ColIndex("userid")) = user_id
                         
@@ -5151,14 +5305,14 @@ Private Sub Fg_Journal_DblClick()
         ' no note to show? then bail out
         If r <= 0 Or c <= 0 Then Exit Sub
         If typename(Fg_Journal.cell(flexcpData, r, c)) <> "String" Then
-            TxtDes.text = ""
+            TxtDes.Text = ""
         Else
             '
-            TxtDes.text = Fg_Journal.cell(flexcpData, r, c)
+            TxtDes.Text = Fg_Journal.cell(flexcpData, r, c)
         End If
 
-        TxtDes.text = Fg_Journal.TextMatrix(r, Fg_Journal.ColIndex("des"))
-        TxtDese.text = Fg_Journal.TextMatrix(r, Fg_Journal.ColIndex("dese"))
+        TxtDes.Text = Fg_Journal.TextMatrix(r, Fg_Journal.ColIndex("des"))
+        TxtDese.Text = Fg_Journal.TextMatrix(r, Fg_Journal.ColIndex("dese"))
         ' show new note
         CboDes.Move .CellLeft, .CellTop, .CellWidth, .CellHeight
         CboDes.Visible = True
@@ -5313,7 +5467,7 @@ Function update_accounts()
     'StrAccountType = " (ACCOUNTS.Account_Code Like 'a2%' Or ACCOUNTS.Account_Code Like 'a4%')"
     With Fg_Journal
     
-        If opt(0).value = True Then
+        If Opt(0).value = True Then
             'Tree display
             StrSQL = "SELECT ACCOUNTS.Account_Code, Space(2*(Len(Account_Code)))" & "+ ACCOUNTS.Account_Name   As DisName , ACCOUNTS.Parent_Account_Code," & "ACCOUNTS.last_account, ACCOUNTS.cannot_del" & " FROM ACCOUNTS Where ACCOUNTS.Account_Code <> 'r' "
 
@@ -5325,7 +5479,7 @@ Function update_accounts()
             rs.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
             StrComboList = Fg_Journal.BuildComboList(rs, "DisName", "Account_Code")
                 
-        ElseIf opt(1).value = True Then
+        ElseIf Opt(1).value = True Then
 
             'Full Path Display
             If SystemOptions.UserInterface = EnglishInterface Then
@@ -5369,7 +5523,7 @@ Function update_accounts()
             rs.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
             StrComboList = Fg_Journal.BuildComboList(rs, "RootName,ParentName,*ParentName", "Account_Code")
             Debug.Print StrSQL
-        ElseIf opt(2).value = True Then 'the normal Display
+        ElseIf Opt(2).value = True Then 'the normal Display
             StrSQL = "SELECT ACCOUNTS.Account_Code, ACCOUNTS.Account_Name," & "ACCOUNTS.Parent_Account_Code, ACCOUNTS.last_account, ACCOUNTS.cannot_del " & "From ACCOUNTS Where  ACCOUNTS.Account_Code <>'r' "
 
             If ChkLastAccount.value = vbChecked Then
@@ -5408,7 +5562,7 @@ Private Sub Fg_Journal_StartEdit(ByVal Row As Long, _
     Dim StrAccountType As String
     Dim StrComboList As String
     Dim Msg As String
-opt(1).value = True
+Opt(1).value = True
     'Case "DebitName"
     'StrAccountType = " (ACCOUNTS.Account_Code Like 'a1%' Or ACCOUNTS.Account_Code Like 'a3%')"
     'Case "CreditName"
@@ -5416,6 +5570,60 @@ opt(1).value = True
     With Fg_Journal
 
         Select Case .ColKey(Col)
+             Case "unitno"
+                .ColComboList(.ColIndex("unitno")) = "..."
+            Case "iqar"
+                StrSQL = "SELECT  Aqarid,aqarname from TblAqar "
+                rs.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
+                
+                StrComboList = Fg_Journal.BuildComboList(rs, "aqarname", "Aqarid")
+            
+            
+                If StrComboList <> "" Then
+                    StrComboList = "|" & StrComboList
+                End If
+                .ComboList = StrComboList
+            
+            Case "unittype"
+                StrSQL = "SELECT  * from TblAkarUnit "
+                rs.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
+                If SystemOptions.UserInterface = ArabicInterface Then
+                    StrComboList = Fg_Journal.BuildComboList(rs, "name", "id")
+                Else
+                    StrComboList = Fg_Journal.BuildComboList(rs, "namee", "id")
+                End If
+                
+                If StrComboList <> "" Then
+                    StrComboList = "|" & StrComboList
+                End If
+                .ComboList = StrComboList
+                
+            Case "unitno"
+                Dim unittype As Integer
+                Dim Aqarid As Integer
+                If val(.TextMatrix(Row, .ColIndex("iqarid"))) <> 0 Then
+                    Aqarid = .TextMatrix(Row, .ColIndex("iqarid"))
+                Else
+                    MsgBox "ÌÃ» ≈Œ Ì«—  «·⁄ﬁ«— «Ê·«"
+                    Exit Sub
+                End If
+                
+                If val(.TextMatrix(Row, .ColIndex("type"))) <> 0 Then
+                    unittype = .TextMatrix(Row, .ColIndex("type"))
+                Else
+                    MsgBox "ÌÃ» ≈Œ Ì«— ‰Ê⁄ «·ÊÕœÂ «Ê·«"
+                    Exit Sub
+                End If
+                StrSQL = "SELECT  * from TblAqarDetai where ( Aqarid =" & Aqarid & ")and(unittype=" & unittype & ") "
+                rs.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
+                StrComboList = Fg_Journal.BuildComboList(rs, "unitno", "id")
+                
+                
+                If StrComboList <> "" Then
+                    StrComboList = "|" & StrComboList
+                End If
+                .ComboList = StrComboList
+                     
          Case "project"
 
                 StrSQL = " SELECT     Project_name,Project_nameE , id From dbo.Projects "
@@ -5452,7 +5660,7 @@ End If
                 .ComboList = StrComboList
             Case "AccountName"
 
-                If opt(0).value = True Then
+                If Opt(0).value = True Then
                     'Tree display
                     StrSQL = "SELECT ACCOUNTS.Account_Code, Space(2*(Len(Account_Code)))" & "+ ACCOUNTS.Account_Name   As DisName , ACCOUNTS.Parent_Account_Code," & "ACCOUNTS.last_account, ACCOUNTS.cannot_del" & " FROM ACCOUNTS Where ACCOUNTS.Account_Code <> 'r' "
                     StrSQL = StrSQL & GetAccountByBarnchUser
@@ -5465,7 +5673,7 @@ End If
                     rs.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
                     StrComboList = Fg_Journal.BuildComboList(rs, "DisName", "Account_Code")
                 
-                ElseIf opt(1).value = True Then
+                ElseIf Opt(1).value = True Then
 
                     'Full Path Display
                     If SystemOptions.UserInterface = EnglishInterface Then
@@ -5519,7 +5727,7 @@ End If
                     rs.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
                     StrComboList = Fg_Journal.BuildComboList(rs, "RootName,ParentName,*FirstName", "Account_Code")
                     Debug.Print StrSQL
-                ElseIf opt(2).value = True Then 'the normal Display
+                ElseIf Opt(2).value = True Then 'the normal Display
                     StrSQL = "SELECT ACCOUNTS.Account_Code, ACCOUNTS.Account_Name," & "ACCOUNTS.Parent_Account_Code, ACCOUNTS.last_account, ACCOUNTS.cannot_del " & "From ACCOUNTS Where  ACCOUNTS.Account_Code <>'r' "
 
                     If ChkLastAccount.value = vbChecked Then
@@ -5588,7 +5796,7 @@ Dcombos.GetCostCenter DcCostCenter
     End If
 
 
-    fill_combo dcBranch, StrSQL
+    fill_combo Dcbranch, StrSQL
 
     Set Cmd(0).ButtonImage = mdifrmmain.ImgLstTree.ListImages("New").Picture
     Set Cmd(1).ButtonImage = mdifrmmain.ImgLstTree.ListImages("Edit").Picture
@@ -5599,7 +5807,7 @@ Dcombos.GetCostCenter DcCostCenter
     Set Cmd(6).ButtonImage = mdifrmmain.ImgLstTree.ListImages("Exit").Picture
     Set Cmd(7).ButtonImage = mdifrmmain.ImgLstTree.ListImages("Print").Picture
     Set CmdHelp.ButtonImage = mdifrmmain.ImgLstTree.ListImages("Help").Picture
-    Me.TxtModFlg.text = "R"
+    Me.TxtModFlg.Text = "R"
 '    SetDtpickerDate Me.DTP_Date
     Me.TabMain.CurrTab = 0
 
@@ -5689,9 +5897,9 @@ Private Sub Form_QueryUnload(Cancel As Integer, _
     Dim StrMSG As String
     On Error GoTo ErrTrap
 
-    If Me.TxtModFlg.text <> "R" Then
+    If Me.TxtModFlg.Text <> "R" Then
 
-        Select Case Me.TxtModFlg.text
+        Select Case Me.TxtModFlg.Text
 
             Case "N"
     
@@ -5839,19 +6047,19 @@ ErrTrap:
 End Function
 
 Private Sub SetForNew()
-    TxtSerial1.text = ""
-    Me.Txt.text = ""
+    TxtSerial1.Text = ""
+    Me.Txt.Text = ""
     Check1.value = Unchecked
     Check2.value = Unchecked
     Check3.value = Unchecked
     Check4.value = Unchecked
     Check5.value = Unchecked
 
-    Me.TXTNoteID.text = ""
-    Me.TxtDEVID.text = ""
+    Me.TxtNoteID.Text = ""
+    Me.TxtDEVID.Text = ""
     Me.DTP_Date.value = Date
-    Me.TxtSerial.text = ""
-    Me.TxtValue.text = ""
+    Me.TxtSerial.Text = ""
+    Me.TxtValue.Text = ""
 
     Me.ChkPost.value = vbUnchecked
 
@@ -5863,11 +6071,11 @@ Private Sub SetForNew()
 
     Me.ChkPost.ForeColor = vbBlack
     Fg_Journal.Clear flexClearScrollable, flexClearEverything
-    Me.TxtTotalCredit.text = 0
-    Me.TxtTotalDebit.text = 0
-    Me.TXTResults.text = 0
+    Me.TxtTotalCredit.Text = 0
+    Me.TxtTotalDebit.Text = 0
+    Me.TXTResults.Text = 0
     Me.DcboUsers.BoundText = user_id
-    opt(2).value = True
+    Opt(2).value = True
 End Sub
 
 Public Property Let Cmd_New(ByVal vNewValue As Boolean)
@@ -5952,7 +6160,7 @@ End Sub
 
 Private Sub TxtModFlg_Change()
 
-    Select Case TxtModFlg.text
+    Select Case TxtModFlg.Text
 
         Case "N"
             Me.EleHeader.Enabled = True
@@ -6085,6 +6293,49 @@ Public Sub Retrive(LngNoteID As Long)
              " WHERE n.NoteID=" & LngNoteID & GetAccountCodeHiding
     
     '  — Ì» «·⁄—÷
+    ' 1. ???? ????????? ?????? (Dynamic SQL)
+StrSQL = ""
+
+StrSQL = StrSQL & "SELECT n.*, v.*, a.Account_Name, a.Account_NameEng, a.Account_Serial, "
+StrSQL = StrSQL & " b.branch_name, b.branch_namee, p.Project_name, p.Project_nameE, "
+StrSQL = StrSQL & " p.Fullcode as ProjectCode, "
+StrSQL = StrSQL & " COALESCE(E2.FullCode, E.FullCode, E3.FullCode, E1.FullCode, E4.FullCode) as ResolvedEmpCode, "
+StrSQL = StrSQL & " COALESCE(C2.FullCode, C.FullCode, C1.FullCode, C3.FullCode) as ResolvedCusCode, "
+StrSQL = StrSQL & " COALESCE(C2.Type, C.Type, C1.Type, C3.Type) as ResolvedCusType, "
+
+' ======= ?????? ????????/???????/??? ?????? =======
+StrSQL = StrSQL & " v.uintid, "
+StrSQL = StrSQL & " aqd.unitno, "
+StrSQL = StrSQL & " v.iqarid, "
+StrSQL = StrSQL & " aq.aqarNo, "
+StrSQL = StrSQL & " aq.aqarname, "
+StrSQL = StrSQL & " v.StrUnit, "
+StrSQL = StrSQL & " v.Unitss, "
+StrSQL = StrSQL & " v.mtype, "
+StrSQL = StrSQL & " aku.name, "
+StrSQL = StrSQL & " aku.namee "
+
+StrSQL = StrSQL & " FROM dbo.Notes1 n "
+StrSQL = StrSQL & " INNER JOIN dbo.DOUBLE_ENTREY_VOUCHERS1 v ON n.NoteID = v.Notes_ID "
+StrSQL = StrSQL & " INNER JOIN dbo.ACCOUNTS a ON a.Account_Code = v.Account_Code "
+StrSQL = StrSQL & " LEFT OUTER JOIN dbo.projects p ON v.project_id = p.id "
+StrSQL = StrSQL & " LEFT OUTER JOIN dbo.TblBranchesData b ON v.branch_id = b.branch_id "
+StrSQL = StrSQL & " LEFT OUTER JOIN TblEmployee E  ON a.Account_Code = E.Account_Code "
+StrSQL = StrSQL & " LEFT OUTER JOIN TblEmployee E1 ON a.Account_Code = E1.Account_Code2 "
+StrSQL = StrSQL & " LEFT OUTER JOIN TblEmployee E2 ON a.Account_Code = E2.Account_Code1 "
+StrSQL = StrSQL & " LEFT OUTER JOIN TblEmployee E3 ON a.Account_Code = E3.Account_Code4 "
+StrSQL = StrSQL & " LEFT OUTER JOIN TblEmployee E4 ON a.Account_Code = E4.Account_Code5 "
+StrSQL = StrSQL & " LEFT OUTER JOIN TblCustemers C  ON a.Account_Code = C.Account_Code "
+StrSQL = StrSQL & " LEFT OUTER JOIN TblCustemers C1 ON a.Account_Code = C1.Account_CodeAss2 "
+StrSQL = StrSQL & " LEFT OUTER JOIN TblCustemers C2 ON a.Account_Code = C2.Account_CodeHi1 "
+StrSQL = StrSQL & " LEFT OUTER JOIN TblCustemers C3 ON a.Account_Code = C3.Account_CodeHi2 "
+
+' ======= ????? ????????/???????/??? ?????? =======
+StrSQL = StrSQL & " LEFT OUTER JOIN dbo.TblAqarDetai aqd ON v.uintid = aqd.Id "
+StrSQL = StrSQL & " LEFT OUTER JOIN dbo.TblAqar aq ON v.iqarid = aq.Aqarid "
+StrSQL = StrSQL & " LEFT OUTER JOIN dbo.TblAkarUnit aku ON v.mtype = aku.id "
+
+StrSQL = StrSQL & " WHERE n.NoteID=" & LngNoteID & GetAccountCodeHiding
     If LngNoteID = 1 Then
         StrSQL = StrSQL & " ORDER BY v.Credit_Or_Debit, v.Value, a.Account_Serial "
     Else
@@ -6104,25 +6355,25 @@ Public Sub Retrive(LngNoteID As Long)
         Me.DcCostCenter.BoundText = rs("general_cost_center").value & ""
     End If
     
-    Me.TXTNoteID.text = rs("NoteID").value & ""
-    Me.Label9.Visible = (Me.TXTNoteID.text = "1")
-    Me.Text1.text = rs("foxy_no").value & ""
-    Text2.text = IIf(rs("Notetype").value = 101, "ÌœÊÌ", "¬·Ì")
-    Text3.text = get_note_type_name(rs("Notetype").value)
+    Me.TxtNoteID.Text = rs("NoteID").value & ""
+    Me.Label9.Visible = (Me.TxtNoteID.Text = "1")
+    Me.Text1.Text = rs("foxy_no").value & ""
+    Text2.Text = IIf(rs("Notetype").value = 101, "ÌœÊÌ", "¬·Ì")
+    Text3.Text = get_note_type_name(rs("Notetype").value)
     
     ' «·’·«ÕÌ… Interval
     Dim isLocked As Boolean: isLocked = IIf(IsNull(rs("LockedInterval").value), False, rs("LockedInterval").value)
     Cmd(1).Enabled = Not isLocked
     Cmd(8).Enabled = Not isLocked
 
-    Me.TxtValue.text = rs("Note_Value").value & ""
+    Me.TxtValue.Text = rs("Note_Value").value & ""
     Me.DTP_Date.value = IIf(IsNull(rs("NoteDate").value), Date, rs("NoteDate").value)
     Me.txtDueDate.value = IIf(IsNull(rs("DueDate").value), Date, rs("DueDate").value)
-    Me.TxtSerial.text = rs("NoteSerial").value & ""
-    Me.TxtSerial1.text = rs("NoteSerial1").value & ""
-    dcBranch.BoundText = rs("branch_no").value & ""
+    Me.TxtSerial.Text = rs("NoteSerial").value & ""
+    Me.TxtSerial1.Text = rs("NoteSerial1").value & ""
+    Dcbranch.BoundText = rs("branch_no").value & ""
     Me.DcboUsers.BoundText = rs("UserID").value & ""
-    Me.Txt.text = rs("Remark").value & ""
+    Me.Txt.Text = rs("Remark").value & ""
 
     '  —ÕÌ· «·ﬁÌœ
     ChkPost.value = IIf(rs("NotePosted").value, vbChecked, vbUnchecked)
@@ -6159,6 +6410,23 @@ Public Sub Retrive(LngNoteID As Long)
                 .TextMatrix(i, .ColIndex("BranchName")) = rs("branch_namee").value & ""
                 .TextMatrix(i, .ColIndex("project")) = rs("Project_namee").value & ""
             End If
+
+                    .TextMatrix(i, .ColIndex("unitno")) = IIf(IsNull(rs("unitno").value), "", rs("unitno").value)
+                    .TextMatrix(i, .ColIndex("type")) = IIf(IsNull(rs("mtype").value), 0, rs("mtype").value)
+                    .TextMatrix(i, .ColIndex("uintid")) = IIf(IsNull(rs("uintid").value), "", rs("uintid").value)
+                    .TextMatrix(i, .ColIndex("iqarid")) = IIf(IsNull(rs("iqarid").value), "", rs("iqarid").value)
+                    .TextMatrix(i, .ColIndex("iqar")) = IIf(IsNull(rs("aqarname").value), "", rs("aqarname").value)
+                    .TextMatrix(i, .ColIndex("StrUnit")) = IIf(IsNull(rs("StrUnit").value), "", rs("StrUnit").value)
+                    .TextMatrix(i, .ColIndex("Unitss")) = IIf(IsNull(rs("Unitss").value), "", rs("Unitss").value)
+                    
+                    
+                    If SystemOptions.UserInterface = ArabicInterface Then
+
+                    .TextMatrix(i, .ColIndex("unittype")) = IIf(IsNull(rs("name").value), "", rs("name").value)
+                    Else
+
+                    .TextMatrix(i, .ColIndex("unittype")) = IIf(IsNull(rs("namee").value), "", rs("namee").value)
+                    End If
 
             ' --- Õ· »œÌ· ··›«‰ﬂ‘‰ «·»ÿÌ∆… (GetCodeFromAccount) ---
             .TextMatrix(i, .ColIndex("EmpCode6")) = rs("ResolvedEmpCode").value & ""
@@ -6209,9 +6477,9 @@ Public Sub Retrive(LngNoteID As Long)
         Loop
         
         ' 4.  ÕœÌÀ «·≈Ã„«·Ì«  ·ÕŸÌ«
-        Me.TxtTotalDebit.text = Format(.Aggregate(flexSTSum, .FixedRows, .ColIndex("DebitValue"), .rows - 1, .ColIndex("DebitValue")), "0.00")
-        Me.TxtTotalCredit.text = Format(.Aggregate(flexSTSum, .FixedRows, .ColIndex("CreditValue"), .rows - 1, .ColIndex("CreditValue")), "0.00")
-        Me.TXTResults.text = val(Me.TxtTotalDebit.text) - val(Me.TxtTotalCredit.text)
+        Me.TxtTotalDebit.Text = Format(.Aggregate(flexSTSum, .FixedRows, .ColIndex("DebitValue"), .rows - 1, .ColIndex("DebitValue")), "0.00")
+        Me.TxtTotalCredit.Text = Format(.Aggregate(flexSTSum, .FixedRows, .ColIndex("CreditValue"), .rows - 1, .ColIndex("CreditValue")), "0.00")
+        Me.TXTResults.Text = val(Me.TxtTotalDebit.Text) - val(Me.TxtTotalCredit.Text)
         
         .Redraw = flexRDBuffered ' —Ã⁄ «·—”„
     End With
@@ -6219,7 +6487,7 @@ Public Sub Retrive(LngNoteID As Long)
     ' œÊ«· «· ‰”Ìﬁ «·√’·Ì…
     Coloring
     fillapprovData
-    If val(Me.TXTNoteID.text) = 1 Then ReLineGrid
+    If val(Me.TxtNoteID.Text) = 1 Then ReLineGrid
 
     rs.Close: Set rs = Nothing
     Exit Sub
@@ -6319,21 +6587,21 @@ StrSQL = "SELECT     TOP 100 PERCENT dbo.Notes1.foxy_no, dbo.Notes1.KALEB, dbo.N
         Me.DcCostCenter.BoundText = IIf(rs("general_cost_center").value = "", "", rs("general_cost_center").value)
     End If
  
-    Me.TXTNoteID.text = IIf(IsNull(rs("NoteID").value), "", rs("NoteID").value)
+    Me.TxtNoteID.Text = IIf(IsNull(rs("NoteID").value), "", rs("NoteID").value)
 
-    If Me.TXTNoteID.text = 1 Then
+    If Me.TxtNoteID.Text = 1 Then
         Me.Label9.Visible = True
     Else
         Me.Label9.Visible = False
     End If
 
-    Me.Text1.text = IIf(IsNull(rs("foxy_no").value), "", rs("foxy_no").value)
+    Me.Text1.Text = IIf(IsNull(rs("foxy_no").value), "", rs("foxy_no").value)
 
     If rs("Notetype").value = 101 Then
-        Text2.text = "ÌœÊÌ"
+        Text2.Text = "ÌœÊÌ"
 
     Else
-        Text2.text = "«·Ì"
+        Text2.Text = "«·Ì"
 
     End If
 If Not (IsNull(rs("LockedInterval").value)) Then
@@ -6350,23 +6618,23 @@ Cmd(8).Enabled = True
 End If
 
 
-    Text3.text = get_note_type_name(rs("Notetype").value)
+    Text3.Text = get_note_type_name(rs("Notetype").value)
 
-    Me.TxtDEVID.text = IIf(IsNull(rs("Double_Entry_Vouchers_ID").value), "", rs("Double_Entry_Vouchers_ID").value)
-    Me.TxtDEV_NO.text = ""
-    Me.TxtValue.text = IIf(IsNull(rs("Note_Value").value), "", rs("Note_Value").value)
-    Me.TxtDEV_NO.text = IIf(IsNull(rs("Double_Entry_Vouchers_ID").value), "", rs("Double_Entry_Vouchers_ID").value)
+    Me.TxtDEVID.Text = IIf(IsNull(rs("Double_Entry_Vouchers_ID").value), "", rs("Double_Entry_Vouchers_ID").value)
+    Me.TxtDEV_NO.Text = ""
+    Me.TxtValue.Text = IIf(IsNull(rs("Note_Value").value), "", rs("Note_Value").value)
+    Me.TxtDEV_NO.Text = IIf(IsNull(rs("Double_Entry_Vouchers_ID").value), "", rs("Double_Entry_Vouchers_ID").value)
 
     Me.DTP_Date.value = IIf(IsNull(rs("NoteDate").value), Date, rs("NoteDate").value)
     Me.txtDueDate.value = IIf(IsNull(rs("DueDate").value), Date, rs("DueDate").value)
 
-    Me.TxtSerial.text = IIf(IsNull(rs("NoteSerial").value), Date, rs("NoteSerial").value)
-    Me.TxtSerial1.text = IIf(IsNull(rs("NoteSerial1").value), Date, rs("NoteSerial1").value)
-    dcBranch.BoundText = IIf(IsNull(rs("branch_no").value), "", rs("branch_no").value)
+    Me.TxtSerial.Text = IIf(IsNull(rs("NoteSerial").value), Date, rs("NoteSerial").value)
+    Me.TxtSerial1.Text = IIf(IsNull(rs("NoteSerial1").value), Date, rs("NoteSerial1").value)
+    Dcbranch.BoundText = IIf(IsNull(rs("branch_no").value), "", rs("branch_no").value)
 
     'Me.DtHijriTrans.value = IIf(IsNull(Rs("NoteHijriDate").value), "", Rs("NoteHijriDate").value)
     Me.DcboUsers.BoundText = IIf(IsNull(rs("UserID").value), "", rs("UserID").value)
-    Me.Txt.text = IIf(IsNull(rs("Remark").value), "", rs("Remark").value)
+    Me.Txt.Text = IIf(IsNull(rs("Remark").value), "", rs("Remark").value)
 
     If Not (IsNull(rs("NoteType").value)) Then
         If rs("NoteType").value = "2" Then
@@ -6491,9 +6759,9 @@ End If
         Dim rsDummy As New ADODB.Recordset
         rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
         If Not rsDummy.EOF Then
-            Me.TxtTotalCredit.text = rsDummy!value & ""
+            Me.TxtTotalCredit.Text = rsDummy!value & ""
         Else
-            Me.TxtTotalCredit.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("CreditValue"), .rows - 1, .ColIndex("CreditValue"))
+            Me.TxtTotalCredit.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("CreditValue"), .rows - 1, .ColIndex("CreditValue"))
         End If
     
         s = " SELECT SUM(DOUBLE_ENTREY_VOUCHERS1.[Value]) as value"
@@ -6505,20 +6773,20 @@ End If
         Set rsDummy = New ADODB.Recordset
         rsDummy.Open s, Cn, adOpenKeyset, adLockReadOnly
         If Not rsDummy.EOF Then
-            Me.TxtTotalDebit.text = rsDummy!value & ""
+            Me.TxtTotalDebit.Text = rsDummy!value & ""
         Else
-            Me.TxtTotalDebit.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("DebitValue"), .rows - 1, .ColIndex("DebitValue"))
+            Me.TxtTotalDebit.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("DebitValue"), .rows - 1, .ColIndex("DebitValue"))
         End If
-        Me.TxtTotalDebit.text = Round(Me.TxtTotalDebit.text, SystemOptions.SysDefCurrencyForamt)
-        Me.TxtTotalCredit.text = Round(Me.TxtTotalCredit.text, SystemOptions.SysDefCurrencyForamt)
+        Me.TxtTotalDebit.Text = Round(Me.TxtTotalDebit.Text, SystemOptions.SysDefCurrencyForamt)
+        Me.TxtTotalCredit.Text = Round(Me.TxtTotalCredit.Text, SystemOptions.SysDefCurrencyForamt)
         
-        Me.TXTResults.text = val(Me.TxtTotalDebit.text) - val(Me.TxtTotalCredit.text)
+        Me.TXTResults.Text = val(Me.TxtTotalDebit.Text) - val(Me.TxtTotalCredit.Text)
     
         '  Me.TxtTotalCredit.text =Round(Me.TxtTotalCredit.text, SystemOptions.SysDefCurrencyForamt)
         '  Me.TxtTotalDebit.text =Round(Me.TxtTotalDebit.text, SystemOptions.SysDefCurrencyForamt)
         Coloring
 fillapprovData
-        If val(Me.TXTNoteID.text) = 1 Then
+        If val(Me.TxtNoteID.Text) = 1 Then
             ReLineGrid
         End If
 
@@ -6667,13 +6935,13 @@ Public Sub Retrive2(LngNoteID As Long)
             rs.MoveNext
         Next i
 
-        Me.TxtTotalCredit.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("CreditValue"), .rows - 1, .ColIndex("CreditValue"))
-        Me.TxtTotalDebit.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("DebitValue"), .rows - 1, .ColIndex("DebitValue"))
+        Me.TxtTotalCredit.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("CreditValue"), .rows - 1, .ColIndex("CreditValue"))
+        Me.TxtTotalDebit.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("DebitValue"), .rows - 1, .ColIndex("DebitValue"))
     
-        Me.TXTResults.text = val(Me.TxtTotalDebit.text) - val(Me.TxtTotalCredit.text)
+        Me.TXTResults.Text = val(Me.TxtTotalDebit.Text) - val(Me.TxtTotalCredit.Text)
     
-        Me.TxtTotalDebit.text = Round(Me.TxtTotalDebit.text, SystemOptions.SysDefCurrencyForamt)
-        Me.TxtTotalCredit.text = Round(Me.TxtTotalCredit.text, SystemOptions.SysDefCurrencyForamt)
+        Me.TxtTotalDebit.Text = Round(Me.TxtTotalDebit.Text, SystemOptions.SysDefCurrencyForamt)
+        Me.TxtTotalCredit.Text = Round(Me.TxtTotalCredit.Text, SystemOptions.SysDefCurrencyForamt)
                        
     End With
 
@@ -6788,13 +7056,13 @@ Public Sub retrive1(LngNoteID As Long)
             rs.MoveNext
         Next i
 
-        Me.TxtTotalCredit.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("CreditValue"), .rows - 1, .ColIndex("CreditValue"))
+        Me.TxtTotalCredit.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("CreditValue"), .rows - 1, .ColIndex("CreditValue"))
      
-        Me.TxtTotalDebit.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("DebitValue"), .rows - 1, .ColIndex("DebitValue"))
-        Me.TXTResults.text = val(Me.TxtTotalDebit.text) - val(Me.TxtTotalCredit.text)
+        Me.TxtTotalDebit.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("DebitValue"), .rows - 1, .ColIndex("DebitValue"))
+        Me.TXTResults.Text = val(Me.TxtTotalDebit.Text) - val(Me.TxtTotalCredit.Text)
     
-        Me.TxtTotalCredit.text = Round(Me.TxtTotalCredit.text, SystemOptions.SysDefCurrencyForamt)
-        Me.TxtTotalDebit.text = Round(Me.TxtTotalDebit.text, SystemOptions.SysDefCurrencyForamt)
+        Me.TxtTotalCredit.Text = Round(Me.TxtTotalCredit.Text, SystemOptions.SysDefCurrencyForamt)
+        Me.TxtTotalDebit.Text = Round(Me.TxtTotalDebit.Text, SystemOptions.SysDefCurrencyForamt)
     
     End With
 
@@ -6804,7 +7072,7 @@ Public Property Get Cmd_Edit() As Boolean
     Dim Msg As String
     Cmd_Edit = m_Cmd_Edit
 
-    If Trim(Me.TXTNoteID.text) = "" Then
+    If Trim(Me.TxtNoteID.Text) = "" Then
         'Msg = "·«ÌÊÃœ ”Ã· Õ«÷— ·· ⁄œÌ·"
         GetMsgs 72, vbExclamation
         Cmd_Edit = False
@@ -6837,7 +7105,7 @@ Public Property Get Cmd_Delete() As Boolean
     On Error GoTo ErrTrap
     Cmd_Delete = m_Cmd_Delete
 
-    If Me.TXTNoteID.text = "" Then
+    If Me.TxtNoteID.Text = "" Then
         Cmd_Delete = True
         Exit Property
     End If
@@ -6850,14 +7118,14 @@ Public Property Get Cmd_Delete() As Boolean
         Exit Property
     End If
 
-    StrSQL = "Delete * From Notes Where Notes.Note_ID='" & Trim(Me.TXTNoteID.text) & "'"
+    StrSQL = "Delete * From Notes Where Notes.Note_ID='" & Trim(Me.TxtNoteID.Text) & "'"
 
     If SystemOptions.UserInterface = ArabicInterface Then
-        Msg = "”Ê› Ì „ Õ–› Â–« «·”‰œ —ﬁ„ " & Trim(Me.TxtSerial1.text) & CHR(13)
+        Msg = "”Ê› Ì „ Õ–› Â–« «·”‰œ —ﬁ„ " & Trim(Me.TxtSerial1.Text) & CHR(13)
         Msg = Msg & "›Â· √‰  „ √ﬂœ „‰ «·√” „—«— ...!!"
         IntRes = MsgBox(Msg, vbQuestion + vbOKCancel + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title)
     Else
-        Msg = "This voucher " & Trim(Me.TxtSerial1.text) & CHR(13)
+        Msg = "This voucher " & Trim(Me.TxtSerial1.Text) & CHR(13)
         Msg = Msg & "will be deleted " & CHR(13)
         Msg = Msg & "are you sure to continue ..?"
         IntRes = MsgBox(Msg, vbQuestion + vbOKCancel, App.Title)
@@ -6896,37 +7164,37 @@ Private Sub PutData()
 
     With Fg_Journal
 
-        If Len(TxtDes.text) > 0 And Len(TxtDese.text) > 0 Then
-            .cell(flexcpData, .Row, .ColIndex("Des")) = TxtDes.text
-            .TextMatrix(.Row, .ColIndex("des")) = TxtDes.text
+        If Len(TxtDes.Text) > 0 And Len(TxtDese.Text) > 0 Then
+            .cell(flexcpData, .Row, .ColIndex("Des")) = TxtDes.Text
+            .TextMatrix(.Row, .ColIndex("des")) = TxtDes.Text
             .cell(flexcpPicture, .Row, .ColIndex("Des")) = ImgNote.Picture
             .cell(flexcpPictureAlignment, .Row, .ColIndex("Des")) = flexAlignLeftCenter
         
-            .cell(flexcpData, .Row, .ColIndex("Dese")) = TxtDes.text
+            .cell(flexcpData, .Row, .ColIndex("Dese")) = TxtDes.Text
         
             .cell(flexcpPicture, .Row, .ColIndex("Dese")) = ImgNote.Picture
             .cell(flexcpPictureAlignment, .Row, .ColIndex("Dese")) = flexAlignLeftCenter
-            .TextMatrix(.Row, .ColIndex("dese")) = TxtDese.text
-        ElseIf Len(TxtDes.text) > 0 And Len(TxtDese.text) = 0 Then
+            .TextMatrix(.Row, .ColIndex("dese")) = TxtDese.Text
+        ElseIf Len(TxtDes.Text) > 0 And Len(TxtDese.Text) = 0 Then
     
-            .cell(flexcpData, .Row, .ColIndex("Des")) = TxtDes.text
-            .TextMatrix(.Row, .ColIndex("des")) = TxtDes.text
+            .cell(flexcpData, .Row, .ColIndex("Des")) = TxtDes.Text
+            .TextMatrix(.Row, .ColIndex("des")) = TxtDes.Text
             .cell(flexcpPicture, .Row, .ColIndex("Des")) = ImgNote.Picture
             .cell(flexcpPictureAlignment, .Row, .ColIndex("Des")) = flexAlignLeftCenter
             .cell(flexcpData, .Row, .ColIndex("Dese")) = ""
             .cell(flexcpPicture, .Row, .ColIndex("Dese")) = Empty
             .cell(flexcpPictureAlignment, .Row, .ColIndex("Dese")) = flexAlignLeftCenter
             .TextMatrix(.Row, .ColIndex("dese")) = ""
-        ElseIf Len(TxtDes.text) = 0 And Len(TxtDese.text) > 0 Then
+        ElseIf Len(TxtDes.Text) = 0 And Len(TxtDese.Text) > 0 Then
             .cell(flexcpData, .Row, .ColIndex("Des")) = ""
             .cell(flexcpPicture, .Row, .ColIndex("Des")) = Empty
             .cell(flexcpPictureAlignment, .Row, .ColIndex("Des")) = flexAlignLeftCenter
             .TextMatrix(.Row, .ColIndex("des")) = ""
-            .cell(flexcpData, .Row, .ColIndex("Dese")) = TxtDes.text
-            .TextMatrix(.Row, .ColIndex("dese")) = TxtDese.text
+            .cell(flexcpData, .Row, .ColIndex("Dese")) = TxtDes.Text
+            .TextMatrix(.Row, .ColIndex("dese")) = TxtDese.Text
             .cell(flexcpPicture, .Row, .ColIndex("Dese")) = ImgNote.Picture
             .cell(flexcpPictureAlignment, .Row, .ColIndex("Dese")) = flexAlignLeftCenter
-        ElseIf Len(TxtDes.text) = 0 And Len(TxtDese.text) = 0 Then
+        ElseIf Len(TxtDes.Text) = 0 And Len(TxtDese.Text) = 0 Then
             .TextMatrix(.Row, .ColIndex("des")) = ""
             .TextMatrix(.Row, .ColIndex("dese")) = ""
     
@@ -6946,7 +7214,7 @@ End Sub
 
 Public Property Get Cmd_Print() As Boolean
 
-    If Me.TXTNoteID.text = "" Then
+    If Me.TxtNoteID.Text = "" Then
         GetMsgs 140, vbExclamation
         Cmd_Print = False
     Else
@@ -7157,9 +7425,9 @@ Private Sub ChangeLang()
     Command2.Caption = "Call Explain Template"
 
     EleOpt.Caption = "Show Of Accounts"
-    opt(0).Caption = "Hierarchy View"
-    opt(1).Caption = "Parent Path View"
-    opt(2).Caption = "Tabular View"
+    Opt(0).Caption = "Hierarchy View"
+    Opt(1).Caption = "Parent Path View"
+    Opt(2).Caption = "Tabular View"
     ChkLastAccount.Caption = "Show Last Accounts Only"
     OptSort(0).Caption = "Alphabetically"
     OptSort(1).Caption = "Charts sequence"
@@ -7270,30 +7538,30 @@ Private Sub AddTip()
 
         'OptSort
         With TTP
-            .Create Me.hWnd, opt(1).Caption, 1, 15204351, -2147483630, True
+            .Create Me.hWnd, Opt(1).Caption, 1, 15204351, -2147483630, True
             .MaxWidth = 4000
             .VisibleTime = 10000
             .DelayTime = 300
             Msg = "Â–« «·ŒÌ«— ÌÃ⁄· ⁄—÷ «”„«¡ «·Õ”«»«  «· Ï " & Wrap & "Ì„ﬂ‰ﬂ ﬂ «»… Ê ”ÃÌ· «·ﬁÌœ ·Â«  ŸÂ— ›Ï " & Wrap & "‘ﬂ· ÃœÊ·Ï Ì⁄—÷ «”„ «·Õ”«» «·‰Â«∆Ï Ê«”„" & Wrap & "«·Õ”«» «·„ ›—⁄ „‰Â Ê«Ì÷« «”„ «·Õ”«» " & Wrap & "«·√⁄·Ï „‰Â( À·«À… „” ‰ÊÌ« )."
-            .AddControl opt(1), Msg, True
+            .AddControl Opt(1), Msg, True
         End With
 
         With TTP
-            .Create Me.hWnd, opt(2).Caption, 1, 15204351, -2147483630, True
+            .Create Me.hWnd, Opt(2).Caption, 1, 15204351, -2147483630, True
             .MaxWidth = 4000
             .VisibleTime = 10000
             .DelayTime = 300
             Msg = "Â–« «·ŒÌ«— ÌÃ⁄· ⁄—÷ «”„«¡ «·Õ”«»«  «· Ï " & Wrap & "Ì„ﬂ‰ﬂ ﬂ «»… Ê ”ÃÌ· «·ﬁÌœ ·Â«  ŸÂ— ›Ï " & Wrap & "‘ﬂ· ÃœÊ·Ï Ì⁄—÷ «”„ «·Õ”«» ›ﬁÿ."
-            .AddControl opt(2), Msg, True
+            .AddControl Opt(2), Msg, True
         End With
 
         With TTP
-            .Create Me.hWnd, opt(0).Caption, 1, 15204351, -2147483630, True
+            .Create Me.hWnd, Opt(0).Caption, 1, 15204351, -2147483630, True
             .MaxWidth = 4000
             .VisibleTime = 10000
             .DelayTime = 300
             Msg = "Â–« «·ŒÌ«— ÌÃ⁄· ⁄—÷ «”„«¡ «·Õ”«»«  «· Ï " & Wrap & "Ì„ﬂ‰ﬂ ﬂ «»… Ê ”ÃÌ· «·ﬁÌœ ·Â«  ŸÂ— ›Ï " & Wrap & "‘ﬂ· ‘Ã—Ï »«·Ÿ»ÿ „À· «·œ·Ì· «·„Õ«”»Ï."
-            .AddControl opt(0), Msg, True
+            .AddControl Opt(0), Msg, True
         End With
 
         With TTP
@@ -7382,30 +7650,30 @@ Private Sub AddTip()
 
         'OptSort
         With TTP
-            .Create Me.hWnd, opt(1).Caption, 1, 15204351, -2147483630, False
+            .Create Me.hWnd, Opt(1).Caption, 1, 15204351, -2147483630, False
             .MaxWidth = 4000
             .VisibleTime = 10000
             .DelayTime = 300
             Msg = "This option shows the accounts" & Wrap & "in tabluar form !! and display " & Wrap & "the last three levels of chart" & Wrap & "of accounts."
-            .AddControl opt(1), Msg, False
+            .AddControl Opt(1), Msg, False
         End With
 
         With TTP
-            .Create Me.hWnd, opt(2).Caption, 1, 15204351, -2147483630, False
+            .Create Me.hWnd, Opt(2).Caption, 1, 15204351, -2147483630, False
             .MaxWidth = 4000
             .VisibleTime = 10000
             .DelayTime = 300
             Msg = "This option shows the accounts" & Wrap & "in tabluar form !! and display" & Wrap & "just only the last account."
-            .AddControl opt(2), Msg, False
+            .AddControl Opt(2), Msg, False
         End With
 
         With TTP
-            .Create Me.hWnd, opt(0).Caption, 1, 15204351, -2147483630, False
+            .Create Me.hWnd, Opt(0).Caption, 1, 15204351, -2147483630, False
             .MaxWidth = 4000
             .VisibleTime = 10000
             .DelayTime = 300
             Msg = "This option shows the accounts" & Wrap & "in hierarchy view exactly like" & Wrap & "the view of chart of accounts."
-            .AddControl opt(0), Msg, False
+            .AddControl Opt(0), Msg, False
         End With
 
         With TTP
@@ -7436,7 +7704,7 @@ End Function
 
 Public Property Get Cmd_Preview() As Boolean
 
-    If Me.TXTNoteID.text = "" Then
+    If Me.TxtNoteID.Text = "" Then
         GetMsgs 140, vbExclamation
         Cmd_Print = False
     Else
@@ -7478,8 +7746,8 @@ Private Sub SaveData()
 
     'On Error GoTo ErrTrap
 
-    If val(TxtValue.text) = 0 Then
-        TxtValue.text = 0
+    If val(TxtValue.Text) = 0 Then
+        TxtValue.Text = 0
         '  Msg = "„‰ ›÷·ﬂ ﬁ„ »≈œŒ«· ﬁÌ„… «·”‰œ"
         '  MsgBox Msg, vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
         '  'GetMsgs 59, vbExclamation
@@ -7535,7 +7803,7 @@ Private Sub SaveData()
 
     End With
 
-    If val(Me.TXTResults.text) <> 0 Then
+    If val(Me.TXTResults.Text) <> 0 Then
 
         If SystemOptions.UserInterface = EnglishInterface Then
             Msg = "Depit And Credit not matched ..!!" & CHR(13)
@@ -7562,7 +7830,7 @@ Private Sub SaveData()
 'Exit Sub
 'End If
 
-    If Me.TxtModFlg.text = "N" Then
+    If Me.TxtModFlg.Text = "N" Then
         ' Me.TxtSerial.text = ModAccounts.GetNewDEV_Serial(Me.DTP_Date.value)
     End If
 
@@ -7571,25 +7839,25 @@ Private Sub SaveData()
     Cn.BeginTrans
     TransBegine = True
 
-    If Me.TxtModFlg.text = "E" Then
-        StrSQL = "Delete   Notes1 Where Notes1.NoteID='" & Trim(TXTNoteID.text) & "'"
+    If Me.TxtModFlg.Text = "E" Then
+        StrSQL = "Delete   Notes1 Where Notes1.NoteID='" & Trim(TxtNoteID.Text) & "'"
         Cn.Execute StrSQL, , adExecuteNoRecords
-     
+     Cn.Execute " Delete from TblExpUnitNoVouch1 where  ExpID =" & val(TxtNoteID.Text)
         If DcCostCenter.BoundText <> "" Then
-            StrSQL = "Delete  marakes_taklefa_temp  where kedno =" & val(Text1.text)
+            StrSQL = "Delete  marakes_taklefa_temp  where kedno =" & val(Text1.Text)
             Cn.Execute StrSQL, , adExecuteNoRecords
         End If
      
         If DcCostCenter.BoundText <> "" Then
-            StrSQL = "Delete  marakes_taklefa_temp  where kedno =" & val(Text1.text)
+            StrSQL = "Delete  marakes_taklefa_temp  where kedno =" & val(Text1.Text)
             Cn.Execute StrSQL, , adExecuteNoRecords
         End If
     
-    ElseIf Me.TxtModFlg.text = "N" Then
+    ElseIf Me.TxtModFlg.Text = "N" Then
         '---------------------------Get The Note ID ------------
-        Me.TXTNoteID.text = CStr(new_id("notes1", "NoteID", ""))
-        Me.TxtDEVID.text = CStr(new_id("DOUBLE_ENTREY_VOUCHERS1", "Double_Entry_Vouchers_ID", ""))
-        Me.TxtDEV_NO.text = Me.TxtDEVID.text
+        Me.TxtNoteID.Text = CStr(new_id("notes1", "NoteID", ""))
+        Me.TxtDEVID.Text = CStr(new_id("DOUBLE_ENTREY_VOUCHERS1", "Double_Entry_Vouchers_ID", ""))
+        Me.TxtDEV_NO.Text = Me.TxtDEVID.Text
         '---------------------------Begine of Saving------------
     End If
 
@@ -7600,30 +7868,30 @@ Private Sub SaveData()
   
   
     RsNetes.AddNew
-    RsNetes("branch_no").value = val(Me.dcBranch.BoundText)
-    RsNetes("NoteID").value = val(Me.TXTNoteID.text)
+    RsNetes("branch_no").value = val(Me.Dcbranch.BoundText)
+    RsNetes("NoteID").value = val(Me.TxtNoteID.Text)
     RsNetes("NoteType").value = 101
-    RsNetes("NoteSerial").value = val(Me.TxtSerial.text)
-    RsNetes("NoteSerial1").value = val(Me.TxtSerial1.text)
+    RsNetes("NoteSerial").value = val(Me.TxtSerial.Text)
+    RsNetes("NoteSerial1").value = val(Me.TxtSerial1.Text)
     
     RsNetes("numbering_type").value = sand_numbering_type(0) ' „”·”· «·ﬁÌœ
     RsNetes("numbering_type1").value = sand_numbering_type(3) ' „”·”· «·”‰œ
     
     RsNetes("sanad_year").value = year(DTP_Date.value)
     RsNetes("sanad_month").value = Month(DTP_Date.value)
-    RsNetes("foxy_no").value = val(Text1.text)
+    RsNetes("foxy_no").value = val(Text1.Text)
     RsNetes("NoteDate").value = Me.DTP_Date.value
 
     RsNetes("DueDate").value = Me.txtDueDate.value
 
-    RsNetes("Note_Value").value = val(Me.TxtValue.text)
-    RsNetes("Double_Entry_Vouchers_ID").value = val(Me.TxtDEVID.text)
+    RsNetes("Note_Value").value = val(Me.TxtValue.Text)
+    RsNetes("Double_Entry_Vouchers_ID").value = val(Me.TxtDEVID.Text)
     RsNetes("DAWRY").value = Check4.value
     RsNetes("KALEB").value = Check3.value
     
-    RsNetes("Remark").value = Trim$(Me.Txt.text)
+    RsNetes("Remark").value = Trim$(Me.Txt.Text)
     RsNetes("UserID").value = val(Me.DcboUsers.BoundText)
-    Me.Lb_note_value_by_characters.Caption = WriteNo(Format(Me.TxtTotalDebit.text, "0.00"), 0, True, ".")
+    Me.Lb_note_value_by_characters.Caption = WriteNo(Format(Me.TxtTotalDebit.Text, "0.00"), 0, True, ".")
     RsNetes("note_value_by_characters").value = Trim$(Me.Lb_note_value_by_characters.Caption)
     RsNetes("general_cost_center").value = IIf(Me.DcCostCenter.BoundText = "", "", Me.DcCostCenter.BoundText)
     
@@ -7655,13 +7923,16 @@ Private Sub SaveData()
                 End If
             
                 If val(.TextMatrix(i, .ColIndex("BranchId"))) = 0 Then
-                    .TextMatrix(i, .ColIndex("BranchId")) = IIf(val(Me.dcBranch.BoundText) = 0, 1, val(Me.dcBranch.BoundText))
+                    .TextMatrix(i, .ColIndex("BranchId")) = IIf(val(Me.Dcbranch.BoundText) = 0, 1, val(Me.Dcbranch.BoundText))
                 End If
 
                 opening_balance_voucher_id = val(.TextMatrix(i, .ColIndex("opening_balance_voucher_id")))
-
+     If Fg_Journal.TextMatrix(i, Fg_Journal.ColIndex("StrUnit")) <> "" Then
+            SaveUnitNo OtherInformation.CurrRow, CLng(i)
+        End If
                 If opening_balance_voucher_id = 0 Then opening_balance_voucher_id = -1
-                If ModAccounts.AddNewDev(val(Me.TxtDEVID.text), .TextMatrix(i, .ColIndex("LineNo")), .TextMatrix(i, .ColIndex("AccountCode")), SngDEV_Value, IntDEV_Type, .TextMatrix(i, .ColIndex("des")), val(Me.TXTNoteID.text), , , SystemOptions.SysCurrentAccountIntervalID, Me.DTP_Date.value, val(.TextMatrix(i, .ColIndex("userid"))), , Me.TxtSerial.text, , valuee, .TextMatrix(i, .ColIndex("currenct_code")), val(.TextMatrix(i, .ColIndex("rate"))), , .TextMatrix(i, .ColIndex("dese")), IIf(.TextMatrix(i, .ColIndex("LineNo1")) <> "", .TextMatrix(i, .ColIndex("LineNo1")), setfoxy_Line), , val(.TextMatrix(i, .ColIndex("projectid"))), , True, opening_balance_voucher_id, , , , val(.TextMatrix(i, .ColIndex("BranchId"))), , , , , , , , , , , , , , , , , , , , , , , , , Posted, , , (.TextMatrix(i, .ColIndex("DueDate")))) = False Then
+                If ModAccounts.AddNewDev(val(Me.TxtDEVID.Text), .TextMatrix(i, .ColIndex("LineNo")), .TextMatrix(i, .ColIndex("AccountCode")), SngDEV_Value, IntDEV_Type, .TextMatrix(i, .ColIndex("des")), val(Me.TxtNoteID.Text), , , SystemOptions.SysCurrentAccountIntervalID, Me.DTP_Date.value, val(.TextMatrix(i, .ColIndex("userid"))), , Me.TxtSerial.Text, , valuee, .TextMatrix(i, .ColIndex("currenct_code")), val(.TextMatrix(i, .ColIndex("rate"))), , .TextMatrix(i, .ColIndex("dese")), IIf(.TextMatrix(i, .ColIndex("LineNo1")) <> "", .TextMatrix(i, .ColIndex("LineNo1")), setfoxy_Line), , val(.TextMatrix(i, .ColIndex("projectid"))), , True, opening_balance_voucher_id, , , , val(.TextMatrix(i, .ColIndex("BranchId"))), , , , , , , , , , val(.TextMatrix(i, .ColIndex("iqarid"))) _
+  , val(.TextMatrix(i, .ColIndex("type"))), val(.TextMatrix(i, .ColIndex("uintid"))), , , , , , , , , , , , , Posted, , , (.TextMatrix(i, .ColIndex("DueDate")))) = False Then
                     GoTo ErrTrap
                 End If
             End If
@@ -7697,12 +7968,12 @@ Private Sub SaveData()
 
     'Õ›Ÿ „—ﬂ“ «· ﬂ·›… «·⁄«„
     '        If Me.DcCostCenter.BoundText <> "" Then
-    save_General_cost_center Me.DcCostCenter.BoundText, Me.DcCostCenter.text, "”‰œ ﬁÌœ «›  «ÕÌ", Me.DTP_Date.value
+    save_General_cost_center Me.DcCostCenter.BoundText, Me.DcCostCenter.Text, "”‰œ ﬁÌœ «›  «ÕÌ", Me.DTP_Date.value
     '        End If
     save_cost_center
 
     MsgBox Msg, vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
-    Me.TxtModFlg.text = "R"
+    Me.TxtModFlg.Text = "R"
     fillapprovData
     '------------------------End of Saving--------------
     Exit Sub
@@ -7725,20 +7996,20 @@ End Sub
 Function save_cost_center()
 
     'on error resume next
-    If Not IsNumeric(Text1.text) Then Exit Function
+    If Not IsNumeric(Text1.Text) Then Exit Function
     Dim i As Integer
     Dim rs As ADODB.Recordset
     Set rs = New ADODB.Recordset
     Dim sql_str As String
     'Rs.Open "", Cn, adOpenStatic, adLockOptimistic, adCmdTable
-    sql_str = "select * from marakes_taklefa_temp where kedno=" & Text1.text
+    sql_str = "select * from marakes_taklefa_temp where kedno=" & Text1.Text
     rs.Open sql_str, Cn, adOpenStatic, adLockOptimistic, adCmdText
 
     For i = 1 To rs.RecordCount
         rs("ok").value = 1
         rs("NoteDate").value = DTP_Date.value
-        rs("NoteSerial").value = TxtSerial.text
-        rs("Remark").value = "”‰œ ﬁÌœ «›  «ÕÌ »—ﬁ„ " & TxtSerial1.text & "    " & Me.TxtDes
+        rs("NoteSerial").value = TxtSerial.Text
+        rs("Remark").value = "”‰œ ﬁÌœ «›  «ÕÌ »—ﬁ„ " & TxtSerial1.Text & "    " & Me.TxtDes
         rs.update
         rs.MoveNext
     Next i
@@ -7754,7 +8025,7 @@ Public Function save_General_cost_center(cost_center_id As String, _
  
     Dim StrSQL As String
 
-    StrSQL = "Delete  marakes_taklefa_temp  where general_des=1 AND  kedno =" & val(Text1.text)
+    StrSQL = "Delete  marakes_taklefa_temp  where general_des=1 AND  kedno =" & val(Text1.Text)
     Cn.Execute StrSQL, , adExecuteNoRecords
     
     If Me.DcCostCenter.BoundText = "" Then
@@ -7789,8 +8060,8 @@ StrSQL = "SELECT   *  from dbo.marakes_taklefa_temp Where (1 = -1)"
             
                 End If
         
-                rs("opr_id").value = Me.Text1.text
-                rs("kedno").value = Me.Text1.text
+                rs("opr_id").value = Me.Text1.Text
+                rs("kedno").value = Me.Text1.Text
         
                 rs("opr_type").value = opr_type
                 rs("account_name").value = .TextMatrix(i, .ColIndex("AccountName"))
@@ -7798,8 +8069,8 @@ StrSQL = "SELECT   *  from dbo.marakes_taklefa_temp Where (1 = -1)"
                 rs("line_no").value = .TextMatrix(i, .ColIndex("LineNo1"))
                 rs("record_date").value = record_date
                 rs("NoteDate").value = DTP_Date.value
-                rs("NoteSerial").value = TxtSerial.text
-                rs("Remark").value = Txt.text
+                rs("NoteSerial").value = TxtSerial.Text
+                rs("Remark").value = Txt.Text
                 rs.update
         
             End If
@@ -7812,7 +8083,7 @@ StrSQL = "SELECT   *  from dbo.marakes_taklefa_temp Where (1 = -1)"
 End Function
 
 Private Sub TXTResults_Change()
-    Me.TXTResults.text = Round(val(Me.TXTResults.text), 2)
+    Me.TXTResults.Text = Round(val(Me.TXTResults.Text), 2)
 End Sub
 
 Private Sub XPBtnMove_Click(Index As Integer)
@@ -7820,10 +8091,10 @@ Private Sub XPBtnMove_Click(Index As Integer)
     Static StrOldTransID As String
     Dim StrSQL As String
 On Error Resume Next
-    If Me.TxtModFlg.text = "N" Then
+    If Me.TxtModFlg.Text = "N" Then
         clear_all Me
         SetForNew
-        Me.TxtModFlg.text = "R"
+        Me.TxtModFlg.Text = "R"
         XPBtnMove_Click (2)
     End If
 
@@ -7894,8 +8165,8 @@ ll:
     
             If Not (Rs1.BOF Or Rs1.EOF) Then
                 Rs1.MoveLast
-                Me.TxtModFlg.text = ""
-                Me.TxtModFlg.text = "R"
+                Me.TxtModFlg.Text = ""
+                Me.TxtModFlg.Text = "R"
             End If
 
     End Select
@@ -7906,8 +8177,8 @@ ll:
     
     End If
 'Print Rs1.RecordCount
-        Me.TxtModFlg.text = ""
-        Me.TxtModFlg.text = "R"
+        Me.TxtModFlg.Text = ""
+        Me.TxtModFlg.Text = "R"
         
    ' rs1.Close
    ' Set rs = Nothing
@@ -7916,7 +8187,7 @@ End Sub
 
 Private Sub ChkALL_Click()
     
-    If ChkAll.value = vbChecked Then
+    If chkAll.value = vbChecked Then
     
         With Fg_Journal
             Dim i As Long

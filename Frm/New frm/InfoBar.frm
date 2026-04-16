@@ -12,6 +12,15 @@ Begin VB.Form InfoBar
    ScaleWidth      =   4425
    ShowInTaskbar   =   0   'False
    StartUpPosition =   1  'CenterOwner
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Timer Timer1 
       Interval        =   5000
       Left            =   600

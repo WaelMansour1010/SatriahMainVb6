@@ -15,6 +15,15 @@ Begin VB.Form Form3
    ScaleHeight     =   11490
    ScaleWidth      =   15270
    StartUpPosition =   2  'CenterScreen
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    WindowState     =   2  'Maximized
    Begin VB.Frame Frame6 
       Caption         =   "ÿ»«⁄… «·ﬂ«—‰ÌÂ« "

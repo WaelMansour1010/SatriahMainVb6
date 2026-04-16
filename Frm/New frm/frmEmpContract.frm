@@ -3,7 +3,7 @@ Object = "{0AFE7BE0-11B7-4A3E-978D-D4501E9A57FE}#1.0#0"; "c1sizer.ocx"
 Object = "{BEEECC20-4D5F-4F8B-BFDC-5D9B6FBDE09D}#1.0#0"; "vsflex8.ocx"
 Object = "{F0D2F211-CCB0-11D0-A316-00AA00688B10}#1.0#0"; "MSDATLST.OCX"
 Object = "{FE5DCFAD-BC1D-11D2-94CF-004005455FAA}#1.4#0"; "ImpulseButton.ocx"
-Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "mscomct2.ocx"
+Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
 Begin VB.Form frmEmpSalaryComponent 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "  „›—œ«  «·„ÊŸ›Ì‰   "
@@ -18,6 +18,15 @@ Begin VB.Form frmEmpSalaryComponent
    RightToLeft     =   -1  'True
    ScaleHeight     =   8670
    ScaleWidth      =   13650
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox txtPercentSalary 
       Alignment       =   1  'Right Justify
       Height          =   285
@@ -464,7 +473,7 @@ Begin VB.Form frmEmpSalaryComponent
       _ExtentX        =   2355
       _ExtentY        =   556
       _Version        =   393216
-      Format          =   211812353
+      Format          =   242876417
       CurrentDate     =   38784
    End
    Begin ImpulseButton.ISButton Cmd 
@@ -804,7 +813,7 @@ Begin VB.Form frmEmpSalaryComponent
       _ExtentX        =   2355
       _ExtentY        =   556
       _Version        =   393216
-      Format          =   208273409
+      Format          =   240254977
       CurrentDate     =   38784
    End
    Begin VB.Label Label4 
@@ -989,21 +998,26 @@ Dim Account_Code_dynamic As String
 Dim Account_Code_dynamic1 As String
 Dim Account_Code_dynamic2 As String
    
-Public Sub Cmd_Click(index As Integer)
+Public Sub Cmd_Click(Index As Integer)
     On Error GoTo ErrTrap
 
-    Select Case index
+    Select Case Index
   
         Case 1
-    If FoundInctrease(val(Emp_id.text)) = True Then
+        
+        
+    If FoundInctrease(val(Emp_id.Text)) = True Then
     If SystemOptions.UserInterface = ArabicInterface Then
     MsgBox "·«Ì„ﬂ‰ «· ⁄œÌ· ·Ê ÃÊœ “Ì«œ« "
     Else
     MsgBox "Can not be Edited because there are Increases"
     End If
-    Exit Sub
+    
+        If SystemOptions.usertype <> UserAdminAll Then
+            Exit Sub
+        End If
     End If
-            TxtModFlg.text = "E"
+            TxtModFlg.Text = "E"
             VSFlexGrid1.rows = VSFlexGrid1.rows + 1
 
         Case 2
@@ -1037,9 +1051,9 @@ Public Sub Cmd_Click(index As Integer)
 
             With Me.VSFlexGrid1
   
-                If .row <= 0 Then Exit Sub
-                .RemoveItem .row
-                Me.txtTotal.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("value"), .rows - 1, .ColIndex("value"))
+                If .Row <= 0 Then Exit Sub
+                .RemoveItem .Row
+                Me.txtTotal.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("value"), .rows - 1, .ColIndex("value"))
             End With
 
             ReLineGrid
@@ -1155,7 +1169,7 @@ errortrap:
 
 End Function
 
-Private Sub VSFlexGrid1_AfterEdit(ByVal row As Long, _
+Private Sub VSFlexGrid1_AfterEdit(ByVal Row As Long, _
                                   ByVal Col As Long)
     On Error GoTo ErrTrap
     Dim StrAccountCode As String
@@ -1175,7 +1189,7 @@ Private Sub VSFlexGrid1_AfterEdit(ByVal row As Long, _
                         
                 StrAccountCode = .ComboData
                 LngRow = .FindRow(StrAccountCode, .FixedRows, .ColIndex("AccountCode"), False, True)
-                .TextMatrix(row, .ColIndex("AccountCode")) = StrAccountCode
+                .TextMatrix(Row, .ColIndex("AccountCode")) = StrAccountCode
              
                 StrSQL = " SELECT     *, dbo.mofrad.name, dbo.mofrad.nameE, dbo.mofrad.AddOrDiscount, dbo.mofrad.id"
                 StrSQL = StrSQL & " FROM         dbo.mofrdat INNER JOIN"
@@ -1185,40 +1199,40 @@ Private Sub VSFlexGrid1_AfterEdit(ByVal row As Long, _
                 rs.Open StrSQL, Cn, adOpenStatic, adLockReadOnly, adCmdText
 
                 If Not (rs.BOF Or rs.EOF) Then
-                    .TextMatrix(row, .ColIndex("des")) = IIf(IsNull(rs("eq_sys").value), "", rs("eq_sys").value)
+                    .TextMatrix(Row, .ColIndex("des")) = IIf(IsNull(rs("eq_sys").value), "", rs("eq_sys").value)
                     
-                    .TextMatrix(row, .ColIndex("eq_text")) = IIf(IsNull(rs("eq_text").value), "", rs("eq_text").value)
-                    .TextMatrix(row, .ColIndex("mofrad_type")) = IIf(IsNull(rs("mofrad_type").value), "", rs("mofrad_type").value)
-                    .TextMatrix(row, .ColIndex("AddOrDiscount")) = IIf(IsNull(rs("AddOrDiscount").value), "", rs("AddOrDiscount").value)
-                    .TextMatrix(row, .ColIndex("salary")) = IIf(IsNull(rs("salary").value), 0, rs("salary").value)
+                    .TextMatrix(Row, .ColIndex("eq_text")) = IIf(IsNull(rs("eq_text").value), "", rs("eq_text").value)
+                    .TextMatrix(Row, .ColIndex("mofrad_type")) = IIf(IsNull(rs("mofrad_type").value), "", rs("mofrad_type").value)
+                    .TextMatrix(Row, .ColIndex("AddOrDiscount")) = IIf(IsNull(rs("AddOrDiscount").value), "", rs("AddOrDiscount").value)
+                    .TextMatrix(Row, .ColIndex("salary")) = IIf(IsNull(rs("salary").value), 0, rs("salary").value)
                     
-                    .TextMatrix(row, .ColIndex("specific_value")) = IIf(IsNull(rs("specific_value").value), "", rs("specific_value").value)
-                    .TextMatrix(row, .ColIndex("assurance")) = IIf(IsNull(rs("assurance").value), "", rs("assurance").value)
-                    .TextMatrix(row, .ColIndex("percentage")) = IIf(IsNull(rs("percentage").value), "", rs("percentage").value)
-                    .TextMatrix(row, .ColIndex("min_val")) = IIf(IsNull(rs("min_val").value), "", rs("min_val").value)
-                    .TextMatrix(row, .ColIndex("max_val")) = IIf(IsNull(rs("max_val").value), "", rs("max_val").value)
-                    .TextMatrix(row, .ColIndex("is_fixed")) = IIf(IsNull(rs("is_fixed").value), "", rs("is_fixed").value)
-                    .TextMatrix(row, .ColIndex("Monthly")) = IIf(IsNull(rs("Monthly").value), "", rs("Monthly").value)
+                    .TextMatrix(Row, .ColIndex("specific_value")) = IIf(IsNull(rs("specific_value").value), "", rs("specific_value").value)
+                    .TextMatrix(Row, .ColIndex("assurance")) = IIf(IsNull(rs("assurance").value), "", rs("assurance").value)
+                    .TextMatrix(Row, .ColIndex("percentage")) = IIf(IsNull(rs("percentage").value), "", rs("percentage").value)
+                    .TextMatrix(Row, .ColIndex("min_val")) = IIf(IsNull(rs("min_val").value), "", rs("min_val").value)
+                    .TextMatrix(Row, .ColIndex("max_val")) = IIf(IsNull(rs("max_val").value), "", rs("max_val").value)
+                    .TextMatrix(Row, .ColIndex("is_fixed")) = IIf(IsNull(rs("is_fixed").value), "", rs("is_fixed").value)
+                    .TextMatrix(Row, .ColIndex("Monthly")) = IIf(IsNull(rs("Monthly").value), "", rs("Monthly").value)
                    
                 End If
 
-                calcnets row
+                calcnets Row
            
             Case "value"
                 Dim sgl As String
                 
-                Me.txtTotal.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("value"), .rows - 1, .ColIndex("value"))
+                Me.txtTotal.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("value"), .rows - 1, .ColIndex("value"))
                 '  Me.XPTxtVal.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("Value"), .Rows - 1, .ColIndex("Value"))
      '   calcnets
                 '  Me.XPTxtVal.text = Format(Me.XPTxtVal.text, SystemOptions.SysDefCurrencyForamt)
         End Select
 
-        Me.txtTotal.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("value"), .rows - 1, .ColIndex("value"))
+        Me.txtTotal.Text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("value"), .rows - 1, .ColIndex("value"))
     
         '    Me.XPTxtVal.text = .Aggregate(flexSTSum, .FixedRows, .ColIndex("Value"), .Rows - 1, .ColIndex("Value"))
         ' Me.XPTxtVal.text = Format(Me.XPTxtVal.text, SystemOptions.SysDefCurrencyForamt)
         'to Add new row if needed
-        If row = .rows - 1 Then
+        If Row = .rows - 1 Then
             .rows = .rows + 1
         End If
 
@@ -1230,58 +1244,58 @@ ErrTrap:
 End Sub
 
 Function calcnets(Optional ByVal Row1 As Long = 0)
-    Dim row As Long
+    Dim Row As Long
     Dim rows As Long
     
     If Row1 = 0 Then
         rows = VSFlexGrid1.rows - 1
     Else
         rows = Row1
-        row = Row1
+        Row = Row1
     End If
     With VSFlexGrid1
 
-        For row = Row1 To rows
-            If .TextMatrix(row, .ColIndex("AccountCode")) <> "" Then
-                If val(.TextMatrix(row, .ColIndex("is_fixed"))) = 1 Then
-                    .TextMatrix(row, .ColIndex("value")) = val(.TextMatrix(row, .ColIndex("specific_value")))
-                ElseIf val(.TextMatrix(row, .ColIndex("is_fixed"))) = 0 Then
-                    .TextMatrix(row, .ColIndex("value")) = cal_value(.TextMatrix(row, .ColIndex("eq_text")))
-                ElseIf val(.TextMatrix(row, .ColIndex("is_fixed"))) = 2 Then
-                    .TextMatrix(row, .ColIndex("value")) = val(.TextMatrix(row, .ColIndex("value")))
+        For Row = Row1 To rows
+            If .TextMatrix(Row, .ColIndex("AccountCode")) <> "" Then
+                If val(.TextMatrix(Row, .ColIndex("is_fixed"))) = 1 Then
+                    .TextMatrix(Row, .ColIndex("value")) = val(.TextMatrix(Row, .ColIndex("specific_value")))
+                ElseIf val(.TextMatrix(Row, .ColIndex("is_fixed"))) = 0 Then
+                    .TextMatrix(Row, .ColIndex("value")) = cal_value(.TextMatrix(Row, .ColIndex("eq_text")))
+                ElseIf val(.TextMatrix(Row, .ColIndex("is_fixed"))) = 2 Then
+                    .TextMatrix(Row, .ColIndex("value")) = val(.TextMatrix(Row, .ColIndex("value")))
            
                 End If
                 If val(TxtTotalsalary) <> 0 And val(txtPercentSalary) <> 0 Then
-                    If .ValueMatrix(row, .ColIndex("Salary")) Then
-                        .TextMatrix(row, .ColIndex("value")) = (val(TxtTotalsalary) * val(txtPercentSalary) / 100)
+                    If .ValueMatrix(Row, .ColIndex("Salary")) Then
+                        .TextMatrix(Row, .ColIndex("value")) = (val(TxtTotalsalary) * val(txtPercentSalary) / 100)
                     End If
                 End If
-                If val(.TextMatrix(row, .ColIndex("value"))) < val(.TextMatrix(row, .ColIndex("min_val"))) And val(.TextMatrix(row, .ColIndex("min_val"))) > 0 Then
-                    .TextMatrix(row, .ColIndex("value")) = .TextMatrix(row, .ColIndex("min_val"))
-                ElseIf val(.TextMatrix(row, .ColIndex("value"))) > val(.TextMatrix(row, .ColIndex("max_val"))) And val(.TextMatrix(row, .ColIndex("max_val"))) > 0 Then
-                    .TextMatrix(row, .ColIndex("value")) = .TextMatrix(row, .ColIndex("max_val"))
+                If val(.TextMatrix(Row, .ColIndex("value"))) < val(.TextMatrix(Row, .ColIndex("min_val"))) And val(.TextMatrix(Row, .ColIndex("min_val"))) > 0 Then
+                    .TextMatrix(Row, .ColIndex("value")) = .TextMatrix(Row, .ColIndex("min_val"))
+                ElseIf val(.TextMatrix(Row, .ColIndex("value"))) > val(.TextMatrix(Row, .ColIndex("max_val"))) And val(.TextMatrix(Row, .ColIndex("max_val"))) > 0 Then
+                    .TextMatrix(Row, .ColIndex("value")) = .TextMatrix(Row, .ColIndex("max_val"))
                 End If
            
-                If val(.TextMatrix(row, .ColIndex("AccountCode"))) = 1 Then
+                If val(.TextMatrix(Row, .ColIndex("AccountCode"))) = 1 Then
                     '          .TextMatrix(Row, .ColIndex("value")) = val(Basic_salary.text)
                 End If
             End If
             ReLineGrid
-            If val(.TextMatrix(row, .ColIndex("value"))) = 0 And val(TxtTotalsalary) <> 0 Then
-                .TextMatrix(row, .ColIndex("value")) = val(TxtTotalsalary) - val(txtTotal)
+            If val(.TextMatrix(Row, .ColIndex("value"))) = 0 And val(TxtTotalsalary) <> 0 Then
+                .TextMatrix(Row, .ColIndex("value")) = val(TxtTotalsalary) - val(txtTotal)
             End If
             
             If val(TxtTotalsalary) <> 0 Then
                 If val(TxtTotalsalary) - val(txtTotal) < 0 Then
                     MsgBox "·«Ì„ﬂ‰  Ã«Ê“ «·—« » «·«Ã„«·Ì"
-                    .TextMatrix(row, .ColIndex("value")) = 0
+                    .TextMatrix(Row, .ColIndex("value")) = 0
                     
                     
                 End If
                 
             End If
 
-        Next row
+        Next Row
 
     End With
     ReLineGrid
@@ -1291,7 +1305,7 @@ Private Sub ReLineGrid()
     Dim i As Integer
     Dim IntCounter As Integer
 Dim TotalValue As Double
-Me.txtTotal.text = 0
+Me.txtTotal.Text = 0
     With Me.VSFlexGrid1
 
         For i = .FixedRows To .rows - 1
@@ -1300,11 +1314,11 @@ Me.txtTotal.text = 0
                     If .TextMatrix(i, .ColIndex("AddOrDiscount")) = False Then
                      TotalValue = TotalValue + val(.TextMatrix(i, .ColIndex("value")))
     
-                .Cell(flexcpBackColor, i, 1, i, 14) = &H80FF80
+                .cell(flexcpBackColor, i, 1, i, 14) = &H80FF80
     
             
                     Else
-                    .Cell(flexcpBackColor, i, 1, i, 14) = &H8080FF
+                    .cell(flexcpBackColor, i, 1, i, 14) = &H8080FF
                     TotalValue = TotalValue - val(.TextMatrix(i, .ColIndex("value")))
                     End If
             
@@ -1315,18 +1329,18 @@ Me.txtTotal.text = 0
             End If
 
         Next i
-txtTotal.text = TotalValue
+txtTotal.Text = TotalValue
     End With
 
 End Sub
 
-Private Sub VSFlexGrid1_BeforeEdit(ByVal row As Long, _
+Private Sub VSFlexGrid1_BeforeEdit(ByVal Row As Long, _
                                    ByVal Col As Long, _
                                    Cancel As Boolean)
 
     With VSFlexGrid1
 
-        If row > .FixedRows Then
+        If Row > .FixedRows Then
             '  If .TextMatrix(Row - 1, .ColIndex("AccountCode")) = "" Then
             '      Cancel = True
             '  End If
@@ -1351,7 +1365,7 @@ Private Sub VSFlexGrid1_BeforeEdit(ByVal row As Long, _
 
 End Sub
 
-Private Sub VSFlexGrid1_StartEdit(ByVal row As Long, _
+Private Sub VSFlexGrid1_StartEdit(ByVal Row As Long, _
                                   ByVal Col As Long, _
                                   Cancel As Boolean)
     Dim rs As New ADODB.Recordset
@@ -1438,7 +1452,7 @@ Private Sub Form_Load()
     Set rs = New ADODB.Recordset
     rs.Open "TblEmployee", Cn, adOpenStatic, adLockOptimistic, adCmdTable
     XPBtnMove_Click 2
-    Me.TxtModFlg.text = "R"
+    Me.TxtModFlg.Text = "R"
     'If OPEN_NEW_SCREEN = True Then
     'Cmd_Click (0)
     'End If
@@ -1472,7 +1486,7 @@ Private Sub TxtModFlg_Change()
     'Exit Sub
     On Error GoTo ErrTrap
 
-    Select Case Me.TxtModFlg.text
+    Select Case Me.TxtModFlg.Text
 
         Case "R"
 
@@ -1553,10 +1567,10 @@ Private Sub TxtModFlg_Change()
 ErrTrap:
 End Sub
  
-Private Sub XPBtnMove_Click(index As Integer)
+Private Sub XPBtnMove_Click(Index As Integer)
     On Error GoTo ErrTrap
 
-    Select Case index
+    Select Case Index
 
         Case 0
 
@@ -1622,24 +1636,24 @@ Public Sub Retrive(Optional Lngid As Long = 0)
     Me.job.BoundText = IIf(IsNull(rs("JobTypeID").value), "", rs("JobTypeID").value)
     Me.DEPARTEMENT.BoundText = IIf(IsNull(rs("DepartmentID").value), "", rs("DepartmentID").value)
     'Contract_ID.text = IIf(IsNull(rs("Contract_ID").value), "", Val(rs("Contract_ID").value))
-    Basic_salary.text = IIf(IsNull(rs("Emp_Salary").value), "", rs("Emp_Salary").value)
+    Basic_salary.Text = IIf(IsNull(rs("Emp_Salary").value), "", rs("Emp_Salary").value)
    ' txtTotalSalary.text = IIf(IsNull(rs("TotalSalary").value), "", rs("TotalSalary").value)
    ' txtPercentSalary.text = IIf(IsNull(rs("PercentSalary").value), "", rs("PercentSalary").value)
-    Emp_id.text = IIf(IsNull(rs("Emp_id").value), "", rs("Emp_id").value)
-    Emp_Code.text = IIf(IsNull(rs("Emp_Code").value), "", rs("Emp_Code").value)
+    Emp_id.Text = IIf(IsNull(rs("Emp_id").value), "", rs("Emp_id").value)
+    Emp_Code.Text = IIf(IsNull(rs("Emp_Code").value), "", rs("Emp_Code").value)
 
-    XPTxtEmpName.text = IIf(IsNull(rs("Emp_Name").value), "", Trim(rs("Emp_Name").value))
+    XPTxtEmpName.Text = IIf(IsNull(rs("Emp_Name").value), "", Trim(rs("Emp_Name").value))
 
     If SystemOptions.UserInterface = ArabicInterface Then
-        emp_Name(0).text = IIf(IsNull(rs("Emp_Name1").value), "", Trim(rs("Emp_Name1").value))
-        emp_Name(1).text = IIf(IsNull(rs("Emp_Name2").value), "", Trim(rs("Emp_Name2").value))
-        emp_Name(2).text = IIf(IsNull(rs("Emp_Name3").value), "", Trim(rs("Emp_Name3").value))
-        emp_Name(3).text = IIf(IsNull(rs("Emp_Name4").value), "", Trim(rs("Emp_Name4").value))
+        emp_Name(0).Text = IIf(IsNull(rs("Emp_Name1").value), "", Trim(rs("Emp_Name1").value))
+        emp_Name(1).Text = IIf(IsNull(rs("Emp_Name2").value), "", Trim(rs("Emp_Name2").value))
+        emp_Name(2).Text = IIf(IsNull(rs("Emp_Name3").value), "", Trim(rs("Emp_Name3").value))
+        emp_Name(3).Text = IIf(IsNull(rs("Emp_Name4").value), "", Trim(rs("Emp_Name4").value))
     Else
-        emp_Name(0).text = IIf(IsNull(rs("Emp_Namee1").value), "", Trim(rs("Emp_Namee1").value))
-        emp_Name(1).text = IIf(IsNull(rs("Emp_Namee2").value), "", Trim(rs("Emp_Namee2").value))
-        emp_Name(2).text = IIf(IsNull(rs("Emp_Namee3").value), "", Trim(rs("Emp_Namee3").value))
-        emp_Name(3).text = IIf(IsNull(rs("Emp_Namee4").value), "", Trim(rs("Emp_Namee4").value))
+        emp_Name(0).Text = IIf(IsNull(rs("Emp_Namee1").value), "", Trim(rs("Emp_Namee1").value))
+        emp_Name(1).Text = IIf(IsNull(rs("Emp_Namee2").value), "", Trim(rs("Emp_Namee2").value))
+        emp_Name(2).Text = IIf(IsNull(rs("Emp_Namee3").value), "", Trim(rs("Emp_Namee3").value))
+        emp_Name(3).Text = IIf(IsNull(rs("Emp_Namee4").value), "", Trim(rs("Emp_Namee4").value))
 
     End If
 
@@ -1652,7 +1666,7 @@ Public Sub Retrive(Optional Lngid As Long = 0)
     Dim rscomponent As ADODB.Recordset
     Dim sql As String
 
-If FoundInctrease(val(Emp_id.text)) = False Then
+If FoundInctrease(val(Emp_id.Text)) = False Then
     
 sql = "SELECT     TOP 100 PERCENT dbo.EmpSalaryComponent.id, dbo.EmpSalaryComponent.Contract_ID, dbo.EmpSalaryComponent.AccountCode, dbo.EmpSalaryComponent.emp_ID, "
   sql = sql & "                       dbo.EmpSalaryComponent.AccountName, dbo.EmpSalaryComponent.[Value], dbo.EmpSalaryComponent.des, dbo.EmpSalaryComponent.eq_text,"
@@ -1663,7 +1677,7 @@ sql = "SELECT     TOP 100 PERCENT dbo.EmpSalaryComponent.id, dbo.EmpSalaryCompon
  sql = sql & "  FROM         dbo.mofrdat INNER JOIN"
  sql = sql & "                        dbo.mofrad ON dbo.mofrdat.mofrad_type = dbo.mofrad.id RIGHT OUTER JOIN"
  sql = sql & "                        dbo.EmpSalaryComponent ON dbo.mofrdat.mofrad_code = dbo.EmpSalaryComponent.AccountCode"
-   sql = sql & " Where( (dbo.EmpSalaryComponent.Flagx Is Null)or (dbo.EmpSalaryComponent.Flagx =2) ) And (dbo.EmpSalaryComponent.Emp_id = " & val(Emp_id.text) & ")"
+   sql = sql & " Where( (dbo.EmpSalaryComponent.Flagx Is Null)or (dbo.EmpSalaryComponent.Flagx =2) ) And (dbo.EmpSalaryComponent.Emp_id = " & val(Emp_id.Text) & ")"
     Set rscomponent = New ADODB.Recordset
     rscomponent.Open sql, Cn, adOpenStatic, adLockReadOnly, adCmdText
 
@@ -1716,7 +1730,7 @@ sql = sql & "                        dbo.mofrdat ON dbo.mofrad.id = dbo.mofrdat.
 sql = sql & "                        dbo.EmpSalaryComponent ON dbo.mofrdat.mofrad_code = dbo.EmpSalaryComponent.AccountCode"
 sql = sql & "   GROUP BY dbo.mofrdat.mofrad_name, dbo.mofrdat.mofrad_namee, dbo.mofrdat.mofrad_type, dbo.mofrad.AddOrDiscount, dbo.EmpSalaryComponent.emp_ID,"
 sql = sql & "                        dbo.EmpSalaryComponent.AccountCode , dbo.EmpSalaryComponent.mofrad_type,dbo.EmpSalaryComponent.Flagx"
-sql = sql & "   Having (dbo.EmpSalaryComponent.Emp_id = " & val(Emp_id.text) & ")"
+sql = sql & "   Having (dbo.EmpSalaryComponent.Emp_id = " & val(Emp_id.Text) & ")"
 sql = sql & "   ORDER BY dbo.mofrdat.mofrad_type"
     Set rscomponent = New ADODB.Recordset
     rscomponent.Open sql, Cn, adOpenStatic, adLockReadOnly, adCmdText
@@ -1775,16 +1789,16 @@ Private Sub SaveData()
   '      Exit Sub
   '  End If
     
-    If val(Emp_id.text) = 0 Then
+    If val(Emp_id.Text) = 0 Then
         Msg = "Â–« «·„ÊŸ› €Ì— „ÊÃÊœ  "
         MsgBox Msg, vbOKOnly + vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
         Exit Sub
     End If
 DTPicker1.value = "01/12/2100"
     'calcnets
-sql = "delete    EmpSalaryComponent Where (dbo.EmpSalaryComponent.Flagx Is Null) And (dbo.EmpSalaryComponent.Emp_id = " & val(Emp_id.text) & ")"
+sql = "delete    EmpSalaryComponent Where (dbo.EmpSalaryComponent.Flagx Is Null) And (dbo.EmpSalaryComponent.Emp_id = " & val(Emp_id.Text) & ")"
 
-sql = "delete    EmpSalaryComponent Where (dbo.EmpSalaryComponent.Emp_id = " & val(Emp_id.text) & ")"
+sql = "delete    EmpSalaryComponent Where (dbo.EmpSalaryComponent.Emp_id = " & val(Emp_id.Text) & ")"
  '   sql = "delete    EmpSalaryComponent where  emp_ID=" & val(Emp_id.text) And (flagx Is Null)
     Cn.Execute sql
 
@@ -1801,8 +1815,8 @@ sql = "delete    EmpSalaryComponent Where (dbo.EmpSalaryComponent.Emp_id = " & v
         For i = .FixedRows To .rows - 1
             If Trim(IIf(.TextMatrix(i, .ColIndex("AccountCode")) = "", "", .TextMatrix(i, .ColIndex("AccountCode")))) <> "" Then
                 rscomponent.AddNew
-                rscomponent("Contract_ID").value = val(Contract_ID.text)
-                rscomponent("emp_ID").value = val(Emp_id.text) '„—»Êÿ »—ﬁ„ «·„ÊŸ›
+                rscomponent("Contract_ID").value = val(Contract_ID.Text)
+                rscomponent("emp_ID").value = val(Emp_id.Text) '„—»Êÿ »—ﬁ„ «·„ÊŸ›
                 rscomponent("AccountCode").value = IIf(.TextMatrix(i, .ColIndex("AccountCode")) = "", "", .TextMatrix(i, .ColIndex("AccountCode")))
                 rscomponent("AccountName").value = IIf((.TextMatrix(i, .ColIndex("AccountName"))) = "", "", .TextMatrix(i, .ColIndex("AccountName")))
                 rscomponent("value").value = IIf((.TextMatrix(i, .ColIndex("value"))) = "", 0, .TextMatrix(i, .ColIndex("value")))
@@ -1811,7 +1825,7 @@ sql = "delete    EmpSalaryComponent Where (dbo.EmpSalaryComponent.Emp_id = " & v
                 rscomponent("mofrad_type").value = IIf((.TextMatrix(i, .ColIndex("mofrad_type"))) = "", 0, .TextMatrix(i, .ColIndex("mofrad_type")))
                 
                 rscomponent("specific_value").value = IIf((.TextMatrix(i, .ColIndex("specific_value"))) = "", 0, val(.TextMatrix(i, .ColIndex("specific_value"))))
-                rscomponent("assurance").value = .TextMatrix(i, .ColIndex("assurance"))
+                rscomponent("assurance").value = val(.TextMatrix(i, .ColIndex("assurance")))
                 rscomponent("percentage").value = IIf((.TextMatrix(i, .ColIndex("percentage"))) = "", 0, .TextMatrix(i, .ColIndex("percentage")))
                 rscomponent("min_val").value = IIf((.TextMatrix(i, .ColIndex("min_val"))) = "", 0, .TextMatrix(i, .ColIndex("min_val")))
                 rscomponent("max_val").value = IIf((.TextMatrix(i, .ColIndex("max_val"))) = "", 0, .TextMatrix(i, .ColIndex("max_val")))
@@ -1838,7 +1852,7 @@ sql = "delete    EmpSalaryComponent Where (dbo.EmpSalaryComponent.Emp_id = " & v
 
     End If
  
-    TxtModFlg.text = "R"
+    TxtModFlg.Text = "R"
     'Retrive val(Me.Emp_id.text)
     'addSalaryComponentToEmployee val(Me.Emp_id.text)
     Unload Me
@@ -1869,14 +1883,14 @@ End Sub
 Private Sub Undo()
     On Error GoTo ErrTrap
 
-    Select Case TxtModFlg.text
+    Select Case TxtModFlg.Text
 
         Case "N"
 
         Case "E"
      
-            Retrive val(Emp_id.text)
-            Me.TxtModFlg.text = "R"
+            Retrive val(Emp_id.Text)
+            Me.TxtModFlg.Text = "R"
     End Select
 
     Exit Sub
@@ -1887,9 +1901,9 @@ Private Sub Del_ProfData()
     Dim Msg As String
     On Error GoTo ErrTrap
 
-    If Contract_ID.text <> "" Then
+    If Contract_ID.Text <> "" Then
         Msg = "”Ì „ Õ–› »Ì«‰«  «·„ÊŸ› —ﬁ„ " & CHR(13)
-        Msg = Msg + (Contract_ID.text) & CHR(13)
+        Msg = Msg + (Contract_ID.Text) & CHR(13)
         Msg = Msg + " Â·  —€» ›Ì Õ–› Â–Â «·»Ì«‰« ø"
 
         If MsgBox(Msg, vbYesNo + vbQuestion + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title) = vbYes Then
@@ -1933,7 +1947,7 @@ Private Sub Form_KeyDown(KeyCode As Integer, _
     On Error GoTo ErrTrap
 
     If KeyCode = vbKeyReturn Then
-        If Me.TxtModFlg.text = "R" Then
+        If Me.TxtModFlg.Text = "R" Then
             Cmd_Click (0)
         Else
             KeyCode = 0
@@ -1941,7 +1955,7 @@ Private Sub Form_KeyDown(KeyCode As Integer, _
         End If
     End If
 
-    If Me.TxtModFlg.text = "R" Then
+    If Me.TxtModFlg.Text = "R" Then
         If KeyCode = vbKeyDown Or KeyCode = vbKeyEnd Then
             XPBtnMove_Click (2)
         ElseIf KeyCode = vbKeyUp Or KeyCode = vbKeyHome Then
@@ -2237,9 +2251,9 @@ Private Sub Form_QueryUnload(Cancel As Integer, _
     Dim StrMSG As String
     On Error GoTo ErrTrap
 
-    If Me.TxtModFlg.text <> "R" Then
+    If Me.TxtModFlg.Text <> "R" Then
 
-        Select Case Me.TxtModFlg.text
+        Select Case Me.TxtModFlg.Text
 
             Case "N"
     

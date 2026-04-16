@@ -13,6 +13,15 @@ Begin VB.Form Fine_TYPES
    RightToLeft     =   -1  'True
    ScaleHeight     =   4320
    ScaleWidth      =   7380
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox Text4 
       Alignment       =   2  'Center
       DataField       =   "Fines_PERCENT"

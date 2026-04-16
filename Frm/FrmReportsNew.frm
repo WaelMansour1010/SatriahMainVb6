@@ -20,6 +20,15 @@ Begin VB.Form FrmReportsNew
    RightToLeft     =   -1  'True
    ScaleHeight     =   8910
    ScaleWidth      =   10710
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Tab TabMain 
       Height          =   4125
       Left            =   30

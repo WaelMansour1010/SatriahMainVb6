@@ -20,6 +20,15 @@ Begin VB.Form FrmEmpsAdvancePayed1
    RightToLeft     =   -1  'True
    ScaleHeight     =   8415
    ScaleWidth      =   12675
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame4 
       Appearance      =   0  'Flat
       BackColor       =   &H00E2E9E9&

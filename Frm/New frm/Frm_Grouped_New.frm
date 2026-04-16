@@ -17,6 +17,15 @@ Begin VB.Form FrmPay_Garanty_Shipment3M
    MDIChild        =   -1  'True
    ScaleHeight     =   6975
    ScaleWidth      =   7920
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Tab C1Tab1 
       Height          =   6930
       Left            =   0

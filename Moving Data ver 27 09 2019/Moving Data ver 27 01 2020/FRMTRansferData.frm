@@ -19,6 +19,15 @@ Begin VB.Form FRMTRansferData
    ScaleHeight     =   9315
    ScaleWidth      =   13590
    StartUpPosition =   3  'Windows Default
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CommandButton Command8 
       Caption         =   " ÕœÌÀ «·⁄„·«¡ „‰ «·‰ﬁÿ… «·Ï «·”Ì—›—"
       Height          =   495

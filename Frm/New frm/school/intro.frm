@@ -14,6 +14,15 @@ Begin VB.Form INTRO
    ScaleHeight     =   11430
    ScaleWidth      =   15270
    StartUpPosition =   2  'CenterScreen
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    WindowState     =   2  'Maximized
    Begin VB.Timer Timer2 
       Enabled         =   0   'False

@@ -25,6 +25,15 @@ Begin VB.Form FrmAccEditJournal1
    ScaleHeight     =   8700
    ScaleWidth      =   11520
    WindowState     =   2  'Maximized
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic EleMain 
       Height          =   8700
       Left            =   0

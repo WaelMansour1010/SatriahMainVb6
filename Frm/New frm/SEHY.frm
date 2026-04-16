@@ -17,6 +17,15 @@ Begin VB.Form SEHY
    ScaleHeight     =   7230
    ScaleWidth      =   11265
    StartUpPosition =   2  'CenterScreen
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox Text3 
       Alignment       =   1  'Right Justify
       BackColor       =   &H00FFFFFF&

@@ -11,6 +11,15 @@ Begin VB.Form alarm_setting
    ScaleHeight     =   5085
    ScaleWidth      =   8205
    StartUpPosition =   3  'Windows Default
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin ALLButtonS.ALLButton ALLButton1 
       Height          =   495
       Left            =   240

@@ -19,6 +19,15 @@ Begin VB.Form FRmEmployeeWarning
    RightToLeft     =   -1  'True
    ScaleHeight     =   8145
    ScaleWidth      =   12360
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox TxtSearchCode2 
       Alignment       =   1  'Right Justify
       Height          =   315

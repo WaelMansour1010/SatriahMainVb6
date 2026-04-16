@@ -18,6 +18,15 @@ Begin VB.Form FrmXmlRet
    ScaleHeight     =   6825
    ScaleWidth      =   10185
    WindowState     =   2  'Maximized
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic C1Elastic1 
       Height          =   6825
       Left            =   0

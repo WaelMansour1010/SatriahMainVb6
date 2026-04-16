@@ -13,6 +13,15 @@ Begin VB.Form frmmaintenace_type
    ScaleHeight     =   4980
    ScaleWidth      =   12180
    StartUpPosition =   3  'Windows Default
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame2 
       Height          =   1575
       Left            =   240

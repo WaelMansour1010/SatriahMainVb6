@@ -21,6 +21,15 @@ Begin VB.Form RsStore
    ScaleHeight     =   6705
    ScaleWidth      =   12075
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame frm2 
       Caption         =   "Frame5"
       Height          =   735

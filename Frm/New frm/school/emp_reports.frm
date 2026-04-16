@@ -16,6 +16,15 @@ Begin VB.Form REPORTSFRM
    ScaleHeight     =   7095
    ScaleWidth      =   8595
    StartUpPosition =   2  'CenterScreen
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox Text5 
       Alignment       =   1  'Right Justify
       DataField       =   "MEMBER_ID"

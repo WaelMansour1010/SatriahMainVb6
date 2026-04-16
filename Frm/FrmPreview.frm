@@ -21,6 +21,15 @@ Begin VB.Form FrmPreview
    ScaleHeight     =   5520
    ScaleWidth      =   8505
    StartUpPosition =   2  'CenterScreen
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin MSComctlLib.ImageList ImageList1 
       Left            =   7725
       Top             =   3105

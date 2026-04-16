@@ -21,6 +21,15 @@ Begin VB.Form FrmDesOptions
    RightToLeft     =   -1  'True
    ScaleHeight     =   5820
    ScaleWidth      =   5190
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin ImpulseButton.ISButton Cmdyes 
       Default         =   -1  'True
       Height          =   405

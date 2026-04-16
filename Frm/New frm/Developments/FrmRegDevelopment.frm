@@ -19,6 +19,15 @@ Begin VB.Form FrmRegDevelopment
    RightToLeft     =   -1  'True
    ScaleHeight     =   8445
    ScaleWidth      =   14175
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame Frame5 
       BackColor       =   &H00E2E9E9&
       Caption         =   " «—ÌŒ ÊÊﬁ  «·„Â„Â"

@@ -13,6 +13,15 @@ Begin VB.Form MEETING
    MinButton       =   0   'False
    ScaleHeight     =   7485
    ScaleWidth      =   13905
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox Text6 
       Alignment       =   1  'Right Justify
       BackColor       =   &H8000000A&

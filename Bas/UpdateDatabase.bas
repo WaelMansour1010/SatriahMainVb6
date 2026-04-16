@@ -1,11 +1,11 @@
 Attribute VB_Name = "UpdateDatabase"
 Dim sql As String
 Dim i As Long
-Dim S As String
+Dim s As String
 Dim New_View  As String
 
 Private Sub Update30Follow()
-Dim S As String
+Dim s As String
 
 
 If DB_CreateTable("TblRegDateDelgateDailsGrantee", True, "ID", True) = True Then
@@ -207,6 +207,16 @@ End If
 
 End If
  
+ 
+      If DB_CreateTable("TblExpUnitNoVouch1", True, "ID", True) = True Then
+           DB_CreateField "TblExpUnitNoVouch1", "ExpID", adInteger, adColNullable, , , "  ", False, True
+           DB_CreateField "TblExpUnitNoVouch1", "ExpDetails", adInteger, adColNullable, , , "  ", False, True
+           DB_CreateField "TblExpUnitNoVouch1", "UnitID", adInteger, adColNullable, , , "  ", False, True
+           DB_CreateField "TblExpUnitNoVouch1", "Valu", adDouble, adColNullable, , , "    ", False, True
+           
+
+End If
+ 
 
  DB_CreateField "DOUBLE_ENTREY_VOUCHERS", "Unitss", adVarWChar, adColNullable, 4000, , "", False, True, , True
  DB_CreateField "DOUBLE_ENTREY_VOUCHERS", "StrUnit", adVarWChar, adColNullable, 4000, , "", False, True, , True
@@ -215,6 +225,15 @@ End If
     DB_CreateField "DOUBLE_ENTREY_VOUCHERS", "iqarid", adInteger, adColNullable, , , ""
     
     
+     DB_CreateField "DOUBLE_ENTREY_VOUCHERS1", "Unitss", adVarWChar, adColNullable, 4000, , "", False, True, , True
+ DB_CreateField "DOUBLE_ENTREY_VOUCHERS1", "StrUnit", adVarWChar, adColNullable, 4000, , "", False, True, , True
+    DB_CreateField "DOUBLE_ENTREY_VOUCHERS1", "uintid", adInteger, adColNullable, , , ""
+    DB_CreateField "DOUBLE_ENTREY_VOUCHERS1", "mType", adInteger, adColNullable, , , ""
+    DB_CreateField "DOUBLE_ENTREY_VOUCHERS1", "iqarid", adInteger, adColNullable, , , ""
+    
+    DB_CreateField "DOUBLE_ENTREY_VOUCHERS1", "Aqarid", adInteger, adColNullable, , , ""
+    
+    DB_CreateField "DOUBLE_ENTREY_VOUCHERS1", "unittype", adInteger, adColNullable, , , ""
     
     
    
@@ -480,22 +499,22 @@ DB_CreateField "tblContractInsAllocationsDetails", "TableName", adVarWChar, adCo
 
 
 
-S = "CREATE OR ALTER VIEW RptLedger_sub_projects AS "
-S = S & "SELECT dbo.projects.End_user_name, dbo.projects.sub_contractor_name, dbo.projects.Fullcode, dbo.projects.Project_name, dbo.projects.total, "
-S = S & "dbo.projects.sub_discount_total, dbo.projects.net, dbo.projects.items_total, dbo.RptLedger_Sub.Double_Entry_Vouchers_ID, dbo.RptLedger_Sub.Credit_Or_Debit, "
-S = S & "dbo.RptLedger_Sub.DEV_Value, dbo.RptLedger_Sub.Account_Code, dbo.RptLedger_Sub.Account_Name, dbo.RptLedger_Sub.DEV_DES, dbo.RptLedger_Sub.DEV_ID_Line_No, "
-S = S & "dbo.RptLedger_Sub.NotesTypeName, dbo.RptLedger_Sub.UserID, dbo.RptLedger_Sub.UserName, dbo.RptLedger_Sub.RecordDate, dbo.RptLedger_Sub.Notes_ID, "
-S = S & "dbo.RptLedger_Sub.ReceiptID, dbo.RptLedger_Sub.Transaction_ID, dbo.RptLedger_Sub.OperaID, dbo.RptLedger_Sub.Transaction_serial, dbo.RptLedger_Sub.TransactionTypeName, "
-S = S & "dbo.RptLedger_Sub.Transaction_Date, dbo.RptLedger_Sub.Posted, dbo.RptLedger_Sub.PostedDate, dbo.RptLedger_Sub.PostedUserID, dbo.RptLedger_Sub.Account_Interval_ID, "
-S = S & "dbo.RptLedger_Sub.NoteSerial, dbo.RptLedger_Sub.NoteDate, dbo.RptLedger_Sub.NoteType, dbo.RptLedger_Sub.Note_Value, dbo.RptLedger_Sub.account_serial, "
-S = S & "dbo.RptLedger_Sub.Account_NameEng, dbo.RptLedger_Sub.Parent_Account_Code, dbo.RptLedger_Sub.opening_balance, dbo.RptLedger_Sub.opening_balance_type, "
-S = S & "dbo.RptLedger_Sub.Branch, dbo.RptLedger_Sub.Sum_account, dbo.RptLedger_Sub.cost_center, dbo.RptLedger_Sub.currenct_code, dbo.RptLedger_Sub.Remark, "
-S = S & "dbo.RptLedger_Sub.note_value_by_characters, dbo.RptLedger_Sub.TransactionEnglishName, dbo.RptLedger_Sub.NotesTypeNameE, dbo.RptLedger_Sub.project_id, "
-S = S & "dbo.RptLedger_Sub.DEV_ID_Line_No1, dbo.RptLedger_Sub.foxy_no, dbo.RptLedger_Sub.opr_fullcode, dbo.RptLedger_Sub.NoteSerial1, dbo.RptLedger_Sub.pandid, "
-S = S & "dbo.RptLedger_Sub.operid, dbo.projects.Project_nameE, dbo.RptLedger_Sub.DevDESE, dbo.RptLedger_Sub.branch_namee, dbo.RptLedger_Sub.ManualNo, "
-S = S & "dbo.projects.End_user_id, dbo.TblCustemers.CusName, dbo.TblCustemers.CusNamee "
-S = S & "FROM dbo.RptLedger_Sub INNER JOIN dbo.projects ON dbo.RptLedger_Sub.project_id = dbo.projects.id "
-S = S & "LEFT OUTER JOIN dbo.TblCustemers ON dbo.projects.End_user_id = dbo.TblCustemers.CusID"
+s = "CREATE OR ALTER VIEW RptLedger_sub_projects AS "
+s = s & "SELECT dbo.projects.End_user_name, dbo.projects.sub_contractor_name, dbo.projects.Fullcode, dbo.projects.Project_name, dbo.projects.total, "
+s = s & "dbo.projects.sub_discount_total, dbo.projects.net, dbo.projects.items_total, dbo.RptLedger_Sub.Double_Entry_Vouchers_ID, dbo.RptLedger_Sub.Credit_Or_Debit, "
+s = s & "dbo.RptLedger_Sub.DEV_Value, dbo.RptLedger_Sub.Account_Code, dbo.RptLedger_Sub.Account_Name, dbo.RptLedger_Sub.DEV_DES, dbo.RptLedger_Sub.DEV_ID_Line_No, "
+s = s & "dbo.RptLedger_Sub.NotesTypeName, dbo.RptLedger_Sub.UserID, dbo.RptLedger_Sub.UserName, dbo.RptLedger_Sub.RecordDate, dbo.RptLedger_Sub.Notes_ID, "
+s = s & "dbo.RptLedger_Sub.ReceiptID, dbo.RptLedger_Sub.Transaction_ID, dbo.RptLedger_Sub.OperaID, dbo.RptLedger_Sub.Transaction_serial, dbo.RptLedger_Sub.TransactionTypeName, "
+s = s & "dbo.RptLedger_Sub.Transaction_Date, dbo.RptLedger_Sub.Posted, dbo.RptLedger_Sub.PostedDate, dbo.RptLedger_Sub.PostedUserID, dbo.RptLedger_Sub.Account_Interval_ID, "
+s = s & "dbo.RptLedger_Sub.NoteSerial, dbo.RptLedger_Sub.NoteDate, dbo.RptLedger_Sub.NoteType, dbo.RptLedger_Sub.Note_Value, dbo.RptLedger_Sub.account_serial, "
+s = s & "dbo.RptLedger_Sub.Account_NameEng, dbo.RptLedger_Sub.Parent_Account_Code, dbo.RptLedger_Sub.opening_balance, dbo.RptLedger_Sub.opening_balance_type, "
+s = s & "dbo.RptLedger_Sub.Branch, dbo.RptLedger_Sub.Sum_account, dbo.RptLedger_Sub.cost_center, dbo.RptLedger_Sub.currenct_code, dbo.RptLedger_Sub.Remark, "
+s = s & "dbo.RptLedger_Sub.note_value_by_characters, dbo.RptLedger_Sub.TransactionEnglishName, dbo.RptLedger_Sub.NotesTypeNameE, dbo.RptLedger_Sub.project_id, "
+s = s & "dbo.RptLedger_Sub.DEV_ID_Line_No1, dbo.RptLedger_Sub.foxy_no, dbo.RptLedger_Sub.opr_fullcode, dbo.RptLedger_Sub.NoteSerial1, dbo.RptLedger_Sub.pandid, "
+s = s & "dbo.RptLedger_Sub.operid, dbo.projects.Project_nameE, dbo.RptLedger_Sub.DevDESE, dbo.RptLedger_Sub.branch_namee, dbo.RptLedger_Sub.ManualNo, "
+s = s & "dbo.projects.End_user_id, dbo.TblCustemers.CusName, dbo.TblCustemers.CusNamee "
+s = s & "FROM dbo.RptLedger_Sub INNER JOIN dbo.projects ON dbo.RptLedger_Sub.project_id = dbo.projects.id "
+s = s & "LEFT OUTER JOIN dbo.TblCustemers ON dbo.projects.End_user_id = dbo.TblCustemers.CusID"
 'Cn.Execute s
 
 DB_CreateField "TblOptions", "ShowBalanceOfEmpInSalary", adBoolean, adColNullable, , , "", False, True
@@ -1028,861 +1047,861 @@ DB_updateField "tmptblEInvoice", "Transaction_ID", "float not null  "
     '-------------------
     DB_CreateField "TblItemShowBranch", "TransType", adInteger, adColFixed, , 0, "    ", False, True
 '*****************************
-    S = " SELECT dbo.Transaction_Details.Transaction_ID,"
-    S = S & "        dbo.Transactions.Transaction_Date,"
-    S = S & "        dbo.TblCustemers.CusName,"
-    S = S & "        dbo.TblStore.StoreName,"
-    S = S & "        dbo.Transaction_Details.Item_ID,"
-    S = S & "        dbo.TblItems.ItemName,"
-    S = S & "        dbo.TblItems.ItemCode,"
-    S = S & "        dbo.Transaction_Details.ItemCase,"
-    S = S & "        SUM(dbo.Transaction_Details.Quantity) AS Quantity,"
-    S = S & "        dbo.Transaction_Details.Price,"
-    S = S & "        dbo.Transaction_Details.ItemDiscountType,"
-    S = S & "        dbo.Transaction_Details.ItemDiscount,"
-    S = S & "        dbo.Transactions.Trans_Discount,"
-    S = S & "        dbo.Transactions.Trans_DiscountType,"
-    S = S & "        dbo.Transactions.TaxFound,"
-    S = S & "        dbo.Transactions.TaxValue,"
-    S = S & "        dbo.Transaction_Details.guaranteeTime,"
-    S = S & "        dbo.Transactions.Transaction_Serial,"
-    S = S & "        dbo.TblEmployee.Emp_Code,"
-    S = S & "        dbo.TblEmployee.Emp_Name,"
-    S = S & "        dbo.Transaction_Details.ItemSerial,"
-    S = S & "        dbo.Transaction_Details.ShowQty,"
-    S = S & "        dbo.Transaction_Details.showPrice,"
-    S = S & "        dbo.TblUnites.UnitName,"
-    S = S & "        dbo.Transaction_Details.Vat AS VatDet,"
-    S = S & "        dbo.Transaction_Details.Vatyo,"
-    S = S & "        dbo.Transaction_Details.MixNo,"
-    S = S & "        dbo.Transaction_Details.QtyFaqtors,"
-    S = S & "        dbo.Transaction_Details.FLgOrderSal,"
-    S = S & "        dbo.Transactions.VAT,"
-    S = S & "        dbo.Transactions.ResonVAT,"
-    S = S & "        dbo.Transactions.Typ,"
-    S = S & "        dbo.Transactions.VATNO,"
-    S = S & "        dbo.Transactions.VATCustoms,"
-    S = S & "        dbo.Transactions.VATCustoms1,"
-    S = S & "        dbo.TblStore.StoreNamee,"
-    S = S & "        dbo.Transactions.BLDate,"
-    S = S & "        dbo.TblUnites.UnitNamee,"
-    S = S & "        dbo.TblEmployee.Emp_Namee,"
-    S = S & "        dbo.TblItems.ItemNamee,"
-    S = S & "        dbo.TblCustemers.CusNamee,"
-    S = S & "        dbo.Transactions.DueDate,"
-    S = S & "        ISNULL(TblItems.ItemWithOutVAT, 0) ItemWithOutVAT"
-    S = S & " From dbo.TblItems"
-    S = S & "     INNER JOIN dbo.Transaction_Details"
-    S = S & "         ON dbo.TblItems.ItemID = dbo.Transaction_Details.Item_ID"
-    S = S & "     INNER JOIN dbo.TblStore"
-    S = S & "         INNER JOIN dbo.TblCustemers"
-    S = S & "             RIGHT OUTER JOIN dbo.Transactions"
-    S = S & "                 ON dbo.TblCustemers.CusID = dbo.Transactions.CusID"
-    S = S & "             ON dbo.TblStore.StoreID = dbo.Transactions.StoreID"
-    S = S & "         ON dbo.Transaction_Details.Transaction_ID = dbo.Transactions.Transaction_ID"
-    S = S & "     INNER JOIN dbo.TblUnites"
-    S = S & "         ON dbo.Transaction_Details.UnitId = dbo.TblUnites.UnitID"
-    S = S & "     LEFT OUTER JOIN dbo.TblEmployee"
-    S = S & "         ON dbo.Transactions.Emp_ID = dbo.TblEmployee.Emp_ID"
-    S = S & " GROUP BY dbo.Transaction_Details.Transaction_ID,"
-    S = S & "          dbo.Transactions.Transaction_Date,"
-    S = S & "          dbo.TblCustemers.CusName,"
-    S = S & "          dbo.TblStore.StoreName,"
-    S = S & "          dbo.Transaction_Details.Item_ID,"
-    S = S & "          dbo.TblItems.ItemName,"
-    S = S & "          dbo.TblItems.ItemCode,"
-    S = S & "          dbo.Transaction_Details.ItemCase,"
-    S = S & "          dbo.Transaction_Details.Price,"
-    S = S & "          dbo.Transaction_Details.ItemDiscountType,"
-    S = S & "          dbo.Transaction_Details.ItemDiscount,"
-    S = S & "          dbo.Transactions.Trans_Discount,"
-    S = S & "          dbo.Transactions.Trans_DiscountType,"
-    S = S & "          dbo.Transactions.TaxFound,"
-    S = S & "          dbo.Transactions.TaxValue,"
-    S = S & "          dbo.Transaction_Details.guaranteeTime,"
-    S = S & "          dbo.Transactions.Transaction_Serial,"
-    S = S & "          dbo.TblEmployee.Emp_Code,"
-    S = S & "          dbo.TblEmployee.Emp_Name,"
-    S = S & "          dbo.Transaction_Details.ItemSerial,"
-    S = S & "          dbo.Transaction_Details.ShowQty,"
-    S = S & "          dbo.Transaction_Details.showPrice,"
-    S = S & "          dbo.TblUnites.UnitName,"
-    S = S & "          dbo.Transaction_Details.Vat,"
-    S = S & "          dbo.Transaction_Details.Vatyo,"
-    S = S & "          dbo.Transaction_Details.MixNo,"
-    S = S & "          dbo.Transaction_Details.QtyFaqtors,"
-    S = S & "          dbo.Transaction_Details.FLgOrderSal,"
-    S = S & "          dbo.Transactions.VAT,"
-    S = S & "          dbo.Transactions.ResonVAT,"
-    S = S & "          dbo.Transactions.Typ,"
-    S = S & "          dbo.Transactions.VATNO,"
-    S = S & "          dbo.Transactions.VATCustoms,"
-    S = S & "          dbo.Transactions.VATCustoms1,"
-    S = S & "          dbo.TblStore.StoreNamee,"
-    S = S & "          dbo.Transactions.BLDate,"
-    S = S & "          dbo.TblUnites.UnitNamee,"
-    S = S & "          dbo.TblEmployee.Emp_Namee,"
-    S = S & "          dbo.TblItems.ItemNamee,"
-    S = S & "          dbo.TblCustemers.CusNamee,"
-    S = S & "          dbo.Transactions.DueDate,"
-    S = S & "          TblItems.ItemWithOutVAT;"
+    s = " SELECT dbo.Transaction_Details.Transaction_ID,"
+    s = s & "        dbo.Transactions.Transaction_Date,"
+    s = s & "        dbo.TblCustemers.CusName,"
+    s = s & "        dbo.TblStore.StoreName,"
+    s = s & "        dbo.Transaction_Details.Item_ID,"
+    s = s & "        dbo.TblItems.ItemName,"
+    s = s & "        dbo.TblItems.ItemCode,"
+    s = s & "        dbo.Transaction_Details.ItemCase,"
+    s = s & "        SUM(dbo.Transaction_Details.Quantity) AS Quantity,"
+    s = s & "        dbo.Transaction_Details.Price,"
+    s = s & "        dbo.Transaction_Details.ItemDiscountType,"
+    s = s & "        dbo.Transaction_Details.ItemDiscount,"
+    s = s & "        dbo.Transactions.Trans_Discount,"
+    s = s & "        dbo.Transactions.Trans_DiscountType,"
+    s = s & "        dbo.Transactions.TaxFound,"
+    s = s & "        dbo.Transactions.TaxValue,"
+    s = s & "        dbo.Transaction_Details.guaranteeTime,"
+    s = s & "        dbo.Transactions.Transaction_Serial,"
+    s = s & "        dbo.TblEmployee.Emp_Code,"
+    s = s & "        dbo.TblEmployee.Emp_Name,"
+    s = s & "        dbo.Transaction_Details.ItemSerial,"
+    s = s & "        dbo.Transaction_Details.ShowQty,"
+    s = s & "        dbo.Transaction_Details.showPrice,"
+    s = s & "        dbo.TblUnites.UnitName,"
+    s = s & "        dbo.Transaction_Details.Vat AS VatDet,"
+    s = s & "        dbo.Transaction_Details.Vatyo,"
+    s = s & "        dbo.Transaction_Details.MixNo,"
+    s = s & "        dbo.Transaction_Details.QtyFaqtors,"
+    s = s & "        dbo.Transaction_Details.FLgOrderSal,"
+    s = s & "        dbo.Transactions.VAT,"
+    s = s & "        dbo.Transactions.ResonVAT,"
+    s = s & "        dbo.Transactions.Typ,"
+    s = s & "        dbo.Transactions.VATNO,"
+    s = s & "        dbo.Transactions.VATCustoms,"
+    s = s & "        dbo.Transactions.VATCustoms1,"
+    s = s & "        dbo.TblStore.StoreNamee,"
+    s = s & "        dbo.Transactions.BLDate,"
+    s = s & "        dbo.TblUnites.UnitNamee,"
+    s = s & "        dbo.TblEmployee.Emp_Namee,"
+    s = s & "        dbo.TblItems.ItemNamee,"
+    s = s & "        dbo.TblCustemers.CusNamee,"
+    s = s & "        dbo.Transactions.DueDate,"
+    s = s & "        ISNULL(TblItems.ItemWithOutVAT, 0) ItemWithOutVAT"
+    s = s & " From dbo.TblItems"
+    s = s & "     INNER JOIN dbo.Transaction_Details"
+    s = s & "         ON dbo.TblItems.ItemID = dbo.Transaction_Details.Item_ID"
+    s = s & "     INNER JOIN dbo.TblStore"
+    s = s & "         INNER JOIN dbo.TblCustemers"
+    s = s & "             RIGHT OUTER JOIN dbo.Transactions"
+    s = s & "                 ON dbo.TblCustemers.CusID = dbo.Transactions.CusID"
+    s = s & "             ON dbo.TblStore.StoreID = dbo.Transactions.StoreID"
+    s = s & "         ON dbo.Transaction_Details.Transaction_ID = dbo.Transactions.Transaction_ID"
+    s = s & "     INNER JOIN dbo.TblUnites"
+    s = s & "         ON dbo.Transaction_Details.UnitId = dbo.TblUnites.UnitID"
+    s = s & "     LEFT OUTER JOIN dbo.TblEmployee"
+    s = s & "         ON dbo.Transactions.Emp_ID = dbo.TblEmployee.Emp_ID"
+    s = s & " GROUP BY dbo.Transaction_Details.Transaction_ID,"
+    s = s & "          dbo.Transactions.Transaction_Date,"
+    s = s & "          dbo.TblCustemers.CusName,"
+    s = s & "          dbo.TblStore.StoreName,"
+    s = s & "          dbo.Transaction_Details.Item_ID,"
+    s = s & "          dbo.TblItems.ItemName,"
+    s = s & "          dbo.TblItems.ItemCode,"
+    s = s & "          dbo.Transaction_Details.ItemCase,"
+    s = s & "          dbo.Transaction_Details.Price,"
+    s = s & "          dbo.Transaction_Details.ItemDiscountType,"
+    s = s & "          dbo.Transaction_Details.ItemDiscount,"
+    s = s & "          dbo.Transactions.Trans_Discount,"
+    s = s & "          dbo.Transactions.Trans_DiscountType,"
+    s = s & "          dbo.Transactions.TaxFound,"
+    s = s & "          dbo.Transactions.TaxValue,"
+    s = s & "          dbo.Transaction_Details.guaranteeTime,"
+    s = s & "          dbo.Transactions.Transaction_Serial,"
+    s = s & "          dbo.TblEmployee.Emp_Code,"
+    s = s & "          dbo.TblEmployee.Emp_Name,"
+    s = s & "          dbo.Transaction_Details.ItemSerial,"
+    s = s & "          dbo.Transaction_Details.ShowQty,"
+    s = s & "          dbo.Transaction_Details.showPrice,"
+    s = s & "          dbo.TblUnites.UnitName,"
+    s = s & "          dbo.Transaction_Details.Vat,"
+    s = s & "          dbo.Transaction_Details.Vatyo,"
+    s = s & "          dbo.Transaction_Details.MixNo,"
+    s = s & "          dbo.Transaction_Details.QtyFaqtors,"
+    s = s & "          dbo.Transaction_Details.FLgOrderSal,"
+    s = s & "          dbo.Transactions.VAT,"
+    s = s & "          dbo.Transactions.ResonVAT,"
+    s = s & "          dbo.Transactions.Typ,"
+    s = s & "          dbo.Transactions.VATNO,"
+    s = s & "          dbo.Transactions.VATCustoms,"
+    s = s & "          dbo.Transactions.VATCustoms1,"
+    s = s & "          dbo.TblStore.StoreNamee,"
+    s = s & "          dbo.Transactions.BLDate,"
+    s = s & "          dbo.TblUnites.UnitNamee,"
+    s = s & "          dbo.TblEmployee.Emp_Namee,"
+    s = s & "          dbo.TblItems.ItemNamee,"
+    s = s & "          dbo.TblCustemers.CusNamee,"
+    s = s & "          dbo.Transactions.DueDate,"
+    s = s & "          TblItems.ItemWithOutVAT;"
 
-    db_createOrUpdateviewSQL "QryBuyReportShort", S
+    db_createOrUpdateviewSQL "QryBuyReportShort", s
     DB_CreateField "TBLCOUNTRIESDATA", "QRCODE", adVarWChar, adColNullable, 255, , "      ", False
    Dim rsDummy As New ADODB.Recordset
-    S = "Select * from TBLCOUNTRIESDATA  Where IsNull(QRCODE,'') <> '' "
-    rsDummy.Open S, Cn, adOpenForwardOnly, adLockReadOnly
+    s = "Select * from TBLCOUNTRIESDATA  Where IsNull(QRCODE,'') <> '' "
+    rsDummy.Open s, Cn, adOpenForwardOnly, adLockReadOnly
 
     If rsDummy.EOF Then
-        S = ""
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('AD', 'Andorra', '√‰œÊ—«', 400);"
+        s = ""
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('AD', 'Andorra', '√‰œÊ—«', 400);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('AE', 'United Arab Emirates', '«·«„«—«  «·⁄—»Ì… «·„ Õœ…', 401);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('AE', 'United Arab Emirates', '«·«„«—«  «·⁄—»Ì… «·„ Õœ…', 401);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('AF', 'Afghanistan', '√›€«‰” «‰', 402);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('AF', 'Afghanistan', '√›€«‰” «‰', 402);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('AG', 'Antigua and Barbuda', '√‰ Ì€Ê« Ê»«—»Êœ«', 403);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('AG', 'Antigua and Barbuda', '√‰ Ì€Ê« Ê»«—»Êœ«', 403);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('AI', 'Anguilla', '√‰ÃÊÌ·«', 404);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('AI', 'Anguilla', '√‰ÃÊÌ·«', 404);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('AL', 'Albania', '√·»«‰Ì«', 405);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('AL', 'Albania', '√·»«‰Ì«', 405);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('AM', 'Armenia', '√—„Ì‰Ì«', 406);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('AM', 'Armenia', '√—„Ì‰Ì«', 406);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('AO', 'Angola', '√‰ÃÊ·«', 407);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('AO', 'Angola', '√‰ÃÊ·«', 407);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('AQ', 'Antarctica', '«·ﬁ«—… «·ﬁÿ»Ì… «·Ã‰Ê»Ì…', 408);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('AQ', 'Antarctica', '«·ﬁ«—… «·ﬁÿ»Ì… «·Ã‰Ê»Ì…', 408);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('AR', 'Argentina', '«·√—Ã‰ Ì‰', 409);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('AR', 'Argentina', '«·√—Ã‰ Ì‰', 409);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('AS', 'American Samoa', '”«„Ê« «·√„—ÌﬂÌ…', 410);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('AS', 'American Samoa', '”«„Ê« «·√„—ÌﬂÌ…', 410);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('AT', 'Austria', '«·‰„”«', 411);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('AT', 'Austria', '«·‰„”«', 411);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('AU', 'Australia', '√” —«·Ì«', 412);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('AU', 'Australia', '√” —«·Ì«', 412);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('AW', 'Aruba', '¬—Ê»«', 413);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('AW', 'Aruba', '¬—Ê»«', 413);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('AX', '?land Islands', 'Ã“— √Ê·«‰', 414);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('AX', '?land Islands', 'Ã“— √Ê·«‰', 414);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('AZ', 'Azerbaijan', '√–—»ÌÃ«‰', 415);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('AZ', 'Azerbaijan', '√–—»ÌÃ«‰', 415);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BA', 'Bosnia and Herzegovina', '«·»Ê”‰… Ê«·Â—”ﬂ', 416);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BA', 'Bosnia and Herzegovina', '«·»Ê”‰… Ê«·Â—”ﬂ', 416);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BB', 'Barbados', '»—»«œÊ”', 417);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BB', 'Barbados', '»—»«œÊ”', 417);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BD', 'Bangladesh', '»‰Ã·«œÌ‘', 418);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BD', 'Bangladesh', '»‰Ã·«œÌ‘', 418);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BE', 'Belgium', '»·ÃÌﬂ«', 419);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BE', 'Belgium', '»·ÃÌﬂ«', 419);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BF', 'Burkina Faso', '»Ê—ﬂÌ‰« ›«”Ê', 420);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BF', 'Burkina Faso', '»Ê—ﬂÌ‰« ›«”Ê', 420);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BG', 'Bulgaria', '»·€«—Ì«', 421);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BG', 'Bulgaria', '»·€«—Ì«', 421);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BH', 'Bahrain', '«·»Õ—Ì‰', 422);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BH', 'Bahrain', '«·»Õ—Ì‰', 422);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BI', 'Burundi', '»Ê—Ê‰œÌ', 423);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BI', 'Burundi', '»Ê—Ê‰œÌ', 423);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BJ', 'Benin', '»‰Ì‰', 424);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BJ', 'Benin', '»‰Ì‰', 424);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BL', 'Saint Barthelemy', '”«‰ »«— Ì·„Ì', 425);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BL', 'Saint Barthelemy', '”«‰ »«— Ì·„Ì', 425);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BM', 'Bermuda', '»—„Êœ«', 426);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BM', 'Bermuda', '»—„Êœ«', 426);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BN', 'Brunei Darussalam', '»—Ê‰«Ì', 427);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BN', 'Brunei Darussalam', '»—Ê‰«Ì', 427);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BO', 'Bolivia (Plurinational State of)', '»Ê·Ì›Ì«', 428);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BO', 'Bolivia (Plurinational State of)', '»Ê·Ì›Ì«', 428);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BQ', 'Bonaire, Sint Eustatius and Saba', '«·Ã“— «·ﬂ«—Ì»Ì… «·ÂÊ·‰œÌ…', 429);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BQ', 'Bonaire, Sint Eustatius and Saba', '«·Ã“— «·ﬂ«—Ì»Ì… «·ÂÊ·‰œÌ…', 429);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BR', 'Brazil', '«·»—«“Ì·', 430);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BR', 'Brazil', '«·»—«“Ì·', 430);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BS', 'Bahamas', '«·»«Â«„«', 431);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BS', 'Bahamas', '«·»«Â«„«', 431);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BT', 'Bhutan', '»Ê «‰', 432);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BT', 'Bhutan', '»Ê «‰', 432);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BV', 'Bouvet Island', 'Ã“Ì—… »Ê›ÌÂ', 433);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BV', 'Bouvet Island', 'Ã“Ì—… »Ê›ÌÂ', 433);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BW', 'Botswana', '» ”Ê«‰«', 434);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BW', 'Botswana', '» ”Ê«‰«', 434);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BY', 'Belarus', '—Ê”Ì« «·»Ì÷«¡', 435);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BY', 'Belarus', '—Ê”Ì« «·»Ì÷«¡', 435);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('BZ', 'Belize', '»·Ì“', 436);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('BZ', 'Belize', '»·Ì“', 436);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('CA', 'Canada', 'ﬂ‰œ«', 437);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('CA', 'Canada', 'ﬂ‰œ«', 437);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('CC', 'Cocos (Keeling) Islands', 'Ã“— ﬂÊﬂÊ”', 438);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('CC', 'Cocos (Keeling) Islands', 'Ã“— ﬂÊﬂÊ”', 438);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('CD', 'Con (Democratic Republic of the)', 'Ã„ÂÊ—Ì… «·ﬂÊ‰€Ê «·œÌ„ﬁ—«ÿÌ…', 439);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('CD', 'Con (Democratic Republic of the)', 'Ã„ÂÊ—Ì… «·ﬂÊ‰€Ê «·œÌ„ﬁ—«ÿÌ…', 439);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('CF', 'Central African Republic', 'Ã„ÂÊ—Ì… √›—ÌﬁÌ« «·Ê”ÿÏ', 440);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('CF', 'Central African Republic', 'Ã„ÂÊ—Ì… √›—ÌﬁÌ« «·Ê”ÿÏ', 440);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('CG', 'Congo', 'Ã„ÂÊ—Ì… «·ﬂÊ‰€Ê', 441);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('CG', 'Congo', 'Ã„ÂÊ—Ì… «·ﬂÊ‰€Ê', 441);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('CH', 'Switzerland', '”ÊÌ”—«', 442);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('CH', 'Switzerland', '”ÊÌ”—«', 442);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('CI', 'Cote díIvoire', '”«Õ· «·⁄«Ã', 443);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('CI', 'Cote díIvoire', '”«Õ· «·⁄«Ã', 443);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('CK', 'Cook Islands', 'Ã“— ﬂÊﬂ', 444);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('CK', 'Cook Islands', 'Ã“— ﬂÊﬂ', 444);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('CL', 'Chile', '‘Ì·Ì', 445);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('CL', 'Chile', '‘Ì·Ì', 445);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('CM', 'Cameroon', '«·ﬂ«„Ì—Ê‰', 446);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('CM', 'Cameroon', '«·ﬂ«„Ì—Ê‰', 446);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('CN', 'China', '«·’Ì‰', 447);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('CN', 'China', '«·’Ì‰', 447);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('CO', 'Colombia', 'ﬂÊ·Ê„»Ì«', 448);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('CO', 'Colombia', 'ﬂÊ·Ê„»Ì«', 448);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('CR', 'Costa Rica', 'ﬂÊ” «—Ìﬂ«', 449);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('CR', 'Costa Rica', 'ﬂÊ” «—Ìﬂ«', 449);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('CU', 'Cuba', 'ﬂÊ»«', 450);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('CU', 'Cuba', 'ﬂÊ»«', 450);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('CV', 'Cabo Verde', '«·—√” «·√Œ÷—', 451);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('CV', 'Cabo Verde', '«·—√” «·√Œ÷—', 451);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('CW', 'CuraÁao', 'ﬂÊ—«”«Ê', 452);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('CW', 'CuraÁao', 'ﬂÊ—«”«Ê', 452);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('CX', 'Christmas Island', 'Ã“Ì—… ⁄Ìœ «·„Ì·«œ', 453);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('CX', 'Christmas Island', 'Ã“Ì—… ⁄Ìœ «·„Ì·«œ', 453);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('CY', 'Cyprus', 'ﬁ»—’', 454);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('CY', 'Cyprus', 'ﬁ»—’', 454);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('CZ', 'Czechia', 'Ã„ÂÊ—Ì… «· ‘Ìﬂ', 455);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('CZ', 'Czechia', 'Ã„ÂÊ—Ì… «· ‘Ìﬂ', 455);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('DE', 'Germany', '√·„«‰Ì«', 456);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('DE', 'Germany', '√·„«‰Ì«', 456);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('DJ', 'Djibouti', 'ÃÌ»Ê Ì', 457);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('DJ', 'Djibouti', 'ÃÌ»Ê Ì', 457);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('DK', 'Denmark', '«·œ«‰„—ﬂ', 458);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('DK', 'Denmark', '«·œ«‰„—ﬂ', 458);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('DM', 'Dominica', 'œÊ„Ì‰Ìﬂ«', 459);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('DM', 'Dominica', 'œÊ„Ì‰Ìﬂ«', 459);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('DO', 'Dominican Republic', 'Ã„ÂÊ—Ì… «·œÊ„Ì‰Ìﬂ«‰', 460);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('DO', 'Dominican Republic', 'Ã„ÂÊ—Ì… «·œÊ„Ì‰Ìﬂ«‰', 460);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('DZ', 'Algeria', '«·Ã“«∆—', 461);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('DZ', 'Algeria', '«·Ã“«∆—', 461);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('EC', 'Ecuador', '«·«ﬂÊ«œÊ—', 462);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('EC', 'Ecuador', '«·«ﬂÊ«œÊ—', 462);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('EE', 'Estonia', '«” Ê‰Ì«', 463);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('EE', 'Estonia', '«” Ê‰Ì«', 463);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('EG', 'Egypt', '„’—', 464);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('EG', 'Egypt', '„’—', 464);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('EH', 'Western Sahara', '«·’Õ—«¡ «·€—»Ì…', 465);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('EH', 'Western Sahara', '«·’Õ—«¡ «·€—»Ì…', 465);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('ER', 'Eritrea', '«—Ì —Ì«', 466);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('ER', 'Eritrea', '«—Ì —Ì«', 466);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('ES', 'Spain', '√”»«‰Ì«', 467);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('ES', 'Spain', '√”»«‰Ì«', 467);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('ET', 'Ethiopia', '«ÀÌÊ»Ì«', 468);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('ET', 'Ethiopia', '«ÀÌÊ»Ì«', 468);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('FI', 'Finland', '›‰·‰œ«', 469);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('FI', 'Finland', '›‰·‰œ«', 469);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('FJ', 'Fiji', '›ÌÃÌ', 470);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('FJ', 'Fiji', '›ÌÃÌ', 470);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('FK', 'Falkland Islands (Malvinas)', 'Ã“— ›Êﬂ·«‰œ', 471);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('FK', 'Falkland Islands (Malvinas)', 'Ã“— ›Êﬂ·«‰œ', 471);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('FM', 'Micronesia (Federated States of)', '„Ìﬂ—Ê‰Ì“Ì«', 472);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('FM', 'Micronesia (Federated States of)', '„Ìﬂ—Ê‰Ì“Ì«', 472);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('FO', 'Faroe Islands', 'Ã“— ›«—Ê', 473);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('FO', 'Faroe Islands', 'Ã“— ›«—Ê', 473);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('FR', 'France', '›—‰”«', 474);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('FR', 'France', '›—‰”«', 474);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('GA', 'Gabon', '«·Ã«»Ê‰', 475);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('GA', 'Gabon', '«·Ã«»Ê‰', 475);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('GB', 'United Kingdom of Great Britain and Northern Ireland', '«·„„·ﬂ… «·„ Õœ…', 476);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('GB', 'United Kingdom of Great Britain and Northern Ireland', '«·„„·ﬂ… «·„ Õœ…', 476);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('GD', 'Grenada', 'Ã—Ì‰«œ«', 477);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('GD', 'Grenada', 'Ã—Ì‰«œ«', 477);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('GE', 'Georgia', 'ÃÊ—ÃÌ«', 478);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('GE', 'Georgia', 'ÃÊ—ÃÌ«', 478);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('GF', 'French Guiana', '€ÊÌ«‰«', 479);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('GF', 'French Guiana', '€ÊÌ«‰«', 479);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('GG', 'Guernsey', 'ÃÌ—‰“Ì', 480);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('GG', 'Guernsey', 'ÃÌ—‰“Ì', 480);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('GH', 'Ghana', '€«‰«', 481);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('GH', 'Ghana', '€«‰«', 481);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('GI', 'Gibraltar', 'Ã»· ÿ«—ﬁ', 482);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('GI', 'Gibraltar', 'Ã»· ÿ«—ﬁ', 482);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('GL', 'Greenland', 'Ã—Ì‰·«‰œ', 483);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('GL', 'Greenland', 'Ã—Ì‰·«‰œ', 483);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('GM', 'Gambia', '€«„»Ì«', 484);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('GM', 'Gambia', '€«„»Ì«', 484);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('GN', 'Guinea', '€Ì‰Ì«', 485);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('GN', 'Guinea', '€Ì‰Ì«', 485);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('GP', 'Guadeloupe', 'ÃÊ«œ·Ê»', 486);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('GP', 'Guadeloupe', 'ÃÊ«œ·Ê»', 486);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('GQ', 'Equatorial Guinea', '€Ì‰Ì« «·«” Ê«∆Ì…', 487);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('GQ', 'Equatorial Guinea', '€Ì‰Ì« «·«” Ê«∆Ì…', 487);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('GR', 'Greece', '«·ÌÊ‰«‰', 488);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('GR', 'Greece', '«·ÌÊ‰«‰', 488);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('GS', 'South Georgia and the South Sandwich Islands', 'ÃÊ—ÃÌ« «·Ã‰Ê»Ì… ÊÃ“— ”«‰œÊÌ ‘ «·Ã‰Ê»Ì…', 489);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('GS', 'South Georgia and the South Sandwich Islands', 'ÃÊ—ÃÌ« «·Ã‰Ê»Ì… ÊÃ“— ”«‰œÊÌ ‘ «·Ã‰Ê»Ì…', 489);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('GT', 'Guatemala', 'ÃÊ« Ì„«·«', 490);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('GT', 'Guatemala', 'ÃÊ« Ì„«·«', 490);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('GU', 'Guam', 'ÃÊ«„', 491);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('GU', 'Guam', 'ÃÊ«„', 491);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('GW', 'Guinea-Bissau', '€Ì‰Ì« »Ì”«Ê', 492);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('GW', 'Guinea-Bissau', '€Ì‰Ì« »Ì”«Ê', 492);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('GY', 'Guyana', '€Ì«‰«', 493);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('GY', 'Guyana', '€Ì«‰«', 493);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('HK', 'Hong Kong', 'ÂÊ‰€ ﬂÊ‰€', 494);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('HK', 'Hong Kong', 'ÂÊ‰€ ﬂÊ‰€', 494);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('HM', 'Heard Island and McDonald Islands', 'Ã“Ì—… ÂÌ—œ ÊÃ“— „«ﬂœÊ‰«·œ', 495);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('HM', 'Heard Island and McDonald Islands', 'Ã“Ì—… ÂÌ—œ ÊÃ“— „«ﬂœÊ‰«·œ', 495);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('HN', 'Honduras', 'Â‰œÊ—«”', 496);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('HN', 'Honduras', 'Â‰œÊ—«”', 496);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('HR', 'Croatia', 'ﬂ—Ê« Ì«', 497);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('HR', 'Croatia', 'ﬂ—Ê« Ì«', 497);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('HT', 'Haiti', 'Â«Ì Ì', 498);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('HT', 'Haiti', 'Â«Ì Ì', 498);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('HU', 'Hungary', '«·„Ã—', 499);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('HU', 'Hungary', '«·„Ã—', 499);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('ID', 'Indonesia', '«‰œÊ‰Ì”Ì«', 500);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('ID', 'Indonesia', '«‰œÊ‰Ì”Ì«', 500);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('IE', 'Ireland', '√Ì—·‰œ«', 501);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('IE', 'Ireland', '√Ì—·‰œ«', 501);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('IL', 'Israel', '«”—«∆Ì·', 502);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('IL', 'Israel', '«”—«∆Ì·', 502);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('IM', 'Isle of Man', 'Ã“Ì—… „«‰', 503);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('IM', 'Isle of Man', 'Ã“Ì—… „«‰', 503);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('IN', 'India', '«·Â‰œ', 504);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('IN', 'India', '«·Â‰œ', 504);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('IO', 'British Indian Ocean Territory', '≈ﬁ·Ì„ «·„ÕÌÿ «·Â‰œÌ «·»—Ìÿ«‰Ì', 505);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('IO', 'British Indian Ocean Territory', '≈ﬁ·Ì„ «·„ÕÌÿ «·Â‰œÌ «·»—Ìÿ«‰Ì', 505);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('IQ', 'Iraq', '«·⁄—«ﬁ', 506);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('IQ', 'Iraq', '«·⁄—«ﬁ', 506);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('IR', 'Iran (Islamic Republic of)', '«Ì—«‰', 507);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('IR', 'Iran (Islamic Republic of)', '«Ì—«‰', 507);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('IS', 'Iceland', '√Ì”·‰œ«', 508);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('IS', 'Iceland', '√Ì”·‰œ«', 508);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('IT', 'Italy', '«Ìÿ«·Ì«', 509);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('IT', 'Italy', '«Ìÿ«·Ì«', 509);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('JE', 'Jersey', 'ÃÌ—”Ì', 510);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('JE', 'Jersey', 'ÃÌ—”Ì', 510);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('JM', 'Jamaica', 'Ã«„«Ìﬂ«', 511);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('JM', 'Jamaica', 'Ã«„«Ìﬂ«', 511);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('JO', 'Jordan', '«·√—œ‰', 512);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('JO', 'Jordan', '«·√—œ‰', 512);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('JP', 'Japan', '«·Ì«»«‰', 513);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('JP', 'Japan', '«·Ì«»«‰', 513);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('KE', 'Kenya', 'ﬂÌ‰Ì«', 514);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('KE', 'Kenya', 'ﬂÌ‰Ì«', 514);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('KG', 'Kyrgyzstan', 'ﬁ—€Ì“” «‰', 515);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('KG', 'Kyrgyzstan', 'ﬁ—€Ì“” «‰', 515);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('KH', 'Cambodia', 'ﬂ„»ÊœÌ«', 516);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('KH', 'Cambodia', 'ﬂ„»ÊœÌ«', 516);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('KI', 'Kiribati', 'ﬂÌ—Ì»« Ì', 517);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('KI', 'Kiribati', 'ﬂÌ—Ì»« Ì', 517);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('KM', 'Comoros', 'Ã“— «·ﬁ„—', 518);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('KM', 'Comoros', 'Ã“— «·ﬁ„—', 518);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('KN', 'Saint Kitts and Nevis', '”«‰  ﬂÌ ” Ê‰Ì›Ì”', 519);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('KN', 'Saint Kitts and Nevis', '”«‰  ﬂÌ ” Ê‰Ì›Ì”', 519);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('KP', 'Korea (Democratic Peopleís Republic of)', 'ﬂÊ—Ì« «·‘„«·Ì…', 520);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('KP', 'Korea (Democratic Peopleís Republic of)', 'ﬂÊ—Ì« «·‘„«·Ì…', 520);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('KR', 'Korea (Republic of)', 'ﬂÊ—Ì« «·Ã‰Ê»Ì…', 521);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('KR', 'Korea (Republic of)', 'ﬂÊ—Ì« «·Ã‰Ê»Ì…', 521);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('KW', 'Kuwait', '«·ﬂÊÌ ', 522);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('KW', 'Kuwait', '«·ﬂÊÌ ', 522);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('KY', 'Cayman Islands', 'Ã“— ﬂ«Ì„«‰', 523);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('KY', 'Cayman Islands', 'Ã“— ﬂ«Ì„«‰', 523);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('KZ', 'Kazakhstan', 'ﬂ«“«Œ” «‰', 524);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('KZ', 'Kazakhstan', 'ﬂ«“«Œ” «‰', 524);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('LA', 'Lao Peopleís Democratic Republic', '·«Ê”', 525);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('LA', 'Lao Peopleís Democratic Republic', '·«Ê”', 525);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('LB', 'Lebanon', '·»‰«‰', 526);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('LB', 'Lebanon', '·»‰«‰', 526);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('LC', 'Saint Lucia', '”«‰  ·Ê”Ì«', 527);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('LC', 'Saint Lucia', '”«‰  ·Ê”Ì«', 527);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('LI', 'Liechtenstein', '·ÌŒ ‰‘ «Ì‰', 528);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('LI', 'Liechtenstein', '·ÌŒ ‰‘ «Ì‰', 528);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('LK', 'Sri Lanka', '”—Ì·«‰ﬂ«', 529);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('LK', 'Sri Lanka', '”—Ì·«‰ﬂ«', 529);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('LR', 'Liberia', '·Ì»Ì—Ì«', 530);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('LR', 'Liberia', '·Ì»Ì—Ì«', 530);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('LS', 'Lesotho', '·Ì”Ê Ê', 531);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('LS', 'Lesotho', '·Ì”Ê Ê', 531);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('LT', 'Lithuania', '·Ì Ê«‰Ì«', 532);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('LT', 'Lithuania', '·Ì Ê«‰Ì«', 532);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('LU', 'Luxembourg', '·Êﬂ”„»Ê—Ã', 533);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('LU', 'Luxembourg', '·Êﬂ”„»Ê—Ã', 533);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('LV', 'Latvia', '·« ›Ì«', 534);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('LV', 'Latvia', '·« ›Ì«', 534);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('LY', 'Libya', '·Ì»Ì«', 535);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('LY', 'Libya', '·Ì»Ì«', 535);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MA', 'Morocco', '«·„€—»', 536);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MA', 'Morocco', '«·„€—»', 536);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MC', 'Monaco', '„Ê‰«ﬂÊ', 537);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MC', 'Monaco', '„Ê‰«ﬂÊ', 537);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MD', 'Moldova (Republic of)', '„Ê·œ«›Ì«', 538);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MD', 'Moldova (Republic of)', '„Ê·œ«›Ì«', 538);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('ME', 'Montenegro', '«·Ã»· «·√”Êœ', 539);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('ME', 'Montenegro', '«·Ã»· «·√”Êœ', 539);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MF', 'Saint Martin (French Part)', ' Ã„⁄ ”«‰ „«— Ì‰', 540);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MF', 'Saint Martin (French Part)', ' Ã„⁄ ”«‰ „«— Ì‰', 540);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MG', 'Madagascar', '„œ€‘ﬁ—', 541);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MG', 'Madagascar', '„œ€‘ﬁ—', 541);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MH', 'Marshall Islands', 'Ã“— „«—‘«·', 542);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MH', 'Marshall Islands', 'Ã“— „«—‘«·', 542);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MK', 'North Macedonia', '„ﬁœÊ‰Ì«', 543);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MK', 'North Macedonia', '„ﬁœÊ‰Ì«', 543);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('ML', 'Mali', '„«·Ì', 544);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('ML', 'Mali', '„«·Ì', 544);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MM', 'Myanmar', '„Ì«‰„«—', 545);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MM', 'Myanmar', '„Ì«‰„«—', 545);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MN', 'Mongolia', '„‰€Ê·Ì«', 546);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MN', 'Mongolia', '„‰€Ê·Ì«', 546);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MO', 'Macao', '„«ﬂ«Ê', 547);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MO', 'Macao', '„«ﬂ«Ê', 547);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MP', 'Northern Mariana Islands', 'Ã“— „«—Ì«‰« «·‘„«·Ì…', 548);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MP', 'Northern Mariana Islands', 'Ã“— „«—Ì«‰« «·‘„«·Ì…', 548);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MQ', 'Martinique', '„«— Ì‰Ìﬂ', 549);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MQ', 'Martinique', '„«— Ì‰Ìﬂ', 549);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MR', 'Mauritania', '„Ê—Ì «‰Ì«', 550);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MR', 'Mauritania', '„Ê—Ì «‰Ì«', 550);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MS', 'Montserrat', '„Ê‰ ”—« ', 551);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MS', 'Montserrat', '„Ê‰ ”—« ', 551);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MT', 'Malta', '„«·ÿ«', 552);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MT', 'Malta', '„«·ÿ«', 552);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MU', 'Mauritius', '„Ê—Ì‘ÌÊ”', 553);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MU', 'Mauritius', '„Ê—Ì‘ÌÊ”', 553);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MV', 'Maldives', 'Ã“— «·„«·œÌ›', 554);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MV', 'Maldives', 'Ã“— «·„«·œÌ›', 554);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MW', 'Malawi', '„·«ÊÌ', 555);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MW', 'Malawi', '„·«ÊÌ', 555);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MX', 'Mexico', '«·„ﬂ”Ìﬂ', 556);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MX', 'Mexico', '«·„ﬂ”Ìﬂ', 556);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MY', 'Malaysia', '„«·Ì“Ì«', 557);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MY', 'Malaysia', '„«·Ì“Ì«', 557);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('MZ', 'Mozambique', '„Ê“„»Ìﬁ', 558);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('MZ', 'Mozambique', '„Ê“„»Ìﬁ', 558);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('NA', 'Namibia', '‰«„Ì»Ì«', 559);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('NA', 'Namibia', '‰«„Ì»Ì«', 559);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('NC', 'New Caledonia', 'ﬂ«·ÌœÊ‰Ì« «·ÃœÌœ…', 560);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('NC', 'New Caledonia', 'ﬂ«·ÌœÊ‰Ì« «·ÃœÌœ…', 560);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('NE', 'Niger', '«·‰ÌÃ—', 561);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('NE', 'Niger', '«·‰ÌÃ—', 561);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('NF', 'Norfolk Island', 'Ã“Ì—… ‰Ê—›Ê·ﬂ', 562);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('NF', 'Norfolk Island', 'Ã“Ì—… ‰Ê—›Ê·ﬂ', 562);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('NG', 'Nigeria', '‰ÌÃÌ—Ì«', 563);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('NG', 'Nigeria', '‰ÌÃÌ—Ì«', 563);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('NI', 'Nicaragua', '‰Ìﬂ«—«ÃÊ«', 564);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('NI', 'Nicaragua', '‰Ìﬂ«—«ÃÊ«', 564);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('NL', 'Netherlands', 'ÂÊ·‰œ«', 565);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('NL', 'Netherlands', 'ÂÊ·‰œ«', 565);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('NO', 'Norway', '«·‰—ÊÌÃ', 566);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('NO', 'Norway', '«·‰—ÊÌÃ', 566);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('NP', 'Nepal', '‰Ì»«·', 567);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('NP', 'Nepal', '‰Ì»«·', 567);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('NR', 'Nauru', '‰Ê—Ê', 568);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('NR', 'Nauru', '‰Ê—Ê', 568);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('NU', 'Niue', '‰ÌÊÌ', 569);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('NU', 'Niue', '‰ÌÊÌ', 569);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('NZ', 'New Zealand', '‰ÌÊ“Ì·«‰œ«', 570);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('NZ', 'New Zealand', '‰ÌÊ“Ì·«‰œ«', 570);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('OM', 'Oman', '⁄„«‰', 571);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('OM', 'Oman', '⁄„«‰', 571);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('PA', 'Panama', '»‰„«', 572);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('PA', 'Panama', '»‰„«', 572);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('PE', 'Peru', '»Ì—Ê', 573);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('PE', 'Peru', '»Ì—Ê', 573);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('PF', 'French Polynesia', '»Ê·Ì‰“Ì« «·›—‰”Ì…', 574);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('PF', 'French Polynesia', '»Ê·Ì‰“Ì« «·›—‰”Ì…', 574);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('PG', 'Papua New Guinea', '»«»Ê« €Ì‰Ì« «·ÃœÌœ…', 575);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('PG', 'Papua New Guinea', '»«»Ê« €Ì‰Ì« «·ÃœÌœ…', 575);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('PH', 'Philippines', '«·›Ì·»Ì‰', 576);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('PH', 'Philippines', '«·›Ì·»Ì‰', 576);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('PK', 'Pakistan', '»«ﬂ” «‰', 577);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('PK', 'Pakistan', '»«ﬂ” «‰', 577);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('PL', 'Poland', '»Ê·‰œ«', 578);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('PL', 'Poland', '»Ê·‰œ«', 578);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('PM', 'Saint Pierre and Miquelon', '”«‰ »ÌÌ— Ê„Ìﬂ·Ê‰', 579);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('PM', 'Saint Pierre and Miquelon', '”«‰ »ÌÌ— Ê„Ìﬂ·Ê‰', 579);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('PN', 'Pitcairn', '» ﬂ«Ì—‰', 580);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('PN', 'Pitcairn', '» ﬂ«Ì—‰', 580);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('PR', 'Puerto Rico', '»Ê— Ê—ÌﬂÊ', 581);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('PR', 'Puerto Rico', '»Ê— Ê—ÌﬂÊ', 581);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('PS', 'Palestinian, State of', '›·”ÿÌ‰', 582);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('PS', 'Palestinian, State of', '›·”ÿÌ‰', 582);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('PT', 'Portugal', '«·»— €«·', 583);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('PT', 'Portugal', '«·»— €«·', 583);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('PW', 'Palau', '»«·«Ê', 584);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('PW', 'Palau', '»«·«Ê', 584);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('PY', 'Paraguay', '»«—«ÃÊ«Ì', 585);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('PY', 'Paraguay', '»«—«ÃÊ«Ì', 585);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('QA', 'Qatar', 'ﬁÿ—', 586);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('QA', 'Qatar', 'ﬁÿ—', 586);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('RE', 'RÈunion', '—ÊÌ‰ÌÊ‰', 587);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('RE', 'RÈunion', '—ÊÌ‰ÌÊ‰', 587);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('RO', 'Romania', '—Ê„«‰Ì«', 588);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('RO', 'Romania', '—Ê„«‰Ì«', 588);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('RS', 'Serbia', '’—»Ì«', 589);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('RS', 'Serbia', '’—»Ì«', 589);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('RU', 'Russian Federation', '—Ê”Ì«', 590);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('RU', 'Russian Federation', '—Ê”Ì«', 590);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('RW', 'Rwanda', '—Ê«‰œ«', 591);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('RW', 'Rwanda', '—Ê«‰œ«', 591);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('SA', 'Saudi Arabia', '«·”⁄ÊœÌ…', 592);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('SA', 'Saudi Arabia', '«·”⁄ÊœÌ…', 592);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('SB', 'Solomon Islands', 'Ã“— ”·Ì„«‰', 593);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('SB', 'Solomon Islands', 'Ã“— ”·Ì„«‰', 593);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('SC', 'Seychelles', '”Ì‘·', 594);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('SC', 'Seychelles', '”Ì‘·', 594);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('SD', 'Sudan', '«·”Êœ«‰', 595);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('SD', 'Sudan', '«·”Êœ«‰', 595);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('SE', 'Sweden', '«·”ÊÌœ', 596);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('SE', 'Sweden', '«·”ÊÌœ', 596);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('SG', 'Singapore', '”‰€«›Ê—…', 597);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('SG', 'Singapore', '”‰€«›Ê—…', 597);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('SH', 'Saint Helena, Ascension and Tristan da Cunha', '”«‰  ÂÌ·Ì‰« Ê√”Ì‰‘Ì‰ Ê —Ì” «‰ œ« ﬂÊ‰«', 598);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('SH', 'Saint Helena, Ascension and Tristan da Cunha', '”«‰  ÂÌ·Ì‰« Ê√”Ì‰‘Ì‰ Ê —Ì” «‰ œ« ﬂÊ‰«', 598);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('SI', 'Slovenia', '”·Ê›Ì‰Ì«', 599);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('SI', 'Slovenia', '”·Ê›Ì‰Ì«', 599);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('SJ', 'Svalbard and Jan Mayen', '”›«·»«—œ ÊÌ«‰ „«Ì‰', 600);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('SJ', 'Svalbard and Jan Mayen', '”›«·»«—œ ÊÌ«‰ „«Ì‰', 600);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('SK', 'Slovakia', '”·Ê›«ﬂÌ«', 601);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('SK', 'Slovakia', '”·Ê›«ﬂÌ«', 601);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('SL', 'Sierra Leone', '”Ì—«·ÌÊ‰', 602);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('SL', 'Sierra Leone', '”Ì—«·ÌÊ‰', 602);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('SM', 'San Marino', '”«‰ „«—Ì‰Ê', 603);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('SM', 'San Marino', '”«‰ „«—Ì‰Ê', 603);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('SN', 'Senegal', '«·”‰€«·', 604);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('SN', 'Senegal', '«·”‰€«·', 604);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('SO', 'Somalia', '«·’Ê„«·', 605);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('SO', 'Somalia', '«·’Ê„«·', 605);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('SR', 'Suriname', '”Ê—Ì‰«„', 606);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('SR', 'Suriname', '”Ê—Ì‰«„', 606);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('SS', 'South Sudan', 'Ã‰Ê» «·”Êœ«‰', 607);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('SS', 'South Sudan', 'Ã‰Ê» «·”Êœ«‰', 607);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('ST', 'Sao Tome and Principe', '”«Ê  Ê„Ì Ê»—Ì‰”Ì»', 608);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('ST', 'Sao Tome and Principe', '”«Ê  Ê„Ì Ê»—Ì‰”Ì»', 608);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('SV', 'El Salvador', '«·”·›«œÊ—', 609);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('SV', 'El Salvador', '«·”·›«œÊ—', 609);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('SX', 'Sint Maarten (Dutch Part)', '”Ì‰  „«— ‰', 610);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('SX', 'Sint Maarten (Dutch Part)', '”Ì‰  „«— ‰', 610);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('SY', 'Syrian Arab Republic', '”Ê—Ì«', 611);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('SY', 'Syrian Arab Republic', '”Ê—Ì«', 611);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('SZ', 'Eswatini', '”Ê«“Ì·«‰œ', 612);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('SZ', 'Eswatini', '”Ê«“Ì·«‰œ', 612);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('TC', 'Turks and Caicos Islands', 'Ã“—  Ê—ﬂ” Êﬂ«ÌﬂÊ”', 613);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('TC', 'Turks and Caicos Islands', 'Ã“—  Ê—ﬂ” Êﬂ«ÌﬂÊ”', 613);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('TD', 'Chad', ' ‘«œ', 614);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('TD', 'Chad', ' ‘«œ', 614);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('TF', 'French Southern Territories', '√—«÷ ›—‰”Ì… Ã‰Ê»Ì… Ê√‰ «— ÌﬂÌ…', 615);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('TF', 'French Southern Territories', '√—«÷ ›—‰”Ì… Ã‰Ê»Ì… Ê√‰ «— ÌﬂÌ…', 615);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('TG', 'Togo', ' ÊÃÊ', 616);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('TG', 'Togo', ' ÊÃÊ', 616);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('TH', 'Thailand', ' «Ì·‰œ', 617);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('TH', 'Thailand', ' «Ì·‰œ', 617);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('TJ', 'Tajikistan', 'ÿ«Ãﬂ” «‰', 618);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('TJ', 'Tajikistan', 'ÿ«Ãﬂ” «‰', 618);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('TK', 'Tokelau', ' ÊﬂÌ·Ê', 619);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('TK', 'Tokelau', ' ÊﬂÌ·Ê', 619);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('TL', 'Timor-Leste', ' Ì„Ê— «·‘—ﬁÌ…', 620);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('TL', 'Timor-Leste', ' Ì„Ê— «·‘—ﬁÌ…', 620);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('TM', 'Turkmenistan', ' —ﬂ„«‰” «‰', 621);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('TM', 'Turkmenistan', ' —ﬂ„«‰” «‰', 621);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('TN', 'Tunisia', ' Ê‰”', 622);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('TN', 'Tunisia', ' Ê‰”', 622);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('TO', 'Tonga', ' Ê‰Ã«', 623);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('TO', 'Tonga', ' Ê‰Ã«', 623);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('TR', 'Turkey', ' —ﬂÌ«', 624);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('TR', 'Turkey', ' —ﬂÌ«', 624);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('TT', 'Trinidad and Tobago', ' —Ì‰Ìœ«œ Ê Ê»«€Ê', 625);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('TT', 'Trinidad and Tobago', ' —Ì‰Ìœ«œ Ê Ê»«€Ê', 625);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('TV', 'Tuvalu', ' Ê›«·Ê', 626);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('TV', 'Tuvalu', ' Ê›«·Ê', 626);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('TW', 'Taiwan (Province of China)', ' «ÌÊ«‰', 627);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('TW', 'Taiwan (Province of China)', ' «ÌÊ«‰', 627);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('TZ', 'Tanzania, United Republic of', ' «‰“«‰Ì«', 628);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('TZ', 'Tanzania, United Republic of', ' «‰“«‰Ì«', 628);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('UA', 'Ukraine', '√Êﬂ—«‰Ì«', 629);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('UA', 'Ukraine', '√Êﬂ—«‰Ì«', 629);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('UG', 'Uganda', '√Ê€‰œ«', 630);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('UG', 'Uganda', '√Ê€‰œ«', 630);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('UM', 'United States Minor Outlying Islands', 'Ã“— «·Ê·«Ì«  «·„ Õœ… «·’€Ì—… «·‰«∆Ì…', 631);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('UM', 'United States Minor Outlying Islands', 'Ã“— «·Ê·«Ì«  «·„ Õœ… «·’€Ì—… «·‰«∆Ì…', 631);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('US', 'United States of America', '«·Ê·«Ì«  «·„ Õœ…', 632);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('US', 'United States of America', '«·Ê·«Ì«  «·„ Õœ…', 632);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('UY', 'Uruguay', '√Ê—ÃÊ«Ì', 633);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('UY', 'Uruguay', '√Ê—ÃÊ«Ì', 633);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('UZ', 'Uzbekistan', '√Ê“»ﬂ” «‰', 634);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('UZ', 'Uzbekistan', '√Ê“»ﬂ” «‰', 634);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('VA', 'Holy See', '«·›« Ìﬂ«‰', 635);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('VA', 'Holy See', '«·›« Ìﬂ«‰', 635);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('VC', 'Saint Vincent and the Grenadines', '”«‰  ›Ì‰”‰  Ê«·€—Ì‰«œÌ‰', 636);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('VC', 'Saint Vincent and the Grenadines', '”«‰  ›Ì‰”‰  Ê«·€—Ì‰«œÌ‰', 636);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('VE', 'Venezuela (Bolivarian Republic of)', '›‰“ÊÌ·«', 637);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('VE', 'Venezuela (Bolivarian Republic of)', '›‰“ÊÌ·«', 637);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('VG', 'Virgin Islands (British)', 'Ã“— «·⁄–—«¡ «·»—Ìÿ«‰Ì…', 638);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('VG', 'Virgin Islands (British)', 'Ã“— «·⁄–—«¡ «·»—Ìÿ«‰Ì…', 638);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('VI', 'Virgin Islands (U.S.)', 'Ã“— «·⁄–—«¡ «·√„—ÌﬂÌ…', 639);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('VI', 'Virgin Islands (U.S.)', 'Ã“— «·⁄–—«¡ «·√„—ÌﬂÌ…', 639);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('VN', 'Viet Nam', '›Ì ‰«„', 640);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('VN', 'Viet Nam', '›Ì ‰«„', 640);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('VU', 'Vanuatu', '›«‰Ê« Ê', 641);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('VU', 'Vanuatu', '›«‰Ê« Ê', 641);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('WF', 'Wallis and Futuna', 'Ê«·” Ê›Ê Ê‰«', 642);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('WF', 'Wallis and Futuna', 'Ê«·” Ê›Ê Ê‰«', 642);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('WS', 'Samoa', '”«„Ê«', 643);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('WS', 'Samoa', '”«„Ê«', 643);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('YE', 'Yemen', '«·Ì„‰', 644);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('YE', 'Yemen', '«·Ì„‰', 644);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('YT', 'Mayotte', '„«ÌÊ ', 645);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('YT', 'Mayotte', '„«ÌÊ ', 645);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('ZA', 'South Africa', 'Ã‰Ê» √›—ÌﬁÌ«', 646);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('ZA', 'South Africa', 'Ã‰Ê» √›—ÌﬁÌ«', 646);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('ZM', 'Zambia', '“«„»Ì«', 647);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('ZM', 'Zambia', '“«„»Ì«', 647);"
         
-        S = S & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
-        S = S & " VALUES('ZW', 'Zimbabwe', '“Ì„»«»ÊÌ', 648);"
+        s = s & " INSERT INTO [TBLCOUNTRIESDATA]([QRCODE], [ECountryName], [CountryName], [CountryID])"
+        s = s & " VALUES('ZW', 'Zimbabwe', '“Ì„»«»ÊÌ', 648);"
             
-        Cn.Execute S
+        Cn.Execute s
     End If
 DB_CreateField "TBLTYPEVATS", "QRCODE", adVarWChar, adColNullable, 255, , "      ", False
 
@@ -1925,7 +1944,7 @@ End Sub
 
 Public Function UpdateDataBasePart28()
  
-    Dim S As String
+    Dim s As String
 
     '**************************
     DB_CreateField "projects_des", "qtySubContractor", adDouble, adColNullable, , , "", False, True
@@ -1996,96 +2015,96 @@ Public Function UpdateDataBasePart28()
         
     End If
     
-    S = " SELECT YEAR,"
-    S = S & "        Emp_ID,"
-    S = S & "        t.emp_Name,"
-    S = S & "        SUM(RetValue)     RetValue"
-    S = S & " FROM   ("
-    S = S & "            SELECT YEAR(dbo.Transactions.Transaction_Date) YEAR,"
-    S = S & "                   dbo.Transactions.Emp_ID,"
-    S = S & "                    te.Emp_Name,"
-    S = S & "                   ("
-    S = S & "                       SELECT SUM(Transaction_NetValue + ISNULL(vat, 0)) AS SumValue"
-    S = S & "                       FROM   dbo.Transactions AS A"
-    S = S & "                       Where (a.Transaction_Type = 9)"
-    S = S & "                              AND (A.ReturnSerial = dbo.Transactions.NoteSerial1)"
-    S = S & "                   ) AS RetValue"
-    S = S & "            From dbo.transactions"
-    S = S & "                   LEFT OUTER JOIN dbo.TblBranchesData"
-    S = S & "                        ON  dbo.Transactions.BranchId = dbo.TblBranchesData.branch_id"
-    S = S & "                   LEFT OUTER JOIN dbo.TblEmployee AS te"
-    S = S & "                        ON  dbo.Transactions.Emp_ID = te.Emp_ID"
-    S = S & "            Where (dbo.transactions.PaymentType = 1)"
-    S = S & "                   AND (dbo.Transactions.Transaction_Type = 21)"
-    S = S & "        )                 T"
-    S = S & " Where IsNull(retvalue, 0) <> 0"
-    S = S & " Group By"
-    S = S & "        YEAR,"
-    S = S & "        Emp_ID,"
-    S = S & "        t.emp_Name"
+    s = " SELECT YEAR,"
+    s = s & "        Emp_ID,"
+    s = s & "        t.emp_Name,"
+    s = s & "        SUM(RetValue)     RetValue"
+    s = s & " FROM   ("
+    s = s & "            SELECT YEAR(dbo.Transactions.Transaction_Date) YEAR,"
+    s = s & "                   dbo.Transactions.Emp_ID,"
+    s = s & "                    te.Emp_Name,"
+    s = s & "                   ("
+    s = s & "                       SELECT SUM(Transaction_NetValue + ISNULL(vat, 0)) AS SumValue"
+    s = s & "                       FROM   dbo.Transactions AS A"
+    s = s & "                       Where (a.Transaction_Type = 9)"
+    s = s & "                              AND (A.ReturnSerial = dbo.Transactions.NoteSerial1)"
+    s = s & "                   ) AS RetValue"
+    s = s & "            From dbo.transactions"
+    s = s & "                   LEFT OUTER JOIN dbo.TblBranchesData"
+    s = s & "                        ON  dbo.Transactions.BranchId = dbo.TblBranchesData.branch_id"
+    s = s & "                   LEFT OUTER JOIN dbo.TblEmployee AS te"
+    s = s & "                        ON  dbo.Transactions.Emp_ID = te.Emp_ID"
+    s = s & "            Where (dbo.transactions.PaymentType = 1)"
+    s = s & "                   AND (dbo.Transactions.Transaction_Type = 21)"
+    s = s & "        )                 T"
+    s = s & " Where IsNull(retvalue, 0) <> 0"
+    s = s & " Group By"
+    s = s & "        YEAR,"
+    s = s & "        Emp_ID,"
+    s = s & "        t.emp_Name"
 
-    db_createOrUpdateviewSQL "NetRemSalesMan", S
+    db_createOrUpdateviewSQL "NetRemSalesMan", s
 
 
 
-    S = " Create  FUNCTION [dbo].[GetBalanceQtyPO3] (@ItemID integer ,@order_no  nvarchar(255) ,@PurchaseNo  integer )"
-    S = S & "  RETURNS Float"
-    S = S & " AS"
-    S = S & " Begin"
-    S = S & " Return"
+    s = " Create  FUNCTION [dbo].[GetBalanceQtyPO3] (@ItemID integer ,@order_no  nvarchar(255) ,@PurchaseNo  integer )"
+    s = s & "  RETURNS Float"
+    s = s & " AS"
+    s = s & " Begin"
+    s = s & " Return"
     
-    S = S & " (SELECT     SUM(dbo.Transaction_Details.ShowQty) AS ShowQty"
-    S = S & "    FROM         dbo.Transaction_Details RIGHT OUTER JOIN"
-    S = S & "                  dbo.Transactions ON dbo.Transaction_Details.Transaction_ID = dbo.Transactions.Transaction_ID"
-    S = S & "     Where dbo.transactions.Transaction_Type = 29"
-    S = S & "                    AND (dbo.Transactions.NoteSerial1 = @order_no)  AND"
-    S = S & "                   (dbo.Transaction_Details.Item_ID = @ItemID)  ) -"
+    s = s & " (SELECT     SUM(dbo.Transaction_Details.ShowQty) AS ShowQty"
+    s = s & "    FROM         dbo.Transaction_Details RIGHT OUTER JOIN"
+    s = s & "                  dbo.Transactions ON dbo.Transaction_Details.Transaction_ID = dbo.Transactions.Transaction_ID"
+    s = s & "     Where dbo.transactions.Transaction_Type = 29"
+    s = s & "                    AND (dbo.Transactions.NoteSerial1 = @order_no)  AND"
+    s = s & "                   (dbo.Transaction_Details.Item_ID = @ItemID)  ) -"
     
-    S = S & "  IsNull((SELECT     SUM(dbo.Transaction_Details.ShowQty) AS ShowQty"
-    S = S & "    FROM         dbo.Transaction_Details RIGHT OUTER JOIN"
-    S = S & "                   dbo.Transactions ON dbo.Transaction_Details.Transaction_ID = dbo.Transactions.Transaction_ID"
-    S = S & "     Where dbo.transactions.Transaction_Type = 22"
-    S = S & "                    AND (dbo.Transactions.order_no = @order_no) AND (ISNULL(dbo.Transactions.CBoBasedON, 0) = 1) AND"
-    S = S & "                   (dbo.Transaction_Details.Item_ID = @ItemID and Transactions.Transaction_ID <> @PurchaseNo)"
-    S = S & "    )  ,0)"
+    s = s & "  IsNull((SELECT     SUM(dbo.Transaction_Details.ShowQty) AS ShowQty"
+    s = s & "    FROM         dbo.Transaction_Details RIGHT OUTER JOIN"
+    s = s & "                   dbo.Transactions ON dbo.Transaction_Details.Transaction_ID = dbo.Transactions.Transaction_ID"
+    s = s & "     Where dbo.transactions.Transaction_Type = 22"
+    s = s & "                    AND (dbo.Transactions.order_no = @order_no) AND (ISNULL(dbo.Transactions.CBoBasedON, 0) = 1) AND"
+    s = s & "                   (dbo.Transaction_Details.Item_ID = @ItemID and Transactions.Transaction_ID <> @PurchaseNo)"
+    s = s & "    )  ,0)"
     
     
-    S = S & " End"
+    s = s & " End"
 
-    db_createOrUpdateFuctionSQL "GetBalanceQtyPO3", S
+    db_createOrUpdateFuctionSQL "GetBalanceQtyPO3", s
  
  
-    S = " SELECT YEAR,CusID,CusName,CusNamee,Sum(RetValue) RetValue  FROM ("
-    S = S & " SELECT"
-    S = S & "        Year(dbo.Transactions.Transaction_Date) Year,"
-    S = S & "        dbo.Transactions.CusID,"
-    S = S & "        dbo.TblCustemers.CusName,"
-    S = S & "        dbo.TblCustemers.CusNamee,"
+    s = " SELECT YEAR,CusID,CusName,CusNamee,Sum(RetValue) RetValue  FROM ("
+    s = s & " SELECT"
+    s = s & "        Year(dbo.Transactions.Transaction_Date) Year,"
+    s = s & "        dbo.Transactions.CusID,"
+    s = s & "        dbo.TblCustemers.CusName,"
+    s = s & "        dbo.TblCustemers.CusNamee,"
 
-    S = S & "        ("
-    S = S & "            SELECT SUM(Transaction_NetValue + ISNULL(vat, 0)) AS SumValue"
-    S = S & "            FROM   dbo.Transactions AS A"
-    S = S & "            Where (a.Transaction_Type = 9)"
-    S = S & "                   AND (A.ReturnSerial = dbo.Transactions.NoteSerial1)"
-    S = S & "        )  AS RetValue"
+    s = s & "        ("
+    s = s & "            SELECT SUM(Transaction_NetValue + ISNULL(vat, 0)) AS SumValue"
+    s = s & "            FROM   dbo.Transactions AS A"
+    s = s & "            Where (a.Transaction_Type = 9)"
+    s = s & "                   AND (A.ReturnSerial = dbo.Transactions.NoteSerial1)"
+    s = s & "        )  AS RetValue"
 
     '--  dbo.Transactions.Transaction_NetValue
-    S = S & " From dbo.transactions"
-    S = S & "        LEFT OUTER JOIN dbo.TblBranchesData"
-    S = S & "             ON  dbo.Transactions.BranchId = dbo.TblBranchesData.branch_id"
-    S = S & "        LEFT OUTER JOIN dbo.TblCustemers"
-    S = S & "             ON  dbo.Transactions.CusID = dbo.TblCustemers.CusID"
-    S = S & " Where (dbo.transactions.PaymentType = 1)"
-    S = S & "        AND (dbo.Transactions.Transaction_Type = 21)"
+    s = s & " From dbo.transactions"
+    s = s & "        LEFT OUTER JOIN dbo.TblBranchesData"
+    s = s & "             ON  dbo.Transactions.BranchId = dbo.TblBranchesData.branch_id"
+    s = s & "        LEFT OUTER JOIN dbo.TblCustemers"
+    s = s & "             ON  dbo.Transactions.CusID = dbo.TblCustemers.CusID"
+    s = s & " Where (dbo.transactions.PaymentType = 1)"
+    s = s & "        AND (dbo.Transactions.Transaction_Type = 21)"
 
-    S = S & " ) T"
-    S = S & " Where IsNull(retvalue, 0) <> 0"
-    S = S & " GROUP BY  Year,"
-    S = S & "        CusID,"
-    S = S & "        CusName,"
-    S = S & "        CusNamee"
+    s = s & " ) T"
+    s = s & " Where IsNull(retvalue, 0) <> 0"
+    s = s & " GROUP BY  Year,"
+    s = s & "        CusID,"
+    s = s & "        CusName,"
+    s = s & "        CusNamee"
 
-    db_createOrUpdateviewSQL "NetRemCus", S
+    db_createOrUpdateviewSQL "NetRemCus", s
 
     DB_CreateField "TblUsers", "OpenAtProduction", adBoolean, adColNullable, , , "", False, True
 
@@ -2109,85 +2128,85 @@ Public Function UpdateDataBasePart28()
     DB_CreateField "branches", "a207", adVarWChar, adColNullable, 50, , "", False, True, , True
 
 
-    S = " SELECT DISTINCT"
-    S = S & "    dbo.TblFiterWaiver.ID,"
-    S = S & "        dbo.TblFiterWaiver.RecordDateH,"
-    S = S & "        dbo.TblFiterWaiver.RecordDate,"
-    S = S & "        dbo.TblFiterWaiver.BranchID,"
-    S = S & "        dbo.TblFiterWaiver.BulidID,"
-    S = S & "        dbo.TblAqar.aqarname,"
-    S = S & "        dbo.TblFiterWaiver.RenterID,"
-    S = S & "        dbo.TblCustemers.CusName,"
-    S = S & "        dbo.TblCustemers.CusNamee,"
-    S = S & "        dbo.TblFiterWaiver.ApartmentID,"
-    S = S & "        dbo.TblAqarDetai.unitno,"
-    S = S & "        dbo.TblFiterWaiver.EndDateH,"
-    S = S & "        dbo.TblFiterWaiver.EndDate,"
-    S = S & "        dbo.TblFiterWaiver.FilterDate,"
-    S = S & "        dbo.TblFiterWaiver.FilterDateH,"
-    S = S & "        t2.BillPrice,"
-    S = S & "        dbo.TblFiterWaiver.AccountNo,"
-    S = S & "        dbo.TblFiterWaiver.AmountDely,"
-    S = S & "        dbo.TblFiterWaiver.DayNo,"
-    S = S & "        dbo.TblFiterWaiver.UserID,"
-    S = S & "        dbo.TblFiterWaiver.OFRenter,"
-    S = S & "        dbo.TblFiterWaiver.ForRenter,"
-    S = S & "        dbo.TblFiterWaiver.unittype,"
-    S = S & "        dbo.TblAkarUnit.name         AS nameUnt,"
-    S = S & "        dbo.TblAkarUnit.namee,"
-    S = S & "        dbo.TblFiterWaiver.ContNo,"
-    S = S & "        dbo.TblFiterWaiver.ContractNo,"
-    S = S & "        dbo.TblFiterWaiver.NoteID,"
-    S = S & "        dbo.TblFiterWaiver.NoteSerial,"
-    S = S & "        dbo.TblFiterWaiver.ContractDays,"
-    S = S & "        dbo.TblFiterWaiver.WaterPrice,"
-    S = S & "        dbo.TblFiterWaiver.ActualDays,"
-    S = S & "        dbo.TblFiterWaiver.DayPricen,"
-    S = S & "        T2.WaterPriceotal,"
-    S = S & "        T2.ServicePrice,"
-    S = S & "        T2.DayPricentotal,"
-    S = S & "        T2.Service,"
-    S = S & "        T2.WaterPayed,"
-    S = S & "        T2.RentValuePayed,"
-    S = S & "        T2.OldRent TelandNetPayed,"
-    S = S & "        T2.RemainWater,"
-    S = S & "        T2.RemainRent,"
-    S = S & "        T2.RemainService,"
-    S = S & "        T2.Insurance,"
-    S = S & "        T2.outflow,"
-    S = S & "        T2.StartDate,"
-    S = S & "        T2.StartDateh,"
-    S = S & "        T2.TotalStill,"
-    S = S & "        T2.RemainCommissions,"
-    S = S & "        T2.NoDaye,"
-    S = S & "        dbo.TblFiterWaiver.outCondition,"
-    S = S & "        dbo.TblFiterWaiver.DaysValueIncrease,"
-    S = S & "        dbo.TblFiterWaiver.DaysValueIncomplete,"
-    S = S & "        dbo.TblFiterWaiver.DayValueInc,"
-    S = S & "        dbo.TblFiterWaiver.DayCountInc,"
-    S = S & "        dbo.TblFiterWaiver.DayValueIncomplete,"
-    S = S & "        dbo.TblFiterWaiver.DayCountIncomplete,"
-    S = S & "        dbo.TblFiterWaiver.Efflux,"
-    S = S & "        dbo.TblFiterWaiver.ValDay,"
-    S = S & "        dbo.TblFiterWaiver.Discount,"
-    S = S & "        dbo.TblFiterWaiver.totalcollected,"
-    S = S & "        dbo.TblFiterWaiver.totalpayed,"
-    S = S & "        dbo.TblFiterWaiver.LegalIssue,"
-    S = S & "        dbo.TblFiterWaiver.net"
-    S = S & " From dbo.TblAkarUnit"
-    S = S & "        RIGHT OUTER JOIN dbo.TblFiterWaiver"
-    S = S & "             ON  dbo.TblAkarUnit.id = dbo.TblFiterWaiver.unittype"
-    S = S & "        LEFT OUTER JOIN dbo.TblAqarDetai"
-    S = S & "             ON  dbo.TblFiterWaiver.ApartmentID = dbo.TblAqarDetai.Id"
-    S = S & "        LEFT OUTER JOIN dbo.TblCustemers"
-    S = S & "             ON  dbo.TblFiterWaiver.RenterID = dbo.TblCustemers.CusID"
-    S = S & "        LEFT OUTER JOIN dbo.TblAqar"
-    S = S & "             ON  dbo.TblFiterWaiver.BulidID = dbo.TblAqar.Aqarid"
+    s = " SELECT DISTINCT"
+    s = s & "    dbo.TblFiterWaiver.ID,"
+    s = s & "        dbo.TblFiterWaiver.RecordDateH,"
+    s = s & "        dbo.TblFiterWaiver.RecordDate,"
+    s = s & "        dbo.TblFiterWaiver.BranchID,"
+    s = s & "        dbo.TblFiterWaiver.BulidID,"
+    s = s & "        dbo.TblAqar.aqarname,"
+    s = s & "        dbo.TblFiterWaiver.RenterID,"
+    s = s & "        dbo.TblCustemers.CusName,"
+    s = s & "        dbo.TblCustemers.CusNamee,"
+    s = s & "        dbo.TblFiterWaiver.ApartmentID,"
+    s = s & "        dbo.TblAqarDetai.unitno,"
+    s = s & "        dbo.TblFiterWaiver.EndDateH,"
+    s = s & "        dbo.TblFiterWaiver.EndDate,"
+    s = s & "        dbo.TblFiterWaiver.FilterDate,"
+    s = s & "        dbo.TblFiterWaiver.FilterDateH,"
+    s = s & "        t2.BillPrice,"
+    s = s & "        dbo.TblFiterWaiver.AccountNo,"
+    s = s & "        dbo.TblFiterWaiver.AmountDely,"
+    s = s & "        dbo.TblFiterWaiver.DayNo,"
+    s = s & "        dbo.TblFiterWaiver.UserID,"
+    s = s & "        dbo.TblFiterWaiver.OFRenter,"
+    s = s & "        dbo.TblFiterWaiver.ForRenter,"
+    s = s & "        dbo.TblFiterWaiver.unittype,"
+    s = s & "        dbo.TblAkarUnit.name         AS nameUnt,"
+    s = s & "        dbo.TblAkarUnit.namee,"
+    s = s & "        dbo.TblFiterWaiver.ContNo,"
+    s = s & "        dbo.TblFiterWaiver.ContractNo,"
+    s = s & "        dbo.TblFiterWaiver.NoteID,"
+    s = s & "        dbo.TblFiterWaiver.NoteSerial,"
+    s = s & "        dbo.TblFiterWaiver.ContractDays,"
+    s = s & "        dbo.TblFiterWaiver.WaterPrice,"
+    s = s & "        dbo.TblFiterWaiver.ActualDays,"
+    s = s & "        dbo.TblFiterWaiver.DayPricen,"
+    s = s & "        T2.WaterPriceotal,"
+    s = s & "        T2.ServicePrice,"
+    s = s & "        T2.DayPricentotal,"
+    s = s & "        T2.Service,"
+    s = s & "        T2.WaterPayed,"
+    s = s & "        T2.RentValuePayed,"
+    s = s & "        T2.OldRent TelandNetPayed,"
+    s = s & "        T2.RemainWater,"
+    s = s & "        T2.RemainRent,"
+    s = s & "        T2.RemainService,"
+    s = s & "        T2.Insurance,"
+    s = s & "        T2.outflow,"
+    s = s & "        T2.StartDate,"
+    s = s & "        T2.StartDateh,"
+    s = s & "        T2.TotalStill,"
+    s = s & "        T2.RemainCommissions,"
+    s = s & "        T2.NoDaye,"
+    s = s & "        dbo.TblFiterWaiver.outCondition,"
+    s = s & "        dbo.TblFiterWaiver.DaysValueIncrease,"
+    s = s & "        dbo.TblFiterWaiver.DaysValueIncomplete,"
+    s = s & "        dbo.TblFiterWaiver.DayValueInc,"
+    s = s & "        dbo.TblFiterWaiver.DayCountInc,"
+    s = s & "        dbo.TblFiterWaiver.DayValueIncomplete,"
+    s = s & "        dbo.TblFiterWaiver.DayCountIncomplete,"
+    s = s & "        dbo.TblFiterWaiver.Efflux,"
+    s = s & "        dbo.TblFiterWaiver.ValDay,"
+    s = s & "        dbo.TblFiterWaiver.Discount,"
+    s = s & "        dbo.TblFiterWaiver.totalcollected,"
+    s = s & "        dbo.TblFiterWaiver.totalpayed,"
+    s = s & "        dbo.TblFiterWaiver.LegalIssue,"
+    s = s & "        dbo.TblFiterWaiver.net"
+    s = s & " From dbo.TblAkarUnit"
+    s = s & "        RIGHT OUTER JOIN dbo.TblFiterWaiver"
+    s = s & "             ON  dbo.TblAkarUnit.id = dbo.TblFiterWaiver.unittype"
+    s = s & "        LEFT OUTER JOIN dbo.TblAqarDetai"
+    s = s & "             ON  dbo.TblFiterWaiver.ApartmentID = dbo.TblAqarDetai.Id"
+    s = s & "        LEFT OUTER JOIN dbo.TblCustemers"
+    s = s & "             ON  dbo.TblFiterWaiver.RenterID = dbo.TblCustemers.CusID"
+    s = s & "        LEFT OUTER JOIN dbo.TblAqar"
+    s = s & "             ON  dbo.TblFiterWaiver.BulidID = dbo.TblAqar.Aqarid"
             
-    S = S & "        LEFT OUTER JOIN dbo.TblFiterWaiverDet2 T2"
-    S = S & "             ON  T2.MasterID = dbo.TblFiterWaiver.ID"
+    s = s & "        LEFT OUTER JOIN dbo.TblFiterWaiverDet2 T2"
+    s = s & "             ON  T2.MasterID = dbo.TblFiterWaiver.ID"
     
-    db_createOrUpdateviewSQL "VwFiterWaiver", S
+    db_createOrUpdateviewSQL "VwFiterWaiver", s
 
     DB_CreateField "TblFiterWaiver", "DaysValueIncrease", adDouble, adColNullable, , , " ", False, True
     DB_CreateField "TblFiterWaiver", "DaysValueIncomplete", adDouble, adColNullable, , , " ", False, True
@@ -2324,51 +2343,51 @@ DB_CreateField "Notes", "RenterValue", adDouble, adColNullable, , , "    ", Fals
 DB_CreateField "Notes", "ExpValue", adDouble, adColNullable, , , "    ", False, True
 
     
-    S = " SELECT"
-S = S & "        TblFiterWaiverDe.IDFItWaiv,TblAqar.aqarname,"
-S = S & "        dbo.TblFiterWaiverDe.Remark,"
-S = S & "        Sum(dbo.TblFiterWaiverDe.Price * dbo.TblFiterWaiverDe.[Count]) AS Total ,"
-S = S & "        dbo.TblAqrCompenetDet.Name AS nameDet"
+    s = " SELECT"
+s = s & "        TblFiterWaiverDe.IDFItWaiv,TblAqar.aqarname,"
+s = s & "        dbo.TblFiterWaiverDe.Remark,"
+s = s & "        Sum(dbo.TblFiterWaiverDe.Price * dbo.TblFiterWaiverDe.[Count]) AS Total ,"
+s = s & "        dbo.TblAqrCompenetDet.Name AS nameDet"
        
-S = S & " From dbo.TblFiterWaiverDe"
-S = S & "        LEFT OUTER JOIN dbo.TblAqrCompenetDet"
-S = S & "             ON  dbo.TblFiterWaiverDe.IDItem = dbo.TblAqrCompenetDet.ID"
-S = S & "        LEFT OUTER JOIN dbo.TblAqrCompenet"
-S = S & "             ON  dbo.TblFiterWaiverDe.GroupID = dbo.TblAqrCompenet.ID"
+s = s & " From dbo.TblFiterWaiverDe"
+s = s & "        LEFT OUTER JOIN dbo.TblAqrCompenetDet"
+s = s & "             ON  dbo.TblFiterWaiverDe.IDItem = dbo.TblAqrCompenetDet.ID"
+s = s & "        LEFT OUTER JOIN dbo.TblAqrCompenet"
+s = s & "             ON  dbo.TblFiterWaiverDe.GroupID = dbo.TblAqrCompenet.ID"
             
-S = S & "             LEFT OUTER JOIN tblFiterWaiver ON TblFiterWaiverDe.IDFItWaiv =tblFiterWaiver.ID"
-S = S & "             LEFT OUTER JOIN TblAqar ON TblAqar.Aqarid =  tblFiterWaiver.BulidID"
+s = s & "             LEFT OUTER JOIN tblFiterWaiver ON TblFiterWaiverDe.IDFItWaiv =tblFiterWaiver.ID"
+s = s & "             LEFT OUTER JOIN TblAqar ON TblAqar.Aqarid =  tblFiterWaiver.BulidID"
 
-S = S & " Where count <> 0"
-S = S & " GROUP BY dbo.TblFiterWaiverDe.Remark,dbo.TblAqrCompenetDet.Name,TblFiterWaiverDe.IDFItWaiv,TblAqar.aqarname"
+s = s & " Where count <> 0"
+s = s & " GROUP BY dbo.TblFiterWaiverDe.Remark,dbo.TblAqrCompenetDet.Name,TblFiterWaiverDe.IDFItWaiv,TblAqar.aqarname"
     
 
-db_createOrUpdateviewSQL "View_WaiverExpens", S
+db_createOrUpdateviewSQL "View_WaiverExpens", s
 
 
-       S = " SELECT   TotalExp = (SELECT SUM(COUNT * Price) TotalExpe FROM TblFiterWaiverDe),"
-S = S & "       CountContract = (SELECT COUNT(*) FROM TblContract ), "
-S = S & "                          Cashing = SUM("
-S = S & "                   Case Notes.NoteCashingType"
-S = S & "                        WHEN 0 THEN (Note_Value)"
-S = S & "                        ELSE 0"
-S = S & "                   End"
-S = S & "               ),"
-S = S & "               Commission        = SUM("
-S = S & "                   Case Notes.CashingType"
-S = S & "                        WHEN 12 THEN (Note_Value)"
-S = S & "                        ELSE 0"
-S = S & "                   End"
-S = S & "               ),"
-S = S & "               Arbon             = SUM(CASE Notes.CashingType WHEN 9 THEN (Note_Value) ELSE 0 END),"
-S = S & "               ValueTransfer     = SUM("
-S = S & "                   Case Notes.NoteCashingType"
-S = S & "                        WHEN 3 THEN (Note_Value)"
-S = S & "                        ELSE 0"
-S = S & "                   End"
-S = S & "               )"
-S = S & "        From Notes "
-db_createOrUpdateviewSQL "View_TotalsIq", S
+       s = " SELECT   TotalExp = (SELECT SUM(COUNT * Price) TotalExpe FROM TblFiterWaiverDe),"
+s = s & "       CountContract = (SELECT COUNT(*) FROM TblContract ), "
+s = s & "                          Cashing = SUM("
+s = s & "                   Case Notes.NoteCashingType"
+s = s & "                        WHEN 0 THEN (Note_Value)"
+s = s & "                        ELSE 0"
+s = s & "                   End"
+s = s & "               ),"
+s = s & "               Commission        = SUM("
+s = s & "                   Case Notes.CashingType"
+s = s & "                        WHEN 12 THEN (Note_Value)"
+s = s & "                        ELSE 0"
+s = s & "                   End"
+s = s & "               ),"
+s = s & "               Arbon             = SUM(CASE Notes.CashingType WHEN 9 THEN (Note_Value) ELSE 0 END),"
+s = s & "               ValueTransfer     = SUM("
+s = s & "                   Case Notes.NoteCashingType"
+s = s & "                        WHEN 3 THEN (Note_Value)"
+s = s & "                        ELSE 0"
+s = s & "                   End"
+s = s & "               )"
+s = s & "        From Notes "
+db_createOrUpdateviewSQL "View_TotalsIq", s
 Dim MySQL As String
 MySQL = " SELECT     dbo.Notes.NoteID,tu.UserName, dbo.Notes.NoteDate, dbo.Notes.NoteType, dbo.Notes.NoteSerial, dbo.Notes.NoteSerial1, dbo.Notes.Note_Value, dbo.Notes.NoteDateH,"
 MySQL = MySQL & "                       dbo.Notes.ContractNo, dbo.Notes.ContNo, dbo.Notes.commission, dbo.Notes.rent, dbo.Notes.Water, dbo.Notes.FilterID, dbo.Notes.FIlterTotal, dbo.Notes.Instrunce,"
@@ -3556,7 +3575,7 @@ Function UpdateDataBasePart25()
 
 On Error Resume Next
  Dim New_View  As String
-Dim S  As String
+Dim s  As String
 
      If DB_CreateTable("LegalIssuesData", True, "ID", False) = True Then
            
@@ -3891,20 +3910,20 @@ DB_CreateField "Transaction_Details", "RSH", adVarWChar, adColNullable, 4000, , 
 DB_CreateField "Transaction_Details", "LPRISM", adVarWChar, adColNullable, 4000, , "      ", False, True, , True
 DB_CreateField "Transaction_Details", "RPRISM", adVarWChar, adColNullable, 4000, , "      ", False, True, , True
 
-S = " Create FUNCTION GetPayValue3 (@Transaction_ID  integer,@TransType AS integer)"
-S = S & "   RETURNS integer    AS    Begin"
-S = S & "     RETURN ("
+s = " Create FUNCTION GetPayValue3 (@Transaction_ID  integer,@TransType AS integer)"
+s = s & "   RETURNS integer    AS    Begin"
+s = s & "     RETURN ("
 
-S = S & "   SELECT   SUM(PayedValue) AS Smatiobn"
-S = S & "  From dbo.TblBillBuyPayment2"
-S = S & "  Where (Transaction_ID = @Transaction_ID"
-S = S & "  AND TransType = @TransType"
-S = S & "  )"
-S = S & "  GROUP BY Transaction_ID"
-S = S & "     )"
-S = S & "   End"
+s = s & "   SELECT   SUM(PayedValue) AS Smatiobn"
+s = s & "  From dbo.TblBillBuyPayment2"
+s = s & "  Where (Transaction_ID = @Transaction_ID"
+s = s & "  AND TransType = @TransType"
+s = s & "  )"
+s = s & "  GROUP BY Transaction_ID"
+s = s & "     )"
+s = s & "   End"
 
-db_createOrUpdateFuctionSQL "GetPayValue3", S
+db_createOrUpdateFuctionSQL "GetPayValue3", s
 
 
 
@@ -4895,7 +4914,7 @@ Function UpdateDataBasePart26()
 
     On Error Resume Next
     Dim New_View As String
-    Dim S        As String
+    Dim s        As String
     DB_CreateField "TblAqrOwin", "[Select]", adBoolean, adColNullable, , , "                ", False, True
     If DB_CreateTable("TblTipDates", True, "ID", False) = True Then
         DB_CreateField "TblTipDates", "Remarks", adVarWChar, adColNullable, 255, , "      ", False
@@ -5573,190 +5592,190 @@ Function UpdateDataBasePart26()
     DB_CreateField "TblChangeEmployeedataDetails", "ToMDateNew", adDBTimeStamp, adColNullable, , , "", False, True
     DB_CreateField "TblChangeEmployeedataDetails", "NumPasp", adVarWChar, adColNullable, 255, , "", False, True, , True
  
-    S = " ALTER VIEW emp_all_details AS"
+    s = " ALTER VIEW emp_all_details AS"
 
-    S = S & " SELECT dbo.TblEmpJobsTypes.JobTypeName,"
-    S = S & "        dbo.TblEmpDepartments.DepartmentName,"
-    S = S & "        dbo.jopstatus.color,"
-    S = S & "        dbo.jopstatus.name,"
-    S = S & "        dbo.TblEmployee.Emp_ID,"
-    S = S & "        dbo.TblEmployee.Emp_Code,"
-    S = S & "        dbo.TblEmployee.Emp_Name,"
-    S = S & "        dbo.TblEmployee.Emp_Name1,"
-    S = S & "        dbo.TblEmployee.Emp_Name2,"
-    S = S & "        dbo.TblEmployee.Emp_Name3,"
-    S = S & "        dbo.TblEmployee.Emp_Name4,"
-    S = S & "        dbo.TblEmployee.Emp_Mail,"
-    S = S & "        dbo.TblEmployee.Emp_Phone,"
-    S = S & "        dbo.TblEmployee.Emp_mobile,"
-    S = S & "        dbo.TblEmployee.Emp_Remark,"
-    S = S & "        dbo.TblEmployee.Emp_Salary,"
-    S = S & "        dbo.TblEmployee.Emp_Comm,"
-    S = S & "        dbo.TblEmployee.EmpProfitCom,"
-    S = S & "        dbo.TblEmployee.workstate,"
-    S = S & "        dbo.TblEmployee.DepartmentID,"
-    S = S & "        dbo.TblEmployee.JobTypeID,"
-    S = S & "        dbo.TblEmployee.SpecificationID,"
-    S = S & "        dbo.TblEmployee.Region,"
-    S = S & "        dbo.TblEmployee.InsuranceState,"
-    S = S & "        dbo.TblEmployee.InsuranceValue,"
-    S = S & "        dbo.TblEmployee.OtherDiscounts,"
-    S = S & "        dbo.TblEmployee.placeEkama,"
-    S = S & "        dbo.TblEmployee.NumEkama,"
-    S = S & "        dbo.TblEmployee.DateExpoekama,"
-    S = S & "        dbo.TblEmployee.DateEndekama,"
-    S = S & "        dbo.TblEmployee.DateExpoekamaH,"
-    S = S & "        dbo.TblEmployee.DateEndekamah,"
-    S = S & "        dbo.TblEmployee.NumLicn,"
-    S = S & "        dbo.TblEmployee.DateExpLinc,"
-    S = S & "        dbo.TblEmployee.DateEndLinc,"
-    S = S & "        dbo.TblEmployee.DateExpLincH,"
-    S = S & "        dbo.TblEmployee.DateEndLincH,"
-    S = S & "        dbo.TblEmployee.NumPoket,"
-    S = S & "        dbo.TblEmployee.Dateexppoket,"
-    S = S & "        dbo.TblEmployee.dateendpoket,"
-    S = S & "        dbo.TblEmployee.NumPasp,"
-    S = S & "        dbo.TblEmployee.DateEndPasp,"
-    S = S & "        dbo.TblEmployee.DateExpPasp,"
-    S = S & "        dbo.TblEmployee.EmpNum,"
-    S = S & "        dbo.TblEmployee.CustNum,"
-    S = S & "        dbo.TblEmployee.ChekEndWork,"
-    S = S & "        dbo.TblEmployee.ChekStkala,"
-    S = S & "        dbo.TblEmployee.BignDateWork,"
-    S = S & "        dbo.TblEmployee.EndWork,"
-    S = S & "        dbo.TblEmployee.Notsstkala,"
-    S = S & "        dbo.TblEmployee.checkbox1,"
-    S = S & "        dbo.TblEmployee.DOB,"
-    S = S & "        dbo.TblEmployee.KafelID,"
-    S = S & "        dbo.TblEmployee.KafelName,"
-    S = S & "        dbo.TblEmployee.pasplace,"
-    S = S & "        dbo.TblEmployee.Nationality,"
-    S = S & "        dbo.TblEmployee.dean,"
-    S = S & "        dbo.TblEmployee.hdodno,"
-    S = S & "        dbo.TblEmployee.hdoddate,"
-    S = S & "        dbo.TblEmployee.hdomnfaz,"
-    S = S & "        dbo.TblEmployee.kafeltel,"
-    S = S & "        dbo.TblEmployee.jopstatusid,"
-    S = S & "        dbo.TblEmployee.kafeladd,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_sakn,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_bus,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_food,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_mob,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_mang,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_others,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_sakn1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_bus1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_food1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_others1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_mob1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_mang1,"
-    S = S & "        dbo.TblEmployee.Account_code,"
-    S = S & "        dbo.TblEmployee.Account_code1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_saknc,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_busc,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_foodc,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_othersc,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_mobc,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_mangc,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_saknc1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_busc1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_foodc1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_othersc1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_mobc1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_mangc1,"
-    S = S & "        dbo.TblEmployee.ItemPhoto,"
-    S = S & "        dbo.TblEmployee.placeWORK,"
-    S = S & "        dbo.TblEmployee.project_id,"
-    S = S & "        dbo.TblEmployee.Account_Code2,"
-    S = S & "        dbo.TblEmployee.Dateexppoketh,"
-    S = S & "        dbo.TblEmployee.dateendpoketh,"
-    S = S & "        dbo.TblEmployee.opr_fullcode,"
-    S = S & "        dbo.TblEmployee.term_id,"
-    S = S & "        dbo.TblEmployee.opr_id,"
-    S = S & "        dbo.TblEmployee.term_fullcode,"
-    S = S & "        dbo.TblEmployee.BlnceVocat,"
-    S = S & "        dbo.TblEmployee.InstanceDateH,"
-    S = S & "        dbo.TblEmployee.InstanceDateM,"
-    S = S & "        dbo.TblEmployee.PerceTage,"
-    S = S & "        dbo.TblEmployee.WorkShop_Job,"
-    S = S & "        dbo.TblEmployee.BYHour,"
-    S = S & "        dbo.TblEmployee.Percentage,"
-    S = S & "        dbo.TblEmployee.SalaryType,"
-    S = S & "        dbo.TblEmployee.DriverLicenseendH,"
-    S = S & "        dbo.TblEmployee.DriverLicenseStartdH,"
-    S = S & "        dbo.TblEmployee.DriverLicenseend,"
-    S = S & "        dbo.TblEmployee.DriverLicense,"
-    S = S & "        dbo.TblEmployee.lastHolidaydateH,"
-    S = S & "        dbo.TblEmployee.lastHolidaydate,"
-    S = S & "        dbo.TblEmployee.OpenBalance4,"
-    S = S & "        dbo.TblEmployee.OpenBalanceType4,"
-    S = S & "        dbo.TblEmployee.swapedempid,"
-    S = S & "        dbo.TblEmployee.mangerid,"
-    S = S & "        dbo.TblEmployee.GroupID,"
-    S = S & "        dbo.TblEmployee.VisaNo,"
-    S = S & "        dbo.TblEmployee.JobTypeID3,"
-    S = S & "        dbo.TblEmployee.JobTypeID2,"
-    S = S & "        dbo.TblEmployee.JobTypeID1,"
-    S = S & "        dbo.TblEmployee.LastDateH,"
-    S = S & "        dbo.TblEmployee.LastDate,"
-    S = S & "        dbo.TblEmployee.IssueDateH,"
-    S = S & "        dbo.TblEmployee.DOBH,"
-    S = S & "        dbo.TblEmployee.gradeID,"
-    S = S & "        dbo.TblEmployee.InsuranceNO,"
-    S = S & "        dbo.TblEmployee.BankCard,"
-    S = S & "        dbo.TblEmployee.DriverId,"
-    S = S & "        dbo.TblEmployee.Account_Code5,"
-    S = S & "        dbo.TblEmployee.Account_Code4,"
-    S = S & "        dbo.TblEmployee.Account_Code3,"
-    S = S & "        dbo.TblEmployee.OpenBalanceType2,"
-    S = S & "        dbo.TblEmployee.OpenBalance2,"
-    S = S & "        dbo.TblEmployee.OpenBalance1,"
-    S = S & "        dbo.TblEmployee.OpenBalanceType1,"
-    S = S & "        dbo.TblEmployee.OpenBalance,"
-    S = S & "        dbo.TblEmployee.OpenBalanceType,"
-    S = S & "        dbo.TblEmployee.OpenBalanceDate,"
-    S = S & "        dbo.TblEmployee.opening_balance_voucher_id,"
-    S = S & "        dbo.TblEmployee.Fullcode,"
-    S = S & "        dbo.TblEmployee.prifix,"
-    S = S & "        dbo.TblEmployee.Emp_Namee4,"
-    S = S & "        dbo.TblEmployee.Emp_Namee3,"
-    S = S & "        dbo.TblEmployee.Emp_Namee2,"
-    S = S & "        dbo.TblEmployee.Emp_Namee1,"
-    S = S & "        dbo.TblEmployee.Emp_Namee,"
-    S = S & "        dbo.TblEmployee.BranchId,"
-    S = S & "        dbo.TblEmployee.cost_center_id,"
-    S = S & "        dbo.jopstatus.namee,"
-    S = S & "        dbo.TblEmpJobsTypes.JobTypeNamee,"
-    S = S & "        dbo.TblEmpJobsTypes.VisaCode,"
-    S = S & "        dbo.TblEmpDepartments.DepartmentNamee,"
-    S = S & "        dbo.TblEmpDepartments.DeptColor,"
-    S = S & "        dbo.TblEmpDepartments.DeptBr,"
-    S = S & "        dbo.TblEmpDepartments.Dpeterial,"
-    S = S & "        dbo.TblEmpDepartments.short,"
-    S = S & "        dbo.EmpGroupDep.GroupName  AS LocationName,"
-    S = S & "        dbo.EmpGroupDep.Fullcode   AS FullGroupCode,"
-    S = S & "        dbo.EmpGroupDep.Ename      AS LocationNameE,"
-    S = S & "        dbo.TblEmployee.NationlID,"
-    S = S & "        InsuranceRenewA = CASE  TblEmployee.InsuranceRenew WHEN 1 THEN ' „ «· ÃœÌœ' ELSE '·„ Ì „ «· ÃœÌœ' END ,"
-    S = S & "        ToMA = CASE  TblEmployee.ToM WHEN 1 THEN ' „ «· ”œÌœ' ELSE '·„ Ì „ «· ”œÌœ' END ,"
-    S = S & "        TblEmployee.InsuranceRenew,"
-    S = S & "        TblEmployee.ToM,"
+    s = s & " SELECT dbo.TblEmpJobsTypes.JobTypeName,"
+    s = s & "        dbo.TblEmpDepartments.DepartmentName,"
+    s = s & "        dbo.jopstatus.color,"
+    s = s & "        dbo.jopstatus.name,"
+    s = s & "        dbo.TblEmployee.Emp_ID,"
+    s = s & "        dbo.TblEmployee.Emp_Code,"
+    s = s & "        dbo.TblEmployee.Emp_Name,"
+    s = s & "        dbo.TblEmployee.Emp_Name1,"
+    s = s & "        dbo.TblEmployee.Emp_Name2,"
+    s = s & "        dbo.TblEmployee.Emp_Name3,"
+    s = s & "        dbo.TblEmployee.Emp_Name4,"
+    s = s & "        dbo.TblEmployee.Emp_Mail,"
+    s = s & "        dbo.TblEmployee.Emp_Phone,"
+    s = s & "        dbo.TblEmployee.Emp_mobile,"
+    s = s & "        dbo.TblEmployee.Emp_Remark,"
+    s = s & "        dbo.TblEmployee.Emp_Salary,"
+    s = s & "        dbo.TblEmployee.Emp_Comm,"
+    s = s & "        dbo.TblEmployee.EmpProfitCom,"
+    s = s & "        dbo.TblEmployee.workstate,"
+    s = s & "        dbo.TblEmployee.DepartmentID,"
+    s = s & "        dbo.TblEmployee.JobTypeID,"
+    s = s & "        dbo.TblEmployee.SpecificationID,"
+    s = s & "        dbo.TblEmployee.Region,"
+    s = s & "        dbo.TblEmployee.InsuranceState,"
+    s = s & "        dbo.TblEmployee.InsuranceValue,"
+    s = s & "        dbo.TblEmployee.OtherDiscounts,"
+    s = s & "        dbo.TblEmployee.placeEkama,"
+    s = s & "        dbo.TblEmployee.NumEkama,"
+    s = s & "        dbo.TblEmployee.DateExpoekama,"
+    s = s & "        dbo.TblEmployee.DateEndekama,"
+    s = s & "        dbo.TblEmployee.DateExpoekamaH,"
+    s = s & "        dbo.TblEmployee.DateEndekamah,"
+    s = s & "        dbo.TblEmployee.NumLicn,"
+    s = s & "        dbo.TblEmployee.DateExpLinc,"
+    s = s & "        dbo.TblEmployee.DateEndLinc,"
+    s = s & "        dbo.TblEmployee.DateExpLincH,"
+    s = s & "        dbo.TblEmployee.DateEndLincH,"
+    s = s & "        dbo.TblEmployee.NumPoket,"
+    s = s & "        dbo.TblEmployee.Dateexppoket,"
+    s = s & "        dbo.TblEmployee.dateendpoket,"
+    s = s & "        dbo.TblEmployee.NumPasp,"
+    s = s & "        dbo.TblEmployee.DateEndPasp,"
+    s = s & "        dbo.TblEmployee.DateExpPasp,"
+    s = s & "        dbo.TblEmployee.EmpNum,"
+    s = s & "        dbo.TblEmployee.CustNum,"
+    s = s & "        dbo.TblEmployee.ChekEndWork,"
+    s = s & "        dbo.TblEmployee.ChekStkala,"
+    s = s & "        dbo.TblEmployee.BignDateWork,"
+    s = s & "        dbo.TblEmployee.EndWork,"
+    s = s & "        dbo.TblEmployee.Notsstkala,"
+    s = s & "        dbo.TblEmployee.checkbox1,"
+    s = s & "        dbo.TblEmployee.DOB,"
+    s = s & "        dbo.TblEmployee.KafelID,"
+    s = s & "        dbo.TblEmployee.KafelName,"
+    s = s & "        dbo.TblEmployee.pasplace,"
+    s = s & "        dbo.TblEmployee.Nationality,"
+    s = s & "        dbo.TblEmployee.dean,"
+    s = s & "        dbo.TblEmployee.hdodno,"
+    s = s & "        dbo.TblEmployee.hdoddate,"
+    s = s & "        dbo.TblEmployee.hdomnfaz,"
+    s = s & "        dbo.TblEmployee.kafeltel,"
+    s = s & "        dbo.TblEmployee.jopstatusid,"
+    s = s & "        dbo.TblEmployee.kafeladd,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_sakn,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_bus,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_food,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_mob,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_mang,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_others,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_sakn1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_bus1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_food1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_others1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_mob1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_mang1,"
+    s = s & "        dbo.TblEmployee.Account_code,"
+    s = s & "        dbo.TblEmployee.Account_code1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_saknc,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_busc,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_foodc,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_othersc,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_mobc,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_mangc,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_saknc1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_busc1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_foodc1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_othersc1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_mobc1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_mangc1,"
+    s = s & "        dbo.TblEmployee.ItemPhoto,"
+    s = s & "        dbo.TblEmployee.placeWORK,"
+    s = s & "        dbo.TblEmployee.project_id,"
+    s = s & "        dbo.TblEmployee.Account_Code2,"
+    s = s & "        dbo.TblEmployee.Dateexppoketh,"
+    s = s & "        dbo.TblEmployee.dateendpoketh,"
+    s = s & "        dbo.TblEmployee.opr_fullcode,"
+    s = s & "        dbo.TblEmployee.term_id,"
+    s = s & "        dbo.TblEmployee.opr_id,"
+    s = s & "        dbo.TblEmployee.term_fullcode,"
+    s = s & "        dbo.TblEmployee.BlnceVocat,"
+    s = s & "        dbo.TblEmployee.InstanceDateH,"
+    s = s & "        dbo.TblEmployee.InstanceDateM,"
+    s = s & "        dbo.TblEmployee.PerceTage,"
+    s = s & "        dbo.TblEmployee.WorkShop_Job,"
+    s = s & "        dbo.TblEmployee.BYHour,"
+    s = s & "        dbo.TblEmployee.Percentage,"
+    s = s & "        dbo.TblEmployee.SalaryType,"
+    s = s & "        dbo.TblEmployee.DriverLicenseendH,"
+    s = s & "        dbo.TblEmployee.DriverLicenseStartdH,"
+    s = s & "        dbo.TblEmployee.DriverLicenseend,"
+    s = s & "        dbo.TblEmployee.DriverLicense,"
+    s = s & "        dbo.TblEmployee.lastHolidaydateH,"
+    s = s & "        dbo.TblEmployee.lastHolidaydate,"
+    s = s & "        dbo.TblEmployee.OpenBalance4,"
+    s = s & "        dbo.TblEmployee.OpenBalanceType4,"
+    s = s & "        dbo.TblEmployee.swapedempid,"
+    s = s & "        dbo.TblEmployee.mangerid,"
+    s = s & "        dbo.TblEmployee.GroupID,"
+    s = s & "        dbo.TblEmployee.VisaNo,"
+    s = s & "        dbo.TblEmployee.JobTypeID3,"
+    s = s & "        dbo.TblEmployee.JobTypeID2,"
+    s = s & "        dbo.TblEmployee.JobTypeID1,"
+    s = s & "        dbo.TblEmployee.LastDateH,"
+    s = s & "        dbo.TblEmployee.LastDate,"
+    s = s & "        dbo.TblEmployee.IssueDateH,"
+    s = s & "        dbo.TblEmployee.DOBH,"
+    s = s & "        dbo.TblEmployee.gradeID,"
+    s = s & "        dbo.TblEmployee.InsuranceNO,"
+    s = s & "        dbo.TblEmployee.BankCard,"
+    s = s & "        dbo.TblEmployee.DriverId,"
+    s = s & "        dbo.TblEmployee.Account_Code5,"
+    s = s & "        dbo.TblEmployee.Account_Code4,"
+    s = s & "        dbo.TblEmployee.Account_Code3,"
+    s = s & "        dbo.TblEmployee.OpenBalanceType2,"
+    s = s & "        dbo.TblEmployee.OpenBalance2,"
+    s = s & "        dbo.TblEmployee.OpenBalance1,"
+    s = s & "        dbo.TblEmployee.OpenBalanceType1,"
+    s = s & "        dbo.TblEmployee.OpenBalance,"
+    s = s & "        dbo.TblEmployee.OpenBalanceType,"
+    s = s & "        dbo.TblEmployee.OpenBalanceDate,"
+    s = s & "        dbo.TblEmployee.opening_balance_voucher_id,"
+    s = s & "        dbo.TblEmployee.Fullcode,"
+    s = s & "        dbo.TblEmployee.prifix,"
+    s = s & "        dbo.TblEmployee.Emp_Namee4,"
+    s = s & "        dbo.TblEmployee.Emp_Namee3,"
+    s = s & "        dbo.TblEmployee.Emp_Namee2,"
+    s = s & "        dbo.TblEmployee.Emp_Namee1,"
+    s = s & "        dbo.TblEmployee.Emp_Namee,"
+    s = s & "        dbo.TblEmployee.BranchId,"
+    s = s & "        dbo.TblEmployee.cost_center_id,"
+    s = s & "        dbo.jopstatus.namee,"
+    s = s & "        dbo.TblEmpJobsTypes.JobTypeNamee,"
+    s = s & "        dbo.TblEmpJobsTypes.VisaCode,"
+    s = s & "        dbo.TblEmpDepartments.DepartmentNamee,"
+    s = s & "        dbo.TblEmpDepartments.DeptColor,"
+    s = s & "        dbo.TblEmpDepartments.DeptBr,"
+    s = s & "        dbo.TblEmpDepartments.Dpeterial,"
+    s = s & "        dbo.TblEmpDepartments.short,"
+    s = s & "        dbo.EmpGroupDep.GroupName  AS LocationName,"
+    s = s & "        dbo.EmpGroupDep.Fullcode   AS FullGroupCode,"
+    s = s & "        dbo.EmpGroupDep.Ename      AS LocationNameE,"
+    s = s & "        dbo.TblEmployee.NationlID,"
+    s = s & "        InsuranceRenewA = CASE  TblEmployee.InsuranceRenew WHEN 1 THEN ' „ «· ÃœÌœ' ELSE '·„ Ì „ «· ÃœÌœ' END ,"
+    s = s & "        ToMA = CASE  TblEmployee.ToM WHEN 1 THEN ' „ «· ”œÌœ' ELSE '·„ Ì „ «· ”œÌœ' END ,"
+    s = s & "        TblEmployee.InsuranceRenew,"
+    s = s & "        TblEmployee.ToM,"
 
-    S = S & "        TblEmployee.InsuranceRenewDate,"
-    S = S & "        TblEmployee.ToMDateNew,"
-    S = S & "        TblEmployee.CopyNo,"
-    S = S & "        TblEmployee.NumPaspOld"
+    s = s & "        TblEmployee.InsuranceRenewDate,"
+    s = s & "        TblEmployee.ToMDateNew,"
+    s = s & "        TblEmployee.CopyNo,"
+    s = s & "        TblEmployee.NumPaspOld"
 
-    S = S & " From dbo.TblEmployee"
-    S = S & "        LEFT OUTER JOIN dbo.EmpGroupDep"
-    S = S & "             ON  dbo.TblEmployee.GroupID = dbo.EmpGroupDep.GroupID"
-    S = S & "        LEFT OUTER JOIN dbo.jopstatus"
-    S = S & "             ON  dbo.TblEmployee.jopstatusid = dbo.jopstatus.id"
-    S = S & "        LEFT OUTER JOIN dbo.TblEmpDepartments"
-    S = S & "             ON  dbo.TblEmployee.DepartmentID = dbo.TblEmpDepartments.DeparmentID"
-    S = S & "        LEFT OUTER JOIN dbo.TblEmpJobsTypes"
-    S = S & "             ON  dbo.TblEmployee.JobTypeID = dbo.TblEmpJobsTypes.JobTypeID"
-    Cn.Execute S
+    s = s & " From dbo.TblEmployee"
+    s = s & "        LEFT OUTER JOIN dbo.EmpGroupDep"
+    s = s & "             ON  dbo.TblEmployee.GroupID = dbo.EmpGroupDep.GroupID"
+    s = s & "        LEFT OUTER JOIN dbo.jopstatus"
+    s = s & "             ON  dbo.TblEmployee.jopstatusid = dbo.jopstatus.id"
+    s = s & "        LEFT OUTER JOIN dbo.TblEmpDepartments"
+    s = s & "             ON  dbo.TblEmployee.DepartmentID = dbo.TblEmpDepartments.DeparmentID"
+    s = s & "        LEFT OUTER JOIN dbo.TblEmpJobsTypes"
+    s = s & "             ON  dbo.TblEmployee.JobTypeID = dbo.TblEmpJobsTypes.JobTypeID"
+    Cn.Execute s
 
     DB_CreateField "TbVisa", "ArriveDateH", adVarWChar, adColNullable, 20, , "      ", False, True, , True
     DB_CreateField "TbVisa", "ArriveDate", adDBTimeStamp, adColNullable, , , "      ", False, True
@@ -5790,190 +5809,190 @@ Function UpdateDataBasePart26()
     DB_CreateField "TblChangeEmployeedataDetails", "ToMDateNew", adDBTimeStamp, adColNullable, , , "", False, True
     DB_CreateField "TblChangeEmployeedataDetails", "NumPasp", adVarWChar, adColNullable, 255, , "", False, True, , True
  
-    S = " ALTER VIEW emp_all_details AS"
+    s = " ALTER VIEW emp_all_details AS"
 
-    S = S & " SELECT dbo.TblEmpJobsTypes.JobTypeName,"
-    S = S & "        dbo.TblEmpDepartments.DepartmentName,"
-    S = S & "        dbo.jopstatus.color,"
-    S = S & "        dbo.jopstatus.name,"
-    S = S & "        dbo.TblEmployee.Emp_ID,"
-    S = S & "        dbo.TblEmployee.Emp_Code,"
-    S = S & "        dbo.TblEmployee.Emp_Name,"
-    S = S & "        dbo.TblEmployee.Emp_Name1,"
-    S = S & "        dbo.TblEmployee.Emp_Name2,"
-    S = S & "        dbo.TblEmployee.Emp_Name3,"
-    S = S & "        dbo.TblEmployee.Emp_Name4,"
-    S = S & "        dbo.TblEmployee.Emp_Mail,"
-    S = S & "        dbo.TblEmployee.Emp_Phone,"
-    S = S & "        dbo.TblEmployee.Emp_mobile,"
-    S = S & "        dbo.TblEmployee.Emp_Remark,"
-    S = S & "        dbo.TblEmployee.Emp_Salary,"
-    S = S & "        dbo.TblEmployee.Emp_Comm,"
-    S = S & "        dbo.TblEmployee.EmpProfitCom,"
-    S = S & "        dbo.TblEmployee.workstate,"
-    S = S & "        dbo.TblEmployee.DepartmentID,"
-    S = S & "        dbo.TblEmployee.JobTypeID,"
-    S = S & "        dbo.TblEmployee.SpecificationID,"
-    S = S & "        dbo.TblEmployee.Region,"
-    S = S & "        dbo.TblEmployee.InsuranceState,"
-    S = S & "        dbo.TblEmployee.InsuranceValue,"
-    S = S & "        dbo.TblEmployee.OtherDiscounts,"
-    S = S & "        dbo.TblEmployee.placeEkama,"
-    S = S & "        dbo.TblEmployee.NumEkama,"
-    S = S & "        dbo.TblEmployee.DateExpoekama,"
-    S = S & "        dbo.TblEmployee.DateEndekama,"
-    S = S & "        dbo.TblEmployee.DateExpoekamaH,"
-    S = S & "        dbo.TblEmployee.DateEndekamah,"
-    S = S & "        dbo.TblEmployee.NumLicn,"
-    S = S & "        dbo.TblEmployee.DateExpLinc,"
-    S = S & "        dbo.TblEmployee.DateEndLinc,"
-    S = S & "        dbo.TblEmployee.DateExpLincH,"
-    S = S & "        dbo.TblEmployee.DateEndLincH,"
-    S = S & "        dbo.TblEmployee.NumPoket,"
-    S = S & "        dbo.TblEmployee.Dateexppoket,"
-    S = S & "        dbo.TblEmployee.dateendpoket,"
-    S = S & "        dbo.TblEmployee.NumPasp,"
-    S = S & "        dbo.TblEmployee.DateEndPasp,"
-    S = S & "        dbo.TblEmployee.DateExpPasp,"
-    S = S & "        dbo.TblEmployee.EmpNum,"
-    S = S & "        dbo.TblEmployee.CustNum,"
-    S = S & "        dbo.TblEmployee.ChekEndWork,"
-    S = S & "        dbo.TblEmployee.ChekStkala,"
-    S = S & "        dbo.TblEmployee.BignDateWork,"
-    S = S & "        dbo.TblEmployee.EndWork,"
-    S = S & "        dbo.TblEmployee.Notsstkala,"
-    S = S & "        dbo.TblEmployee.checkbox1,"
-    S = S & "        dbo.TblEmployee.DOB,"
-    S = S & "        dbo.TblEmployee.KafelID,"
-    S = S & "        dbo.TblEmployee.KafelName,"
-    S = S & "        dbo.TblEmployee.pasplace,"
-    S = S & "        dbo.TblEmployee.Nationality,"
-    S = S & "        dbo.TblEmployee.dean,"
-    S = S & "        dbo.TblEmployee.hdodno,"
-    S = S & "        dbo.TblEmployee.hdoddate,"
-    S = S & "        dbo.TblEmployee.hdomnfaz,"
-    S = S & "        dbo.TblEmployee.kafeltel,"
-    S = S & "        dbo.TblEmployee.jopstatusid,"
-    S = S & "        dbo.TblEmployee.kafeladd,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_sakn,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_bus,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_food,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_mob,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_mang,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_others,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_sakn1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_bus1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_food1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_others1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_mob1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_mang1,"
-    S = S & "        dbo.TblEmployee.Account_code,"
-    S = S & "        dbo.TblEmployee.Account_code1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_saknc,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_busc,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_foodc,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_othersc,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_mobc,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_mangc,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_saknc1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_busc1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_foodc1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_othersc1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_mobc1,"
-    S = S & "        dbo.TblEmployee.Emp_Salary_mangc1,"
-    S = S & "        dbo.TblEmployee.ItemPhoto,"
-    S = S & "        dbo.TblEmployee.placeWORK,"
-    S = S & "        dbo.TblEmployee.project_id,"
-    S = S & "        dbo.TblEmployee.Account_Code2,"
-    S = S & "        dbo.TblEmployee.Dateexppoketh,"
-    S = S & "        dbo.TblEmployee.dateendpoketh,"
-    S = S & "        dbo.TblEmployee.opr_fullcode,"
-    S = S & "        dbo.TblEmployee.term_id,"
-    S = S & "        dbo.TblEmployee.opr_id,"
-    S = S & "        dbo.TblEmployee.term_fullcode,"
-    S = S & "        dbo.TblEmployee.BlnceVocat,"
-    S = S & "        dbo.TblEmployee.InstanceDateH,"
-    S = S & "        dbo.TblEmployee.InstanceDateM,"
-    S = S & "        dbo.TblEmployee.PerceTage,"
-    S = S & "        dbo.TblEmployee.WorkShop_Job,"
-    S = S & "        dbo.TblEmployee.BYHour,"
-    S = S & "        dbo.TblEmployee.Percentage,"
-    S = S & "        dbo.TblEmployee.SalaryType,"
-    S = S & "        dbo.TblEmployee.DriverLicenseendH,"
-    S = S & "        dbo.TblEmployee.DriverLicenseStartdH,"
-    S = S & "        dbo.TblEmployee.DriverLicenseend,"
-    S = S & "        dbo.TblEmployee.DriverLicense,"
-    S = S & "        dbo.TblEmployee.lastHolidaydateH,"
-    S = S & "        dbo.TblEmployee.lastHolidaydate,"
-    S = S & "        dbo.TblEmployee.OpenBalance4,"
-    S = S & "        dbo.TblEmployee.OpenBalanceType4,"
-    S = S & "        dbo.TblEmployee.swapedempid,"
-    S = S & "        dbo.TblEmployee.mangerid,"
-    S = S & "        dbo.TblEmployee.GroupID,"
-    S = S & "        dbo.TblEmployee.VisaNo,"
-    S = S & "        dbo.TblEmployee.JobTypeID3,"
-    S = S & "        dbo.TblEmployee.JobTypeID2,"
-    S = S & "        dbo.TblEmployee.JobTypeID1,"
-    S = S & "        dbo.TblEmployee.LastDateH,"
-    S = S & "        dbo.TblEmployee.LastDate,"
-    S = S & "        dbo.TblEmployee.IssueDateH,"
-    S = S & "        dbo.TblEmployee.DOBH,"
-    S = S & "        dbo.TblEmployee.gradeID,"
-    S = S & "        dbo.TblEmployee.InsuranceNO,"
-    S = S & "        dbo.TblEmployee.BankCard,"
-    S = S & "        dbo.TblEmployee.DriverId,"
-    S = S & "        dbo.TblEmployee.Account_Code5,"
-    S = S & "        dbo.TblEmployee.Account_Code4,"
-    S = S & "        dbo.TblEmployee.Account_Code3,"
-    S = S & "        dbo.TblEmployee.OpenBalanceType2,"
-    S = S & "        dbo.TblEmployee.OpenBalance2,"
-    S = S & "        dbo.TblEmployee.OpenBalance1,"
-    S = S & "        dbo.TblEmployee.OpenBalanceType1,"
-    S = S & "        dbo.TblEmployee.OpenBalance,"
-    S = S & "        dbo.TblEmployee.OpenBalanceType,"
-    S = S & "        dbo.TblEmployee.OpenBalanceDate,"
-    S = S & "        dbo.TblEmployee.opening_balance_voucher_id,"
-    S = S & "        dbo.TblEmployee.Fullcode,"
-    S = S & "        dbo.TblEmployee.prifix,"
-    S = S & "        dbo.TblEmployee.Emp_Namee4,"
-    S = S & "        dbo.TblEmployee.Emp_Namee3,"
-    S = S & "        dbo.TblEmployee.Emp_Namee2,"
-    S = S & "        dbo.TblEmployee.Emp_Namee1,"
-    S = S & "        dbo.TblEmployee.Emp_Namee,"
-    S = S & "        dbo.TblEmployee.BranchId,"
-    S = S & "        dbo.TblEmployee.cost_center_id,"
-    S = S & "        dbo.jopstatus.namee,"
-    S = S & "        dbo.TblEmpJobsTypes.JobTypeNamee,"
-    S = S & "        dbo.TblEmpJobsTypes.VisaCode,"
-    S = S & "        dbo.TblEmpDepartments.DepartmentNamee,"
-    S = S & "        dbo.TblEmpDepartments.DeptColor,"
-    S = S & "        dbo.TblEmpDepartments.DeptBr,"
-    S = S & "        dbo.TblEmpDepartments.Dpeterial,"
-    S = S & "        dbo.TblEmpDepartments.short,"
-    S = S & "        dbo.EmpGroupDep.GroupName  AS LocationName,"
-    S = S & "        dbo.EmpGroupDep.Fullcode   AS FullGroupCode,"
-    S = S & "        dbo.EmpGroupDep.Ename      AS LocationNameE,"
-    S = S & "        dbo.TblEmployee.NationlID,"
-    S = S & "        InsuranceRenewA = CASE  TblEmployee.InsuranceRenew WHEN 1 THEN ' „ «· ÃœÌœ' ELSE '·„ Ì „ «· ÃœÌœ' END ,"
-    S = S & "        ToMA = CASE  TblEmployee.ToM WHEN 1 THEN ' „ «· ”œÌœ' ELSE '·„ Ì „ «· ”œÌœ' END ,"
-    S = S & "        TblEmployee.InsuranceRenew,"
-    S = S & "        TblEmployee.ToM,"
+    s = s & " SELECT dbo.TblEmpJobsTypes.JobTypeName,"
+    s = s & "        dbo.TblEmpDepartments.DepartmentName,"
+    s = s & "        dbo.jopstatus.color,"
+    s = s & "        dbo.jopstatus.name,"
+    s = s & "        dbo.TblEmployee.Emp_ID,"
+    s = s & "        dbo.TblEmployee.Emp_Code,"
+    s = s & "        dbo.TblEmployee.Emp_Name,"
+    s = s & "        dbo.TblEmployee.Emp_Name1,"
+    s = s & "        dbo.TblEmployee.Emp_Name2,"
+    s = s & "        dbo.TblEmployee.Emp_Name3,"
+    s = s & "        dbo.TblEmployee.Emp_Name4,"
+    s = s & "        dbo.TblEmployee.Emp_Mail,"
+    s = s & "        dbo.TblEmployee.Emp_Phone,"
+    s = s & "        dbo.TblEmployee.Emp_mobile,"
+    s = s & "        dbo.TblEmployee.Emp_Remark,"
+    s = s & "        dbo.TblEmployee.Emp_Salary,"
+    s = s & "        dbo.TblEmployee.Emp_Comm,"
+    s = s & "        dbo.TblEmployee.EmpProfitCom,"
+    s = s & "        dbo.TblEmployee.workstate,"
+    s = s & "        dbo.TblEmployee.DepartmentID,"
+    s = s & "        dbo.TblEmployee.JobTypeID,"
+    s = s & "        dbo.TblEmployee.SpecificationID,"
+    s = s & "        dbo.TblEmployee.Region,"
+    s = s & "        dbo.TblEmployee.InsuranceState,"
+    s = s & "        dbo.TblEmployee.InsuranceValue,"
+    s = s & "        dbo.TblEmployee.OtherDiscounts,"
+    s = s & "        dbo.TblEmployee.placeEkama,"
+    s = s & "        dbo.TblEmployee.NumEkama,"
+    s = s & "        dbo.TblEmployee.DateExpoekama,"
+    s = s & "        dbo.TblEmployee.DateEndekama,"
+    s = s & "        dbo.TblEmployee.DateExpoekamaH,"
+    s = s & "        dbo.TblEmployee.DateEndekamah,"
+    s = s & "        dbo.TblEmployee.NumLicn,"
+    s = s & "        dbo.TblEmployee.DateExpLinc,"
+    s = s & "        dbo.TblEmployee.DateEndLinc,"
+    s = s & "        dbo.TblEmployee.DateExpLincH,"
+    s = s & "        dbo.TblEmployee.DateEndLincH,"
+    s = s & "        dbo.TblEmployee.NumPoket,"
+    s = s & "        dbo.TblEmployee.Dateexppoket,"
+    s = s & "        dbo.TblEmployee.dateendpoket,"
+    s = s & "        dbo.TblEmployee.NumPasp,"
+    s = s & "        dbo.TblEmployee.DateEndPasp,"
+    s = s & "        dbo.TblEmployee.DateExpPasp,"
+    s = s & "        dbo.TblEmployee.EmpNum,"
+    s = s & "        dbo.TblEmployee.CustNum,"
+    s = s & "        dbo.TblEmployee.ChekEndWork,"
+    s = s & "        dbo.TblEmployee.ChekStkala,"
+    s = s & "        dbo.TblEmployee.BignDateWork,"
+    s = s & "        dbo.TblEmployee.EndWork,"
+    s = s & "        dbo.TblEmployee.Notsstkala,"
+    s = s & "        dbo.TblEmployee.checkbox1,"
+    s = s & "        dbo.TblEmployee.DOB,"
+    s = s & "        dbo.TblEmployee.KafelID,"
+    s = s & "        dbo.TblEmployee.KafelName,"
+    s = s & "        dbo.TblEmployee.pasplace,"
+    s = s & "        dbo.TblEmployee.Nationality,"
+    s = s & "        dbo.TblEmployee.dean,"
+    s = s & "        dbo.TblEmployee.hdodno,"
+    s = s & "        dbo.TblEmployee.hdoddate,"
+    s = s & "        dbo.TblEmployee.hdomnfaz,"
+    s = s & "        dbo.TblEmployee.kafeltel,"
+    s = s & "        dbo.TblEmployee.jopstatusid,"
+    s = s & "        dbo.TblEmployee.kafeladd,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_sakn,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_bus,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_food,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_mob,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_mang,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_others,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_sakn1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_bus1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_food1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_others1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_mob1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_mang1,"
+    s = s & "        dbo.TblEmployee.Account_code,"
+    s = s & "        dbo.TblEmployee.Account_code1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_saknc,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_busc,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_foodc,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_othersc,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_mobc,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_mangc,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_saknc1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_busc1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_foodc1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_othersc1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_mobc1,"
+    s = s & "        dbo.TblEmployee.Emp_Salary_mangc1,"
+    s = s & "        dbo.TblEmployee.ItemPhoto,"
+    s = s & "        dbo.TblEmployee.placeWORK,"
+    s = s & "        dbo.TblEmployee.project_id,"
+    s = s & "        dbo.TblEmployee.Account_Code2,"
+    s = s & "        dbo.TblEmployee.Dateexppoketh,"
+    s = s & "        dbo.TblEmployee.dateendpoketh,"
+    s = s & "        dbo.TblEmployee.opr_fullcode,"
+    s = s & "        dbo.TblEmployee.term_id,"
+    s = s & "        dbo.TblEmployee.opr_id,"
+    s = s & "        dbo.TblEmployee.term_fullcode,"
+    s = s & "        dbo.TblEmployee.BlnceVocat,"
+    s = s & "        dbo.TblEmployee.InstanceDateH,"
+    s = s & "        dbo.TblEmployee.InstanceDateM,"
+    s = s & "        dbo.TblEmployee.PerceTage,"
+    s = s & "        dbo.TblEmployee.WorkShop_Job,"
+    s = s & "        dbo.TblEmployee.BYHour,"
+    s = s & "        dbo.TblEmployee.Percentage,"
+    s = s & "        dbo.TblEmployee.SalaryType,"
+    s = s & "        dbo.TblEmployee.DriverLicenseendH,"
+    s = s & "        dbo.TblEmployee.DriverLicenseStartdH,"
+    s = s & "        dbo.TblEmployee.DriverLicenseend,"
+    s = s & "        dbo.TblEmployee.DriverLicense,"
+    s = s & "        dbo.TblEmployee.lastHolidaydateH,"
+    s = s & "        dbo.TblEmployee.lastHolidaydate,"
+    s = s & "        dbo.TblEmployee.OpenBalance4,"
+    s = s & "        dbo.TblEmployee.OpenBalanceType4,"
+    s = s & "        dbo.TblEmployee.swapedempid,"
+    s = s & "        dbo.TblEmployee.mangerid,"
+    s = s & "        dbo.TblEmployee.GroupID,"
+    s = s & "        dbo.TblEmployee.VisaNo,"
+    s = s & "        dbo.TblEmployee.JobTypeID3,"
+    s = s & "        dbo.TblEmployee.JobTypeID2,"
+    s = s & "        dbo.TblEmployee.JobTypeID1,"
+    s = s & "        dbo.TblEmployee.LastDateH,"
+    s = s & "        dbo.TblEmployee.LastDate,"
+    s = s & "        dbo.TblEmployee.IssueDateH,"
+    s = s & "        dbo.TblEmployee.DOBH,"
+    s = s & "        dbo.TblEmployee.gradeID,"
+    s = s & "        dbo.TblEmployee.InsuranceNO,"
+    s = s & "        dbo.TblEmployee.BankCard,"
+    s = s & "        dbo.TblEmployee.DriverId,"
+    s = s & "        dbo.TblEmployee.Account_Code5,"
+    s = s & "        dbo.TblEmployee.Account_Code4,"
+    s = s & "        dbo.TblEmployee.Account_Code3,"
+    s = s & "        dbo.TblEmployee.OpenBalanceType2,"
+    s = s & "        dbo.TblEmployee.OpenBalance2,"
+    s = s & "        dbo.TblEmployee.OpenBalance1,"
+    s = s & "        dbo.TblEmployee.OpenBalanceType1,"
+    s = s & "        dbo.TblEmployee.OpenBalance,"
+    s = s & "        dbo.TblEmployee.OpenBalanceType,"
+    s = s & "        dbo.TblEmployee.OpenBalanceDate,"
+    s = s & "        dbo.TblEmployee.opening_balance_voucher_id,"
+    s = s & "        dbo.TblEmployee.Fullcode,"
+    s = s & "        dbo.TblEmployee.prifix,"
+    s = s & "        dbo.TblEmployee.Emp_Namee4,"
+    s = s & "        dbo.TblEmployee.Emp_Namee3,"
+    s = s & "        dbo.TblEmployee.Emp_Namee2,"
+    s = s & "        dbo.TblEmployee.Emp_Namee1,"
+    s = s & "        dbo.TblEmployee.Emp_Namee,"
+    s = s & "        dbo.TblEmployee.BranchId,"
+    s = s & "        dbo.TblEmployee.cost_center_id,"
+    s = s & "        dbo.jopstatus.namee,"
+    s = s & "        dbo.TblEmpJobsTypes.JobTypeNamee,"
+    s = s & "        dbo.TblEmpJobsTypes.VisaCode,"
+    s = s & "        dbo.TblEmpDepartments.DepartmentNamee,"
+    s = s & "        dbo.TblEmpDepartments.DeptColor,"
+    s = s & "        dbo.TblEmpDepartments.DeptBr,"
+    s = s & "        dbo.TblEmpDepartments.Dpeterial,"
+    s = s & "        dbo.TblEmpDepartments.short,"
+    s = s & "        dbo.EmpGroupDep.GroupName  AS LocationName,"
+    s = s & "        dbo.EmpGroupDep.Fullcode   AS FullGroupCode,"
+    s = s & "        dbo.EmpGroupDep.Ename      AS LocationNameE,"
+    s = s & "        dbo.TblEmployee.NationlID,"
+    s = s & "        InsuranceRenewA = CASE  TblEmployee.InsuranceRenew WHEN 1 THEN ' „ «· ÃœÌœ' ELSE '·„ Ì „ «· ÃœÌœ' END ,"
+    s = s & "        ToMA = CASE  TblEmployee.ToM WHEN 1 THEN ' „ «· ”œÌœ' ELSE '·„ Ì „ «· ”œÌœ' END ,"
+    s = s & "        TblEmployee.InsuranceRenew,"
+    s = s & "        TblEmployee.ToM,"
 
-    S = S & "        TblEmployee.InsuranceRenewDate,"
-    S = S & "        TblEmployee.ToMDateNew,"
-    S = S & "        TblEmployee.CopyNo,"
-    S = S & "        TblEmployee.NumPaspOld"
+    s = s & "        TblEmployee.InsuranceRenewDate,"
+    s = s & "        TblEmployee.ToMDateNew,"
+    s = s & "        TblEmployee.CopyNo,"
+    s = s & "        TblEmployee.NumPaspOld"
 
-    S = S & " From dbo.TblEmployee"
-    S = S & "        LEFT OUTER JOIN dbo.EmpGroupDep"
-    S = S & "             ON  dbo.TblEmployee.GroupID = dbo.EmpGroupDep.GroupID"
-    S = S & "        LEFT OUTER JOIN dbo.jopstatus"
-    S = S & "             ON  dbo.TblEmployee.jopstatusid = dbo.jopstatus.id"
-    S = S & "        LEFT OUTER JOIN dbo.TblEmpDepartments"
-    S = S & "             ON  dbo.TblEmployee.DepartmentID = dbo.TblEmpDepartments.DeparmentID"
-    S = S & "        LEFT OUTER JOIN dbo.TblEmpJobsTypes"
-    S = S & "             ON  dbo.TblEmployee.JobTypeID = dbo.TblEmpJobsTypes.JobTypeID"
-    Cn.Execute S
+    s = s & " From dbo.TblEmployee"
+    s = s & "        LEFT OUTER JOIN dbo.EmpGroupDep"
+    s = s & "             ON  dbo.TblEmployee.GroupID = dbo.EmpGroupDep.GroupID"
+    s = s & "        LEFT OUTER JOIN dbo.jopstatus"
+    s = s & "             ON  dbo.TblEmployee.jopstatusid = dbo.jopstatus.id"
+    s = s & "        LEFT OUTER JOIN dbo.TblEmpDepartments"
+    s = s & "             ON  dbo.TblEmployee.DepartmentID = dbo.TblEmpDepartments.DeparmentID"
+    s = s & "        LEFT OUTER JOIN dbo.TblEmpJobsTypes"
+    s = s & "             ON  dbo.TblEmployee.JobTypeID = dbo.TblEmpJobsTypes.JobTypeID"
+    Cn.Execute s
  
     DB_CreateField "TblChangeEmployeedata", "IsPassport", adBoolean, adColNullable, , , "    ", False, True
     DB_CreateField "TblChangeEmployeedata", "IsInsurance", adBoolean, adColNullable, , , "    ", False, True
@@ -6286,7 +6305,7 @@ Function UpdateDataBasePart27()
 
     On Error Resume Next
     Dim New_View As String
-    Dim S        As String
+    Dim s        As String
     
     '*************************
     
@@ -6397,36 +6416,36 @@ Function UpdateDataBasePart27()
     add_record_to_table "TransactionTypes", "Transaction_Type,TransactionTypeName,TransactionEnglishName,StockEffect", " 76 , ' «·€«¡ «·ÕÃ“' , 'Cancellation of reservation' ,1", "Transaction_Type", 76
     DB_CreateField "DOUBLE_ENTREY_VOUCHERS", "IsHidden", adInteger, adColNullable, , , "      ", False, True
 
-    S = " SELECT     dbo.Notes.ChqueNum, dbo.Notes.ManualNo, dbo.DOUBLE_ENTREY_VOUCHERS.Double_Entry_Vouchers_ID, dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit,                      dbo.DOUBLE_ENTREY_VOUCHERS.[Value] AS DEV_Value, dbo.DOUBLE_ENTREY_VOUCHERS.RecordDateH, dbo.DOUBLE_ENTREY_VOUCHERS.Account_Code,                      dbo.DOUBLE_ENTREY_VOUCHERS.Double_Entry_Vouchers_Description AS DEV_DES,                       dbo.DOUBLE_ENTREY_VOUCHERS.Double_Entry_Vouchers_Descriptione AS DevDESE, dbo.ACCOUNTS.Account_Name,                      dbo.DOUBLE_ENTREY_VOUCHERS.DEV_ID_Line_No, dbo.TblNotesTypes.NotesTypeName, dbo.DOUBLE_ENTREY_VOUCHERS.UserID, dbo.TblUsers.UserName,                      dbo.DOUBLE_ENTREY_VOUCHERS.RecordDate, dbo.DOUBLE_ENTREY_VOUCHERS.Notes_ID, dbo.DOUBLE_ENTREY_VOUCHERS.ReceiptID,                      dbo.DOUBLE_ENTREY_VOUCHERS.OperaID, "
-    S = S & " dbo.DOUBLE_ENTREY_VOUCHERS.Transaction_ID , dbo.transactions.Transaction_serial, dbo.transactions.Transaction_Date ,"
-    S = S & " dbo.TransactionTypes.TransactionTypeName, dbo.DOUBLE_ENTREY_VOUCHERS.PostedDate, dbo.DOUBLE_ENTREY_VOUCHERS.PostedUserID, dbo.DOUBLE_ENTREY_VOUCHERS.Account_Interval_ID, dbo.Notes.NoteDate, dbo.Notes.NoteType, dbo.Notes.NoteSerial, dbo.Notes.Note_Value, dbo.Accounts.account_serial, dbo.Accounts.Account_NameEng, dbo.Accounts.Parent_Account_Code, dbo.Accounts.opening_balance, dbo.Accounts.opening_balance_type, dbo.Accounts.Branch, dbo.Accounts.Sum_account, dbo.Accounts.cost_center, dbo.Accounts.currenct_code, dbo.Notes.Remark, dbo.Notes.note_value_by_characters, dbo.Notes.foxy_no, dbo.DOUBLE_ENTREY_VOUCHERS.DEV_ID_Line_No1, dbo.TblNotesTypes.NotesTypeNameE, dbo.TransactionTypes.TransactionEnglishName, dbo.Notes.NoteSerial1, dbo.DOUBLE_ENTREY_VOUCHERS.branch_id, dbo.TblBranchesData.ActivityTypeId, "
-    S = S & " dbo.DOUBLE_ENTREY_VOUCHERS.notes_all, dbo.TblBranchesData.branch_name, dbo.TblBranchesData.branch_namee,                      "
-    S = S & " dbo.DOUBLE_ENTREY_VOUCHERS.Posted, dbo.DOUBLE_ENTREY_VOUCHERS.valuee AS DEV_ValueE, dbo.DOUBLE_ENTREY_VOUCHERS.currency,                      dbo.DOUBLE_ENTREY_VOUCHERS.rate, dbo.TblBranchesData.RegionID, dbo.TblSection.name, dbo.TblSection.namee,                      dbo.DOUBLE_ENTREY_VOUCHERS.DescAccount, dbo.DOUBLE_ENTREY_VOUCHERS.NextAccount_Code, dbo.DOUBLE_ENTREY_VOUCHERS.project_id,                      dbo.DOUBLE_ENTREY_VOUCHERS.opr_fullcode, dbo.DOUBLE_ENTREY_VOUCHERS.projectid, dbo.DOUBLE_ENTREY_VOUCHERS.operid,                      dbo.DOUBLE_ENTREY_VOUCHERS.pandid , dbo.DOUBLE_ENTREY_VOUCHERS.Aqarid, dbo.TblAqar.aqarname, dbo.TblAqar.aqarNo     FROM         dbo.TblAqar RIGHT OUTER JOIN                      dbo.TblBranchesData INNER JOIN                      dbo.TblUsers INNER JOIN                      dbo.DOUBLE_ENTREY_VOUCHERS ON "
-    S = S & " dbo.TblUsers.UserID = dbo.DOUBLE_ENTREY_VOUCHERS.UserID ON                      dbo.TblBranchesData.branch_id = dbo.DOUBLE_ENTREY_VOUCHERS.branch_id ON                      dbo.TblAqar.Aqarid = dbo.DOUBLE_ENTREY_VOUCHERS.Aqarid LEFT OUTER JOIN                      dbo.ACCOUNTS ON dbo.DOUBLE_ENTREY_VOUCHERS.Account_Code = dbo.ACCOUNTS.Account_Code LEFT OUTER JOIN                      dbo.TblSection ON dbo.TblBranchesData.RegionID = dbo.TblSection.Id LEFT OUTER JOIN                      dbo.Notes LEFT OUTER JOIN                      dbo.TblNotesTypes ON dbo.Notes.NoteType = dbo.TblNotesTypes.NotesType ON dbo.DOUBLE_ENTREY_VOUCHERS.Notes_ID = dbo.Notes.NoteID LEFT OUTER JOIN                      dbo.Transactions ON dbo.DOUBLE_ENTREY_VOUCHERS.Transaction_ID = dbo.Transactions.Transaction_ID LEFT OUTER JOIN                      dbo.TransactionTypes ON dbo.Transactions.Transaction_Type = dbo.TransactionTypes.Transaction_Type     "
-    S = S & " Where (dbo.DOUBLE_ENTREY_VOUCHERS.Posted Is Null and IsNull(DOUBLE_ENTREY_VOUCHERS.IsHidden,0) =0)"
+    s = " SELECT     dbo.Notes.ChqueNum, dbo.Notes.ManualNo, dbo.DOUBLE_ENTREY_VOUCHERS.Double_Entry_Vouchers_ID, dbo.DOUBLE_ENTREY_VOUCHERS.Credit_Or_Debit,                      dbo.DOUBLE_ENTREY_VOUCHERS.[Value] AS DEV_Value, dbo.DOUBLE_ENTREY_VOUCHERS.RecordDateH, dbo.DOUBLE_ENTREY_VOUCHERS.Account_Code,                      dbo.DOUBLE_ENTREY_VOUCHERS.Double_Entry_Vouchers_Description AS DEV_DES,                       dbo.DOUBLE_ENTREY_VOUCHERS.Double_Entry_Vouchers_Descriptione AS DevDESE, dbo.ACCOUNTS.Account_Name,                      dbo.DOUBLE_ENTREY_VOUCHERS.DEV_ID_Line_No, dbo.TblNotesTypes.NotesTypeName, dbo.DOUBLE_ENTREY_VOUCHERS.UserID, dbo.TblUsers.UserName,                      dbo.DOUBLE_ENTREY_VOUCHERS.RecordDate, dbo.DOUBLE_ENTREY_VOUCHERS.Notes_ID, dbo.DOUBLE_ENTREY_VOUCHERS.ReceiptID,                      dbo.DOUBLE_ENTREY_VOUCHERS.OperaID, "
+    s = s & " dbo.DOUBLE_ENTREY_VOUCHERS.Transaction_ID , dbo.transactions.Transaction_serial, dbo.transactions.Transaction_Date ,"
+    s = s & " dbo.TransactionTypes.TransactionTypeName, dbo.DOUBLE_ENTREY_VOUCHERS.PostedDate, dbo.DOUBLE_ENTREY_VOUCHERS.PostedUserID, dbo.DOUBLE_ENTREY_VOUCHERS.Account_Interval_ID, dbo.Notes.NoteDate, dbo.Notes.NoteType, dbo.Notes.NoteSerial, dbo.Notes.Note_Value, dbo.Accounts.account_serial, dbo.Accounts.Account_NameEng, dbo.Accounts.Parent_Account_Code, dbo.Accounts.opening_balance, dbo.Accounts.opening_balance_type, dbo.Accounts.Branch, dbo.Accounts.Sum_account, dbo.Accounts.cost_center, dbo.Accounts.currenct_code, dbo.Notes.Remark, dbo.Notes.note_value_by_characters, dbo.Notes.foxy_no, dbo.DOUBLE_ENTREY_VOUCHERS.DEV_ID_Line_No1, dbo.TblNotesTypes.NotesTypeNameE, dbo.TransactionTypes.TransactionEnglishName, dbo.Notes.NoteSerial1, dbo.DOUBLE_ENTREY_VOUCHERS.branch_id, dbo.TblBranchesData.ActivityTypeId, "
+    s = s & " dbo.DOUBLE_ENTREY_VOUCHERS.notes_all, dbo.TblBranchesData.branch_name, dbo.TblBranchesData.branch_namee,                      "
+    s = s & " dbo.DOUBLE_ENTREY_VOUCHERS.Posted, dbo.DOUBLE_ENTREY_VOUCHERS.valuee AS DEV_ValueE, dbo.DOUBLE_ENTREY_VOUCHERS.currency,                      dbo.DOUBLE_ENTREY_VOUCHERS.rate, dbo.TblBranchesData.RegionID, dbo.TblSection.name, dbo.TblSection.namee,                      dbo.DOUBLE_ENTREY_VOUCHERS.DescAccount, dbo.DOUBLE_ENTREY_VOUCHERS.NextAccount_Code, dbo.DOUBLE_ENTREY_VOUCHERS.project_id,                      dbo.DOUBLE_ENTREY_VOUCHERS.opr_fullcode, dbo.DOUBLE_ENTREY_VOUCHERS.projectid, dbo.DOUBLE_ENTREY_VOUCHERS.operid,                      dbo.DOUBLE_ENTREY_VOUCHERS.pandid , dbo.DOUBLE_ENTREY_VOUCHERS.Aqarid, dbo.TblAqar.aqarname, dbo.TblAqar.aqarNo     FROM         dbo.TblAqar RIGHT OUTER JOIN                      dbo.TblBranchesData INNER JOIN                      dbo.TblUsers INNER JOIN                      dbo.DOUBLE_ENTREY_VOUCHERS ON "
+    s = s & " dbo.TblUsers.UserID = dbo.DOUBLE_ENTREY_VOUCHERS.UserID ON                      dbo.TblBranchesData.branch_id = dbo.DOUBLE_ENTREY_VOUCHERS.branch_id ON                      dbo.TblAqar.Aqarid = dbo.DOUBLE_ENTREY_VOUCHERS.Aqarid LEFT OUTER JOIN                      dbo.ACCOUNTS ON dbo.DOUBLE_ENTREY_VOUCHERS.Account_Code = dbo.ACCOUNTS.Account_Code LEFT OUTER JOIN                      dbo.TblSection ON dbo.TblBranchesData.RegionID = dbo.TblSection.Id LEFT OUTER JOIN                      dbo.Notes LEFT OUTER JOIN                      dbo.TblNotesTypes ON dbo.Notes.NoteType = dbo.TblNotesTypes.NotesType ON dbo.DOUBLE_ENTREY_VOUCHERS.Notes_ID = dbo.Notes.NoteID LEFT OUTER JOIN                      dbo.Transactions ON dbo.DOUBLE_ENTREY_VOUCHERS.Transaction_ID = dbo.Transactions.Transaction_ID LEFT OUTER JOIN                      dbo.TransactionTypes ON dbo.Transactions.Transaction_Type = dbo.TransactionTypes.Transaction_Type     "
+    s = s & " Where (dbo.DOUBLE_ENTREY_VOUCHERS.Posted Is Null and IsNull(DOUBLE_ENTREY_VOUCHERS.IsHidden,0) =0)"
 
-    db_createOrUpdateviewSQL "RptLedger_Sub", S
+    db_createOrUpdateviewSQL "RptLedger_Sub", s
 
-    S = " Create FUNCTION GetInstalDiscuValueByDate (@FixedID  integer ,@ToDate datetime )"
-    S = S & "   RETURNS Float    AS    Begin"
-    S = S & "     RETURN ("
-    S = S & "       SELECT"
-    S = S & "       SumVal =Sum("
-    S = S & "      CASE FAVType WHEN 1 THEN"
-    S = S & "         (ExcludedValuePrt)"
-    S = S & "         Else"
-    S = S & "       currentvalue"
-    S = S & "       END)"
+    s = " Create FUNCTION GetInstalDiscuValueByDate (@FixedID  integer ,@ToDate datetime )"
+    s = s & "   RETURNS Float    AS    Begin"
+    s = s & "     RETURN ("
+    s = s & "       SELECT"
+    s = s & "       SumVal =Sum("
+    s = s & "      CASE FAVType WHEN 1 THEN"
+    s = s & "         (ExcludedValuePrt)"
+    s = s & "         Else"
+    s = s & "       currentvalue"
+    s = s & "       END)"
        
-    S = S & "    From dbo.notes_all"
-    S = S & "      WHERE     (NoteType = 8028) AND (FAID = @FixedID) AND (NoteDate <= @ToDate)"
-    S = S & "       GROUP BY FAID"
-    S = S & "     )"
-    S = S & "   End"
+    s = s & "    From dbo.notes_all"
+    s = s & "      WHERE     (NoteType = 8028) AND (FAID = @FixedID) AND (NoteDate <= @ToDate)"
+    s = s & "       GROUP BY FAID"
+    s = s & "     )"
+    s = s & "   End"
 
-    S = S & " "
+    s = s & " "
 
-    db_createOrUpdateFuctionSQL "GetInstalDiscuValueByDate", S
+    db_createOrUpdateFuctionSQL "GetInstalDiscuValueByDate", s
     DB_CreateField "TblContract", "IsShamel", adBoolean, adColNullable, , , "        ", False, True
     DB_CreateField "TblyearsData", "IsFirstYear", adBoolean, adColNullable, , , "        ", False, True
 
@@ -7222,76 +7241,76 @@ DB_CreateField "TblCustemers", "Account_CodeHi2", adVarWChar, adColNullable, 400
     sql = "    DROP FUNCTION QryItemsTransactionsTotals2" & CHR(13)
     Cn.Execute sql
 
-    S = " Create FUNCTION QryItemsTransactionsTotals2"
-    S = S & " ("
-    S = S & "     @TransType          INT = 0,"
-    S = S & "     @TransType2         INT = 0,"
-    S = S & "     @TransType3         INT = 0,"
-    S = S & "     @FromDate           DATETIME,"
-    S = S & "     @ToDate             DATETIME,"
-    S = S & "     @ItemID             AS integer,"
-    S = S & "     @Transaction_ID     AS FLOAT = NULL"
-    S = S & " )"
-    S = S & " RETURNS @xTable TABLE"
-    S = S & "         ("
-    S = S & "             ItemID INT,"
-    S = S & "             ItemCode NVARCHAR(50),"
-    S = S & "             ItemName NVARCHAR(4000),"
-    S = S & "             GroupID INT,"
-    S = S & "             Total FLOAT,"
-    S = S & "             totalqty Float"
-    S = S & "         )"
-    S = S & " AS"
+    s = " Create FUNCTION QryItemsTransactionsTotals2"
+    s = s & " ("
+    s = s & "     @TransType          INT = 0,"
+    s = s & "     @TransType2         INT = 0,"
+    s = s & "     @TransType3         INT = 0,"
+    s = s & "     @FromDate           DATETIME,"
+    s = s & "     @ToDate             DATETIME,"
+    s = s & "     @ItemID             AS integer,"
+    s = s & "     @Transaction_ID     AS FLOAT = NULL"
+    s = s & " )"
+    s = s & " RETURNS @xTable TABLE"
+    s = s & "         ("
+    s = s & "             ItemID INT,"
+    s = s & "             ItemCode NVARCHAR(50),"
+    s = s & "             ItemName NVARCHAR(4000),"
+    s = s & "             GroupID INT,"
+    s = s & "             Total FLOAT,"
+    s = s & "             totalqty Float"
+    s = s & "         )"
+    s = s & " AS"
 
-    S = S & " Begin"
-    S = S & "     INSERT @xTable"
-    S = S & "     SELECT ItemID,"
-    S = S & "            ItemCode,"
-    S = S & "            ItemName,"
-    S = S & "            GroupID,"
-    S = S & "            SUM(Total)     AS Totals,"
-    S = S & "            SUM(Quantity)  As totalqty"
-    S = S & "     FROM   ("
-    S = S & "                SELECT TblItems.ItemID,"
-    S = S & "                       TblItems.ItemCode,"
-    S = S & "                       TblItems.ItemName,"
-    S = S & "                       TblItems.GroupID,"
-    S = S & "                       'Total' = CASE"
-    S = S & "                                      WHEN ItemDiscountType = 1"
-    S = S & "                OR ItemDiscountType = 0 THEN Transaction_Details.Quantity * Transaction_Details.Price"
-    S = S & "                   WHEN ItemDiscountType = 2 THEN ("
-    S = S & "                       (Transaction_Details.Quantity * Transaction_Details.Price) -ItemDiscount"
-    S = S & "                   )"
-    S = S & "                   WHEN ItemDiscountType = 3 THEN (Transaction_Details.Quantity * Transaction_Details.Price) * (1 -(ItemDiscount / 100))"
-    S = S & "                   ELSE 0"
-    S = S & "                   END,"
-    S = S & "                Transaction_Details.Quantity"
-    S = S & "                FROM dbo.TblItems INNER JOIN dbo.Transaction_Details ON dbo.TblItems.ItemID ="
-    S = S & "                dbo.Transaction_Details.Item_ID INNER JOIN"
-    S = S & "                dbo.Transactions ON dbo.Transaction_Details.Transaction_ID = dbo.Transactions.Transaction_ID"
-    S = S & "                WHERE ("
-    S = S & "                    Transactions.Transaction_Type = @TransType"
-    S = S & "                    OR Transactions.Transaction_Type = @TransType2"
-    S = S & "                    OR Transactions.Transaction_Type = @TransType3"
-    S = S & "                    OR Transactions.Transaction_Type = 34"
+    s = s & " Begin"
+    s = s & "     INSERT @xTable"
+    s = s & "     SELECT ItemID,"
+    s = s & "            ItemCode,"
+    s = s & "            ItemName,"
+    s = s & "            GroupID,"
+    s = s & "            SUM(Total)     AS Totals,"
+    s = s & "            SUM(Quantity)  As totalqty"
+    s = s & "     FROM   ("
+    s = s & "                SELECT TblItems.ItemID,"
+    s = s & "                       TblItems.ItemCode,"
+    s = s & "                       TblItems.ItemName,"
+    s = s & "                       TblItems.GroupID,"
+    s = s & "                       'Total' = CASE"
+    s = s & "                                      WHEN ItemDiscountType = 1"
+    s = s & "                OR ItemDiscountType = 0 THEN Transaction_Details.Quantity * Transaction_Details.Price"
+    s = s & "                   WHEN ItemDiscountType = 2 THEN ("
+    s = s & "                       (Transaction_Details.Quantity * Transaction_Details.Price) -ItemDiscount"
+    s = s & "                   )"
+    s = s & "                   WHEN ItemDiscountType = 3 THEN (Transaction_Details.Quantity * Transaction_Details.Price) * (1 -(ItemDiscount / 100))"
+    s = s & "                   ELSE 0"
+    s = s & "                   END,"
+    s = s & "                Transaction_Details.Quantity"
+    s = s & "                FROM dbo.TblItems INNER JOIN dbo.Transaction_Details ON dbo.TblItems.ItemID ="
+    s = s & "                dbo.Transaction_Details.Item_ID INNER JOIN"
+    s = s & "                dbo.Transactions ON dbo.Transaction_Details.Transaction_ID = dbo.Transactions.Transaction_ID"
+    s = s & "                WHERE ("
+    s = s & "                    Transactions.Transaction_Type = @TransType"
+    s = s & "                    OR Transactions.Transaction_Type = @TransType2"
+    s = s & "                    OR Transactions.Transaction_Type = @TransType3"
+    s = s & "                    OR Transactions.Transaction_Type = 34"
 '    s = s & "                    OR Transactions.Transaction_Type = 11"
-    S = S & "                    OR Transactions.Transaction_Type = 15"
-    S = S & "                )"
-    S = S & "                AND Transactions.Transaction_Date >= @FromDate"
-    S = S & "                AND Transactions.Transaction_Date <= @TODate"
+    s = s & "                    OR Transactions.Transaction_Type = 15"
+    s = s & "                )"
+    s = s & "                AND Transactions.Transaction_Date >= @FromDate"
+    s = s & "                AND Transactions.Transaction_Date <= @TODate"
           
-    S = S & "                AND Transactions.Transaction_ID <> ISNULL(@Transaction_ID, Transactions.Transaction_ID)"
-    S = S & "            )                 DrivTable"
-    S = S & "     Group By"
-    S = S & "            ItemID,"
-    S = S & "            ItemCode,"
-    S = S & "            ItemName,"
-    S = S & "            GroupID"
+    s = s & "                AND Transactions.Transaction_ID <> ISNULL(@Transaction_ID, Transactions.Transaction_ID)"
+    s = s & "            )                 DrivTable"
+    s = s & "     Group By"
+    s = s & "            ItemID,"
+    s = s & "            ItemCode,"
+    s = s & "            ItemName,"
+    s = s & "            GroupID"
     
-    S = S & "     Return"
-    S = S & " End"
+    s = s & "     Return"
+    s = s & " End"
     
-    db_createOrUpdateFuctionSQL "QryItemsTransactionsTotals2", S
+    db_createOrUpdateFuctionSQL "QryItemsTransactionsTotals2", s
     DB_CreateField "Accounts", "account_serial1", adVarWChar, adColNullable, 255, , "      ", False, True, , True
     DB_CreateField "Accounts", "account_name1", adVarWChar, adColNullable, 255, , "      ", False, True, , True
     DB_CreateField "Accounts", "Account_NameEng1", adVarWChar, adColNullable, 255, , "      ", False, True, , True
@@ -7318,18 +7337,18 @@ DB_CreateField "TblCustemers", "Account_CodeHi2", adVarWChar, adColNullable, 400
     
     
 
-S = "IF NOT EXISTS (SELECT * FROM sys.triggers WHERE name = 'trgFirstEntryDate') "
-S = S & "BEGIN "
-S = S & "CREATE TRIGGER dbo.trgFirstEntryDate ON dbo.Transactions "
-S = S & "AFTER INSERT "
-S = S & "AS "
-S = S & "UPDATE dbo.Transactions "
-S = S & "SET FirstEntryDateDate = GETDATE() "
-S = S & "FROM Inserted i "
-S = S & "WHERE dbo.Transactions.Transaction_ID = i.Transaction_ID "
-S = S & "END"
+s = "IF NOT EXISTS (SELECT * FROM sys.triggers WHERE name = 'trgFirstEntryDate') "
+s = s & "BEGIN "
+s = s & "CREATE TRIGGER dbo.trgFirstEntryDate ON dbo.Transactions "
+s = s & "AFTER INSERT "
+s = s & "AS "
+s = s & "UPDATE dbo.Transactions "
+s = s & "SET FirstEntryDateDate = GETDATE() "
+s = s & "FROM Inserted i "
+s = s & "WHERE dbo.Transactions.Transaction_ID = i.Transaction_ID "
+s = s & "END"
 
-Cn.Execute S
+Cn.Execute s
 On Error Resume Next
 Cn.Execute "DROP TRIGGER dbo.trgFirstEntryDate"
 On Error GoTo 0
@@ -8100,127 +8119,127 @@ DB_CreateField "Transactions", "DepandToConv", adInteger, adColNullable, , , "  
     sql = "    DROP FUNCTION FN_MAIN_ACCOUNT_SUB_CODES " & CHR(13)
 
     Cn.Execute sql
-Dim S As String
-S = " Create FUNCTION [dbo].[FN_MAIN_ACCOUNT_SUB_CODES]" & CHR(13)
-S = S & " ("
-S = S & "     @FROMCODE       NVARCHAR(20), " & CHR(13)
-S = S & "     @TOCODE         NVARCHAR(20), " & CHR(13)
-S = S & "     @WithParent     AS BIT " & CHR(13)
-S = S & " )"
-S = S & " RETURNS @TABLE TABLE (CODE NVARCHAR(20)) " & CHR(13)
-S = S & " AS"
+Dim s As String
+s = " Create FUNCTION [dbo].[FN_MAIN_ACCOUNT_SUB_CODES]" & CHR(13)
+s = s & " ("
+s = s & "     @FROMCODE       NVARCHAR(20), " & CHR(13)
+s = s & "     @TOCODE         NVARCHAR(20), " & CHR(13)
+s = s & "     @WithParent     AS BIT " & CHR(13)
+s = s & " )"
+s = s & " RETURNS @TABLE TABLE (CODE NVARCHAR(20)) " & CHR(13)
+s = s & " AS"
 
 
-S = S & " Begin " & CHR(13)
-S = S & "     IF @WithParent = 0 " & CHR(13)
-S = S & "     Begin " & CHR(13)
-S = S & "         DECLARE @IsMain BIT " & CHR(13)
-S = S & "         DECLARE @Level AS SMALLINT " & CHR(13)
-S = S & "         SET @IsMain = @WithParent " & CHR(13)
-S = S & "         DECLARE @Child_Code NVARCHAR(20) " & CHR(13)
-S = S & "         SET @Child_Code = '' " & CHR(13)
-S = S & "         DECLARE @NextLevel SMALLINT " & CHR(13)
-S = S & "         DECLARE my_Cursor CURSOR " & CHR(13)
-S = S & "         FOR"
-S = S & "             SELECT T1.Account_Code, " & CHR(13)
-S = S & "                    T1.last_account " & CHR(13)
-S = S & "             From Accounts " & CHR(13)
-S = S & "                    LEFT OUTER JOIN ( " & CHR(13)
-S = S & "                             SELECT Parent_Account_Code, " & CHR(13)
-S = S & "                                    Account_Code, " & CHR(13)
-S = S & "                                    last_account " & CHR(13)
-S = S & "                             From Accounts " & CHR(13)
+s = s & " Begin " & CHR(13)
+s = s & "     IF @WithParent = 0 " & CHR(13)
+s = s & "     Begin " & CHR(13)
+s = s & "         DECLARE @IsMain BIT " & CHR(13)
+s = s & "         DECLARE @Level AS SMALLINT " & CHR(13)
+s = s & "         SET @IsMain = @WithParent " & CHR(13)
+s = s & "         DECLARE @Child_Code NVARCHAR(20) " & CHR(13)
+s = s & "         SET @Child_Code = '' " & CHR(13)
+s = s & "         DECLARE @NextLevel SMALLINT " & CHR(13)
+s = s & "         DECLARE my_Cursor CURSOR " & CHR(13)
+s = s & "         FOR"
+s = s & "             SELECT T1.Account_Code, " & CHR(13)
+s = s & "                    T1.last_account " & CHR(13)
+s = s & "             From Accounts " & CHR(13)
+s = s & "                    LEFT OUTER JOIN ( " & CHR(13)
+s = s & "                             SELECT Parent_Account_Code, " & CHR(13)
+s = s & "                                    Account_Code, " & CHR(13)
+s = s & "                                    last_account " & CHR(13)
+s = s & "                             From Accounts " & CHR(13)
 
-S = S & "                         )T1 " & CHR(13)
-S = S & "                         ON  T1.Parent_Account_Code = ACCOUNTS.Account_Code " & CHR(13)
-S = S & "             Where Accounts.last_account = 0 " & CHR(13)
+s = s & "                         )T1 " & CHR(13)
+s = s & "                         ON  T1.Parent_Account_Code = ACCOUNTS.Account_Code " & CHR(13)
+s = s & "             Where Accounts.last_account = 0 " & CHR(13)
 
-S = S & "                    AND ( " & CHR(13)
-S = S & "                            (ACCOUNTS.Account_Code >= @FromCode AND @FromCode <> '') " & CHR(13)
-S = S & "                            OR (1 = 1 AND @FromCode = '') " & CHR(13)
-S = S & "                        ) " & CHR(13)
-S = S & "                    AND ( " & CHR(13)
-S = S & "                            (ACCOUNTS.Account_Code <= @ToCode AND @ToCode <> '') " & CHR(13)
-S = S & "                            OR (1 = 1 AND @ToCode = '') " & CHR(13)
-S = S & "                        ) " & CHR(13)
+s = s & "                    AND ( " & CHR(13)
+s = s & "                            (ACCOUNTS.Account_Code >= @FromCode AND @FromCode <> '') " & CHR(13)
+s = s & "                            OR (1 = 1 AND @FromCode = '') " & CHR(13)
+s = s & "                        ) " & CHR(13)
+s = s & "                    AND ( " & CHR(13)
+s = s & "                            (ACCOUNTS.Account_Code <= @ToCode AND @ToCode <> '') " & CHR(13)
+s = s & "                            OR (1 = 1 AND @ToCode = '') " & CHR(13)
+s = s & "                        ) " & CHR(13)
         
-S = S & "         OPEN my_Cursor " & CHR(13)
+s = s & "         OPEN my_Cursor " & CHR(13)
         
-S = S & "         FETCH NEXT FROM my_Cursor INTO @Child_Code,@IsMain " & CHR(13)
+s = s & "         FETCH NEXT FROM my_Cursor INTO @Child_Code,@IsMain " & CHR(13)
         
-S = S & "         WHILE @@FETCH_STATUS = 0 " & CHR(13)
+s = s & "         WHILE @@FETCH_STATUS = 0 " & CHR(13)
          
-S = S & "         Begin " & CHR(13)
-S = S & "             IF @IsMain = 1 " & CHR(13)
-S = S & "             Begin " & CHR(13)
-S = S & "                 INSERT INTO @Table " & CHR(13)
-S = S & "                 Values " & CHR(13)
-S = S & "                   ( " & CHR(13)
-S = S & "                     @Child_Code " & CHR(13)
-S = S & "                   ) " & CHR(13)
-S = S & "             End " & CHR(13)
+s = s & "         Begin " & CHR(13)
+s = s & "             IF @IsMain = 1 " & CHR(13)
+s = s & "             Begin " & CHR(13)
+s = s & "                 INSERT INTO @Table " & CHR(13)
+s = s & "                 Values " & CHR(13)
+s = s & "                   ( " & CHR(13)
+s = s & "                     @Child_Code " & CHR(13)
+s = s & "                   ) " & CHR(13)
+s = s & "             End " & CHR(13)
             
-S = S & "             IF @IsMain = 0 " & CHR(13)
-S = S & "             Begin " & CHR(13)
-S = S & "                 SET @NextLevel = @Level + 1 " & CHR(13)
+s = s & "             IF @IsMain = 0 " & CHR(13)
+s = s & "             Begin " & CHR(13)
+s = s & "                 SET @NextLevel = @Level + 1 " & CHR(13)
                 
-S = S & "                 INSERT @Table " & CHR(13)
-S = S & "                 SELECT * " & CHR(13)
-S = S & "                 FROM   dbo.fn_Main_Account_Sub_Codes (@Child_Code, @Child_Code, @IsMain) " & CHR(13)
-S = S & "             End " & CHR(13)
+s = s & "                 INSERT @Table " & CHR(13)
+s = s & "                 SELECT * " & CHR(13)
+s = s & "                 FROM   dbo.fn_Main_Account_Sub_Codes (@Child_Code, @Child_Code, @IsMain) " & CHR(13)
+s = s & "             End " & CHR(13)
             
-S = S & "             FETCH NEXT FROM my_Cursor INTO @Child_Code,@IsMain " & CHR(13)
-S = S & "         End " & CHR(13)
+s = s & "             FETCH NEXT FROM my_Cursor INTO @Child_Code,@IsMain " & CHR(13)
+s = s & "         End " & CHR(13)
         
-S = S & "         Close my_Cursor " & CHR(13)
+s = s & "         Close my_Cursor " & CHR(13)
 
-S = S & "         DEALLOCATE my_Cursor " & CHR(13)
+s = s & "         DEALLOCATE my_Cursor " & CHR(13)
 
-S = S & "         Return " & CHR(13)
-S = S & "     End " & CHR(13)
-S = S & "     Else " & CHR(13)
-S = S & "     Begin " & CHR(13)
-S = S & "         DECLARE @TblRet TABLE(Code NVARCHAR(20)) " & CHR(13)
-S = S & "         DECLARE @vCurrentNodeCode VARCHAR(50) " & CHR(13)
-S = S & "         IF @FROMCODE IS NULL " & CHR(13)
-S = S & "            OR @FROMCODE = '' " & CHR(13)
-S = S & "             Return " & CHR(13)
+s = s & "         Return " & CHR(13)
+s = s & "     End " & CHR(13)
+s = s & "     Else " & CHR(13)
+s = s & "     Begin " & CHR(13)
+s = s & "         DECLARE @TblRet TABLE(Code NVARCHAR(20)) " & CHR(13)
+s = s & "         DECLARE @vCurrentNodeCode VARCHAR(50) " & CHR(13)
+s = s & "         IF @FROMCODE IS NULL " & CHR(13)
+s = s & "            OR @FROMCODE = '' " & CHR(13)
+s = s & "             Return " & CHR(13)
         
-S = S & "         DECLARE CostCentersCurChildCur CURSOR " & CHR(13)
-S = S & "         FOR " & CHR(13)
-S = S & "             SELECT Account_Code " & CHR(13)
-S = S & "             From [dbo].[Accounts] " & CHR(13)
-S = S & "             WHERE  Parent_Account_Code = @FROMCODE " & CHR(13)
+s = s & "         DECLARE CostCentersCurChildCur CURSOR " & CHR(13)
+s = s & "         FOR " & CHR(13)
+s = s & "             SELECT Account_Code " & CHR(13)
+s = s & "             From [dbo].[Accounts] " & CHR(13)
+s = s & "             WHERE  Parent_Account_Code = @FROMCODE " & CHR(13)
         
-S = S & "         OPEN CostCentersCurChildCur " & CHR(13)
-S = S & "         FETCH NEXT FROM CostCentersCurChildCur " & CHR(13)
-S = S & "         INTO @vCurrentNodeCode " & CHR(13)
-S = S & "         WHILE @@FETCH_STATUS = 0 " & CHR(13)
-S = S & "         Begin " & CHR(13)
-S = S & "             INSERT INTO @TABLE " & CHR(13)
-S = S & "               ( " & CHR(13)
-S = S & "                 code " & CHR(13)
-S = S & "               ) " & CHR(13)
-S = S & "             Values " & CHR(13)
-S = S & "               ( " & CHR(13)
-S = S & "                 @vCurrentNodeCode " & CHR(13)
-S = S & "               ) " & CHR(13)
-S = S & "             INSERT INTO @TABLE " & CHR(13)
-S = S & "             SELECT Code " & CHR(13)
-S = S & "             FROM   dbo.FN_MAIN_ACCOUNT_SUB_CODES(@vCurrentNodeCode,@vCurrentNodeCode,@WithParent) " & CHR(13)
+s = s & "         OPEN CostCentersCurChildCur " & CHR(13)
+s = s & "         FETCH NEXT FROM CostCentersCurChildCur " & CHR(13)
+s = s & "         INTO @vCurrentNodeCode " & CHR(13)
+s = s & "         WHILE @@FETCH_STATUS = 0 " & CHR(13)
+s = s & "         Begin " & CHR(13)
+s = s & "             INSERT INTO @TABLE " & CHR(13)
+s = s & "               ( " & CHR(13)
+s = s & "                 code " & CHR(13)
+s = s & "               ) " & CHR(13)
+s = s & "             Values " & CHR(13)
+s = s & "               ( " & CHR(13)
+s = s & "                 @vCurrentNodeCode " & CHR(13)
+s = s & "               ) " & CHR(13)
+s = s & "             INSERT INTO @TABLE " & CHR(13)
+s = s & "             SELECT Code " & CHR(13)
+s = s & "             FROM   dbo.FN_MAIN_ACCOUNT_SUB_CODES(@vCurrentNodeCode,@vCurrentNodeCode,@WithParent) " & CHR(13)
             
-S = S & "             FETCH NEXT FROM CostCentersCurChildCur " & CHR(13)
-S = S & "             INTO @vCurrentNodeCode " & CHR(13)
-S = S & "         End " & CHR(13)
-S = S & "         Close CostCentersCurChildCur " & CHR(13)
-S = S & "         DEALLOCATE CostCentersCurChildCur " & CHR(13)
-S = S & "     End " & CHR(13)
-S = S & "     Return " & CHR(13)
+s = s & "             FETCH NEXT FROM CostCentersCurChildCur " & CHR(13)
+s = s & "             INTO @vCurrentNodeCode " & CHR(13)
+s = s & "         End " & CHR(13)
+s = s & "         Close CostCentersCurChildCur " & CHR(13)
+s = s & "         DEALLOCATE CostCentersCurChildCur " & CHR(13)
+s = s & "     End " & CHR(13)
+s = s & "     Return " & CHR(13)
     
 
-S = S & " End " & CHR(13)
+s = s & " End " & CHR(13)
 
- Cn.Execute S
+ Cn.Execute s
  
  
     New_View = "  SELECT        dbo.Notes.ManualNo, dbo.Notes.OldNoteSerial1, dbo.marakes_taklefa_temp.cost_center_id, dbo.Notes.NoteDateH, dbo.marakes_taklefa_temp.cost_center, dbo.marakes_taklefa_temp.value AS cc_valie, "
@@ -8397,16 +8416,16 @@ End Function
 
 Public Function projectincludevchr()
 Dim str As String
-Dim S As String
-S = "  update Notes   Set OrderIDD = Noteseril2"
-S = S & "  FROM         dbo.Notes INNER JOIN"
-S = S & "                        dbo.notes_all ON dbo.Notes.notes_all = dbo.notes_all.NoteID"
-S = S & "  Where (dbo.notes_all.NoteType = 3)"
+Dim s As String
+s = "  update Notes   Set OrderIDD = Noteseril2"
+s = s & "  FROM         dbo.Notes INNER JOIN"
+s = s & "                        dbo.notes_all ON dbo.Notes.notes_all = dbo.notes_all.NoteID"
+s = s & "  Where (dbo.notes_all.NoteType = 3)"
 'Cn.Execute s
 
 
-S = " update TransactionTypes set projectInclude=1  where  (Transaction_Type=66 OR Transaction_Type=18)"
-Cn.Execute S
+s = " update TransactionTypes set projectInclude=1  where  (Transaction_Type=66 OR Transaction_Type=18)"
+Cn.Execute s
 
 End Function
 
@@ -8645,121 +8664,121 @@ sql = sql & "  Return" & CHR(13)
 
 
 
- S = " create  FUNCTION [dbo].[GetBalanceQtyPO5] (@ItemID integer ,@order_no  nvarchar(255) ,@PurchaseNo  integer,@TransType  integer,@CBoBasedON  integer )  RETURNS Float AS Begin"
- S = S & " Return (SELECT"
-S = S & "         SUM(dbo.Transaction_Details.ShowQty) As ShowQty"
-S = S & "     From dbo.Transaction_Details"
-S = S & "     RIGHT OUTER JOIN dbo.Transactions"
-S = S & "         ON dbo.Transaction_Details.Transaction_ID = dbo.Transactions.Transaction_ID"
-S = S & "     Where dbo.Transactions.Transaction_Type = 29"
-S = S & "     AND (dbo.Transactions.NoteSerial1 = @order_no)"
-S = S & "     AND (dbo.Transaction_Details.Item_ID = @ItemID))"
-S = S & " - ISNULL((SELECT"
-S = S & "         SUM(dbo.Transaction_Details.ShowQty) As ShowQty"
-S = S & "     From dbo.Transaction_Details"
-S = S & "     RIGHT OUTER JOIN dbo.Transactions"
-S = S & "         ON dbo.Transaction_Details.Transaction_ID = dbo.Transactions.Transaction_ID"
-S = S & "     WHERE dbo.transactions.Transaction_Type = @TransType"
-S = S & "     AND (dbo.Transactions.order_no = @order_no)"
-S = S & "     AND (ISNULL(dbo.Transactions.CBoBasedON, 0) = @CBoBasedON)"
-S = S & "     AND (dbo.Transaction_Details.Item_ID = @ItemID"
-S = S & "     AND Transactions.Transaction_ID <> @PurchaseNo))"
-S = S & " , 0)"
-S = S & " End"
-db_createOrUpdateFuctionSQL "GetBalanceQtyPO5", S
+ s = " create  FUNCTION [dbo].[GetBalanceQtyPO5] (@ItemID integer ,@order_no  nvarchar(255) ,@PurchaseNo  integer,@TransType  integer,@CBoBasedON  integer )  RETURNS Float AS Begin"
+ s = s & " Return (SELECT"
+s = s & "         SUM(dbo.Transaction_Details.ShowQty) As ShowQty"
+s = s & "     From dbo.Transaction_Details"
+s = s & "     RIGHT OUTER JOIN dbo.Transactions"
+s = s & "         ON dbo.Transaction_Details.Transaction_ID = dbo.Transactions.Transaction_ID"
+s = s & "     Where dbo.Transactions.Transaction_Type = 29"
+s = s & "     AND (dbo.Transactions.NoteSerial1 = @order_no)"
+s = s & "     AND (dbo.Transaction_Details.Item_ID = @ItemID))"
+s = s & " - ISNULL((SELECT"
+s = s & "         SUM(dbo.Transaction_Details.ShowQty) As ShowQty"
+s = s & "     From dbo.Transaction_Details"
+s = s & "     RIGHT OUTER JOIN dbo.Transactions"
+s = s & "         ON dbo.Transaction_Details.Transaction_ID = dbo.Transactions.Transaction_ID"
+s = s & "     WHERE dbo.transactions.Transaction_Type = @TransType"
+s = s & "     AND (dbo.Transactions.order_no = @order_no)"
+s = s & "     AND (ISNULL(dbo.Transactions.CBoBasedON, 0) = @CBoBasedON)"
+s = s & "     AND (dbo.Transaction_Details.Item_ID = @ItemID"
+s = s & "     AND Transactions.Transaction_ID <> @PurchaseNo))"
+s = s & " , 0)"
+s = s & " End"
+db_createOrUpdateFuctionSQL "GetBalanceQtyPO5", s
 
 
- S = " create  FUNCTION [dbo].[GetBalanceQtyPO4] (@ItemID integer ,@order_no  nvarchar(255) ,@PurchaseNo  integer,@TransType  integer,@CBoBasedON  integer )  RETURNS Float AS Begin"
- S = S & " Return (SELECT"
-S = S & "         SUM(dbo.Transaction_Details.ShowQty) As ShowQty"
-S = S & "     From dbo.Transaction_Details"
-S = S & "     RIGHT OUTER JOIN dbo.Transactions"
-S = S & "         ON dbo.Transaction_Details.Transaction_ID = dbo.Transactions.Transaction_ID"
-S = S & "     Where dbo.Transactions.Transaction_Type = 29"
-S = S & "     AND (dbo.Transactions.NoteSerial1 = @order_no)"
-S = S & "     AND (dbo.Transaction_Details.Item_ID = @ItemID))"
-S = S & " - ISNULL((SELECT"
-S = S & "         SUM(dbo.Transaction_Details.ShowQty) As ShowQty"
-S = S & "     From dbo.Transaction_Details"
-S = S & "     RIGHT OUTER JOIN dbo.Transactions"
-S = S & "         ON dbo.Transaction_Details.Transaction_ID = dbo.Transactions.Transaction_ID"
-S = S & "     WHERE dbo.transactions.Transaction_Type = @TransType"
-S = S & "     AND (dbo.Transactions.PONo = @order_no)"
-S = S & "     AND (ISNULL(dbo.Transactions.CBoBasedON, 0) = @CBoBasedON)"
-S = S & "     AND (dbo.Transaction_Details.Item_ID = @ItemID"
-S = S & "     AND Transactions.Transaction_ID <> @PurchaseNo))"
-S = S & " , 0)"
-S = S & " End"
+ s = " create  FUNCTION [dbo].[GetBalanceQtyPO4] (@ItemID integer ,@order_no  nvarchar(255) ,@PurchaseNo  integer,@TransType  integer,@CBoBasedON  integer )  RETURNS Float AS Begin"
+ s = s & " Return (SELECT"
+s = s & "         SUM(dbo.Transaction_Details.ShowQty) As ShowQty"
+s = s & "     From dbo.Transaction_Details"
+s = s & "     RIGHT OUTER JOIN dbo.Transactions"
+s = s & "         ON dbo.Transaction_Details.Transaction_ID = dbo.Transactions.Transaction_ID"
+s = s & "     Where dbo.Transactions.Transaction_Type = 29"
+s = s & "     AND (dbo.Transactions.NoteSerial1 = @order_no)"
+s = s & "     AND (dbo.Transaction_Details.Item_ID = @ItemID))"
+s = s & " - ISNULL((SELECT"
+s = s & "         SUM(dbo.Transaction_Details.ShowQty) As ShowQty"
+s = s & "     From dbo.Transaction_Details"
+s = s & "     RIGHT OUTER JOIN dbo.Transactions"
+s = s & "         ON dbo.Transaction_Details.Transaction_ID = dbo.Transactions.Transaction_ID"
+s = s & "     WHERE dbo.transactions.Transaction_Type = @TransType"
+s = s & "     AND (dbo.Transactions.PONo = @order_no)"
+s = s & "     AND (ISNULL(dbo.Transactions.CBoBasedON, 0) = @CBoBasedON)"
+s = s & "     AND (dbo.Transaction_Details.Item_ID = @ItemID"
+s = s & "     AND Transactions.Transaction_ID <> @PurchaseNo))"
+s = s & " , 0)"
+s = s & " End"
 
-db_createOrUpdateFuctionSQL "GetBalanceQtyPO4", S
+db_createOrUpdateFuctionSQL "GetBalanceQtyPO4", s
 
-S = "CREATE FUNCTION dbo.GetDaysInMonth2 (@Year INT, @Month INT) RETURNS INT "
-S = S & " AS"
-S = S & " Begin"
-S = S & "     DECLARE @FirstDayOfMonth DATE = DATEFROMPARTS(@Year, @Month, 1)"
-S = S & "     DECLARE @LastDayOfMonth DATE = EOMONTH(@FirstDayOfMonth)"
-S = S & "     RETURN DATEDIFF(DAY, @FirstDayOfMonth, @LastDayOfMonth) + 1"
-S = S & " End"
+s = "CREATE FUNCTION dbo.GetDaysInMonth2 (@Year INT, @Month INT) RETURNS INT "
+s = s & " AS"
+s = s & " Begin"
+s = s & "     DECLARE @FirstDayOfMonth DATE = DATEFROMPARTS(@Year, @Month, 1)"
+s = s & "     DECLARE @LastDayOfMonth DATE = EOMONTH(@FirstDayOfMonth)"
+s = s & "     RETURN DATEDIFF(DAY, @FirstDayOfMonth, @LastDayOfMonth) + 1"
+s = s & " End"
 
 
-db_createOrUpdateFuctionSQL "GetDaysInMonth2", S
+db_createOrUpdateFuctionSQL "GetDaysInMonth2", s
 
-    S = " Create  FUNCTION [dbo].[GetBalanceQtyPO3] (@ItemID integer ,@order_no  nvarchar(255) ,@PurchaseNo  integer )"
-    S = S & "  RETURNS Float"
-    S = S & " AS"
-    S = S & " Begin"
-    S = S & " Return"
+    s = " Create  FUNCTION [dbo].[GetBalanceQtyPO3] (@ItemID integer ,@order_no  nvarchar(255) ,@PurchaseNo  integer )"
+    s = s & "  RETURNS Float"
+    s = s & " AS"
+    s = s & " Begin"
+    s = s & " Return"
     
-    S = S & " (SELECT     SUM(dbo.Transaction_Details.ShowQty) AS ShowQty"
-    S = S & "    FROM         dbo.Transaction_Details RIGHT OUTER JOIN"
-    S = S & "                  dbo.Transactions ON dbo.Transaction_Details.Transaction_ID = dbo.Transactions.Transaction_ID"
-    S = S & "     Where dbo.transactions.Transaction_Type = 29"
-    S = S & "                    AND (dbo.Transactions.NoteSerial1 = @order_no)  AND"
-    S = S & "                   (dbo.Transaction_Details.Item_ID = @ItemID)  ) -"
+    s = s & " (SELECT     SUM(dbo.Transaction_Details.ShowQty) AS ShowQty"
+    s = s & "    FROM         dbo.Transaction_Details RIGHT OUTER JOIN"
+    s = s & "                  dbo.Transactions ON dbo.Transaction_Details.Transaction_ID = dbo.Transactions.Transaction_ID"
+    s = s & "     Where dbo.transactions.Transaction_Type = 29"
+    s = s & "                    AND (dbo.Transactions.NoteSerial1 = @order_no)  AND"
+    s = s & "                   (dbo.Transaction_Details.Item_ID = @ItemID)  ) -"
     
-    S = S & "  IsNull((SELECT     SUM(dbo.Transaction_Details.ShowQty) AS ShowQty"
-    S = S & "    FROM         dbo.Transaction_Details RIGHT OUTER JOIN"
-    S = S & "                   dbo.Transactions ON dbo.Transaction_Details.Transaction_ID = dbo.Transactions.Transaction_ID"
-    S = S & "     Where dbo.transactions.Transaction_Type = 22"
-    S = S & "                    AND (dbo.Transactions.order_no = @order_no) AND (ISNULL(dbo.Transactions.CBoBasedON, 0) = 1) AND"
-    S = S & "                   (dbo.Transaction_Details.Item_ID = @ItemID and Transactions.Transaction_ID <> @PurchaseNo)"
-    S = S & "    )  ,0)"
-    
-    
-    S = S & " End"
-
-    db_createOrUpdateFuctionSQL "GetBalanceQtyPO3", S
+    s = s & "  IsNull((SELECT     SUM(dbo.Transaction_Details.ShowQty) AS ShowQty"
+    s = s & "    FROM         dbo.Transaction_Details RIGHT OUTER JOIN"
+    s = s & "                   dbo.Transactions ON dbo.Transaction_Details.Transaction_ID = dbo.Transactions.Transaction_ID"
+    s = s & "     Where dbo.transactions.Transaction_Type = 22"
+    s = s & "                    AND (dbo.Transactions.order_no = @order_no) AND (ISNULL(dbo.Transactions.CBoBasedON, 0) = 1) AND"
+    s = s & "                   (dbo.Transaction_Details.Item_ID = @ItemID and Transactions.Transaction_ID <> @PurchaseNo)"
+    s = s & "    )  ,0)"
     
     
-    S = "CREATE FUNCTION dbo.GetDaysInMonth (@Year INT, @Month INT) RETURNS INT "
-S = S & " AS"
-S = S & " Begin"
-S = S & "     DECLARE @FirstDayOfMonth DATE = DATEFROMPARTS(@Year, @Month, 1)"
-S = S & "     DECLARE @LastDayOfMonth DATE = EOMONTH(@FirstDayOfMonth)"
-S = S & "     RETURN DATEDIFF(DAY, @FirstDayOfMonth, @LastDayOfMonth) + 1"
-S = S & " End"
+    s = s & " End"
+
+    db_createOrUpdateFuctionSQL "GetBalanceQtyPO3", s
+    
+    
+    s = "CREATE FUNCTION dbo.GetDaysInMonth (@Year INT, @Month INT) RETURNS INT "
+s = s & " AS"
+s = s & " Begin"
+s = s & "     DECLARE @FirstDayOfMonth DATE = DATEFROMPARTS(@Year, @Month, 1)"
+s = s & "     DECLARE @LastDayOfMonth DATE = EOMONTH(@FirstDayOfMonth)"
+s = s & "     RETURN DATEDIFF(DAY, @FirstDayOfMonth, @LastDayOfMonth) + 1"
+s = s & " End"
 
 
-db_createOrUpdateFuctionSQL "GetDaysInMonth", S
+db_createOrUpdateFuctionSQL "GetDaysInMonth", s
 
 
-   S = ""
-   S = S & " Create FUNCTION [dbo].[GetAbcentDay2](@EmpID  integer,@YearID  integer,@MonthID  integer )"
-   S = S & "    RETURNS Float"
-    S = S & "      AS"
-    S = S & "     Begin"
-    S = S & "     RETURN (    SELECT     SUM(dbo.TblChangedComponentRegisterDetails.NoofDays) AS SumNoofDays"
-    S = S & " FROM         dbo.TblChangedComponentRegister LEFT OUTER JOIN"
-    S = S & "                    dbo.TblChangedComponentRegisterDetails ON"
-    S = S & "                    dbo.TblChangedComponentRegister.ChangedComponentid = dbo.TblChangedComponentRegisterDetails.ChangedComponentid"
-    S = S & "   WHERE      (dbo.TblChangedComponentRegister.Actualmonth = @MonthID) AND"
-    S = S & "                     (dbo.TblChangedComponentRegister.Actualyear = @YearID)"
-    S = S & "                     AND IsNull(value,0) = 0"
-    S = S & "    GROUP BY dbo.TblChangedComponentRegisterDetails.Emp_id"
-    S = S & "   Having (dbo.TblChangedComponentRegisterDetails.Emp_id = @EmpID)"
-    S = S & " )"
-    S = S & "     End"
-  db_createOrUpdateFuctionSQL "GetAbcentDay2", S
+   s = ""
+   s = s & " Create FUNCTION [dbo].[GetAbcentDay2](@EmpID  integer,@YearID  integer,@MonthID  integer )"
+   s = s & "    RETURNS Float"
+    s = s & "      AS"
+    s = s & "     Begin"
+    s = s & "     RETURN (    SELECT     SUM(dbo.TblChangedComponentRegisterDetails.NoofDays) AS SumNoofDays"
+    s = s & " FROM         dbo.TblChangedComponentRegister LEFT OUTER JOIN"
+    s = s & "                    dbo.TblChangedComponentRegisterDetails ON"
+    s = s & "                    dbo.TblChangedComponentRegister.ChangedComponentid = dbo.TblChangedComponentRegisterDetails.ChangedComponentid"
+    s = s & "   WHERE      (dbo.TblChangedComponentRegister.Actualmonth = @MonthID) AND"
+    s = s & "                     (dbo.TblChangedComponentRegister.Actualyear = @YearID)"
+    s = s & "                     AND IsNull(value,0) = 0"
+    s = s & "    GROUP BY dbo.TblChangedComponentRegisterDetails.Emp_id"
+    s = s & "   Having (dbo.TblChangedComponentRegisterDetails.Emp_id = @EmpID)"
+    s = s & " )"
+    s = s & "     End"
+  db_createOrUpdateFuctionSQL "GetAbcentDay2", s
 
 End Function
 
@@ -9219,34 +9238,34 @@ Function UpdateDataBasePart29()
 
     'Cn.Execute "Delete TBLTYPEIMAGE"
     'Cn.Execute "Delete TBLTYPEIMAGE2"
-    Dim S       As String
+    Dim s       As String
     Dim rsDummy As New ADODB.Recordset
-    S = "Select * from TblTypeImage "
+    s = "Select * from TblTypeImage "
     Set rsDummy = New ADODB.Recordset
-    rsDummy.Open S, Cn, adOpenStatic
+    rsDummy.Open s, Cn, adOpenStatic
 
     If rsDummy.EOF Then
-        S = " INSERT INTO [TBLTYPEIMAGE]([ID], [Name], [NameE])" & vbNewLine
-        S = S & "     VALUES(1, '«· √”Ì”', NULL);" & vbNewLine & vbNewLine
+        s = " INSERT INTO [TBLTYPEIMAGE]([ID], [Name], [NameE])" & vbNewLine
+        s = s & "     VALUES(1, '«· √”Ì”', NULL);" & vbNewLine & vbNewLine
     
-        S = S & "     INSERT INTO [TBLTYPEIMAGE]([ID], [Name], [NameE])" & vbNewLine
-        S = S & "         VALUES(2, '«·÷—«∆»', NULL);" & vbNewLine
+        s = s & "     INSERT INTO [TBLTYPEIMAGE]([ID], [Name], [NameE])" & vbNewLine
+        s = s & "         VALUES(2, '«·÷—«∆»', NULL);" & vbNewLine
         'GO
     
-        S = S & "     INSERT INTO [TBLTYPEIMAGE]([ID], [Name], [NameE])" & vbNewLine
-        S = S & "         VALUES(3, '«·„—«Ã⁄Â', NULL);" & vbNewLine
+        s = s & "     INSERT INTO [TBLTYPEIMAGE]([ID], [Name], [NameE])" & vbNewLine
+        s = s & "         VALUES(3, '«·„—«Ã⁄Â', NULL);" & vbNewLine
         'GO
     
-        S = S & "     INSERT INTO [TBLTYPEIMAGE]([ID], [Name], [NameE])" & vbNewLine
-        S = S & "         VALUES(4, '„·›«  œ—«”… «·ÃœÊÏ', NULL);" & vbNewLine
+        s = s & "     INSERT INTO [TBLTYPEIMAGE]([ID], [Name], [NameE])" & vbNewLine
+        s = s & "         VALUES(4, '„·›«  œ—«”… «·ÃœÊÏ', NULL);" & vbNewLine
         ' GO
     
-        S = S & "     INSERT INTO [TBLTYPEIMAGE]([ID], [Name], [NameE])" & vbNewLine
-        S = S & "         VALUES(5, '«·‘∆Ê‰ «·ﬁ«‰Ê‰Ì…', NULL);" & vbNewLine
+        s = s & "     INSERT INTO [TBLTYPEIMAGE]([ID], [Name], [NameE])" & vbNewLine
+        s = s & "         VALUES(5, '«·‘∆Ê‰ «·ﬁ«‰Ê‰Ì…', NULL);" & vbNewLine
         ' GO
     
-        S = S & "     INSERT INTO [TBLTYPEIMAGE]([ID], [Name], [NameE])" & vbNewLine
-        S = S & "         VALUES(6, '«· «„Ì‰«  «·«Ã „«⁄Ì…', NULL);" & vbNewLine
+        s = s & "     INSERT INTO [TBLTYPEIMAGE]([ID], [Name], [NameE])" & vbNewLine
+        s = s & "         VALUES(6, '«· «„Ì‰«  «·«Ã „«⁄Ì…', NULL);" & vbNewLine
         ' GO
         '
         '    s = s & "     INSERT INTO [TBLTYPEIMAGE]([ID], [Name], [NameE])" & vbNewLine
@@ -9265,224 +9284,224 @@ Function UpdateDataBasePart29()
         '    s = s & "         VALUES(10, '«·÷—Ì»… «·⁄ﬁ«—Ì…', NULL);" & vbNewLine
         'GO
 
-        Cn.Execute S
+        Cn.Execute s
 
-        S = " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(1, '⁄ﬁœ «·‘—ﬂ…  ', NULL, 1);"
+        s = " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(1, '⁄ﬁœ «·‘—ﬂ…  ', NULL, 1);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(2, '’ÕÌ›… «·«” À„«—', NULL, 1);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(2, '’ÕÌ›… «·«” À„«—', NULL, 1);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(3, '⁄ﬁÊœ  ⁄œÌ·', NULL, 1);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(3, '⁄ﬁÊœ  ⁄œÌ·', NULL, 1);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(4, '«·»ÿ«ﬁ… «·÷—Ì»Ì… ', NULL, 1);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(4, '«·»ÿ«ﬁ… «·÷—Ì»Ì… ', NULL, 1);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(5, '«·”Ã· «· Ã«—Ì', NULL, 1);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(5, '«·”Ã· «· Ã«—Ì', NULL, 1);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(6, '«·»ÿ«ﬁ… «·«” Ì—«œÌ…', NULL, 1);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(6, '«·»ÿ«ﬁ… «·«” Ì—«œÌ…', NULL, 1);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(7, '«·»ÿ«ﬁ… «· ’œÌ—Ì…', NULL, 1);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(7, '«·»ÿ«ﬁ… «· ’œÌ—Ì…', NULL, 1);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(8, '⁄ﬁœ «·«ÌÃ«—', NULL, 1);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(8, '⁄ﬁœ «·«ÌÃ«—', NULL, 1);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(9, '⁄ﬁœ „·ﬂÌ…', NULL, 1);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(9, '⁄ﬁœ „·ﬂÌ…', NULL, 1);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(10, '«·Ã„⁄Ì… «·⁄„Ê„Ì… «·⁄«œÌ…', NULL, 1);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(10, '«·Ã„⁄Ì… «·⁄„Ê„Ì… «·⁄«œÌ…', NULL, 1);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(11, '«·Ã„⁄Ì«  «·⁄„Ê„Ì… €Ì— «·⁄«œÌ…', NULL, 1);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(11, '«·Ã„⁄Ì«  «·⁄„Ê„Ì… €Ì— «·⁄«œÌ…', NULL, 1);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(12, '„Õ«÷— „Ã«·” «·«œ«—…', NULL, 1);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(12, '„Õ«÷— „Ã«·” «·«œ«—…', NULL, 1);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(13, 'Õ«›Ÿ… «·»—Ìœ', NULL, 1);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(13, 'Õ«›Ÿ… «·»—Ìœ', NULL, 1);"
         'GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(14, '„—«”·«  ÂÌ∆… «·«” À„«—', NULL, 1);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(14, '„—«”·«  ÂÌ∆… «·«” À„«—', NULL, 1);"
         'GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(15, '„—«›ﬁ«  ÊŒÿ«»«  ÂÌ∆… «·—ﬁ«»… «·„«·Ì…', NULL, 1);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(15, '„—«›ﬁ«  ÊŒÿ«»«  ÂÌ∆… «·—ﬁ«»… «·„«·Ì…', NULL, 1);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(16, '„’— «·„ﬁ«’…', NULL, 1);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(16, '„’— «·„ﬁ«’…', NULL, 1);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(17, '‰„«–Ã «·÷—«∆»', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(17, '‰„«–Ã «·÷—«∆»', '', 2);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(18, '«·ÿ⁄‰ «·÷—Ì»Ì', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(18, '«·ÿ⁄‰ «·÷—Ì»Ì', '', 2);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(19, 'ﬁ—«—«  ·Ã«‰ «·ÿ⁄‰', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(19, 'ﬁ—«—«  ·Ã«‰ «·ÿ⁄‰', '', 2);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(20, '«Œÿ«—«  «·÷—«∆»', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(20, '«Œÿ«—«  «·÷—«∆»', '', 2);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(21, '„–ﬂ—… «·›Õ’ «·÷—Ì»Ì', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(21, '„–ﬂ—… «·›Õ’ «·÷—Ì»Ì', '', 2);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(22, '„Õ«÷— «·«⁄„«·', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(22, '„Õ«÷— «·«⁄„«·', '', 2);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(23, '«Ì’«·«  ”œ«œ ÷—Ì»Ì', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(23, '«Ì’«·«  ”œ«œ ÷—Ì»Ì', '', 2);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(24, '«·«ﬁ—«— «·÷—Ì»Ì «·”‰ÊÌ', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(24, '«·«ﬁ—«— «·÷—Ì»Ì «·”‰ÊÌ', '', 2);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(25, ' ﬁ—Ì— «·„—«Ã⁄Â «·—»⁄ ”‰ÊÌ', '', 3);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(25, ' ﬁ—Ì— «·„—«Ã⁄Â «·—»⁄ ”‰ÊÌ', '', 3);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(26, '„—›ﬁ«  „·›', '', 3);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(26, '„—›ﬁ«  „·›', '', 3);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(27, 'œ—«”… «·ÃœÊÌ', NULL, 4);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(27, 'œ—«”… «·ÃœÊÌ', NULL, 4);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(28, '⁄—Ì÷… «·œ⁄ÊÌ', '', 5);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(28, '⁄—Ì÷… «·œ⁄ÊÌ', '', 5);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(29, '‘Â«œ… „‰ «·ÃœÊ·', '', 5);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(29, '‘Â«œ… „‰ «·ÃœÊ·', '', 5);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(30, '„—›ﬁ«  «·„·›', '', 5);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(30, '„—›ﬁ«  «·„·›', '', 5);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(31, '«” „«—… 2  √„Ì‰«  «Ã „«⁄Ì…', '', 6);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(31, '«” „«—… 2  √„Ì‰«  «Ã „«⁄Ì…', '', 6);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(32, '«” „«—… 1  √„Ì‰«  ··⁄«„·Ì‰', '', 6);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(32, '«” „«—… 1  √„Ì‰«  ··⁄«„·Ì‰', '', 6);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(33, '«” „«—… 6  «„Ì‰« ', '', 6);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(33, '«” „«—… 6  «„Ì‰« ', '', 6);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(34, '«” ﬁ«·…', '', 6);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(34, '«” ﬁ«·…', '', 6);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(35, '«” ·«„ „” Õﬁ« ', '', 6);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(35, '«” ·«„ „” Õﬁ« ', '', 6);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(36, '«Ì’«·«  ”œ«œ «· «„Ì‰« ', '', 6);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(36, '«Ì’«·«  ”œ«œ «· «„Ì‰« ', '', 6);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(37, '«ﬁ—«—«  «·÷—Ì»… «·‘Â—Ì…', '', 6);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(37, '«ﬁ—«—«  «·÷—Ì»… «·‘Â—Ì…', '', 6);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(38, '„–ﬂ—… «·›Õ’ «·÷—Ì»Ì', '', 6);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(38, '„–ﬂ—… «·›Õ’ «·÷—Ì»Ì', '', 6);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(39, '„Õ«÷— «⁄„«· ›Õ’ ÷—Ì»Ì', '', 6);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(39, '„Õ«÷— «⁄„«· ›Õ’ ÷—Ì»Ì', '', 6);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(40, '„—«”·«  ÷—Ì»… «·ﬁÌ„… «·„÷«›…', '', 6);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(40, '„—«”·«  ÷—Ì»… «·ﬁÌ„… «·„÷«›…', '', 6);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(41, '‘Â«œ…  ”ÃÌ· «·ﬁÌ„… «·„÷«›…', '', 6);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(41, '‘Â«œ…  ”ÃÌ· «·ﬁÌ„… «·„÷«›…', '', 6);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(42, '„–ﬂ—… «·›Õ’ - œ„€…', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(42, '„–ﬂ—… «·›Õ’ - œ„€…', '', 2);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(43, '«·‰„«–Ã «·÷—Ì»Ì… - œ„€…', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(43, '«·‰„«–Ã «·÷—Ì»Ì… - œ„€…', '', 2);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(44, '«·ÿ⁄Ê‰ «·÷—Ì»Ì… - œ„€…', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(44, '«·ÿ⁄Ê‰ «·÷—Ì»Ì… - œ„€…', '', 2);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(45, ' ”ÊÌ… ﬂ”» «·⁄„·', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(45, ' ”ÊÌ… ﬂ”» «·⁄„·', '', 2);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(46, '«ﬁ—«— ÷—Ì»Ì ‰„Ê–Ã (4)', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(46, '«ﬁ—«— ÷—Ì»Ì ‰„Ê–Ã (4)', '', 2);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(47, '‰„«–Ã („ÿ«·»…) ﬂ”» ⁄„·', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(47, '‰„«–Ã („ÿ«·»…) ﬂ”» ⁄„·', '', 2);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(48, '«·ÿ⁄‰ «·÷—Ì»Ì ⁄‰ „ÿ«·»… ﬂ”» «·⁄„·', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(48, '«·ÿ⁄‰ «·÷—Ì»Ì ⁄‰ „ÿ«·»… ﬂ”» «·⁄„·', '', 2);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(49, '„ÿ«·»… «·÷—Ì»… «·⁄ﬁ«—Ì…', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(49, '„ÿ«·»… «·÷—Ì»… «·⁄ﬁ«—Ì…', '', 2);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(50, '«·ÿ⁄‰ «·÷—Ì»Ì ', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(50, '«·ÿ⁄‰ «·÷—Ì»Ì ', '', 2);"
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine & vbNewLine
-        S = S & "     VALUES(51, '„—«”·«  ÷—Ì»Ì…', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine & vbNewLine
+        s = s & "     VALUES(51, '„—«”·«  ÷—Ì»Ì…', '', 2);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(52, '„–ﬂ—… «·›Õ’ - œ„€…', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(52, '„–ﬂ—… «·›Õ’ - œ„€…', '', 2);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(53, '«·‰„«–Ã «·÷—Ì»Ì… - œ„€…', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(53, '«·‰„«–Ã «·÷—Ì»Ì… - œ„€…', '', 2);"
         ' GO
 
-        S = S & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
-        S = S & "     VALUES(54, '«·ÿ⁄Ê‰ «·÷—Ì»Ì… - œ„€…', '', 2);"
+        s = s & " INSERT INTO [TBLTYPEIMAGE2]([ID], [Name], [NameE], [MasterId])" & vbNewLine
+        s = s & "     VALUES(54, '«·ÿ⁄Ê‰ «·÷—Ì»Ì… - œ„€…', '', 2);"
         ' GO
 
-        Cn.Execute S
+        Cn.Execute s
 
     End If
 
@@ -9491,7 +9510,7 @@ End Function
 Function UpdateDataBasePart30()
     On Error Resume Next
     Dim New_View As String
-    Dim S        As String
+    Dim s        As String
    
     
     '*************Ship *************
@@ -10747,29 +10766,29 @@ End Sub
 
 '==== helpers =========================================
 Private Function GetColumnType(ByVal tablename As String, ByVal ColName As String) As String
-    Dim Rs As New ADODB.Recordset, sql As String
+    Dim rs As New ADODB.Recordset, sql As String
     sql = "SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS " & _
           "WHERE TABLE_NAME='" & tablename & "' AND COLUMN_NAME='" & ColName & "'"
-    Rs.Open sql, Cn, adOpenForwardOnly, adLockReadOnly
-    If Not Rs.EOF Then GetColumnType = LCase$(Rs!DATA_TYPE & "")
-    Rs.Close: Set Rs = Nothing
+    rs.Open sql, Cn, adOpenForwardOnly, adLockReadOnly
+    If Not rs.EOF Then GetColumnType = LCase$(rs!DATA_TYPE & "")
+    rs.Close: Set rs = Nothing
 End Function
 
 Private Function ColumnExists(ByVal tablename As String, ByVal ColName As String) As Boolean
-    Dim Rs As New ADODB.Recordset, sql As String
+    Dim rs As New ADODB.Recordset, sql As String
     sql = "SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS " & _
           "WHERE TABLE_NAME='" & tablename & "' AND COLUMN_NAME='" & ColName & "'"
-    Rs.Open sql, Cn, adOpenForwardOnly, adLockReadOnly
-    ColumnExists = Not Rs.EOF
-    Rs.Close: Set Rs = Nothing
+    rs.Open sql, Cn, adOpenForwardOnly, adLockReadOnly
+    ColumnExists = Not rs.EOF
+    rs.Close: Set rs = Nothing
 End Function
 
 Private Function TableRowCount(ByVal tablename As String) As Long
-    Dim Rs As New ADODB.Recordset, sql As String
+    Dim rs As New ADODB.Recordset, sql As String
     sql = "SELECT COUNT(*) AS Cnt FROM " & tablename
-    Rs.Open sql, Cn, adOpenForwardOnly, adLockReadOnly
-    If Not Rs.EOF Then TableRowCount = CLng(val(Rs!cnt & ""))
-    Rs.Close: Set Rs = Nothing
+    rs.Open sql, Cn, adOpenForwardOnly, adLockReadOnly
+    If Not rs.EOF Then TableRowCount = CLng(val(rs!cnt & ""))
+    rs.Close: Set rs = Nothing
 End Function
 
 '==== core per-table convert ===========================

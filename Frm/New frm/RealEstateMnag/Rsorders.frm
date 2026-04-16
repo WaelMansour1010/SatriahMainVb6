@@ -21,6 +21,15 @@ Begin VB.Form RsOrders
    ScaleHeight     =   7710
    ScaleWidth      =   12135
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CommandButton Command1 
       Caption         =   "ÿ»«⁄Â ‰„Ê–Ã «·ÿ·»"
       Height          =   315

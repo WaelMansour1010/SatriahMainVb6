@@ -16,6 +16,15 @@ Begin VB.Form ArrowsAllCompanyilstDetails1
    RightToLeft     =   -1  'True
    ScaleHeight     =   8790
    ScaleWidth      =   14985
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VSFlex8Ctl.VSFlexGrid VSFlexGrid1 
       Height          =   8100
       Left            =   11760

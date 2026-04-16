@@ -19,6 +19,15 @@ Begin VB.Form Order_no_search
    RightToLeft     =   -1  'True
    ScaleHeight     =   8865
    ScaleWidth      =   9675
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox txtContainerNo 
       Height          =   345
       Left            =   6150

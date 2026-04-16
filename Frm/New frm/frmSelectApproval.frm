@@ -16,6 +16,15 @@ Begin VB.Form FrmSelectApproval
    RightToLeft     =   -1  'True
    ScaleHeight     =   5760
    ScaleWidth      =   9465
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CommandButton CMDCancel 
       Caption         =   "«·€«¡"
       Height          =   375

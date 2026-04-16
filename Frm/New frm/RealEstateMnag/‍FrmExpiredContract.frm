@@ -11,6 +11,15 @@ Begin VB.Form FrmExpiredContract
    ClientLeft      =   45
    ClientTop       =   435
    ClientWidth     =   10380
+   BeginProperty Font 
+      Name            =   "Arial"
+      Size            =   8.25
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Icon            =   "žFrmExpiredContract.frx":0000
    LinkTopic       =   "Form2"
    MaxButton       =   0   'False
@@ -53,7 +62,7 @@ Begin VB.Form FrmExpiredContract
             _ExtentY        =   609
             _Version        =   393216
             CheckBox        =   -1  'True
-            Format          =   245301249
+            Format          =   164364289
             CurrentDate     =   41640
          End
          Begin MSComCtl2.DTPicker XPDtpTo 
@@ -66,7 +75,7 @@ Begin VB.Form FrmExpiredContract
             _ExtentY        =   609
             _Version        =   393216
             CheckBox        =   -1  'True
-            Format          =   245301249
+            Format          =   164364289
             CurrentDate     =   41640
          End
          Begin VB.Label lbl 
@@ -211,7 +220,7 @@ Begin VB.Form FrmExpiredContract
          Top             =   240
          Width           =   4935
          _ExtentX        =   8705
-         _ExtentY        =   556
+         _ExtentY        =   582
          _Version        =   393216
          BackColor       =   16777215
          Text            =   ""
@@ -224,7 +233,7 @@ Begin VB.Form FrmExpiredContract
          Top             =   960
          Width           =   4095
          _ExtentX        =   7223
-         _ExtentY        =   556
+         _ExtentY        =   582
          _Version        =   393216
          BackColor       =   16777215
          Text            =   ""
@@ -237,7 +246,7 @@ Begin VB.Form FrmExpiredContract
          Top             =   600
          Width           =   4935
          _ExtentX        =   8705
-         _ExtentY        =   556
+         _ExtentY        =   582
          _Version        =   393216
          BackColor       =   16777215
          Text            =   ""
@@ -250,7 +259,7 @@ Begin VB.Form FrmExpiredContract
          Top             =   1320
          Width           =   4095
          _ExtentX        =   7223
-         _ExtentY        =   556
+         _ExtentY        =   582
          _Version        =   393216
          BackColor       =   16777215
          Text            =   ""
@@ -263,7 +272,7 @@ Begin VB.Form FrmExpiredContract
          Top             =   1680
          Width           =   4935
          _ExtentX        =   8705
-         _ExtentY        =   556
+         _ExtentY        =   582
          _Version        =   393216
          BackColor       =   16777215
          Text            =   ""
@@ -390,8 +399,9 @@ Begin VB.Form FrmExpiredContract
       ButtonPositionImage=   1
       Caption         =   "ÚÑÖ ÇáÊÞÑíÑ"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -423,8 +433,9 @@ Begin VB.Form FrmExpiredContract
       ButtonPositionImage=   1
       Caption         =   "ÎÑæÌ"
       BackColor       =   14871017
+      FontName        =   "Arial"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
+         Name            =   "Arial"
          Size            =   8.25
          Charset         =   178
          Weight          =   400
@@ -548,7 +559,7 @@ Private Sub dcsupplier_Click(Area As Integer)
    If val(dcsupplier.BoundText) = 0 Then Exit Sub
     Dim EmpCode  As String
     GetTblCustemersCode , , dcsupplier.BoundText, EmpCode
-    Me.txtCodeOwner.text = EmpCode
+    Me.txtCodeOwner.Text = EmpCode
 End Sub
 
 Private Sub Form_Activate()
@@ -659,6 +670,84 @@ End If
 
     StrSQL = StrSQL & StrWhere
  
+ 
+ 
+ StrSQL = ""
+StrSQL = StrSQL & " SELECT * FROM ( "
+StrSQL = StrSQL & " SELECT "
+StrSQL = StrSQL & " dbo.TblContract.ContNo, "
+StrSQL = StrSQL & " dbo.TblContract.NoteSerial1, "
+StrSQL = StrSQL & " dbo.TblContract.TodateH, "
+StrSQL = StrSQL & " dbo.TblContract.EndDate, "
+StrSQL = StrSQL & " dbo.TblContract.OldRent, "
+StrSQL = StrSQL & " dbo.TblContract.CusID, "
+StrSQL = StrSQL & " dbo.TblCustemers.CusName AS CustName, "
+StrSQL = StrSQL & " dbo.TblCustemers.CusNamee AS CustNamee, "
+StrSQL = StrSQL & " dbo.TblContract.ownerid, "
+StrSQL = StrSQL & " dbo.TblContract.UnitType, "
+StrSQL = StrSQL & " dbo.TblAqar.BranchId, "
+StrSQL = StrSQL & " dbo.TblContract.Iqar, "
+StrSQL = StrSQL & " dbo.TblContract.Emp_id, "
+StrSQL = StrSQL & " dbo.TblContract.Renew, "
+StrSQL = StrSQL & " dbo.TblContract.EndContract, "
+StrSQL = StrSQL & " IsNull(dbo.TblContract.phone, 0) + "
+StrSQL = StrSQL & " IsNull(dbo.TblContract.TotalContract, 0) + "
+StrSQL = StrSQL & " IsNull(dbo.TblContract.Water, 0) + "
+StrSQL = StrSQL & " IsNull(dbo.TblContract.Electricity, 0) AS Total_Value, "
+
+StrSQL = StrSQL & " ROW_NUMBER() OVER ( "
+StrSQL = StrSQL & " PARTITION BY ISNULL(dbo.TblContract.NoteSerial1,dbo.TblContract.ContNo) "
+StrSQL = StrSQL & " ORDER BY dbo.TblContract.EndDate DESC , dbo.TblContract.ContNo DESC "
+StrSQL = StrSQL & " ) AS rn "
+
+StrSQL = StrSQL & " FROM dbo.TblContract "
+StrSQL = StrSQL & " INNER JOIN dbo.TblAqar ON dbo.TblContract.Iqar = dbo.TblAqar.Aqarid "
+StrSQL = StrSQL & " LEFT OUTER JOIN dbo.TblCustemers ON dbo.TblContract.CusID = dbo.TblCustemers.CusID "
+
+StrSQL = StrSQL & " ) X WHERE (1=1) AND rn = 1 "
+BolBegine = False
+StrWhere = ""
+
+If Me.DcbBranch.BoundText <> "" Then
+    StrWhere = StrWhere & " AND BranchId = " & val(Me.DcbBranch.BoundText)
+End If
+
+If Me.dcbAqarType.BoundText <> "" Then
+    StrWhere = StrWhere & " AND Iqar = " & val(Me.dcbAqarType.BoundText)
+End If
+
+StrWhere = StrWhere & " AND (EndContract IS NULL) "
+
+If Me.dcsupplier.BoundText <> "" Then
+    StrWhere = StrWhere & " AND ownerid = " & val(dcsupplier.BoundText)
+End If
+
+If Me.dcbSalesSpec.BoundText <> "" Then
+    StrWhere = StrWhere & " AND Emp_ID = " & val(dcbSalesSpec.BoundText)
+End If
+
+If Me.DCAkarUnit.BoundText <> "" Then
+    StrWhere = StrWhere & " AND UnitType = " & val(DCAkarUnit.BoundText)
+End If
+
+If Me.xpdtbfrom <> Empty And Not IsNull(Me.xpdtbfrom.value) Then
+    StrWhere = StrWhere & " AND (EndDate >= " & SQLDate(Me.xpdtbfrom.value, True) & ")"
+End If
+
+If Me.XPDtpTo <> Empty And Not IsNull(Me.XPDtpTo.value) Then
+    StrWhere = StrWhere & " AND (EndDate <= " & SQLDate(Me.XPDtpTo.value, True) & ")"
+End If
+
+If Rd(1).value = True Then
+    StrWhere = StrWhere & " AND (Renew = 0 OR Renew IS NULL)"
+End If
+
+If Rd(0).value = True Then
+    StrWhere = StrWhere & " AND (Renew = 1)"
+End If
+
+StrSQL = StrSQL & StrWhere
+StrSQL = StrSQL & " ORDER BY EndDate, ContNo "
   
   
     Set rs = New ADODB.Recordset
@@ -867,7 +956,7 @@ End Sub
 Private Sub txtCodeBranch_KeyPress(KeyAscii As Integer)
  Dim EmpID As Integer
     If KeyAscii = vbKeyReturn Then
-       GetBranchIDFromCode txtCodeBranch.text, EmpID
+       GetBranchIDFromCode txtCodeBranch.Text, EmpID
        DcbBranch.BoundText = EmpID
     End If
 End Sub
@@ -909,7 +998,7 @@ Private Sub txtCodeOwner_KeyPress(KeyAscii As Integer)
  Dim EmpID As Integer
 
   If KeyAscii = vbKeyReturn Then
-        GetTblCustemersCode txtCodeOwner.text, EmpID, , , 57
+        GetTblCustemersCode txtCodeOwner.Text, EmpID, , , 57
         dcsupplier.BoundText = EmpID
    End If
 End Sub

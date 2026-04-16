@@ -1,6 +1,6 @@
 VERSION 5.00
 Object = "{798A85D3-625A-4512-A9E4-BA96E09CA6A6}#1.0#0"; "ciaXPIML30.ocx"
-Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "Comdlg32.ocx"
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
 Object = "{3D800911-77E3-43DE-82EA-7FC87C713180}#1.2#0"; "cPopMenu6.ocx"
 Object = "{396F7AC0-A0DD-11D3-93EC-00C0DFE7442A}#1.0#0"; "vbalIml6.ocx"
@@ -5506,6 +5506,7 @@ Private Const SND_VALID = &H1F
 
 Private Const SND_MEMORY = &H4
 
+
 Private Const SND_PURGE = &H40
 
 Dim formx As Integer
@@ -7768,8 +7769,8 @@ Private Sub DockingPane1_Action(ByVal Action As XtremeDockingPane.DockingPaneAct
     Exit Sub
 hErr:
     Msg = Err.Number
-    Msg = Msg + CHR(13) & Err.Description
-    Msg = Msg + CHR(13) & Err.Source
+    Msg = Msg + Chr(13) & Err.Description
+    Msg = Msg + Chr(13) & Err.Source
     MsgBox Msg, vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
 End Sub
 
@@ -7879,7 +7880,7 @@ Case 2
               Exit Sub
            End If
            Unload FrmMaintainanceAlarm
-           FrmMaintainanceAlarm.indexx = 0
+           FrmMaintainanceAlarm.Indexx = 0
             FrmMaintainanceAlarm.show
             
    Case 4
@@ -7887,7 +7888,7 @@ Case 2
               Exit Sub
            End If
                   Unload FrmMaintainanceAlarm
-           FrmMaintainanceAlarm.indexx = 1
+           FrmMaintainanceAlarm.Indexx = 1
             FrmMaintainanceAlarm.show
             
   Case 5
@@ -9000,7 +9001,7 @@ Exit Sub
      '   FrmRegisteration.show vbModal
     Else
         Msg = "‰”Œ… „”Ã·… "
-        Msg = Msg & CHR(13) & "‘ﬂ—« .. .·≈” Œœ«„ﬂ„ »—‰«„Ã ‰Ÿ«„ œÌ‰«„Ìﬂ »«Ì "
+        Msg = Msg & Chr(13) & "‘ﬂ—« .. .·≈” Œœ«„ﬂ„ »—‰«„Ã ‰Ÿ«„ œÌ‰«„Ìﬂ »«Ì "
         MsgBox Msg, vbInformation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
     End If
 
@@ -9515,7 +9516,7 @@ End Sub
 
 Private Sub MDIForm_DblClick()
 
-    With Cmdlg
+    With cmDlg
         '*.jpg,*.jpeg,*.jpe,*.jfif
         .CancelError = False
         .DialogTitle = " ≈Œ Ì«— ’Ê—…"
@@ -9722,7 +9723,7 @@ Ageng_all.show
     End If
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
   If formname = "Contract_type" Then
-      Contract_type.show
+      contract_type.show
     End If
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
   If formname = "FrmOtherCustomers" Then
@@ -11748,7 +11749,7 @@ Private Sub MnuDataBaseTools_Click()
         FrmDataBaseTools.show vbModal
     Else
         Msg = "ÌÃ» €·ﬁ «Ï ‘«‘… „‰ ‘«‘«  «·»—‰«„Ã ﬁ»·"
-        Msg = Msg & CHR(13) & "«‰  ” Œœ„ Â–« «·‘«‘…....!!!!"
+        Msg = Msg & Chr(13) & "«‰  ” Œœ„ Â–« «·‘«‘…....!!!!"
         MsgBox Msg, vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
     End If
 
@@ -12769,7 +12770,7 @@ Private Sub MnuProjectsBasicSub_Click(Index As Integer)
                 Exit Sub
             End If
 
-            Contract_type.show
+            contract_type.show
 
         Case 2
 
@@ -13041,14 +13042,14 @@ Private Sub MnuToolsSetPrinters_Click(Index As Integer)
             Dim Msg As String
 
             On Error GoTo hErr
-            Me.Cmdlg.CancelError = False
-            Me.Cmdlg.ShowPrinter
+            Me.cmDlg.CancelError = False
+            Me.cmDlg.ShowPrinter
             Exit Sub
 hErr:
             Msg = "ÕœÀ Œÿ« √À‰«¡ ≈⁄œ«œ «·ÿ«»⁄… ..."
-            Msg = Msg & CHR(13) & Err.Description
-            Msg = Msg & CHR(13) & Err.Number
-            Msg = Msg & CHR(13) & Err.Source
+            Msg = Msg & Chr(13) & Err.Description
+            Msg = Msg & Chr(13) & Err.Number
+            Msg = Msg & Chr(13) & Err.Source
             MsgBox Msg, vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
 
         Case 1
@@ -13125,15 +13126,15 @@ Case 0
   
   
     Case 1
-   Me.Cmdlg.CancelError = False
-    Me.Cmdlg.ShowPrinter
+   Me.cmDlg.CancelError = False
+    Me.cmDlg.ShowPrinter
     Exit Sub
     
 hErr:
     Msg = "ÕœÀ Œÿ« √À‰«¡ ≈⁄œ«œ «·ÿ«»⁄… ..."
-    Msg = Msg & CHR(13) & Err.Description
-    Msg = Msg & CHR(13) & Err.Number
-    Msg = Msg & CHR(13) & Err.Source
+    Msg = Msg & Chr(13) & Err.Description
+    Msg = Msg & Chr(13) & Err.Number
+    Msg = Msg & Chr(13) & Err.Source
     MsgBox Msg, vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
 
     End Select
@@ -13490,9 +13491,9 @@ Dim Msg As String
               
             Else
                 Msg = "ÌÃ» €·ﬁ «Ï ‘«‘… „‰ ‘«‘«  «·»—‰«„Ã ﬁ»·"
-                Msg = Msg & CHR(13) & "«‰  ” Œœ„ Â–« «·‘«‘…....!!!!"
+                Msg = Msg & Chr(13) & "«‰  ” Œœ„ Â–« «·‘«‘…....!!!!"
                 
-                 Msg = Msg & CHR(13) & "Close All Screen Firstly"
+                 Msg = Msg & Chr(13) & "Close All Screen Firstly"
                 
                 MsgBox Msg, vbExclamation + vbMsgBoxRight + vbMsgBoxRtlReading, App.Title
                 Exit Sub
@@ -13694,15 +13695,15 @@ Private Sub PopMenu1_Click(ItemNumber As Long)
 
     If ItemNumber = 108 Then Exit Sub
     Dim Lparent As Long
-    Dim Temp As String
+    Dim temp As String
     Dim TempArry As Variant
     Dim i As Integer
 
     With Me.PopMenu1
         Lparent = .MenuIndex("MnuWindowsList")
-        Temp = .HierarchyPath(.MenuKey(ItemNumber), 1, "-")
-        If Temp <> "" Then
-            TempArry = Split(Temp, "-", , vbTextCompare)
+        temp = .HierarchyPath(.MenuKey(ItemNumber), 1, "-")
+        If temp <> "" Then
+            TempArry = Split(temp, "-", , vbTextCompare)
 
             If CStr(TempArry(1)) Like .Caption("MnuWindowsList") Then
 

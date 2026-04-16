@@ -14,6 +14,15 @@ Begin VB.Form ADD_MEMBER_INSTALLMENTS
    RightToLeft     =   -1  'True
    ScaleHeight     =   5535
    ScaleWidth      =   7185
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CommandButton Command1 
       Caption         =   "  ÿ»Ìﬁ ﬁ”ÿ ⁄·Ï «·ÿ«·» "
       Enabled         =   0   'False

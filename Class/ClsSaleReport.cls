@@ -469,6 +469,7 @@ Public Function ShowSallingDataShort(SallingID As Long, _
     Dim rs As New ADODB.Recordset
     Dim RsTemp As New ADODB.Recordset
     Dim Frm As FrmReportViewer
+    Dim CViewer As ClsReportViewer
     Dim Msg As String
 
     Dim StrFileName As String
@@ -527,9 +528,8 @@ Public Function ShowSallingDataShort(SallingID As Long, _
         Sendkeys "{RIGHT}"
     ElseIf m_Target = PrinterTarget Then
         xReport.PaperSize = crPaper10x14
-        xReport.PrintOut False, 1
-        
-        Frm.CRViewer.PrintReport
+        Set CViewer = New ClsReportViewer
+        CViewer.FireReport xReport, PrinterTarget, "", , 1, , StrFileName, , StrSQL
         Unload Frm
     End If
 
@@ -551,6 +551,7 @@ Public Function PrintInvoiceReceipt(SallingID As Long, _
     Dim rs As New ADODB.Recordset
     Dim RsTemp As New ADODB.Recordset
     Dim Frm As FrmReportViewer
+    Dim CViewer As ClsReportViewer
     Dim Msg As String
     Dim StrTemp As String
 
@@ -612,9 +613,8 @@ Frm.TXTSTRSQL = StrSQL
         Sendkeys "{RIGHT}"
     ElseIf m_Target = PrinterTarget Then
         xReport.PaperSize = crPaper10x14
-        xReport.PrintOut False, 1
-        
-        Frm.CRViewer.PrintReport
+        Set CViewer = New ClsReportViewer
+        CViewer.FireReport xReport, PrinterTarget, "", , 1, , StrFileName, , StrSQL
         Unload Frm
     End If
 

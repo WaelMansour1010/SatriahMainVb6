@@ -19,6 +19,15 @@ Begin VB.Form FrmShowCol
    ScaleHeight     =   3195
    ScaleWidth      =   3000
    StartUpPosition =   3  'Windows Default
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VSFlex8UCtl.VSFlexGrid FG 
       Height          =   2145
       Left            =   60

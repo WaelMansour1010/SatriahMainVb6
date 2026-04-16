@@ -23,6 +23,15 @@ Begin VB.Form FrmCashing
    MinButton       =   0   'False
    ScaleHeight     =   8625
    ScaleWidth      =   12705
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox txtoldvalue 
       Alignment       =   1  'Right Justify
       Enabled         =   0   'False

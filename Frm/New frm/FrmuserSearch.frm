@@ -18,6 +18,15 @@ Begin VB.Form FrmUserSearch
    RightToLeft     =   -1  'True
    ScaleHeight     =   4050
    ScaleWidth      =   10080
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.TextBox TxtCompanyName 
       Alignment       =   1  'Right Justify
       Height          =   315

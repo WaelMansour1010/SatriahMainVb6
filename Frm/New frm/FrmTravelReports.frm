@@ -21,6 +21,15 @@ Begin VB.Form frmTravelRports
    RightToLeft     =   -1  'True
    ScaleHeight     =   6930
    ScaleWidth      =   12210
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Elastic Ele 
       Height          =   6930
       Index           =   0

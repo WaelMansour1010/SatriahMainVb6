@@ -23,6 +23,15 @@ Begin VB.Form FrmUserAbility
    ScaleHeight     =   6765
    ScaleWidth      =   4530
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin C1SizerLibCtl.C1Tab TabMain 
       Height          =   4395
       Left            =   0

@@ -19,6 +19,15 @@ Begin VB.Form FrmToolsSerials
    RightToLeft     =   -1  'True
    ScaleHeight     =   6900
    ScaleWidth      =   4470
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin ZKFPEngXControl.ZKFPEngX ZKFPEngX1 
       Left            =   1440
       Top             =   5520

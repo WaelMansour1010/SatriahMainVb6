@@ -22,6 +22,15 @@ Begin VB.Form frmsalebill6
    ScaleHeight     =   9765
    ScaleWidth      =   20430
    WindowState     =   2  'Maximized
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.Frame FramePay 
       BackColor       =   &H00E0E0E0&
       Caption         =   "«·„»·€ «·„œ›Ê⁄"

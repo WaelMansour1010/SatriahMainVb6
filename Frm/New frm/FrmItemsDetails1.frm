@@ -17,6 +17,15 @@ Begin VB.Form FrmItemsDetails1
    RightToLeft     =   -1  'True
    ScaleHeight     =   9375
    ScaleWidth      =   13395
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.OptionButton Opt 
       Alignment       =   1  'Right Justify
       Caption         =   " Ê“Ì⁄ «·Ì"

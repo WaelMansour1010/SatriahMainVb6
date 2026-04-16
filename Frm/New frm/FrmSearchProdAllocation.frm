@@ -19,6 +19,15 @@ Begin VB.Form FrmSearchProdAllocation
    ScaleHeight     =   4905
    ScaleWidth      =   8820
    ShowInTaskbar   =   0   'False
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.ComboBox CboType1 
       BackColor       =   &H00C0E0FF&
       Height          =   315

@@ -21,6 +21,15 @@ Begin VB.Form imaged2
    ScaleHeight     =   10650
    ScaleWidth      =   20595
    StartUpPosition =   1  'CenterOwner
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    WindowState     =   2  'Maximized
    Begin VB.Frame Frame5 
       Height          =   1575

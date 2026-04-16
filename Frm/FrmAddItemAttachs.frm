@@ -18,6 +18,15 @@ Begin VB.Form FrmAddItemAttachs
    ScaleHeight     =   5055
    ScaleWidth      =   7710
    StartUpPosition =   3  'Windows Default
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VSFlex8UCtl.VSFlexGrid Fg 
       Height          =   2685
       Left            =   0

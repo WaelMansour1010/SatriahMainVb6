@@ -14,6 +14,15 @@ Begin VB.Form f
    RightToLeft     =   -1  'True
    ScaleHeight     =   6105
    ScaleWidth      =   5265
+   BeginProperty Font 
+      Name            =   "MS Sans Serif"
+      Size            =   8
+      Charset         =   178
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Begin VB.CommandButton Command1 
       Caption         =   "„Ê«›ﬁ"
       Default         =   -1  'True

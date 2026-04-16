@@ -773,7 +773,7 @@ Begin VB.Form FRMTRansferData3
          _ExtentY        =   582
          _Version        =   393216
          CheckBox        =   -1  'True
-         Format          =   189136898
+         Format          =   227803138
          CurrentDate     =   38784
       End
       Begin VB.Label LblInfo 
@@ -939,13 +939,12 @@ Begin VB.Form FRMTRansferData3
       Height          =   285
       Left            =   4860
       TabIndex        =   41
-      Top             =   4530
-      Visible         =   0   'False
+      Top             =   4560
       Width           =   1455
       _ExtentX        =   2566
       _ExtentY        =   503
       _Version        =   393216
-      Format          =   189136897
+      Format          =   227803137
       CurrentDate     =   41640
    End
    Begin VSFlex8UCtl.VSFlexGrid grd 
@@ -1050,12 +1049,11 @@ Begin VB.Form FRMTRansferData3
       Left            =   4860
       TabIndex        =   74
       Top             =   5160
-      Visible         =   0   'False
       Width           =   1455
       _ExtentX        =   2566
       _ExtentY        =   503
       _Version        =   393216
-      Format          =   189136897
+      Format          =   227803137
       CurrentDate     =   41640
    End
    Begin MSComCtl2.DTPicker txtFromDate 
@@ -1063,12 +1061,11 @@ Begin VB.Form FRMTRansferData3
       Left            =   4860
       TabIndex        =   75
       Top             =   4860
-      Visible         =   0   'False
       Width           =   1455
       _ExtentX        =   2566
       _ExtentY        =   503
       _Version        =   393216
-      Format          =   189136897
+      Format          =   227868673
       CurrentDate     =   41640
    End
    Begin VSFlex8UCtl.VSFlexGrid grdInfo 
@@ -1316,6 +1313,7 @@ txtDbPath.Text = cd1.FileName
 
 
 End Sub
+
 Function CopyIssueTtransaction(invoiceTransaction_ID As Double, invoiceNoteserial1 As String, Transaction_ID As Double, Transaction_Type As Double, issuenoteserial As String, issuenoteserial1 As String, SessionCode As String)
 '////////////////////////////////////////copy   Transactions
 
@@ -5972,7 +5970,7 @@ Private Sub Command14_Debug_Click()
     Dim srcCount As Long, dstCount As Long
 
     ' Checksums
-    Dim srcQty As Double, dstQty As Double
+    Dim SrcQty As Double, DstQty As Double
     Dim SrcAmount As Currency, DstAmount As Currency
     Dim SrcVATSum As Currency, DstVATSum As Currency
     Dim SrcTPay As Currency, DstTPay As Currency
@@ -6527,7 +6525,7 @@ Private Sub Command14_Debug_Click()
 
     Set rsCnt = POSCn.Execute("SELECT SUM(CAST(d.Quantity AS float)) AS SumQty, SUM(CAST(d.Quantity * d.Price AS decimal(18,4))) AS SumAmount FROM Transaction_Details d WHERE d.Transaction_ID IN (SELECT Transaction_ID FROM Transactions WHERE IsNull(Copied,0)=0 AND SessionCode='" & SessionCode & "')")
     If Not rsCnt.EOF Then
-        If IsNull(rsCnt!SumQty) Then srcQty = 0# Else srcQty = CDbl(rsCnt!SumQty)
+        If IsNull(rsCnt!SumQty) Then SrcQty = 0# Else SrcQty = CDbl(rsCnt!SumQty)
         If IsNull(rsCnt!SumAmount) Then SrcAmount = CCur(0) Else SrcAmount = CCur(rsCnt!SumAmount)
     End If
     rsCnt.Close
@@ -6568,7 +6566,7 @@ Private Sub Command14_Debug_Click()
 
     Set rsCnt = Cn.Execute("SELECT SUM(CAST(d.Quantity AS float)) AS SumQty, SUM(CAST(d.Quantity * d.Price AS decimal(18,4))) AS SumAmount FROM dbo.Transaction_Details d JOIN dbo.Transactions t ON t.Transaction_ID = d.Transaction_ID WHERE t.SessionCode='" & SessionCode & "'")
     If Not rsCnt.EOF Then
-        If IsNull(rsCnt!SumQty) Then dstQty = 0# Else dstQty = CDbl(rsCnt!SumQty)
+        If IsNull(rsCnt!SumQty) Then DstQty = 0# Else DstQty = CDbl(rsCnt!SumQty)
         If IsNull(rsCnt!SumAmount) Then DstAmount = CCur(0) Else DstAmount = CCur(rsCnt!SumAmount)
     End If
     rsCnt.Close
@@ -6600,13 +6598,13 @@ Private Sub Command14_Debug_Click()
     DebugWriteLine DebugLogFile, "SrcVAT=" & SrcVAT & ", DstVAT=" & DstVAT
     DebugWriteLine DebugLogFile, "SrcPay=" & SrcPay & ", DstPay=" & DstPay
     DebugWriteLine DebugLogFile, "SrcPay2=" & SrcPay2 & ", DstPay2=" & DstPay2
-    DebugWriteLine DebugLogFile, "srcQty=" & srcQty & ", dstQty=" & dstQty
+    DebugWriteLine DebugLogFile, "srcQty=" & SrcQty & ", dstQty=" & DstQty
     DebugWriteLine DebugLogFile, "SrcAmount=" & SrcAmount & ", DstAmount=" & DstAmount
     DebugWriteLine DebugLogFile, "SrcVATSum=" & SrcVATSum & ", DstVATSum=" & DstVATSum
     DebugWriteLine DebugLogFile, "SrcTPay=" & SrcTPay & ", DstTPay=" & DstTPay
     DebugWriteLine DebugLogFile, "SrcSPay=" & SrcSPay & ", DstSPay=" & DstSPay
 
-    If (Abs(srcQty - dstQty) > epsQty) _
+    If (Abs(SrcQty - DstQty) > epsQty) _
        Or (Abs(SrcAmount - DstAmount) > epsMoney) _
        Or (Abs(SrcVATSum - DstVATSum) > epsMoney) _
        Or (Abs(SrcTPay - DstTPay) > epsMoney) _
@@ -9561,8 +9559,8 @@ Private Sub Command14_Click()
     Dim dstCount As Long
 
     ' Checksums
-    Dim srcQty As Double
-    Dim dstQty As Double
+    Dim SrcQty As Double
+    Dim DstQty As Double
     Dim SrcAmount As Currency
     Dim DstAmount As Currency
     Dim SrcVATSum As Currency
@@ -10227,7 +10225,7 @@ Private Sub Command14_Click()
         "(SELECT Transaction_ID FROM Transactions WHERE IsNull(Copied,0)=0 AND SessionCode='" & SessionCode & "' AND Transaction_Type IN (21,9))")
 
     ' Source sums
-    srcQty = ExecuteScalarDbl(POSCn, _
+    SrcQty = ExecuteScalarDbl(POSCn, _
         "SELECT ISNULL(SUM(CAST(d.Quantity AS float)),0) FROM Transaction_Details d " & _
         "WHERE d.Transaction_ID IN (SELECT Transaction_ID FROM Transactions WHERE IsNull(Copied,0)=0 AND SessionCode='" & SessionCode & "')")
 
@@ -10299,7 +10297,7 @@ Private Sub Command14_Click()
         "WHERE t.BranchId = " & CStr(BranchID) & " AND t.OldTransaction_ID IN (" & SourceIdListCsv & ") AND t.Transaction_Type IN (21,9)")
 
     ' Destination sums
-    dstQty = ExecuteScalarDbl(Cn, _
+    DstQty = ExecuteScalarDbl(Cn, _
         "SELECT ISNULL(SUM(CAST(d.Quantity AS float)),0) FROM " & mServerD & "Transaction_Details d " & _
         "JOIN " & mServerD & "Transactions t ON t.Transaction_ID = d.Transaction_ID " & _
         "WHERE t.BranchId = " & CStr(BranchID) & " AND t.OldTransaction_ID IN (" & SourceIdListCsv & ")")
@@ -10355,8 +10353,8 @@ Private Sub Command14_Click()
         " | DstPay2=" & DstPay2
 
     WritePhaseLog "RECON SUMS", _
-        "SrcQty=" & CStr(srcQty) & _
-        " | DstQty=" & CStr(dstQty) & _
+        "SrcQty=" & CStr(SrcQty) & _
+        " | DstQty=" & CStr(DstQty) & _
         " | SrcAmount=" & CStr(SrcAmount) & _
         " | DstAmount=" & CStr(DstAmount) & _
         " | SrcVATSum=" & CStr(SrcVATSum) & _
@@ -10369,14 +10367,14 @@ Private Sub Command14_Click()
     epsQty = 0.0001
     epsMoney = 0.01
 
-    If (Abs(srcQty - dstQty) > epsQty) _
+    If (Abs(SrcQty - DstQty) > epsQty) _
        Or (Abs(SrcAmount - DstAmount) > epsMoney) _
        Or (Abs(SrcVATSum - DstVATSum) > epsMoney) _
        Or (Abs(SrcTPay - DstTPay) > epsMoney) _
        Or (Abs(SrcSPay - DstSPay) > epsMoney) Then
 
         ReconcileMsg = "Checksum mismatch" & vbCrLf & _
-                       "Qty: " & FormatNumber(srcQty, 6) & " / " & FormatNumber(dstQty, 6) & vbCrLf & _
+                       "Qty: " & FormatNumber(SrcQty, 6) & " / " & FormatNumber(DstQty, 6) & vbCrLf & _
                        "Amount: " & CStr(SrcAmount) & " / " & CStr(DstAmount) & vbCrLf & _
                        "VAT: " & CStr(SrcVATSum) & " / " & CStr(DstVATSum) & vbCrLf & _
                        "TblTransactionPayments: " & CStr(SrcTPay) & " / " & CStr(DstTPay) & vbCrLf & _
@@ -14287,8 +14285,8 @@ Private Function GetExistingDestinationHeaderCount(ByVal CnX As ADODB.Connection
     rs.Open sql, CnX, adOpenForwardOnly, adLockReadOnly, adCmdText
 
     If Not rs.EOF Then
-        GetExistingDestinationHeaderCount = CLng(Val(rs.Fields("Cnt").Value & ""))
-        ExistingDestId = Trim$(rs.Fields("MinDestID").Value & "")
+        GetExistingDestinationHeaderCount = CLng(Val(rs.fields("Cnt").Value & ""))
+        ExistingDestId = Trim$(rs.fields("MinDestID").Value & "")
     End If
 
 CleanExit:

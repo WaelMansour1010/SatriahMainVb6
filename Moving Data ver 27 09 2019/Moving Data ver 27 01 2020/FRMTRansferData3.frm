@@ -773,7 +773,7 @@ Begin VB.Form FRMTRansferData3
          _ExtentY        =   582
          _Version        =   393216
          CheckBox        =   -1  'True
-         Format          =   227803138
+         Format          =   129761282
          CurrentDate     =   38784
       End
       Begin VB.Label LblInfo 
@@ -944,7 +944,7 @@ Begin VB.Form FRMTRansferData3
       _ExtentX        =   2566
       _ExtentY        =   503
       _Version        =   393216
-      Format          =   227803137
+      Format          =   129761281
       CurrentDate     =   41640
    End
    Begin VSFlex8UCtl.VSFlexGrid grd 
@@ -1053,7 +1053,7 @@ Begin VB.Form FRMTRansferData3
       _ExtentX        =   2566
       _ExtentY        =   503
       _Version        =   393216
-      Format          =   227803137
+      Format          =   129761281
       CurrentDate     =   41640
    End
    Begin MSComCtl2.DTPicker txtFromDate 
@@ -1065,7 +1065,7 @@ Begin VB.Form FRMTRansferData3
       _ExtentX        =   2566
       _ExtentY        =   503
       _Version        =   393216
-      Format          =   227868673
+      Format          =   129761281
       CurrentDate     =   41640
    End
    Begin VSFlex8UCtl.VSFlexGrid grdInfo 
@@ -13495,7 +13495,7 @@ Private Sub Form_Load()
     POSlServer.Text = "."
     TxtPOSDB.Text = GetSetting("Byte_DBS", "Setting", "DBPath", "Byte")
 
-    txtFromDate.Value = Date
+    txtFromDate.Value = "2026-01-01"
     txtToDate.Value = Date
 
     '========================
@@ -14002,7 +14002,10 @@ Private Function GetQuery(Optional ByVal mBranchId As Long = 0) As String
      
 '     s = s & " and (dbo.Transactions.Transaction_Date >='" & SQLDate(txtFromDate.Value, False) & "')"
 '     s = s & " and (dbo.Transactions.Transaction_Date <='" & SQLDate(txtToDate.Value, False) & "')"
-'
+
+s = s & " and (dbo.Transactions.Transaction_Date >= " & SQLDate(txtFromDate.Value, False) & ")"
+s = s & " and (dbo.Transactions.Transaction_Date <= " & SQLDate(txtToDate.Value, False) & ")"
+''
      If chkSalesOffers.Value = vbChecked Then
         s = s & " and  (IsNull(Transactions.DepandToConv,0) = 1  Or Transactions.Transaction_ID In (Select ApprovalData.Transaction_ID from ApprovalData "
         s = s & " where IsNull(ApprovDate,'') <> '' and ScreenName = 'FrmPO1' ))"
@@ -14279,7 +14282,7 @@ Private Function GetExistingDestinationHeaderCount(ByVal CnX As ADODB.Connection
     On Error GoTo EH
 
     ExistingDestId = ""
-    sql = "SELECT COUNT(*) AS Cnt, MIN(Transaction_ID) AS MinDestID FROM dbo.Transactions WHERE BranchId = " & CStr(BranchID) & " AND OldTransaction_ID = " & CStr(CLng(SrcTransactionID))
+    sql = "SELECT COUNT(*) AS Cnt, MIN(Transaction_ID) AS MinDestID FROM dbo.Transactions WITH (UPDLOCK, HOLDLOCK) WHERE BranchId = " & CStr(BranchID) & " AND OldTransaction_ID = " & CStr(CLng(SrcTransactionID))
 
     Set rs = New ADODB.Recordset
     rs.Open sql, CnX, adOpenForwardOnly, adLockReadOnly, adCmdText

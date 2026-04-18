@@ -102,6 +102,14 @@ $Script:LogFile       = Join-Path $Script:Paths.Logs  ("auto-print-{0:yyyy-MM-dd
 # Throttle: suppress repeated "no printer" warnings to once per 60 s.
 $Script:LastNoPrinterWarnTicks = 0
 
+# Short-window dedup state.
+# Keyed by SHA256; value is UTC ticks of last-seen time. Persisted as JSON so
+# a crash / restart inside the dedup window still rejects the duplicate.
+$Script:RecentHashesFile  = Join-Path $Script:Paths.State 'recent_hashes.json'
+$Script:RecentHashes      = @{}
+$Script:DedupWindowSec    = 30   # reject a repeat of the same hash within N seconds
+$Script:DedupStaleMinutes = 2    # drop entries older than this on load
+
 # ---------------------------------------------------------------------------
 # Logging
 # ---------------------------------------------------------------------------
@@ -402,6 +410,67 @@ function Add-PrintedJob {
 }
 
 # ---------------------------------------------------------------------------
+# Short-window dedup (SHA256 + small rolling cache).
+#   Test-AlreadyPrinted / Add-PrintedJob above cover *long-term* dedup via the
+#   printed-jobs CSV. The functions below guard against the much more common
+#   "same file arrives twice within a few seconds" — e.g. the VB6 server
+#   retrying an upload, or a file-watcher re-firing while a move is in flight.
+# Any failure in load / save / hash is swallowed: dedup must never block a
+# legitimate print.
+# ---------------------------------------------------------------------------
+function Load-RecentHashes {
+    $Script:RecentHashes = @{}
+    if (-not (Test-Path -LiteralPath $Script:RecentHashesFile)) { return }
+    try {
+        $raw = Get-Content -LiteralPath $Script:RecentHashesFile -Raw -ErrorAction Stop
+        if ([string]::IsNullOrWhiteSpace($raw)) { return }
+        $obj = $raw | ConvertFrom-Json -ErrorAction Stop
+        $cutoffTicks = (Get-Date).ToUniversalTime().AddMinutes(-1 * $Script:DedupStaleMinutes).Ticks
+        $kept = 0; $pruned = 0
+        foreach ($p in $obj.PSObject.Properties) {
+            $t = [int64]$p.Value
+            if ($t -ge $cutoffTicks) { $Script:RecentHashes[$p.Name] = $t; $kept++ }
+            else { $pruned++ }
+        }
+        Write-Log ("Recent-hash cache loaded: {0} kept, {1} pruned (>{2} min)" -f `
+                   $kept, $pruned, $Script:DedupStaleMinutes) INFO
+    } catch {
+        # Corrupt file → silently recreate on next save.
+        Write-Log ("Recent-hash cache unreadable, recreating: {0}" -f $_.Exception.Message) WARN
+        $Script:RecentHashes = @{}
+        try { Remove-Item -LiteralPath $Script:RecentHashesFile -Force -ErrorAction SilentlyContinue } catch { }
+    }
+}
+
+function Save-RecentHashes {
+    try {
+        ($Script:RecentHashes | ConvertTo-Json -Compress) |
+            Out-File -LiteralPath $Script:RecentHashesFile -Encoding UTF8 -Force
+    } catch {
+        Write-Log ("Recent-hash cache save failed: {0}" -f $_.Exception.Message) WARN
+    }
+}
+
+function Test-IsRecentDuplicate {
+    param([Parameter(Mandatory)][string]$Sha256)
+    if (-not $Script:RecentHashes.ContainsKey($Sha256)) { return $null }
+    $lastTicks = [int64]$Script:RecentHashes[$Sha256]
+    $ageSec    = [int](((Get-Date).ToUniversalTime().Ticks - $lastTicks) / 10000000)
+    if ($ageSec -le $Script:DedupWindowSec) { return $ageSec }
+    return $null
+}
+
+function Add-RecentHash {
+    param([Parameter(Mandatory)][string]$Sha256)
+    $Script:RecentHashes[$Sha256] = (Get-Date).ToUniversalTime().Ticks
+    # Opportunistic prune so the file doesn't grow unbounded.
+    $cutoffTicks = (Get-Date).ToUniversalTime().AddMinutes(-1 * $Script:DedupStaleMinutes).Ticks
+    $stale = @($Script:RecentHashes.Keys | Where-Object { [int64]$Script:RecentHashes[$_] -lt $cutoffTicks })
+    foreach ($k in $stale) { [void]$Script:RecentHashes.Remove($k) }
+    Save-RecentHashes
+}
+
+# ---------------------------------------------------------------------------
 # Clipboard — copy PDF as a file-drop object so the user can Ctrl+V it
 # ---------------------------------------------------------------------------
 function Set-ClipboardFileDrop {
@@ -538,6 +607,28 @@ function Invoke-PrintPipeline {
         return
     }
 
+    # 3b. Short-window dedup — reject repeats of the same hash within N seconds.
+    #     Wrapped: any failure here must not block a legitimate print.
+    try {
+        $recentAge = Test-IsRecentDuplicate -Sha256 $hash
+        if ($null -ne $recentAge) {
+            Write-Log 'Duplicate detected (hash match within window) - skipping print' WARN
+            Write-Log ("  filename : {0}" -f $fileName) WARN
+            Write-Log ("  hash     : {0}... (seen {1}s ago)" -f $hash.Substring(0,8), $recentAge) WARN
+            $dest = Join-Path $Script:Paths.Archive ("DUP_WINDOW_{0:yyyyMMdd_HHmmss}_{1}" -f (Get-Date), $fileName)
+            Move-Item -LiteralPath $SourcePath -Destination $dest -Force
+            Add-PrintedJob -FileName $fileName -Sha256 $hash -Size $size -Printer $livePrinter -Result 'DUPLICATE_WINDOW'
+            return
+        }
+    } catch {
+        Write-Log ("Recent-dedup check failed (ignored): {0}" -f $_.Exception.Message) WARN
+    }
+
+    # 3c. Record this hash so subsequent arrivals within the window are rejected.
+    try { Add-RecentHash -Sha256 $hash } catch {
+        Write-Log ("Recent-hash record failed (ignored): {0}" -f $_.Exception.Message) WARN
+    }
+
     # 4. Move to processing.
     $stamp    = Get-Date -Format 'yyyyMMdd_HHmmss_fff'
     $procName = '{0}_{1}' -f $stamp, $fileName
@@ -646,6 +737,7 @@ function Enter-SingletonLock {
 # Main
 # ---------------------------------------------------------------------------
 Initialize-QueueFolders
+Load-RecentHashes
 
 Write-Log '==========================================================' INFO
 Write-Log ('RdpPdfAutoPrint starting (PID {0})' -f $PID) INFO

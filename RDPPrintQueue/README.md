@@ -9,8 +9,11 @@ SumatraPDF.
 ```
 C:\RDPPrintQueue\
     RdpPdfAutoPrint.ps1         <- main script
-    Start-RdpPdfAutoPrint.bat   <- production launcher
-    Test-RdpPdfAutoPrint.bat    <- prints a single known PDF and exits
+    Start-RdpPdfAutoPrint.bat   <- production launcher (must keep running)
+    Test-RdpPdfAutoPrint.bat    <- prints a single known PDF (smoke test only)
+    Install-AutoStart.bat       <- register per-user Scheduled Task at logon
+    Uninstall-AutoStart.bat     <- remove the Scheduled Task
+    Check-AutoStart.bat         <- show task state, last run, running process
     inbox\                      <- new PDFs arrive here
     processing\                 <- held while printing
     archive\                    <- printed OK
@@ -93,6 +96,55 @@ If a service is mandatory (e.g. no interactive user), you must:
 - run the service under a domain user that has that printer,
 - pass `-PrinterName` explicitly.
 Even then, a per-user Scheduled Task is simpler and less fragile.
+
+## Auto-start on every reboot / logon
+
+Use the supplied helpers. They create a **per-user Scheduled Task** named
+`RdpPdfAutoPrintWatcher` that triggers at logon and runs the production
+launcher; no Windows Service, no SYSTEM account.
+
+```
+C:\RDPPrintQueue\Install-AutoStart.bat      :: register (idempotent)
+C:\RDPPrintQueue\Check-AutoStart.bat        :: verify state / last result
+C:\RDPPrintQueue\Uninstall-AutoStart.bat    :: remove
+```
+
+- `Install-AutoStart.bat` calls `schtasks /Create /SC ONLOGON /RL LIMITED /F`,
+  with a 30s logon delay (gives the user's print spooler time to publish
+  redirected printers), and a `cmd /c cd /d C:\RDPPrintQueue && ...` wrapper
+  so the task's working directory is `C:\RDPPrintQueue`. `/F` makes it safe
+  to re-run — it overwrites the existing task instead of erroring.
+- The task runs as `%USERDOMAIN%\%USERNAME%` — the user who installed it.
+  Install it while logged on as the user who actually prints.
+- If you need to install on a machine that has a shared kiosk account, log
+  on as that kiosk user and run the installer.
+
+### Which file goes where
+
+| File                        | Use                                            |
+|-----------------------------|------------------------------------------------|
+| `Start-RdpPdfAutoPrint.bat` | **Production** — run by the Scheduled Task     |
+| `Test-RdpPdfAutoPrint.bat`  | Manual smoke test only; do **not** auto-start  |
+| `Install-AutoStart.bat`     | One-time per user, to register the task        |
+| `Check-AutoStart.bat`       | Diagnostic — shows task state + last run code  |
+| `Uninstall-AutoStart.bat`   | Clean removal of the task                      |
+
+### Rollout recommendation
+
+1. Copy `C:\RDPPrintQueue\` to the client.
+2. Install SumatraPDF machine-wide if possible.
+3. Log on as the operator who will print, open an **elevated** command
+   prompt (only so `schtasks` can write to the task store — the task itself
+   still runs non-elevated), and run `Install-AutoStart.bat`.
+4. Run `Check-AutoStart.bat` — confirm `Status: Ready`, `Run As User` is the
+   operator, `Scheduled Task State: Enabled`.
+5. Run `Test-RdpPdfAutoPrint.bat` once to validate printing end-to-end and
+   review the latest file under `C:\RDPPrintQueue\logs\`.
+6. Log off / log on (or reboot). Re-run `Check-AutoStart.bat` — `Last Run
+   Time` should be populated and `Last Result` should be `0`.
+7. (Optional fallback) If for any reason the Scheduled Task cannot be used,
+   drop a shortcut to `Start-RdpPdfAutoPrint.bat` into
+   `shell:startup`. This is strictly a backup path.
 
 ## Deployment checklist per client PC
 

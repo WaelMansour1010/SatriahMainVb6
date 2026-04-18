@@ -559,6 +559,40 @@ function Invoke-SumatraPrint {
         Write-Log ("  result            : OK (exit 0)") INFO
         return @{ Category = 'OK'; ExitCode = 0; TimedOut = $false }
     }
+
+    # Narrow fallback: Sumatra exit code 2 on the primary -print-to path has
+    # been observed on a subset of client PCs where the named printer handle
+    # is momentarily unusable even though it is listed. Try ONCE with
+    # -print-to-default for this job only. Successful users never hit this
+    # branch. Any other non-zero exit is reported as-is.
+    if ($ec -eq 2) {
+        Write-Log ("  primary result    : SUMATRA_NONZERO (exit 2) on -print-to ""{0}""" -f $Printer) WARN
+        Write-Log ("  primary args      : {0}" -f ($sumatraArgs -join ' | ')) WARN
+        Start-Sleep -Milliseconds 750   # tiny breath only on this failing path
+        $fbArgs = @('-print-to-default', '-silent', $PdfPath)
+        Write-Log 'Fallback attempt    : -print-to-default (one-shot, same job)' WARN
+        Write-Log ("  fallback args     : {0}" -f ($fbArgs -join ' | ')) WARN
+        try {
+            $fbProc = Start-Process -FilePath $SumatraExe -ArgumentList $fbArgs `
+                                    -PassThru -WindowStyle Hidden
+            if (-not $fbProc.WaitForExit($PrintTimeoutSeconds * 1000)) {
+                try { $fbProc.Kill() } catch { }
+                Write-Log ("  fallback result   : TIMEOUT after {0}s" -f $PrintTimeoutSeconds) ERROR
+                return @{ Category = 'TIMEOUT'; ExitCode = -1; TimedOut = $true }
+            }
+            $fbEc = $fbProc.ExitCode
+            if ($fbEc -eq 0) {
+                Write-Log '  fallback result   : OK (exit 0) via -print-to-default' INFO
+                return @{ Category = 'OK'; ExitCode = 0; TimedOut = $false }
+            }
+            Write-Log ("  fallback result   : SUMATRA_NONZERO (exit {0}) via -print-to-default" -f $fbEc) WARN
+            return @{ Category = 'SUMATRA_NONZERO'; ExitCode = $fbEc; TimedOut = $false }
+        } catch {
+            Write-Log ("  fallback result   : EXCEPTION {0}" -f $_.Exception.Message) ERROR
+            return @{ Category = 'SUMATRA_NONZERO'; ExitCode = $ec; TimedOut = $false }
+        }
+    }
+
     Write-Log ("  result            : SUMATRA_NONZERO (exit {0})" -f $ec) WARN
     return @{ Category = 'SUMATRA_NONZERO'; ExitCode = $ec; TimedOut = $false }
 }

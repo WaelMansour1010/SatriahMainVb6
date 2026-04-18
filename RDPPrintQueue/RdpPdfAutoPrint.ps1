@@ -402,6 +402,45 @@ function Add-PrintedJob {
 }
 
 # ---------------------------------------------------------------------------
+# Clipboard — copy PDF as a file-drop object so the user can Ctrl+V it
+# ---------------------------------------------------------------------------
+function Set-ClipboardFileDrop {
+    param([Parameter(Mandatory)][string]$Path)
+    # [System.Windows.Forms.Clipboard] requires an STA apartment thread.
+    # Rather than forcing -STA on the whole process, spin a dedicated STA
+    # runspace for the clipboard call and dispose it immediately.
+    try {
+        $rs = [System.Management.Automation.Runspaces.RunspaceFactory]::CreateRunspace()
+        $rs.ApartmentState = [System.Threading.ApartmentState]::STA
+        $rs.ThreadOptions  = [System.Management.Automation.Runspaces.PSThreadOptions]::ReuseThread
+        $rs.Open()
+        $ps = [System.Management.Automation.PowerShell]::Create()
+        $ps.Runspace = $rs
+        [void]$ps.AddScript({
+            param([string]$FilePath)
+            Add-Type -AssemblyName System.Windows.Forms
+            $col = New-Object System.Collections.Specialized.StringCollection
+            [void]$col.Add($FilePath)
+            [System.Windows.Forms.Clipboard]::SetFileDropList($col)
+        }).AddParameter('FilePath', $Path)
+        $async = $ps.BeginInvoke()
+        if (-not $async.AsyncWaitHandle.WaitOne(5000)) {
+            Write-Log ("Clipboard timed out : {0}" -f (Split-Path -Leaf $Path)) WARN
+        } elseif ($ps.HadErrors) {
+            $errs = ($ps.Streams.Error | ForEach-Object { $_.ToString() }) -join '; '
+            Write-Log ("Clipboard error     : {0}" -f $errs) WARN
+        } else {
+            Write-Log ("Clipboard set       : {0}" -f (Split-Path -Leaf $Path)) INFO
+        }
+        $ps.Dispose()
+        $rs.Close(); $rs.Dispose()
+    } catch {
+        # Never allow clipboard failure to abort the print pipeline.
+        Write-Log ("Clipboard failed    : {0}" -f $_.Exception.Message) WARN
+    }
+}
+
+# ---------------------------------------------------------------------------
 # Print execution  — logs full per-job context before every attempt
 # ---------------------------------------------------------------------------
 function Invoke-SumatraPrint {
@@ -573,6 +612,12 @@ function Invoke-PrintPipeline {
         Add-PrintedJob -FileName $fileName -Sha256 $hash -Size $size -Printer $livePrinter -Result ("FAIL:{0}:{1}" -f $lastCat, $lastErr)
         Write-Log ("Print FAILED        : {0}  [{1}] {2}" -f $fileName, $lastCat, $lastErr) ERROR
     }
+
+    # Always copy the final file to the Windows clipboard as a file-drop object
+    # so the user can Ctrl+V it into any folder or print dialog and print manually.
+    # $dest is stable (archive or failed); clipboard is set after the move so the
+    # path is valid and the file will not be relocated again by this watcher.
+    Set-ClipboardFileDrop -Path $dest
 }
 
 # ---------------------------------------------------------------------------

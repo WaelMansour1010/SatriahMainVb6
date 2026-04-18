@@ -549,6 +549,12 @@ function Invoke-PrintPipeline {
         return
     }
 
+    # 4b. Clipboard backup — BEFORE the print attempt, as a safety net.
+    # If printing fails or times out, the user can already Ctrl+V the PDF
+    # into Explorer or a print dialog and print it manually. Clipboard set
+    # is wrapped so its failure never blocks the print pipeline.
+    Set-ClipboardFileDrop -Path $procPath
+
     # 5. Print with retries — re-resolve printer on each attempt.
     $attempt   = 0
     $succeeded = $false
@@ -613,10 +619,12 @@ function Invoke-PrintPipeline {
         Write-Log ("Print FAILED        : {0}  [{1}] {2}" -f $fileName, $lastCat, $lastErr) ERROR
     }
 
-    # Always copy the final file to the Windows clipboard as a file-drop object
-    # so the user can Ctrl+V it into any folder or print dialog and print manually.
-    # $dest is stable (archive or failed); clipboard is set after the move so the
-    # path is valid and the file will not be relocated again by this watcher.
+    # Re-point the clipboard at the final stable path ($dest — either archive
+    # or failed). The earlier 4b call pointed at the transient processing path;
+    # since Windows file-drop clipboard stores paths (not bytes), that path
+    # becomes stale once step 6 above moves the file. This second call ensures
+    # the clipboard always references a file that still exists on disk, no
+    # matter when the user chooses to paste.
     Set-ClipboardFileDrop -Path $dest
 }
 

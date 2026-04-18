@@ -85,6 +85,52 @@ stop the process. The file stays in `inbox`, a throttled warning is logged
 (at most once per 60 s), and the watcher retries automatically once a printer
 appears.
 
+## Clipboard backup (every job)
+
+Every PDF is copied to the Windows clipboard as a **file-drop object** so
+that, if printing fails for any device-specific reason, the operator can
+press `Ctrl+V` in Explorer (or in the Print dialog of any PDF viewer) and
+paste the file to print it manually.
+
+Implementation: `Set-ClipboardFileDrop` in `RdpPdfAutoPrint.ps1` calls
+`[System.Windows.Forms.Clipboard]::SetFileDropList()`. Because that API
+requires an STA apartment, a dedicated STA runspace is created per call so
+the watcher itself does not need to be launched with `-STA`.
+
+**Timing (two clipboard updates per job, both unconditional):**
+
+1. **Before the print attempt** — clipboard points to the file in
+   `processing\`. This is the "safety net" so the user has the PDF ready
+   even if the print hangs or times out.
+2. **After the final move** — clipboard is re-pointed to the stable path
+   (`archive\<file>.pdf` on success, `failed\<file>.pdf` on failure).
+
+The second update is necessary because Windows file-drop clipboard stores
+**paths, not bytes**. Once step 6 of the pipeline moves the file out of
+`processing\`, the earlier clipboard path would be stale.
+
+**Logged lines (all at INFO/WARN level):**
+
+```
+Clipboard set       : 20260418_104501_123_SaleReport545.pdf   (success)
+Clipboard timed out : <filename>                              (STA runspace hung >5 s)
+Clipboard error     : <message>                               (SetFileDropList threw)
+Clipboard failed    : <message>                               (outer exception)
+```
+
+**Known limitations:**
+
+- Clipboard is clobbered twice per job. If an operator copied unrelated
+  content while a job was being processed, that content is overwritten.
+- If the watcher runs in a different interactive session than the user's
+  visible desktop (unlikely with the per-user Scheduled Task, but possible
+  under `runas` or unusual tools), the clipboard target is the session in
+  which the watcher runs — not necessarily what `Ctrl+V` will paste in the
+  operator's visible session.
+- If `System.Windows.Forms` cannot load (trimmed OS image, Server Core
+  without the Desktop Experience feature), clipboard set will fail. The
+  failure is logged as `WARN` and printing continues normally.
+
 ## Per-job failure categories (logged in `Result` column of printed-jobs.csv)
 
 | Category | Meaning |

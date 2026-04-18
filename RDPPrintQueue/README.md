@@ -44,23 +44,57 @@ on other machines or other sessions.
 ## What the refactor fixes
 
 1. **`Resolve-SumatraPath`** — explicit `-SumatraPath` → Program Files →
-   Program Files (x86) → `%LOCALAPPDATA%`. Machine-wide installs are preferred,
-   so Sumatra is found regardless of which user runs the watcher.
-2. **`Resolve-Printer`** — validates `-PrinterName` or resolves the true
-   Windows default printer and passes it **explicitly** to Sumatra with
-   `-print-to "<name>"`. No more ambiguity around `-print-to-default`.
-3. **Diagnostics block** — logs `whoami`, `USERNAME`, `USERPROFILE`,
-   `COMPUTERNAME`, resolved Sumatra, resolved printer, and the full installed
-   printer list on every start. Makes "which user / which printer" obvious in
-   the log.
-4. **Test Mode (`-TestFile`)** — prints one PDF and exits with a specific exit
-   code, so the test `.bat` is a pure smoke test.
-5. **DryRun mode (`-DryRun`)** — resolves everything, logs the exact
-   Sumatra invocation, but does not print.
-6. **Clean separation** — watcher loop, file readiness, printer discovery,
-   Sumatra discovery, print execution, and logging each live in their own
-   function.
+   Program Files (x86) → `%LOCALAPPDATA%`. Machine-wide installs are preferred.
+2. **`Resolve-Printer`** — smart heuristic (see below). Passes printer name
+   explicitly as `-print-to "<name>"` instead of `-print-to-default`.
+3. **Startup diagnostics** — logs `whoami`, `USERNAME`, `USERPROFILE`,
+   `COMPUTERNAME`, resolved Sumatra, resolved printer, full printer list.
+4. **Test Mode (`-TestFile`)** — prints one PDF and exits with a specific code.
+5. **DryRun mode (`-DryRun`)** — resolves everything, logs, does not print.
+6. **Clean separation** — each concern lives in its own function.
 7. **Queue + dedup preserved** — `printed-jobs.csv` keyed on SHA256 + size.
+
+## Printer selection heuristic
+
+When `-PrinterName` is **not** specified, `Resolve-Printer` picks in this order:
+
+| Priority | Condition |
+|----------|-----------|
+| 1 | Redirected printer that is **also** the default |
+| 2 | Any redirected printer — name contains `(redirected N)` or PortName starts with `TS`/`Client` |
+| 3 | Windows default printer that is **not** excluded |
+| 4 | First acceptable (non-excluded) printer |
+| 5 | `WScript.Network.EnumPrinterConnections()` fallback — odd-indexed entries only (even = port names, odd = printer names) |
+
+**Excluded virtual printers** (never selected automatically):
+`Microsoft Print to PDF`, `Microsoft XPS Document Writer`, `Fax`,
+any `OneNote` variant, `Adobe PDF`, `PDFCreator`, `CutePDF Writer`.
+
+When `-PrinterName` **is** specified:
+- Exact name match first.
+- If not found, loose prefix match — so `HP LaserJet` matches
+  `HP LaserJet (redirected 3)` across RDP reconnects.
+- Fails clearly if neither matches.
+
+**Printer re-resolution:** the printer is resolved live before every print
+attempt (not only at startup). If the redirected printer was renamed during a
+reconnect, the next attempt picks up the new name automatically.
+
+**No-printer resilience:** in watcher mode, an unavailable printer does **not**
+stop the process. The file stays in `inbox`, a throttled warning is logged
+(at most once per 60 s), and the watcher retries automatically once a printer
+appears.
+
+## Per-job failure categories (logged in `Result` column of printed-jobs.csv)
+
+| Category | Meaning |
+|----------|---------|
+| `OK` | Printed successfully |
+| `DUPLICATE` | Already printed (SHA256+size match), moved to archive |
+| `NOPRINTER` | No acceptable printer visible at attempt time |
+| `TIMEOUT` | Sumatra process exceeded `PrintTimeoutSeconds` |
+| `SUMATRA_NONZERO` | Sumatra exited with non-zero code |
+| `EXCEPTION` | Unexpected PowerShell exception |
 
 ## How to run it
 
